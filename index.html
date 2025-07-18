@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salonfix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #1a083d, #090223);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .section {
+      width: 100%;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      scroll-snap-align: start;
+    }
+
+    .svg-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .svg-section img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .cta-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 30px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      z-index: 999;
+      animation: pulse 2s infinite;
+      text-decoration: none;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+      70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="svg-section"><img src="1.svg" alt="Slide 1"></div>
+  <div class="svg-section"><img src="2.svg" alt="Slide 2"></div>
+  <div class="svg-section"><img src="3.svg" alt="Slide 3"></div>
+  <div class="svg-section"><img src="4.svg" alt="Slide 4"></div>
+  <div class="svg-section"><img src="5.png" alt="Slide 5"></div>
+  <div class="svg-section"><img src="6.svg" alt="Slide 6"></div>
+
+  <a href="https://wa.me/919566143572?text=I%20want%20to%20fix%20my%20salon" class="cta-button" target="_blank">Fix My Salon Now →</a>
+</body>
+</html>
