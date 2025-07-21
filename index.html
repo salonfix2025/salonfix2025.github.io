@@ -25,16 +25,16 @@
     }
     .slide {
       width: 100vw;
-      min-height: 100vh;
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       background-size: cover;
       background-position: center;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
       overflow: hidden;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
     .slide.visible {
       opacity: 1;
@@ -42,13 +42,11 @@
     }
     .slide img {
       width: 100%;
-      height: auto;
-      object-fit: cover;
-      display: block;
+      height: 100%;
+      object-fit: contain;
     }
     @media (min-width: 1024px) {
       .slide img {
-        height: 100vh;
         object-fit: cover;
       }
     }
