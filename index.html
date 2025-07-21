@@ -29,8 +29,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-size: cover;
-      background-position: center;
       overflow: hidden;
       opacity: 0;
       transform: translateY(40px);
@@ -42,11 +40,15 @@
     }
     .slide img {
       width: 100%;
-      height: 100vh;
+      height: 100%;
       object-fit: cover;
       display: block;
     }
     @media (max-width: 768px) {
+      .slide {
+        min-height: auto;
+        padding: 0;
+      }
       .slide img {
         height: auto;
         max-height: 100vh;
@@ -94,6 +96,7 @@
     <div class="slide"><img src="5.png" alt="Slide 5"></div>
     <div class="slide"><img src="6.svg" alt="Slide 6"></div>
   </div>
+
   <a href="https://wa.me/919566143572?text=I%20want%20to%20fix%20my%20salon" class="cta-button" target="_blank">Fix Your Salon Now →</a>
 
   <script>
