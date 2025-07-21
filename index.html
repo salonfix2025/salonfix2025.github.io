@@ -11,50 +11,42 @@
       box-sizing: border-box;
     }
     html, body {
-      height: 100%;
+      width: 100%;
       scroll-behavior: smooth;
-    }
-    body {
-      background-color: #0d0b1b;
       font-family: 'Inter', sans-serif;
+      background-color: #0d0b1b;
       color: white;
-      overflow-x: hidden;
     }
     .container {
-      display: block;
+      width: 100%;
     }
     .slide {
-      width: 100vw;
-      min-height: 100vh;
+      width: 100%;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       overflow: hidden;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-    .slide.visible {
-      opacity: 1;
-      transform: translateY(0);
+      background-color: #0d0b1b;
     }
     .slide img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
+      object-fit: contain;
       display: block;
     }
+
+    /* Mobile adjustments */
     @media (max-width: 768px) {
       .slide {
-        min-height: auto;
-        padding: 0;
+        padding-bottom: 0;
       }
       .slide img {
+        max-width: 100%;
         height: auto;
-        max-height: 100vh;
         object-fit: contain;
       }
     }
+
     .cta-button {
       position: fixed;
       bottom: 20px;
@@ -71,6 +63,7 @@
       animation: pulse 2s infinite;
       text-decoration: none;
     }
+
     @keyframes pulse {
       0% {
         transform: scale(1);
@@ -98,18 +91,5 @@
   </div>
 
   <a href="https://wa.me/919566143572?text=I%20want%20to%20fix%20my%20salon" class="cta-button" target="_blank">Fix Your Salon Now →</a>
-
-  <script>
-    const slides = document.querySelectorAll('.slide');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    slides.forEach(slide => observer.observe(slide));
-  </script>
 </body>
 </html>
