@@ -1,103 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="styles.css">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Grow My Salon Business</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SALONFIX – Your In-House Business Partner</title>
+
+  <!-- ✅ GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- ✅ STYLES -->
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      background-color: #000;
+      padding: 20px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a.logo {
+      font-size: 28px;
+      color: white;
+      font-weight: 900;
+      text-decoration: none;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 10px 15px;
+      transition: 0.3s;
+    }
+    .nav-links a:hover {
+      background: #333;
+      border-radius: 5px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 10%;
+      min-height: 90vh;
+      background-color: #f5f5f5;
+    }
+    .hero-text {
+      flex: 1;
+      max-width: 50%;
+    }
+    .hero-text h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 64px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #111;
+      margin-bottom: 20px;
+    }
+    .hero-text p {
+      font-size: 20px;
+      margin-bottom: 25px;
+      color: #444;
+    }
+    .hero-text button {
+      background: #FFD700;
+      border: none;
+      padding: 15px 25px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .hero img {
+      flex: 1;
+      max-width: 45%;
+      border-radius: 10px;
+    }
+
+    /* SPLIT SECTIONS */
+    section.split {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      padding: 80px 10%;
+    }
+    section.split img {
+      width: 50%;
+      border-radius: 10px;
+    }
+    section.split div {
+      width: 50%;
+    }
+    section.split h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 36px;
+      color: #4B0082;
+      margin-bottom: 15px;
+    }
+    section.split p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    section.split a {
+      background: #4B0082;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    section.split a:hover {
+      background: #6a0dad;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 30px 10%;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <nav>
-      <a href="index.html" class="logo">Grow My Salon Business</a>
-      <ul class="nav-links">
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="podcast.html">Podcast</a></li>
-        <li><a href="coaching.html">Coaching</a></li>
-        <li><a href="free-resources.html">Free Resources</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
 
-    <div class="hero">
-      <h1>We help you get smarter at growing your salon business</h1>
-      <p>Learn the 6 steps to building a successful and profitable salon that gives you the freedom you deserve.</p>
-      <form id="email-optin">
-        <input type="text" name="first_name" placeholder="First name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <button type="submit">Get the free guide</button>
-      </form>
-    </div>
+  <!-- ✅ HEADER -->
+  <header>
+    <a href="index.html" class="logo">SALONFIX</a>
+    <ul class="nav-links">
+      <li><a href="#">Business School</a></li>
+      <li><a href="#">Coaching</a></li>
+      <li><a href="#">Podcast</a></li>
+      <li><a href="#">Free Resources</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
   </header>
 
-  <main>
-    <!-- How to work with us -->
-    <section class="work-with-us">
-      <div class="item">
-        <h2>Attend a FREE Masterclass</h2>
-        <p>Access our best free trainings to build your salon business.</p>
-        <a href="courses.html">Learn more</a>
-      </div>
-      <div class="item">
-        <h2>Online Courses</h2>
-        <p>Upskill with our salon business courses.</p>
-        <a href="courses.html">Learn more</a>
-      </div>
-      <div class="item">
-        <h2>Book 1:1 Coaching</h2>
-        <p>Get private advice and action planning with Antony.</p>
-        <a href="coaching.html">Learn more</a>
-      </div>
-    </section>
+  <!-- ✅ HERO SECTION -->
+  <div class="hero">
+    <div class="hero-text">
+      <h1>We help you get smarter at growing your salon business</h1>
+      <p>Learn the 6 steps to building a successful and profitable salon that gives you the freedom you deserve.</p>
+      <button>Get Your Free Guide</button>
+    </div>
+    <img src="jawhar-photo.png" alt="Founder Jawhar Raj Rajkumar">
+  </div>
 
-    <!-- Podcast teasers -->
-    <section class="podcast-highlights">
-      <h2>Tune in to the podcast</h2>
-      <div class="episode-grid">
-        <!-- Example episode tile -->
-        <div class="episode">
-          <h3>Episode 158 – Wendy Iles</h3>
-          <p>What it takes to be a successful celebrity hairstylist</p>
-          <a href="podcast.html">Listen now</a>
-        </div>
-        <!-- Add more episodes -->
-      </div>
-      <a href="podcast.html" class="btn">See all episodes</a>
-    </section>
+  <!-- ✅ SECTIONS -->
+  <section class="split">
+    <img src="5.png" alt="Masterclass">
+    <div>
+      <h2>Attend a FREE Masterclass</h2>
+      <p>Access our best free trainings to build your salon business.</p>
+      <a href="#">Learn more</a>
+    </div>
+  </section>
 
-    <!-- Courses teaser -->
-    <section class="courses-preview">
-      <h2>Our Courses</h2>
-      <div class="course-list">
-        <div class="course">
-          <h3>Super Stylist</h3>
-          <p>For salon owners and their team.</p>
-          <a href="courses.html">Learn more</a>
-        </div>
-        <div class="course">
-          <h3>Management</h3>
-          <p>Tools & vision for salon management.</p>
-          <a href="courses.html">Learn more</a>
-        </div>
-        <div class="course">
-          <h3>Money</h3>
-          <p>Financial systems & profitability.</p>
-          <a href="courses.html">Learn more</a>
-        </div>
-      </div>
-      <a href="courses.html" class="btn">Get savvy with our courses</a>
-    </section>
-  </main>
+  <section class="split" style="background-color: #fafafa;">
+    <div>
+      <h2>Book 1:1 Coaching</h2>
+      <p>Get private advice and action planning with Jawhar Raj Rajkumar.</p>
+      <a href="#">Book Now</a>
+    </div>
+    <img src="4.png" alt="Coaching">
+  </section>
 
-  <footer class="site-footer">
-    <p>© 2025 Grow My Salon Business | Built by Antony Whitaker</p>
-    <ul class="social-links">
-      <li><a href="#">Instagram</a></li>
-      <li><a href="#">Facebook</a></li>
-    </ul>
+  <section class="split">
+    <img src="3.png" alt="Courses">
+    <div>
+      <h2>Online Courses</h2>
+      <p>Upskill with our salon business courses and grow your team.</p>
+      <a href="#">Explore Courses</a>
+    </div>
+  </section>
+
+  <!-- ✅ FOOTER -->
+  <footer>
+    <p>© 2025 SALONFIX – YOUR IN-HOUSE BUSINESS PARTNER.</p>
+    <p>Follow us on Instagram | Facebook</p>
   </footer>
 
-  <script src="scripts.js"></script>
 </body>
 </html>
