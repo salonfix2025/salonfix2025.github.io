@@ -2,299 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SALONFIX – Your In-House Business Partner for Salons</title>
-
-  <!-- ✅ GOOGLE FONTS + FONT AWESOME -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-  <style>
-    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif;}
-    body {line-height: 1.6; background: #f5f5f5; color: #333; overflow-x: hidden;}
-    section {padding: 100px 20px; text-align: center; position: relative;}
-    h1, h2, h3 {font-weight: 700;}
-    .purple {color: #4B0082;}
-
-    /* ✅ Hero Section */
-    .hero {
-      background: linear-gradient(135deg, #4B0082, #6A0DAD);
-      color: white;
-      padding: 140px 20px;
-      background-attachment: fixed;
-      background-size: cover;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255,255,255,0.05) 20%, transparent 20%), radial-gradient(circle, rgba(255,255,255,0.05) 20%, transparent 20%);
-      background-position: 0 0, 50px 50px;
-      background-size: 100px 100px;
-      animation: moveBg 30s linear infinite;
-      z-index: 0;
-    }
-    @keyframes moveBg {
-      from {transform: translate(0,0);}
-      to {transform: translate(50px,50px);}
-    }
-    .hero h1 {font-size: 3rem; letter-spacing: 1px; position: relative; z-index: 1;}
-    .hero p {font-size: 1.2rem; margin-top: 10px; position: relative; z-index: 1;}
-    .cta-btn {
-      margin-top: 30px;
-      background: #FFD700;
-      color: #4B0082;
-      padding: 14px 32px;
-      border-radius: 50px;
-      font-weight: 700;
-      cursor: pointer;
-      font-size: 1.1rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: relative; z-index: 1;
-    }
-    .cta-btn:hover {transform: scale(1.07); box-shadow: 0 6px 10px rgba(0,0,0,0.3);}
-
-    /* ✅ About Section */
-    .about {
-      background: white;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      border-radius: 20px;
-      max-width: 1000px;
-      margin: 60px auto;
-      padding: 70px 30px;
-      position: relative;
-      overflow: hidden;
-    }
-    .about::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: -50px;
-      width: 200px;
-      height: 200px;
-      background: rgba(75, 0, 130, 0.05);
-      border-radius: 50%;
-      animation: floatShape 8s ease-in-out infinite;
-    }
-    @keyframes floatShape {
-      0%, 100% {transform: translateY(0);}
-      50% {transform: translateY(20px);}
-    }
-    .about img {
-      width: 280px;
-      height: 380px;
-      object-fit: cover;
-      border-radius: 20px;
-      margin-top: 20px;
-      border: 3px solid #4B0082;
-    }
-
-    /* ✅ What We Do Icons */
-    .icons-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 35px;
-      margin-top: 40px;
-      max-width: 1100px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .icon-box {background: white; padding: 40px 20px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease;}
-    .icon-box i {font-size: 2.5rem; color: #4B0082; margin-bottom: 15px;}
-    .icon-box:hover {transform: translateY(-8px);}
-
-    /* ✅ Testimonials */
-    .testimonials {background: #f7f5ff; padding: 80px 20px; position: relative;}
-    .testimonials::before {
-      content: "\f10d";
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      position: absolute;
-      top: 30px;
-      left: 20px;
-      font-size: 4rem;
-      color: rgba(75,0,130,0.1);
-    }
-    .testimonial-card {
-      max-width: 420px;
-      margin: 30px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-      font-style: italic;
-      position: relative;
-    }
-
-    /* ✅ FAQ */
-    .faq {max-width: 850px; margin: auto; text-align: left;}
-    .faq-item {margin: 20px 0; padding: 20px; background: white; border-radius: 15px; box-shadow: 0 3px 8px rgba(0,0,0,0.05);}
-    .faq-question {cursor: pointer; font-weight: bold;}
-    .faq-answer {display: none; padding-top: 12px; color: #555;}
-
-    /* ✅ Last CTA */
-    .last-cta {
-      background: linear-gradient(135deg, #FFF7CC, #FFEFA1);
-      padding: 100px 20px;
-      position: relative;
-    }
-    .last-cta::after {
-      content: "";
-      position: absolute;
-      bottom: -40px;
-      left: -40px;
-      width: 200px;
-      height: 200px;
-      background: rgba(255,255,255,0.2);
-      border-radius: 50%;
-      animation: floatShape 10s ease-in-out infinite;
-    }
-
-    /* ✅ Footer */
-    footer {background: #4B0082; color: white; padding: 35px; text-align: center; font-size: 0.95rem;}
-
-    /* ✅ WhatsApp Floating Icon */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      border-radius: 50%;
-      padding: 18px;
-      font-size: 28px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      z-index: 999;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-
-    /* ✅ Mobile Adjustments */
-    @media(max-width:768px) {
-      .hero h1 {font-size: 2.4rem;}
-      .about img {width: 220px; height: 320px;}
-      .icons-container {grid-template-columns: 1fr 1fr;}
-    }
-  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Grow My Salon Business</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="site-header">
+    <nav>
+      <a href="index.html" class="logo">Grow My Salon Business</a>
+      <ul class="nav-links">
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
+        <li><a href="coaching.html">Coaching</a></li>
+        <li><a href="free-resources.html">Free Resources</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
 
-  <!-- ✅ HERO SECTION -->
-  <section class="hero">
-    <h1>WE RUN YOUR SALON LIKE IT’S OUR OWN</h1>
-    <p>Your In-House Business Partner</p>
-    <button class="cta-btn">Get Started</button>
-  </section>
-
-  <!-- ✅ ABOUT SECTION -->
-  <section class="about">
-    <h2 class="purple">JAWHAR RAJ RAJKUMAR</h2>
-    <h3>FOUNDER & STRATEGIC HEAD – SALONFIX</h3>
-    <p>JAWHAR RAJ RAJKUMAR established SALONFIX to <strong>redefine how salons are managed</strong> — bringing structure, clarity, and measurable growth to every business we partner with.<br><br>With expertise in <strong>operations, finance, and team leadership</strong>, SALONFIX operates as an <strong>in‑house business partner</strong>, ensuring every salon runs with the precision of a professionally managed enterprise.</p>
-    <img src="#" alt="Portrait Coming Soon">
-  </section>
-
-  <!-- ✅ WHAT WE DO -->
-  <section>
-    <h2 class="purple">WHAT WE DO</h2>
-    <div class="icons-container">
-      <div class="icon-box"><i class="fas fa-tools"></i><h4>Operations</h4><p>Streamlined daily management.</p></div>
-      <div class="icon-box"><i class="fas fa-chart-line"></i><h4>Numbers</h4><p>Clear, accurate financial tracking.</p></div>
-      <div class="icon-box"><i class="fas fa-users"></i><h4>Team</h4><p>Staff coordination & oversight.</p></div>
-      <div class="icon-box"><i class="fas fa-bullseye"></i><h4>Marketing</h4><p>Growth-focused direction.</p></div>
+    <div class="hero">
+      <h1>We help you get smarter at growing your salon business</h1>
+      <p>Learn the 6 steps to building a successful and profitable salon that gives you the freedom you deserve.</p>
+      <form id="email-optin">
+        <input type="text" name="first_name" placeholder="First name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <button type="submit">Get the free guide</button>
+      </form>
     </div>
-  </section>
+  </header>
 
-  <!-- ✅ WHY SALONFIX -->
-  <section>
-    <h2 class="purple">WHY SALONFIX?</h2>
-    <p>Not an app. Not just a consultant. We work <strong>inside</strong> your salon’s daily life, driving measurable results.</p>
-    <ul style="text-align:left; max-width:600px; margin:20px auto;">
-      <li>✔ In‑house business partner approach</li>
-      <li>✔ Complete operational clarity</li>
-      <li>✔ Daily numbers & reporting</li>
-      <li>✔ Peace of mind for owners</li>
+  <main>
+    <!-- How to work with us -->
+    <section class="work-with-us">
+      <div class="item">
+        <h2>Attend a FREE Masterclass</h2>
+        <p>Access our best free trainings to build your salon business.</p>
+        <a href="courses.html">Learn more</a>
+      </div>
+      <div class="item">
+        <h2>Online Courses</h2>
+        <p>Upskill with our salon business courses.</p>
+        <a href="courses.html">Learn more</a>
+      </div>
+      <div class="item">
+        <h2>Book 1:1 Coaching</h2>
+        <p>Get private advice and action planning with Antony.</p>
+        <a href="coaching.html">Learn more</a>
+      </div>
+    </section>
+
+    <!-- Podcast teasers -->
+    <section class="podcast-highlights">
+      <h2>Tune in to the podcast</h2>
+      <div class="episode-grid">
+        <!-- Example episode tile -->
+        <div class="episode">
+          <h3>Episode 158 – Wendy Iles</h3>
+          <p>What it takes to be a successful celebrity hairstylist</p>
+          <a href="podcast.html">Listen now</a>
+        </div>
+        <!-- Add more episodes -->
+      </div>
+      <a href="podcast.html" class="btn">See all episodes</a>
+    </section>
+
+    <!-- Courses teaser -->
+    <section class="courses-preview">
+      <h2>Our Courses</h2>
+      <div class="course-list">
+        <div class="course">
+          <h3>Super Stylist</h3>
+          <p>For salon owners and their team.</p>
+          <a href="courses.html">Learn more</a>
+        </div>
+        <div class="course">
+          <h3>Management</h3>
+          <p>Tools & vision for salon management.</p>
+          <a href="courses.html">Learn more</a>
+        </div>
+        <div class="course">
+          <h3>Money</h3>
+          <p>Financial systems & profitability.</p>
+          <a href="courses.html">Learn more</a>
+        </div>
+      </div>
+      <a href="courses.html" class="btn">Get savvy with our courses</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Grow My Salon Business | Built by Antony Whitaker</p>
+    <ul class="social-links">
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Facebook</a></li>
     </ul>
-  </section>
-
-  <!-- ✅ MARKETING PHRASE -->
-  <section>
-    <h2 class="purple">WE DON’T FORCE MARKETING</h2>
-    <p>Our growth plans fit your brand — no pushy sales tactics, only strategies that align with your salon’s identity.</p>
-  </section>
-
-  <!-- ✅ TESTIMONIALS -->
-  <section class="testimonials">
-    <h2 class="purple">WHAT SALON OWNERS SAY</h2>
-    <div class="testimonial-card">“SALONFIX changed how I run my business.” <br>— <strong>Salon Owner, Chennai</strong></div>
-    <div class="testimonial-card">“Finally, I have time to focus on my clients — SALONFIX handles the rest.” <br>— <strong>Salon Owner, Bangalore</strong></div>
-  </section>
-
-  <!-- ✅ FAQ -->
-  <section class="faq">
-    <h2 class="purple">FAQ</h2>
-    <div class="faq-item">
-      <div class="faq-question">Will you change how we run our salon?</div>
-      <div class="faq-answer">No — we work with your existing systems and enhance them for better results.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">What happens after the free trial?</div>
-      <div class="faq-answer">We provide a clear roadmap for continued growth and management.</div>
-    </div>
-  </section>
-
-  <!-- ✅ FINAL CTA -->
-  <section class="last-cta">
-    <h2 class="purple">READY TO START?</h2>
-    <p>Let’s run your salon like it’s our own.</p>
-    <button class="cta-btn">Book My Free Trial</button>
-  </section>
-
-  <!-- ✅ FOOTER -->
-  <footer>
-    <p>© 2025 SALONFIX | Your In‑House Business Partner</p>
   </footer>
 
-  <!-- ✅ WhatsApp Floating Icon -->
-  <a href="https://wa.me/919566143572" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
-
-  <script>
-    // ✅ FAQ toggle script
-    document.querySelectorAll('.faq-question').forEach(q => {
-      q.addEventListener('click', () => {
-        const answer = q.nextElementSibling;
-        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-      });
-    });
-
-    // ✅ Intersection Observer for scroll animations (fade-in)
-    const sections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.style.opacity = 1;
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, {threshold: 0.2});
-
-    sections.forEach(sec => {
-      sec.style.opacity = 0;
-      sec.style.transform = 'translateY(30px)';
-      sec.style.transition = 'all 0.8s ease-out';
-      observer.observe(sec);
-    });
-  </script>
-
+  <script src="scripts.js"></script>
 </body>
 </html>
