@@ -3,129 +3,136 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SALONFIX – Salon Operations & Profit Management</title>
+  <title>SALONFIX – YOUR IN-HOUSE BUSINESS PARTNER</title>
 
-  <!-- ✅ GOOGLE FONTS -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+  <!-- ✅ Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- ✅ AOS for Animations -->
+  <!-- ✅ AOS (Animate On Scroll) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <!-- ✅ STYLES -->
+  <!-- ✅ Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    /* RESET */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background-color: #fff; color: #333; line-height: 1.6; }
-
-    /* HEADER */
-    header {
-      background-color: #000;
-      padding: 15px 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .hero-bg {
+      background: linear-gradient(rgba(75,0,130,0.8), rgba(75,0,130,0.8)), url('assets/hero.jpg') center/cover no-repeat;
+    }
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
       z-index: 100;
     }
-    nav a.logo img { height: 50px; }
-    .nav-links { list-style: none; display: flex; gap: 25px; }
-    .nav-links a { color: white; text-decoration: none; font-weight: 600; padding: 8px 12px; transition: 0.3s; }
-    .nav-links a:hover { background: #333; border-radius: 4px; }
-    .menu-toggle { display: none; flex-direction: column; cursor: pointer; }
-    .menu-toggle span { background: white; height: 3px; width: 25px; margin: 4px 0; }
-
-    @media (max-width: 768px) {
-      .nav-links { display: none; flex-direction: column; background: #000; position: absolute; top: 60px; right: 5%; width: 200px; text-align: right; padding: 10px 0; }
-      .nav-links.active { display: flex; }
-      .menu-toggle { display: flex; }
+    .whatsapp-icon {
+      margin-top: 16px;
     }
-
-    /* HERO SECTION */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 100px 5% 60px;
-      background: url('5.png') no-repeat center center/cover;
-      min-height: 100vh;
-      color: #fff;
-      position: relative;
-    }
-    .hero-overlay {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.5);
-    }
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 900px;
-    }
-    .hero-content img.logo-main { max-width: 300px; margin-bottom: 20px; }
-    .hero-content h2 { font-family: 'Oswald', sans-serif; font-size: 42px; color: #cfa2ff; margin-bottom: 20px; }
-    .hero-content h1 { font-family: 'Oswald', sans-serif; font-size: 64px; font-weight: 900; text-transform: uppercase; margin-bottom: 15px; }
-    .hero-content p { font-size: 22px; margin-bottom: 25px; }
-    .hero-content button { background: #FFD700; border: none; padding: 15px 25px; font-weight: bold; border-radius: 5px; cursor: pointer; }
-
-    @media (max-width: 768px) {
-      .hero-content h1 { font-size: 42px; }
-      .hero-content h2 { font-size: 28px; }
-      .hero-content p { font-size: 18px; }
-    }
-
-    /* FOOTER */
-    footer { background: #111; color: #ccc; text-align: center; padding: 30px 10%; font-size: 14px; }
   </style>
 </head>
-<body>
+<body class="bg-white text-gray-900">
 
-  <!-- ✅ HEADER -->
-  <header>
-    <a href="index.html" class="logo"><img src="1.svg" alt="Salonfix Logo"></a>
-    <ul class="nav-links">
-      <li><a href="services.html">Business School</a></li>
-      <li><a href="coaching.html">Coaching</a></li>
-      <li><a href="podcast.html">Podcast</a></li>
-      <li><a href="resources.html">Free Resources</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+  <!-- ✅ NAVBAR -->
+  <nav class="flex justify-between items-center p-6 fixed w-full bg-white shadow z-50">
+    <h1 class="text-2xl font-bold text-purple-900">SALONFIX</h1>
+    <ul class="hidden md:flex space-x-8 font-semibold">
+      <li><a href="#about" class="hover:text-purple-600">About</a></li>
+      <li><a href="#services" class="hover:text-purple-600">Services</a></li>
+      <li><a href="#testimonials" class="hover:text-purple-600">Testimonials</a></li>
+      <li><a href="#contact" class="hover:text-purple-600">Contact</a></li>
     </ul>
-    <div class="menu-toggle" id="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </header>
+    <a href="#contact" class="bg-purple-800 text-white px-4 py-2 rounded-lg hover:bg-purple-700">FREE TRIAL</a>
+  </nav>
 
   <!-- ✅ HERO SECTION -->
-  <div class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content" data-aos="fade-up">
-      <img src="1.svg" class="logo-main" alt="Salonfix Logo Large">
-      <h2>Zero Revenue Leakage Guarantee</h2>
-      <h1>Salon Operations & Profit Management</h1>
-      <p>Experience flawless operations and financial clarity with SALONFIX.</p>
-      <button>Get Your Free Guide</button>
+  <header class="hero-bg text-white h-screen flex flex-col justify-center items-center text-center p-6">
+    <h1 data-aos="fade-up" class="text-4xl md:text-6xl font-bold">YOUR IN-HOUSE BUSINESS PARTNER</h1>
+    <p data-aos="fade-up" data-aos-delay="300" class="mt-4 text-lg md:text-2xl max-w-2xl">We run your salon like it’s our own – Operations, Numbers, Growth, and More.</p>
+    <a href="#services" data-aos="fade-up" data-aos-delay="600" class="mt-6 bg-yellow-400 text-black font-bold py-3 px-6 rounded-full hover:bg-yellow-300 transition">BOOK YOUR FREE TRIAL</a>
+  </header>
+
+  <!-- ✅ ABOUT SECTION -->
+  <section id="about" class="py-20 px-6 md:px-20 text-center">
+    <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold mb-6 text-purple-900">WHO WE ARE</h2>
+    <p data-aos="fade-up" data-aos-delay="200" class="max-w-3xl mx-auto text-lg text-gray-700">SALONFIX is your in-house business partner for salons. We handle operations, track numbers, and drive growth so you can focus on clients.</p>
+  </section>
+
+  <!-- ✅ SERVICES SECTION -->
+  <section id="services" class="bg-gray-50 py-20 px-6 md:px-20 text-center">
+    <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold mb-12 text-purple-900">WHAT WE DO</h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div data-aos="fade-up" class="p-6 bg-white rounded-2xl shadow-md">
+        <img src="assets/operations-icon.svg" class="mx-auto mb-4 w-16" alt="Operations">
+        <h3 class="text-xl font-bold mb-2">OPERATIONS</h3>
+        <p class="text-gray-600">We manage your day-to-day salon flow.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100" class="p-6 bg-white rounded-2xl shadow-md">
+        <img src="assets/numbers-icon.svg" class="mx-auto mb-4 w-16" alt="Numbers">
+        <h3 class="text-xl font-bold mb-2">NUMBERS</h3>
+        <p class="text-gray-600">We track revenue, expenses, and profit.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200" class="p-6 bg-white rounded-2xl shadow-md">
+        <img src="assets/team-icon.svg" class="mx-auto mb-4 w-16" alt="Team">
+        <h3 class="text-xl font-bold mb-2">TEAM</h3>
+        <p class="text-gray-600">We streamline staff performance and targets.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="300" class="p-6 bg-white rounded-2xl shadow-md">
+        <img src="assets/growth-icon.svg" class="mx-auto mb-4 w-16" alt="Growth">
+        <h3 class="text-xl font-bold mb-2">GROWTH</h3>
+        <p class="text-gray-600">We create systems for consistent expansion.</p>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <!-- ✅ TESTIMONIALS -->
+  <section id="testimonials" class="py-20 px-6 md:px-20 text-center">
+    <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold mb-12 text-purple-900">WHAT OUR CLIENTS SAY</h2>
+    <div class="max-w-3xl mx-auto space-y-8">
+      <div data-aos="fade-up" class="bg-white p-6 rounded-2xl shadow">
+        <p class="text-gray-700 italic">“Salonfix transformed our salon’s backend – now I can just focus on clients.”</p>
+        <h4 class="mt-4 font-semibold">– Client Name</h4>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100" class="bg-white p-6 rounded-2xl shadow">
+        <p class="text-gray-700 italic">“Our profits grew because Salonfix streamlined our operations.”</p>
+        <h4 class="mt-4 font-semibold">– Client Name</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ CONTACT SECTION -->
+  <section id="contact" class="bg-purple-900 text-white py-20 px-6 md:px-20 text-center">
+    <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold mb-6">LET’S TALK</h2>
+    <p data-aos="fade-up" data-aos-delay="100" class="max-w-2xl mx-auto mb-6">Want Salonfix to run your salon like it’s our own? Start with a FREE 1‑Month Trial.</p>
+    <a href="https://wa.me/919566143572" class="bg-yellow-400 text-black font-bold py-3 px-6 rounded-full hover:bg-yellow-300 transition">WHATSAPP US</a>
+  </section>
 
   <!-- ✅ FOOTER -->
-  <footer>
-    <p>© 2025 SALONFIX – YOUR IN-HOUSE BUSINESS PARTNER.</p>
-    <p>Follow us on Instagram | WhatsApp</p>
+  <footer class="bg-gray-100 text-center py-6 text-gray-600 text-sm">
+    © 2025 SALONFIX – Your In‑House Business Partner.
   </footer>
 
-  <!-- ✅ JS for Menu & AOS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- ✅ WHATSAPP FLOATING ICON -->
+  <a href="https://wa.me/919566143572" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp whatsapp-icon"></i>
+  </a>
+
+  <!-- ✅ Scripts -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script>
-    AOS.init({ duration: 1000 });
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+    AOS.init({
+      duration: 1000,
+      once: true
     });
   </script>
 </body>
