@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ✅ SEO META TAGS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SALONFIX – Your In-House Business Partner for Salons</title>
-  <meta name="description" content="SALONFIX manages salon operations, numbers & growth — so salon owners work less and profits grow more.">
-  <meta name="keywords" content="salon operations, salon management, salon profit growth, salon consulting, salonfix">
+  
+  <!-- ✅ SEO META TAGS -->
+  <meta name="description" content="SALONFIX runs your operations, numbers, and team so you work less and profits grow.">
+  <meta name="keywords" content="salon operations, salon management, salonfix, team management, salon growth">
   <meta name="author" content="JAWHAR RAJ RAJKUMAR">
-
-  <!-- ✅ ESSENTIAL SETTINGS -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- ✅ GOOGLE FONTS + FONT AWESOME -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <!-- ✅ STYLES -->
   <style>
@@ -17,27 +20,26 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
     }
 
-    html, body {
-      width: 100%;
+    body {
       scroll-behavior: smooth;
-      font-family: 'Inter', sans-serif;
       background-color: #0d0b1b;
       color: white;
     }
 
-    /* ✅ NAVIGATION BAR */
+    /* ✅ NAVIGATION */
     nav {
       width: 100%;
-      background: rgba(75, 0, 130, 0.9); /* Purple with 90% opacity */
+      background: rgba(75, 0, 130, 0.9);
       padding: 15px 0;
       position: sticky;
       top: 0;
       z-index: 1000;
       text-align: center;
-      backdrop-filter: blur(6px); /* subtle glass effect */
-      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* soft shadow */
+      backdrop-filter: blur(6px);
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
     }
 
     nav a {
@@ -50,56 +52,183 @@
     }
 
     nav a:hover {
-      color: #FFD700; /* Gold hover color */
+      color: #FFD700;
     }
 
-    /* ✅ HEADLINE FADE-IN ANIMATION */
-    h1, h2, h3 {
-      opacity: 0;
-      animation: fadeIn 1.5s ease forwards;
-      animation-delay: 0.5s;
+    /* ✅ HERO SECTION */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 10%;
+      background: linear-gradient(135deg, #4B0082, #2d004d);
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
+    .hero-text {
+      max-width: 50%;
+      animation: fadeInLeft 1.5s ease forwards;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    .cta-btn {
+      background-color: #FFD700;
+      color: #4B0082;
+      font-weight: bold;
+      padding: 15px 25px;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: transform 0.3s ease;
+      display: inline-block;
+      animation: bounce 2s infinite;
+    }
+
+    .cta-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .hero img {
+      max-width: 350px;
+      border-radius: 20px;
+      animation: fadeInRight 1.5s ease forwards;
+    }
+
+    /* ✅ WHAT WE DO */
+    .what-we-do {
+      text-align: center;
+      padding: 60px 10%;
+    }
+
+    .what-we-do h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: #FFD700;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #1a1130;
+      padding: 30px;
+      flex: 1;
+      min-width: 220px;
+      margin: 10px;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeUp 1.5s ease forwards;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0px 10px 20px rgba(0,0,0,0.4);
+    }
+
+    .card i {
+      font-size: 40px;
+      color: #FFD700;
+      margin-bottom: 15px;
+    }
+
+    /* ✅ WHY SALONFIX */
+    .why {
+      background: #4B0082;
+      padding: 60px 10%;
+      text-align: center;
+    }
+
+    .why h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .why p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    /* ✅ FREE TRIAL CTA SECTION */
+    .free-trial {
+      padding: 60px 10%;
+      text-align: center;
+      background: #FFD700;
+      color: #4B0082;
+    }
+
+    .free-trial h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .free-trial a {
+      background: #4B0082;
+      color: #fff;
+      font-weight: bold;
+      padding: 15px 25px;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .free-trial a:hover {
+      transform: scale(1.05);
+    }
+
+    /* ✅ RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-text, .hero img {
+        max-width: 100%;
+      }
+    }
+
+    /* ✅ ANIMATIONS */
+    @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ✅ SLIDES */
-    .container {
-      width: 100%;
-    }
-
-    .slide {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      background-color: #0d0b1b;
-    }
-
-    .slide img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      display: block;
-    }
-
-    /* ✅ MOBILE OPTIMIZATION */
-    @media (max-width: 768px) {
-      nav a {
-        display: inline-block;
-        margin: 8px;
-        font-size: 14px;
-      }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-8px); }
+      60% { transform: translateY(-4px); }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- ✅ NAVIGATION BAR -->
+  <!-- ✅ NAVIGATION -->
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -108,15 +237,54 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- ✅ SLIDE CONTAINER -->
-  <div class="container">
-    <div class="slide"><img src="1.svg" alt="Slide 1"></div>
-    <div class="slide"><img src="2.svg" alt="Slide 2"></div>
-    <div class="slide"><img src="3.svg" alt="Slide 3"></div>
-    <div class="slide"><img src="4.svg" alt="Slide 4"></div>
-    <div class="slide"><img src="5.png" alt="Slide 5"></div>
-    <div class="slide"><img src="6.svg" alt="Slide 6"></div>
-  </div>
+  <!-- ✅ HERO SECTION -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>WE RUN YOUR SALON LIKE IT’S OUR OWN.</h1>
+      <p>SALONFIX takes control of operations, numbers, and team — so you can focus on clients and watch profits grow.</p>
+      <a href="free-trial.html" class="cta-btn">Start Your FREE 1‑Month Trial</a>
+    </div>
+    <img src="jawhar-photo.png" alt="Jawhar Raj Rajkumar">
+  </section>
+
+  <!-- ✅ WHAT WE DO -->
+  <section class="what-we-do">
+    <h2>What We Do</h2>
+    <div class="cards">
+      <div class="card">
+        <i class="fas fa-cogs"></i>
+        <h3>Operations</h3>
+        <p>We run your front desk, track reports, and keep hygiene & stock under control.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Numbers</h3>
+        <p>Daily & weekly KPIs so you always know where money is going.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-users"></i>
+        <h3>Team Management</h3>
+        <p>We handle attendance, incentives & performance so your staff stay accountable.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-bullhorn"></i>
+        <h3>Growth</h3>
+        <p>Marketing guidance is there when you’re ready to scale.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ WHY SALONFIX -->
+  <section class="why">
+    <h2>Why SALONFIX?</h2>
+    <p>SALONFIX isn’t an app or consultant. We step into your salon every single day — virtually — and run the operations, numbers, and systems like an owner would.</p>
+  </section>
+
+  <!-- ✅ FREE TRIAL CTA -->
+  <section class="free-trial">
+    <h2>Experience SALONFIX for 1 Month — Free</h2>
+    <a href="free-trial.html">Get Started</a>
+  </section>
 
 </body>
 </html>
