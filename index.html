@@ -27,6 +27,31 @@
       color: white;
     }
 
+    /* ✅ NAVIGATION BAR */
+    nav {
+      width: 100%;
+      background-color: #4B0082; /* SALONFIX purple */
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #FFD700; /* Gold hover color */
+    }
+
+    /* ✅ SLIDES */
     .container {
       width: 100%;
     }
@@ -49,19 +74,26 @@
 
     /* ✅ MOBILE OPTIMIZATION */
     @media (max-width: 768px) {
-      .slide {
-        padding-bottom: 0;
-      }
-      .slide img {
-        max-width: 100%;
-        height: auto;
-        object-fit: contain;
+      nav a {
+        display: inline-block;
+        margin: 8px;
+        font-size: 14px;
       }
     }
   </style>
 </head>
 
 <body>
+
+  <!-- ✅ NAVIGATION BAR -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="free-trial.html">Free Trial</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
   <!-- ✅ SLIDE CONTAINER -->
   <div class="container">
     <div class="slide"><img src="1.svg" alt="Slide 1"></div>
@@ -71,5 +103,6 @@
     <div class="slide"><img src="5.png" alt="Slide 5"></div>
     <div class="slide"><img src="6.svg" alt="Slide 6"></div>
   </div>
+
 </body>
 </html>
