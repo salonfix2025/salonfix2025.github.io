@@ -6,7 +6,7 @@
   <title>SALONFIX – Your In-House Business Partner for Salons</title>
   
   <!-- ✅ SEO META TAGS -->
-  <meta name="description" content="SALONFIX runs your operations, numbers, and team so you work less and profits grow.">
+  <meta name="description" content="SALONFIX runs your salon like it’s our own. We manage operations, numbers, team, and growth while you focus on clients.">
   <meta name="keywords" content="salon operations, salon management, salonfix, team management, salon growth">
   <meta name="author" content="JAWHAR RAJ RAJKUMAR">
   
@@ -27,6 +27,7 @@
       scroll-behavior: smooth;
       background-color: #0d0b1b;
       color: white;
+      line-height: 1.6;
     }
 
     /* ✅ NAVIGATION */
@@ -51,9 +52,7 @@
       transition: color 0.3s ease;
     }
 
-    nav a:hover {
-      color: #FFD700;
-    }
+    nav a:hover { color: #FFD700; }
 
     /* ✅ HERO SECTION */
     .hero {
@@ -62,6 +61,7 @@
       justify-content: space-between;
       padding: 60px 10%;
       background: linear-gradient(135deg, #4B0082, #2d004d);
+      flex-wrap: wrap;
     }
 
     .hero-text {
@@ -72,13 +72,20 @@
     .hero-text h1 {
       font-size: 48px;
       font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero-text h3 {
+      font-size: 20px;
+      font-weight: 400;
       margin-bottom: 20px;
+      font-style: italic;
+      color: #FFD700;
     }
 
     .hero-text p {
       font-size: 18px;
       margin-bottom: 30px;
-      line-height: 1.5;
     }
 
     .cta-btn {
@@ -93,9 +100,7 @@
       animation: bounce 2s infinite;
     }
 
-    .cta-btn:hover {
-      transform: scale(1.05);
-    }
+    .cta-btn:hover { transform: scale(1.05); }
 
     .hero img {
       max-width: 350px;
@@ -103,18 +108,20 @@
       animation: fadeInRight 1.5s ease forwards;
     }
 
-    /* ✅ WHAT WE DO */
-    .what-we-do {
-      text-align: center;
+    /* ✅ SECTION STYLES */
+    section {
       padding: 60px 10%;
     }
 
-    .what-we-do h2 {
+    h2 {
       font-size: 36px;
-      margin-bottom: 40px;
+      text-align: center;
+      margin-bottom: 30px;
       color: #FFD700;
+      animation: fadeUp 1s ease forwards;
     }
 
+    /* ✅ WHAT WE DO */
     .cards {
       display: flex;
       justify-content: space-between;
@@ -145,23 +152,30 @@
       margin-bottom: 15px;
     }
 
+    /* ✅ HOW WE WORK */
+    .how {
+      background: #12091f;
+      text-align: center;
+      animation: fadeUp 1.5s ease forwards;
+    }
+
+    .how p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
     /* ✅ WHY SALONFIX */
     .why {
       background: #4B0082;
-      padding: 60px 10%;
       text-align: center;
-    }
-
-    .why h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
     }
 
     .why p {
       max-width: 700px;
       margin: auto;
       font-size: 18px;
-      line-height: 1.5;
     }
 
     /* ✅ FREE TRIAL CTA SECTION */
@@ -187,19 +201,12 @@
       transition: transform 0.3s ease;
     }
 
-    .free-trial a:hover {
-      transform: scale(1.05);
-    }
+    .free-trial a:hover { transform: scale(1.05); }
 
     /* ✅ RESPONSIVE */
     @media (max-width: 900px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }
-      .hero-text, .hero img {
-        max-width: 100%;
-      }
+      .hero { flex-direction: column; text-align: center; }
+      .hero-text, .hero img { max-width: 100%; }
     }
 
     /* ✅ ANIMATIONS */
@@ -241,6 +248,7 @@
   <section class="hero">
     <div class="hero-text">
       <h1>WE RUN YOUR SALON LIKE IT’S OUR OWN.</h1>
+      <h3>Not an app. Not a consultant. Your in‑house business partner.</h3>
       <p>SALONFIX takes control of operations, numbers, and team — so you can focus on clients and watch profits grow.</p>
       <a href="free-trial.html" class="cta-btn">Start Your FREE 1‑Month Trial</a>
     </div>
@@ -248,7 +256,7 @@
   </section>
 
   <!-- ✅ WHAT WE DO -->
-  <section class="what-we-do">
+  <section>
     <h2>What We Do</h2>
     <div class="cards">
       <div class="card">
@@ -259,30 +267,43 @@
       <div class="card">
         <i class="fas fa-chart-line"></i>
         <h3>Numbers</h3>
-        <p>Daily & weekly KPIs so you always know where money is going.</p>
+        <p>Daily, weekly & monthly KPI tracking — so you always know where money is going.</p>
       </div>
       <div class="card">
         <i class="fas fa-users"></i>
         <h3>Team Management</h3>
-        <p>We handle attendance, incentives & performance so your staff stay accountable.</p>
+        <p>Attendance, incentives & performance tracked — turning staff into accountable team players.</p>
       </div>
       <div class="card">
         <i class="fas fa-bullhorn"></i>
         <h3>Growth</h3>
-        <p>Marketing guidance is there when you’re ready to scale.</p>
+        <p>Marketing guidance is there when you’re ready — with campaigns as an add‑on.</p>
       </div>
     </div>
+  </section>
+
+  <!-- ✅ HOW WE WORK -->
+  <section class="how">
+    <h2>How We Work</h2>
+    <p>We don’t disrupt your existing systems overnight. We make small, smart additions to the way your team already works.</p>
+    <p>From opening till closing, we quietly collect the right data every day.</p>
+    <p><strong>Every next morning</strong> – you get a one‑page daily snapshot.</p>
+    <p><strong>Every week</strong> – a narrative story report (profit, loss, expenses, and bank reconciliation).</p>
+    <p><strong>Every month end</strong> – a complete analysis, right down to salary numbers for every staff member.</p>
+    <p>We don’t force big marketing spends on Day 1. First, we make your salon’s foundation strong — rewriting systems to make them adaptable for your team. Marketing comes later, smoothly.</p>
+    <p><em>Before we begin, you’ll fill our 2‑Stage Questionnaire (soon linked as a Google Form here).</em></p>
   </section>
 
   <!-- ✅ WHY SALONFIX -->
   <section class="why">
     <h2>Why SALONFIX?</h2>
-    <p>SALONFIX isn’t an app or consultant. We step into your salon every single day — virtually — and run the operations, numbers, and systems like an owner would.</p>
+    <p>SALONFIX isn’t another salon app or consultant. We step into your business every single day — virtually — and run operations, numbers, and systems like an owner would.</p>
   </section>
 
   <!-- ✅ FREE TRIAL CTA -->
   <section class="free-trial">
     <h2>Experience SALONFIX for 1 Month — Free</h2>
+    <p>See exactly where profits are leaking — and how we’ll fix them — before you commit a single rupee.</p>
     <a href="free-trial.html">Get Started</a>
   </section>
 
