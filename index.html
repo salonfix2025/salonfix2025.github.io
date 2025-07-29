@@ -12,7 +12,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ✅ STYLES -->
-  <style>
+  <style>/* ✅ NAVIGATION BAR */
+nav {
+  width: 100%;
+  background: rgba(75, 0, 130, 0.9); /* Purple with 90% opacity */
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  text-align: center;
+  backdrop-filter: blur(6px); /* subtle glass effect */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* soft shadow */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #FFD700; /* Gold hover color */
+}
+
+/* ✅ HEADLINE FADE-IN */
+h1, h2, h3 {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
     * {
       margin: 0;
       padding: 0;
