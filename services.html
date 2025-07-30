@@ -1,1 +1,97 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Services - SALONFIX</title><link rel='stylesheet' href='styles.css'><script src='scripts.js' defer></script></head><body><header><h1>Our Services</h1></header><main><h2>Services Content</h2></main><footer><p>© 2025 SALONFIX</p></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SALONFIX Services – Business School</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <a href="index.html" class="logo"><img src="1.svg" alt="Salonfix Logo"></a>
+    <ul class="nav-links">
+      <li><a href="services.html" class="active">Business School</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="podcast.html">Podcast</a></li>
+      <li><a href="resources.html">Free Resources</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- SERVICES HERO SECTION -->
+  <section class="hero services-hero">
+    <div class="hero-text" data-aos="fade-right">
+      <h1>SALONFIX Business School</h1>
+      <h2>Master Your Salon’s Operations, Numbers, and Growth</h2>
+      <p>Our service pillars are designed to take your salon from daily chaos to smooth, profitable operations.</p>
+    </div>
+    <div class="hero-img-container" data-aos="fade-left">
+      <img src="3.png" alt="Salonfix Services">
+    </div>
+  </section>
+
+  <!-- SERVICE PILLARS -->
+  <section class="services-pillars" data-aos="fade-up">
+    <h2>The Four SALONFIX Pillars</h2>
+    <div class="three-col">
+      <div>
+        <h3>Operations</h3>
+        <p>From open to close, we put systems in place for smooth daily running and accountability.</p>
+      </div>
+      <div>
+        <h3>Numbers</h3>
+        <p>Track revenue, expenses, and stock with daily precision so you see where every rupee goes.</p>
+      </div>
+      <div>
+        <h3>Growth</h3>
+        <p>We help you build a vision, set KPIs, and implement strategies for long-term success.</p>
+      </div>
+    </div>
+    <div class="three-col" style="margin-top:40px;">
+      <div>
+        <h3>Marketing</h3>
+        <p>No forced packages. We guide organic marketing that fits your brand – and bring in more clients.</p>
+      </div>
+      <div>
+        <h3>Staff Development</h3>
+        <p>We coach your team on customer experience, upselling, and service consistency.</p>
+      </div>
+      <div>
+        <h3>Reporting</h3>
+        <p>Get clear daily, weekly, and monthly reports, including a narrative of your salon’s performance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 SALONFIX – YOUR IN-HOUSE BUSINESS PARTNER.</p>
+    <p>Follow us on Instagram | WhatsApp</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="scripts.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+  </script>
+</body>
+</html>
