@@ -1,4 +1,4 @@
-/* ====== FONTS ====== */
+/* ====== GOOGLE FONT ====== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 /* ====== GLOBAL ====== */
@@ -42,15 +42,20 @@ body {
     color: white;
     text-decoration: none;
     font-weight: 600;
+    padding-bottom: 5px;
     transition: all 0.3s ease;
 }
 
 .nav-links li a:hover {
-    text-decoration: underline;
-    opacity: 0.8;
+    border-bottom: 3px solid gold;
 }
 
-/* Hamburger for mobile */
+/* ACTIVE LINK GOLD UNDERLINE */
+.nav-links li a.active {
+    border-bottom: 3px solid gold;
+}
+
+/* Hamburger Menu for Mobile */
 .hamburger {
     display: none;
     font-size: 2em;
@@ -58,7 +63,30 @@ body {
     cursor: pointer;
 }
 
-/* ====== HERO SECTION ====== */
+/* ====== HERO BANNER ====== */
+.banner {
+    width: 100%;
+    background: linear-gradient(to right, #4B0082, #6A0DAD);
+    color: white;
+    text-align: center;
+    padding: 6em 2em;
+    margin-bottom: 3em;
+}
+
+.banner h1 {
+    font-size: 3em;
+    margin-bottom: 0.3em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.banner p {
+    font-size: 1.3em;
+    opacity: 0.95;
+    font-weight: 400;
+}
+
+/* ====== HERO SECTION (HOME) ====== */
 .hero {
     display: flex;
     align-items: center;
@@ -105,7 +133,7 @@ body {
     background-color: #360061;
 }
 
-/* ====== SECTION STYLING ====== */
+/* ====== GENERAL SECTION STYLING ====== */
 section {
     padding: 4em 10%;
     border-bottom: 1px solid #eee;
