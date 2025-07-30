@@ -1,4 +1,6 @@
-/* ✅ RESET & GLOBAL STYLE */
+/* -------------------
+   GLOBAL STYLES
+------------------- */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -7,18 +9,14 @@ body {
     line-height: 1.6;
 }
 
-section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-/* ✅ NAVBAR */
+/* -------------------
+   NAVBAR
+------------------- */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #4B0082; /* Purple */
+    background-color: #4B0082;
     padding: 1em 2em;
     position: sticky;
     top: 0;
@@ -26,9 +24,10 @@ section {
 }
 
 .navbar .logo {
-    font-size: 1.5em;
-    color: white;
+    font-size: 1.8em;
     font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
 }
 
 .nav-links {
@@ -43,15 +42,30 @@ section {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
+    font-size: 1em;
+    position: relative;
 }
 
-.nav-links li a:hover,
-.nav-links li a.active {
-    text-decoration: underline;
+/* Hover underline animation */
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #FFD700;
+    transition: width 0.3s ease;
 }
 
-/* ✅ MOBILE MENU (HAMBURGER) */
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+    width: 100%;
+}
+
+/* -------------------
+   HAMBURGER MENU (Mobile)
+------------------- */
 .hamburger {
     display: none;
     font-size: 2em;
@@ -59,7 +73,9 @@ section {
     cursor: pointer;
 }
 
-/* ✅ BANNER */
+/* -------------------
+   BANNER SECTION
+------------------- */
 .banner {
     width: 100%;
     height: 300px;
@@ -72,6 +88,7 @@ section {
     text-align: center;
     color: white;
     position: relative;
+    margin-bottom: 50px; /* 🔥 Adds gap between banner & content */
 }
 
 .banner::before {
@@ -81,7 +98,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(75, 0, 130, 0.4); /* purple overlay */
+    background-color: rgba(75, 0, 130, 0.4); /* Purple overlay */
     z-index: 1;
 }
 
@@ -102,24 +119,27 @@ section {
     font-size: 18px;
 }
 
-/* ✅ HERO SECTION (HOMEPAGE) */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 60px 20px;
-    background-color: #f9f9f9;
+/* -------------------
+   MAIN CONTENT
+------------------- */
+main {
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+    background: #fff;
 }
 
-.hero-text {
-    max-width: 50%;
+section {
+    margin-bottom: 50px;
 }
 
-.hero-image img {
-    max-width: 400px;
-    border-radius: 20px;
+h1, h2, h3 {
+    color: #4B0082;
 }
 
+/* -------------------
+   CTA BUTTON
+------------------- */
 .cta-button {
     background-color: #4B0082;
     color: white;
@@ -128,14 +148,16 @@ section {
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
-    margin-top: 1em;
+    transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
     background-color: #360061;
 }
 
-/* ✅ FOOTER */
+/* -------------------
+   FOOTER
+------------------- */
 footer {
     text-align: center;
     padding: 1em;
@@ -144,7 +166,9 @@ footer {
     margin-top: 50px;
 }
 
-/* ✅ MOBILE FRIENDLY DESIGN */
+/* -------------------
+   RESPONSIVE DESIGN
+------------------- */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -153,8 +177,8 @@ footer {
         position: absolute;
         top: 60px;
         right: 0;
-        width: 200px;
-        padding: 1em;
+        width: 220px;
+        padding: 10px;
     }
 
     .nav-links.active {
@@ -165,29 +189,11 @@ footer {
         display: block;
     }
 
-    .hero {
-        flex-direction: column;
-        text-align: center;
+    .banner {
+        height: 220px;
     }
 
-    .hero-text {
-        max-width: 100%;
+    .banner h1 {
+        font-size: 30px;
     }
-
-    .hero-image img {
-        max-width: 300px;
-        margin-top: 20px;
-    }
-}
-/* FIX: Ensure content starts below banner cleanly */
-main {
-    padding-top: 30px;
-    position: relative;
-    z-index: 2;
-    background: #fff;
-}
-
-/* Space after banner */
-.banner {
-    margin-bottom: 40px;
 }
