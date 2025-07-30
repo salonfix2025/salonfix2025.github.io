@@ -179,3 +179,15 @@ footer {
         margin-top: 20px;
     }
 }
+/* FIX: Ensure content starts below banner cleanly */
+main {
+    padding-top: 30px;
+    position: relative;
+    z-index: 2;
+    background: #fff;
+}
+
+/* Space after banner */
+.banner {
+    margin-bottom: 40px;
+}
