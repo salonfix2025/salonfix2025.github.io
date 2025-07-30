@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Swiper CSS & JS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SALONFIX - Your In-House Business Partner</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- AOS Animation -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Swiper Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
+
 <header>
     <nav class="navbar">
         <div class="logo">SALONFIX</div>
@@ -49,7 +54,6 @@
     <!-- WHAT IS SALONFIX -->
     <section data-aos="fade-up">
         <h2>WHAT EXACTLY IS SALONFIX?</h2>
-        <p>We step into your salon like we own it — tracking every number, fixing every leak, and building every system you wish you had time for.</p>
         <ul>
             <li><strong>Daily Data & Weekly Data:</strong> You see your sales, profits, and gaps clearly.</li>
             <li><strong>Team Accountability:</strong> Training, incentives, and checklists in place.</li>
@@ -75,7 +79,6 @@
     <!-- WHAT WE DO -->
     <section data-aos="fade-up">
         <h2>WHAT IF EVERY PROBLEM IN YOUR SALON HAD A SYSTEM TO FIX IT?</h2>
-        <p>AND WHAT IF SOMEONE ELSE BUILT THOSE SYSTEMS FOR YOU — AND RAN THEM EVERY DAY?</p>
         <ul>
             <li><strong>NUMBERS & DATA:</strong> Daily sales, profit, and expense data tracked.</li>
             <li><strong>TEAM ACCOUNTABILITY:</strong> Structured training and incentive plans.</li>
@@ -87,7 +90,6 @@
     <!-- FREE TRIAL -->
     <section data-aos="fade-up">
         <h2>WHAT IF YOU COULD TRY SALONFIX FOR A MONTH — FREE?</h2>
-        <p>For 30 days, SALONFIX steps in as your in-house partner. We track your numbers, clean up the leaks, and set up the systems your salon has been missing — all without any commitment or cost.</p>
         <ul>
             <li>Daily data starts flowing – You see your sales, profits, and gaps clearly.</li>
             <li>Stock, vendors, and costs are reviewed – We plug silent leaks.</li>
@@ -111,34 +113,28 @@
     <!-- FINAL CTA -->
     <section data-aos="fade-up" class="cta-section">
         <h2>WHEN WILL YOUR SALON FINALLY RUN THE WAY YOU WANT IT TO?</h2>
-        <p>Your salon doesn’t need another piece of software. It doesn’t need more casual “tips” or quick fixes. It needs a dedicated partner to take over the operational weight — so you can step back, see the bigger picture, and relax knowing everything is handled. SALONFIX brings structure, data, and control to every corner of your business — from daily sales to vendor costs — so you finally run your salon with clarity and confidence.</p>
-        <p><strong>WhatsApp SALONFIX at +91 95661 43572 or DM @salonfix.in on Instagram</strong></p>
+        <p>Your salon doesn’t need another piece of software. It doesn’t need more casual “tips” or quick fixes. It needs a dedicated partner to take over the operational weight — so you can step back, see the bigger picture, and relax knowing everything is handled.</p>
     </section>
 </main>
 
-<!-- ✅ TESTIMONIAL SLIDER SECTION (only one copy) -->
+<!-- TESTIMONIAL SLIDER SECTION -->
 <section class="testimonials" data-aos="fade-up">
   <h2>WHAT OTHERS SAY</h2>
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <!-- Testimonial 1 -->
       <div class="swiper-slide">
         <blockquote>“Salonfix completely transformed my salon – I finally feel in control of my numbers.”</blockquote>
         <p class="author">– Priya Sharma, Owner</p>
       </div>
-      <!-- Testimonial 2 -->
       <div class="swiper-slide">
         <blockquote>“Our staff became accountable, our stock stopped vanishing, and profits grew.”</blockquote>
         <p class="author">– Arjun Patel, Salon Group Owner</p>
       </div>
-      <!-- Testimonial 3 -->
       <div class="swiper-slide">
         <blockquote>“With Salonfix, I can focus on my clients while they run the back end flawlessly.”</blockquote>
         <p class="author">– Kavya R, Boutique Salon Owner</p>
       </div>
     </div>
-
-    <!-- Pagination & Arrows -->
     <div class="swiper-pagination"></div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
@@ -150,5 +146,15 @@
 </footer>
 
 <script src="js/script.js"></script>
+<script>
+    AOS.init();
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: { delay: 4000, disableOnInteraction: false },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
+    });
+</script>
+
 </body>
 </html>
