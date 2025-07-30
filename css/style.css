@@ -223,3 +223,60 @@ footer {
         display: block;
     }
 }
+/* ====== BANNER IMAGE STYLE ====== */
+.banner {
+    position: relative;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 6em 2em;
+    margin-bottom: 3em;
+    background-size: cover;
+    background-position: center;
+}
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(75, 0, 130, 0.6); /* Purple overlay */
+}
+.banner h1, .banner p {
+    position: relative;
+    z-index: 2;
+}
+
+/* ====== TESTIMONIAL SLIDER ====== */
+.testimonials {
+    padding: 5em 10%;
+    background: #fafafa;
+    text-align: center;
+}
+.testimonials h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #4B0082;
+}
+.swiper-container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+.swiper-slide {
+    background: white;
+    padding: 2em;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.swiper-slide blockquote {
+    font-size: 1.3em;
+    font-style: italic;
+    margin-bottom: 1em;
+    color: #333;
+}
+.swiper-slide .author {
+    font-weight: 600;
+    color: #4B0082;
+}
+.swiper-pagination {
+    margin-top: 1em;
+}
