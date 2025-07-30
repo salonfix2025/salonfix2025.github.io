@@ -9,6 +9,11 @@ body {
     line-height: 1.6;
 }
 
+h1, h2, h3 {
+    color: #4B0082;
+    margin-top: 0;
+}
+
 /* -------------------
    NAVBAR
 ------------------- */
@@ -88,58 +93,65 @@ body {
     text-align: center;
     color: white;
     position: relative;
-    margin-bottom: 50px; /* 🔥 Adds gap between banner & content */
+    z-index: 1;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 50px; /* ✅ space below banner */
 }
 
-.banner::before {
+/* Purple overlay */
+.banner::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(75, 0, 130, 0.4); /* Purple overlay */
-    z-index: 1;
-}
-
-.banner h1,
-.banner p {
-    position: relative;
-    z-index: 2;
-    margin: 5px 0;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(75, 0, 130, 0.5); /* Purple tint */
+    z-index: -1;
 }
 
 .banner h1 {
-    font-size: 42px;
+    font-size: 2.5rem;
+    margin: 0;
     font-weight: bold;
-    text-transform: uppercase;
 }
 
 .banner p {
-    font-size: 18px;
+    font-size: 1.2rem;
+    margin-top: 10px;
 }
 
 /* -------------------
    MAIN CONTENT
 ------------------- */
 main {
-    padding: 20px;
+    padding: 50px 20px;
+    background: #fff;
     position: relative;
     z-index: 2;
-    background: #fff;
 }
 
 section {
     margin-bottom: 50px;
 }
 
-h1, h2, h3 {
-    color: #4B0082;
+/* -------------------
+   HERO SECTION (Homepage only)
+------------------- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
 }
 
-/* -------------------
-   CTA BUTTON
-------------------- */
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-image img {
+    max-width: 400px;
+    border-radius: 20px;
+}
+
 .cta-button {
     background-color: #4B0082;
     color: white;
@@ -148,6 +160,7 @@ h1, h2, h3 {
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
+    margin-top: 1em;
     transition: background-color 0.3s ease;
 }
 
@@ -195,5 +208,19 @@ footer {
 
     .banner h1 {
         font-size: 30px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        max-width: 300px;
+        margin-top: 20px;
     }
 }
