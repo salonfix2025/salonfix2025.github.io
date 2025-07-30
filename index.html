@@ -1,1 +1,93 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>SALONFIX - Home</title><link rel='stylesheet' href='styles.css'><script src='scripts.js' defer></script></head><body><header><h1>SALONFIX</h1><nav><a href='about.html'>About</a> | <a href='services.html'>Services</a> | <a href='coaching.html'>Coaching</a> | <a href='podcast.html'>Podcast</a> | <a href='resources.html'>Resources</a> | <a href='contact.html'>Contact</a></nav></header><main><section><h2>Hero Section Placeholder</h2><p>Welcome to Salonfix.</p></section></main><footer><p>© 2025 SALONFIX</p></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SALONFIX – Your In-House Business Partner</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <a href="index.html" class="logo"><img src="1.svg" alt="Salonfix Logo"></a>
+    <ul class="nav-links">
+      <li><a href="services.html">Business School</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="podcast.html">Podcast</a></li>
+      <li><a href="resources.html">Free Resources</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-text" data-aos="fade-right">
+      <h1>We Help You Get Smarter At Growing Your Salon Business</h1>
+      <h2>Zero Revenue Leakage Guarantee</h2>
+      <p>Learn the 6 steps to building a successful and profitable salon that gives you the freedom you deserve.</p>
+      <button class="cta-button">Get Your Free Guide</button>
+    </div>
+    <div class="hero-img-container" data-aos="fade-left">
+      <img src="jawhar-photo.png" alt="Founder Jawhar Raj Rajkumar">
+    </div>
+  </section>
+
+  <!-- INTRO SECTION -->
+  <section class="intro" data-aos="fade-up">
+    <h2>Salonfix: Your In-House Business Partner</h2>
+    <p>SALONFIX takes daily control of your salon’s operations, numbers, and growth – so you can focus on your clients. From tracking revenue leakage to building systems that deliver results, we’re here every step of the way.</p>
+  </section>
+
+  <!-- HOW TO WORK WITH US -->
+  <section class="work-with-us" data-aos="fade-up">
+    <h2>How to Work with SALONFIX</h2>
+    <div class="three-col">
+      <div>
+        <h3>Attend a FREE Masterclass</h3>
+        <p>Access our best free trainings to build your salon business.</p>
+        <a href="services.html">Learn more</a>
+      </div>
+      <div>
+        <h3>Join Our Online Courses</h3>
+        <p>Upskill with our salon business courses and grow your team.</p>
+        <a href="services.html">Learn more</a>
+      </div>
+      <div>
+        <h3>Book 1:1 Coaching</h3>
+        <p>Get private advice and action planning with Jawhar Raj Rajkumar.</p>
+        <a href="coaching.html">Learn more</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 SALONFIX – YOUR IN-HOUSE BUSINESS PARTNER.</p>
+    <p>Follow us on Instagram | WhatsApp</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="scripts.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+  </script>
+</body>
+</html>
