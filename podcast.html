@@ -1,1 +1,90 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Podcast - SALONFIX</title><link rel='stylesheet' href='styles.css'><script src='scripts.js' defer></script></head><body><header><h1>Podcast</h1></header><main><h2>Podcast Episodes</h2></main><footer><p>© 2025 SALONFIX</p></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SALONFIX Coaching – 1:1 Guidance for Salon Owners</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <a href="index.html" class="logo"><img src="1.svg" alt="Salonfix Logo"></a>
+    <ul class="nav-links">
+      <li><a href="services.html">Business School</a></li>
+      <li><a href="coaching.html" class="active">Coaching</a></li>
+      <li><a href="podcast.html">Podcast</a></li>
+      <li><a href="resources.html">Free Resources</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- COACHING HERO SECTION -->
+  <section class="hero coaching-hero">
+    <div class="hero-text" data-aos="fade-right">
+      <h1>1:1 Salon Coaching with Jawhar Raj Rajkumar</h1>
+      <h2>Tailored Guidance for Salon Owners</h2>
+      <p>Our private coaching sessions are designed to identify your salon’s biggest opportunities, resolve pressing issues, and set a roadmap for sustainable growth.</p>
+    </div>
+    <div class="hero-img-container" data-aos="fade-left">
+      <img src="4.png" alt="Salonfix Coaching">
+    </div>
+  </section>
+
+  <!-- COACHING DETAILS SECTION -->
+  <section class="coaching-details" data-aos="fade-up">
+    <h2>What You’ll Get from Coaching</h2>
+    <div class="three-col">
+      <div>
+        <h3>Personalized Strategy</h3>
+        <p>We deep dive into your numbers, team structure, and systems to create a strategy that’s unique to your salon.</p>
+      </div>
+      <div>
+        <h3>Accountability & Support</h3>
+        <p>We don’t just tell you what to do — we help you implement changes and hold you accountable.</p>
+      </div>
+      <div>
+        <h3>Growth Roadmap</h3>
+        <p>Get a clear roadmap for the next 3-12 months to scale your salon without losing control.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section" data-aos="fade-up">
+    <h2>Ready to Transform Your Salon?</h2>
+    <p>Book a 1:1 coaching session with Jawhar Raj Rajkumar today and start building the salon business you’ve always envisioned.</p>
+    <a href="contact.html" class="cta-button">Book a Session</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 SALONFIX – YOUR IN-HOUSE BUSINESS PARTNER.</p>
+    <p>Follow us on Instagram | WhatsApp</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="scripts.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+  </script>
+</body>
+</html>
