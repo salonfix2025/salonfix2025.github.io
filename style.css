@@ -1,64 +1,106 @@
-@import url('https://fonts.googleapis.com/css2?family=Moyasarati:wght@700&display=swap');
+/* ------------------------------
+   IMPORT FONTS
+------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
 
-body {
+/* ------------------------------
+   GLOBAL RESET & BODY
+------------------------------ */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
+  background-color: #657179 !important; /* ✅ Set entire site background */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ------------------------------
+   NAVBAR
+------------------------------ */
 .navbar {
   background-color: #4B0082;
-  padding: 20px;
+  padding: 20px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 999;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
 }
 
 .logo {
-  font-family: 'Moyasarati', sans-serif;
-  font-size: 28px;
-  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 34px;
+  font-weight: 700;
   color: #FFD700;
+  letter-spacing: 1px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
+  transition: all 0.4s ease;
 }
 
 .nav-links li a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   position: relative;
   font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  transition: color 0.3s ease;
 }
 
-.nav-links li a::after {
-  content: '';
-  position: absolute;
-  width: 0;
+.nav-links li a:hover {
+  color: #FFD700;
+}
+
+/* ------------------------------
+   BURGER MENU
+------------------------------ */
+.burger {
+  display: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.burger div {
+  width: 25px;
   height: 3px;
-  display: block;
-  margin-top: 5px;
-  right: 0;
-  background: #FFD700;
-  transition: width 0.4s ease;
-  -webkit-transition: width 0.4s ease;
+  background: white;
+  margin: 5px;
+  transition: all 0.3s ease;
 }
 
-.nav-links li a:hover::after {
-  width: 100%;
-  left: 0;
-  background: #FFD700;
+.burger.toggle div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.toggle div:nth-child(2) {
+  opacity: 0;
+}
+.burger.toggle div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* HERO SECTION */
+/* ------------------------------
+   HERO SECTION
+------------------------------ */
 .hero {
-  height: 90vh;
+  height: auto;
+  padding: 120px 20px 100px;
   background-size: cover;
   background-position: center;
   color: white;
@@ -66,91 +108,238 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
 }
 
 .hero h1 {
-  font-size: 48px;
-  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
 .hero p {
   font-size: 20px;
+  font-weight: 600;
+  max-width: 700px;
+  margin-bottom: 20px;
+  color: #FFFFFF;
 }
 
 .cta-btn {
   background-color: #FFD700;
   color: #4B0082;
-  padding: 12px 25px;
+  padding: 14px 30px;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 6px;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
+.cta-btn:hover {
+  background-color: #f3d34a;
+  transform: scale(1.05);
+}
+
+/* ------------------------------
+   ALT SECTIONS
+------------------------------ */
 .alt-section {
   display: flex;
-  padding: 60px;
+  padding: 100px 10%;
   align-items: center;
+  gap: 40px;
 }
 
 .alt-section.light {
-  background-color: #fff;
-  color: #333;
+  background-color: #657179 !important; /* ✅ new color */
 }
 
 .alt-section.dark {
-  background-color: #f3e8ff;
-  color: #333;
+  background-color: #657179 !important; /* ✅ unify background */
 }
 
 .alt-section .text {
   flex: 1;
-  padding: 20px;
+  color: #FFFFFF !important; /* ✅ ensure readability */
+}
+
+.alt-section .text h2 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #4B0082;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.alt-section .text h3 {
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.alt-section .text p, .alt-section .text ul, .alt-section .text li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #FFFFFF;
 }
 
 .alt-section .image {
   flex: 1;
-  padding: 20px;
 }
 
 .alt-section img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 14px;
+  transition: transform 0.3s ease;
 }
 
+.alt-section img:hover {
+  transform: scale(1.03);
+}
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
 footer {
   background-color: #4B0082;
   color: white;
   text-align: center;
-  padding: 30px;
+  padding: 50px 20px;
+}
+
+footer h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
 .footer-cta {
   display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
+  margin-top: 20px;
+  padding: 12px 28px;
   background-color: #FFD700;
   color: #4B0082;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: bold;
+  transition: all 0.3s ease;
 }
 
-/* ✅ NEW GLOBAL H2 STYLING */
-h2 {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 72px;
-  letter-spacing: -1.5px;
-  line-height: 1.1;
+.footer-cta:hover {
+  background-color: #f3d34a;
+  transform: scale(1.05);
 }
-/* ✅ FORCE ALL H2 TO USE HELVETICA NEUE BOLD */
-h2 {
-    font-family: 'Helvetica Neue', Arial, sans-serif !important;
-    font-weight: 700 !important;
-    text-transform: uppercase !important;
-    font-size: 72px !important;
-    letter-spacing: -1.5px !important;
-    line-height: 1.1 !important;
-    color: #4B0082 !important;
+
+/* ------------------------------
+   FLOATING WHATSAPP BUTTON
+------------------------------ */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* Tooltip on hover */
+.whatsapp-float::after {
+  content: "Chat with us!";
+  position: absolute;
+  right: 70px;
+  background: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.whatsapp-float:hover::after {
+  opacity: 1;
+}
+
+/* ------------------------------
+   MOBILE STYLING
+------------------------------ */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    top: 0;
+    background-color: #4B0082;
+    flex-direction: column;
+    align-items: center;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.4s ease;
+    padding-top: 100px;
+    z-index: 1001;
+  }
+
+  .nav-links.open {
+    width: 70%;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .alt-section {
+    flex-direction: column;
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .cta-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    white-space: nowrap;
+  }
 }
