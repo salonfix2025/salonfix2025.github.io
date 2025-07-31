@@ -162,13 +162,13 @@ body {
 /* ✅ Subtext styling */
 .hero-subtext {
     color: #4B0082;          /* Purple text */
-    font-weight: 900;        /* ✅ Super bold */
-    font-size: 1.5rem;       /* Slightly bigger */
-    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9); /* ✅ Strong white glow for readability */
-    background: rgba(255, 255, 255, 0.4); /* ✅ Soft white highlight behind text */
-    padding: 5px 10px;       /* Adds spacing so text doesn't touch the glow */
-    border-radius: 6px;      /* Smooth rounded edges for background */
-    display: inline-block;   /* Keeps background only behind text */
+    font-weight: 800;        /* ✅ Bold but clean */
+    font-size: 20px;         /* Same size as before */
+    background: none;        /* ❌ No white box */
+    padding: 0;              /* Removes extra padding */
+    border-radius: 0;        /* Removes any box rounding */
+    text-shadow: none;       /* ❌ Removes the white glow */
+    position: relative;      /* Keeps default alignment */
 }
 
 .cta-btn {
