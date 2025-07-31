@@ -386,3 +386,9 @@ h2 {
     line-height: 1.1 !important;
     color: #4B0082 !important;
 }
+/* ✅ Reduce font size for long section headlines */
+.section-headline {
+    font-size: 42px !important;    /* smaller and balanced */
+    line-height: 1.2 !important;   /* closer spacing */
+    letter-spacing: -0.5px;        /* slight tightness for a cleaner look */
+}
