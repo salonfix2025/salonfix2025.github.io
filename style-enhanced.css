@@ -161,10 +161,14 @@ body {
 
 /* ✅ Subtext styling */
 .hero-subtext {
-    color: #4B0082;        /* ✅ Purple text */
-    font-weight: 800;      /* ✅ Extra bold */
-    font-size: 1.4rem;     /* Slightly larger for emphasis */
-    text-shadow: 1px 1px 2px rgba(255,255,255,0.6); /* Lighter shadow for softer glow */
+    color: #4B0082;          /* Purple text */
+    font-weight: 900;        /* ✅ Super bold */
+    font-size: 1.5rem;       /* Slightly bigger */
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9); /* ✅ Strong white glow for readability */
+    background: rgba(255, 255, 255, 0.4); /* ✅ Soft white highlight behind text */
+    padding: 5px 10px;       /* Adds spacing so text doesn't touch the glow */
+    border-radius: 6px;      /* Smooth rounded edges for background */
+    display: inline-block;   /* Keeps background only behind text */
 }
 
 .cta-btn {
