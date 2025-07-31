@@ -58,6 +58,28 @@
   });
   AOS.init({duration: 1000, once: true});
 </script>
+<script>
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav-links');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  // Open/close menu on burger click
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    burger.classList.toggle('toggle');
+  });
+
+  // ✅ Close menu when any link is clicked
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      burger.classList.remove('toggle');
+    });
+  });
+
+  // ✅ Initialize AOS Animations
+  AOS.init({duration: 1000, once: true});
+</script>
 
 </body>
 </html>
