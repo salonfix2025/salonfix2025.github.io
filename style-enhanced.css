@@ -183,16 +183,24 @@ html, body {
   color: #FFFFFF !important; /* ✅ ensure readability */
 }
 
-/* ✅ Adjust oversized question headlines */
+/* ✅ Default H2 Headlines (big size) */
 .alt-section .text h2 {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 42px !important;   /* ✅ reduced from 64px */
+  font-size: 64px;
   font-weight: 700;
   margin-bottom: 15px;
   color: #4B0082;
   text-transform: uppercase;
   letter-spacing: -1px;
-  line-height: 1.3;
+  line-height: 1.2;
+}
+
+/* ✅ Smaller size ONLY for specific long-question headlines */
+.alt-section .text h2.results-headline,
+.alt-section .text h2.systems-headline,
+.alt-section .text h2.smoothly-headline {
+  font-size: 42px !important;   /* reduced only for these lines */
+  line-height: 1.3 !important;
 }
 
 .alt-section .text h3 {
@@ -283,7 +291,6 @@ footer h3 {
   transform: scale(1.1);
 }
 
-/* Tooltip on hover */
 .whatsapp-float::after {
   content: "Chat with us!";
   position: absolute;
