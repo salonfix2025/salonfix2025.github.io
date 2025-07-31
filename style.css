@@ -172,4 +172,23 @@ footer {
         line-height: 1.2;
     }
 }
+/* ✅ FORCE UPDATE FOR FOUNDER HEADLINE */
+.alt-section .text h2 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    font-size: 72px !important;
+    letter-spacing: -1.5px !important;
+    line-height: 1.1 !important;
+    margin-bottom: 15px !important;
+    color: #4B0082 !important;
+}
+
+/* ✅ RESPONSIVE FIX */
+@media (max-width: 768px) {
+    .alt-section .text h2 {
+        font-size: 42px !important;
+        line-height: 1.2 !important;
+    }
+}
 
