@@ -19,7 +19,7 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
   font-family: 'Lato', sans-serif;
-  background-color: #F7F7F7 !important; /* ✅ Warm light gray for entire site */
+ background-color: #7E6597 !important; /* ✅ Deep muted purple for entire site */
   color: #333;
   line-height: 1.6;
 }
