@@ -46,6 +46,7 @@ body {
   list-style: none;
   display: flex;
   gap: 20px;
+  transition: all 0.4s ease;
 }
 
 .nav-links li a {
@@ -62,10 +63,13 @@ body {
   color: #FFD700;
 }
 
-/* Burger Menu */
+/* ------------------------------
+   BURGER MENU
+------------------------------ */
 .burger {
   display: none;
   cursor: pointer;
+  z-index: 1001;
 }
 
 .burger div {
@@ -74,6 +78,29 @@ body {
   background: white;
   margin: 5px;
   transition: all 0.3s ease;
+}
+
+/* Burger menu animation: lines to X */
+.burger.toggle div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.toggle div:nth-child(2) {
+  opacity: 0;
+}
+.burger.toggle div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Overlay for mobile menu */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(75,0,130,0.7);
+  z-index: 1000;
 }
 
 /* ------------------------------
@@ -115,6 +142,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   border-radius: 8px;
   transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .cta-btn:hover {
@@ -127,7 +155,7 @@ body {
 ------------------------------ */
 .alt-section {
   display: flex;
-  padding: 80px 10%;
+  padding: 100px 10%;
   align-items: center;
   gap: 40px;
 }
@@ -239,12 +267,31 @@ footer h3 {
   transform: scale(1.1);
 }
 
+/* Tooltip on hover */
+.whatsapp-float::after {
+  content: "Chat with us!";
+  position: absolute;
+  right: 70px;
+  background: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.whatsapp-float:hover::after {
+  opacity: 1;
+}
+
 /* ------------------------------
    MOBILE STYLING
 ------------------------------ */
 @media (max-width: 768px) {
   .nav-links {
-    position: absolute;
+    position: fixed;
     right: 0;
     height: 100vh;
     top: 0;
@@ -255,22 +302,32 @@ footer h3 {
     overflow: hidden;
     transition: width 0.4s ease;
     padding-top: 100px;
+    z-index: 1001;
   }
 
   .nav-links.open {
-    width: 60%;
+    width: 70%;
   }
 
   .burger {
     display: block;
   }
 
+  /* Increase section spacing on mobile */
   .alt-section {
     flex-direction: column;
-    padding: 50px 20px;
+    padding: 60px 20px;
   }
 
+  /* Scale hero font on small screens */
   .hero h1 {
-    font-size: 36px;
+    font-size: 32px;
+  }
+
+  /* Fix CTA button text wrapping */
+  .cta-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    white-space: nowrap;
   }
 }
