@@ -1,0 +1,160 @@
+
+/* === SALONFIX FINAL STYLE.CSS === */
+
+/* General Reset & Body */
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  background: #ffffff;
+  color: #222;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #4B0082;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #FFD700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+.nav-links li a::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #FFD700;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+  font-size: 1.3em;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Call to Action Button */
+.cta-btn, .footer-cta {
+  background-color: #FFD700;
+  color: #4B0082;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.cta-btn:hover, .footer-cta:hover {
+  background-color: #e5c100;
+}
+
+/* Section Styles */
+.alt-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+}
+
+.alt-section.light {
+  background: #ffffff;
+}
+
+.alt-section.dark {
+  background: #f3e8ff;
+}
+
+.alt-section .text {
+  flex: 1 1 45%;
+  padding: 20px;
+}
+
+.alt-section .image {
+  flex: 1 1 45%;
+  padding: 20px;
+}
+
+.alt-section img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Footer */
+footer {
+  background: #4B0082;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+footer h3 {
+  margin-top: 0;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .alt-section {
+    flex-direction: column;
+    padding: 40px 5%;
+  }
+  .hero h1 {
+    font-size: 2.2em;
+  }
+  .hero p {
+    font-size: 1.1em;
+  }
+  .nav-links {
+    display: none; /* simplified for mobile now, can add hamburger later */
+  }
+}
