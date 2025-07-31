@@ -162,13 +162,13 @@ body {
 /* ✅ Subtext styling */
 .hero-subtext {
     color: #ffffff;        /* ✅ White text for maximum visibility */
-    font-weight: 1000;        /* ✅ Bold but clean */
-    font-size: 30px;         /* Same size as before */
-    background: none;        /* ❌ No white box */
-    padding: 0;              /* Removes extra padding */
-    border-radius: 0;        /* Removes any box rounding */
-    text-shadow: none;       /* ❌ Removes the white glow */
-    position: relative;      /* Keeps default alignment */
+    font-weight: 800;      /* ✅ Bold for stronger impact */
+    font-size: 26px;       /* ⬆️ Increased font size */
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    text-shadow: none;     /* ✅ Removes any glow */
+    position: relative;
 }
 
 .cta-btn {
