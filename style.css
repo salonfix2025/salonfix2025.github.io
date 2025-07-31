@@ -134,16 +134,42 @@ footer {
   border-radius: 6px;
   font-weight: bold;
 }
+/* ✅ STYLE UPDATE FOR HERO HEADLINE */
+.hero h1 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;          /* Bold weight */
+    text-transform: uppercase; /* All caps for impact */
+    font-size: 72px;           /* Big hero headline size */
+    letter-spacing: -1.5px;    /* Tight letter spacing for modern look */
+    line-height: 1.1;          /* Very tight for dramatic style */
+    margin-bottom: 20px;
+}
+
+/* ✅ HERO HEADLINE - RESPONSIVE ADJUSTMENT */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 40px;       /* Smaller on mobile */
+        line-height: 1.2;
+    }
+}
+
 /* ✅ STYLE UPDATE FOR “MEET THE FOUNDER – JAWHAR RAJ RAJKUMAR” */
 .alt-section .text h2 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;          /* Bold weight */
-    text-transform: uppercase; /* Force ALL CAPS */
-    font-size: 68px;           /* Big hero size for desktop */
-    letter-spacing: -1.5px;    /* Slightly tight spacing */
-    line-height: 1.15;         /* Close but readable */
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 68px;
+    letter-spacing: -1.5px;
+    line-height: 1.15;
     margin-bottom: 15px;
-    color: #4B0082;            /* Purple brand color */
+    color: #4B0082;
 }
 
-/* ✅ Make sure it r*
+/* ✅ RESPONSIVE FOUNDER HEADLINE */
+@media (max-width: 768px) {
+    .alt-section .text h2 {
+        font-size: 38px;
+        line-height: 1.2;
+    }
+}
+
