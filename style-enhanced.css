@@ -194,6 +194,11 @@ html, body {
   letter-spacing: -1px;
   line-height: 1.2;
 }
+/* ✅ Smaller size ONLY for long-question headlines */
+.alt-section .text h2.section-headline {
+  font-size: 42px !important;   /* smaller font for readability */
+  line-height: 1.3 !important;
+}
 
 /* ✅ Smaller size ONLY for specific long-question headlines */
 .alt-section .text h2.results-headline,
