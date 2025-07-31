@@ -161,10 +161,10 @@ body {
 
 /* ✅ Subtext styling */
 .hero-subtext {
-    color: #FFD700;        /* Golden Yellow or change to #4B0082 for purple */
-    font-weight: 600;
-    font-size: 1.3rem;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.6); /* Stronger shadow for contrast */
+    color: #4B0082;        /* ✅ Purple text */
+    font-weight: 800;      /* ✅ Extra bold */
+    font-size: 1.4rem;     /* Slightly larger for emphasis */
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.6); /* Lighter shadow for softer glow */
 }
 
 .cta-btn {
