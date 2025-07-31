@@ -390,3 +390,10 @@ footer h3 {
     white-space: nowrap;
   }
 }
+/* ✅ Force background consistency across iOS & Android */
+html {
+    background-color: #7E6597 !important;
+    -webkit-background-clip: border-box !important;
+    -webkit-text-fill-color: inherit !important;
+    -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+}
