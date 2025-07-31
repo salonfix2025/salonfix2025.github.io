@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style-enhanced.css">
-<title>Pricing - SALONFIX</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing – SALONFIX</title>
+  <link rel="stylesheet" href="style-enhanced.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
 </head>
 <body>
+
 <header>
   <nav class="navbar">
     <div class="logo">SALONFIX</div>
@@ -18,24 +21,30 @@
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+    <div class="burger">
+      <div></div><div></div><div></div>
+    </div>
   </nav>
 </header>
 
 <section class="hero" style="background-image:url('assets/salon-systems.jpg');">
-  <div class="hero-content">
+  <div class="hero-content" data-aos="fade-up">
     <h1>PLANS & SERVICES</h1>
     <p>Which level of takeover is right for your salon?</p>
   </div>
 </section>
 
-<section class="alt-section light">
+<section class="alt-section light" data-aos="fade-right">
   <div class="text">
     <h2>START STRONG – System Setup & Reset</h2>
     <p>Best for new or relaunching salons. Full SOP setup, initial stock audit, and front desk coaching. ₹25K–₹50K (includes 1–2 weeks setup).</p>
+
     <h2>STAY SHARP – Ongoing Operations Control</h2>
     <p>Best for busy owners who need daily oversight. Weekly or bi-weekly visits, monthly dashboards. ₹30K–₹75K/month.</p>
+
     <h2>STYLE EMPIRE – Multi-Branch Ops</h2>
     <p>For franchises or multi-location owners. Cross-branch SOP design, centralized reporting. Starts ₹75K/month.</p>
+
     <h2>LIGHT TOUCH – Remote Strategic Support</h2>
     <p>For small, owner-managed salons. WhatsApp reviews, guidance-only. ₹15K/month.</p>
   </div>
@@ -47,5 +56,18 @@
     <a href="https://wa.me/919566143572" class="footer-cta">WHATSAPP US NOW</a>
   </div>
 </footer>
+
+<a href="https://wa.me/919566143572" class="whatsapp-float" target="_blank">💬</a>
+
+<script>
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav-links');
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    burger.classList.toggle('toggle');
+  });
+  AOS.init({duration: 1000, once: true});
+</script>
+
 </body>
 </html>
