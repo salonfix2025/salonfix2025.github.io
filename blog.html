@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style-enhanced.css">
-<title>SALONFIX Blog</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog – SALONFIX</title>
+  <link rel="stylesheet" href="style-enhanced.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
 </head>
 <body>
+
 <header>
   <nav class="navbar">
     <div class="logo">SALONFIX</div>
@@ -18,17 +21,20 @@
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+    <div class="burger">
+      <div></div><div></div><div></div>
+    </div>
   </nav>
 </header>
 
 <section class="hero" style="background-image:url('assets/team-training.jpg');">
-  <div class="hero-content">
+  <div class="hero-content" data-aos="fade-up">
     <h1>BLOG</h1>
     <p>Insights and strategies for salon owners.</p>
   </div>
 </section>
 
-<section class="alt-section light">
+<section class="alt-section light" data-aos="fade-right">
   <div class="text">
     <p>Coming soon – articles, strategies, and success stories to help salon owners grow smarter.</p>
   </div>
@@ -40,5 +46,18 @@
     <a href="https://wa.me/919566143572" class="footer-cta">WHATSAPP US NOW</a>
   </div>
 </footer>
+
+<a href="https://wa.me/919566143572" class="whatsapp-float" target="_blank">💬</a>
+
+<script>
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav-links');
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    burger.classList.toggle('toggle');
+  });
+  AOS.init({duration: 1000, once: true});
+</script>
+
 </body>
 </html>
