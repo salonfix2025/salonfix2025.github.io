@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SALONFIX – Your In-House Business Partner</title>
-  
+
   <!-- ✅ Load the new enhanced stylesheet -->
   <link rel="stylesheet" href="style-enhanced.css">
-  
-  <!-- ✅ Keep AOS for animations -->
+
+  <!-- ✅ AOS Animations -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
 </head>
@@ -26,8 +26,7 @@
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-
-    <!-- ✅ NEW Burger Menu for Mobile -->
+    <!-- ✅ Burger Menu -->
     <div class="burger">
       <div></div>
       <div></div>
@@ -52,14 +51,14 @@
     <p>“I’ve spent over a decade inside salons — running teams, fixing systems, and turning chaos into profit. I created SALONFIX for one reason: so salon owners don’t have to focus on anything except walking into their salon and seeing it run perfectly. Every piece of data we send, every system we install, and every cost we control is built around one promise: SALONFIX runs your salon like it’s our own — so you never have to.”</p>
   </div>
   <div class="image">
-    <img src="assets/founder.jpg" alt="Founder Jawhar Raj Rajkumar">
+    <img src="assets/founder.jpg" alt="Jawhar Raj Rajkumar">
   </div>
 </section>
 
 <!-- ✅ WHAT IS SALONFIX -->
 <section class="alt-section dark" data-aos="fade-left">
   <div class="image">
-    <img src="assets/team-training.jpg" alt="Team Training">
+    <img src="assets/team-group.jpg" alt="Salonfix Team">
   </div>
   <div class="text">
     <h2>WHAT EXACTLY IS SALONFIX?</h2>
@@ -98,7 +97,7 @@
 <!-- ✅ WHAT IF EVERY PROBLEM HAD A SYSTEM? -->
 <section class="alt-section dark" data-aos="fade-left">
   <div class="image">
-    <img src="assets/team-group.jpg" alt="Salonfix Team">
+    <img src="assets/team-training.jpg" alt="Team Training">
   </div>
   <div class="text">
     <h2>WHAT IF EVERY PROBLEM IN YOUR SALON HAD A SYSTEM TO FIX IT?</h2>
@@ -162,26 +161,15 @@
 <script>
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav-links');
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('open');
-    burger.classList.toggle('toggle');
-  });
-
-  // ✅ Initialize AOS Animations
-  AOS.init({duration: 1000, once: true});
-</script>
-<script>
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.nav-links');
   const navLinks = document.querySelectorAll('.nav-links a');
 
-  // Open/close menu on burger click
+  // Toggle menu
   burger.addEventListener('click', () => {
     nav.classList.toggle('open');
     burger.classList.toggle('toggle');
   });
 
-  // ✅ Close menu when any link is clicked
+  // Close menu when any link is clicked
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       nav.classList.remove('open');
@@ -189,7 +177,7 @@
     });
   });
 
-  // ✅ Initialize AOS Animations
+  // Initialize AOS
   AOS.init({duration: 1000, once: true});
 </script>
 
