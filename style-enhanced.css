@@ -19,7 +19,7 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
   font-family: 'Lato', sans-serif;
-  background-color: #EEEAF6 !important; /* ✅ New soft lavender gray background */
+  background-color: #F7F7F7 !important; /* ✅ Warm light gray for entire site */
   color: #333;
   line-height: 1.6;
 }
@@ -171,16 +171,16 @@ html, body {
 }
 
 .alt-section.light {
-  background-color: #EEEAF6 !important; /* ✅ Soft Lavender Gray */
+  background-color: #F7F7F7 !important; /* ✅ Warm light gray for light sections */
 }
 
 .alt-section.dark {
-  background-color: #EEEAF6 !important; /* ✅ Also unify to same tone */
+  background-color: #F7F7F7 !important; /* ✅ Unify dark sections too */
 }
 
 .alt-section .text {
   flex: 1;
-  color: #333 !important; /* ✅ Switch to dark text for better contrast */
+  color: #333 !important; /* ✅ Ensure good contrast on light gray */
 }
 
 .alt-section .text h2 {
