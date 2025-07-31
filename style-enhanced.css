@@ -5,6 +5,7 @@ html, body {
   max-width: 100%;
   overflow-x: hidden; /* ✅ stops horizontal scroll and left-shift */
 }
+
 /* ------------------------------
    IMPORT FONTS
 ------------------------------ */
@@ -48,7 +49,6 @@ body {
   color: #FFD700;
   letter-spacing: 1px;
 }
-
 
 .nav-links {
   list-style: none;
@@ -115,11 +115,11 @@ body {
    HERO SECTION
 ------------------------------ */
 .hero {
-  height: auto; /* no fixed height, allows natural content height */
-  padding: 120px 20px 100px; /* balanced top/bottom space */
+  position: relative;
+  height: auto; 
+  padding: 120px 20px 100px;
   background-size: cover;
   background-position: center;
-  color: white;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -127,6 +127,23 @@ body {
   flex-direction: column;
 }
 
+/* ✅ DARK OVERLAY FOR READABILITY */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35); /* 🔥 dark overlay for bright image */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Text above overlay */
+  color: white;
+}
 
 .hero h1 {
   font-family: 'Montserrat', sans-serif;
@@ -140,6 +157,14 @@ body {
   font-weight: 300;
   max-width: 700px;
   margin-bottom: 20px;
+}
+
+/* ✅ Subtext styling */
+.hero-subtext {
+    color: #FFD700;        /* Golden Yellow or change to #4B0082 for purple */
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6); /* Stronger shadow for contrast */
 }
 
 .cta-btn {
@@ -340,35 +365,10 @@ footer h3 {
     white-space: nowrap;
   }
 }
+
 /* Hide placeholder text inside images */
 .hero img,
 .alt-section img {
   font-size: 0;
   color: transparent;
-}
-.hero-subtext {
-    color: #4B0082;       /* Purple text */
-    font-weight: 600;     /* Makes it bolder for readability */
-    font-size: 1.3rem;    /* Slightly larger font */
-    text-shadow: 1px 1px 3px rgba(255,255,255,0.8); /* Light shadow for contrast */
-}
-/* ✅ HERO SECTION OVERLAY */
-.hero {
-    position: relative;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.3); /* 🔥 soft white overlay */
-    z-index: 1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2; /* Keeps text above the overlay */
 }
