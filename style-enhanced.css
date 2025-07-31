@@ -346,3 +346,9 @@ footer h3 {
   font-size: 0;
   color: transparent;
 }
+.hero-subtext {
+    color: #4B0082;       /* Purple text */
+    font-weight: 600;     /* Makes it bolder for readability */
+    font-size: 1.3rem;    /* Slightly larger font */
+    text-shadow: 1px 1px 3px rgba(255,255,255,0.8); /* Light shadow for contrast */
+}
