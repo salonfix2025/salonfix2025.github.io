@@ -1,0 +1,276 @@
+/* ------------------------------
+   IMPORT FONTS
+------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
+
+/* ------------------------------
+   GLOBAL RESET & BODY
+------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ------------------------------
+   NAVBAR
+------------------------------ */
+.navbar {
+  background-color: #4B0082;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #FFD700;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #FFD700;
+}
+
+/* Burger Menu */
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* ------------------------------
+   HERO SECTION
+------------------------------ */
+.hero {
+  height: 95vh;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 20px;
+  font-weight: 300;
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  background-color: #FFD700;
+  color: #4B0082;
+  padding: 14px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #f3d34a;
+  transform: scale(1.05);
+}
+
+/* ------------------------------
+   ALT SECTIONS
+------------------------------ */
+.alt-section {
+  display: flex;
+  padding: 80px 10%;
+  align-items: center;
+  gap: 40px;
+}
+
+.alt-section.light {
+  background-color: #FFFFFF;
+}
+
+.alt-section.dark {
+  background-color: #F8F3FF;
+}
+
+.alt-section .text {
+  flex: 1;
+}
+
+.alt-section .text h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #4B0082;
+}
+
+.alt-section .text h3 {
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  color: #333;
+}
+
+.alt-section .text p, .alt-section .text ul, .alt-section .text li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.alt-section .image {
+  flex: 1;
+}
+
+.alt-section img {
+  width: 100%;
+  border-radius: 14px;
+  transition: transform 0.3s ease;
+}
+
+.alt-section img:hover {
+  transform: scale(1.03);
+}
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+footer {
+  background-color: #4B0082;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+footer h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer-cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background-color: #FFD700;
+  color: #4B0082;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.footer-cta:hover {
+  background-color: #f3d34a;
+  transform: scale(1.05);
+}
+
+/* ------------------------------
+   FLOATING WHATSAPP BUTTON
+------------------------------ */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* ------------------------------
+   MOBILE STYLING
+------------------------------ */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    top: 0;
+    background-color: #4B0082;
+    flex-direction: column;
+    align-items: center;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.4s ease;
+    padding-top: 100px;
+  }
+
+  .nav-links.open {
+    width: 60%;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .alt-section {
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+}
