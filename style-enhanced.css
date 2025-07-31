@@ -341,15 +341,38 @@ footer h3 {
     display: block;
   }
 
+    /* ✅ Stack all sections vertically */
   .alt-section {
     flex-direction: column;
-    padding: 60px 20px;
+    padding: 40px 20px;
+    text-align: center;
   }
 
+  /* ✅ Images scale properly on mobile */
+  .alt-section img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ✅ Reduce headline size for mobile */
+  .alt-section .text h2 {
+    font-size: 34px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* ✅ Reduce subheadline size for mobile */
+  .alt-section .text h3 {
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* ✅ Make hero headline smaller on mobile */
   .hero h1 {
     font-size: 32px;
+    line-height: 1.3;
   }
 
+  /* ✅ Ensure CTA button looks good */
   .cta-btn {
     padding: 12px 20px;
     font-size: 16px;
