@@ -43,11 +43,12 @@ body {
 
 .logo {
   font-family: 'Montserrat', sans-serif;
-  font-size: 28px;
+  font-size: 34px;
   font-weight: 700;
   color: #FFD700;
   letter-spacing: 1px;
 }
+
 
 .nav-links {
   list-style: none;
@@ -114,7 +115,8 @@ body {
    HERO SECTION
 ------------------------------ */
 .hero {
-  height: 95vh;
+  height: auto; /* no fixed height, allows natural content height */
+  padding: 120px 20px 100px; /* balanced top/bottom space */
   background-size: cover;
   background-position: center;
   color: white;
@@ -123,8 +125,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0 20px;
 }
+
 
 .hero h1 {
   font-family: 'Montserrat', sans-serif;
@@ -337,4 +339,10 @@ footer h3 {
     font-size: 16px;
     white-space: nowrap;
   }
+}
+/* Hide placeholder text inside images */
+.hero img,
+.alt-section img {
+  font-size: 0;
+  color: transparent;
 }
