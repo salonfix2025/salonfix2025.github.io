@@ -414,3 +414,21 @@ body::before {
     background-color: #7E6597;
     z-index: -1;
 }
+/* ✅ REMOVE BULLETS FROM ALL LISTS SITE-WIDE */
+ul {
+  list-style: none !important;      /* Removes bullet icons */
+  padding-left: 0 !important;       /* Removes default browser padding */
+  margin-left: 0 !important;        /* Aligns text cleanly */
+}
+
+/* ✅ Ensure proper spacing for list items */
+ul li {
+  margin-bottom: 10px;              /* Keeps readable gap between items */
+  padding-left: 20px;               /* Optional: add subtle indent for neatness */
+  position: relative;
+}
+
+/* ✅ Optional: Add a subtle accent line instead of bullets (if wanted later) */
+ul li::before {
+  content: "";                      /* empty content for no bullets */
+}
