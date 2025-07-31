@@ -352,3 +352,23 @@ footer h3 {
     font-size: 1.3rem;    /* Slightly larger font */
     text-shadow: 1px 1px 3px rgba(255,255,255,0.8); /* Light shadow for contrast */
 }
+/* ✅ HERO SECTION OVERLAY */
+.hero {
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3); /* 🔥 soft white overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Keeps text above the overlay */
+}
