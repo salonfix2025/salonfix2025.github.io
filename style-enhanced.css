@@ -376,3 +376,13 @@ footer h3 {
   font-size: 0;
   color: transparent;
 }
+/* ✅ FORCE ALL H2 HEADINGS TO USE HELVETICA NEUE BOLD */
+h2 {
+    font-family: 'Helvetica Neue', Arial, sans-serif !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    font-size: 72px !important;
+    letter-spacing: -1.5px !important;
+    line-height: 1.1 !important;
+    color: #4B0082 !important;
+}
