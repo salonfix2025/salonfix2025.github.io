@@ -19,7 +19,18 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
   font-family: 'Lato', sans-serif;
-  background: linear-gradient(180deg, #7E6597 0%, #9C85B5 100%) !important; /* ✅ Gradient applied */
+
+  /* ✅ FORCE SAME BACKGROUND ON ALL DEVICES */
+  background-color: #7E6597 !important;
+  background-image: none !important;
+  background-attachment: fixed;
+  background-size: cover;
+
+  /* ✅ Fix for iOS Safari rendering */
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: inherit;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
   color: #333;
   line-height: 1.6;
 }
