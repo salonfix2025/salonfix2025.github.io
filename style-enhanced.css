@@ -6,6 +6,12 @@
 /* ------------------------------
    GLOBAL RESET & BODY
 ------------------------------ */
+/* ✅ Remove ALL bullet points from all lists site-wide */
+ul {
+  list-style-type: none !important;
+  padding-left: 15px;
+}
+
 * {
   margin: 0;
   padding: 0;
