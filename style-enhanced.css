@@ -19,7 +19,7 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
   font-family: 'Lato', sans-serif;
- background-color: #7E6597 !important; /* ✅ Deep muted purple for entire site */
+  background-color: #7E6597 !important;  /* ✅ Full site background color */
   color: #333;
   line-height: 1.6;
 }
@@ -112,17 +112,6 @@ html, body {
   position: relative;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.3);
-  z-index: 1;
-}
-
 .hero-content {
   position: relative;
   z-index: 2;
@@ -136,11 +125,11 @@ html, body {
 }
 
 .hero p {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 700;
   max-width: 700px;
   margin-bottom: 20px;
-  color: #FFFFFF;
+  color: white;
 }
 
 .cta-btn {
@@ -171,27 +160,25 @@ html, body {
 }
 
 .alt-section.light {
-  background-color: #F7F7F7 !important; /* ✅ Warm light gray for light sections */
+  background-color: #F7F7F7;
 }
 
 .alt-section.dark {
-  background-color: #F7F7F7 !important; /* ✅ Unify dark sections too */
+  background-color: #EEEAF6;
 }
 
 .alt-section .text {
   flex: 1;
-  color: #333 !important; /* ✅ Ensure good contrast on light gray */
 }
 
 .alt-section .text h2 {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 64px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: #4B0082;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  line-height: 1.2;
+  font-family: 'Helvetica Neue', Arial, sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  font-size: 72px !important;
+  letter-spacing: -1.5px !important;
+  line-height: 1.1 !important;
+  color: #4B0082 !important;
 }
 
 .alt-section .text h3 {
@@ -202,10 +189,11 @@ html, body {
   color: #333;
 }
 
-.alt-section .text p, .alt-section .text ul, .alt-section .text li {
+.alt-section .text p, 
+.alt-section .text ul, 
+.alt-section .text li {
   font-size: 18px;
   margin-bottom: 10px;
-  color: #333;
 }
 
 .alt-section .image {
@@ -282,7 +270,6 @@ footer h3 {
   transform: scale(1.1);
 }
 
-/* Tooltip on hover */
 .whatsapp-float::after {
   content: "Chat with us!";
   position: absolute;
@@ -334,12 +321,10 @@ footer h3 {
   }
 
   .hero h1 {
-    font-size: 32px;
+    font-size: 36px;
   }
 
-  .cta-btn {
-    padding: 12px 20px;
-    font-size: 16px;
-    white-space: nowrap;
+  .alt-section .text h2 {
+    font-size: 40px !important;
   }
 }
