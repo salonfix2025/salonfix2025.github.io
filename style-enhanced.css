@@ -758,3 +758,74 @@ html, body {
     font-size: 24px !important;
   }
 }
+
+/* ✅ FINAL MOBILE FIX BLOCK */
+
+/* 🎨 Normalize Colors Across Devices */
+html, body {
+  color-scheme: light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  image-rendering: auto;
+  max-width: 100%;
+  overflow-x: hidden;
+  zoom: 1; /* prevents Samsung Chrome zoom-out */
+  background-color: #f4f4f4;
+}
+
+/* 📱 MOBILE STYLING FIX */
+@media (max-width: 768px) {
+
+  /* 🏗 Force consistent stacking for ALL sections */
+  .alt-section {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 28px 5% !important;
+    gap: 20px !important;
+  }
+
+  /* 🔲 Ensure text and images don’t overflow */
+  .alt-section .text,
+  .alt-section .image {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 10px auto !important;
+  }
+
+  /* 🖼 Image scaling for mobile */
+  .alt-section .image img {
+    width: 92% !important;
+    height: auto !important;
+    border-radius: 8px;
+    margin-top: 8px;
+  }
+
+  /* 🔠 Adjust heading and hero font sizes for natural look */
+  .hero h1 {
+    font-size: 36px !important;
+    line-height: 1.2 !important;
+  }
+
+  .section-headline {
+    font-size: 24px !important;
+  }
+
+  /* ✍️ Fix paragraph text readability */
+  body {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* ✅ Ensure navbar and burger don’t crowd top */
+  .navbar {
+    padding: 15px 20px !important;
+  }
+
+  /* ✅ Center hero content better */
+  .hero-content {
+    padding: 0 10px;
+  }
+}
