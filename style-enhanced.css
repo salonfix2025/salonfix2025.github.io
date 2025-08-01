@@ -682,3 +682,24 @@ footer {
     margin-top: 10px;
   }
 }
+/* ✅ Mobile Zoom-Out Fix */
+@media (max-width: 768px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    zoom: 1; /* stops Chrome from shrinking page */
+  }
+
+  body {
+    font-size: 16px; /* keeps text readable but not oversized */
+  }
+
+  .hero h1 {
+    font-size: 38px !important;  /* smaller hero heading */
+  }
+
+  .section-headline {
+    font-size: 24px !important;  /* slightly smaller section titles */
+  }
+}
