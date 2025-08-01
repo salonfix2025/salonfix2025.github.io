@@ -5,30 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SALONFIX – Your In-House Business Partner</title>
 
-  <!-- ✅ Android & iOS status bar colors -->
+  <!-- ✅ Mobile & browser theme colors -->
   <meta name="theme-color" content="#7E6597">
   <meta name="msapplication-navbutton-color" content="#7E6597">
   <meta name="apple-mobile-web-app-status-bar-style" content="#7E6597">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="SALONFIX">
-  <meta name="msapplication-TileColor" content="#7E6597">
-  <!-- ✅ Load the new enhanced stylesheet -->
+
+  <!-- ✅ Stylesheet -->
   <link rel="stylesheet" href="style-enhanced.css">
 
   <!-- ✅ AOS Animations -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
   <!-- ✅ Font Awesome for WhatsApp Icon -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
 <!-- ✅ HEADER & NAVBAR -->
 <header>
   <nav class="navbar">
     <div class="logo">
- <a href="/">SALONFIX</a>
-</div>
+      <a href="/">SALONFIX</a>
+    </div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -37,6 +36,7 @@
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+
     <!-- ✅ Burger Menu -->
     <div class="burger">
       <div></div>
@@ -66,7 +66,7 @@
   </div>
 </section>
 
-<!-- ✅ WHAT IS SALONFIX -->
+<!-- ✅ WHAT EXACTLY IS SALONFIX -->
 <section class="alt-section dark" data-aos="fade-left">
   <div class="image">
     <img src="assets/team-group.jpg" alt="Salonfix Team">
@@ -100,7 +100,7 @@
       <li>Why don’t I have a clear view of my salon?</li>
     </ul>
 
-    <p class="footline"><strong>If you’re nodding ‘yes’ to these, SALONFIX is the answer.</strong></p>
+    <p class="footline">If you’re nodding ‘yes’ to these, SALONFIX is the answer.</p>
   </div>
 
   <div class="image">
@@ -131,9 +131,10 @@
 <section class="alt-section light" data-aos="fade-right">
   <div class="text">
     <h2>Your salon. Our systems. One free month to prove it works</h2>
-    <h3>WOULDN’T YOU WANT TO SEE THE SYSTEMS, DATA, AND FIXES BEFORE PAYING A RUPEE?</h3>
+    <h3 class="section-subheadline">WOULDN’T YOU WANT TO SEE THE SYSTEMS, DATA, AND FIXES BEFORE PAYING A RUPEE?</h3>
     <p>For 30 days, SALONFIX steps in as your in‑house partner. We track your numbers, clean up the leaks, and set up the systems your salon has been missing — all without any commitment or cost.</p>
-    <ul>
+
+    <ul class="questions-list">
       <li>Daily data starts flowing – You see your sales, profits, and gaps clearly.</li>
       <li>Stock, vendors, and costs are reviewed – We plug silent leaks.</li>
       <li>Team systems begin – Checklists, training, and accountability take shape.</li>
@@ -149,12 +150,12 @@
   </div>
   <div class="text">
     <h2 class="section-headline">WHAT KIND OF RESULTS CAN SALONFIX REALLY DELIVER?</h2>
-    <ul>
-      <li>30% LESS PRODUCT WASTAGE – When stock is tracked daily, nothing “slips away.”</li>
-      <li>10–20% VENDOR SAVINGS – Old supplier rates get renegotiated, and silent costs drop.</li>
-      <li>ACCOUNTABLE, MOTIVATED TEAMS – Staff know what’s expected, and deliver without micromanaging.</li>
-      <li>REBOOKING RATES RISE – More clients return, more revenue stays consistent.</li>
-      <li>CLEAR, GROWING PROFITS – Owners finally see the data match the effort.</li>
+    <ul class="questions-list">
+      <li><strong>30% LESS PRODUCT WASTAGE</strong> – When stock is tracked daily, nothing “slips away.”</li>
+      <li><strong>10–20% VENDOR SAVINGS</strong> – Old supplier rates get renegotiated, and silent costs drop.</li>
+      <li><strong>ACCOUNTABLE, MOTIVATED TEAMS</strong> – Staff know what’s expected, and deliver without micromanaging.</li>
+      <li><strong>REBOOKING RATES RISE</strong> – More clients return, more revenue stays consistent.</li>
+      <li><strong>CLEAR, GROWING PROFITS</strong> – Owners finally see the data match the effort.</li>
     </ul>
   </div>
 </section>
@@ -179,13 +180,11 @@
   const nav = document.querySelector('.nav-links');
   const navLinks = document.querySelectorAll('.nav-links a');
 
-  // Toggle menu
   burger.addEventListener('click', () => {
     nav.classList.toggle('open');
     burger.classList.toggle('toggle');
   });
 
-  // Close menu when any link is clicked
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       nav.classList.remove('open');
@@ -193,8 +192,8 @@
     });
   });
 
-  // Initialize AOS
-  AOS.init({duration: 1000, once: true});
+  // ✅ AOS Animation Init
+  AOS.init({ duration: 1000, once: true });
 </script>
 
 </body>
