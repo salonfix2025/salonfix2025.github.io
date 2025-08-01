@@ -430,3 +430,36 @@ footer {
 }
 
 .advanta
+/* -----------------------------------
+   CONTACT PAGE TWEAKS
+----------------------------------- */
+
+/* Reduce extra padding in advantage section on contact page */
+.contact-page .advantage-section {
+  padding: 40px 8% 30px 8%;  /* tighter top & bottom spacing */
+}
+
+/* Style tweaks for Let's Connect block */
+.contact-page .alt-section.light {
+  padding: 40px 10%;
+  text-align: left;
+  background-color: #f4f4f4; /* soft grey for contrast */
+}
+
+/* Ensure h2 headline in LET'S CONNECT pops */
+.contact-page .alt-section.light h2 {
+  font-size: 28px;
+  color: #7E6597;
+  margin-bottom: 20px;
+}
+
+/* Space icons and text nicely in the contact list */
+.contact-page .questions-list li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+/* Tighter gap below the contact info block */
+.contact-page .footer-cta {
+  margin-top: 15px;
+}
