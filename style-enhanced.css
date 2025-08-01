@@ -359,12 +359,13 @@ footer {
     margin-bottom: 20px;
     color: #111;
 }
+
 /* -----------------------------------
-   SALONFIX ADVANTAGE SECTION
+   SALONFIX ADVANTAGE SECTION – TIGHTER SPACING
 ----------------------------------- */
 .advantage-section {
   text-align: center;
-  padding: 80px 10%;
+  padding: 40px 10%;   /* ⬇ reduced top/bottom padding from 80px to 40px */
 }
 
 .advantage-headline {
@@ -374,23 +375,22 @@ footer {
   font-weight: 900;
   letter-spacing: -1px;
   line-height: 1.05;
-  margin-bottom: 8px;
+  margin-bottom: 5px;   /* ⬇ smaller gap below headline */
   color: #222;
 }
 
 .advantage-subheadline {
   font-size: 22px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 10px;  /* ⬇ smaller gap below subheadline */
   color: #555;
 }
 
-/* ✅ SALONFIX ADVANTAGE PARAGRAPH STYLE */
 .advantage-paragraph {
   font-size: 18px;
   color: #444;
   max-width: 700px;
-  margin: 0 auto 20px auto;   /* centers and adds only 20px bottom space */
+  margin: 0 auto 15px auto;   /* ⬇ smaller gap below paragraph */
   line-height: 1.5;
   text-align: center;
 }
@@ -398,48 +398,26 @@ footer {
 .advantage-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+  gap: 15px;   /* ⬇ reduced gap between icon blocks */
   max-width: 1000px;
   margin: 0 auto;
 }
 
 .advantage-item {
   text-align: center;
-  padding: 10px;
+  padding: 8px;
 }
 
 .advantage-item img {
   width: 60px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .advantage-item h4 {
   font-size: 22px;
   font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: #222;
 }
 
-.advantage-item p {
-  font-size: 18px;
-  color: #555;
-  margin: 0;
-}
-
-/* ✅ Mobile Responsive */
-@media (max-width: 768px) {
-  .advantage-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .advantage-headline {
-    font-size: 40px;
-  }
-}
-/* ✅ Mobile adjustment for fixed navbar padding */
-@media (max-width: 768px) {
-  body {
-    padding-top: 60px;   /* smaller padding for mobile screens */
-  }
-}
+.advanta
