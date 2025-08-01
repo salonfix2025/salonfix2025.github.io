@@ -92,5 +92,19 @@
   </div>
 </footer>
 
+  <script>
+  // ✅ Convert hover to tap for mobile
+  if (window.innerWidth <= 768) {
+    document.querySelectorAll('.pricing-box').forEach(box => {
+      box.addEventListener('click', () => {
+        // 1. Close all boxes first
+        document.querySelectorAll('.pricing-box').forEach(b => b.classList.remove('active'));
+        // 2. Open the one user tapped
+        box.classList.add('active');
+      });
+    });
+  }
+</script>
+
 </body>
 </html>
