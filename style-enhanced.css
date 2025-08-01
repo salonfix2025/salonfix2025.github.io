@@ -528,3 +528,56 @@ footer {
     max-width: 90%;
   }
 }
+
+.contact-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.left-content {
+  flex: 1;
+  max-width: 50%;
+}
+
+.right-content {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.icon-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.icon-block img {
+  width: 42px;
+  height: 42px;
+}
+
+.icon-block h4 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.icon-block p {
+  margin: 3px 0 0;
+  font-size: 16px;
+  color: #555;
+}
+
+/* ✅ Mobile Stacking */
+@media (max-width: 768px) {
+  .contact-main {
+    flex-direction: column;
+  }
+  .left-content, .right-content {
+    max-width: 100%;
+  }
+}
