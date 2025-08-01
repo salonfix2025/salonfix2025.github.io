@@ -10,11 +10,12 @@
 </head>
 <body>
 
+<!-- ✅ NAVBAR -->
 <header>
   <nav class="navbar">
     <div class="logo">
-  <a href="/">SALONFIX</a>
-</div>
+      <a href="/">SALONFIX</a>
+    </div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -29,6 +30,7 @@
   </nav>
 </header>
 
+<!-- ✅ HERO SECTION -->
 <section class="hero" style="background-image:url('assets/banner-contact.jpg');">
   <div class="hero-content" data-aos="fade-up">
     <h1>CONTACT SALONFIX</h1>
@@ -36,27 +38,28 @@
   </div>
 </section>
 
+<!-- ✅ CONTACT INFO BLOCK -->
 <section class="alt-section light" data-aos="fade-right">
-  <div class="text">
-    <ul>
-      <li>WhatsApp: +91 95661 43572</li>
-      <li>Instagram DM: @salonfix.in</li>
-      <li>Email: salonfix2025@gmail.com</li>
+  <div class="text" style="text-align:center;">
+    <h2 class="section-headline">READY TO TALK?</h2>
+    <ul style="list-style:none; font-size:20px; margin:20px 0;">
+      <li>📱 <strong>WhatsApp:</strong> +91 95661 43572</li>
+      <li>📩 <strong>Email:</strong> salonfix2025@gmail.com</li>
+      <li>📸 <strong>Instagram:</strong> @salonfix.in</li>
     </ul>
-    <p><strong>FREE 1-MONTH TRIAL – No cost, no commitment. Start today. See the systems in action.</strong></p>
-    <p><em>IF NOT NOW — WHEN?</em></p>
+    <p style="font-weight:bold; margin:10px 0;">FREE 1-MONTH TRIAL – No cost, no commitment. Start today.</p>
     <a href="https://wa.me/919566143572" class="footer-cta">WHATSAPP US NOW</a>
   </div>
 </section>
 
-  <!-- ✅ THE SALONFIX ADVANTAGE -->
+<!-- ✅ THE SALONFIX ADVANTAGE (copied from homepage) -->
 <section class="alt-section light advantage-section" data-aos="fade-up">
   <div class="text">
     <h2 class="advantage-headline">YOUR SALON. OUR SYSTEMS. ONE FREE MONTH TO PROVE IT WORKS.</h2>
-<h3 class="advantage-subheadline">SEE THE FIXES BEFORE YOU PAY A SINGLE RUPEE.</h3>
-<p class="advantage-paragraph">
-  For 30 days, SALONFIX runs your salon like it’s our own. We track every number, plug the silent leaks, and set up systems your team can follow — all before you commit to a single payment.
-</p>
+    <h3 class="advantage-subheadline">SEE THE FIXES BEFORE YOU PAY A SINGLE RUPEE.</h3>
+    <p class="advantage-paragraph">
+      For 30 days, SALONFIX runs your salon like it’s our own. We track every number, plug the silent leaks, and set up systems your team can follow — all before you commit to a single payment.
+    </p>
 
     <div class="advantage-grid">
       <div class="advantage-item">
@@ -86,24 +89,19 @@
   </div>
 </section>
 
+<!-- ✅ FOOTER -->
 <footer>
   <div class="footer-content">
     <h3>LET’S SCALE YOUR SALON</h3>
+    <p>We’re here to turn your salon into a smooth, profitable, and stress-free business. The question is — are you ready?</p>
     <a href="https://wa.me/919566143572" class="footer-cta">WHATSAPP US NOW</a>
   </div>
 </footer>
 
+<!-- ✅ FLOATING WHATSAPP BUTTON -->
 <a href="https://wa.me/919566143572" class="whatsapp-float" target="_blank">💬</a>
 
-<script>
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.nav-links');
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('open');
-    burger.classList.toggle('toggle');
-  });
-  AOS.init({duration: 1000, once: true});
-</script>
+<!-- ✅ BURGER MENU SCRIPT -->
 <script>
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav-links');
@@ -124,7 +122,7 @@
   });
 
   // ✅ Initialize AOS Animations
-  AOS.init({duration: 1000, once: true});
+  AOS.init({ duration: 1000, once: true });
 </script>
 
 </body>
