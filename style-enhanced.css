@@ -14,7 +14,7 @@ body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #222;
   line-height: 1.6;
-  background-color: #fff;
+  background-color: #f4f4f4;
   padding-top: 80px;
 }
 
@@ -188,7 +188,7 @@ body {
 }
 
 .alt-section.light {
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
 }
 
 .alt-section.dark {
