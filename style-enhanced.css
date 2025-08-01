@@ -391,3 +391,9 @@ footer {
     font-size: 40px;
   }
 }
+/* ✅ Mobile adjustment for fixed navbar padding */
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px;   /* smaller padding for mobile screens */
+  }
+}
