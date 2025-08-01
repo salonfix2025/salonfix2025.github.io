@@ -311,7 +311,7 @@ footer h3 {
   color: white;
   border-radius: 50%;
   text-align: center;
-  font-size: 30px;
+  font-size: 32px;   /* ✅ icon slightly bigger */
   box-shadow: 2px 2px 3px #999;
   z-index: 1000;
   display: flex;
