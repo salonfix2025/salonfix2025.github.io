@@ -514,7 +514,10 @@ footer {
 
 /* COLORS */
 .red { background-color: #FF4C4C; }
-.yellow { background-color: #FFD93D; color: #222; }
+.yellow { 
+  background-color: #FFD93D; 
+  color: #fff;    /* ✅ switched to white text */
+}
 .blue { background-color: #377DFF; }
 .green { background-color: #3CCF4E; }
 
