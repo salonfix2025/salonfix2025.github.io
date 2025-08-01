@@ -134,6 +134,16 @@ ul li::before {
    HERO SECTION
 ------------------------------ */
 .hero {
+   .hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.15); /* ✅ VERY light dark overlay */
+  z-index: 1;
+}
   height: auto;
   padding: 120px 20px 100px;
   background-size: cover;
