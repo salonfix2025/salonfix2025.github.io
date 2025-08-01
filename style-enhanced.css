@@ -290,3 +290,14 @@ footer {
     display: flex;
   }
 }
+/* --- FOUNDER HEADLINE STYLE --- */
+.founder-headline {
+    font-family: "Helvetica Neue Condensed Bold", "Arial Narrow Bold", sans-serif;
+    font-size: 80px;           /* adjust between 72–90px for desktop */
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: -1px;      /* tightens spacing slightly */
+    line-height: 1.05;         /* very compact */
+    margin-bottom: 20px;
+    color: #111;
+}
