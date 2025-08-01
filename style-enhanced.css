@@ -195,6 +195,11 @@ body {
   background-color: #eee5f4;
 }
 
+/* ✅ WHITE BACKGROUND FOR RESULTS SECTION */
+.alt-section.white-bg {
+  background-color: #ffffff;
+}
+
 .alt-section .text {
   flex: 1;
 }
