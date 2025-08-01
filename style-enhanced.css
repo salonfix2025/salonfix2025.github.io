@@ -710,3 +710,8 @@ html, body {
 .pricing-box.active .hover-text {
   opacity: 1;
 }
+
+/* ✅ GLOBAL TEXT JUSTIFICATION FOR CLEAN LOOK */
+body, p, li, .text, .footer-content p, .section-subheadline, .hover-text {
+  text-align: justify;
+}
