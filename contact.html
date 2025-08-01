@@ -7,10 +7,10 @@
   <link rel="stylesheet" href="style-enhanced.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<!-- ✅ NAVBAR -->
 <header>
   <nav class="navbar">
     <div class="logo">
@@ -38,21 +38,22 @@
   </div>
 </section>
 
-<!-- ✅ CONTACT INFO BLOCK -->
-<section class="alt-section light" data-aos="fade-right">
-  <div class="text" style="text-align:center;">
-    <h2 class="section-headline">READY TO TALK?</h2>
-    <ul style="list-style:none; font-size:20px; margin:20px 0;">
-      <li>📱 <strong>WhatsApp:</strong> +91 95661 43572</li>
-      <li>📩 <strong>Email:</strong> salonfix2025@gmail.com</li>
-      <li>📸 <strong>Instagram:</strong> @salonfix.in</li>
+<!-- ✅ CONTACT INFO SECTION -->
+<section class="alt-section light" data-aos="fade-up">
+  <div class="text">
+    <h2 class="section-headline">LET'S CONNECT</h2>
+    <ul class="questions-list">
+      <li>📱 <strong>WhatsApp:</strong> <a href="https://wa.me/919566143572" target="_blank">+91 95661 43572</a></li>
+      <li>📸 <strong>Instagram DM:</strong> <a href="https://instagram.com/salonfix.in" target="_blank">@salonfix.in</a></li>
+      <li>📧 <strong>Email:</strong> salonfix2025@gmail.com</li>
     </ul>
-    <p style="font-weight:bold; margin:10px 0;">FREE 1-MONTH TRIAL – No cost, no commitment. Start today.</p>
+    <p><strong>FREE 1-MONTH TRIAL – No cost, no commitment. Start today. See the systems in action.</strong></p>
+    <p><em>IF NOT NOW — WHEN?</em></p>
     <a href="https://wa.me/919566143572" class="footer-cta">WHATSAPP US NOW</a>
   </div>
 </section>
 
-<!-- ✅ THE SALONFIX ADVANTAGE (copied from homepage) -->
+<!-- ✅ THE SALONFIX ADVANTAGE -->
 <section class="alt-section light advantage-section" data-aos="fade-up">
   <div class="text">
     <h2 class="advantage-headline">YOUR SALON. OUR SYSTEMS. ONE FREE MONTH TO PROVE IT WORKS.</h2>
@@ -93,13 +94,14 @@
 <footer>
   <div class="footer-content">
     <h3>LET’S SCALE YOUR SALON</h3>
-    <p>We’re here to turn your salon into a smooth, profitable, and stress-free business. The question is — are you ready?</p>
     <a href="https://wa.me/919566143572" class="footer-cta">WHATSAPP US NOW</a>
   </div>
 </footer>
 
 <!-- ✅ FLOATING WHATSAPP BUTTON -->
-<a href="https://wa.me/919566143572" class="whatsapp-float" target="_blank">💬</a>
+<a href="https://wa.me/919566143572" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
 <!-- ✅ BURGER MENU SCRIPT -->
 <script>
@@ -107,13 +109,11 @@
   const nav = document.querySelector('.nav-links');
   const navLinks = document.querySelectorAll('.nav-links a');
 
-  // Open/close menu on burger click
   burger.addEventListener('click', () => {
     nav.classList.toggle('open');
     burger.classList.toggle('toggle');
   });
 
-  // ✅ Close menu when any link is clicked
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       nav.classList.remove('open');
@@ -121,7 +121,6 @@
     });
   });
 
-  // ✅ Initialize AOS Animations
   AOS.init({ duration: 1000, once: true });
 </script>
 
