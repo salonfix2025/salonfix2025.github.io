@@ -459,6 +459,9 @@ footer {
 .pricing-box {
   position: relative;
   aspect-ratio: 1 / 1;
+  max-width: 450px;        /* ✅ limits width */
+  max-height: 450px;       /* ✅ limits height */
+  margin: 0 auto;          /* ✅ centers each box */
   color: white;
   font-family: 'Helvetica Neue', sans-serif;
   display: flex;
