@@ -188,7 +188,7 @@ body {
 }
 
 .alt-section.light {
-  background-color: #f4f4f4;
+  background-color: #e6e6e6;   /* ✅ more visible grey */
 }
 
 .alt-section.dark {
