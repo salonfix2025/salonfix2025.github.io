@@ -39,24 +39,24 @@ body {
   font-weight: bold;
   color: #fff;
   text-decoration: none;
-  letter-spacing: 2px;   /* ✅ adds nice spacing between letters */
+  letter-spacing: 2px;
 }
 
 .nav-links {
   display: flex;
   gap: 20px;
   list-style: none;
-  justify-content: center;   /* ✅ centers the menu items horizontally */
-  flex: 1;                   /* ✅ lets the nav links take center space */
+  justify-content: center;
+  flex: 1;
 }
 
 .nav-links li a {
   color: #fff;
   text-decoration: none;
   font-size: 16px;
-  font-weight: bold;    /* ✅ bold by default */
-  position: relative;   /* ✅ needed for underline effect */
-  padding-bottom: 4px;  /* ✅ space for underline */
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 4px;
   transition: color 0.3s ease;
 }
 
@@ -67,12 +67,12 @@ body {
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: #fff;   /* ✅ white underline */
+  background-color: #fff;
   transition: width 0.3s ease;
 }
 
 .nav-links li a:hover::after {
-  width: 100%;              /* ✅ underline animates in on hover */
+  width: 100%;
 }
 
 .burger {
@@ -123,7 +123,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.25); /* Soft overlay */
+  background: rgba(0, 0, 0, 0.25);
   z-index: 1;
 }
 
@@ -133,16 +133,16 @@ body {
 }
 
 .hero h1 {
-  font-size: 72px;        /* ✅ BIG headline on desktop */
+  font-size: 72px;
   line-height: 1.1;
   margin-bottom: 15px;
 }
 
 .hero-subtext {
-  font-size: 36px;             /* ⬆ bigger for strong visibility */
-  font-weight: 600;            /* ⬆ semi-bold for impact */
-  color: #ffffff;              /* ⬆ pure white for stronger contrast */
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);  /* ✅ makes text pop on images */
+  font-size: 36px;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
   line-height: 1.3;
   margin-bottom: 25px;
 }
@@ -150,8 +150,8 @@ body {
 .cta-btn {
   background-color: #fff;
   color: #7E6597;
-  padding: 18px 40px;     /* ✅ bigger button */
-  font-size: 22px;        /* ✅ bigger text */
+  padding: 18px 40px;
+  font-size: 22px;
   text-decoration: none;
   font-weight: bold;
   border-radius: 10px;
@@ -166,13 +166,11 @@ body {
 /* ✅ Mobile-Friendly Scaling */
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 44px;      /* ✅ headline adjusts for small screens */
+    font-size: 44px;
   }
-
   .hero-subtext {
-    font-size: 22px;      /* ✅ subheadline adjusts for small screens */
+    font-size: 22px;
   }
-
   .cta-btn {
     font-size: 18px;
     padding: 14px 30px;
@@ -191,14 +189,13 @@ body {
 }
 
 .alt-section.light {
-  background-color: #e6e6e6;   /* ✅ more visible grey */
+  background-color: #e6e6e6;
 }
 
 .alt-section.dark {
   background-color: #eee5f4;
 }
 
-/* ✅ WHITE BACKGROUND FOR RESULTS SECTION */
 .alt-section.white-bg {
   background-color: #ffffff;
 }
@@ -219,13 +216,12 @@ body {
   border-radius: 8px;
 }
 
-/* Image Overlay for Section Images */
 .image::after {
   content: "";
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.20); /* light transparent overlay */
+  background: rgba(0, 0, 0, 0.20);
   pointer-events: none;
   border-radius: 8px;
 }
@@ -237,7 +233,7 @@ body {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 15px;
-  color: #7E6597;   /* ✅ changes all section titles to Salonfix purple */
+  color: #7E6597;
 }
 
 .section-subheadline {
@@ -247,7 +243,6 @@ body {
   color: #555;
 }
 
-/* Questions List */
 .questions-list {
   margin: 15px 0;
   padding-left: 0;
@@ -262,7 +257,6 @@ body {
   color: #4B4B4B;
 }
 
-/* Footline */
 .footline {
   margin-top: 20px;
   font-size: 18px;
@@ -330,12 +324,10 @@ footer {
     flex-direction: column;
     text-align: center;
   }
-
-   .founder-headline {
-    font-size: 50px;   /* scales headline for tablets/phones */
+  .founder-headline {
+    font-size: 50px;
     line-height: 1.1;
-}
-
+  }
   .nav-links {
     display: none;
     flex-direction: column;
@@ -347,25 +339,24 @@ footer {
     text-align: right;
     padding: 20px;
   }
-
   .nav-links.open {
     display: flex;
   }
-
   .burger {
     display: flex;
   }
 }
+
 /* --- FOUNDER HEADLINE STYLE --- */
 .founder-headline {
-    font-family: "Helvetica Neue Condensed Bold", "Arial Narrow Bold", sans-serif;
-    font-size: 80px;           /* adjust between 72–90px for desktop */
-    text-transform: uppercase;
-    font-weight: 900;
-    letter-spacing: -1px;      /* tightens spacing slightly */
-    line-height: 1.05;         /* very compact */
-    margin-bottom: 20px;
-    color: #7E6597;            /* ✅ Salonfix purple */
+  font-family: "Helvetica Neue Condensed Bold", "Arial Narrow Bold", sans-serif;
+  font-size: 80px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1.05;
+  margin-bottom: 20px;
+  color: #7E6597;
 }
 
 /* -----------------------------------
@@ -373,8 +364,8 @@ footer {
 ----------------------------------- */
 .advantage-section {
   text-align: center;
-  padding: 25px 8%;    /* ⬇ tighter spacing */
-  margin-top: -20px;   /* ⬆ pulls section closer to the banner */
+  padding: 25px 8%;
+  margin-top: -20px;
 }
 
 .advantage-headline {
@@ -384,14 +375,14 @@ footer {
   font-weight: 900;
   letter-spacing: -1px;
   line-height: 1.05;
-  margin-bottom: 5px;   /* ⬇ smaller gap below headline */
+  margin-bottom: 5px;
   color: #222;
 }
 
 .advantage-subheadline {
   font-size: 22px;
   font-weight: 600;
-  margin-bottom: 10px;  /* ⬇ smaller gap below subheadline */
+  margin-bottom: 10px;
   color: #555;
 }
 
@@ -399,7 +390,7 @@ footer {
   font-size: 18px;
   color: #444;
   max-width: 700px;
-  margin: 0 auto 15px auto;   /* ⬇ smaller gap below paragraph */
+  margin: 0 auto 15px auto;
   line-height: 1.5;
   text-align: center;
 }
@@ -407,7 +398,7 @@ footer {
 .advantage-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 15px;   /* ⬇ reduced gap between icon blocks */
+  gap: 15px;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -429,53 +420,45 @@ footer {
   color: #222;
 }
 
-.advanta
 /* -----------------------------------
    CONTACT PAGE TWEAKS
 ----------------------------------- */
-
-/* Reduce extra padding in advantage section on contact page */
 .contact-page .advantage-section {
-  padding: 40px 8% 30px 8%;  /* tighter top & bottom spacing */
+  padding: 40px 8% 30px 8%;
 }
-
-/* Style tweaks for Let's Connect block */
 .contact-page .alt-section.light {
   padding: 40px 10%;
   text-align: left;
-  background-color: #f4f4f4; /* soft grey for contrast */
+  background-color: #f4f4f4;
 }
-
-/* Ensure h2 headline in LET'S CONNECT pops */
 .contact-page .alt-section.light h2 {
   font-size: 28px;
   color: #7E6597;
   margin-bottom: 20px;
 }
-
-/* Space icons and text nicely in the contact list */
 .contact-page .questions-list li {
   margin: 10px 0;
   font-size: 18px;
 }
-
-/* Tighter gap below the contact info block */
 .contact-page .footer-cta {
   margin-top: 15px;
 }
 
+/* -----------------------------------
+   PRICING GRID + BOXES
+----------------------------------- */
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;                     /* ✅ slightly bigger gap between boxes */
-  margin: 50px auto;             /* ✅ centers the entire grid */
-  max-width: 1100px;             /* ✅ adds white space on left & right */
-  padding: 0 20px;               /* ✅ ensures breathing room on mobile */
+  gap: 30px;
+  margin: 50px auto;
+  max-width: 1100px;
+  padding: 0 20px;
 }
 
 .pricing-box {
   position: relative;
-  aspect-ratio: 1 / 1;       /* ✅ forces the boxes to be perfect squares */
+  aspect-ratio: 1 / 1;
   color: white;
   font-family: 'Helvetica Neue', sans-serif;
   display: flex;
@@ -484,41 +467,58 @@ footer {
   text-align: center;
   padding: 20px;
   overflow: hidden;
-  transition: transform 0.3s ease;
-  border-radius: 10px;       /* ✅ optional: smooth rounded corners */
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+/* ✅ HOVER ANIMATION */
+.pricing-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .pricing-box h2 {
-  font-size: 36px;        /* 🔼 Bigger heading */
-  font-weight: 900;       /* 🔼 Extra bold for impact */
+  font-size: 36px;
+  font-weight: 900;
   margin-bottom: 10px;
 }
 
 .pricing-box .subtitle {
-  font-size: 20px;        /* 🔼 Subheading larger */
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 12px;
 }
 
+/* ✅ TEXT SLIDE-UP EFFECT */
+.box-content {
+  position: relative;
+  transition: transform 0.4s ease;
+}
+.pricing-box:hover .box-content {
+  transform: translateY(-50px);
+}
+
+/* ✅ HOVER TEXT FADE-IN */
 .hover-text {
-  font-size: 18px;        /* 🔼 Hover text more readable */
-  line-height: 1.5;       /* ✅ Adds breathing room */
+  font-size: 18px;
+  line-height: 1.5;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
 .pricing-box:hover .hover-text {
   opacity: 1;
 }
 
+/* COLORS */
 .red { background-color: #FF4C4C; }
 .yellow { background-color: #FFD93D; color: #222; }
 .blue { background-color: #377DFF; }
 .green { background-color: #3CCF4E; }
+
+/* MOBILE LAYOUT */
 @media (max-width: 768px) {
   .pricing-grid {
-    grid-template-columns: 1fr;   /* ✅ stacks boxes vertically on mobile */
+    grid-template-columns: 1fr;
     max-width: 90%;
   }
 }
-
