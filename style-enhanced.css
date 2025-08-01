@@ -599,3 +599,14 @@ footer {
 .call-btn:hover {
   background-color: #5b486d;   /* Slightly darker purple on hover */
 }
+
+/* ✅ FIX overlap for LET'S CONNECT section */
+.alt-section.light {
+  padding: 60px 10% 80px 10%;   /* more top & bottom padding */
+  position: relative;
+}
+
+.alt-section.light .footer-cta {
+  display: inline-block;
+  margin-top: 20px;   /* pushes button further down */
+}
