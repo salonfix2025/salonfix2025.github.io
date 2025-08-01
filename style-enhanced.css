@@ -324,21 +324,31 @@ footer {
   font-weight: 900;
   letter-spacing: -1px;
   line-height: 1.05;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
   color: #222;
 }
 
 .advantage-subheadline {
   font-size: 22px;
   font-weight: 600;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   color: #555;
+}
+
+/* ✅ SALONFIX ADVANTAGE PARAGRAPH STYLE */
+.advantage-paragraph {
+  font-size: 18px;
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto 20px auto;   /* centers and adds only 20px bottom space */
+  line-height: 1.5;
+  text-align: center;
 }
 
 .advantage-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
+  gap: 25px;
   max-width: 1000px;
   margin: 0 auto;
 }
