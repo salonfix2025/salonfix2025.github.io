@@ -460,3 +460,15 @@ footer h3 {
     position: relative;
     z-index: 2;
 }
+/* --- DIM SECTION IMAGES FOR BETTER TEXT CONTRAST --- */
+.image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: brightness(85%);   /* darkens the image slightly */
+    transition: filter 0.3s ease;
+}
+
+.image img:hover {
+    filter: brightness(95%);   /* brighten slightly on hover */
+}
