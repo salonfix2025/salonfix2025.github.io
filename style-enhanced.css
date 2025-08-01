@@ -139,7 +139,10 @@ body {
 }
 
 .hero-subtext {
-  font-size: 32px;        /* ✅ larger subheadline */
+  font-size: 36px;             /* ⬆ bigger for strong visibility */
+  font-weight: 600;            /* ⬆ semi-bold for impact */
+  color: #ffffff;              /* ⬆ pure white for stronger contrast */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);  /* ✅ makes text pop on images */
   line-height: 1.3;
   margin-bottom: 25px;
 }
