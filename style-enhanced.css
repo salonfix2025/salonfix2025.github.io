@@ -1,138 +1,67 @@
-/* ------------------------------
-   IMPORT FONTS
------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
-
-/* ------------------------------
-   GLOBAL RESET & BODY
------------------------------- */
+/* -----------------------------------
+   GLOBAL RESET & BASE STYLES
+----------------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ✅ Global background fix */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-  font-family: 'Lato', sans-serif;
-  background-color: #A6A6A6 !important;
-  color: #333;
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #222;
   line-height: 1.6;
-
-  /* ✅ Force consistency across browsers */
-  -webkit-background-clip: border-box;
-  -webkit-text-fill-color: inherit;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: #fff;
 }
 
-/* ✅ Background reinforcement for Android Chrome */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #7E6597;
-  z-index: -1;
-}
-
-/* ------------------------------
-   REMOVE BULLETS (site-wide)
------------------------------- */
-ul {
-  list-style: none !important;
-  padding-left: 0 !important;
-  margin-left: 0 !important;
-}
-ul li {
-  margin-bottom: 10px;
-  padding-left: 20px;
-  position: relative;
-}
-ul li::before {
-  content: "";
-}
-
-/* ------------------------------
+/* -----------------------------------
    NAVBAR
------------------------------- */
+----------------------------------- */
 .navbar {
-  background-color: #4B0082;
-  padding: 20px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
+  background-color: #7E6597; /* Salonfix purple */
   position: sticky;
   top: 0;
-  z-index: 999;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  z-index: 1000;
 }
 
-.logo {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 34px;
-  font-weight: 700;
-  color: #FFD700;
-  letter-spacing: 1px;
-}
-/* ✅ Make the SALONFIX logo clickable & styled */
 .logo a {
-  color: #FFD700;                /* gold color like the logo text */
-  text-decoration: none;         /* removes underline */
-  font-family: 'Montserrat', sans-serif;
-  font-size: 34px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-.logo a:hover {
-  color: #f3d34a;                /* lighter gold hover effect */
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
   gap: 20px;
-  transition: all 0.4s ease;
+  list-style: none;
 }
 
 .nav-links li a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  font-weight: 600;
-  position: relative;
   font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
-  transition: color 0.3s ease;
 }
 
-.nav-links li a:hover {
-  color: #FFD700;
-}
-
-/* ------------------------------
-   BURGER MENU
------------------------------- */
 .burger {
   display: none;
+  flex-direction: column;
   cursor: pointer;
-  z-index: 1001;
 }
 
 .burger div {
   width: 25px;
   height: 3px;
-  background: white;
-  margin: 5px;
+  background-color: #fff;
+  margin: 4px;
   transition: all 0.3s ease;
 }
 
+/* Burger Animation when toggled */
 .burger.toggle div:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -143,35 +72,31 @@ ul li::before {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ------------------------------
+/* -----------------------------------
    HERO SECTION
------------------------------- */
+----------------------------------- */
 .hero {
-   .hero::before {
+  position: relative;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.hero::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.15); /* ✅ VERY light dark overlay */
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.25); /* Soft overlay */
   z-index: 1;
-}
-  height: auto;
-  padding: 120px 20px 100px;
-  background-size: cover;
-  background-position: center;
-  color: white;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-}
-
-.hero::before {
-  content: none;
 }
 
 .hero-content {
@@ -180,295 +105,188 @@ ul li::before {
 }
 
 .hero h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 52px;
-  font-weight: 800;
-  margin-bottom: 15px;
-  color: #ffffff; /* ✅ Keep text white */
-  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* ✅ Dark shadow for strong contrast */
+  font-size: 38px;
+  margin-bottom: 10px;
 }
 
-.hero p {
-  font-size: 22px;
-  font-weight: 700;
-  max-width: 700px;
+.hero-subtext {
+  font-size: 18px;
   margin-bottom: 20px;
-  color: #ffffff; /* ✅ Keep white for consistency */
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* ✅ Soft black shadow */
 }
 
 .cta-btn {
-  background-color: #FFD700;
-  color: #4B0082;
-  padding: 14px 30px;
+  background-color: #fff;
+  color: #7E6597;
+  padding: 12px 25px;
   text-decoration: none;
   font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
   border-radius: 8px;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-.cta-btn:hover {
-  background-color: #f3d34a;
-  transform: scale(1.05);
 }
 
-/* ------------------------------
-   ALT SECTIONS
------------------------------- */
+/* -----------------------------------
+   SECTION STRUCTURE
+----------------------------------- */
 .alt-section {
   display: flex;
-  padding: 100px 10%;
   align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
   gap: 40px;
 }
 
-.alt-section.light,
+.alt-section.light {
+  background-color: #f9f9f9;
+}
+
 .alt-section.dark {
-  background-color: transparent !important;
+  background-color: #eee5f4;
 }
 
 .alt-section .text {
   flex: 1;
-  color: #FFFFFF !important;
-}
-
-/* ✅ Default H2 */
-.alt-section .text h2 {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 64px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: #4B0082;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  line-height: 1.2;
-}
-
-/* ✅ Smaller for long-question headlines */
-.alt-section .text h2.section-headline {
-  font-size: 42px !important;
-  line-height: 1.3 !important;
-}
-
-.alt-section .text h3 {
-  font-family: 'Lato', sans-serif;
-  font-size: 24px;
-  margin-bottom: 15px;
-  font-weight: 400;
-  color: #FFFFFF;
-}
-
-.alt-section .text p, .alt-section .text ul, .alt-section .text li {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #FFFFFF;
 }
 
 .alt-section .image {
   flex: 1;
+  position: relative;
 }
 
-.alt-section img {
+.alt-section .image img {
   width: 100%;
-  border-radius: 14px;
-  transition: transform 0.3s ease;
-}
-.alt-section img:hover {
-  transform: scale(1.03);
+  height: auto;
+  display: block;
+  border-radius: 8px;
 }
 
-/* ------------------------------
+/* Image Overlay for Section Images */
+.image::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.20); /* light transparent overlay */
+  pointer-events: none;
+  border-radius: 8px;
+}
+
+/* -----------------------------------
+   UNIVERSAL TYPOGRAPHY STYLES
+----------------------------------- */
+.section-headline {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.section-subheadline {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* Questions List */
+.questions-list {
+  margin: 15px 0;
+  padding-left: 0;
+  list-style: none;
+  max-width: 550px;
+}
+
+.questions-list li {
+  margin: 8px 0;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #4B4B4B;
+}
+
+/* Footline */
+.footline {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* -----------------------------------
    FOOTER
------------------------------- */
+----------------------------------- */
 footer {
-  background-color: #4B0082;
-  color: white;
+  background-color: #7E6597;
+  color: #fff;
+  padding: 40px 10%;
   text-align: center;
-  padding: 50px 20px;
 }
 
-footer h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 26px;
-  font-weight: 700;
+.footer-content h3 {
+  font-size: 24px;
   margin-bottom: 15px;
 }
 
-.footer-cta {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 28px;
-  background-color: #FFD700;
-  color: #4B0082;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-.footer-cta:hover {
-  background-color: #f3d34a;
-  transform: scale(1.05);
+.footer-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
-/* ------------------------------
-   FLOATING WHATSAPP BUTTON
------------------------------- */
+.footer-cta {
+  background-color: #fff;
+  color: #7E6597;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* -----------------------------------
+   WHATSAPP FLOATING BUTTON
+----------------------------------- */
 .whatsapp-float {
   position: fixed;
-  width: 60px;
-  height: 60px;
   bottom: 20px;
   right: 20px;
   background-color: #25D366;
   color: white;
   border-radius: 50%;
-  text-align: center;
-  font-size: 32px;   /* ✅ icon slightly bigger */
-  box-shadow: 2px 2px 3px #999;
-  z-index: 1000;
+  width: 55px;
+  height: 55px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  transition: transform 0.3s ease;
+  justify-content: center;
+  font-size: 28px;
+  z-index: 1000;
+  text-decoration: none;
 }
+
 .whatsapp-float:hover {
-  transform: scale(1.1);
-}
-.whatsapp-float::after {
-  content: "Chat with us!";
-  position: absolute;
-  right: 70px;
-  background: #333;
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 5px;
-  font-size: 14px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-.whatsapp-float:hover::after {
-  opacity: 1;
+  background-color: #1ebe5d;
 }
 
-/* ------------------------------
-   MOBILE STYLING
------------------------------- */
-@media (max-width: 768px) {
-  .nav-links {
-    position: fixed;
-    right: 0;
-    height: 100vh;
-    top: 0;
-    background-color: #4B0082;
-    flex-direction: column;
-    align-items: center;
-    width: 0;
-    overflow: hidden;
-    transition: width 0.4s ease;
-    padding-top: 100px;
-    z-index: 1001;
-  }
-
-  .nav-links.open {
-    width: 70%;
-  }
-
-  .burger {
-    display: block;
-  }
-
-  /* ✅ Stack sections on mobile */
+/* -----------------------------------
+   RESPONSIVE DESIGN
+----------------------------------- */
+@media (max-width: 992px) {
   .alt-section {
     flex-direction: column;
-    padding: 40px 20px;
     text-align: center;
   }
 
-  /* ✅ Scale images */
-  .alt-section img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* ✅ Reduce headlines for mobile */
-  .alt-section .text h2 {
-    font-size: 34px !important;
-    line-height: 1.2 !important;
-  }
-
-  /* ✅ Subheadline mobile size */
-  .alt-section .text h3 {
-    font-size: 20px !important;
-    line-height: 1.4 !important;
-  }
-
-  /* ✅ Hero headline size */
-  .hero h1 {
-    font-size: 32px;
-    line-height: 1.3;
-  }
-
-  /* ✅ CTA buttons mobile */
-  .cta-btn {
-    padding: 12px 20px;
-    font-size: 16px;
-    white-space: nowrap;
-  }
-}
-/* --- QUESTIONS LIST STYLING --- */
-.questions-list {
-    margin: 15px 0;
-    padding-left: 0;
-    list-style: none;
-    max-width: 550px;       /* Matches headline width */
-}
-
-.questions-list li {
-    margin: 8px 0;
-    font-size: 20px;
-    line-height: 1.5;
-    color: #4B4B4B;
-}
-
-.footline {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-}
-/* --- HERO IMAGE OVERLAY --- */
-.hero {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-}
-
-.hero::after {
-    content: "";
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #7E6597;
     position: absolute;
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.25);  /* light dim effect */
-    z-index: 1;
-}
-
-/* ensure hero content stays above overlay */
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-/* --- DIM SECTION IMAGES FOR BETTER TEXT CONTRAST --- */
-.image img {
-    display: block;
+    top: 70px;
+    right: 0;
     width: 100%;
-    height: auto;
-    filter: brightness(85%);   /* darkens the image slightly */
-    transition: filter 0.3s ease;
-}
+    text-align: right;
+    padding: 20px;
+  }
 
-.image img:hover {
-    filter: brightness(95%);   /* brighten slightly on hover */
+  .nav-links.open {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
 }
