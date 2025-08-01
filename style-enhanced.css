@@ -496,9 +496,9 @@ footer {
 }
 
 .box-content {
-  position: absolute;
-  bottom: 20px;
+  position: relative;      /* ✅ no longer sticks to bottom */
   transition: transform 0.4s ease;
+  text-align: center;       /* ✅ makes all text inside centered */
 }
 
 .pricing-box:hover .box-content {
