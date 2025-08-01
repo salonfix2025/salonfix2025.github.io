@@ -829,3 +829,14 @@ html, body {
     padding: 0 10px;
   }
 }
+
+/* ✅ Custom font size for WHY SALONFIX EXISTS section */
+#why-section .text h2 {
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+#why-section .text p {
+  font-size: 20px;
+  line-height: 1.7;
+}
