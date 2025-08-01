@@ -715,3 +715,11 @@ html, body {
 body, p, li, .text, .footer-content p, .section-subheadline, .hover-text {
   text-align: justify;
 }
+
+/* ✅ Keep main titles centered (don’t justify these) */
+.hero h1,
+.section-headline,
+.advantage-headline,
+footer h3 {
+  text-align: center;
+}
