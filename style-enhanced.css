@@ -486,27 +486,20 @@ footer {
 }
 
 .pricing-box h2 {
-  font-size: 28px;
-  margin-bottom: 5px;
-}
-
-.pricing-box .subtitle {
-  font-size: 16px;
+  font-size: 36px;        /* 🔼 Bigger heading */
+  font-weight: 900;       /* 🔼 Extra bold for impact */
   margin-bottom: 10px;
 }
 
-.box-content {
-  position: relative;      /* ✅ no longer sticks to bottom */
-  transition: transform 0.4s ease;
-  text-align: center;       /* ✅ makes all text inside centered */
-}
-
-.pricing-box:hover .box-content {
-  transform: translateY(-40px);
+.pricing-box .subtitle {
+  font-size: 20px;        /* 🔼 Subheading larger */
+  font-weight: 600;
+  margin-bottom: 12px;
 }
 
 .hover-text {
-  font-size: 14px;
+  font-size: 18px;        /* 🔼 Hover text more readable */
+  line-height: 1.5;       /* ✅ Adds breathing room */
   opacity: 0;
   transition: opacity 0.3s ease;
 }
