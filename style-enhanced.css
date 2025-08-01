@@ -698,3 +698,15 @@ html, body {
   font-size: 20px;
   line-height: 1.7;
 }
+
+/* ✅ Mobile Pricing Tap Hint */
+@media (max-width: 768px) {
+  .pricing-box {
+    cursor: pointer; /* lets users know they can tap */
+  }
+}
+
+/* ✅ Enable text to show when a box is tapped */
+.pricing-box.active .hover-text {
+  opacity: 1;
+}
