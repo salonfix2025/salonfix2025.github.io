@@ -15,6 +15,7 @@ body {
   color: #222;
   line-height: 1.6;
   background-color: #fff;
+  padding-top: 80px;
 }
 
 /* -----------------------------------
@@ -26,7 +27,9 @@ body {
   align-items: center;
   padding: 20px;
   background-color: #7E6597; /* Salonfix purple */
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  left: 0;
   top: 0;
   z-index: 1000;
 }
