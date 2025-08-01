@@ -463,3 +463,57 @@ footer {
 .contact-page .footer-cta {
   margin-top: 15px;
 }
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 50px 0;
+}
+
+.pricing-box {
+  position: relative;
+  height: 300px;
+  color: white;
+  font-family: 'Helvetica Neue', sans-serif;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.pricing-box h2 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.pricing-box .subtitle {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.box-content {
+  position: absolute;
+  bottom: 20px;
+  transition: transform 0.4s ease;
+}
+
+.pricing-box:hover .box-content {
+  transform: translateY(-40px);
+}
+
+.hover-text {
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.pricing-box:hover .hover-text {
+  opacity: 1;
+}
+
+.red { background-color: #FF4C4C; }
+.yellow { background-color: #FFD93D; color: #222; }
+.blue { background-color: #377DFF; }
+.green { background-color: #3CCF4E; }
