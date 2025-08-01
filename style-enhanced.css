@@ -270,6 +270,11 @@ footer {
     text-align: center;
   }
 
+   .founder-headline {
+    font-size: 50px;   /* scales headline for tablets/phones */
+    line-height: 1.1;
+}
+
   .nav-links {
     display: none;
     flex-direction: column;
