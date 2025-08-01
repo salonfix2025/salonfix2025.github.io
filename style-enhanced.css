@@ -477,7 +477,9 @@ footer {
   color: white;
   font-family: 'Helvetica Neue', sans-serif;
   display: flex;
-  align-items: flex-end;
+  justify-content: center;   /* ✅ centers horizontally */
+  align-items: center;       /* ✅ centers vertically */
+  text-align: center;        /* ✅ centers the text block */
   padding: 20px;
   overflow: hidden;
   transition: transform 0.3s ease;
