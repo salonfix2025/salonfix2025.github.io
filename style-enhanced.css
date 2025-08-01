@@ -133,22 +133,47 @@ body {
 }
 
 .hero h1 {
-  font-size: 38px;
-  margin-bottom: 10px;
+  font-size: 72px;        /* ✅ BIG headline on desktop */
+  line-height: 1.1;
+  margin-bottom: 15px;
 }
 
 .hero-subtext {
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-size: 32px;        /* ✅ larger subheadline */
+  line-height: 1.3;
+  margin-bottom: 25px;
 }
 
 .cta-btn {
   background-color: #fff;
   color: #7E6597;
-  padding: 12px 25px;
+  padding: 18px 40px;     /* ✅ bigger button */
+  font-size: 22px;        /* ✅ bigger text */
   text-decoration: none;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #f2f2f2;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ✅ Mobile-Friendly Scaling */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 44px;      /* ✅ headline adjusts for small screens */
+  }
+
+  .hero-subtext {
+    font-size: 22px;      /* ✅ subheadline adjusts for small screens */
+  }
+
+  .cta-btn {
+    font-size: 18px;
+    padding: 14px 30px;
+  }
 }
 
 /* -----------------------------------
