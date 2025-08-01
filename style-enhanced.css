@@ -703,3 +703,58 @@ footer {
     font-size: 24px !important;  /* slightly smaller section titles */
   }
 }
+
+/* ✅ MOBILE FIXES – ALIGNMENT, COLORS & ZOOM ISSUES */
+
+/* 🎨 Normalize Colors Across Browsers */
+html, body {
+  color-scheme: light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  image-rendering: auto;
+  max-width: 100%;
+  overflow-x: hidden;
+  zoom: 1; /* stops Samsung/Chrome from zooming out page */
+}
+
+/* 📱 Mobile Layout Fix for Sections */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  /* 🏗 Force all sections to stack neatly */
+  .alt-section {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 30px 5% !important;
+    gap: 20px !important;
+  }
+
+  /* 🔲 Ensure text and image widths adjust properly */
+  .alt-section .text, 
+  .alt-section .image {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 10px auto !important;
+  }
+
+  /* 🖼 Image scaling for mobile */
+  .alt-section .image img {
+    width: 92% !important;
+    height: auto !important;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+
+  /* 🔠 Adjust heading sizes for mobile */
+  .hero h1 {
+    font-size: 38px !important;
+  }
+  .section-headline {
+    font-size: 24px !important;
+  }
+}
