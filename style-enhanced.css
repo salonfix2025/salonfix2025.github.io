@@ -81,6 +81,19 @@ ul li::before {
   color: #FFD700;
   letter-spacing: 1px;
 }
+/* ✅ Make the SALONFIX logo clickable & styled */
+.logo a {
+  color: #FFD700;                /* gold color like the logo text */
+  text-decoration: none;         /* removes underline */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.logo a:hover {
+  color: #f3d34a;                /* lighter gold hover effect */
+}
 
 .nav-links {
   list-style: none;
