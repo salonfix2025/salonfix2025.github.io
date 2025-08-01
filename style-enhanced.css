@@ -659,3 +659,26 @@ footer {
   transform: scale(1.1);
   background-color: #1ebe5d;
 }
+
+/* ✅ Mobile Fix: How We Work Sections */
+@media (max-width: 768px) {
+  .alt-section {
+    flex-direction: column !important;
+    text-align: center;
+    padding: 40px 5% !important;
+    gap: 20px !important;
+  }
+
+  .alt-section .text,
+  .alt-section .image {
+    width: 100% !important;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .alt-section .image img {
+    width: 90% !important;
+    height: auto !important;
+    margin-top: 10px;
+  }
+}
