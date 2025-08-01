@@ -164,11 +164,12 @@ ul li::before {
 }
 
 .hero p {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 700;
   max-width: 700px;
   margin-bottom: 20px;
-  color: #4B0082;  /* Purple */
+  color: #000000; /* ✅ Bold Black Text */
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.9); /* ✅ White glow for visibility */
 }
 
 .cta-btn {
