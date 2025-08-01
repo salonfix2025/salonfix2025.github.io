@@ -581,3 +581,21 @@ footer {
     max-width: 100%;
   }
 }
+
+/* ✅ CALL BUTTON STYLE */
+.call-btn {
+  background-color: #7E6597;   /* Salonfix Purple */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  display: inline-block;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.call-btn:hover {
+  background-color: #5b486d;   /* Slightly darker purple on hover */
+}
