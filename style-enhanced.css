@@ -54,6 +54,25 @@ body {
   color: #fff;
   text-decoration: none;
   font-size: 16px;
+  font-weight: bold;    /* ✅ bold by default */
+  position: relative;   /* ✅ needed for underline effect */
+  padding-bottom: 4px;  /* ✅ space for underline */
+  transition: color 0.3s ease;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;   /* ✅ white underline */
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;              /* ✅ underline animates in on hover */
 }
 
 .burger {
