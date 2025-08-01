@@ -3,21 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About SALONFIX</title>
+  <title>About – SALONFIX</title>
+
+  <!-- ✅ Styles & Libraries -->
   <link rel="stylesheet" href="style-enhanced.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
+<body class="about-page">
 
+<!-- ✅ HEADER & NAVBAR -->
 <header>
   <nav class="navbar">
     <div class="logo">
-  <a href="/">SALONFIX</a>
-</div>
+      <a href="/">SALONFIX</a>
+    </div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="about.html" class="active">About</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="pricing.html">Pricing</a></li>
       <li><a href="blog.html">Blog</a></li>
@@ -29,63 +33,83 @@
   </nav>
 </header>
 
-<section class="hero" style="background-image:url('assets/banner-about.jpg');">
+<!-- ✅ HERO BANNER -->
+<section class="hero" style="background-image:url('assets/banner-about.jpg'); height:55vh;">
   <div class="hero-content" data-aos="fade-up">
     <h1>ABOUT SALONFIX</h1>
-    <p>Who are we — and why do we run salons like they’re our own?</p>
+    <p>Not an app. Not a consultant. A real team that runs your salon like it’s ours.</p>
   </div>
 </section>
 
+<!-- ✅ WHY WE EXIST -->
 <section class="alt-section light" data-aos="fade-right">
   <div class="text">
-    <p>SALONFIX isn’t an app. It isn’t a casual consultant. SALONFIX is your in‑house business partner — stepping in to run the backend of your salon every single day so you don’t have to.</p>
-    <p>“I’m JAWHAR RAJ RAJKUMAR, and I created SALONFIX after more than a decade inside salons — leading teams, fixing systems, and turning chaos into profit. I saw one truth again and again: owners were exhausted, but the salon still wasn’t running right. SALONFIX changes that by running your salon like it’s our own — so you don’t have to.”</p>
-  </div>
-</section>
-
-<section class="alt-section dark" data-aos="fade-left">
-  <div class="text">
-    <ul>
-      <li><strong>Your Salon, Fully Managed</strong> – From numbers to stock, it’s handled.</li>
-      <li><strong>Your Profits, Protected</strong> – No revenue leakage, no hidden wastage.</li>
-      <li><strong>Your Time, Freed Up</strong> – You finally step back — and the salon still runs perfectly.</li>
-    </ul>
+    <h2 class="section-headline">Why SALONFIX Exists</h2>
+    <p>Salons thrive on creativity, but too many owners are buried in numbers, staff drama, and daily firefighting.</p>
+    <p>SALONFIX was created to change that — to bring order to the chaos, uncover what’s draining profits, and give owners the freedom to focus on clients instead of constant problems.</p>
   </div>
   <div class="image">
-    <img src="assets/team-training.jpg" alt="Salon Team">
+    <img src="assets/about-why.jpg" alt="Why Salonfix Exists">
   </div>
 </section>
 
+<!-- ✅ HOW WE’RE DIFFERENT -->
+<section class="alt-section dark" data-aos="fade-left">
+  <div class="image">
+    <img src="assets/about-different.jpg" alt="How Salonfix is Different">
+  </div>
+  <div class="text">
+    <h2 class="section-headline">More Than Advice. More Than Software.</h2>
+    <p>Others give tips. Some sell software.</p>
+    <p>SALONFIX does something no one else does — <strong>we step in as your in‑house team.</strong></p>
+    <p>We manage your systems daily, track every rupee, and fix leaks before they turn into costly mistakes.</p>
+    <ul class="questions-list">
+      <li><strong>Daily clarity</strong> – numbers that make sense at a glance</li>
+      <li><strong>Team accountability</strong> – systems that keep staff aligned</li>
+      <li><strong>Stock control</strong> – stop waste, stop theft, stop surprises</li>
+      <li><strong>Growth moves</strong> – pricing tweaks, client retention, and expansion strategies</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ✅ OUR PROMISE -->
+<section class="alt-section light" data-aos="fade-right">
+  <div class="text">
+    <h2 class="section-headline">Our Promise to Every Salon Owner</h2>
+    <p>SALONFIX doesn’t just offer advice — <strong>we create and run the systems your salon has been missing.</strong></p>
+    <p>Every number, every checklist, every process is handled with precision, so nothing is left to chance.</p>
+    <p>The result? <strong>You gain clarity, control, and the freedom to focus on what truly grows your business.</strong></p>
+  </div>
+  <div class="image">
+    <img src="assets/about-promise.jpg" alt="Salonfix Promise">
+  </div>
+</section>
+
+<!-- ✅ FOOTER -->
 <footer>
   <div class="footer-content">
-    <h3>LET’S SCALE YOUR SALON</h3>
+    <h3>WHEN WILL YOUR SALON FINALLY RUN THE WAY YOU WANT IT TO?</h3>
+    <p>Your salon doesn’t need another piece of software. It doesn’t need more casual “tips” or quick fixes. It needs a dedicated partner to take over the operational weight — so you can step back, see the bigger picture, and relax knowing everything is handled.</p>
     <a href="https://wa.me/919566143572" class="footer-cta">WHATSAPP US NOW</a>
   </div>
 </footer>
 
-<a href="https://wa.me/919566143572" class="whatsapp-float" target="_blank">💬</a>
+<!-- ✅ FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/919566143572" class="whatsapp-float" target="_blank">
+   <i class="fab fa-whatsapp"></i>
+</a>
 
-<script>
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.nav-links');
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('open');
-    burger.classList.toggle('toggle');
-  });
-  AOS.init({duration: 1000, once: true});
-</script>
+<!-- ✅ BURGER MENU SCRIPT -->
 <script>
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav-links');
   const navLinks = document.querySelectorAll('.nav-links a');
 
-  // Open/close menu on burger click
   burger.addEventListener('click', () => {
     nav.classList.toggle('open');
     burger.classList.toggle('toggle');
   });
 
-  // ✅ Close menu when any link is clicked
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       nav.classList.remove('open');
@@ -94,7 +118,7 @@
   });
 
   // ✅ Initialize AOS Animations
-  AOS.init({duration: 1000, once: true});
+  AOS.init({ duration: 1000, once: true });
 </script>
 
 </body>
