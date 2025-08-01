@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services – SALONFIX</title>
+  <title>How We Work – SALONFIX</title>
   <link rel="stylesheet" href="style-enhanced.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
@@ -12,13 +12,13 @@
 
 <header>
   <nav class="navbar">
-   <div class="logo">
-  <a href="/">SALONFIX</a>
-</div>
+    <div class="logo">
+      <a href="/">SALONFIX</a>
+    </div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
+      <li><a href="how-we-work.html">How We Work</a></li>
       <li><a href="pricing.html">Pricing</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -29,55 +29,97 @@
   </nav>
 </header>
 
-<section class="hero" style="background-image:url('assets/banner-services.webp');">
+<!-- ✅ HERO SECTION -->
+<section class="hero" style="background-image:url('assets/hero-how-we-work.jpg');">
   <div class="hero-content" data-aos="fade-up">
     <h1>HOW WE WORK</h1>
-    <p>What happens when SALONFIX steps into your salon?</p>
+    <p class="hero-subtext">What happens when SALONFIX steps into your salon?</p>
   </div>
 </section>
 
+<!-- ✅ STEP 1: AUDIT -->
 <section class="alt-section light" data-aos="fade-right">
   <div class="text">
-    <p>Most consultants give advice. Most apps give dashboards. SALONFIX takes over. We don’t tell you what to do — we build the systems and run them every day.</p>
-    <ol>
-      <li>Data Comes First – We track every sale, cost, and leak — daily.</li>
-      <li>Silent Leaks Get Fixed – Stock wastage, vendor overcharges, missed rebookings — we plug every hole.</li>
-      <li>Systems Take Over – From opening checklists to team incentives — your salon starts running on systems, not stress.</li>
-      <li>Owner Steps Back – You don’t need to “be there” for the salon to run right. SALONFIX runs it for you.</li>
-    </ol>
+    <h2 class="section-headline">STEP 1: AUDIT</h2>
+    <p>We start by auditing your salon — how it runs day to day, how the team works, and where the silent leaks are.<br><br>
+    From stock control to staff routines, we map it all out without disrupting your current systems.</p>
+  </div>
+  <div class="image">
+    <img src="assets/how-audit.jpg" alt="Salon Audit Placeholder">
   </div>
 </section>
 
+<!-- ✅ STEP 2: SOLUTIONS -->
+<section class="alt-section dark" data-aos="fade-left">
+  <div class="image">
+    <img src="assets/how-solutions.jpg" alt="Solutions Placeholder">
+  </div>
+  <div class="text">
+    <h2 class="section-headline">STEP 2: SOLUTIONS</h2>
+    <p>We design simple, smart fixes — adding small systems and tools to the ones you already use.<br><br>
+    Nothing complicated, nothing heavy. Just clear solutions to bring more control, structure, and visibility.</p>
+  </div>
+</section>
+
+<!-- ✅ STEP 3: PLAN -->
+<section class="alt-section light" data-aos="fade-right">
+  <div class="text">
+    <h2 class="section-headline">STEP 3: PLAN</h2>
+    <p>Every day, you get <strong>data on sales, expenses, and till‑date profits.</strong><br><br>
+    Every week, we turn that data into a simple narration of what’s happening and a working plan for the week ahead — so you always know where your salon stands and what comes next.</p>
+  </div>
+  <div class="image">
+    <img src="assets/how-plan.jpg" alt="Plan Placeholder">
+  </div>
+</section>
+
+<!-- ✅ STEP 4: TRIAL -->
+<section class="alt-section dark" data-aos="fade-left">
+  <div class="image">
+    <img src="assets/how-trial.jpg" alt="Trial Placeholder">
+  </div>
+  <div class="text">
+    <h2 class="section-headline">STEP 4: TRIAL</h2>
+    <p>For 30 days, SALONFIX runs your salon like it’s our own.<br><br>
+    You see the systems, the fixes, the data — all without paying a rupee. By the end of the month, you’ll know exactly what your salon can achieve.</p>
+  </div>
+</section>
+
+<!-- ✅ STEP 5: IMPLEMENT -->
+<section class="alt-section light" data-aos="fade-right">
+  <div class="text">
+    <h2 class="section-headline">STEP 5: IMPLEMENT</h2>
+    <p>Once you’ve seen the difference, we stay on — handling the daily work, weekly reviews, and monthly growth steps.<br><br>
+    Your salon keeps improving, but <strong>you don’t have to micromanage it.</strong></p>
+  </div>
+  <div class="image">
+    <img src="assets/how-implement.jpg" alt="Implement Placeholder">
+  </div>
+</section>
+
+<!-- ✅ FOOTER -->
 <footer>
   <div class="footer-content">
-    <h3>LET’S SCALE YOUR SALON</h3>
-    <a href="https://wa.me/919566143572" class="footer-cta">WHATSAPP US NOW</a>
+    <h3>READY TO LET SALONFIX WORK FOR YOU?</h3>
+    <a href="https://wa.me/919566143572" class="footer-cta">START YOUR FREE TRIAL</a>
   </div>
 </footer>
 
-<a href="https://wa.me/919566143572" class="whatsapp-float" target="_blank">💬</a>
+<!-- ✅ FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/919566143572" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
-<script>
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.nav-links');
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('open');
-    burger.classList.toggle('toggle');
-  });
-  AOS.init({duration: 1000, once: true});
-</script>
 <script>
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav-links');
   const navLinks = document.querySelectorAll('.nav-links a');
 
-  // Open/close menu on burger click
   burger.addEventListener('click', () => {
     nav.classList.toggle('open');
     burger.classList.toggle('toggle');
   });
 
-  // ✅ Close menu when any link is clicked
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       nav.classList.remove('open');
@@ -85,8 +127,7 @@
     });
   });
 
-  // ✅ Initialize AOS Animations
-  AOS.init({duration: 1000, once: true});
+  AOS.init({ duration: 1000, once: true });
 </script>
 
 </body>
