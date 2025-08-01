@@ -306,3 +306,71 @@ footer {
     margin-bottom: 20px;
     color: #111;
 }
+/* -----------------------------------
+   SALONFIX ADVANTAGE SECTION
+----------------------------------- */
+.advantage-section {
+  text-align: center;
+  padding: 80px 10%;
+}
+
+.advantage-headline {
+  font-family: "Helvetica Neue Condensed Bold", "Arial Narrow Bold", sans-serif;
+  font-size: 55px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1.05;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.advantage-subheadline {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  color: #555;
+}
+
+.advantage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.advantage-item {
+  text-align: center;
+  padding: 10px;
+}
+
+.advantage-item img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.advantage-item h4 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.advantage-item p {
+  font-size: 18px;
+  color: #555;
+  margin: 0;
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+  .advantage-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .advantage-headline {
+    font-size: 40px;
+  }
+}
