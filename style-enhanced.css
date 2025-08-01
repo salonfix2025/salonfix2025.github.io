@@ -373,7 +373,8 @@ footer {
 ----------------------------------- */
 .advantage-section {
   text-align: center;
-  padding: 40px 10%;   /* ⬇ reduced top/bottom padding from 80px to 40px */
+  padding: 25px 8%;    /* ⬇ tighter spacing */
+  margin-top: -20px;   /* ⬆ pulls section closer to the banner */
 }
 
 .advantage-headline {
