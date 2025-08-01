@@ -417,3 +417,23 @@ footer h3 {
     white-space: nowrap;
   }
 }
+/* --- QUESTIONS LIST STYLING --- */
+.questions-list {
+    margin: 15px 0;
+    padding-left: 0;
+    list-style: none;
+    max-width: 550px;       /* Matches headline width */
+}
+
+.questions-list li {
+    margin: 8px 0;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #4B4B4B;
+}
+
+.footline {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
