@@ -26,11 +26,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #7E6597; /* Salonfix purple */
+  background-color: #7E6597;
   position: fixed;
-  width: 100%;
-  left: 0;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
 }
 
@@ -46,6 +46,8 @@ body {
   display: flex;
   gap: 20px;
   list-style: none;
+  justify-content: center;   /* ✅ centers the menu items horizontally */
+  flex: 1;                   /* ✅ lets the nav links take center space */
 }
 
 .nav-links li a {
