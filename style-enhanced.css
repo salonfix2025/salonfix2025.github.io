@@ -734,3 +734,13 @@ footer h3 {
     line-height: 1.4;
   }
 }
+
+/* ✅ Mobile Fix: Reduce Founder Headline Size */
+@media (max-width: 768px) {
+  .founder-headline {
+    font-size: 38px !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    padding: 0 10px;  /* adds a little breathing space on sides */
+  }
+}
