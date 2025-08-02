@@ -744,3 +744,16 @@ footer h3 {
     padding: 0 10px;  /* adds a little breathing space on sides */
   }
 }
+
+/* ✅ Mobile Fix: Make 'Meet the Founder' Headline Two Lines */
+@media (max-width: 768px) {
+  .founder-headline {
+    font-size: 34px !important;   /* slightly smaller so it wraps neatly */
+    line-height: 1.3 !important;
+    text-align: center;
+    max-width: 95%;
+    margin: 0 auto;
+    word-break: normal;
+    white-space: normal;
+  }
+}
