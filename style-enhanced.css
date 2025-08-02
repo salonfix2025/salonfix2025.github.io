@@ -129,8 +129,7 @@ body {
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
+  padding-bottom: 40px; /* ✅ pushes button down so it won’t overlap */
 }
 
 .hero h1 {
@@ -722,4 +721,16 @@ body, p, li, .text, .footer-content p, .section-subheadline, .hover-text {
 .advantage-headline,
 footer h3 {
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;  /* ✅ creates space below button */
+    font-size: 18px;
+    padding: 14px 26px;
+    white-space: normal; /* ✅ prevents text from breaking awkwardly */
+    line-height: 1.4;
+  }
 }
