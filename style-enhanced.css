@@ -774,3 +774,20 @@ h2 {
   font-size: 36px;
   font-weight: 800;
 }
+
+.plan-box.start-strong {
+  background-color: #FFD700; /* Gold */
+  color: #000;
+}
+.plan-box.stay-sharp {
+  background-color: #4B0082; /* Indigo */
+  color: #fff;
+}
+.plan-box.style-empire {
+  background-color: #360052; /* Deep Purple */
+  color: #fff;
+}
+.plan-box.light-touch {
+  background-color: #CDB5E8; /* Lilac */
+  color: #000;
+}
