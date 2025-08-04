@@ -128,8 +128,7 @@ body {
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
+  padding-bottom: 40px; /* ✅ pushes button down so it won’t overlap */
 }
 
 .hero h1 {
@@ -233,7 +232,7 @@ body {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 15px;
-  color: #7E6597;
+  color: #7E6597
 }
 
 .section-subheadline {
@@ -459,9 +458,9 @@ footer {
 .pricing-box {
   position: relative;
   aspect-ratio: 1 / 1;
-  max-width: 450px;        /* ✅ limits width */
-  max-height: 450px;       /* ✅ limits height */
-  margin: 0 auto;          /* ✅ centers each box */
+  max-width: 450px;
+  max-height: 450px;
+  margin: 0 auto;
   color: white;
   font-family: 'Helvetica Neue', sans-serif;
   display: flex;
@@ -474,7 +473,6 @@ footer {
   border-radius: 10px;
 }
 
-/* ✅ HOVER ANIMATION */
 .pricing-box:hover {
   transform: scale(1.03);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
@@ -492,7 +490,6 @@ footer {
   margin-bottom: 12px;
 }
 
-/* ✅ TEXT SLIDE-UP EFFECT */
 .box-content {
   position: relative;
   transition: transform 0.4s ease;
@@ -501,7 +498,6 @@ footer {
   transform: translateY(-50px);
 }
 
-/* ✅ HOVER TEXT FADE-IN */
 .hover-text {
   font-size: 18px;
   line-height: 1.5;
@@ -512,16 +508,14 @@ footer {
   opacity: 1;
 }
 
-/* COLORS */
 .red { background-color: #FF4C4C; }
 .yellow { 
   background-color: #FFD93D; 
-  color: #fff;    /* ✅ switched to white text */
+  color: #fff;
 }
 .blue { background-color: #377DFF; }
 .green { background-color: #3CCF4E; }
 
-/* MOBILE LAYOUT */
 @media (max-width: 768px) {
   .pricing-grid {
     grid-template-columns: 1fr;
@@ -572,7 +566,6 @@ footer {
   color: #555;
 }
 
-/* ✅ Mobile Stacking */
 @media (max-width: 768px) {
   .contact-main {
     flex-direction: column;
@@ -582,9 +575,8 @@ footer {
   }
 }
 
-/* ✅ CALL BUTTON STYLE */
 .call-btn {
-  background-color: #7E6597;   /* Salonfix Purple */
+  background-color: #7E6597;
   color: white;
   padding: 12px 24px;
   border-radius: 8px;
@@ -597,25 +589,23 @@ footer {
 }
 
 .call-btn:hover {
-  background-color: #5b486d;   /* Slightly darker purple on hover */
+  background-color: #5b486d;
 }
 
-/* ✅ FIX overlap for LET'S CONNECT section */
 .alt-section.light {
-  padding: 60px 10% 80px 10%;   /* more top & bottom padding */
+  padding: 60px 10% 80px 10%;
   position: relative;
 }
 
 .alt-section.light .footer-cta {
   display: inline-block;
-  margin-top: 20px;   /* pushes button further down */
+  margin-top: 20px;
 }
 
-/* ✅ Fix WhatsApp Floating Button across all pages */
 .whatsapp-float {
   position: fixed;
-  bottom: 25px;           /* ensures it's away from the bottom edge */
-  right: 25px;            /* ensures it's away from the right edge */
+  bottom: 25px;
+  right: 25px;
   background-color: #25D366;
   color: white;
   border-radius: 50%;
@@ -627,86 +617,16 @@ footer {
   font-size: 30px;
   z-index: 1000;
   text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ✅ makes it stand out */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease;
 }
 
-/* ✅ Hover effect */
 .whatsapp-float:hover {
   background-color: #1ebe5d;
-  transform: scale(1.1);   /* subtle zoom on hover */
-}
-
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
-  color: white;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 32px;
-  z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.whatsapp-float:hover {
   transform: scale(1.1);
-  background-color: #1ebe5d;
 }
 
-/* ✅ Mobile Fix: How We Work Sections */
-@media (max-width: 768px) {
-  .alt-section {
-    flex-direction: column !important;
-    text-align: center;
-    padding: 40px 5% !important;
-    gap: 20px !important;
-  }
-
-  .alt-section .text,
-  .alt-section .image {
-    width: 100% !important;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  .alt-section .image img {
-    width: 90% !important;
-    height: auto !important;
-    margin-top: 10px;
-  }
-}
-/* ✅ Mobile Zoom-Out Fix */
-@media (max-width: 768px) {
-  html, body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-    zoom: 1; /* stops Chrome from shrinking page */
-  }
-
-  body {
-    font-size: 16px; /* keeps text readable but not oversized */
-  }
-
-  .hero h1 {
-    font-size: 38px !important;  /* smaller hero heading */
-  }
-
-  .section-headline {
-    font-size: 24px !important;  /* slightly smaller section titles */
-  }
-}
-
-/* ✅ MOBILE FIXES – ALIGNMENT, COLORS & ZOOM ISSUES */
-
-/* 🎨 Normalize Colors Across Browsers */
+/* ✅ FINAL MOBILE + COLOR FIX BLOCK */
 html, body {
   color-scheme: light;
   -webkit-font-smoothing: antialiased;
@@ -714,69 +634,11 @@ html, body {
   image-rendering: auto;
   max-width: 100%;
   overflow-x: hidden;
-  zoom: 1; /* stops Samsung/Chrome from zooming out page */
-}
-
-/* 📱 Mobile Layout Fix for Sections */
-@media (max-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-
-  /* 🏗 Force all sections to stack neatly */
-  .alt-section {
-    display: flex;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    padding: 30px 5% !important;
-    gap: 20px !important;
-  }
-
-  /* 🔲 Ensure text and image widths adjust properly */
-  .alt-section .text, 
-  .alt-section .image {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 10px auto !important;
-  }
-
-  /* 🖼 Image scaling for mobile */
-  .alt-section .image img {
-    width: 92% !important;
-    height: auto !important;
-    border-radius: 8px;
-    margin-top: 10px;
-  }
-
-  /* 🔠 Adjust heading sizes for mobile */
-  .hero h1 {
-    font-size: 38px !important;
-  }
-  .section-headline {
-    font-size: 24px !important;
-  }
-}
-
-/* ✅ FINAL MOBILE FIX BLOCK */
-
-/* 🎨 Normalize Colors Across Devices */
-html, body {
-  color-scheme: light;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  image-rendering: auto;
-  max-width: 100%;
-  overflow-x: hidden;
-  zoom: 1; /* prevents Samsung Chrome zoom-out */
+  zoom: 1;
   background-color: #f4f4f4;
 }
 
-/* 📱 MOBILE STYLING FIX */
 @media (max-width: 768px) {
-
-  /* 🏗 Force consistent stacking for ALL sections */
   .alt-section {
     display: flex;
     flex-direction: column !important;
@@ -787,7 +649,6 @@ html, body {
     gap: 20px !important;
   }
 
-  /* 🔲 Ensure text and images don’t overflow */
   .alt-section .text,
   .alt-section .image {
     width: 100% !important;
@@ -795,7 +656,6 @@ html, body {
     margin: 10px auto !important;
   }
 
-  /* 🖼 Image scaling for mobile */
   .alt-section .image img {
     width: 92% !important;
     height: auto !important;
@@ -803,7 +663,6 @@ html, body {
     margin-top: 8px;
   }
 
-  /* 🔠 Adjust heading and hero font sizes for natural look */
   .hero h1 {
     font-size: 36px !important;
     line-height: 1.2 !important;
@@ -813,18 +672,15 @@ html, body {
     font-size: 24px !important;
   }
 
-  /* ✍️ Fix paragraph text readability */
   body {
     font-size: 16px !important;
     line-height: 1.5 !important;
   }
 
-  /* ✅ Ensure navbar and burger don’t crowd top */
   .navbar {
     padding: 15px 20px !important;
   }
 
-  /* ✅ Center hero content better */
   .hero-content {
     padding: 0 10px;
   }
@@ -839,4 +695,171 @@ html, body {
 #why-section .text p {
   font-size: 20px;
   line-height: 1.7;
+}
+
+/* ✅ Mobile Pricing Tap Hint */
+@media (max-width: 768px) {
+  .pricing-box {
+    cursor: pointer; /* lets users know they can tap */
+  }
+}
+
+/* ✅ Enable text to show when a box is tapped */
+.pricing-box.active .hover-text {
+  opacity: 1;
+}
+
+/* ✅ GLOBAL TEXT JUSTIFICATION FOR CLEAN LOOK */
+body, p, li, .text, .footer-content p, .section-subheadline, .hover-text {
+  text-align: justify;
+}
+
+/* ✅ Keep main titles centered (don’t justify these) */
+.hero h1,
+.section-headline,
+.advantage-headline,
+footer h3 {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;  /* ✅ creates space below button */
+    font-size: 18px;
+    padding: 14px 26px;
+    white-space: normal; /* ✅ prevents text from breaking awkwardly */
+    line-height: 1.4;
+  }
+}
+
+/* ✅ Mobile Fix: Reduce Founder Headline Size */
+@media (max-width: 768px) {
+  .founder-headline {
+    font-size: 38px !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    padding: 0 10px;  /* adds a little breathing space on sides */
+  }
+}
+
+/* ✅ Mobile Fix: Make 'Meet the Founder' Headline Two Lines */
+@media (max-width: 768px) {
+  .founder-headline {
+    font-size: 34px !important;   /* slightly smaller so it wraps neatly */
+    line-height: 1.3 !important;
+    text-align: center;
+    max-width: 95%;
+    margin: 0 auto;
+    word-break: normal;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .founder-headline {
+    font-size: 34px !important;
+    line-height: 1.3 !important;
+    text-align: center;
+    max-width: 95%;
+    margin: 0 auto;
+    white-space: normal;
+  }
+}
+
+h2 {
+  color: #4B0082;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.plan-box.start-strong {
+  background-color: #FFD700; /* Gold */
+  color: #000;
+}
+.plan-box.stay-sharp {
+  background-color: #4B0082; /* Indigo */
+  color: #fff;
+}
+.plan-box.style-empire {
+  background-color: #360052; /* Deep Purple */
+  color: #fff;
+}
+.plan-box.light-touch {
+  background-color: #CDB5E8; /* Lilac */
+  color: #000;
+}
+
+/* ===== PRICING BOX GRID ===== */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 50px 5%;
+}
+
+/* ===== PRICING BOX STYLING ===== */
+.pricing-box {
+  padding: 60px 30px;
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+}
+
+.pricing-box h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.pricing-box .subtitle {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 15px;
+}
+
+.pricing-box .hover-text {
+  display: none;
+  margin-top: 20px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.pricing-box.active .hover-text {
+  display: block;
+}
+
+/* ===== BRAND COLORS ===== */
+.start-strong {
+  background-color: #FFD700;  /* Gold */
+  color: #000;
+}
+
+.stay-sharp {
+  background-color: #4B0082;  /* SALONFIX Purple */
+  color: #fff;
+}
+
+.style-empire {
+  background-color: #360052;  /* Deep Purple */
+  color: #fff;
+}
+
+.light-touch {
+  background-color: #CDB5E8;  /* Lavender Subtone */
+  color: #000;
 }
