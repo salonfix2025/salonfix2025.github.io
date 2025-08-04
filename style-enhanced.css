@@ -791,3 +791,76 @@ h2 {
   background-color: #CDB5E8; /* Lilac */
   color: #000;
 }
+
+/* ===== PRICING BOX GRID ===== */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 50px 5%;
+}
+
+/* ===== PRICING BOX STYLING ===== */
+.pricing-box {
+  padding: 60px 30px;
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+}
+
+.pricing-box h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.pricing-box .subtitle {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 15px;
+}
+
+.pricing-box .hover-text {
+  display: none;
+  margin-top: 20px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.pricing-box.active .hover-text {
+  display: block;
+}
+
+/* ===== BRAND COLORS ===== */
+.start-strong {
+  background-color: #FFD700;  /* Gold */
+  color: #000;
+}
+
+.stay-sharp {
+  background-color: #4B0082;  /* SALONFIX Purple */
+  color: #fff;
+}
+
+.style-empire {
+  background-color: #360052;  /* Deep Purple */
+  color: #fff;
+}
+
+.light-touch {
+  background-color: #CDB5E8;  /* Lavender Subtone */
+  color: #000;
+}
