@@ -768,3 +768,9 @@ footer h3 {
     white-space: normal;
   }
 }
+
+h2 {
+  color: #4B0082;
+  font-size: 36px;
+  font-weight: 800;
+}
