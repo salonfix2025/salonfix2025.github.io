@@ -839,10 +839,25 @@ h2 {
   font-weight: normal;
   font-size: 14px;
   line-height: 1.6;
+  color: inherit;
 }
 
-.pricing-box.active .hover-text {
+/* 🟣 Show on desktop hover */
+.pricing-box:hover .hover-text {
   display: block;
+}
+
+.pricing-box .hover-text {
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+
+.pricing-box:hover .hover-text,
+.pricing-box.active .hover-text {
+  max-height: 300px;
+  opacity: 1;
 }
 
 /* ===== BRAND COLORS ===== */
