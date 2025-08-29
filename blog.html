@@ -1,58 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BLOG – SALONFIX</title>
 
-  <!-- ✅ SEO -->
-  <!-- Social meta — keep identical on all pages -->
-<meta property="og:site_name" content="SALONFIX" />
-<meta property="og:image" content="https://www.salonfix.in/assets/og-image.jpg" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://www.salonfix.in/assets/og-image.jpg" />
-  <meta name="description" content="SALONFIX is YOUR IN-HOUSE BUSINESS PARTNER — we run your salon like it’s our own. Insights, strategies, and success stories for salon owners, plus your FREE 1-Month Trial." />
-  <meta property="og:title" content="SALONFIX – Your In-House Business Partner" />
-  <meta property="og:description" content="We handle daily operations, weekly reviews, and monthly growth systems — so you can focus on clients. Start with a FREE 1-Month Trial." />
-  <meta property="og:image" content="https://salonfix.in/assets/og-image.jpg" />
-  <meta property="og:url" content="https://salonfix.in/blog.html" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="canonical" href="https://salonfix.in/blog.html" />
+  <!-- ✅ Canonical + Favicon -->
+  <link rel="canonical" href="https://www.salonfix.in/blog.html" />
   <link rel="icon" href="assets/favicon.png" type="image/png" />
 
-  <link rel="canonical" href="https://www.salonfix.in/blog.html" />
-<meta property="og:url" content="https://www.salonfix.in/blog.html" />
+  <!-- ✅ SEO -->
+  <meta name="description" content="SALONFIX is YOUR IN-HOUSE BUSINESS PARTNER — we run your salon like it’s our own. Insights, strategies, and success stories for salon owners, plus your FREE 1-Month Trial." />
+  <meta name="theme-color" content="#4B0082" />
+
+  <!-- ✅ Open Graph / Twitter (deduped) -->
+  <meta property="og:site_name" content="SALONFIX" />
+  <meta property="og:title" content="SALONFIX – Your In-House Business Partner" />
+  <meta property="og:description" content="We handle daily operations, weekly reviews, and monthly growth systems — so you can focus on clients. Start with a FREE 1-Month Trial." />
+  <meta property="og:image" content="https://www.salonfix.in/assets/og-image.jpg" />
+  <meta property="og:url" content="https://www.salonfix.in/blog.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.salonfix.in/assets/og-image.jpg" />
+
+  <!-- ✅ Performance -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preload" as="image" href="assets/team-training.jpg" />
 
   <!-- ✅ Styles + Libs -->
   <link rel="stylesheet" href="style-enhanced.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
-  <!-- ✅ Schema -->
+  <!-- ✅ Schema.org JSON-LD -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "@id": "https://www.salonfix.in/blog.html#blog",
-  "url": "https://www.salonfix.in/blog.html",
-  "name": "SALONFIX Blog – Insights for Salon Owners",
-  "publisher": { "@id": "https://www.salonfix.in/#org" }
-}
-</script>
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.salonfix.in/#org",
+    "name": "SALONFIX",
+    "url": "https://www.salonfix.in",
+    "logo": "https://www.salonfix.in/assets/og-image.jpg",
+    "sameAs": ["https://www.instagram.com/salonfix.in/"],
+    "founder": {"@type":"Person","name":"JAWHAR RAJ RAJKUMAR"},
+    "description": "SALONFIX is an in-house business partner for salons. We run daily operations, numbers, and growth.",
+    "telephone": "+91-9629370666"
+  }
+  </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.salonfix.in/#website",
+    "url": "https://www.salonfix.in",
+    "name": "SALONFIX",
+    "publisher": { "@id": "https://www.salonfix.in/#org" }
+  }
+  </script>
+
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "publisher": {
-      "@type": "Organization",
-      "name": "SALONFIX",
-      "url": "https://salonfix.in",
-      "logo": "https://salonfix.in/assets/og-image.jpg",
-      "telephone": "+91-9629370666"
-    },
+    "@id": "https://www.salonfix.in/blog.html#blog",
+    "url": "https://www.salonfix.in/blog.html",
+    "name": "SALONFIX Blog – Insights for Salon Owners",
+    "isPartOf": { "@id": "https://www.salonfix.in/#website" },
+    "publisher": { "@id": "https://www.salonfix.in/#org" },
     "description": "Insights, strategies, and success stories from SALONFIX — YOUR IN-HOUSE BUSINESS PARTNER for salons."
   }
   </script>
+
+  <!-- ✅ Page-level quick styles (optional) -->
+  <style>
+    .hero { position: relative; background-size: cover; background-position: center; height: 48vh; margin-top: 30px; }
+    .hero::before { content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(11,0,22,.35), rgba(11,0,22,.35)); }
+    .hero .hero-content { position:relative; z-index:1; }
+    .nav-links a[aria-current="page"]{ border-bottom:2px solid #4B0082; }
+  </style>
+
   <script src="js/sf-contact.js" defer></script>
 </head>
 <body class="blog-page">
@@ -65,7 +94,7 @@
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">How We Work</a></li>
       <li><a href="pricing.html">Partnership Plans</a></li>
-      <li><a href="blog.html" aria-current="page">Testimonials</a></li>
+      <li><a href="blog.html" aria-current="page">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <button class="burger" id="burger" aria-label="Toggle menu" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -101,21 +130,21 @@
 
 <!-- ✅ Scripts -->
 <script>
-  const burger=document.getElementById('burger'); 
-  const nav=document.querySelector('.nav-links');
-  burger.addEventListener('click',()=>{ 
-    const open=nav.classList.toggle('open'); 
-    burger.classList.toggle('toggle'); 
-    burger.setAttribute('aria-expanded',open?'true':'false');
+  const burger = document.getElementById('burger');
+  const nav = document.querySelector('.nav-links');
+  burger.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    burger.classList.toggle('toggle');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
-  document.querySelectorAll('.nav-links a').forEach(link=>{
-    link.addEventListener('click',()=>{ 
-      nav.classList.remove('open'); 
-      burger.classList.remove('toggle'); 
-      burger.setAttribute('aria-expanded','false');
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      burger.classList.remove('toggle');
+      burger.setAttribute('aria-expanded', 'false');
     });
   });
-  AOS.init({duration:900,once:true});
+  AOS.init({ duration: 900, once: true });
 </script>
 
 </body>
