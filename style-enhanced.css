@@ -653,3 +653,83 @@ body {
   from { opacity: 0; transform: translateY(-6px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+/* ===== SALONFIX — GLOBAL NAVBAR ===== */
+.navbar {
+  position: fixed;          /* stick to the top */
+  top: 0; left: 0; width: 100%;
+  background: #fff;
+  z-index: 1000;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+
+/* Keep page content below the fixed navbar */
+body { padding-top: 70px; }   /* adjust if you change navbar height */
+
+/* Logo size (desktop) */
+.logo a {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #4B0082;
+  text-decoration: none;
+}
+
+/* Burger bars */
+.burger { display: none; }     /* hidden by default (desktop) */
+.burger span {
+  display: block; width: 26px; height: 3px;
+  background: #4B0082; border-radius: 2px; margin: 5px 0;
+}
+
+/* Remove any extra gap above the hero on all pages */
+.home-page .hero,
+.about-page .hero,
+.services-page .hero,
+.pricing-page .hero,
+.contact-page .hero,
+.blog-page .hero {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* ===== MOBILE / TABLET (<= 991px) ===== */
+@media (max-width: 991px) {
+  /* Bigger mobile logo */
+  .logo a { font-size: 26px; }
+
+  /* Show burger on mobile */
+  .burger { display: block; }
+
+  /* Hide desktop nav list on mobile */
+  .nav-links { display: none; }
+
+  /* Full-screen centered mobile panel */
+  .nav-links.open {
+    display: grid;
+    position: fixed; left: 0; right: 0; top: 64px;   /* below navbar */
+    height: calc(100dvh - 64px);
+    background: #fff;
+    place-items: center; gap: 18px;
+    padding: 24px 16px;
+    box-shadow: 0 18px 40px rgba(0,0,0,.12);
+    overflow-y: auto;
+    animation: sf-fade-in .18s ease-out;
+  }
+  .nav-links.open a {
+    font-size: 20px; font-weight: 800; color: #4B0082; text-decoration: none;
+    padding: 10px 0;
+  }
+
+  /* Align burger lines vertically */
+  .burger { display: flex; flex-direction: column; justify-content: center; }
+
+  /* Lock background scroll when menu open */
+  body.menu-open { overflow: hidden; }
+}
+
+@keyframes sf-fade-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
