@@ -1,117 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pricing – SALONFIX</title>
-  <!-- ✅ SEO + Social Meta Tags -->
-<meta name="description" content="SALONFIX is your in-house business partner — we run your salon like it’s our own. Discover how we fix daily operations, control costs, and grow profit — starting with a FREE 1‑Month Trial.">
-<meta property="og:title" content="SALONFIX – Your In-House Business Partner">
-<meta property="og:description" content="We handle your salon’s daily operations, weekly reviews, and monthly growth systems — so you can focus on clients.">
-<meta property="og:image" content="https://salonfix.in/assets/og-image.jpg">
-<meta property="og:url" content="https://salonfix.in">
-<meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style-enhanced.css">
-  <link rel="icon" href="assets/favicon.png" type="image/png">
+
+  <!-- ✅ SEO -->
+  <meta name="description" content="SALONFIX is YOUR IN-HOUSE BUSINESS PARTNER — one format, one system, for single or multi-branch salons. Start with a FREE 1-Month Trial." />
+  <meta property="og:title" content="SALONFIX – Partnership Plans" />
+  <meta property="og:description" content="START STRONG, STAY SHARP, STYLE EMPIRE, and LIGHT TOUCH — choose the plan that fits your salon. FREE 1-Month Trial." />
+  <meta property="og:image" content="https://salonfix.in/assets/og-image.jpg" />
+  <meta property="og:url" content="https://salonfix.in/pricing.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://salonfix.in/pricing.html" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+  <!-- ✅ CSS + Libs -->
+  <link rel="stylesheet" href="style-enhanced.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- ✅ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"SALONFIX",
+    "url":"https://salonfix.in",
+    "telephone":"+91-9629370666",
+    "logo":"https://salonfix.in/assets/og-image.jpg"
+  }
+  </script>
+
+  <style>
+    .pricing-grid { display:grid; gap:24px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); padding:40px 10%; }
+    .pricing-box { position:relative; background:#fff; border-radius:16px; box-shadow:0 10px 28px rgba(0,0,0,.08); overflow:hidden; cursor:pointer; transition:transform .2s ease; }
+    .pricing-box:hover { transform:translateY(-4px); }
+    .pricing-box .box-content { padding:28px; }
+    .pricing-box h2 { margin:0 0 6px; font-size:22px; letter-spacing:.5px; }
+    .pricing-box .subtitle { opacity:.8; margin-bottom:12px; }
+    .pricing-box .hover-text { line-height:1.6; font-size:15px; }
+    .plan-cta { display:inline-block; margin-top:14px; padding:.7rem 1rem; border-radius:.7rem; background:#4B0082; color:#fff; font-weight:700; }
+    .start-strong h2{ color:#4B0082; }
+    .stay-sharp h2{ color:#4B0082; }
+    .style-empire h2{ color:#4B0082; }
+    .light-touch h2{ color:#4B0082; }
+    .cta-strip { text-align:center; padding:36px 10%; }
+    .cta-strip .btn { background:#4B0082; color:#fff; padding:.9rem 1.2rem; border-radius:.8rem; font-weight:700; display:inline-block; }
+    @media (max-width:768px){ .pricing-box.active{ outline:3px solid rgba(75,0,130,.2); } }
+  </style>
 </head>
-<body>
+<body class="pricing-page">
 
 <header>
-  <nav class="navbar">
-    <div class="logo"><a href="index.html">SALONFIX</a></div>
-    <ul class="nav-links">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="services.html">How We Work</a></li>
-  <li><a href="pricing.html">Partnership Plans</a></li>
-  <li><a href="blog.html">Testimonials</a></li>
-  <li><a href="contact.html">Contact</a></li>
-</ul>
-    <div class="burger">
-      <div></div><div></div><div></div>
-    </div>
+  <nav class="navbar" aria-label="Primary">
+    <div class="logo"><a href="index.html" aria-label="SALONFIX Home">SALONFIX</a></div>
+    <ul class="nav-links" id="site-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">How We Work</a></li>
+      <li><a href="pricing.html" aria-current="page">Partnership Plans</a></li>
+      <li><a href="blog.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-controls="site-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 </header>
 
-<section class="hero">
-  <div class="hero-content">
+<section class="hero" style="background-image:url('assets/hero-salon.jpg');">
+  <div class="hero-content" data-aos="fade-up">
     <h1>PRICING</h1>
     <p class="hero-subline">One format, one system — whether you run one salon or many.</p>
+    <a class="btn" style="background:#4B0082;color:#fff;padding:.9rem 1.2rem;border-radius:.8rem;font-weight:700;"
+       href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Help%20me%20choose%20the%20right%20plan%20for%20my%20salon.">DM “FIX” — Help Me Choose</a>
   </div>
 </section>
 
-<section class="pricing-grid">
+<section class="pricing-grid" data-aos="fade-up">
 
-  <div class="pricing-box start-strong">
+  <!-- START STRONG -->
+  <div class="pricing-box start-strong" tabindex="0" role="button" aria-label="START STRONG plan: System Setup & Reset">
     <div class="box-content">
       <h2>START STRONG</h2>
       <p class="subtitle">System Setup & Reset</p>
       <div class="hover-text">
-        Full SOP setup, stock audit & front desk coaching.<br>
-        Perfect for salons starting fresh or rebooting their systems.<br>
+        Full SOP setup, stock audit & front desk coaching.<br />
+        Perfect for salons starting fresh or rebooting systems.<br />
         <strong>₹25K–₹50K (1–2 weeks setup)</strong>
+        <br />
+        <a class="plan-cta" href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20I%20want%20START%20STRONG%20setup%20for%20my%20salon.">Choose START STRONG</a>
       </div>
     </div>
   </div>
 
-  <div class="pricing-box stay-sharp">
+  <!-- STAY SHARP -->
+  <div class="pricing-box stay-sharp" tabindex="0" role="button" aria-label="STAY SHARP plan: Ongoing Operations Control">
     <div class="box-content">
       <h2>STAY SHARP</h2>
       <p class="subtitle">Ongoing Operations Control</p>
       <div class="hover-text">
-        Daily numbers, weekly oversight & monthly dashboards.<br>
-        Keeps your salon on track every single day.<br>
+        Daily numbers, weekly oversight & monthly dashboards.<br />
+        Keeps your salon on track every single day.<br />
         <strong>₹30K–₹75K/month</strong>
+        <br />
+        <a class="plan-cta" href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20I%20want%20STAY%20SHARP%20(ongoing%20ops%20control).">Choose STAY SHARP</a>
       </div>
     </div>
   </div>
 
-  <div class="pricing-box style-empire">
+  <!-- STYLE EMPIRE -->
+  <div class="pricing-box style-empire" tabindex="0" role="button" aria-label="STYLE EMPIRE plan: Multi-Branch Operations">
     <div class="box-content">
       <h2>STYLE EMPIRE</h2>
-      <p class="subtitle">Multi‑Branch Ops</p>
+      <p class="subtitle">Multi-Branch Ops</p>
       <div class="hover-text">
-        One SOP, one reporting format, across every branch.<br>
-        Centralized control for growing salon empires.<br>
+        One SOP, one reporting format — across every branch.<br />
+        Centralized control for growing salon groups.<br />
         <strong>Starts ₹75K/month</strong>
+        <br />
+        <a class="plan-cta" href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20I%20want%20STYLE%20EMPIRE%20(multi-branch%20ops).">Choose STYLE EMPIRE</a>
       </div>
     </div>
   </div>
 
-  <div class="pricing-box light-touch">
+  <!-- LIGHT TOUCH -->
+  <div class="pricing-box light-touch" tabindex="0" role="button" aria-label="LIGHT TOUCH plan: Remote Strategic Support">
     <div class="box-content">
       <h2>LIGHT TOUCH</h2>
       <p class="subtitle">Remote Strategic Support</p>
       <div class="hover-text">
-        WhatsApp-based guidance, monthly reviews & advice.<br>
-        Best for owner-managed salons needing minimal direction.<br>
+        WhatsApp guidance, monthly reviews & strategic advice.<br />
+        Best for owner-managed salons needing minimal direction.<br />
         <strong>₹15K/month</strong>
+        <br />
+        <a class="plan-cta" href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20I%20want%20LIGHT%20TOUCH%20(remote%20support).">Choose LIGHT TOUCH</a>
       </div>
     </div>
   </div>
 
 </section>
 
-<footer>
+<!-- ✅ CTA strip -->
+<section class="cta-strip" data-aos="zoom-in">
+  <h3>Prefer to test first? Start your FREE 1-Month Trial.</h3>
+  <a class="btn" href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Start%20my%20FREE%201-Month%20Trial.">DM “FIX” — START FREE TRIAL</a>
+</section>
+
+<!-- ✅ FOOTER -->
 <footer>
   <div class="footer-content">
     <h3>READY TO LET SALONFIX WORK FOR YOU?</h3>
-    <a href="https://wa.me/919566143572" class="footer-cta">WHATSAPP US NOW</a>
+    <a href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Help%20me%20choose%20the%20right%20plan." class="footer-cta">WHATSAPP US NOW</a>
   </div>
 </footer>
 
-  <script>
-  // ✅ Convert hover to tap for mobile
-  if (window.innerWidth <= 768) {
-    document.querySelectorAll('.pricing-box').forEach(box => {
-      box.addEventListener('click', () => {
-        // 1. Close all boxes first
-        document.querySelectorAll('.pricing-box').forEach(b => b.classList.remove('active'));
-        // 2. Open the one user tapped
-        box.classList.add('active');
-      });
+<!-- ✅ Floating WhatsApp -->
+<a href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Help%20me%20choose%20the%20right%20plan." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- ✅ Scripts -->
+<script>
+  // Burger menu
+  const burger = document.getElementById('burger');
+  const nav = document.querySelector('.nav-links');
+  burger.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    burger.classList.toggle('toggle');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.querySelectorAll('.nav-links a').forEach(link=>{
+    link.addEventListener('click', ()=>{
+      nav.classList.remove('open'); burger.classList.remove('toggle'); burger.setAttribute('aria-expanded','false');
     });
-  }
+  });
+
+  // AOS + tap-to-expand on mobile
+  AOS.init({ duration: 900, once: true });
+  const enableTap = () => {
+    if (window.innerWidth <= 768) {
+      document.querySelectorAll('.pricing-box').forEach(box => {
+        box.addEventListener('click', () => {
+          document.querySelectorAll('.pricing-box').forEach(b => b.classList.remove('active'));
+          box.classList.add('active');
+        });
+      });
+    }
+  };
+  enableTap();
+  window.addEventListener('resize', enableTap);
 </script>
 
 </body>
