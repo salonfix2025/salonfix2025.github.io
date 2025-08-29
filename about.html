@@ -1,72 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About SALONFIX – YOUR IN-HOUSE BUSINESS PARTNER</title>
 
-  <!-- ✅ Canonical + Favicons -->
+  <!-- ✅ Canonical + Favicon -->
   <link rel="canonical" href="https://www.salonfix.in/about.html" />
   <link rel="icon" href="assets/favicon.png" type="image/png" />
 
   <!-- ✅ SEO -->
   <meta name="description" content="SALONFIX is YOUR IN-HOUSE BUSINESS PARTNER — we run your salon like it’s our own. We take daily control of operations, numbers, and growth. Start with a FREE 1-Month Trial." />
-<!-- Social meta — keep identical on all pages -->
-<meta property="og:site_name" content="SALONFIX" />
-<meta property="og:image" content="https://www.salonfix.in/assets/og-image.jpg" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://www.salonfix.in/assets/og-image.jpg" />
+  <meta name="theme-color" content="#4B0082" />
 
-  <link rel="canonical" href="https://www.salonfix.in/about.html" />
-<meta property="og:url" content="https://www.salonfix.in/about.html" />
   <!-- ✅ Open Graph / Twitter -->
+  <meta property="og:site_name" content="SALONFIX" />
   <meta property="og:title" content="SALONFIX – Your In-House Business Partner" />
   <meta property="og:description" content="We handle daily operations, weekly reviews, and monthly growth systems — so you can focus on clients. Start with a FREE 1-Month Trial." />
   <meta property="og:image" content="https://www.salonfix.in/assets/og-image.jpg" />
   <meta property="og:url" content="https://www.salonfix.in/about.html" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_IN" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.salonfix.in/assets/og-image.jpg" />
+
+  <!-- ✅ Performance -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preload" as="image" href="assets/banner-about.jpg" />
 
   <!-- ✅ Brand CSS + Libraries -->
   <link rel="stylesheet" href="style-enhanced.css" />
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- ✅ Schema.org -->
+  <!-- ✅ Schema.org JSON-LD -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "@id": "https://www.salonfix.in/about.html#about",
-  "url": "https://www.salonfix.in/about.html",
-  "name": "About SALONFIX – Your In-House Business Partner",
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.salonfix.in/index.html" },
-      { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.salonfix.in/about.html" }
-    ]
-  },
-  "isPartOf": { "@type": "WebSite", "url": "https://www.salonfix.in" },
-  "publisher": { "@id": "https://www.salonfix.in/#org" }
-}
-</script>
-
   {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"SALONFIX",
-    "url":"https://www.salonfix.in",
-    "logo":"https://www.salonfix.in/assets/og-image.jpg",
-    "sameAs":["https://www.instagram.com/salonfix.in/"],
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.salonfix.in/#org",
+    "name": "SALONFIX",
+    "url": "https://www.salonfix.in",
+    "logo": "https://www.salonfix.in/assets/og-image.jpg",
+    "sameAs": ["https://www.instagram.com/salonfix.in/"],
     "founder": {"@type":"Person","name":"JAWHAR RAJ RAJKUMAR"},
-    "description":"SALONFIX is an in-house business partner for salons. We run daily operations, numbers, and growth.",
-    "telephone":"+91-9629370666"
+    "description": "SALONFIX is an in-house business partner for salons. We run daily operations, numbers, and growth.",
+    "telephone": "+91-9629370666"
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.salonfix.in/#website",
+    "url": "https://www.salonfix.in",
+    "name": "SALONFIX",
+    "publisher": { "@id": "https://www.salonfix.in/#org" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": "https://www.salonfix.in/about.html#about",
+    "url": "https://www.salonfix.in/about.html",
+    "name": "About SALONFIX – Your In-House Business Partner",
+    "isPartOf": { "@id": "https://www.salonfix.in/#website" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.salonfix.in/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.salonfix.in/about.html" }
+      ]
+    },
+    "publisher": { "@id": "https://www.salonfix.in/#org" }
+  }
+  </script>
+
+  <!-- ✅ Page styles -->
   <style>
+    .hero--overlay { position: relative; }
     .hero--overlay::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(11,0,22,.45), rgba(11,0,22,.45));}
     .hero--overlay .hero-content{position:relative;z-index:1;}
     .btn-primary{background:#4B0082;color:#fff;padding:.9rem 1.2rem;border-radius:.75rem;display:inline-block;font-weight:700;}
@@ -74,6 +89,7 @@
     .section-headline strong{color:#4B0082;}
     .nav-links a[aria-current="page"]{border-bottom:2px solid #4B0082;}
   </style>
+
   <script src="js/sf-contact.js" defer></script>
 </head>
 <body class="about-page">
