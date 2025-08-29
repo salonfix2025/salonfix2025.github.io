@@ -805,3 +805,26 @@ body { padding-top: 70px; }   /* adjust if you change navbar height */
   .contact-page .btn,
   .contact-page .footer-cta{ width: 100%; text-align:center; padding: .9rem 1rem; }
 }
+/* Tighter Google Form embed */
+.gform-frame { height: 1080px !important; }
+
+/* Laptop/tablet */
+@media (max-width: 1024px) {
+  .gform-frame { height: 1000px !important; }
+}
+
+/* Tablet portrait / large phones */
+@media (max-width: 768px) {
+  .gform-frame { height: 900px !important; }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .gform-frame { height: 820px !important; }
+}
+
+/* Slightly tighter vertical rhythm on mobile */
+@media (max-width: 768px) {
+  #lead-form { padding: 40px 6% !important; }
+  .contact-main { padding: 40px 6% !important; }
+}
