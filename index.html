@@ -31,6 +31,36 @@
 
   <!-- ✅ Schema -->
   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.salonfix.in/#org",
+      "name": "SALONFIX",
+      "url": "https://www.salonfix.in",
+      "telephone": "+919629370666",
+      "sameAs": ["https://instagram.com/salonfix.in"],
+      "logo": { "@type": "ImageObject", "url": "https://www.salonfix.in/assets/og-image.jpg" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.salonfix.in/#website",
+      "url": "https://www.salonfix.in",
+      "name": "SALONFIX",
+      "publisher": { "@id": "https://www.salonfix.in/#org" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.salonfix.in/index.html#webpage",
+      "url": "https://www.salonfix.in/index.html",
+      "name": "We Help You Get Smarter At Growing Your Salon Business – SALONFIX",
+      "isPartOf": { "@id": "https://www.salonfix.in/#website" }
+    }
+  ]
+}
+</script>
+
   {
     "@context":"https://schema.org",
     "@type":"Organization",
