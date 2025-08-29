@@ -1,27 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact SALONFIX – Let’s Scale Your Salon</title>
 
-  <!-- ✅ SEO + Social -->
-  <!-- Social meta — keep identical on all pages -->
-  <meta property="og:site_name" content="SALONFIX" />
-  <meta property="og:image" content="https://www.salonfix.in/assets/og-image.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://www.salonfix.in/assets/og-image.jpg" />
-  <meta name="description" content="SALONFIX is YOUR IN-HOUSE BUSINESS PARTNER — we run your salon like it’s our own. Start your FREE 1-Month Trial and see the systems, data, and fixes in action." />
-  <meta property="og:title" content="SALONFIX – Your In-House Business Partner" />
-  <meta property="og:description" content="We handle daily operations, weekly reviews, and monthly growth systems — so you can focus on clients. Start with a FREE 1-Month Trial." />
-  <meta property="og:image" content="https://salonfix.in/assets/og-image.jpg" />
-  <meta property="og:url" content="https://salonfix.in/contact.html" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="canonical" href="https://salonfix.in/contact.html" />
+  <!-- ✅ Canonical + Favicon -->
+  <link rel="canonical" href="https://www.salonfix.in/contact.html" />
   <link rel="icon" href="assets/favicon.png" type="image/png" />
 
-  <link rel="canonical" href="https://www.salonfix.in/contact.html" />
-<meta property="og:url" content="https://www.salonfix.in/contact.html" />
+  <!-- ✅ SEO -->
+  <meta name="description" content="SALONFIX is YOUR IN-HOUSE BUSINESS PARTNER — we run your salon like it’s our own. Start your FREE 1-Month Trial and see the systems, data, and fixes in action." />
+  <meta name="theme-color" content="#4B0082" />
+
+  <!-- ✅ Open Graph / Twitter (deduped) -->
+  <meta property="og:site_name" content="SALONFIX" />
+  <meta property="og:title" content="SALONFIX – Your In-House Business Partner" />
+  <meta property="og:description" content="We handle daily operations, weekly reviews, and monthly growth systems — so you can focus on clients. Start with a FREE 1-Month Trial." />
+  <meta property="og:image" content="https://www.salonfix.in/assets/og-image.jpg" />
+  <meta property="og:url" content="https://www.salonfix.in/contact.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.salonfix.in/assets/og-image.jpg" />
+
+  <!-- ✅ Performance -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preload" as="image" href="assets/banner-contact.jpg" />
 
   <!-- ✅ CSS + Libs -->
   <link rel="stylesheet" href="style-enhanced.css" />
@@ -29,28 +34,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
-  <!-- ✅ Schema -->
+  <!-- ✅ Schema.org JSON-LD -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  "@id": "https://www.salonfix.in/contact.html#contact",
-  "url": "https://www.salonfix.in/contact.html",
-  "name": "Contact SALONFIX – Start Your FREE 1-Month Trial",
-  "isPartOf": { "@type": "WebSite", "url": "https://www.salonfix.in" },
-  "publisher": { "@id": "https://www.salonfix.in/#org" }
-}
-</script>
-
   {
     "@context":"https://schema.org",
     "@type":"Organization",
+    "@id":"https://www.salonfix.in/#org",
     "name":"SALONFIX",
-    "url":"https://salonfix.in",
-    "telephone":"+91-9629370666",
+    "url":"https://www.salonfix.in",
+    "logo":"https://www.salonfix.in/assets/og-image.jpg",
     "sameAs":["https://www.instagram.com/salonfix.in/"],
-    "logo":"https://salonfix.in/assets/og-image.jpg",
-    "contactPoint": [{
+    "founder":{"@type":"Person","name":"JAWHAR RAJ RAJKUMAR"},
+    "telephone":"+91-9629370666",
+    "contactPoint":[{
       "@type":"ContactPoint",
       "telephone":"+91-9629370666",
       "contactType":"customer service",
@@ -58,6 +54,37 @@
     }]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "@id":"https://www.salonfix.in/#website",
+    "url":"https://www.salonfix.in",
+    "name":"SALONFIX",
+    "publisher":{"@id":"https://www.salonfix.in/#org"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ContactPage",
+    "@id":"https://www.salonfix.in/contact.html#contact",
+    "url":"https://www.salonfix.in/contact.html",
+    "name":"Contact SALONFIX – Start Your FREE 1-Month Trial",
+    "isPartOf":{"@id":"https://www.salonfix.in/#website"},
+    "publisher":{"@id":"https://www.salonfix.in/#org"}
+  }
+  </script>
+
+  <!-- ✅ Page styles -->
+  <style>
+    .hero{position:relative;background-size:cover;background-position:center;height:55vh;margin-top:30px}
+    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,0,22,.35),rgba(11,0,22,.35))}
+    .hero .hero-content{position:relative;z-index:1}
+    .btn.btn-primary{background:#4B0082;color:#fff;padding:.9rem 1.2rem;border-radius:.75rem;font-weight:700;display:inline-block}
+    .nav-links a[aria-current="page"]{border-bottom:2px solid #4B0082}
+  </style>
+
   <script src="js/sf-contact.js" defer></script>
 </head>
 <body class="contact-page">
@@ -71,7 +98,7 @@
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">How We Work</a></li>
       <li><a href="pricing.html">Partnership Plans</a></li>
-      <li><a href="blog.html">Testimonials</a></li>
+      <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html" aria-current="page">Contact</a></li>
     </ul>
     <button class="burger" id="burger" aria-label="Toggle menu" aria-controls="site-nav" aria-expanded="false">
@@ -81,7 +108,7 @@
 </header>
 
 <!-- ✅ HERO -->
-<section class="hero" style="background-image:url('assets/banner-contact.jpg'); height:55vh;">
+<section class="hero" style="background-image:url('assets/banner-contact.jpg');">
   <div class="hero-content" data-aos="fade-up">
     <h1>START YOUR FREE 1-MONTH TRIAL</h1>
     <p style="font-size:20px;font-weight:500;">See the systems, data, and fixes in action — before you pay a single rupee.</p>
@@ -122,8 +149,8 @@
     <div class="icon-block">
       <img src="assets/icon-clients.svg" alt="Client Retention Icon" />
       <div>
-        <h4>Client Retention & Referrals</h4>
-        <p>Systems to keep clients coming back & bringing friends</p>
+        <h4>Client Retention &amp; Referrals</h4>
+        <p>Systems to keep clients coming back &amp; bringing friends</p>
       </div>
     </div>
 
@@ -160,20 +187,19 @@
     <a href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20I%20want%20the%20FREE%201-Month%20Trial." class="footer-cta" style="margin-top:20px;">WHATSAPP US NOW</a>
   </div>
 </section>
-<!-- SALONFIX Lead Form (paste above the <footer>) -->
+
+<!-- ✅ Lead Form -->
 <section class="alt-section white-bg" id="lead-form" style="padding:60px 10%;" data-aos="fade-up">
   <div class="text" style="grid-column:1 / -1; text-align:center;">
     <h2 class="section-headline">Prefer a form? We’ll WhatsApp you.</h2>
     <p>Fill this and our team will respond from <strong data-sf-phone></strong>.</p>
   </div>
-
   <div class="form-embed" style="grid-column:1 / -1;">
     <iframe
       src="https://docs.google.com/forms/d/e/1FAIpQLSe1fQ8TEjF1_k06KmFUnY1YIgZme9ouH8b7DUgd9SG7WqHZVg/viewform?embedded=true"
       width="100%" height="1481" frameborder="0" marginheight="0" marginwidth="0"
       style="width:100%; border:0; border-radius:16px; box-shadow:0 10px 28px rgba(0,0,0,.08); background:#fff;"
-      loading="lazy"
-      title="Start Your FREE 1-Month Trial">
+      loading="lazy" title="Start Your FREE 1-Month Trial">
       Loading…
     </iframe>
   </div>
@@ -208,6 +234,10 @@
       burger.setAttribute('aria-expanded', 'false');
     });
   });
+
+  // Fill phone in the form helper text
+  document.querySelectorAll('[data-sf-phone]').forEach(el => el.textContent = '+91 96293 70666');
+
   AOS.init({ duration: 900, once: true });
 </script>
 
