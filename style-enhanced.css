@@ -337,3 +337,61 @@ img{ max-width:100%; height:auto }
   .report-card img { height: 180px; }
   .hero { height: 40vh !important; }
 }
+
+/* ===== SALONFIX — MOBILE LAYOUT FIX ===== */
+@media (max-width: 768px) {
+  html, body { overflow-x: hidden; }
+
+  /* Navbar sizing + spacing */
+  .navbar{
+    position: sticky; top:0; z-index:1000;
+    display:flex; align-items:center; justify-content:space-between;
+    height:56px; padding:0 16px; background:#fff;
+    box-shadow:0 1px 8px rgba(0,0,0,.04);
+  }
+  .logo a{ display:block; font-size:18px; line-height:1; letter-spacing:.5px; }
+  .burger{ width:40px; height:40px; display:grid; place-items:center; }
+
+  /* Slide-down mobile nav */
+  .nav-links{
+    position:fixed; left:0; right:0; top:56px; z-index:999;
+    background:#fff; transform:translateY(-120%); transition:transform .25s ease;
+    padding:12px 16px; display:grid; gap:8px; box-shadow:0 10px 24px rgba(0,0,0,.08);
+  }
+  .nav-links.open{ transform:translateY(0); }
+  .nav-links a{ padding:10px 0; border-bottom:1px solid rgba(0,0,0,.06); }
+
+  /* Hero spacing & readability */
+  .home-page .hero{ margin-top:56px; height:56vh; background-position:center; }
+  .hero.hero--overlay::before,
+  .hero::before{ background:linear-gradient(180deg,rgba(11,0,22,.55),rgba(11,0,22,.55)); }
+  .hero .hero-content{ padding:0 16px; max-width:560px; margin:0 auto; text-align:left; }
+  .hero h1{ font-size: clamp(22px, 5.8vw, 30px); line-height:1.25; margin-bottom:10px; }
+  .hero .hero-subtext{ font-size:16px; line-height:1.4; opacity:.95; }
+
+  /* Primary CTA — full-width for thumb reach */
+  .cta-btn,
+  .hero .cta-btn,
+  .footer-cta,
+  .btn{ width:100%; text-align:center; padding:.9rem 1.2rem; }
+
+  /* Section stack */
+  .alt-section{ display:grid; grid-template-columns:1fr !important; gap:18px; padding:26px 16px; }
+  .alt-section .image img{ width:100%; height:220px; object-fit:cover; border-radius:12px; }
+
+  /* Reports cards consistency */
+  .reports-strip{ padding:28px 16px !important; }
+  .reports-grid{ grid-template-columns:1fr; gap:16px; }
+  .report-card img{ width:100%; height:200px; object-fit:cover; display:block; }
+  .report-body{ padding:14px; }
+  .report-cta{ width:100%; }
+
+  /* Keep WhatsApp button off the CTAs */
+  .whatsapp-float{ right:14px; bottom:14px; }
+}
+
+/* Tiny phones */
+@media (max-width: 400px){
+  .hero{ height:52vh; }
+  .report-card img{ height:180px; }
+}
