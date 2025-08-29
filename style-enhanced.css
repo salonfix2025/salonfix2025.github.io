@@ -590,3 +590,24 @@ body {
 body {
   padding-top: 65px;   /* matches navbar height */
 }
+
+/* Hide burger menu on desktop */
+.burger {
+  display: none; /* hide by default */
+}
+
+/* Show burger menu only on small screens */
+@media (max-width: 991px) {
+  .burger {
+    display: block;
+  }
+  
+  /* On mobile, hide the desktop nav links */
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.open {
+    display: block;
+  }
+}
