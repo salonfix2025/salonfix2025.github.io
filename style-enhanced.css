@@ -395,3 +395,76 @@ img{ max-width:100%; height:auto }
   .hero{ height:52vh; }
   .report-card img{ height:180px; }
 }
+
+/* ===== SALONFIX — MOBILE HEADER + HERO + FOUNDER FIXES ===== */
+
+/* Header: always visible, larger logo, visible burger */
+.navbar{
+  position: sticky; top: 0; z-index: 1000;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px; padding: 0 16px; background: #fff;
+  box-shadow: 0 1px 8px rgba(0,0,0,.06);
+}
+
+/* Brand size + color */
+.logo a{
+  font-weight: 900; letter-spacing: .8px;
+  font-size: 22px; color: #4B0082; text-decoration: none;
+  display: block; line-height: 1;
+}
+
+/* Burger button + bars */
+.burger{ 
+  background: none; border: 0; width: 44px; height: 44px; 
+  display: none; place-items: center; cursor: pointer;
+}
+.burger span{ 
+  display: block; width: 24px; height: 2px; 
+  background: #4B0082; margin: 5px auto; border-radius: 2px;
+}
+
+/* Desktop nav */
+.nav-links{ display: flex; gap: 20px; }
+
+/* Mobile behavior */
+@media (max-width: 992px){
+  .burger{ display: grid; }
+  .nav-links{
+    position: fixed; left: 0; right: 0; top: 64px;
+    background: #fff; padding: 12px 16px; display: none;
+    box-shadow: 0 10px 24px rgba(0,0,0,.08);
+    grid-auto-rows: min-content; gap: 8px;
+  }
+  .nav-links.open{ display: grid; }
+  .nav-links a{ padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,.06); }
+}
+
+/* Push hero below header and improve readability on phones */
+.home-page .hero{ margin-top: 64px; }
+.hero.hero--overlay::before, .hero::before{
+  background: linear-gradient(180deg, rgba(11,0,22,.55), rgba(11,0,22,.55));
+}
+
+/* Founder section: full-width image on mobile */
+@media (max-width: 768px){
+  .alt-section{ 
+    display: grid; grid-template-columns: 1fr !important; 
+    gap: 18px; padding: 26px 16px;
+  }
+  .alt-section .image,
+  .alt-section .text{ grid-column: 1 / -1; }
+  .alt-section .image img{
+    width: 100% !important; height: auto !important;
+    object-fit: cover; border-radius: 16px;
+  }
+  /* Make primary CTAs easy to tap */
+  .cta-btn, .btn, .footer-cta{ width: 100%; text-align: center; padding: .95rem 1.2rem; }
+  /* Keep WhatsApp bubble off the CTA */
+  .whatsapp-float{ right: 14px; bottom: 14px; }
+}
+
+/* Tiny phones */
+@media (max-width: 400px){
+  .logo a{ font-size: 20px; }
+  .home-page .hero{ height: 54vh; }
+}
