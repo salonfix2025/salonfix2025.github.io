@@ -512,3 +512,65 @@ img{ max-width:100%; height:auto }
     border-radius: 2px;
   }
 }
+
+/* ===== GLOBAL NAVBAR FIX ===== */
+.navbar {
+  position: fixed;       /* make it static at top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;      /* white background behind logo */
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* subtle shadow */
+}
+
+/* Ensure body content does not hide behind navbar */
+body {
+  padding-top: 70px;   /* adjust based on navbar height */
+}
+
+/* ===== LOGO SIZE (Desktop & Mobile) ===== */
+.logo a {
+  font-size: 28px;         /* bigger for desktop */
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #4B0082;
+  text-decoration: none;
+}
+
+/* ===== Burger Menu Alignment ===== */
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.burger span {
+  background: #4B0082;
+  height: 3px;
+  width: 26px;
+  border-radius: 2px;
+}
+
+/* ===== MOBILE ADJUSTMENTS ===== */
+@media (max-width: 768px){
+  /* Remove gap between navbar & hero */
+  .home-page .hero,
+  .about-page .hero,
+  .services-page .hero,
+  .pricing-page .hero,
+  .contact-page .hero,
+  .blog-page .hero {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  /* Logo slightly smaller for mobile */
+  .logo a {
+    font-size: 26px !important;
+  }
+}
