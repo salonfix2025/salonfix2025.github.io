@@ -1,26 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>We Help You Get Smarter At Growing Your Salon Business – SALONFIX</title>
 
   <!-- ✅ Canonical + Meta -->
-  <link rel="canonical" href="https://salonfix.in/index.html" />
+  <link rel="canonical" href="https://www.salonfix.in/index.html" />
   <meta name="description" content="SALONFIX is YOUR IN-HOUSE BUSINESS PARTNER — we run your salon like it’s our own. We take daily control of operations, numbers, and growth. Start with a FREE 1-Month Trial." />
+  <meta name="theme-color" content="#4B0082" />
+
+  <!-- ✅ Open Graph / Twitter (deduped) -->
+  <meta property="og:site_name" content="SALONFIX" />
   <meta property="og:title" content="SALONFIX – Your In-House Business Partner" />
   <meta property="og:description" content="We handle daily operations, weekly reviews, and monthly growth systems — so you can focus on clients. Start with a FREE 1-Month Trial." />
-  <meta property="og:image" content="https://salonfix.in/assets/og-image.jpg" />
-  <meta property="og:url" content="https://salonfix.in/index.html" />
+  <meta property="og:image" content="https://www.salonfix.in/assets/og-image.jpg" />
+  <meta property="og:url" content="https://www.salonfix.in/index.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_IN" />
   <meta name="twitter:card" content="summary_large_image" />
-
-  <link rel="canonical" href="https://www.salonfix.in/index.html" />
-<meta property="og:url" content="https://www.salonfix.in/index.html" />
+  <meta name="twitter:image" content="https://www.salonfix.in/assets/og-image.jpg" />
 
   <!-- ✅ Mobile theme colors -->
-  <meta name="theme-color" content="#7E6597" />
-  <meta name="msapplication-navbutton-color" content="#7E6597" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="#7E6597" />
+  <meta name="msapplication-navbutton-color" content="#4B0082" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#4B0082" />
+
+  <!-- ✅ Performance -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preload" as="image" href="assets/hero-salon.jpg" />
 
   <!-- ✅ Styles & Libs -->
   <link rel="stylesheet" href="style-enhanced.css" />
@@ -29,52 +36,44 @@
   <link rel="icon" href="assets/favicon.png" type="image/png" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
-  <!-- ✅ Schema -->
+  <!-- ✅ Schema.org JSON-LD (linked via @id) -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://www.salonfix.in/#org",
-      "name": "SALONFIX",
-      "url": "https://www.salonfix.in",
-      "telephone": "+919629370666",
-      "sameAs": ["https://instagram.com/salonfix.in"],
-      "logo": { "@type": "ImageObject", "url": "https://www.salonfix.in/assets/og-image.jpg" }
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.salonfix.in/#website",
-      "url": "https://www.salonfix.in",
-      "name": "SALONFIX",
-      "publisher": { "@id": "https://www.salonfix.in/#org" }
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://www.salonfix.in/index.html#webpage",
-      "url": "https://www.salonfix.in/index.html",
-      "name": "We Help You Get Smarter At Growing Your Salon Business – SALONFIX",
-      "isPartOf": { "@id": "https://www.salonfix.in/#website" }
-    }
-  ]
-}
-</script>
-
   {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"SALONFIX",
-    "url":"https://salonfix.in",
-    "telephone":"+91-9629370666",
-    "logo":"https://salonfix.in/assets/og-image.jpg",
-    "sameAs":["https://www.instagram.com/salonfix.in/"],
-    "founder":{"@type":"Person","name":"JAWHAR RAJ RAJKUMAR"}
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.salonfix.in/#org",
+    "name": "SALONFIX",
+    "url": "https://www.salonfix.in",
+    "telephone": "+91-9629370666",
+    "sameAs": ["https://www.instagram.com/salonfix.in/"],
+    "logo": "https://www.salonfix.in/assets/og-image.jpg",
+    "founder": { "@type": "Person", "name": "JAWHAR RAJ RAJKUMAR" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.salonfix.in/#website",
+    "url": "https://www.salonfix.in",
+    "name": "SALONFIX",
+    "publisher": { "@id": "https://www.salonfix.in/#org" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.salonfix.in/index.html#webpage",
+    "url": "https://www.salonfix.in/index.html",
+    "name": "We Help You Get Smarter At Growing Your Salon Business – SALONFIX",
+    "isPartOf": { "@id": "https://www.salonfix.in/#website" }
   }
   </script>
 
   <!-- Small local tweaks -->
   <style>
+    .hero.hero--overlay { position: relative; }
     .hero.hero--overlay::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,0,22,.45),rgba(11,0,22,.45));}
     .hero.hero--overlay .hero-content{position:relative;z-index:1;}
     .cta-btn{background:#4B0082;color:#fff;padding:.9rem 1.2rem;border-radius:.75rem;display:inline-block;font-weight:700;}
@@ -94,7 +93,7 @@
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">How We Work</a></li>
       <li><a href="pricing.html">Partnership Plans</a></li>
-      <li><a href="blog.html">Testimonials</a></li>
+      <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <button class="burger" id="burger" aria-label="Toggle menu" aria-controls="site-nav" aria-expanded="false">
