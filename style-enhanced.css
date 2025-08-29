@@ -574,3 +574,19 @@ body {
     font-size: 26px !important;
   }
 }
+
+/* Remove unwanted gap on desktop */
+.home-page .hero,
+.about-page .hero,
+.services-page .hero,
+.pricing-page .hero,
+.contact-page .hero,
+.blog-page .hero {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Adjust body padding so navbar doesn’t overlap hero */
+body {
+  padding-top: 65px;   /* matches navbar height */
+}
