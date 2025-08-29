@@ -1,39 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>How We Work – SALONFIX</title>
-  <!-- ✅ SEO + Social Meta Tags -->
-<meta name="description" content="SALONFIX is your in-house business partner — we run your salon like it’s our own. Discover how we fix daily operations, control costs, and grow profit — starting with a FREE 1‑Month Trial.">
-<meta property="og:title" content="SALONFIX – Your In-House Business Partner">
-<meta property="og:description" content="We handle your salon’s daily operations, weekly reviews, and monthly growth systems — so you can focus on clients.">
-<meta property="og:image" content="https://salonfix.in/assets/og-image.jpg">
-<meta property="og:url" content="https://salonfix.in">
-<meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style-enhanced.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
-  <link rel="icon" href="assets/favicon.png" type="image/png">
-</head>
-<body>
 
+  <!-- ✅ SEO -->
+  <meta name="description" content="SALONFIX is YOUR IN-HOUSE BUSINESS PARTNER — we run your salon like it’s our own. Audit → Solutions → Plan → Trial → Implement. Start with a FREE 1-Month Trial." />
+  <meta property="og:title" content="SALONFIX – How We Work" />
+  <meta property="og:description" content="Daily control, weekly reviews, monthly growth systems — delivered by SALONFIX. Start with a FREE 1-Month Trial." />
+  <meta property="og:image" content="https://salonfix.in/assets/og-image.jpg" />
+  <meta property="og:url" content="https://salonfix.in/services.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://salonfix.in/services.html" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+  <!-- ✅ CSS + Libs -->
+  <link rel="stylesheet" href="style-enhanced.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- ✅ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"SALONFIX",
+    "url":"https://salonfix.in",
+    "telephone":"+91-9629370666",
+    "logo":"https://salonfix.in/assets/og-image.jpg"
+  }
+  </script>
+
+  <style>
+    .cta-btn{background:#4B0082;color:#fff;padding:.9rem 1.2rem;border-radius:.8rem;font-weight:700;display:inline-block;}
+    .nav-links a[aria-current="page"]{border-bottom:2px solid #4B0082;}
+    .cta-strip{text-align:center;padding:36px 10%;}
+  </style>
+</head>
+<body class="services-page">
+
+<!-- ✅ NAVBAR -->
 <header>
-  <nav class="navbar">
-    <div class="logo">
-      <a href="/">SALONFIX</a>
-    </div>
-    <ul class="nav-links">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="services.html">How We Work</a></li>
-  <li><a href="pricing.html">Partnership Plans</a></li>
-  <li><a href="blog.html">Testimonials</a></li>
-  <li><a href="contact.html">Contact</a></li>
-</ul>
-    <div class="burger">
-      <div></div><div></div><div></div>
-    </div>
+  <nav class="navbar" aria-label="Primary">
+    <div class="logo"><a href="index.html" aria-label="SALONFIX Home">SALONFIX</a></div>
+    <ul class="nav-links" id="site-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html" aria-current="page">How We Work</a></li>
+      <li><a href="pricing.html">Partnership Plans</a></li>
+      <li><a href="blog.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-controls="site-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 </header>
 
@@ -41,7 +63,8 @@
 <section class="hero" style="background-image:url('assets/hero-how-we-work.jpg');">
   <div class="hero-content" data-aos="fade-up">
     <h1>HOW WE WORK</h1>
-    <p class="hero-subline">Whatever happens in the salon, we’ve seen it, fixed it, systemized it.</p>
+    <p class="hero-subline">Whatever happens in the salon — we’ve seen it, fixed it, systemized it.</p>
+    <a class="cta-btn" href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Walk%20me%20through%20how%20SALONFIX%20works.">DM “FIX” — SHOW ME THE FLOW</a>
   </div>
 </section>
 
@@ -49,23 +72,33 @@
 <section class="alt-section light" data-aos="fade-right">
   <div class="text">
     <h2 class="section-headline">STEP 1: AUDIT</h2>
-    <p>We start by auditing your salon — how it runs day to day, how the team works, and where the silent leaks are.<br><br>
-    From stock control to staff routines, we map it all out without disrupting your current systems.</p>
+    <p>We audit how your salon runs — numbers, people, stock, vendors, and daily routines — to find silent leaks without disrupting the day.</p>
+    <ul class="questions-list">
+      <li>Opening-to-closing proof trail review</li>
+      <li>Petty cash & vendor bill checks</li>
+      <li>Stock usage vs billing mismatch</li>
+      <li>Front desk scripts, rebooking flow</li>
+    </ul>
   </div>
   <div class="image">
-    <img src="assets/how-audit.jpg" alt="Salon Audit Placeholder">
+    <img src="assets/how-audit.jpg" alt="Salon audit process by SALONFIX" loading="lazy" decoding="async" />
   </div>
 </section>
 
 <!-- ✅ STEP 2: SOLUTIONS -->
 <section class="alt-section dark" data-aos="fade-left">
   <div class="image">
-    <img src="assets/how-solutions.jpg" alt="Solutions Placeholder">
+    <img src="assets/how-solutions.jpg" alt="Solutions and systems" loading="lazy" decoding="async" />
   </div>
   <div class="text">
     <h2 class="section-headline">STEP 2: SOLUTIONS</h2>
-    <p>We design simple, smart fixes — adding small systems and tools to the ones you already use.<br><br>
-    Nothing complicated, nothing heavy. Just clear solutions to bring more control, structure, and visibility.</p>
+    <p>We install lean, practical systems — checklists, trackers, and training — layered on top of what you already use.</p>
+    <ul class="questions-list">
+      <li>Branch Control SOP (proof-based daily control)</li>
+      <li>Petty cash & purchase proof loop</li>
+      <li>Retail routine + mirror-talk scripts</li>
+      <li>Rebooking 3-touch workflow (chair, 24h, 72h)</li>
+    </ul>
   </div>
 </section>
 
@@ -73,23 +106,37 @@
 <section class="alt-section light" data-aos="fade-right">
   <div class="text">
     <h2 class="section-headline">STEP 3: PLAN</h2>
-    <p>Every day, you get <strong>data on sales, expenses, and till‑date profits.</strong><br><br>
-    Every week, we turn that data into a simple narration of what’s happening and a working plan for the week ahead — so you always know where your salon stands and what comes next.</p>
+    <p>You receive <strong>daily numbers</strong> (sales, expenses, profit-till-date) and a weekly “Owner Action Box” so decisions are fast and clear.</p>
+    <ul class="questions-list">
+      <li>Single-page daily report (WhatsApp-ready)</li>
+      <li>Weekly summary + repairs & purchases</li>
+      <li>Staff targets, incentives, and follow-ups</li>
+    </ul>
   </div>
   <div class="image">
-    <img src="assets/how-plan.jpg" alt="Plan Placeholder">
+    <img src="assets/how-plan.jpg" alt="Weekly plan and owner action box" loading="lazy" decoding="async" />
   </div>
+</section>
+
+<!-- ✅ CTA STRIP (FREE TRIAL) -->
+<section class="cta-strip" data-aos="zoom-in">
+  <h3>Prefer proof? Start your FREE 1-Month Trial and see the systems in action.</h3>
+  <a class="cta-btn" href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Start%20my%20FREE%201-Month%20Trial.">DM “FIX” — START FREE TRIAL</a>
 </section>
 
 <!-- ✅ STEP 4: TRIAL -->
 <section class="alt-section dark" data-aos="fade-left">
   <div class="image">
-    <img src="assets/how-trial.jpg" alt="Trial Placeholder">
+    <img src="assets/how-trial.jpg" alt="Free one-month trial" loading="lazy" decoding="async" />
   </div>
   <div class="text">
     <h2 class="section-headline">STEP 4: TRIAL</h2>
-    <p>For 30 days, SALONFIX runs your salon like it’s our own.<br><br>
-    You see the systems, the fixes, the data — all without paying a rupee. By the end of the month, you’ll know exactly what your salon can achieve.</p>
+    <p>For 30 days, SALONFIX runs your salon like it’s our own — daily reports, mid-day checks, closing proof, and a clear end-of-month result.</p>
+    <ul class="questions-list">
+      <li>Daily P&L snapshot</li>
+      <li>Zero-leakage proof trail</li>
+      <li>Owner dashboard summary</li>
+    </ul>
   </div>
 </section>
 
@@ -97,11 +144,15 @@
 <section class="alt-section light" data-aos="fade-right">
   <div class="text">
     <h2 class="section-headline">STEP 5: IMPLEMENT</h2>
-    <p>Once you’ve seen the difference, we stay on — handling the daily work, weekly reviews, and monthly growth steps.<br><br>
-    Your salon keeps improving, but <strong>you don’t have to micromanage it.</strong></p>
+    <p>We stay on to run the daily work, weekly reviews, and monthly growth moves — so you don’t have to micromanage.</p>
+    <ul class="questions-list">
+      <li>Daily branch control (with proof)</li>
+      <li>Weekly reviews & vendor reconciliation</li>
+      <li>Monthly growth plan & team coaching</li>
+    </ul>
   </div>
   <div class="image">
-    <img src="assets/how-implement.jpg" alt="Implement Placeholder">
+    <img src="assets/how-implement.jpg" alt="Implementation and ongoing control" loading="lazy" decoding="async" />
   </div>
 </section>
 
@@ -109,33 +160,30 @@
 <footer>
   <div class="footer-content">
     <h3>READY TO LET SALONFIX WORK FOR YOU?</h3>
-    <a href="https://wa.me/919566143572" class="footer-cta">START YOUR FREE TRIAL</a>
+    <a href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Start%20my%20FREE%201-Month%20Trial." class="footer-cta">START YOUR FREE TRIAL</a>
   </div>
 </footer>
 
-<!-- ✅ FLOATING WHATSAPP BUTTON -->
-<a href="https://wa.me/919566143572" class="whatsapp-float" target="_blank">
+<!-- ✅ Floating WhatsApp -->
+<a href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Start%20my%20FREE%201-Month%20Trial." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <i class="fab fa-whatsapp"></i>
 </a>
 
+<!-- ✅ Scripts -->
 <script>
-  const burger = document.querySelector('.burger');
+  const burger = document.getElementById('burger');
   const nav = document.querySelector('.nav-links');
-  const navLinks = document.querySelectorAll('.nav-links a');
-
   burger.addEventListener('click', () => {
-    nav.classList.toggle('open');
+    const open = nav.classList.toggle('open');
     burger.classList.toggle('toggle');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      burger.classList.remove('toggle');
+  document.querySelectorAll('.nav-links a').forEach(link=>{
+    link.addEventListener('click', ()=>{
+      nav.classList.remove('open'); burger.classList.remove('toggle'); burger.setAttribute('aria-expanded','false');
     });
   });
-
-  AOS.init({ duration: 1000, once: true });
+  AOS.init({ duration: 900, once: true });
 </script>
 
 </body>
