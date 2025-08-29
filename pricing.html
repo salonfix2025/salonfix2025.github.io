@@ -1,22 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pricing – SALONFIX</title>
 
-  <!-- ✅ SEO -->
-  <meta name="description" content="SALONFIX is YOUR IN-HOUSE BUSINESS PARTNER — one format, one system, for single or multi-branch salons. Start with a FREE 1-Month Trial." />
-  <meta property="og:title" content="SALONFIX – Partnership Plans" />
-  <meta property="og:description" content="START STRONG, STAY SHARP, STYLE EMPIRE, and LIGHT TOUCH — choose the plan that fits your salon. FREE 1-Month Trial." />
-  <meta property="og:image" content="https://salonfix.in/assets/og-image.jpg" />
-  <meta property="og:url" content="https://salonfix.in/pricing.html" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="canonical" href="https://salonfix.in/pricing.html" />
+  <!-- ✅ Canonical + Favicon -->
+  <link rel="canonical" href="https://www.salonfix.in/pricing.html" />
   <link rel="icon" href="assets/favicon.png" type="image/png" />
 
-  <link rel="canonical" href="https://www.salonfix.in/pricing.html" />
-<meta property="og:url" content="https://www.salonfix.in/pricing.html" />
+  <!-- ✅ SEO -->
+  <meta name="description" content="SALONFIX is YOUR IN-HOUSE BUSINESS PARTNER — one format, one system, for single or multi-branch salons. Start with a FREE 1-Month Trial." />
+  <meta name="theme-color" content="#4B0082" />
+
+  <!-- ✅ Open Graph / Twitter (deduped) -->
+  <meta property="og:site_name" content="SALONFIX" />
+  <meta property="og:title" content="SALONFIX – Partnership Plans" />
+  <meta property="og:description" content="START STRONG, STAY SHARP, STYLE EMPIRE, and LIGHT TOUCH — choose the plan that fits your salon. FREE 1-Month Trial." />
+  <meta property="og:image" content="https://www.salonfix.in/assets/og-image.jpg" />
+  <meta property="og:url" content="https://www.salonfix.in/pricing.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.salonfix.in/assets/og-image.jpg" />
+
+  <!-- ✅ Performance -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preload" as="image" href="assets/hero-salon.jpg" />
 
   <!-- ✅ CSS + Libs -->
   <link rel="stylesheet" href="style-enhanced.css" />
@@ -24,51 +34,90 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
-  <!-- ✅ Schema -->
+  <!-- ✅ Schema.org JSON-LD (linked via @id) -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "@id": "https://www.salonfix.in/pricing.html#service",
-  "serviceType": "SALONFIX Partnership Plans",
-  "provider": { "@id": "https://www.salonfix.in/#org" },
-  "url": "https://www.salonfix.in/pricing.html",
-  "offers": [
-    { "@type": "Offer", "name": "START STRONG", "priceCurrency": "INR", "priceSpecification": { "@type": "PriceSpecification", "price": 25000, "maxPrice": 50000 }, "description": "System setup & reset (1–2 weeks)" },
-    { "@type": "Offer", "name": "STAY SHARP", "priceCurrency": "INR", "priceSpecification": { "@type": "PriceSpecification", "price": 30000, "maxPrice": 75000 }, "description": "Ongoing operations control (monthly)" },
-    { "@type": "Offer", "name": "STYLE EMPIRE", "priceCurrency": "INR", "priceSpecification": { "@type": "PriceSpecification", "price": 75000 }, "description": "Multi-branch ops (starting)" },
-    { "@type": "Offer", "name": "LIGHT TOUCH", "priceCurrency": "INR", "price": 15000, "description": "Remote strategic support" }
-  ]
-}
-</script>
-
   {
     "@context":"https://schema.org",
     "@type":"Organization",
+    "@id":"https://www.salonfix.in/#org",
     "name":"SALONFIX",
-    "url":"https://salonfix.in",
+    "url":"https://www.salonfix.in",
+    "logo":"https://www.salonfix.in/assets/og-image.jpg",
+    "sameAs":["https://www.instagram.com/salonfix.in/"],
     "telephone":"+91-9629370666",
-    "logo":"https://salonfix.in/assets/og-image.jpg"
+    "founder":{"@type":"Person","name":"JAWHAR RAJ RAJKUMAR"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "@id":"https://www.salonfix.in/#website",
+    "url":"https://www.salonfix.in",
+    "name":"SALONFIX",
+    "publisher":{"@id":"https://www.salonfix.in/#org"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "@id":"https://www.salonfix.in/pricing.html#service",
+    "serviceType":"SALONFIX Partnership Plans",
+    "provider":{"@id":"https://www.salonfix.in/#org"},
+    "url":"https://www.salonfix.in/pricing.html",
+    "offers":[
+      {
+        "@type":"Offer",
+        "name":"START STRONG",
+        "priceCurrency":"INR",
+        "priceSpecification":{"@type":"PriceSpecification","minPrice":25000,"maxPrice":50000},
+        "description":"System setup & reset (1–2 weeks)"
+      },
+      {
+        "@type":"Offer",
+        "name":"STAY SHARP",
+        "priceCurrency":"INR",
+        "priceSpecification":{"@type":"PriceSpecification","minPrice":30000,"maxPrice":75000},
+        "description":"Ongoing operations control (monthly)"
+      },
+      {
+        "@type":"Offer",
+        "name":"STYLE EMPIRE",
+        "priceCurrency":"INR",
+        "price":75000,
+        "description":"Multi-branch operations (starting)"
+      },
+      {
+        "@type":"Offer",
+        "name":"LIGHT TOUCH",
+        "priceCurrency":"INR",
+        "price":15000,
+        "description":"Remote strategic support (monthly)"
+      }
+    ]
   }
   </script>
 
+  <!-- ✅ Page styles -->
   <style>
-    .pricing-grid { display:grid; gap:24px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); padding:40px 10%; }
-    .pricing-box { position:relative; background:#fff; border-radius:16px; box-shadow:0 10px 28px rgba(0,0,0,.08); overflow:hidden; cursor:pointer; transition:transform .2s ease; }
-    .pricing-box:hover { transform:translateY(-4px); }
-    .pricing-box .box-content { padding:28px; }
-    .pricing-box h2 { margin:0 0 6px; font-size:22px; letter-spacing:.5px; }
-    .pricing-box .subtitle { opacity:.8; margin-bottom:12px; }
-    .pricing-box .hover-text { line-height:1.6; font-size:15px; }
-    .plan-cta { display:inline-block; margin-top:14px; padding:.7rem 1rem; border-radius:.7rem; background:#4B0082; color:#fff; font-weight:700; }
-    .start-strong h2{ color:#4B0082; }
-    .stay-sharp h2{ color:#4B0082; }
-    .style-empire h2{ color:#4B0082; }
-    .light-touch h2{ color:#4B0082; }
-    .cta-strip { text-align:center; padding:36px 10%; }
-    .cta-strip .btn { background:#4B0082; color:#fff; padding:.9rem 1.2rem; border-radius:.8rem; font-weight:700; display:inline-block; }
-    @media (max-width:768px){ .pricing-box.active{ outline:3px solid rgba(75,0,130,.2); } }
+    .hero{position:relative;background-size:cover;background-position:center;height:48vh;margin-top:30px}
+    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,0,22,.35),rgba(11,0,22,.35))}
+    .hero .hero-content{position:relative;z-index:1}
+    .pricing-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));padding:40px 10%}
+    .pricing-box{position:relative;background:#fff;border-radius:16px;box-shadow:0 10px 28px rgba(0,0,0,.08);overflow:hidden;cursor:pointer;transition:transform .2s ease}
+    .pricing-box:hover{transform:translateY(-4px)}
+    .pricing-box .box-content{padding:28px}
+    .pricing-box h2{margin:0 0 6px;font-size:22px;letter-spacing:.5px;color:#4B0082}
+    .pricing-box .subtitle{opacity:.8;margin-bottom:12px}
+    .pricing-box .hover-text{line-height:1.6;font-size:15px}
+    .plan-cta{display:inline-block;margin-top:14px;padding:.7rem 1rem;border-radius:.7rem;background:#4B0082;color:#fff;font-weight:700}
+    .cta-strip{text-align:center;padding:36px 10%}
+    .cta-strip .btn{background:#4B0082;color:#fff;padding:.9rem 1.2rem;border-radius:.8rem;font-weight:700;display:inline-block}
+    .nav-links a[aria-current="page"]{border-bottom:2px solid #4B0082}
+    @media (max-width:768px){.pricing-box.active{outline:3px solid rgba(75,0,130,.2)}}
   </style>
+
   <script src="js/sf-contact.js" defer></script>
 </head>
 <body class="pricing-page">
@@ -81,7 +130,7 @@
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">How We Work</a></li>
       <li><a href="pricing.html" aria-current="page">Partnership Plans</a></li>
-      <li><a href="blog.html">Testimonials</a></li>
+      <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <button class="burger" id="burger" aria-label="Toggle menu" aria-controls="site-nav" aria-expanded="false">
@@ -107,10 +156,9 @@
       <h2>START STRONG</h2>
       <p class="subtitle">System Setup & Reset</p>
       <div class="hover-text">
-        Full SOP setup, stock audit & front desk coaching.<br />
+        Full SOP setup, stock audit &amp; front desk coaching.<br />
         Perfect for salons starting fresh or rebooting systems.<br />
-        <strong>₹25K–₹50K (1–2 weeks setup)</strong>
-        <br />
+        <strong>₹25K–₹50K (1–2 weeks setup)</strong><br />
         <a class="plan-cta" href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20I%20want%20START%20STRONG%20setup%20for%20my%20salon.">Choose START STRONG</a>
       </div>
     </div>
@@ -122,10 +170,9 @@
       <h2>STAY SHARP</h2>
       <p class="subtitle">Ongoing Operations Control</p>
       <div class="hover-text">
-        Daily numbers, weekly oversight & monthly dashboards.<br />
+        Daily numbers, weekly oversight &amp; monthly dashboards.<br />
         Keeps your salon on track every single day.<br />
-        <strong>₹30K–₹75K/month</strong>
-        <br />
+        <strong>₹30K–₹75K/month</strong><br />
         <a class="plan-cta" href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20I%20want%20STAY%20SHARP%20(ongoing%20ops%20control).">Choose STAY SHARP</a>
       </div>
     </div>
@@ -139,8 +186,7 @@
       <div class="hover-text">
         One SOP, one reporting format — across every branch.<br />
         Centralized control for growing salon groups.<br />
-        <strong>Starts ₹75K/month</strong>
-        <br />
+        <strong>Starts ₹75K/month</strong><br />
         <a class="plan-cta" href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20I%20want%20STYLE%20EMPIRE%20(multi-branch%20ops).">Choose STYLE EMPIRE</a>
       </div>
     </div>
@@ -152,10 +198,9 @@
       <h2>LIGHT TOUCH</h2>
       <p class="subtitle">Remote Strategic Support</p>
       <div class="hover-text">
-        WhatsApp guidance, monthly reviews & strategic advice.<br />
+        WhatsApp guidance, monthly reviews &amp; strategic advice.<br />
         Best for owner-managed salons needing minimal direction.<br />
-        <strong>₹15K/month</strong>
-        <br />
+        <strong>₹15K/month</strong><br />
         <a class="plan-cta" href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20I%20want%20LIGHT%20TOUCH%20(remote%20support).">Choose LIGHT TOUCH</a>
       </div>
     </div>
@@ -192,9 +237,11 @@
     burger.classList.toggle('toggle');
     burger.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
-  document.querySelectorAll('.nav-links a').forEach(link=>{
-    link.addEventListener('click', ()=>{
-      nav.classList.remove('open'); burger.classList.remove('toggle'); burger.setAttribute('aria-expanded','false');
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      burger.classList.remove('toggle');
+      burger.setAttribute('aria-expanded', 'false');
     });
   });
 
