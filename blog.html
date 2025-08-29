@@ -1,92 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog – SALONFIX</title>
-  <!-- ✅ SEO + Social Meta Tags -->
-<meta name="description" content="SALONFIX is your in-house business partner — we run your salon like it’s our own. Discover how we fix daily operations, control costs, and grow profit — starting with a FREE 1‑Month Trial.">
-<meta property="og:title" content="SALONFIX – Your In-House Business Partner">
-<meta property="og:description" content="We handle your salon’s daily operations, weekly reviews, and monthly growth systems — so you can focus on clients.">
-<meta property="og:image" content="https://salonfix.in/assets/og-image.jpg">
-<meta property="og:url" content="https://salonfix.in">
-<meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style-enhanced.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BLOG – SALONFIX</title>
+
+  <!-- ✅ SEO -->
+  <meta name="description" content="SALONFIX is YOUR IN-HOUSE BUSINESS PARTNER — we run your salon like it’s our own. Insights, strategies, and success stories for salon owners, plus your FREE 1-Month Trial." />
+  <meta property="og:title" content="SALONFIX – Your In-House Business Partner" />
+  <meta property="og:description" content="We handle daily operations, weekly reviews, and monthly growth systems — so you can focus on clients. Start with a FREE 1-Month Trial." />
+  <meta property="og:image" content="https://salonfix.in/assets/og-image.jpg" />
+  <meta property="og:url" content="https://salonfix.in/blog.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://salonfix.in/blog.html" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+  <!-- ✅ Styles + Libs -->
+  <link rel="stylesheet" href="style-enhanced.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
-  <link rel="icon" href="assets/favicon.png" type="image/png">
+
+  <!-- ✅ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "publisher": {
+      "@type": "Organization",
+      "name": "SALONFIX",
+      "url": "https://salonfix.in",
+      "logo": "https://salonfix.in/assets/og-image.jpg",
+      "telephone": "+91-9629370666"
+    },
+    "description": "Insights, strategies, and success stories from SALONFIX — YOUR IN-HOUSE BUSINESS PARTNER for salons."
+  }
+  </script>
 </head>
-<body>
+<body class="blog-page">
 
 <header>
-  <nav class="navbar">
-    <div class="logo">SALONFIX</div>
-    <ul class="nav-links">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="services.html">How We Work</a></li>
-  <li><a href="pricing.html">Partnership Plans</a></li>
-  <li><a href="blog.html">Testimonials</a></li>
-  <li><a href="contact.html">Contact</a></li>
-</ul>
-    <div class="burger">
-      <div></div><div></div><div></div>
-    </div>
+  <nav class="navbar" aria-label="Primary">
+    <div class="logo"><a href="index.html" aria-label="SALONFIX Home">SALONFIX</a></div>
+    <ul class="nav-links" id="site-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">How We Work</a></li>
+      <li><a href="pricing.html">Partnership Plans</a></li>
+      <li><a href="blog.html" aria-current="page">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button>
   </nav>
 </header>
 
 <section class="hero" style="background-image:url('assets/team-training.jpg');">
   <div class="hero-content" data-aos="fade-up">
     <h1>BLOG</h1>
-    <p>Insights and strategies for salon owners.</p>
+    <p>Insights, strategies & success stories for salon owners.</p>
   </div>
 </section>
 
 <section class="alt-section light" data-aos="fade-right">
   <div class="text">
-    <p>Coming soon – articles, strategies, and success stories to help salon owners grow smarter.</p>
+    <p>Coming soon — curated articles, strategies, and case studies to help salon owners grow smarter with SALONFIX systems.</p>
+    <p><strong>Subscribe or DM “FIX” on WhatsApp to get updates first.</strong></p>
   </div>
 </section>
 
 <footer>
   <div class="footer-content">
     <h3>LET’S SCALE YOUR SALON</h3>
-    <a href="https://wa.me/919566143572" class="footer-cta">WHATSAPP US NOW</a>
+    <p>Discover how SALONFIX runs your salon daily — starting with your FREE 1-Month Trial.</p>
+    <a href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Start%20my%20FREE%201-Month%20Trial." class="footer-cta">WHATSAPP US NOW</a>
   </div>
 </footer>
 
-<a href="https://wa.me/919566143572" class="whatsapp-float" target="_blank">💬</a>
+<!-- ✅ Floating WhatsApp -->
+<a href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Start%20my%20FREE%201-Month%20Trial." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
+<!-- ✅ Scripts -->
 <script>
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.nav-links');
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('open');
-    burger.classList.toggle('toggle');
+  const burger=document.getElementById('burger'); 
+  const nav=document.querySelector('.nav-links');
+  burger.addEventListener('click',()=>{ 
+    const open=nav.classList.toggle('open'); 
+    burger.classList.toggle('toggle'); 
+    burger.setAttribute('aria-expanded',open?'true':'false');
   });
-  AOS.init({duration: 1000, once: true});
-</script>
-<script>
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.nav-links');
-  const navLinks = document.querySelectorAll('.nav-links a');
-
-  // Open/close menu on burger click
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('open');
-    burger.classList.toggle('toggle');
-  });
-
-  // ✅ Close menu when any link is clicked
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      burger.classList.remove('toggle');
+  document.querySelectorAll('.nav-links a').forEach(link=>{
+    link.addEventListener('click',()=>{ 
+      nav.classList.remove('open'); 
+      burger.classList.remove('toggle'); 
+      burger.setAttribute('aria-expanded','false');
     });
   });
-
-  // ✅ Initialize AOS Animations
-  AOS.init({duration: 1000, once: true});
+  AOS.init({duration:900,once:true});
 </script>
 
 </body>
