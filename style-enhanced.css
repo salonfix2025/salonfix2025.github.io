@@ -468,3 +468,47 @@ img{ max-width:100%; height:auto }
   .logo a{ font-size: 20px; }
   .home-page .hero{ height: 54vh; }
 }
+
+/* ===== MOBILE NAV + HERO FIX ===== */
+@media (max-width: 768px){
+  /* Remove the gap between navbar and hero */
+  .home-page .hero,
+  .about-page .hero,
+  .services-page .hero,
+  .pricing-page .hero,
+  .contact-page .hero,
+  .blog-page .hero {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  /* Tighter navbar height */
+  .navbar {
+    margin-bottom: 0 !important;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: flex;
+    align-items: center; /* vertically center logo + burger */
+  }
+
+  /* Bigger and bolder SALONFIX logo */
+  .logo a {
+    font-size: 26px !important;
+    font-weight: 900 !important;
+    letter-spacing: 1px;
+  }
+
+  /* Align burger menu vertically with logo */
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px; /* spacing between burger lines */
+  }
+  .burger span {
+    background: #4B0082;
+    height: 2px;
+    width: 22px;
+    border-radius: 2px;
+  }
+}
