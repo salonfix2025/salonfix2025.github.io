@@ -1,102 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>We Help You Get Smarter At Growing Your Salon Business – SALONFIX</title>
-  <!-- ✅ SEO + Social Meta Tags -->
-<meta name="description" content="SALONFIX is your in-house business partner — we run your salon like it’s our own. Discover how we fix daily operations, control costs, and grow profit — starting with a FREE 1‑Month Trial.">
-<meta property="og:title" content="SALONFIX – Your In-House Business Partner">
-<meta property="og:description" content="We handle your salon’s daily operations, weekly reviews, and monthly growth systems — so you can focus on clients.">
-<meta property="og:image" content="https://salonfix.in/assets/og-image.jpg">
-<meta property="og:url" content="https://salonfix.in">
-<meta name="twitter:card" content="summary_large_image">
 
-  <!-- ✅ Mobile & browser theme colors -->
-  <meta name="theme-color" content="#7E6597">
-  <meta name="msapplication-navbutton-color" content="#7E6597">
-  <meta name="apple-mobile-web-app-status-bar-style" content="#7E6597">
+  <!-- ✅ Canonical + Meta -->
+  <link rel="canonical" href="https://salonfix.in/index.html" />
+  <meta name="description" content="SALONFIX is YOUR IN-HOUSE BUSINESS PARTNER — we run your salon like it’s our own. We take daily control of operations, numbers, and growth. Start with a FREE 1-Month Trial." />
+  <meta property="og:title" content="SALONFIX – Your In-House Business Partner" />
+  <meta property="og:description" content="We handle daily operations, weekly reviews, and monthly growth systems — so you can focus on clients. Start with a FREE 1-Month Trial." />
+  <meta property="og:image" content="https://salonfix.in/assets/og-image.jpg" />
+  <meta property="og:url" content="https://salonfix.in/index.html" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- ✅ Stylesheet -->
-  <link rel="stylesheet" href="style-enhanced.css">
+  <!-- ✅ Mobile theme colors -->
+  <meta name="theme-color" content="#7E6597" />
+  <meta name="msapplication-navbutton-color" content="#7E6597" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#7E6597" />
 
-  <!-- ✅ AOS Animations -->
+  <!-- ✅ Styles & Libs -->
+  <link rel="stylesheet" href="style-enhanced.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
-  <!-- ✅ Font Awesome for WhatsApp Icon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="icon" href="assets/favicon.png" type="image/png">
+
+  <!-- ✅ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"SALONFIX",
+    "url":"https://salonfix.in",
+    "telephone":"+91-9629370666",
+    "logo":"https://salonfix.in/assets/og-image.jpg",
+    "sameAs":["https://www.instagram.com/salonfix.in/"],
+    "founder":{"@type":"Person","name":"JAWHAR RAJ RAJKUMAR"}
+  }
+  </script>
+
+  <!-- Small local tweaks -->
+  <style>
+    .hero.hero--overlay::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,0,22,.45),rgba(11,0,22,.45));}
+    .hero.hero--overlay .hero-content{position:relative;z-index:1;}
+    .cta-btn{background:#4B0082;color:#fff;padding:.9rem 1.2rem;border-radius:.75rem;display:inline-block;font-weight:700;}
+    .nav-links a[aria-current="page"]{border-bottom:2px solid #4B0082;}
+  </style>
 </head>
 
-<body>
+<body class="home-page">
 
 <!-- ✅ HEADER & NAVBAR -->
 <header>
-  <nav class="navbar">
-    <div class="logo">
-      <a href="/">SALONFIX</a>
-    </div>
-    <ul class="nav-links">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="services.html">How We Work</a></li>
-  <li><a href="pricing.html">Partnership Plans</a></li>
-  <li><a href="blog.html">Testimonials</a></li>
-  <li><a href="contact.html">Contact</a></li>
-</ul>
-
-    <!-- ✅ Burger Menu -->
-    <div class="burger">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
+  <nav class="navbar" aria-label="Primary">
+    <div class="logo"><a href="index.html" aria-label="SALONFIX Home">SALONFIX</a></div>
+    <ul class="nav-links" id="site-nav">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">How We Work</a></li>
+      <li><a href="pricing.html">Partnership Plans</a></li>
+      <li><a href="blog.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-controls="site-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 </header>
 
 <!-- ✅ HERO SECTION -->
-<section class="hero" style="background-image:url('assets/hero-salon.jpg');">
+<section class="hero hero--overlay" style="background-image:url('assets/hero-salon.jpg');">
   <div class="hero-content" data-aos="fade-up">
     <h1>We Help You Get Smarter At Growing Your Salon Business.</h1>
     <p class="hero-subtext">Your salon, fully managed — with zero revenue leakage.</p>
-    <a href="contact.html" class="cta-btn">START YOUR FREE 1‑MONTH TRIAL</a>
+    <a href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Start%20my%20FREE%201-Month%20Trial." class="cta-btn">START YOUR FREE 1-MONTH TRIAL</a>
   </div>
 </section>
 
 <!-- ✅ ABOUT FOUNDER -->
 <section class="alt-section light">
-  <!-- TEXT zooms first -->
   <div class="text" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="0">
-  <h2 class="founder-headline">
-  MEET THE FOUNDER –<br>JAWHAR RAJ RAJKUMAR
-</h2>
-    <p>“I’ve spent over a decade inside salons — running teams, fixing systems, and turning chaos into profit. 
-    I created SALONFIX for one reason: so salon owners don’t have to focus on anything except walking into their salon 
-    and seeing it run perfectly. Every piece of data we send, every system we install, and every cost we control is 
+    <h2 class="founder-headline">MEET THE FOUNDER –<br/>JAWHAR RAJ RAJKUMAR</h2>
+    <p>“I’ve spent over a decade inside salons — running teams, fixing systems, and turning chaos into profit.
+    I created SALONFIX for one reason: so salon owners don’t have to focus on anything except walking into their salon
+    and seeing it run perfectly. Every piece of data we send, every system we install, and every cost we control is
     built around one promise: SALONFIX runs your salon like it’s our own — so you never have to.”</p>
   </div>
-
-  <!-- IMAGE zooms slightly after -->
   <div class="image" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="300">
-    <img src="assets/founder.jpg" alt="Jawhar Raj Rajkumar">
+    <img src="assets/founder.jpg" alt="JAWHAR RAJ RAJKUMAR" loading="lazy" decoding="async" />
   </div>
 </section>
 
 <!-- ✅ WHAT EXACTLY IS SALONFIX -->
 <section class="alt-section dark" data-aos="fade-left">
   <div class="image">
-    <img src="assets/team-group.jpg" alt="Salonfix Team">
+    <img src="assets/team-group.jpg" alt="SALONFIX in-house team at work" loading="lazy" decoding="async" />
   </div>
   <div class="text">
     <h2 class="section-headline">WHAT EXACTLY IS SALONFIX?</h2>
-    <h3 class="section-subheadline">NOT AN APP. NOT A CONSULTANT. YOUR IN‑HOUSE BUSINESS TEAM</h3>
+    <h3 class="section-subheadline">NOT AN APP. NOT A CONSULTANT. YOUR IN-HOUSE BUSINESS TEAM.</h3>
     <p>We step into your salon like we own it — tracking every number, fixing every leak, and building every system you wish you had time for.</p>
-
     <ul class="questions-list">
-      <li><strong>Daily Data & Weekly Data</strong> – You see your sales, profits, and gaps clearly.</li>
-      <li><strong>Team Accountability</strong> – Training, incentives, and checklists in place.</li>
-      <li><strong>Stock & Cost Control</strong> – No more product wastage or “missing” items.</li>
-      <li><strong>Growth Strategy</strong> – Pricing, marketing, and expansion mapped for you.</li>
+      <li><strong>Daily Data & Weekly Data</strong> — See your sales, profits, and gaps clearly.</li>
+      <li><strong>Team Accountability</strong> — Training, incentives, and checklists in place.</li>
+      <li><strong>Stock & Cost Control</strong> — No more product wastage or “missing” items.</li>
+      <li><strong>Growth Strategy</strong> — Pricing, marketing, and expansion mapped for you.</li>
     </ul>
   </div>
 </section>
@@ -105,7 +114,6 @@
 <section class="alt-section light" data-aos="fade-right">
   <div class="text">
     <h2 class="section-headline">DO YOU EVER WONDER WHY YOUR SALON ISN’T RUNNING AS SMOOTHLY AS IT SHOULD?</h2>
-
     <ul class="questions-list">
       <li>Where is all the money going?</li>
       <li>Why does stock keep running out or expiring?</li>
@@ -115,48 +123,44 @@
       <li>Why do small issues stay unfixed?</li>
       <li>Why don’t I have a clear view of my salon?</li>
     </ul>
-
     <p class="footline">If you’re nodding ‘yes’ to these, SALONFIX is the answer.</p>
   </div>
-
   <div class="image">
-    <img src="assets/salon-systems.jpg" alt="Salon Systems">
+    <img src="assets/salon-systems.jpg" alt="Systems that keep salons running smoothly" loading="lazy" decoding="async" />
   </div>
 </section>
 
 <!-- ✅ WHAT IF EVERY PROBLEM HAD A SYSTEM? -->
 <section class="alt-section dark" data-aos="fade-left">
   <div class="image">
-    <img src="assets/team-training.jpg" alt="Team Training">
+    <img src="assets/team-training.jpg" alt="Team training and accountability systems" loading="lazy" decoding="async" />
   </div>
   <div class="text">
     <h2 class="section-headline">WHAT IF EVERY PROBLEM IN YOUR SALON HAD A SYSTEM TO FIX IT?</h2>
-
     <ul class="questions-list">
-      <li><strong>NUMBERS & DATA</strong> – Daily sales, profit, and expense data tracked.</li>
-      <li><strong>TEAM ACCOUNTABILITY</strong> – Structured training and incentive plans.</li>
-      <li><strong>STOCK & VENDOR CONTROL</strong> – Product usage tracked; vendor pricing reviewed and renegotiated.</li>
-      <li><strong>OWNER FREEDOM & GROWTH</strong> – Operations run smoothly even when you’re not there.</li>
+      <li><strong>NUMBERS & DATA</strong> — Daily sales, profit, and expense data tracked.</li>
+      <li><strong>TEAM ACCOUNTABILITY</strong> — Structured training and incentive plans.</li>
+      <li><strong>STOCK & VENDOR CONTROL</strong> — Product usage tracked; pricing reviewed and renegotiated.</li>
+      <li><strong>OWNER FREEDOM & GROWTH</strong> — Operations run smoothly even when you’re not there.</li>
     </ul>
-
     <p class="footline">That’s exactly what SALONFIX does — we build the systems and run them for you.</p>
   </div>
 </section>
 
-<!-- ✅ RESULTS SECTION (NOW LAST BEFORE FOOTER) -->
+<!-- ✅ RESULTS SECTION -->
 <section class="alt-section white-bg" data-aos="fade-right">
   <div class="text">
     <h2 class="section-headline">WHAT KIND OF RESULTS CAN SALONFIX REALLY DELIVER?</h2>
     <ul class="questions-list">
-      <li><strong>30% LESS PRODUCT WASTAGE</strong> – When stock is tracked daily, nothing “slips away.”</li>
-      <li><strong>10–20% VENDOR SAVINGS</strong> – Old supplier rates get renegotiated, and silent costs drop.</li>
-      <li><strong>ACCOUNTABLE, MOTIVATED TEAMS</strong> – Staff know what’s expected, and deliver without micromanaging.</li>
-      <li><strong>REBOOKING RATES RISE</strong> – More clients return, more revenue stays consistent.</li>
-      <li><strong>CLEAR, GROWING PROFITS</strong> – Owners finally see the data match the effort.</li>
+      <li><strong>30% LESS PRODUCT WASTAGE</strong> — When stock is tracked daily, nothing “slips away.”</li>
+      <li><strong>10–20% VENDOR SAVINGS</strong> — Old supplier rates get renegotiated; silent costs drop.</li>
+      <li><strong>ACCOUNTABLE, MOTIVATED TEAMS</strong> — Staff know what’s expected and deliver.</li>
+      <li><strong>REBOOKING RATES RISE</strong> — More clients return; revenue becomes consistent.</li>
+      <li><strong>CLEAR, GROWING PROFITS</strong> — Owners finally see the data match the effort.</li>
     </ul>
   </div>
   <div class="image">
-    <img src="assets/results.jpg" alt="Salonfix Results">
+    <img src="assets/results.jpg" alt="Visible results from SALONFIX systems" loading="lazy" decoding="async" />
   </div>
 </section>
 
@@ -164,36 +168,33 @@
 <footer>
   <div class="footer-content">
     <h3>WHEN WILL YOUR SALON FINALLY RUN THE WAY YOU WANT IT TO?</h3>
-    <p>Your salon doesn’t need another piece of software. It doesn’t need more casual “tips” or quick fixes. It needs a dedicated partner to take over the operational weight — so you can step back, see the bigger picture, and relax knowing everything is handled.</p>
-    <a href="https://wa.me/919566143572" class="footer-cta">WHATSAPP US NOW</a>
+    <p>Your salon doesn’t need another piece of software or casual tips. It needs a dedicated partner to take over the operational weight — so you can step back, see the bigger picture, and grow.</p>
+    <a href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Start%20my%20FREE%201-Month%20Trial." class="footer-cta">WHATSAPP US NOW</a>
   </div>
 </footer>
 
-<!-- ✅ FLOATING WHATSAPP BUTTON -->
-<a href="https://wa.me/919566143572" class="whatsapp-float" target="_blank">
-   <i class="fab fa-whatsapp"></i>
+<!-- ✅ Floating WhatsApp -->
+<a href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Start%20my%20FREE%201-Month%20Trial." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
 </a>
 
-<!-- ✅ BURGER MENU SCRIPT -->
+<!-- ✅ Scripts -->
 <script>
-  const burger = document.querySelector('.burger');
+  const burger = document.getElementById('burger');
   const nav = document.querySelector('.nav-links');
-  const navLinks = document.querySelectorAll('.nav-links a');
-
   burger.addEventListener('click', () => {
-    nav.classList.toggle('open');
+    const open = nav.classList.toggle('open');
     burger.classList.toggle('toggle');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
-
-  navLinks.forEach(link => {
+  document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
       nav.classList.remove('open');
       burger.classList.remove('toggle');
+      burger.setAttribute('aria-expanded', 'false');
     });
   });
-
-  // ✅ AOS Animation Init
-  AOS.init({ duration: 1000, once: true });
+  AOS.init({ duration: 900, once: true });
 </script>
 
 </body>
