@@ -1,133 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About SALONFIX – Meet Your In-House Business Partner</title>
-<!-- ✅ SEO + Social Meta Tags -->
-<meta name="description" content="SALONFIX is your in-house business partner — we run your salon like it’s our own. Discover how we fix daily operations, control costs, and grow profit — starting with a FREE 1‑Month Trial.">
-<meta property="og:title" content="SALONFIX – Your In-House Business Partner">
-<meta property="og:description" content="We handle your salon’s daily operations, weekly reviews, and monthly growth systems — so you can focus on clients.">
-<meta property="og:image" content="https://salonfix.in/assets/og-image.jpg">
-<meta property="og:url" content="https://salonfix.in">
-<meta name="twitter:card" content="summary_large_image">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About SALONFIX – YOUR IN-HOUSE BUSINESS PARTNER</title>
 
-  <!-- ✅ Styles & Libraries -->
-  <link rel="stylesheet" href="style-enhanced.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <!-- ✅ Canonical + Favicons -->
+  <link rel="canonical" href="https://www.salonfix.in/about.html" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+  <!-- ✅ SEO -->
+  <meta name="description" content="SALONFIX is YOUR IN-HOUSE BUSINESS PARTNER — we run your salon like it’s our own. We take daily control of operations, numbers, and growth. Start with a FREE 1-Month Trial." />
+
+  <!-- ✅ Open Graph / Twitter -->
+  <meta property="og:title" content="SALONFIX – Your In-House Business Partner" />
+  <meta property="og:description" content="We handle daily operations, weekly reviews, and monthly growth systems — so you can focus on clients. Start with a FREE 1-Month Trial." />
+  <meta property="og:image" content="https://www.salonfix.in/assets/og-image.jpg" />
+  <meta property="og:url" content="https://www.salonfix.in/about.html" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- ✅ Brand CSS + Libraries -->
+  <link rel="stylesheet" href="style-enhanced.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- ✅ Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"SALONFIX",
+    "url":"https://www.salonfix.in",
+    "logo":"https://www.salonfix.in/assets/og-image.jpg",
+    "sameAs":["https://www.instagram.com/salonfix.in/"],
+    "founder": {"@type":"Person","name":"JAWHAR RAJ RAJKUMAR"},
+    "description":"SALONFIX is an in-house business partner for salons. We run daily operations, numbers, and growth.",
+    "telephone":"+91-9629370666"
+  }
+  </script>
+
+  <style>
+    .hero--overlay::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(11,0,22,.45), rgba(11,0,22,.45));}
+    .hero--overlay .hero-content{position:relative;z-index:1;}
+    .btn-primary{background:#4B0082;color:#fff;padding:.9rem 1.2rem;border-radius:.75rem;display:inline-block;font-weight:700;}
+    .badge-free{display:inline-block;margin-left:.5rem;font-size:.85rem;padding:.25rem .5rem;border:1px solid #fff;border-radius:.5rem;}
+    .section-headline strong{color:#4B0082;}
+    .nav-links a[aria-current="page"]{border-bottom:2px solid #4B0082;}
+  </style>
 </head>
 <body class="about-page">
 
-<!-- ✅ HEADER & NAVBAR -->
 <header>
-  <nav class="navbar">
-    <div class="logo">
-      <a href="/">SALONFIX</a>
-    </div>
-    <ul class="nav-links">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="services.html">How We Work</a></li>
-  <li><a href="pricing.html">Partnership Plans</a></li>
-  <li><a href="blog.html">Testimonials</a></li>
-  <li><a href="contact.html">Contact</a></li>
-</ul>
-    <div class="burger">
-      <div></div><div></div><div></div>
-    </div>
+  <nav class="navbar" aria-label="Primary">
+    <div class="logo"><a href="index.html" aria-label="SALONFIX Home">SALONFIX</a></div>
+    <ul class="nav-links" id="site-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" aria-current="page">About</a></li>
+      <li><a href="services.html">How We Work</a></li>
+      <li><a href="pricing.html">Partnership Plans</a></li>
+      <li><a href="blog.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button>
   </nav>
 </header>
 
-<!-- ✅ HERO BANNER -->
-<section class="hero" style="background-image:url('assets/banner-about.jpg'); height:55vh; margin-top:30px;">
+<section class="hero hero--overlay" style="background-image:url('assets/banner-about.jpg'); height:55vh; margin-top:30px;">
   <div class="hero-content" data-aos="fade-up">
     <h1>ABOUT SALONFIX</h1>
-    <p>Not an app. Not a consultant. A real team that runs your salon like it’s ours.</p>
+    <p>Not an app. Not a consultant. <strong>YOUR IN-HOUSE BUSINESS PARTNER.</strong></p>
+    <a class="btn-primary" href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20I%20want%20the%20FREE%201-Month%20Trial.">WHATSAPP: START FREE TRIAL <span class="badge-free">FREE 1-MONTH</span></a>
   </div>
 </section>
 
-<!-- ✅ WHY WE EXIST -->
 <section id="why-section" class="alt-section light" data-aos="fade-right">
   <div class="text">
-    <h2 style="font-size: 36px; font-weight: 800; color: #4B0082;">Why SALONFIX Exists</h2>
-    <p>Salons thrive on creativity, but too many owners are buried in numbers, staff drama, and daily firefighting.</p>
-    <p>SALONFIX was created to change that — to bring order to the chaos, uncover what’s draining profits, and give owners the freedom to focus on clients instead of constant problems.</p>
+    <h2 style="font-size:36px; font-weight:800; color:#4B0082;">Why SALONFIX Exists</h2>
+    <p>Salons thrive on creativity — but too many owners are buried in numbers, staff issues, and daily firefighting.</p>
+    <p>SALONFIX exists to <strong>run the business side</strong>: bring order to chaos, stop revenue leakage, and give owners the freedom to focus on clients.</p>
   </div>
-  <div class="image">
-    <img src="assets/about-why.jpg" alt="Why Salonfix Exists">
-  </div>
+  <div class="image"><img src="assets/about-why.jpg" alt="Why SALONFIX brings order to salon operations" loading="lazy" decoding="async" /></div>
 </section>
 
-<!-- ✅ HOW WE’RE DIFFERENT -->
 <section class="alt-section dark" data-aos="fade-left">
-  <div class="image">
-    <img src="assets/about-different.jpg" alt="How Salonfix is Different">
-  </div>
+  <div class="image"><img src="assets/about-different.jpg" alt="How SALONFIX is different from software or advisors" loading="lazy" decoding="async" /></div>
   <div class="text">
-    <h2 class="section-headline">More Than Advice. More Than Software.</h2>
-    <p>Others give tips. Some sell software.</p>
-    <p>SALONFIX does something no one else does — <strong>we step in as your in‑house team.</strong></p>
-    <p>We manage your systems daily, track every rupee, and fix leaks before they turn into costly mistakes.</p>
+    <h2 class="section-headline">More Than Advice. More Than Software. <strong>We Take Daily Control.</strong></h2>
+    <p>Others give tips. Some sell software. <strong>SALONFIX steps in as your in-house team.</strong></p>
+    <p>We manage systems, track every rupee, and fix leaks before they become losses.</p>
     <ul class="questions-list">
-      <li><strong>Daily clarity</strong> – numbers that make sense at a glance</li>
-      <li><strong>Team accountability</strong> – systems that keep staff aligned</li>
-      <li><strong>Stock control</strong> – stop waste, stop theft, stop surprises</li>
-      <li><strong>Growth moves</strong> – pricing tweaks, client retention, and expansion strategies</li>
+      <li><strong>Daily clarity</strong> — one-page numbers that make sense</li>
+      <li><strong>Team accountability</strong> — proof-based SOPs</li>
+      <li><strong>Stock control</strong> — stop waste/theft/surprises</li>
+      <li><strong>Growth moves</strong> — pricing, rebooking, expansion</li>
     </ul>
   </div>
 </section>
 
-<!-- ✅ OUR PROMISE -->
 <section class="alt-section light" data-aos="fade-right">
   <div class="text">
     <h2 class="section-headline">Our Promise to Every Salon Owner</h2>
-    <p>SALONFIX doesn’t just offer advice — <strong>we create and run the systems your salon has been missing.</strong></p>
-    <p>Every number, every checklist, every process is handled with precision, so nothing is left to chance.</p>
-    <p>The result? <strong>You gain clarity, control, and the freedom to focus on what truly grows your business.</strong></p>
+    <p><strong>SALONFIX builds and runs the systems your salon has been missing.</strong></p>
+    <p>Every number, checklist, and process is handled with precision — nothing left to chance.</p>
+    <p>The result? <strong>Clarity, control, and owner freedom.</strong></p>
   </div>
-  <div class="image">
-    <img src="assets/about-promise.jpg" alt="Salonfix Promise">
-  </div>
+  <div class="image"><img src="assets/about-promise.jpg" alt="The SALONFIX promise: clarity, control, freedom" loading="lazy" decoding="async" /></div>
 </section>
 
-<!-- ✅ FOOTER -->
+<section class="cta-strip" data-aos="zoom-in">
+  <h3>Ready to see daily numbers on WhatsApp — with zero leakage?</h3>
+  <a class="btn-primary" href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Start%20my%20FREE%201-Month%20Trial.">DM “FIX” — START FREE 1-MONTH TRIAL</a>
+</section>
+
 <footer>
   <div class="footer-content">
-    <h3>WHEN WILL YOUR SALON FINALLY RUN THE WAY YOU WANT IT TO?</h3>
-    <p>Your salon doesn’t need another piece of software. It doesn’t need more casual “tips” or quick fixes. It needs a dedicated partner to take over the operational weight — so you can step back, see the bigger picture, and relax knowing everything is handled.</p>
-    <a href="https://wa.me/919566143572" class="footer-cta">WHATSAPP US NOW</a>
+    <h3>“WE RUN YOUR SALON LIKE IT’S OUR OWN.”</h3>
+    <p>Your salon doesn’t need more tips or another app. It needs a dedicated partner to take over the operational weight — so you can step back and lead growth.</p>
+    <a href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Start%20my%20FREE%201-Month%20Trial." class="footer-cta">WHATSAPP US NOW</a>
   </div>
 </footer>
 
-<!-- ✅ FLOATING WHATSAPP BUTTON -->
-<a href="https://wa.me/919566143572" class="whatsapp-float" target="_blank">
-   <i class="fab fa-whatsapp"></i>
+<a href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Start%20my%20FREE%201-Month%20Trial." class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp SALONFIX">
+  <i class="fab fa-whatsapp"></i>
 </a>
 
-<!-- ✅ BURGER MENU SCRIPT -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.nav-links');
-  const navLinks = document.querySelectorAll('.nav-links a');
-
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('open');
-    burger.classList.toggle('toggle');
-  });
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      burger.classList.remove('toggle');
-    });
-  });
-
-  // ✅ Initialize AOS Animations
-  AOS.init({ duration: 1000, once: true });
+  const burger=document.getElementById('burger');const nav=document.querySelector('.nav-links');
+  burger.addEventListener('click',()=>{const open=nav.classList.toggle('open');burger.classList.toggle('toggle');burger.setAttribute('aria-expanded',open?'true':'false');});
+  document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{nav.classList.remove('open');burger.classList.remove('toggle');burger.setAttribute('aria-expanded','false');});});
+  AOS.init({duration:900,once:true});
 </script>
-
 </body>
 </html>
