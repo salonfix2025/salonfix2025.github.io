@@ -611,3 +611,45 @@ body {
     display: block;
   }
 }
+
+/* ============ MOBILE NAV: full-screen, centered ============ */
+@media (max-width: 991px) {
+  /* Hide desktop links by default on mobile */
+  .nav-links { display: none; }
+
+  /* Burger shows on mobile (desktop stays hidden via your previous rule) */
+  .burger { display: block; }
+
+  /* Full-screen slide-down menu */
+  .nav-links.open {
+    display: grid;
+    position: fixed;
+    left: 0; right: 0;
+    top: 64px;                       /* sits below your fixed navbar */
+    height: calc(100dvh - 64px);     /* fills the rest of the screen */
+    background: #ffffff;
+    place-items: center;             /* vertical & horizontal centering */
+    gap: 18px;
+    padding: 24px 16px;
+    box-shadow: 0 18px 40px rgba(0,0,0,.12);
+    overflow-y: auto;
+    animation: sf-fade-in .18s ease-out;
+  }
+
+  /* Link styling inside mobile panel */
+  .nav-links.open a {
+    font-size: 20px;
+    font-weight: 800;
+    color: #4B0082;
+    text-decoration: none;
+    padding: 10px 0;
+  }
+
+  /* Prevent background scroll when menu is open */
+  body.menu-open { overflow: hidden; }
+}
+
+@keyframes sf-fade-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
