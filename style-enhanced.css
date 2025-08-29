@@ -733,3 +733,75 @@ body { padding-top: 70px; }   /* adjust if you change navbar height */
   from { opacity: 0; transform: translateY(-6px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+/* ===== CONTACT PAGE TIGHTEN ===== */
+
+/* Make sure hero touches navbar (no gap) */
+.contact-page .hero{
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  height: 52vh;                 /* was 55vh; tighter */
+  background-position: center;
+}
+
+/* Global spacing for this page */
+.contact-page .hero .hero-content{ padding: 0 16px; }
+.contact-page .cta-btn,
+.contact-page .btn,
+.contact-page .footer-cta{ border-radius: 12px; }
+
+/* Two-column band spacing */
+.contact-page .contact-main{
+  padding: 36px 6% !important;  /* tighter left/right + less vertical */
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;  /* slightly left-heavy for copy */
+  gap: 24px;
+  background: #EDE6F5;
+  border-radius: 0;             /* clean band */
+}
+
+/* Icon list = compact cards */
+.contact-page .icon-block{
+  display:flex; align-items:center; gap:12px;
+  padding:10px 12px; border-radius:12px;
+  background:#fff; box-shadow:0 4px 16px rgba(0,0,0,.06);
+  margin-bottom:12px;
+}
+.contact-page .icon-block img{ width:34px; height:34px; }
+
+/* LET'S CONNECT section */
+.contact-page .alt-section.light{
+  padding: 36px 6% !important;
+}
+.contact-page .questions-list{ margin: 0; }
+.contact-page .questions-list li{ margin:6px 0; }
+
+/* Lead form band */
+#lead-form{ padding: 32px 6% !important; }
+#lead-form .form-embed iframe{
+  border-radius: 14px !important;
+  box-shadow: 0 10px 28px rgba(0,0,0,.08);
+  height: 1040px;               /* default desktop */
+}
+
+/* Footer compact */
+.contact-page footer .footer-content{
+  padding: 28px 6%;
+}
+
+/* Floating WhatsApp safe zone */
+.whatsapp-float{ right: 14px; bottom: 14px; }
+
+/* ===== MOBILE (<=768px) ===== */
+@media (max-width: 768px){
+  .contact-page .hero{ height: 46vh; }
+  .contact-page .contact-main{
+    grid-template-columns: 1fr; gap: 16px;
+    padding: 22px 16px !important;
+  }
+  .contact-page .alt-section.light{ padding: 22px 16px !important; }
+  #lead-form{ padding: 22px 16px !important; }
+  #lead-form .form-embed iframe{ height: 860px; } /* shorter form */
+  .contact-page .cta-btn,
+  .contact-page .btn,
+  .contact-page .footer-cta{ width: 100%; text-align:center; padding: .9rem 1rem; }
+}
