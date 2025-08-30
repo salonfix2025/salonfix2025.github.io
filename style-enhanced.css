@@ -239,3 +239,34 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
     margin-bottom: 18px;
   }
 }
+/* Consistent Image Size for Hero and Section Images */
+.sf-hero img, .alt-section .image img, .reports-card img, .contact-page .icon-block img {
+  width: 100%;
+  height: 400px;  /* Adjust this height as needed */
+  object-fit: cover; /* Ensures the image fills the space without distorting */
+}
+
+/* Ensuring image aspect ratio is maintained across pages */
+.sf-hero, .alt-section .image, .contact-page .icon-block {
+  height: auto;
+  max-height: 400px; /* Max height can be adjusted as per your design requirements */
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .sf-hero img, .alt-section .image img, .contact-page .icon-block img {
+    height: 300px;  /* Slightly smaller images for mobile */
+  }
+}
+
+/* Specific section image fixes */
+.hero, .alt-section, .contact-page .icon-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure consistency in image sizes in the carousel or multi-image displays */
+.sf-grid img {
+  height: 100%;  /* Ensures images inside grids behave consistently */
+}
