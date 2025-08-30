@@ -1568,4 +1568,14 @@ footer {
 html, body {
   overflow-x: hidden; /* stop sideways scrolling */
 }
+.section h2, 
+.section .section-title {
+  color: var(--sf-purple) !important;
+}
+.card-purple h3,
+.card h3,
+.report-card h3 {
+  color: var(--sf-gold) !important;
+  font-weight: 800;
+}
 
