@@ -516,3 +516,26 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
     text-align: center;
     padding: 0 10%;
 }
+.hero {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('assets/salon-bg.jpg') center/cover no-repeat; /* Image only */
+    background-blend-mode: overlay; /* Apply the gradient over the image */
+    color: var(--sf-white);
+    text-align: center;
+    padding: 0 10%;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(75, 0, 130, 0.9), rgba(212, 175, 55, 0.6)); /* Gradient */
+    z-index: -1; /* Behind content */
+}
