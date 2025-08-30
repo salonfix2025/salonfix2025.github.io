@@ -1237,4 +1237,55 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
     text-align: center;  /* Center align text */
     padding: 30px;
 }
+/* === FORCE “From Chaos to Control” card text bigger + bold === */
+.case .card{
+  font-size: clamp(18px, 1.2vw + 14px, 22px) !important;
+  font-weight: 800 !important;
+  line-height: 1.55;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* === FORCE founder section: text to the RIGHT of the image === */
+.founder{
+  display: grid !important;
+  grid-template-columns: 340px 1fr !important; /* image | text */
+  gap: 48px;
+  align-items: center !important;
+}
+
+.founder .photo{
+  width: 340px !important;
+  height: 340px !important;
+  border-radius: 24px !important;
+  overflow: hidden;
+  flex: 0 0 auto !important;
+}
+
+.founder .photo img{
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 24px !important;  /* rounded square */
+}
+
+.founder .content{
+  align-self: center;
+  text-align: left;
+}
+
+/* Mobile: stack with image first, then text */
+@media (max-width: 900px){
+  .founder{
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+  .founder .photo{
+    width: 280px !important;
+    height: 280px !important;
+    margin: 0 auto;
+  }
+}
 
