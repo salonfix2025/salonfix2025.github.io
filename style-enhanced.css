@@ -1423,4 +1423,46 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
 .cta-strip h2 {
   color: #4B0082 !important; /* Salonfix brand purple */
 }
+/* Global white → grey replacement */
+body,
+.section,
+.alt-section,
+.reports-strip,
+.cta-strip,
+.connect-card,
+.contact-main,
+footer,
+.card,
+.problem-card,
+.founder,
+.hero,
+button,
+a,
+h1, h2, h3, h4, h5, h6,
+p, li, span {
+  color: #e0e0e0; /* Light grey text instead of white */
+}
+
+/* Backgrounds that were white */
+body,
+.section,
+.alt-section,
+.reports-strip,
+.cta-strip,
+.connect-card,
+.contact-main,
+footer {
+  background-color: #f2f2f2; /* Soft grey background */
+}
+
+/* Cards, boxes, and hero that used white text */
+.card,
+.problem-card,
+.founder,
+.hero,
+.btn,
+.cta-btn,
+.footer-cta {
+  color: #e0e0e0; /* grey text */
+}
 
