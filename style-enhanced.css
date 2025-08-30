@@ -470,3 +470,38 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
   grid-column: span 2; /* Make box 5 span across the full row */
 }
 
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust minimum size to your preference */
+    gap: 30px; /* Increase the gap if needed */
+}
+
+.card {
+    background: linear-gradient(145deg, var(--sf-purple), #3a005f);
+    color: var(--sf-white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    height: 300px; /* Ensure the height and width are equal for a square */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+.hero {
+    height: 100vh; /* Set to full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(75, 0, 130, 0.9), rgba(212, 175, 55, 0.6)),
+                url('assets/salon-bg.jpg') center/cover no-repeat;
+    color: var(--sf-white);
+    text-align: center;
+    padding: 0 10%;
+}
