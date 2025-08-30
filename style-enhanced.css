@@ -1396,4 +1396,23 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
   margin: 0 60px;     /* White space left & right */
   border-radius: 20px; /* Keep curved edges visible */
 }
+/* White space + curved edges for purple slides */
+.founder,
+.problems,
+.section-purple,
+.alt-section-purple {
+  margin: 0 60px;        /* Desktop spacing */
+  border-radius: 20px;   /* Curved edges */
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  .founder,
+  .problems,
+  .section-purple,
+  .alt-section-purple {
+    margin: 0 20px;     /* Smaller white space on mobile */
+    border-radius: 16px;
+  }
+}
 
