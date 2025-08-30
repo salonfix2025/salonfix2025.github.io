@@ -1886,3 +1886,51 @@ body,
 /* prevent sideways scrolling from full-bleed sections */
 html, body { overflow-x: hidden; }
 
+/* === KILL STRAY GREY BACKGROUNDS & HORIZONTAL SCROLL === */
+html, body { overflow-x: hidden; }
+
+/* Remove any grey/inline backgrounds on wrappers */
+.section,
+.alt-section,
+.sf-section,
+.sf-section--pad,
+.sf-section--curve,
+.sf-section--purple,
+.reports-strip,
+.cta-strip,
+.connect-card,
+.cards-row,
+.card-grid,
+.grid-3,
+.problems,
+.case,
+.founder,
+.section-bg,
+.slide-wrap,
+.band,
+.stripe,
+.panel {
+  background: transparent !important;
+}
+
+/* Nuke accidental inline greys (#b4b4b4 / #737373) if they exist */
+*[style*="#b4b4b4"],
+*[style*="#737373"] {
+  background: transparent !important;
+}
+
+/* Keep page base clean */
+body { background: #ffffff; }
+
+/* Ensure the hero gradient spans full width (no white/grey strip) */
+.hero,
+#home-hero {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+/* Preserve your purple card look */
+.card-purple {
+  background: linear-gradient(145deg, var(--sf-purple), #3a005f) !important;
+}
