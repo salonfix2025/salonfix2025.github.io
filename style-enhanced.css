@@ -1641,11 +1641,11 @@ body {
 .connect-card,
 .contact-main,
 footer {
-  background-color: #737373 !important;
+  background-color: #a6a6a6 !important;
 }
 
 /* Hero background (keeps gradient/image, fallback to grey) */
 .hero {
-  background-color: #737373;
+  background-color: #a6a6a6;
 }
 
