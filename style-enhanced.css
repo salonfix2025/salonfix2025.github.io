@@ -191,3 +191,51 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
   transition:transform .2s ease;
 }
 .whatsapp-float:hover{transform:translateY(-2px)}
+/* === SECTION SPACING FIXES === */
+.alt-section {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 48px;                      /* more gap between text & image */
+  align-items: center;
+  width: var(--container);
+  margin: 0 auto;
+  padding: 100px 0;                /* more top & bottom breathing room */
+}
+
+.alt-section .text {
+  padding: 0 12px;
+}
+
+.alt-section .section-headline {
+  font-size: clamp(24px, 3vw + 10px, 38px);
+  margin-bottom: 18px;             /* spacing below headline */
+  line-height: 1.3;
+}
+
+.alt-section .section-subheadline {
+  font-size: clamp(16px, 2vw, 20px);
+  margin-bottom: 16px;
+  font-weight: 700;
+  color: var(--sf-gold);
+}
+
+/* Equal spacing for ALL sections/slides */
+.section,
+.reports-strip,
+.cta-strip,
+.connect-card {
+  padding: 100px 0;
+  margin-bottom: 80px;
+}
+
+/* MOBILE FIX: Stack with breathing space */
+@media (max-width: 900px) {
+  .alt-section {
+    grid-template-columns: 1fr !important;
+    gap: 28px;
+    padding: 70px 0;
+  }
+  .alt-section .image {
+    margin-bottom: 18px;
+  }
+}
