@@ -13,14 +13,6 @@
   <meta name="description" content="SALONFIX is YOUR IN-HOUSE BUSINESS PARTNER — we run your salon like it’s our own. Start your FREE 1-Month Trial and see the systems, data, and fixes in action." />
   <meta name="theme-color" content="#4B0082" />
 
-  <!-- ✅ Open Graph -->
-  <meta property="og:site_name" content="SALONFIX" />
-  <meta property="og:title" content="SALONFIX – Contact Us" />
-  <meta property="og:description" content="We handle daily operations, weekly reviews, and monthly growth systems — so you can focus on clients. Start with a FREE 1-Month Trial." />
-  <meta property="og:image" content="https://www.salonfix.in/assets/og-image.jpg" />
-  <meta property="og:url" content="https://www.salonfix.in/contact.html" />
-  <meta property="og:type" content="website" />
-
   <!-- ✅ Fonts & Libs -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
@@ -73,13 +65,12 @@
     .system-card h4{margin:0 0 6px;font-weight:800}
     .system-card p{color:rgba(255,255,255,.9)}
 
-    /* Connect grid */
+    /* Connect grid (restored rounded style) */
     .connect-grid{display:grid;gap:20px;grid-template-columns:repeat(2,1fr)}
     @media(max-width:900px){.connect-grid{grid-template-columns:1fr}}
-    .connect-item{display:flex;flex-direction:column;align-items:flex-start;padding:28px;background:linear-gradient(160deg,var(--sf-purple) 0%,var(--sf-purple-900) 100%);color:#fff;border-radius:20px;box-shadow:var(--sf-shadow);border:1px solid rgba(212,175,55,.18);transition:.2s;text-decoration:none}
+    .connect-item{display:flex;align-items:center;gap:14px;background:linear-gradient(160deg,var(--sf-purple) 0%,var(--sf-purple-900) 100%);color:#fff;border-radius:20px;box-shadow:var(--sf-shadow);border:1px solid rgba(212,175,55,.18);padding:20px;transition:.2s;text-decoration:none}
     .connect-item:hover{transform:translateY(-4px);box-shadow:var(--sf-shadow-hover);border-color:var(--sf-gold)}
-    .ci-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(180deg,rgba(212,175,55,.95),rgba(212,175,55,.7));box-shadow:0 8px 20px rgba(212,175,55,.4);display:grid;place-items:center;color:#2a1e00;font-size:22px;margin-bottom:12px}
-    .connect-item strong{font-size:1.2rem}
+    .ci-icon{width:48px;height:48px;border-radius:12px;background:linear-gradient(180deg,rgba(212,175,55,.95),rgba(212,175,55,.7));box-shadow:0 8px 20px rgba(212,175,55,.4);display:grid;place-items:center;color:#2a1e00;font-size:20px}
 
     /* Buttons */
     .btn{display:inline-flex;align-items:center;gap:.6rem;font-weight:800;text-decoration:none;padding:14px 22px;border-radius:999px;border:2px solid transparent;transition:.18s}
@@ -134,7 +125,33 @@
     </div>
   </section>
 
-  <!-- 🟣 CONNECT-CARD (premium style) --> <section class="section" id="connect" style="padding-top:0"> <div class="container"> <div class="connect-card" data-aos="fade-up"> <div class="headline">LET’S CONNECT</div> <p class="sub">Tell us your top 3 pains — SALONFIX will run your salon like it’s our own. Start with your <span style="color:var(--sf-gold);font-weight:800">FREE 1-Month Trial</span>.</p> <div class="connect-grid" role="list"> <a class="connect-item" href="tel:+919629370666" role="listitem" aria-label="Call SALONFIX"> <span class="ci-icon"><i class="fa-solid fa-phone"></i></span> <div><strong>Call Us Directly</strong><br/>+91 96293 70666</div> <i class="fa-solid fa-chevron-right ci-arrow" aria-hidden="true"></i> </a> <a class="connect-item" href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Start%20my%20FREE%201-Month%20Trial." target="_blank" rel="noopener" role="listitem" aria-label="WhatsApp SALONFIX"> <span class="ci-icon"><i class="fa-brands fa-whatsapp"></i></span> <div><strong>WhatsApp</strong><br/>+91 96293 70666</div> <i class="fa-solid fa-chevron-right ci-arrow" aria-hidden="true"></i> </a> <a class="connect-item" href="https://instagram.com/salonfix.in" target="_blank" rel="noopener" role="listitem" aria-label="Instagram SALONFIX"> <span class="ci-icon"><i class="fa-brands fa-instagram"></i></span> <div><strong>Instagram DM</strong><br/>@salonfix.in</div> <i class="fa-solid fa-chevron-right ci-arrow" aria-hidden="true"></i> </a> <a class="connect-item" href="mailto:salonfix2025@gmail.com" role="listitem" aria-label="Email SALONFIX"> <span class="ci-icon"><i class="fa-solid fa-envelope"></i></span> <div><strong>Email</strong><br/>salonfix2025@gmail.com</div> <i class="fa-solid fa-chevron-right ci-arrow" aria-hidden="true"></i> </a> </div> <div class="connect-actions"> <a class="btn btn-gold" href="https://wa.me/919629370666?text=FIX">DM “FIX” — START NOW</a> <a class="btn btn-outline-gold" href="/book-audit.html">Book Free Audit</a> <a class="btn btn-outline-gold" href="mailto:salonfix2025@gmail.com">Email Us</a> </div> </div> </div> </section>
+  <!-- 🟣 LET’S CONNECT -->
+  <section class="section">
+    <div class="container">
+      <h2 style="text-align:center;color:var(--sf-purple);margin-bottom:20px">LET’S CONNECT</h2>
+      <div class="connect-grid" data-aos="fade-up">
+        <!-- Row 1 -->
+        <a class="connect-item" href="tel:+919629370666">
+          <span class="ci-icon"><i class="fa-solid fa-phone"></i></span>
+          <div><strong>Call Us Directly</strong><br/>+91 96293 70666</div>
+        </a>
+        <a class="connect-item" href="https://wa.me/919629370666?text=FIX" target="_blank">
+          <span class="ci-icon"><i class="fa-brands fa-whatsapp"></i></span>
+          <div><strong>WhatsApp</strong><br/>+91 96293 70666</div>
+        </a>
+        <!-- Row 2 -->
+        <a class="connect-item" href="https://instagram.com/salonfix.in" target="_blank">
+          <span class="ci-icon"><i class="fa-brands fa-instagram"></i></span>
+          <div><strong>Instagram DM</strong><br/>@salonfix.in</div>
+        </a>
+        <a class="connect-item" href="mailto:salonfix2025@gmail.com">
+          <span class="ci-icon"><i class="fa-solid fa-envelope"></i></span>
+          <div><strong>Email</strong><br/>salonfix2025@gmail.com</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- 🟣 FORM -->
   <section class="section" style="background:#faf7ff">
     <div class="container" style="text-align:center">
