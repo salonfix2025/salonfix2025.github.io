@@ -1055,3 +1055,28 @@ p{line-height:1.6;color:rgba(27,18,48,.9);}
   color: #1b1230;
   font-weight: 800;
 }
+.connect-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.connect-item {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  min-height: 150px;
+  font-size: 1.1rem;
+}
+.connect-item strong {
+  font-size: 1.2rem;
+}
+.ci-icon {
+  width: 52px;
+  height: 52px;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+.ci-arrow {
+  margin-left: auto;
+  align-self: flex-end;
+}
