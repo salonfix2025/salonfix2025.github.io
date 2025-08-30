@@ -824,3 +824,14 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
     background: var(--sf-gold);
     color: #1b1230;
 }
+.founder .photo {
+    flex: 1;
+    min-width: 100%; /* Make the image container fill the slide */
+}
+
+.founder .photo img {
+    width: 100%; /* Make the image take up full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px; /* Keep the rounded corners */
+    object-fit: cover; /* Ensure the image fills the space without distortion */
+}
