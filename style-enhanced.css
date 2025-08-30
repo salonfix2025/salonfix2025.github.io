@@ -1465,4 +1465,78 @@ footer {
 .footer-cta {
   color: #e0e0e0; /* grey text */
 }
+/* ==== HERO ALIGNMENT (Desktop & Mobile) ==== */
+.hero{
+  /* centers content perfectly */
+  display: grid;
+  place-items: center;
+
+  /* comfortable spacing + consistent height */
+  min-height: 70vh;
+  padding: 120px 24px 100px;
+
+  /* keep the background you already set */
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+
+.hero .hero-content{
+  width: 100%;
+  max-width: 980px;          /* nice readable line-length on desktop */
+  margin: 0 auto;
+}
+
+.hero h1{
+  margin: 0 0 18px;
+  line-height: 1.15;
+}
+
+.hero p{
+  margin: 0 auto 28px;
+  max-width: 760px;          /* keeps the subhead from stretching too wide */
+}
+
+.hero .btn,
+.hero .cta-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;            /* centers the button block */
+}
+
+/* Keep nav from overlapping (if needed) */
+@media (min-width: 1025px){
+  body{ padding-top: 70px; }
+}
+
+/* ==== Mobile tweaks ==== */
+@media (max-width: 768px){
+  .hero{
+    min-height: 60vh;
+    padding: 96px 16px 72px;
+  }
+  .hero h1{
+    font-size: clamp(26px, 7vw, 34px);
+    margin-bottom: 14px;
+  }
+  .hero p{
+    font-size: 16px;
+    margin-bottom: 22px;
+    max-width: 95%;
+  }
+  .hero .btn,
+  .hero .cta-btn{
+    width: 100%;
+    max-width: 420px;        /* full-width button feel without edge-to-edge */
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px){
+  .hero{
+    padding: 88px 14px 64px;
+  }
+  .hero p{ font-size: 15px; }
+}
 
