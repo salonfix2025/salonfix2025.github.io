@@ -328,3 +328,48 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
     grid-template-columns: 1fr; /* Stack images and sections for mobile view */
   }
 }
+/* ==============================
+   Global Slide Spacing Adjustments
+   ============================== */
+
+/* General slide container with equal margin and padding for uniformity */
+.sf-grid, .sf-section, .pricing-grid, .alt-section, .reports-grid {
+  gap: 24px; /* Equal spacing between all slides */
+  margin-top: 24px; /* Adds spacing between the first element and top */
+  padding: 24px 6vw; /* Padding added for larger screen view */
+}
+
+/* Adjusting the cards within each section to add space around them */
+.sf-card, .pricing-box, .card-purple {
+  margin-bottom: 24px; /* Adding margin between cards */
+  padding: 24px;
+}
+
+/* Adjustments for grid layout for better alignment */
+.sf-grid--3, .sf-grid--2 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Ensure elements inside grid do not overlap or feel crowded */
+.sf-card, .card-purple, .alt-section .image, .alt-section .text {
+  padding: 16px;
+  margin: 0 auto; /* Ensures centered alignment */
+}
+
+/* For mobile views, ensure proper slide size with equal margin and padding */
+@media (max-width: 900px) {
+  .sf-grid--3, .sf-grid--2 {
+    grid-template-columns: 1fr;
+    gap: 20px; /* Reduced gap on mobile */
+  }
+
+  /* Adjusting cards for mobile views */
+  .sf-card, .card-purple {
+    margin-bottom: 18px;
+  }
+
+  .alt-section {
+    padding: 16px;
+  }
+}
+
