@@ -505,3 +505,14 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
     text-align: center;
     padding: 0 10%;
 }
+.hero {
+    height: 75vh; /* Adjust this as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('assets/salon-bg.jpg') center/cover no-repeat; /* Only the image, no overlay */
+    color: var(--sf-white);
+    text-align: center;
+    padding: 0 10%;
+}
