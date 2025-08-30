@@ -1388,4 +1388,12 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
   /* NEW — add spacing on left & right */
   margin: 0 60px;   /* adjust px until edges look clean */
 }
+/* Apply equal left/right white space to all purple sections */
+.founder,
+.problems,
+.section-purple,
+.alt-section-purple {
+  margin: 0 60px;     /* White space left & right */
+  border-radius: 20px; /* Keep curved edges visible */
+}
 
