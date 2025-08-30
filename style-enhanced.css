@@ -685,3 +685,37 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
     width: 100%;
     border-radius: 20px; /* Rounded corners for the image */
 }
+.problems {
+    background: linear-gradient(145deg, var(--sf-purple), #3a005f);
+    color: var(--sf-white);
+    padding: 40px;
+    border-radius: 20px; /* Curved edges */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 0 10%; /* Add left and right white space */
+}
+
+.problem-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    color: var(--sf-white);
+    font-weight: 600;
+    text-align: center;
+    width: calc(33% - 20px); /* Make sure the cards are equal size */
+    display: flex;
+    justify-content: center; /* Center the text inside */
+}
+
+.problem-card:nth-child(4) {
+    width: 100%; /* Center the "Retail Zero" card */
+    margin-top: 20px;
+}
+
+.problem-card:hover {
+    background: var(--sf-gold);
+    color: #1b1230;
+}
