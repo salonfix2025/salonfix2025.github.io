@@ -1374,4 +1374,18 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
   box-shadow: 0 0 15px rgba(212,175,55,0.8);
   border-radius: 20px;        /* rounded square */
 }
+/* Founder Section Spacing Fix */
+.founder {
+  background: linear-gradient(145deg, var(--sf-purple), #3a005f);
+  color: var(--sf-white);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+  border-radius: 20px;
+
+  /* NEW — add spacing on left & right */
+  margin: 0 60px;   /* adjust px until edges look clean */
+}
 
