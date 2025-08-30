@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title><!-- POST TITLE --> The Salon Leadership Checklist – SALONFIX</title>
+
+  <!-- ✅ Canonical + Favicon -->
+  <link rel="canonical" href="https://www.salonfix.in/blog-post.html" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+  <!-- ✅ SEO -->
+  <meta name="description" content="Practical, proof-based leadership systems for salon owners. SALONFIX is YOUR IN-HOUSE BUSINESS PARTNER — start with a FREE 1-Month Trial." />
+  <meta name="theme-color" content="#4B0082" />
+
+  <!-- ✅ Open Graph / Twitter -->
+  <meta property="og:site_name" content="SALONFIX" />
+  <meta property="og:title" content="The Salon Leadership Checklist – SALONFIX" />
+  <meta property="og:description" content="Daily huddles, numbers, and proof-based SOPs to lead without hovering." />
+  <meta property="og:image" content="https://www.salonfix.in/assets/og-image.jpg" />
+  <meta property="og:url" content="https://www.salonfix.in/blog-post.html" />
+  <meta property="og:type" content="article" />
+  <meta property="article:author" content="SALONFIX" />
+  <meta property="article:published_time" content="2025-08-30T06:00:00+05:30" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.salonfix.in/assets/og-image.jpg" />
+
+  <!-- ✅ Performance & Libs -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+  <!-- 🔮 Global Style System -->
+  <style>
+    :root{
+      --sf-purple:#4B0082; --sf-purple-900:#2d004c; --sf-gold:#D4AF37;
+      --sf-ink:#1b1230; --sf-white:#ffffff;
+      --sf-radius-lg:24px; --sf-radius:18px;
+      --sf-shadow:0 18px 40px rgba(0,0,0,.25);
+      --sf-shadow-soft:0 10px 24px rgba(0,0,0,.12);
+      --sf-shadow-hover:0 22px 48px rgba(0,0,0,.28);
+    }
+    html,body{margin:0;padding:0;font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--sf-ink);background:#fff}
+    img{max-width:100%;height:auto;display:block}
+    h1,h2,h3,h4{margin:0 0 .6rem;line-height:1.1}
+    h1{font-weight:900}
+    h2{font-weight:800}
+    h3{font-weight:800;color:var(--sf-gold)}
+    p{line-height:1.75;color:rgba(27,18,48,.95)}
+    a{text-decoration:none}
+    .container{max-width:1200px;margin:0 auto;padding:0 6vw}
+    .prose{max-width:860px;margin:0 auto}
+    .muted{color:rgba(27,18,48,.7)}
+    .sep{height:1px;background:linear-gradient(90deg,transparent,rgba(0,0,0,.08),transparent);margin:24px 0}
+
+    /* Header */
+    header{position:sticky;top:0;background:#fff;z-index:50;border-bottom:1px solid rgba(0,0,0,.06)}
+    .navbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 6vw}
+    .logo a{font-weight:900;color:var(--sf-purple)}
+    .nav-links{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    .nav-links a{color:var(--sf-ink);padding:8px 6px;border-bottom:2px solid transparent}
+    .nav-links a[href*="blog"]{border-bottom:2px solid var(--sf-purple)}
+    .burger{display:none;background:none;border:0;cursor:pointer}
+    .burger span{display:block;width:26px;height:2px;background:#333;margin:6px 0}
+    @media (max-width:900px){
+      .burger{display:block}
+      .nav-links{position:fixed;inset:64px 0 auto 0;background:#fff;flex-direction:column;padding:16px 6vw;gap:12px;transform:translateY(-120%);transition:transform .25s ease}
+      .nav-links.open{transform:translateY(0)}
+      body.menu-open{overflow:hidden}
+    }
+
+    /* Hero (full-bleed purple + curved bottom) */
+    .sf-purple{
+      position:relative;color:#fff;
+      background:
+        radial-gradient(1200px 600px at 10% -20%, rgba(255,255,255,.06), transparent 60%),
+        radial-gradient(1200px 600px at 110% 120%, rgba(255,255,255,.04), transparent 60%),
+        linear-gradient(180deg, var(--sf-purple) 0%, var(--sf-purple-900) 100%);
+    }
+    .pad-xl{padding:84px 0}
+    .curved-bottom::after{
+      content:"";position:absolute;left:0;right:0;bottom:-1px;height:48px;
+      background:radial-gradient(120% 120% at 50% -20%, rgba(0,0,0,.28) 0%, transparent 70%);
+      -webkit-mask:radial-gradient(90% 220% at 50% -120%, #000 60%, transparent 61%);
+              mask:radial-gradient(90% 220% at 50% -120%, #000 60%, transparent 61%);
+      pointer-events:none;
+    }
+
+    /* Buttons */
+    .btn{display:inline-flex;align-items:center;gap:.6rem;font-weight:800;letter-spacing:.2px;padding:12px 18px;border-radius:999px;border:2px solid transparent;transition:transform .18s, box-shadow .18s, border-color .18s, background .18s, color .18s}
+    .btn-gold{background:var(--sf-gold);color:#2a1e00;box-shadow:0 10px 24px rgba(212,175,55,.35)}
+    .btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(212,175,55,.45)}
+    .btn-outline-gold{background:transparent;border-color:var(--sf-gold);color:var(--sf-gold)}
+    .btn-outline-gold:hover{background:rgba(212,175,55,.1)}
+
+    /* Meta + share */
+    .post-meta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;color:#fff;opacity:.9;margin-top:10px}
+    .breadcrumbs{font-size:14px;color:rgba(255,255,255,.9)}
+    .breadcrumbs a{color:rgba(255,255,255,.9);text-decoration:underline}
+    .share{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(212,175,55,.25)}
+
+    /* Article shell */
+    .cover{border-radius:24px;overflow:hidden;box-shadow:var(--sf-shadow-soft)}
+    .lead{font-size:20px}
+
+    /* Prev / Next */
+    .pager{display:grid;gap:14px;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:24px}
+    .pager a{display:block;background:#fff;border-radius:18px;padding:16px;border:1px solid rgba(212,175,55,.18);box-shadow:var(--sf-shadow-soft);transition:transform .18s, box-shadow .18s, border-color .18s;color:var(--sf-ink)}
+    .pager a:hover{transform:translateY(-2px);box-shadow:var(--sf-shadow-hover);border-color:var(--sf-gold)}
+
+    /* Connect Card */
+    .connect-card{
+      position:relative;padding:42px 6%;
+      background:
+        radial-gradient(1200px 600px at 10% -20%, rgba(255,255,255,.06), transparent 60%),
+        radial-gradient(1200px 600px at 110% 120%, rgba(255,255,255,.04), transparent 60%),
+        linear-gradient(180deg, var(--sf-purple) 0%, var(--sf-purple-900) 100%);
+      color:#fff;border-radius:24px;box-shadow:var(--sf-shadow);overflow:hidden
+    }
+    .connect-actions{margin-top:14px;display:flex;gap:12px;flex-wrap:wrap}
+
+    /* Footer + WhatsApp */
+    footer{background:#0c0614;color:#fff;padding:48px 0;text-align:center;margin-top:56px}
+    .whatsapp-float{
+      position:fixed;right:18px;bottom:18px;width:54px;height:54px;border-radius:50%;
+      display:grid;place-items:center;background:#25D366;color:#fff;font-size:26px;box-shadow:0 10px 24px rgba(0,0,0,.25);z-index:60
+    }
+  </style>
+
+  <!-- ✅ Schema.org JSON-LD (Article) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "@id":"https://www.salonfix.in/blog-post.html#article",
+    "headline":"The Salon Leadership Checklist",
+    "description":"Daily huddles, numbers, and proof-based SOPs to lead without hovering.",
+    "image":"https://www.salonfix.in/assets/team-training.jpg",
+    "datePublished":"2025-08-30T06:00:00+05:30",
+    "dateModified":"2025-08-30T06:00:00+05:30",
+    "author":{"@type":"Organization","name":"SALONFIX"},
+    "publisher":{"@type":"Organization","name":"SALONFIX","logo":{"@type":"ImageObject","url":"https://www.salonfix.in/assets/og-image.jpg"}},
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.salonfix.in/blog-post.html"}
+  }
+  </script>
+</head>
+
+<body class="blog-post">
+  <!-- ✅ HEADER -->
+  <header>
+    <nav class="navbar" aria-label="Primary">
+      <div class="logo"><a href="index.html" aria-label="SALONFIX Home">SALONFIX</a></div>
+      <ul class="nav-links" id="site-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">How We Work</a></li>
+        <li><a href="pricing.html">Partnership Plans</a></li>
+        <li><a href="blog.html" aria-current="page">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Toggle menu" aria-controls="site-nav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- 🟣 HERO -->
+  <section class="sf-purple pad-xl curved-bottom">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a> › <a href="blog.html">Blog</a> › <span>The Salon Leadership Checklist</span>
+      </nav>
+      <div class="prose" style="margin-top:12px">
+        <h1 style="color:#fff;font-size:clamp(34px,5vw,56px)">The Salon Leadership Checklist</h1>
+        <div class="post-meta">
+          <span>By SALONFIX</span> •
+          <time datetime="2025-08-30">30 Aug 2025</time> •
+          <span>7 min read</span>
+        </div>
+        <div class="share" style="margin-top:12px">
+          <a class="chip" href="https://wa.me/919629370666?text=Check%20this%20out%3A%20https%3A%2F%2Fwww.salonfix.in%2Fblog-post.html" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i>&nbsp;Share</a>
+          <a class="chip" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.salonfix.in%2Fblog-post.html" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i>&nbsp;Post</a>
+          <a class="chip" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.salonfix.in%2Fblog-post.html&text=Salon%20leadership%20that%20actually%20works" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i>&nbsp;Tweet</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ ARTICLE -->
+  <main class="container" style="padding:28px 0 0">
+    <figure class="cover prose">
+      <img src="assets/team-training.jpg" alt="Team leadership and accountability systems in action" />
+    </figure>
+
+    <article class="prose" style="padding:22px 0">
+      <p class="lead"><strong>Not an app. Not a consultant.</strong> SALONFIX is YOUR IN-HOUSE BUSINESS PARTNER — we run your salon like it’s our own. Here’s the leadership checklist our team installs so owners stop firefighting and start leading.</p>
+
+      <h2>1) Daily Huddles (8 minutes)</h2>
+      <p>One page, three numbers, one fix. Attendance, rebooking, and today’s sales focus. If it takes longer, it’s not a huddle.</p>
+
+      <h2>2) Proof-Based SOPs</h2>
+      <p>Photos for hygiene, receipts for petty cash, and product dips for stock. <em>Trust + proof</em> beats trust alone.</p>
+
+      <h2>3) Targets That Pay</h2>
+      <p>Weekly targets tied to incentives you actually pay out — small, frequent wins build momentum and morale.</p>
+
+      <h2>4) Rebooking in Three Touches</h2>
+      <ul>
+        <li>Chair-side ask</li>
+        <li>24-hour follow-up</li>
+        <li>72-hour safety net</li>
+      </ul>
+
+      <h2>5) Owner Dashboard</h2>
+      <p>Daily P&L snapshot, zero-leakage checks, and a clear “Owner Action Box” every Friday.</p>
+
+      <div class="sep"></div>
+
+      <p><strong>Want this running in your salon?</strong> Start your <span style="color:var(--sf-gold)">FREE 1-Month Trial</span> and see the system work before you pay a single rupee.</p>
+      <p><a class="btn btn-gold" href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Start%20my%20FREE%201-Month%20Trial.">DM “FIX” — START FREE TRIAL</a></p>
+
+      <div class="sep"></div>
+
+      <!-- Pager -->
+      <nav class="pager" aria-label="Post navigation">
+        <a href="blog-post.html#prev" aria-label="Previous article">← 5 Pricing Mistakes That Quietly Kill Profit</a>
+        <a href="blog-post.html#next" aria-label="Next article">Zero-Leakage Month: What It Really Looks Like →</a>
+      </nav>
+    </article>
+  </main>
+
+  <!-- 🟣 CONNECT-CARD -->
+  <section class="container" style="padding:0 0 56px 0">
+    <div class="connect-card">
+      <h2 style="margin:0 0 6px">LET’S CONNECT</h2>
+      <p class="muted" style="color:rgba(255,255,255,.9)">Tell us your top 3 pains — SALONFIX will run your salon like it’s our own.</p>
+      <div class="connect-actions">
+        <a class="btn btn-gold" href="https://wa.me/919629370666?text=FIX">WhatsApp “FIX”</a>
+        <a class="btn btn-outline-gold" href="mailto:salonfix2025@gmail.com">Email Us</a>
+        <a class="btn btn-outline-gold" href="/book-audit.html">Book Free Audit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ FOOTER -->
+  <footer>
+    <div class="container">
+      <h3>LET’S SCALE YOUR SALON</h3>
+      <p>© 2025 SALONFIX. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
+
+  <!-- ✅ Floating WhatsApp -->
+  <a href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20I%20want%20the%20FREE%201-Month%20Trial." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- ✅ Scripts (deduped) -->
+  <script>
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('site-nav');
+
+    if (burger && nav) {
+      burger.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        document.body.classList.toggle('menu-open', open);
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      nav.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          nav.classList.remove('open');
+          document.body.classList.remove('menu-open');
+          burger.setAttribute('aria-expanded','false');
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          nav.classList.remove('open');
+          document.body.classList.remove('menu-open');
+          burger.setAttribute('aria-expanded','false');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
