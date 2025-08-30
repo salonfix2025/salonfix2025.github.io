@@ -539,3 +539,37 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
     background: linear-gradient(135deg, rgba(75, 0, 130, 0.9), rgba(212, 175, 55, 0.6)); /* Gradient */
     z-index: -1; /* Behind content */
 }
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid items in equal size */
+    gap: 30px; /* Adjust the gap between cards */
+    margin-top: 40px;
+}
+
+.card {
+    background: linear-gradient(145deg, var(--sf-purple), #3a005f);
+    color: var(--sf-white);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    height: 300px; /* Ensure the cards remain square */
+    display: flex;
+    flex-direction: column; /* Arrange content in two rows */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.8rem; /* Increase the font size of headings */
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1.2rem; /* Increase the font size of the paragraph text */
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
