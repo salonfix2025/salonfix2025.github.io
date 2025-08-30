@@ -1038,3 +1038,20 @@ p{line-height:1.6;color:rgba(27,18,48,.9);}
 .connect-card .sub{color:rgba(255,255,255,.9);max-width:800px;}
 .connect-card .actions{margin-top:18px;display:flex;gap:14px;flex-wrap:wrap;}
 </style>
+.card-purple p {
+  color: rgba(255,255,255,.9);
+}
+.card-purple .price {
+  color: var(--sf-gold);
+}
+.card-purple .plan-title {
+  color: #fff;
+}
+.card-purple .plan-sub {
+  color: rgba(255,255,255,.85);
+}
+.card-purple a.btn {
+  background: var(--sf-gold);
+  color: #1b1230;
+  font-weight: 800;
+}
