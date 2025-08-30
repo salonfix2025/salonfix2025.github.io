@@ -1,439 +1,172 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>We Help You Get Smarter At Growing Your Salon Business – SALONFIX</title>
-
-  <!-- ✅ Canonical + Meta -->
-  <link rel="canonical" href="https://www.salonfix.in/index.html" />
-  <meta name="description" content="SALONFIX is YOUR IN-HOUSE BUSINESS PARTNER — we run your salon like it’s our own. We take daily control of operations, numbers, and growth. Start with a FREE 1-Month Trial." />
-  <meta name="theme-color" content="#4B0082" />
-
-  <!-- ✅ Open Graph / Twitter -->
-  <meta property="og:site_name" content="SALONFIX" />
-  <meta property="og:title" content="SALONFIX – Your In-House Business Partner" />
-  <meta property="og:description" content="We handle daily operations, weekly reviews, and monthly growth systems — so you can focus on clients. Start with a FREE 1-Month Trial." />
-  <meta property="og:image" content="https://www.salonfix.in/assets/og-image.jpg" />
-  <meta property="og:url" content="https://www.salonfix.in/index.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_IN" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://www.salonfix.in/assets/og-image.jpg" />
-
-  <!-- ✅ Mobile theme colors -->
-  <meta name="msapplication-navbutton-color" content="#4B0082" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="#4B0082" />
-
-  <!-- ✅ Performance -->
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-  <link rel="preload" as="image" href="assets/og-image.jpg" />
-
-  <!-- ✅ Fonts & Libs -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="icon" href="assets/favicon.png" type="image/png" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
-
-  <!-- ✅ Schema.org JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://www.salonfix.in/#org",
-    "name": "SALONFIX",
-    "url": "https://www.salonfix.in",
-    "telephone": "+91-9629370666",
-    "sameAs": ["https://www.instagram.com/salonfix.in/"],
-    "logo": "https://www.salonfix.in/assets/og-image.jpg",
-    "founder": { "@type": "Person", "name": "JAWHAR RAJ RAJKUMAR" }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": "https://www.salonfix.in/#website",
-    "url": "https://www.salonfix.in",
-    "name": "SALONFIX",
-    "publisher": { "@id": "https://www.salonfix.in/#org" }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://www.salonfix.in/index.html#webpage",
-    "url": "https://www.salonfix.in/index.html",
-    "name": "We Help You Get Smarter At Growing Your Salon Business – SALONFIX",
-    "isPartOf": { "@id": "https://www.salonfix.in/#website" }
-  }
-  </script>
-
-  <!-- 🔮 Global Style System -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SALONFIX – Your In-House Business Partner</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    :root{
-      --sf-purple:#4B0082;
-      --sf-purple-900:#2d004c;
-      --sf-gold:#D4AF37;
-      --sf-ink:#1b1230;
-      --sf-white:#ffffff;
-
-      --sf-radius-lg:24px;
-      --sf-radius:18px;
-
-      --sf-shadow:0 18px 40px rgba(0,0,0,.25);
-      --sf-shadow-soft:0 10px 24px rgba(0,0,0/.18);
-      --sf-shadow-hover:0 22px 48px rgba(0,0,0,.28);
+    /* ===== GLOBAL ===== */
+    :root {
+      --sf-purple: #4B0082;
+      --sf-gold: #D4AF37;
+      --sf-white: #ffffff;
+      --sf-dark: #1b1230;
+      --sf-light: #f9f7f7;
     }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family: 'Montserrat', sans-serif; color:var(--sf-dark); background:var(--sf-white); line-height:1.6;}
+    h1,h2,h3{font-weight:800; line-height:1.2;}
+    section{padding:80px 10%; text-align:center;}
+    .btn{padding:14px 28px; border-radius:50px; font-weight:700; cursor:pointer; text-decoration:none; transition:0.3s;}
+    .btn-gold{background:var(--sf-gold); color:var(--sf-dark);}
+    .btn-white{background:transparent; border:2px solid var(--sf-white); color:var(--sf-white);}
+    .btn-purple{background:var(--sf-purple); color:var(--sf-white);}
+    .btn:hover{opacity:0.85;}
 
-    html,body{margin:0;padding:0;font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--sf-ink);}
-    img{max-width:100%;height:auto;display:block}
-
-    /* Typography hierarchy */
-    h1,h2,h3{margin:0 0 .5rem;line-height:1.1}
-    h1,.h1{font-weight:900;color:var(--sf-white)}
-    h2,.h2{font-weight:800}
-    h3,.h3{font-weight:800;color:var(--sf-gold)}
-    p{line-height:1.7;color:rgba(27,18,48,.9)}
-    .subtle{color:rgba(255,255,255,.9)}
-
-    /* Layout helpers */
-    .container{max-width:1200px;margin:0 auto;padding:0 6vw}
-    .grid{display:grid;gap:24px}
-    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    @media (max-width:900px){.grid-2,.grid-3{grid-template-columns:1fr}}
-
-    /* Full-bleed purple sections + curved bottom edge */
-    .sf-purple{
-      position:relative;
+    /* ===== HERO ===== */
+    .hero{
+      background: linear-gradient(rgba(75,0,130,0.85), rgba(75,0,130,0.85)), 
+                  url('assets/salon-bg.jpg') center/cover no-repeat;
       color:var(--sf-white);
-      background:
-        radial-gradient(1200px 600px at 10% -20%, rgba(255,255,255,.06), transparent 60%),
-        radial-gradient(1200px 600px at 110% 120%, rgba(255,255,255,.04), transparent 60%),
-        linear-gradient(180deg, var(--sf-purple) 0%, var(--sf-purple-900) 100%);
+      padding:120px 10%;
     }
-    .pad-xl{padding:84px 0}
-    .pad-lg{padding:64px 0}
-    .curved-bottom::after{
-      content:"";position:absolute;left:0;right:0;bottom:-1px;height:48px;
-      background:radial-gradient(120% 120% at 50% -20%, rgba(0,0,0,.28) 0%, transparent 70%);
-      -webkit-mask:radial-gradient(90% 220% at 50% -120%, #000 60%, transparent 61%);
-              mask:radial-gradient(90% 220% at 50% -120%, #000 60%, transparent 61%);
-      pointer-events:none;
-    }
+    .hero h1{font-size:2.8rem; margin-bottom:20px;}
+    .hero p{font-size:1.2rem; margin-bottom:30px;}
+    .cta-group{display:flex; gap:20px; justify-content:center; flex-wrap:wrap;}
 
-    /* Cards */
-    .card{
-      background:var(--sf-white);
-      border-radius:18px;
-      box-shadow:0 10px 24px rgba(0,0,0,.12);
-      padding:28px;
-    }
-    .card-purple{
-      color:var(--sf-white);
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)),
-        linear-gradient(160deg, var(--sf-purple) 0%, var(--sf-purple-900) 100%);
-      border-radius:24px;
-      box-shadow:var(--sf-shadow);
-      border:1px solid rgba(212,175,55,.18);
-      padding:24px;
-      transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-    }
-    .card-purple.lift:hover{transform:translateY(-4px);box-shadow:var(--sf-shadow-hover)}
-    .icon-chip{
-      width:48px;height:48px;border-radius:14px;
-      background:linear-gradient(180deg, rgba(212,175,55,.95), rgba(212,175,55,.7));
-      box-shadow:0 8px 20px rgba(212,175,55,.4);
-      display:grid;place-items:center;color:#2a1e00;font-weight:900
-    }
+    /* ===== PROOF SECTION ===== */
+    .proof{background:var(--sf-light);}
+    .proof-cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; margin-top:40px;}
+    .card{background:var(--sf-white); padding:24px; border-radius:16px; box-shadow:0 4px 12px rgba(0,0,0,0.08);}
+    .card h3{color:var(--sf-purple); margin-bottom:10px;}
 
-    /* Buttons */
-    .btn{display:inline-flex;align-items:center;gap:.6rem;font-weight:800;letter-spacing:.2px;text-decoration:none;padding:14px 22px;border-radius:999px;border:2px solid transparent;transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease, color .18s ease}
-    .btn-gold{background:var(--sf-gold);color:#2a1e00;box-shadow:0 10px 24px rgba(212,175,55,.35)}
-    .btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(212,175,55,.45)}
-    .btn-outline-gold{background:transparent;border-color:var(--sf-gold);color:var(--sf-gold)}
-    .btn-outline-gold:hover{background:rgba(212,175,55,.1)}
+    /* ===== PROBLEM SECTION ===== */
+    .problems{background:#fffdf7;}
+    .icons{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:30px; margin-top:40px;}
+    .icon-box{padding:24px; border:2px solid var(--sf-gold); border-radius:16px;}
 
-    /* Header */
-    header{position:sticky;top:0;background:#fff;z-index:50;border-bottom:1px solid rgba(0,0,0,.06)}
-    .navbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 6vw}
-    .logo a{font-weight:900;color:var(--sf-purple);text-decoration:none}
-    .nav-links{display:flex;gap:18px;list-style:none;margin:0;padding:0}
-    .nav-links a{text-decoration:none;color:var(--sf-ink);padding:8px 6px;border-bottom:2px solid transparent}
-    .nav-links a[aria-current="page"]{border-bottom:2px solid var(--sf-purple)}
-    .burger{display:none;background:none;border:0;cursor:pointer}
-    .burger span{display:block;width:26px;height:2px;background:#333;margin:6px 0;transition:.2s}
-    @media (max-width:900px){
-      .burger{display:block}
-      .nav-links{position:fixed;inset:64px 0 auto 0;background:#fff;flex-direction:column;padding:16px 6vw;gap:12px;transform:translateY(-120%);transition:transform .25s ease}
-      .nav-links.open{transform:translateY(0)}
-      body.menu-open{overflow:hidden}
-    }
+    /* ===== SOLUTION ===== */
+    .solution{background:var(--sf-white);}
+    .solution ul{list-style:none; max-width:700px; margin:20px auto; text-align:left;}
+    .solution li{margin:10px 0; padding-left:20px; position:relative;}
+    .solution li::before{content:"✔"; color:var(--sf-gold); position:absolute; left:0;}
 
-    /* HERO */
-    .hero-title{font-size:clamp(36px,5vw,64px)}
-    .hero-sub{font-size:clamp(16px,2.2vw,20px)}
+    /* ===== CASE STUDY ===== */
+    .case{background:var(--sf-purple); color:var(--sf-white);}
+    .steps{display:flex; flex-direction:column; gap:20px; margin-top:30px;}
+    .step{padding:20px; background:rgba(255,255,255,0.1); border-radius:12px;}
 
-    /* Alternating sections */
-    .section{padding:64px 0}
-    .section.light{background:#faf7ff}
-    .section.dark{background:#12081e;color:#fff}
-    .section.white{background:#fff}
-    .section.dark p{color:rgba(255,255,255,.9)}
-    .section h2{color:var(--sf-ink)}
-    .section.dark h2{color:#fff}
+    /* ===== FOUNDER ===== */
+    .founder{background:var(--sf-dark); color:var(--sf-white);}
+    .founder img{width:180px; border-radius:50%; margin-bottom:20px; border:4px solid var(--sf-gold);}
 
-    /* Lists */
-    ul.clean{padding-left:1.1rem;margin:0}
-    ul.clean li{margin:.4rem 0}
+    /* ===== REELS ===== */
+    .reels iframe{width:100%; max-width:300px; height:500px; border-radius:16px;}
+    .reel-grid{display:flex; gap:20px; flex-wrap:wrap; justify-content:center; margin-top:30px;}
 
-    /* Pricing */
-    .plan{border:1px solid rgba(212,175,55,.16)}
-    .plan:hover{border-color:var(--sf-gold)}
-    .price{font-size:34px;font-weight:900}
-
-    /* Footer */
-    footer{background:#0c0614;color:#fff;padding:48px 0;text-align:center}
-    .footer-cta{display:inline-block;margin-top:14px}
-
-    /* Connect Card */
-    .connect-card{
-      position:relative;padding:56px 8%;
-      background:
-        radial-gradient(1200px 600px at 10% -20%, rgba(255,255,255,.06), transparent 60%),
-        radial-gradient(1200px 600px at 110% 120%, rgba(255,255,255,.04), transparent 60%),
-        linear-gradient(180deg, var(--sf-purple) 0%, var(--sf-purple-900) 100%);
-      color:#fff;border-radius:24px;box-shadow:var(--sf-shadow);overflow:hidden
-    }
-    .connect-card .headline{font-size:clamp(28px,3.6vw,44px);font-weight:900}
-    .connect-card .sub{color:rgba(255,255,255,.9);max-width:800px}
-    .connect-card .actions{margin-top:18px;display:flex;gap:14px;flex-wrap:wrap}
-
-    /* Floating WhatsApp */
-    .whatsapp-float{
-      position:fixed;right:18px;bottom:18px;width:54px;height:54px;border-radius:50%;
-      display:grid;place-items:center;background:#25D366;color:#fff;font-size:26px;
-      box-shadow:0 10px 24px rgba(0,0,0,.25);z-index:60
-    }
-    .whatsapp-float:hover{transform:translateY(-2px)}
+    /* ===== FINAL CTA ===== */
+    .final{background:var(--sf-purple); color:var(--sf-white);}
+    .final h2{font-size:2rem; margin-bottom:20px;}
+    .final .cta-group{margin-top:20px;}
   </style>
 </head>
+<body>
 
-<body class="home-page">
-  <!-- ✅ HEADER & NAVBAR -->
-  <header>
-    <nav class="navbar" aria-label="Primary">
-      <div class="logo"><a href="index.html" aria-label="SALONFIX Home">SALONFIX</a></div>
-      <ul class="nav-links" id="site-nav">
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">How We Work</a></li>
-        <li><a href="pricing.html">Partnership Plans</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <button class="burger" id="burger" aria-label="Toggle menu" aria-controls="site-nav" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
-  </header>
-
-  <!-- 🟣 HERO (full-bleed purple + curved bottom + gold CTA) -->
-  <section class="sf-purple pad-xl curved-bottom">
-    <div class="container" data-aos="fade-up">
-      <h1 class="hero-title">SALON OWNERS WORK LESS. <span style="box-shadow:inset 0 -10px 0 rgba(212,175,55,.28)">SALONFIX</span> DOES THE REST.</h1>
-      <p class="hero-sub subtle" style="max-width:780px;margin-top:10px">
-        YOUR IN-HOUSE BUSINESS PARTNER — we run your salon like it’s our own. Start with your
-        <span style="color:var(--sf-gold);font-weight:800">FREE 1-Month Trial</span>.
-      </p>
-      <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
-        <a href="https://wa.me/919629370666?text=FIX" class="btn btn-gold">WhatsApp “FIX”</a>
-        <a href="#contact" class="btn btn-outline-gold">Book Free Audit</a>
-      </div>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Busy salon. Bank balance still empty?</h1>
+    <p>Sales ≠ Profit. SALONFIX tracks every rupee daily — no leaks, no guessing.</p>
+    <div class="cta-group">
+      <a href="https://wa.me/919629370666?text=FIX" class="btn btn-gold">WhatsApp ‘FIX’ — FREE 1-Month Trial</a>
+      <a href="#" class="btn btn-white">Book Free Audit Call</a>
     </div>
   </section>
 
-  <!-- 🟣 ABOUT / FOUNDER -->
-  <section class="section light">
-    <div class="container grid grid-2" style="align-items:center">
-      <div data-aos="zoom-in">
-        <h2>MEET THE FOUNDER — <br/>JAWHAR RAJ RAJKUMAR</h2>
-        <p>“I’ve spent over a decade inside salons — running teams, fixing systems, and turning chaos into profit.
-        I created SALONFIX so owners don’t have to focus on anything except walking into their salon and seeing it run perfectly.
-        We run your salon like it’s our own — daily.”</p>
-      </div>
-      <div data-aos="zoom-in" data-aos-delay="200">
-        <img src="assets/founder.jpg" alt="JAWHAR RAJ RAJKUMAR">
-      </div>
+  <!-- PROOF -->
+  <section class="proof">
+    <h2>4 branches. 6 weeks. Profit flipped.</h2>
+    <div class="proof-cards">
+      <div class="card"><h3>+₹2.5L</h3><p>Profit in 30 days</p></div>
+      <div class="card"><h3>-30% Waste</h3><p>+20% Vendor Savings</p></div>
+      <div class="card"><h3>+8.4%</h3><p>Profit Growth in 6 weeks</p></div>
+    </div>
+    <div class="cta-group" style="margin-top:30px;">
+      <a href="https://wa.me/919629370666?text=FIX" class="btn btn-purple">See Your Numbers Tomorrow — Start FREE Trial</a>
     </div>
   </section>
 
-  <!-- 🟣 WHAT EXACTLY IS SALONFIX -->
-  <section class="section dark">
-    <div class="container grid grid-2" style="align-items:center">
-      <div data-aos="fade-right">
-        <img src="assets/team-group.jpg" alt="SALONFIX in-house team at work">
-      </div>
-      <div data-aos="fade-left">
-        <h2>WHAT EXACTLY IS SALONFIX?</h2>
-        <h3>NOT AN APP. NOT A CONSULTANT. YOUR IN-HOUSE BUSINESS TEAM.</h3>
-        <p>We step into your salon like we own it — tracking every number, fixing every leak, and building every system you wish you had time for.</p>
-        <ul class="clean">
-          <li><strong>Daily & Weekly Data</strong> — See your sales, profits, and gaps clearly.</li>
-          <li><strong>Team Accountability</strong> — Training, incentives, and checklists in place.</li>
-          <li><strong>Stock & Cost Control</strong> — No more product wastage or “missing” items.</li>
-          <li><strong>Growth Strategy</strong> — Pricing, marketing, and expansion mapped for you.</li>
-        </ul>
-      </div>
+  <!-- PROBLEMS -->
+  <section class="problems">
+    <h2>Why salons lose profit even when sales are high…</h2>
+    <div class="icons">
+      <div class="icon-box">💸 Manager salary ≠ System control</div>
+      <div class="icon-box">🪙 Petty cash leaks silently bleed profit</div>
+      <div class="icon-box">🔁 No rebooking system = empty chairs</div>
+      <div class="icon-box">🛍 Retail zero = weak team control</div>
+    </div>
+    <div class="cta-group" style="margin-top:30px;">
+      <a href="https://wa.me/919629370666?text=FIX" class="btn btn-gold">We fix this daily. DM ‘FIX’ now.</a>
     </div>
   </section>
 
-  <!-- 🟣 SYSTEMISED FIX: Audit → Solutions → Plan → Trial → Implement (curved premium cards) -->
-  <section class="section white">
-    <div class="container">
-      <h2 style="margin-bottom:12px">How SALONFIX Runs Your Salon</h2>
-      <p>Human, hands-on, daily control — not just advice or software.</p>
-      <div class="grid" style="grid-template-columns:repeat(5, minmax(0,1fr));gap:18px;margin-top:18px">
-        <article class="card-purple lift" data-aos="fade-up">
-          <div class="icon-chip">1</div>
-          <h3 style="margin-top:12px">Audit</h3>
-          <p>We audit numbers, leaks, team controls, and client flow.</p>
-        </article>
-        <article class="card-purple lift" data-aos="fade-up" data-aos-delay="60">
-          <div class="icon-chip">2</div>
-          <h3 style="margin-top:12px">Solutions</h3>
-          <p>Plug leaks with SOPs, dashboards, and daily accountability.</p>
-        </article>
-        <article class="card-purple lift" data-aos="fade-up" data-aos-delay="120">
-          <div class="icon-chip">3</div>
-          <h3 style="margin-top:12px">Plan</h3>
-          <p>Contribution margin pricing, offer matrix, targets, incentives.</p>
-        </article>
-        <article class="card-purple lift" data-aos="fade-up" data-aos-delay="180">
-          <div class="icon-chip">4</div>
-          <h3 style="margin-top:12px">Trial</h3>
-          <p><span style="color:var(--sf-gold);font-weight:800">FREE 1-Month Trial</span> to feel daily control without risk.</p>
-        </article>
-        <article class="card-purple lift" data-aos="fade-up" data-aos-delay="240">
-          <div class="icon-chip">5</div>
-          <h3 style="margin-top:12px">Implement</h3>
-          <p>We run your salon like our own — every day, every branch.</p>
-        </article>
-      </div>
+  <!-- SOLUTION -->
+  <section class="solution">
+    <h2>We don’t just consult. We take over.</h2>
+    <p>SALONFIX runs your branch daily with full proof & accountability:</p>
+    <ul>
+      <li>Daily reports on WhatsApp</li>
+      <li>Branch control with proof photos & logs</li>
+      <li>Staff accountability + incentive system</li>
+      <li>Owner Action Box = clear next steps</li>
+    </ul>
+    <div class="cta-group">
+      <a href="https://wa.me/919629370666?text=FIX" class="btn btn-gold">Try it FREE for 1 Month — WhatsApp FIX now</a>
     </div>
   </section>
 
-  <!-- 🟣 RESULTS (kept, now styled) -->
-  <section class="section white">
-    <div class="container grid grid-2" style="align-items:center">
-      <div data-aos="fade-right">
-        <h2>WHAT KIND OF RESULTS CAN SALONFIX DELIVER?</h2>
-        <ul class="clean">
-          <li><strong>30% LESS PRODUCT WASTAGE</strong> — When stock is tracked daily, nothing “slips away.”</li>
-          <li><strong>10–20% VENDOR SAVINGS</strong> — Old supplier rates get renegotiated; silent costs drop.</li>
-          <li><strong>ACCOUNTABLE, MOTIVATED TEAMS</strong> — Staff know what’s expected and deliver.</li>
-          <li><strong>REBOOKING RATES RISE</strong> — More clients return; revenue becomes consistent.</li>
-          <li><strong>CLEAR, GROWING PROFITS</strong> — Owners finally see the data match the effort.</li>
-        </ul>
-      </div>
-      <div data-aos="fade-left">
-        <img src="assets/results.jpg" alt="Visible results from SALONFIX systems">
-      </div>
+  <!-- CASE STUDY -->
+  <section class="case">
+    <h2>From Chaos to Control.</h2>
+    <div class="steps">
+      <div class="step">❌ Before: No daily numbers, rebooking 0, retail 3%</div>
+      <div class="step">🔄 After: Daily P&L + scripts → retail 11%</div>
+      <div class="step">✅ Result: Profit +8.4% in 6 weeks</div>
+    </div>
+    <div class="cta-group">
+      <a href="https://wa.me/919629370666?text=FIX" class="btn btn-white">Your branch could be next — Start FREE Trial</a>
     </div>
   </section>
 
-  <!-- 🟣 PRICING PREVIEW (purple curved cards; hover gold border) -->
-  <section class="section light" id="pricing">
-    <div class="container">
-      <h2>Partnership Plans</h2>
-      <div class="grid grid-3" style="margin-top:14px">
-        <article class="card-purple plan lift" data-aos="zoom-in">
-          <h3>START STRONG</h3>
-          <p class="price">₹ XX,XXX/mo</p>
-          <p>Single-location owners who want clean systems, zero leakage, and daily profit clarity.</p>
-          <a href="https://wa.me/919629370666?text=START%20STRONG" class="btn btn-gold">Start Free Trial</a>
-        </article>
-        <article class="card-purple plan lift" data-aos="zoom-in" data-aos-delay="80">
-          <h3>STAY SHARP</h3>
-          <p class="price">₹ XX,XXX/mo</p>
-          <p>Multi-location control: branch-wise reporting, staff incentives, offer matrix & KPIs.</p>
-          <a href="https://wa.me/919629370666?text=STAY%20SHARP" class="btn btn-gold">Start Free Trial</a>
-        </article>
-        <article class="card-purple plan lift" data-aos="zoom-in" data-aos-delay="160">
-          <h3>SCALE CONTROL</h3>
-          <p class="price">₹ XX,XXX/mo</p>
-          <p>Franchise-grade oversight: daily dashboards, inventory guards, vendor control, audits.</p>
-          <a href="https://wa.me/919629370666?text=SCALE%20CONTROL" class="btn btn-gold">Start Free Trial</a>
-        </article>
-      </div>
+  <!-- FOUNDER -->
+  <section class="founder">
+    <img src="assets/founder.jpg" alt="Jawhar Raj Rajkumar">
+    <h2>10+ years inside salons — I’ve fixed it all.</h2>
+    <p>I created SALONFIX so owners don’t have to chase staff, stock, or vendors. I’ve turned chaos into profit across 100+ salon days. Now, I’ll do it for you.</p>
+    <div class="cta-group">
+      <a href="https://wa.me/919629370666?text=FIX" class="btn btn-gold">WhatsApp FIX — Start Your FREE 1-Month Trial</a>
     </div>
   </section>
 
-  <!-- 🟣 CONTACT (Connect-Card premium style) -->
-  <section class="section white" id="contact">
-    <div class="container">
-      <div class="connect-card" data-aos="fade-up">
-        <div class="headline">LET’S CONNECT</div>
-        <p class="sub">Tell us your top 3 pains — SALONFIX will run your salon like it’s our own. Start with your <span style="color:var(--sf-gold);font-weight:800">FREE 1-Month Trial</span>.</p>
-        <div class="actions">
-          <a class="btn btn-gold" href="https://wa.me/919629370666?text=FIX">WhatsApp “FIX”</a>
-          <a class="btn btn-outline-gold" href="mailto:hello@salonfix.in">Email Us</a>
-          <a class="btn btn-outline-gold" href="/book-audit.html">Book Free Audit</a>
-        </div>
-      </div>
+  <!-- REELS -->
+  <section class="reels">
+    <h2>See How We Fix Real Problems Daily</h2>
+    <div class="reel-grid">
+      <iframe src="https://www.instagram.com/reel/xyz/embed" frameborder="0"></iframe>
+      <iframe src="https://www.instagram.com/reel/abc/embed" frameborder="0"></iframe>
+      <iframe src="https://www.instagram.com/reel/123/embed" frameborder="0"></iframe>
     </div>
   </section>
 
-  <!-- ✅ FOOTER -->
-  <footer>
-    <div class="container">
-      <h3>WHEN WILL YOUR SALON FINALLY RUN THE WAY YOU WANT IT TO?</h3>
-      <p>Your salon doesn’t need another piece of software or casual tips. It needs a dedicated partner to take over the operational weight — so you can step back, see the bigger picture, and grow.</p>
-      <a href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Start%20my%20FREE%201-Month%20Trial." class="btn btn-gold footer-cta">WHATSAPP US NOW</a>
+  <!-- FINAL CTA -->
+  <section class="final">
+    <h2>SALON OWNERS WORK LESS. SALONFIX DOES THE REST.</h2>
+    <p>Experience it yourself with our FREE 1-Month Trial.</p>
+    <div class="cta-group">
+      <a href="https://wa.me/919629370666?text=FIX" class="btn btn-gold">WhatsApp FIX Now</a>
+      <a href="#" class="btn btn-white">Book Free Audit Call</a>
     </div>
-  </footer>
+  </section>
 
-  <!-- ✅ Floating WhatsApp -->
-  <a href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Start%20my%20FREE%201-Month%20Trial." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <!-- ✅ Scripts -->
-  <script>
-    // Single, deduped burger script
-    const burger = document.getElementById('burger');
-    const nav = document.getElementById('site-nav');
-
-    if (burger && nav) {
-      burger.addEventListener('click', () => {
-        const open = nav.classList.toggle('open');
-        document.body.classList.toggle('menu-open', open);
-        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-
-      nav.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-          nav.classList.remove('open');
-          document.body.classList.remove('menu-open');
-          burger.setAttribute('aria-expanded','false');
-        });
-      });
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          nav.classList.remove('open');
-          document.body.classList.remove('menu-open');
-          burger.setAttribute('aria-expanded','false');
-        }
-      });
-    }
-
-    // AOS init
-    window.addEventListener('DOMContentLoaded', () => AOS.init({ duration: 900, once: true }));
-  </script>
 </body>
 </html>
