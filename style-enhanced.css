@@ -787,3 +787,9 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
     background: var(--sf-gold);
     color: #1b1230;
 }
+.founder .photo img {
+    width: 250px;  /* Set a fixed size */
+    height: 250px; /* Ensure the height matches the width */
+    border-radius: 20px; /* Rounded square corners */
+    object-fit: cover; /* Ensure the image fills the square without distortion */
+}
