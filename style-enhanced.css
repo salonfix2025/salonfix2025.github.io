@@ -1706,4 +1706,31 @@ html, body {
   left: 50%;
   margin-left: -50vw;
 }
+/* === GLOBAL BACKGROUND COLOR OVERRIDE === */
+html, body {
+  background-color: #b4b4b4 !important;
+}
+
+.section,
+.alt-section,
+.reports-strip,
+.cta-strip,
+.connect-card,
+.contact-main,
+footer,
+.hero,
+.founder,
+.problems,
+.case,
+.card,
+.problem-card,
+.pricing-box,
+.report-card {
+  background-color: #b4b4b4 !important;
+}
+
+/* Ensure empty gaps also inherit grey */
+* {
+  background-color: transparent;
+}
 
