@@ -1087,3 +1087,41 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
     background: var(--sf-gold);
     color: #1b1230;
 }
+.founder {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Adjust gap for the space between image and text */
+    padding: 40px;
+    background: linear-gradient(145deg, var(--sf-purple), #3a005f);
+    border-radius: 20px;
+    color: var(--sf-white);
+    width: 100%;
+}
+
+.founder .photo {
+    flex: 0 0 auto; /* Keep the image at its own size */
+    width: 250px; /* Adjust width to suit your design */
+    height: 250px;
+    border-radius: 20px; /* Rounded square corners */
+    border: 5px solid var(--sf-gold);
+    box-shadow: 0 0 15px rgba(212,175,55,0.8);
+}
+
+.founder .content {
+    flex: 1; /* Allow the content to take up remaining space */
+    min-width: 300px; /* Ensure text remains responsive */
+}
+
+.founder .content h2 {
+    margin-bottom: 15px;
+}
+
+.founder .content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.founder .content li {
+    margin: 8px 0;
+}
