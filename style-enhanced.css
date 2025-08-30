@@ -1227,4 +1227,14 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
     align-items: flex-start; /* Align the content to the left */
     justify-content: flex-start;
 }
+.case .card {
+    font-size: 1.3rem;   /* Increase font size */
+    font-weight: 700;    /* Make text bold */
+    line-height: 1.6;    /* Add breathing space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  /* Center align text */
+    padding: 30px;
+}
 
