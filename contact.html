@@ -65,8 +65,12 @@
     .system-card h4{margin:0 0 6px;font-weight:800}
     .system-card p{color:rgba(255,255,255,.9)}
 
-    /* Connect grid (restored rounded style) */
-    .connect-grid{display:grid;gap:20px;grid-template-columns:repeat(2,1fr)}
+    /* Connect grid (2×2 layout) */
+    .connect-grid{
+      display:grid;
+      gap:20px;
+      grid-template-columns:repeat(2,1fr); /* ✅ now 2 per row */
+    }
     @media(max-width:900px){.connect-grid{grid-template-columns:1fr}}
     .connect-item{display:flex;align-items:center;gap:14px;background:linear-gradient(160deg,var(--sf-purple) 0%,var(--sf-purple-900) 100%);color:#fff;border-radius:20px;box-shadow:var(--sf-shadow);border:1px solid rgba(212,175,55,.18);padding:20px;transition:.2s;text-decoration:none}
     .connect-item:hover{transform:translateY(-4px);box-shadow:var(--sf-shadow-hover);border-color:var(--sf-gold)}
@@ -131,23 +135,11 @@
       <h2 style="text-align:center;color:var(--sf-purple);margin-bottom:20px">LET’S CONNECT</h2>
       <div class="connect-grid" data-aos="fade-up">
         <!-- Row 1 -->
-        <a class="connect-item" href="tel:+919629370666">
-          <span class="ci-icon"><i class="fa-solid fa-phone"></i></span>
-          <div><strong>Call Us Directly</strong><br/>+91 96293 70666</div>
-        </a>
-        <a class="connect-item" href="https://wa.me/919629370666?text=FIX" target="_blank">
-          <span class="ci-icon"><i class="fa-brands fa-whatsapp"></i></span>
-          <div><strong>WhatsApp</strong><br/>+91 96293 70666</div>
-        </a>
+        <a class="connect-item" href="tel:+919629370666"><span class="ci-icon"><i class="fa-solid fa-phone"></i></span><div><strong>Call Us Directly</strong><br/>+91 96293 70666</div></a>
+        <a class="connect-item" href="https://wa.me/919629370666?text=FIX" target="_blank"><span class="ci-icon"><i class="fa-brands fa-whatsapp"></i></span><div><strong>WhatsApp</strong><br/>+91 96293 70666</div></a>
         <!-- Row 2 -->
-        <a class="connect-item" href="https://instagram.com/salonfix.in" target="_blank">
-          <span class="ci-icon"><i class="fa-brands fa-instagram"></i></span>
-          <div><strong>Instagram DM</strong><br/>@salonfix.in</div>
-        </a>
-        <a class="connect-item" href="mailto:salonfix2025@gmail.com">
-          <span class="ci-icon"><i class="fa-solid fa-envelope"></i></span>
-          <div><strong>Email</strong><br/>salonfix2025@gmail.com</div>
-        </a>
+        <a class="connect-item" href="https://instagram.com/salonfix.in" target="_blank"><span class="ci-icon"><i class="fa-brands fa-instagram"></i></span><div><strong>Instagram DM</strong><br/>@salonfix.in</div></a>
+        <a class="connect-item" href="mailto:salonfix2025@gmail.com"><span class="ci-icon"><i class="fa-solid fa-envelope"></i></span><div><strong>Email</strong><br/>salonfix2025@gmail.com</div></a>
       </div>
     </div>
   </section>
