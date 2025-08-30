@@ -793,3 +793,34 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
     border-radius: 20px; /* Rounded square corners */
     object-fit: cover; /* Ensure the image fills the square without distortion */
 }
+.problems {
+    background: linear-gradient(145deg, var(--sf-purple), #3a005f);
+    color: var(--sf-white);
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between; /* Space cards evenly */
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 10%; /* Add left and right white space */
+}
+
+.problem-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    color: var(--sf-white);
+    font-weight: 600;
+    text-align: center;
+    width: calc(50% - 20px); /* Each card takes 50% of the width */
+}
+
+.problem-card:nth-child(3),
+.problem-card:nth-child(4) {
+    margin-left: auto; /* Align the last two cards to the right */
+}
+
+.problem-card:hover {
+    background: var(--sf-gold);
+    color: #1b1230;
+}
