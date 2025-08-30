@@ -1648,4 +1648,62 @@ footer {
 .hero {
   background-color: #a6a6a6;
 }
+/* ========= Kill right white gutter + make hero full-bleed ========= */
+
+/* never allow horizontal scrolling and make the page backdrop grey */
+html, body {
+  overflow-x: hidden !important;
+  background: #737373 !important;
+}
+
+/* if you have outer wrappers, clamp them too */
+.wrapper, .page, .site, .app {
+  overflow-x: hidden !important;
+}
+
+/* Full-bleed hero: break it out of centered containers */
+.hero, .sf-hero, .hero-banner {
+  position: relative;
+  width: 100vw;                 /* span the full viewport width */
+  left: 50%;                    /* shift to center */
+  right: 50%;
+  margin-left: -50vw;           /* pull out of the container */
+  margin-right: -50vw;
+  min-height: 80vh;             /* banner height */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* keep your gradient/image here; example: */
+  /* background-image: linear-gradient(135deg,#4B0082 0%, #D4AF37 100%); */
+}
+
+/* Keep the content centered INSIDE the hero */
+.hero .hero-content, .sf-hero .hero-content, .hero-banner .hero-content {
+  max-width: 1200px;            /* your site container */
+  margin: 0 auto;
+  padding: clamp(16px, 6vw, 64px);
+}
+
+/* Sometimes a child container sets max-width and causes the gap — neutralize it */
+.hero > .container,
+.sf-hero > .container,
+.hero-banner > .container {
+  max-width: none !important;
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+/* For small screens, keep the hero tall and safe */
+@media (max-width: 768px) {
+  .hero, .sf-hero, .hero-banner {
+    min-height: 70svh;          /* viewport-height on mobile */
+  }
+}
+.hero .hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
+}
 
