@@ -1,365 +1,97 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pricing – SALONFIX</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SALONFIX Pricing – Partnership Plans</title>
 
   <!-- ✅ Canonical + Favicon -->
   <link rel="canonical" href="https://www.salonfix.in/pricing.html" />
   <link rel="icon" href="assets/favicon.png" type="image/png" />
 
   <!-- ✅ SEO -->
-  <meta name="description" content="SALONFIX is YOUR IN-HOUSE BUSINESS PARTNER — one format, one system, for single or multi-branch salons. Start with a FREE 1-Month Trial." />
+  <meta name="description" content="Choose the right SALONFIX partnership plan. All include daily operations, financial clarity, and team control. Start with a FREE 1-Month Trial." />
   <meta name="theme-color" content="#4B0082" />
 
-  <!-- ✅ Open Graph / Twitter -->
-  <meta property="og:site_name" content="SALONFIX" />
-  <meta property="og:title" content="SALONFIX – Partnership Plans" />
-  <meta property="og:description" content="START STRONG, STAY SHARP, STYLE EMPIRE, and LIGHT TOUCH — choose the plan that fits your salon. FREE 1-Month Trial." />
-  <meta property="og:image" content="https://www.salonfix.in/assets/og-image.jpg" />
-  <meta property="og:url" content="https://www.salonfix.in/pricing.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_IN" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://www.salonfix.in/assets/og-image.jpg" />
-
-  <!-- ✅ Performance & Libs -->
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-  <link rel="preload" as="image" href="assets/og-image.jpg" />
+  <!-- ✅ Fonts + Icons + Animations -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- ✅ Shared Styles -->
+  <link rel="stylesheet" href="style-enhanced.css" />
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
-
-  <!-- ✅ Schema.org JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "@id":"https://www.salonfix.in/#org",
-    "name":"SALONFIX",
-    "url":"https://www.salonfix.in",
-    "logo":"https://www.salonfix.in/assets/og-image.jpg",
-    "sameAs":["https://www.instagram.com/salonfix.in/"],
-    "telephone":"+91-9629370666",
-    "founder":{"@type":"Person","name":"JAWHAR RAJ RAJKUMAR"}
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "@id":"https://www.salonfix.in/#website",
-    "url":"https://www.salonfix.in",
-    "name":"SALONFIX",
-    "publisher":{"@id":"https://www.salonfix.in/#org"}
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Service",
-    "@id":"https://www.salonfix.in/pricing.html#service",
-    "serviceType":"SALONFIX Partnership Plans",
-    "provider":{"@id":"https://www.salonfix.in/#org"},
-    "url":"https://www.salonfix.in/pricing.html",
-    "offers":[
-      {
-        "@type":"Offer",
-        "name":"START STRONG",
-        "priceCurrency":"INR",
-        "priceSpecification":{"@type":"PriceSpecification","minPrice":25000,"maxPrice":50000},
-        "description":"System setup & reset (1–2 weeks)"
-      },
-      {
-        "@type":"Offer",
-        "name":"STAY SHARP",
-        "priceCurrency":"INR",
-        "priceSpecification":{"@type":"PriceSpecification","minPrice":30000,"maxPrice":75000},
-        "description":"Ongoing operations control (monthly)"
-      },
-      {
-        "@type":"Offer",
-        "name":"STYLE EMPIRE",
-        "priceCurrency":"INR",
-        "price":75000,
-        "description":"Multi-branch operations (starting)"
-      },
-      {
-        "@type":"Offer",
-        "name":"LIGHT TOUCH",
-        "priceCurrency":"INR",
-        "price":15000,
-        "description":"Remote strategic support (monthly)"
-      }
-    ]
-  }
-  </script>
-
-  <!-- 🔮 Global Style System -->
-  <style>
-    :root{
-      --sf-purple:#4B0082; --sf-purple-900:#2d004c; --sf-gold:#D4AF37;
-      --sf-ink:#1b1230; --sf-white:#ffffff;
-      --sf-radius-lg:24px; --sf-radius:18px;
-      --sf-shadow:0 18px 40px rgba(0,0,0,.25);
-      --sf-shadow-soft:0 10px 24px rgba(0,0,0,.12);
-      --sf-shadow-hover:0 22px 48px rgba(0,0,0,.28);
-    }
-    html,body{margin:0;padding:0;font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--sf-ink)}
-    img{max-width:100%;height:auto;display:block}
-
-    /* Type */
-    h1,h2,h3{margin:0 0 .5rem;line-height:1.1}
-    h1{font-weight:900}
-    h2{font-weight:800}
-    h3{font-weight:800;color:var(--sf-gold)}
-    p{line-height:1.7;color:rgba(27,18,48,.9)}
-    .subtle{color:rgba(255,255,255,.9)}
-
-    /* Layout */
-    .container{max-width:1200px;margin:0 auto;padding:0 6vw}
-    .grid{display:grid;gap:24px}
-    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    @media (max-width:900px){.grid-3{grid-template-columns:1fr}}
-
-    /* Header */
-    header{position:sticky;top:0;background:#fff;z-index:50;border-bottom:1px solid rgba(0,0,0,.06)}
-    .navbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 6vw}
-    .logo a{font-weight:900;color:var(--sf-purple);text-decoration:none}
-    .nav-links{display:flex;gap:18px;list-style:none;margin:0;padding:0}
-    .nav-links a{text-decoration:none;color:var(--sf-ink);padding:8px 6px;border-bottom:2px solid transparent}
-    .nav-links a[aria-current="page"]{border-bottom:2px solid var(--sf-purple)}
-    .burger{display:none;background:none;border:0;cursor:pointer}
-    .burger span{display:block;width:26px;height:2px;background:#333;margin:6px 0;transition:.2s}
-    @media (max-width:900px){
-      .burger{display:block}
-      .nav-links{position:fixed;inset:64px 0 auto 0;background:#fff;flex-direction:column;padding:16px 6vw;gap:12px;transform:translateY(-120%);transition:transform .25s ease}
-      .nav-links.open{transform:translateY(0)}
-      body.menu-open{overflow:hidden}
-    }
-
-    /* Full-bleed purple hero with curved bottom */
-    .sf-purple{
-      position:relative;color:#fff;
-      background:
-        radial-gradient(1200px 600px at 10% -20%, rgba(255,255,255,.06), transparent 60%),
-        radial-gradient(1200px 600px at 110% 120%, rgba(255,255,255,.04), transparent 60%),
-        linear-gradient(180deg, var(--sf-purple) 0%, var(--sf-purple-900) 100%);
-    }
-    .pad-xl{padding:84px 0}
-    .curved-bottom::after{
-      content:"";position:absolute;left:0;right:0;bottom:-1px;height:48px;
-      background:radial-gradient(120% 120% at 50% -20%, rgba(0,0,0,.28) 0%, transparent 70%);
-      -webkit-mask:radial-gradient(90% 220% at 50% -120%, #000 60%, transparent 61%);
-              mask:radial-gradient(90% 220% at 50% -120%, #000 60%, transparent 61%);
-      pointer-events:none;
-    }
-
-    /* Buttons */
-    .btn{display:inline-flex;align-items:center;gap:.6rem;font-weight:800;letter-spacing:.2px;text-decoration:none;padding:14px 22px;border-radius:999px;border:2px solid transparent;transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease, color .18s ease}
-    .btn-gold{background:var(--sf-gold);color:#2a1e00;box-shadow:0 10px 24px rgba(212,175,55,.35)}
-    .btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(212,175,55,.45)}
-    .btn-outline-gold{background:transparent;border-color:var(--sf-gold);color:var(--sf-gold)}
-    .btn-outline-gold:hover{background:rgba(212,175,55,.1)}
-
-    /* Pricing cards (purple curved + gold hover) */
-    .plans{padding:56px 0;background:#faf7ff}
-    .plans-grid{display:grid;gap:18px;grid-template-columns:repeat(4,minmax(0,1fr))}
-    @media (max-width:1100px){.plans-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media (max-width:680px){.plans-grid{grid-template-columns:1fr}}
-
-    .card-purple{
-      color:#fff;border-radius:24px;box-shadow:var(--sf-shadow);padding:24px;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)),
-        linear-gradient(160deg, var(--sf-purple) 0%, var(--sf-purple-900) 100%);
-      border:1px solid rgba(212,175,55,.18);
-      transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-      display:flex;flex-direction:column;gap:10px
-    }
-    .card-purple:hover{transform:translateY(-4px);box-shadow:var(--sf-shadow-hover);border-color:var(--sf-gold)}
-    .plan-title{font-weight:900;font-size:20px}
-    .plan-sub{opacity:.95}
-    .price{font-size:22px;font-weight:900}
-
-    /* CTA strip */
-    .cta-strip{padding:56px 0;background:#fff;text-align:center}
-
-    /* Connect Card */
-    .connect-card{
-      position:relative;padding:56px 8%;
-      background:
-        radial-gradient(1200px 600px at 10% -20%, rgba(255,255,255,.06), transparent 60%),
-        radial-gradient(1200px 600px at 110% 120%, rgba(255,255,255,.04), transparent 60%),
-        linear-gradient(180deg, var(--sf-purple) 0%, var(--sf-purple-900) 100%);
-      color:#fff;border-radius:24px;box-shadow:var(--sf-shadow);overflow:hidden
-    }
-    .connect-card .headline{font-size:clamp(28px,3.6vw,44px);font-weight:900}
-    .connect-card .sub{color:rgba(255,255,255,.9);max-width:800px}
-    .connect-card .actions{margin-top:18px;display:flex;gap:14px;flex-wrap:wrap}
-
-    /* Footer */
-    footer{background:#0c0614;color:#fff;padding:48px 0;text-align:center}
-    .footer-cta{display:inline-block;margin-top:14px}
-
-    /* Floating WhatsApp */
-    .whatsapp-float{
-      position:fixed;right:18px;bottom:18px;width:54px;height:54px;border-radius:50%;
-      display:grid;place-items:center;background:#25D366;color:#fff;font-size:26px;
-      box-shadow:0 10px 24px rgba(0,0,0,.25);z-index:60
-    }
-    .whatsapp-float:hover{transform:translateY(-2px)}
-  </style>
 </head>
 
-<body class="pricing-page">
-  <!-- ✅ HEADER -->
+<body onload="AOS.init({ duration: 900, once: true })" class="pricing-page">
+
+  <!-- ✅ Navbar -->
   <header>
-   <nav>
-  <div class="logo">SALONFIX</div>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="pricing.html">Plans & Pricing</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <a href="https://wa.me/919629370666?text=FIX" class="cta-btn">WhatsApp FIX</a>
-</nav>
+    <div class="navbar purple">
+      <div class="logo">SALONFIX</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html" class="active">Plans & Pricing</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="https://wa.me/919629370666?text=FIX" class="cta-btn">WhatsApp FIX</a>
+    </div>
   </header>
 
-  <!-- 🟣 HERO (full-bleed purple + curved bottom + gold CTA) -->
-  <section class="sf-purple pad-xl curved-bottom">
-    <div class="container" data-aos="fade-up">
-      <h1 style="color:#fff;font-size:clamp(36px,5vw,64px)">Partnership Plans</h1>
-      <p class="subtle" style="max-width:760px;margin-top:10px">
-        One format, one system — whether you run one salon or many.
-      </p>
-      <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
-        <a class="btn btn-gold" href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Help%20me%20choose%20the%20right%20plan%20for%20my%20salon.">DM “FIX” — Help Me Choose</a>
-        <a class="btn btn-outline-gold" href="#plans">Compare Plans</a>
+  <!-- 🟣 HERO -->
+  <section class="hero" data-aos="fade-up">
+    <h1>PARTNERSHIP PLANS</h1>
+    <p>Choose the plan that fits your salon — all include operations, numbers, and growth control.</p>
+  </section>
+
+  <!-- 🟣 PRICING GRID -->
+  <section class="section light" data-aos="fade-up">
+    <h2 class="section-title gold">Our Plans</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Starter Plan</h3>
+        <p>✅ Daily operations setup<br>✅ Weekly reporting<br>✅ Staff accountability<br>❌ Growth strategy</p>
+        <p><strong>Best for: Single salons</strong></p>
+        <a href="https://wa.me/919629370666?text=FIX" class="cta-btn">Start FREE Trial</a>
+      </div>
+      <div class="card">
+        <h3>Growth Plan</h3>
+        <p>✅ Daily operations<br>✅ Financial clarity<br>✅ Team incentives<br>✅ Monthly growth review</p>
+        <p><strong>Best for: Multi-branch salons</strong></p>
+        <a href="https://wa.me/919629370666?text=FIX" class="cta-btn">Start FREE Trial</a>
+      </div>
+      <div class="card">
+        <h3>Scale Plan</h3>
+        <p>✅ All Growth Plan features<br>✅ Marketing direction<br>✅ Pricing strategy<br>✅ Expansion playbook</p>
+        <p><strong>Best for: Scaling to 5+ branches</strong></p>
+        <a href="https://wa.me/919629370666?text=FIX" class="cta-btn">Start FREE Trial</a>
       </div>
     </div>
   </section>
 
-  <!-- 🟣 PLANS (purple curved cards with hover gold outline) -->
-  <section id="plans" class="plans">
-    <div class="container">
-      <div class="plans-grid" data-aos="fade-up">
-        <!-- START STRONG -->
-        <article class="card-purple">
-          <div>
-            <div class="plan-title">START STRONG</div>
-            <div class="plan-sub">System Setup & Reset</div>
-          </div>
-          <p>Full SOP setup, stock audit & front desk coaching. Perfect for salons starting fresh or rebooting systems.</p>
-          <div class="price">₹25K–₹50K (1–2 weeks setup)</div>
-          <a class="btn btn-gold" href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20I%20want%20START%20STRONG%20setup%20for%20my%20salon.">Choose START STRONG</a>
-        </article>
-
-        <!-- STAY SHARP -->
-        <article class="card-purple">
-          <div>
-            <div class="plan-title">STAY SHARP</div>
-            <div class="plan-sub">Ongoing Operations Control</div>
-          </div>
-          <p>Daily numbers, weekly oversight & monthly dashboards. Keeps your salon on track every single day.</p>
-          <div class="price">₹30K–₹75K / month</div>
-          <a class="btn btn-gold" href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20I%20want%20STAY%20SHARP%20(ongoing%20ops%20control).">Choose STAY SHARP</a>
-        </article>
-
-        <!-- STYLE EMPIRE -->
-        <article class="card-purple">
-          <div>
-            <div class="plan-title">STYLE EMPIRE</div>
-            <div class="plan-sub">Multi-Branch Ops</div>
-          </div>
-          <p>One SOP, one reporting format — across every branch. Centralized control for growing salon groups.</p>
-          <div class="price">Starts ₹75K / month</div>
-          <a class="btn btn-gold" href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20I%20want%20STYLE%20EMPIRE%20(multi-branch%20ops).">Choose STYLE EMPIRE</a>
-        </article>
-
-        <!-- LIGHT TOUCH -->
-        <article class="card-purple">
-          <div>
-            <div class="plan-title">LIGHT TOUCH</div>
-            <div class="plan-sub">Remote Strategic Support</div>
-          </div>
-          <p>WhatsApp guidance, monthly reviews & strategic advice. Best for owner-managed salons needing minimal direction.</p>
-          <div class="price">₹15K / month</div>
-          <a class="btn btn-gold" href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20I%20want%20LIGHT%20TOUCH%20(remote%20support).">Choose LIGHT TOUCH</a>
-        </article>
-      </div>
-    </div>
+  <!-- 🟣 CTA BLOCK -->
+  <section class="hero final-cta" data-aos="fade-up">
+    <h2>SALONFIX = YOUR IN-HOUSE BUSINESS PARTNER</h2>
+    <p>Work less. SALONFIX does the rest. Start with your FREE 1-Month Trial.</p>
+    <a href="https://wa.me/919629370666?text=FIX" class="cta-btn">WhatsApp FIX Now</a>
   </section>
 
-  <!-- 🟣 CTA STRIP -->
-  <section class="cta-strip">
-    <div class="container" data-aos="zoom-in">
-      <h3 style="font-weight:900">Prefer to test first? Start your FREE 1-Month Trial.</h3>
-      <a class="btn btn-gold" href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Start%20my%20FREE%201-Month%20Trial.">DM “FIX” — START FREE TRIAL</a>
-    </div>
-  </section>
-
-  <!-- 🟣 CONTACT (Connect-Card premium style) -->
-  <section class="container" style="padding:0 0 56px 0">
-    <div class="connect-card" data-aos="fade-up">
-      <div class="headline">LET’S CONNECT</div>
-      <p class="sub">Tell us your top 3 pains — SALONFIX will run your salon like it’s our own. Start with your <span style="color:var(--sf-gold);font-weight:800">FREE 1-Month Trial</span>.</p>
-      <div class="actions">
-        <a class="btn btn-gold" href="https://wa.me/919629370666?text=FIX">WhatsApp “FIX”</a>
-        <a class="btn btn-outline-gold" href="mailto:hello@salonfix.in">Email Us</a>
-        <a class="btn btn-outline-gold" href="/book-audit.html">Book Free Audit</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ✅ FOOTER -->
+  <!-- ✅ Footer -->
   <footer>
     <div class="container">
-      <h3>READY TO LET SALONFIX WORK FOR YOU?</h3>
-      <a href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Help%20me%20choose%20the%20right%20plan." class="btn btn-gold footer-cta">WHATSAPP US NOW</a>
+      <h3>LET'S SCALE YOUR SALON</h3>
+      <p>© 2025 SALONFIX. ALL RIGHTS RESERVED.</p>
     </div>
   </footer>
 
   <!-- ✅ Floating WhatsApp -->
-  <a href="https://wa.me/919629370666?text=DM%20FIX%20%E2%80%94%20Help%20me%20choose%20the%20right%20plan." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/919629370666?text=FIX" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- ✅ Scripts (deduped) -->
-  <script>
-    const burger = document.getElementById('burger');
-    const nav = document.getElementById('site-nav');
-
-    if (burger && nav) {
-      burger.addEventListener('click', () => {
-        const open = nav.classList.toggle('open');
-        document.body.classList.toggle('menu-open', open);
-        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-
-      nav.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-          nav.classList.remove('open');
-          document.body.classList.remove('menu-open');
-          burger.setAttribute('aria-expanded','false');
-        });
-      });
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          nav.classList.remove('open');
-          document.body.classList.remove('menu-open');
-          burger.setAttribute('aria-expanded','false');
-        }
-      });
-    }
-
-    window.addEventListener('DOMContentLoaded', () => AOS.init({ duration: 900, once: true }));
-  </script>
 </body>
 </html>
