@@ -1790,4 +1790,29 @@ footer {
   background: linear-gradient(145deg, var(--sf-purple), #3a005f); /* brand purple */
   color: #fff;
 }
+/* HERO BANNER FULL FIX */
+.hero {
+  width: 100vw;                /* full width of screen */
+  min-height: 100vh;           /* full height of viewport */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+
+  /* Purple → Gold gradient background */
+  background: linear-gradient(135deg, #4B0082 0%, #D4AF37 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Ensure content sits in center */
+.hero .hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
