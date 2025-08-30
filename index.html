@@ -5,23 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SALONFIX – Your In-House Business Partner</title>
 
-  <!-- ✅ Favicon -->
   <link rel="icon" href="assets/favicon.png" type="image/png" />
-
-  <!-- ✅ Fonts + Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
 
   <style>
     :root{
       --sf-purple:#4B0082; --sf-purple-900:#2d004c; --sf-gold:#D4AF37;
       --sf-ink:#1b1230; --sf-white:#ffffff;
-      --sf-radius:18px; --sf-shadow:0 10px 24px rgba(0,0,0,.15);
-      --sf-shadow-hover:0 14px 32px rgba(0,0,0,.25);
+      --sf-radius-lg:24px; --sf-radius:18px;
+      --sf-shadow:0 18px 40px rgba(0,0,0,.25);
+      --sf-shadow-soft:0 10px 24px rgba(0,0,0,.12);
+      --sf-shadow-hover:0 22px 48px rgba(0,0,0,.28);
     }
-
     body{margin:0;font-family:Montserrat,sans-serif;color:var(--sf-ink);background:#fff}
 
     /* Navbar */
@@ -33,75 +29,34 @@
     .nav-links a.active{border-bottom:2px solid var(--sf-purple)}
     .cta-btn{background:var(--sf-gold);padding:10px 20px;border-radius:999px;font-weight:800;text-decoration:none;color:#2a1e00}
 
-    section{padding:90px 6vw;text-align:center}
+    /* Sections */
+    section{padding:80px 0}
+    .sf-purple{background:linear-gradient(180deg,var(--sf-purple),var(--sf-purple-900));color:#fff;text-align:center;padding:100px 6vw;border-radius:0 0 var(--sf-radius-lg) var(--sf-radius-lg)}
+    .container{max-width:1200px;margin:0 auto;padding:0 6vw}
 
-    /* Hero */
-    .hero{
-      background:linear-gradient(180deg,rgba(75,0,130,.85),rgba(45,0,76,.85)),
-      url("assets/banner-contact.jpg") center/cover no-repeat;
-      color:#fff;min-height:75vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
-      text-align:center;padding:0 8vw
-    }
-    .hero h1{font-size:clamp(32px,5vw,52px);font-weight:900;margin-bottom:16px}
-    .hero p{max-width:720px;margin:0 auto 24px}
-    .hero .cta-btn{box-shadow:var(--sf-shadow)}
+    /* Card */
+    .card{background:linear-gradient(180deg,var(--sf-purple),var(--sf-purple-900));color:#fff;padding:40px;border-radius:var(--sf-radius-lg);box-shadow:var(--sf-shadow);margin-bottom:30px}
+    .card h3{color:var(--sf-gold);margin:0 0 10px}
 
-    /* Shared Heading */
-    h2.section-title{
-      font-size:clamp(28px,3.6vw,44px);
-      font-weight:900;
-      margin-bottom:30px;
-    }
-
-    /* Cards */
-    .card-grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-    .card{
-      background:linear-gradient(180deg,var(--sf-purple),var(--sf-purple-900));
-      color:#fff;padding:28px;border-radius:var(--sf-radius);
-      box-shadow:var(--sf-shadow);transition:.3s
-    }
-    .card:hover{transform:translateY(-4px);box-shadow:var(--sf-shadow-hover);border:1px solid var(--sf-gold)}
-
-    /* Problems */
-    .problem-card{
-      background:linear-gradient(180deg,var(--sf-purple),var(--sf-purple-900));
-      color:#fff;padding:22px;border-radius:var(--sf-radius);
-      box-shadow:var(--sf-shadow);transition:.3s;font-weight:600
-    }
-    .problem-card:hover{transform:translateY(-4px);box-shadow:var(--sf-shadow-hover);border:1px solid var(--sf-gold)}
-
-    /* Solution */
-    .solution{display:grid;gap:40px;align-items:center;text-align:left}
-    .solution img{width:100%;border-radius:var(--sf-radius)}
-    .solution .bullet{
-      background:linear-gradient(180deg,var(--sf-purple),var(--sf-purple-900));
-      color:#fff;padding:16px 20px;border-radius:var(--sf-radius);
-      box-shadow:var(--sf-shadow);margin-bottom:12px;font-weight:600
-    }
+    /* Grid */
+    .grid{display:grid;gap:20px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    @media(max-width:900px){.grid-3,.grid-2{grid-template-columns:1fr}}
 
     /* Founder */
-    .founder{display:grid;gap:40px;align-items:center;text-align:left}
-    .founder img{border-radius:50%;border:5px solid var(--sf-gold);max-width:320px;box-shadow:var(--sf-shadow)}
-    .founder h2{color:var(--sf-gold);font-size:clamp(28px,3.6vw,44px);font-weight:900;margin-bottom:12px}
-    .founder ul{list-style:none;padding:0}
-    .founder li{
-      background:linear-gradient(180deg,var(--sf-purple),var(--sf-purple-900));
-      color:#fff;padding:12px 16px;border-radius:var(--sf-radius);
-      box-shadow:var(--sf-shadow);margin-bottom:12px
-    }
+    .founder{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:linear-gradient(180deg,var(--sf-purple),var(--sf-purple-900));color:#fff;padding:100px 6vw;border-radius:var(--sf-radius-lg)}
+    .founder img{border-radius:50%;border:5px solid var(--sf-gold);box-shadow:var(--sf-shadow-soft);max-width:320px}
 
     /* Reels */
     .reel-grid{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
-    .reel-grid iframe{width:320px;height:440px;border-radius:var(--sf-radius);border:none;box-shadow:var(--sf-shadow)}
+    .reel-grid iframe{width:320px;height:440px;border-radius:20px;border:none;box-shadow:var(--sf-shadow-soft)}
 
-    /* Floating WhatsApp */
-    .whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;
-      width:60px;height:60px;border-radius:50%;display:grid;place-items:center;
-      font-size:30px;color:#fff;text-decoration:none;box-shadow:var(--sf-shadow);z-index:999}
-    .whatsapp-float:hover{transform:translateY(-2px)}
+    /* WhatsApp Floating */
+    .whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;font-size:26px;color:#fff;box-shadow:var(--sf-shadow);text-decoration:none}
   </style>
 </head>
-<body onload="AOS.init({duration:900, once:true})">
+<body>
 
   <!-- ✅ Navbar -->
   <header>
@@ -120,60 +75,68 @@
   </header>
 
   <!-- ✅ Hero -->
-  <section class="hero" data-aos="fade-up">
+  <section class="sf-purple">
     <h1>Busy salon. Bank balance still empty?</h1>
     <p>Sales ≠ Profit. SALONFIX tracks every rupee daily — no leaks, no guessing.</p>
     <a href="https://wa.me/919629370666?text=FIX" class="cta-btn">WhatsApp ‘FIX’ — FREE 1-Month Trial</a>
   </section>
 
   <!-- ✅ Proof -->
-  <section style="background:linear-gradient(180deg,var(--sf-purple),var(--sf-purple-900));color:#fff;border-radius:0 0 24px 24px" data-aos="fade-up">
-    <h2 class="section-title" style="color:var(--sf-gold)">4 branches. 6 weeks. Profit flipped.</h2>
-    <div class="card-grid">
-      <div class="card">+₹2.5L<br><small>Profit in 30 days</small></div>
-      <div class="card">-30% Waste<br><small>+20% Vendor Savings</small></div>
-      <div class="card">+8.4%<br><small>Profit Growth in 6 weeks</small></div>
+  <section class="container">
+    <div class="card">
+      <h2 style="color:var(--sf-gold)">4 branches. 6 weeks. Profit flipped.</h2>
+      <div class="grid grid-3" style="margin-top:20px">
+        <div><h3>+₹2.5L</h3><p>Profit in 30 days</p></div>
+        <div><h3>-30% Waste</h3><p>+20% Vendor Savings</p></div>
+        <div><h3>+8.4%</h3><p>Profit Growth in 6 weeks</p></div>
+      </div>
     </div>
   </section>
 
   <!-- ✅ Problems -->
-  <section style="background:#fff" data-aos="fade-up">
-    <h2 class="section-title" style="color:var(--sf-gold)">Why salons lose profit even when sales are high…</h2>
-    <div class="card-grid">
-      <div class="problem-card">💸 Manager salary ≠ System control</div>
-      <div class="problem-card">🪙 Petty cash leaks silently bleed profit</div>
-      <div class="problem-card">🔁 No rebooking system = empty chairs</div>
-      <div class="problem-card">🛍 Retail zero = weak team control</div>
+  <section class="container">
+    <div class="card">
+      <h2>Why salons lose profit even when sales are high…</h2>
+      <div class="grid grid-2" style="margin-top:20px">
+        <div>💸 Manager salary ≠ System control</div>
+        <div>🪙 Petty cash leaks silently bleed profit</div>
+        <div>🔁 No rebooking system = empty chairs</div>
+        <div>🛍 Retail zero = weak team control</div>
+      </div>
     </div>
   </section>
 
   <!-- ✅ Case Study -->
-  <section style="background:linear-gradient(180deg,var(--sf-purple),var(--sf-purple-900));color:#fff;border-radius:24px" data-aos="fade-up">
-    <h2 class="section-title" style="color:var(--sf-gold)">From Chaos to Control.</h2>
-    <div class="card-grid">
-      <div class="card">❌ Before: No daily numbers, rebooking 0, retail 3%</div>
-      <div class="card">🔄 After: Daily P&L + scripts → retail 11%</div>
-      <div class="card">✅ Result: Profit +8.4% in 6 weeks</div>
+  <section class="container">
+    <div class="card" style="background:#fff;color:var(--sf-ink)">
+      <h2 style="color:var(--sf-gold)">From Chaos to Control.</h2>
+      <div class="grid grid-3" style="margin-top:20px">
+        <div class="card">❌ Before: No daily numbers, rebooking 0, retail 3%</div>
+        <div class="card">🔄 After: Daily P&L + scripts → retail 11%</div>
+        <div class="card">✅ Result: Profit +8.4% in 6 weeks</div>
+      </div>
     </div>
   </section>
 
   <!-- ✅ Solution -->
-  <section style="background:#fff" class="solution" data-aos="fade-up">
-    <div>
-      <h2 class="section-title" style="color:var(--sf-gold)">We don’t just consult. We take over.</h2>
-      <div class="bullet">✔ Daily reports on WhatsApp</div>
-      <div class="bullet">✔ Branch control with proof photos & logs</div>
-      <div class="bullet">✔ Staff accountability + incentive system</div>
-      <div class="bullet">✔ Owner Action Box = clear next steps</div>
-    </div>
-    <div>
-      <img src="assets/solution-banner.jpg" alt="Solution Banner">
+  <section class="container">
+    <div class="grid grid-2" style="align-items:center">
+      <div>
+        <h2 style="color:var(--sf-purple)">We don’t just consult. We take over.</h2>
+        <ul>
+          <li>✔ Daily reports on WhatsApp</li>
+          <li>✔ Branch control with proof photos & logs</li>
+          <li>✔ Staff accountability + incentive system</li>
+          <li>✔ Owner Action Box = clear next steps</li>
+        </ul>
+      </div>
+      <div><img src="assets/solution-banner.jpg" alt="Solution"></div>
     </div>
   </section>
 
   <!-- ✅ Founder -->
-  <section class="founder" data-aos="fade-up">
-    <div><img src="assets/founder.jpg" alt="Founder"></div>
+  <section class="founder">
+    <img src="assets/founder.jpg" alt="Founder">
     <div>
       <h2>I’m JAWHAR RAJ RAJKUMAR — I’ve fixed it all.</h2>
       <p>10+ years inside salons, turning chaos into profit across 100+ salon days.</p>
@@ -182,13 +145,13 @@
         <li>💰 Proven Profit Growth Across Multiple Branches</li>
         <li>📊 100+ Daily Operations Controlled</li>
       </ul>
-      <a href="https://wa.me/919629370666?text=FIX" class="cta-btn">WhatsApp FIX — Start FREE Trial</a>
+      <a href="https://wa.me/919629370666?text=FIX" class="cta-btn" style="margin-top:20px;display:inline-block">WhatsApp FIX — Start FREE Trial</a>
     </div>
   </section>
 
   <!-- ✅ Reels -->
-  <section data-aos="fade-up">
-    <h2 class="section-title">📲 Real Salon Fixes. Updated Daily on Instagram.</h2>
+  <section class="container">
+    <h2>📲 Real Salon Fixes. Updated Daily on Instagram.</h2>
     <div class="reel-grid">
       <iframe src="https://www.instagram.com/p/DNnvtQ4ytxg/embed"></iframe>
       <iframe src="https://www.instagram.com/p/DNNpbwGSKl9/embed"></iframe>
@@ -197,16 +160,14 @@
   </section>
 
   <!-- ✅ Final CTA -->
-  <section class="hero" style="min-height:auto;padding:60px 8vw" data-aos="fade-up">
+  <section class="sf-purple">
     <h2>SALON OWNERS WORK LESS. SALONFIX DOES THE REST.</h2>
     <p>Experience it yourself with our FREE 1-Month Trial.</p>
     <a href="https://wa.me/919629370666?text=FIX" class="cta-btn">WhatsApp FIX Now</a>
   </section>
 
   <!-- ✅ Floating WhatsApp -->
-  <a href="https://wa.me/919629370666?text=FIX" class="whatsapp-float" target="_blank" rel="noopener">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+  <a href="https://wa.me/919629370666?text=FIX" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
 
 </body>
 </html>
