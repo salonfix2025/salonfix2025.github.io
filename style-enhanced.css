@@ -1934,3 +1934,40 @@ body { background: #ffffff; }
 .card-purple {
   background: linear-gradient(145deg, var(--sf-purple), #3a005f) !important;
 }
+.hero {
+  position: relative;
+  height: 100vh; /* full screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('assets/salon-bg.jpg') center/cover no-repeat;
+  text-align: center;
+  padding: 0 10%;
+  color: #fff;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(75, 0, 130, 0.9), rgba(212, 175, 55, 0.6));
+  z-index: 0; /* overlay sits behind text */
+}
+
+.hero .hero-content {
+  position: relative;
+  z-index: 1; /* bring text above gradient */
+  max-width: 900px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
