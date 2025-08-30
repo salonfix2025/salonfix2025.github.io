@@ -6,13 +6,18 @@
   <title>Contact SALONFIX – Let’s Scale Your Salon</title>
   <link rel="canonical" href="https://www.salonfix.in/contact.html" />
   <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+  <!-- ✅ SEO -->
   <meta name="description" content="SALONFIX is YOUR IN-HOUSE BUSINESS PARTNER — we run your salon like it’s our own. Start your FREE 1-Month Trial and see the systems, data, and fixes in action." />
   <meta name="theme-color" content="#4B0082" />
+
+  <!-- ✅ Fonts & Libs -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
 
+  <!-- 🔮 Global Style -->
   <style>
     :root{
       --sf-purple:#4B0082; --sf-purple-900:#2d004c; --sf-gold:#D4AF37;
@@ -24,40 +29,64 @@
     html,body{margin:0;padding:0;font-family:Montserrat,sans-serif;color:var(--sf-ink)}
     img{max-width:100%;height:auto;display:block}
     h1,h2,h3{margin:0 0 .5rem;line-height:1.1}
-    h1{font-weight:900}
-    h2{font-weight:800}
-    h3{font-weight:800;color:var(--sf-gold)}
-    p{line-height:1.7;color:rgba(27,18,48,.9)}
-    .subtle{color:rgba(255,255,255,.9)}
+    h1{font-weight:900} h2{font-weight:800} h3{font-weight:800;color:var(--sf-gold)}
+    p{line-height:1.7;color:rgba(27,18,48,.9)} .subtle{color:rgba(255,255,255,.9)}
+
+    /* ✅ NAVBAR */
     header{position:sticky;top:0;background:#fff;z-index:50;border-bottom:1px solid rgba(0,0,0,.06)}
-    .navbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 6vw}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:14px 6vw}
     .logo a{font-weight:900;color:var(--sf-purple);text-decoration:none}
     .nav-links{display:flex;gap:18px;list-style:none;margin:0;padding:0}
     .nav-links a{text-decoration:none;color:var(--sf-ink);padding:8px 6px;border-bottom:2px solid transparent}
     .nav-links a[aria-current="page"]{border-bottom:2px solid var(--sf-purple)}
-    .burger{display:none}
-    .sf-purple{position:relative;color:#fff;background:linear-gradient(180deg,var(--sf-purple) 0%,var(--sf-purple-900) 100%)}
+    .burger{display:none;background:none;border:0;cursor:pointer}
+    .burger span{display:block;width:26px;height:2px;background:#333;margin:6px 0;transition:.2s}
+    @media (max-width:900px){
+      .burger{display:block}
+      .nav-links{position:fixed;inset:64px 0 auto 0;background:#fff;flex-direction:column;
+        padding:16px 6vw;gap:12px;transform:translateY(-120%);transition:transform .25s ease}
+      .nav-links.open{transform:translateY(0)}
+      body.menu-open{overflow:hidden}
+    }
+
+    /* ✅ HERO */
+    .sf-purple{position:relative;color:#fff;
+      background:linear-gradient(180deg,var(--sf-purple) 0%,var(--sf-purple-900) 100%)}
     .pad-xl{padding:84px 0}
     .container{max-width:1200px;margin:0 auto;padding:0 6vw}
     .section{padding:64px 0}
     .section.white{background:#fff}
     .section.light{background:#faf7ff}
+
+    /* ✅ Icon Grid */
     .icon-grid{display:grid;gap:14px}
-    .icon-row{display:flex;gap:12px;align-items:flex-start;background:#fff;border-radius:18px;box-shadow:var(--sf-shadow-soft);padding:14px}
+    .icon-row{display:flex;gap:12px;align-items:flex-start;background:#fff;border-radius:18px;
+      box-shadow:var(--sf-shadow-soft);padding:14px}
     .icon-row i{font-size:20px;color:var(--sf-purple);margin-top:3px}
-    .connect-card{position:relative;padding:56px 8%;background:linear-gradient(180deg, var(--sf-purple) 0%, var(--sf-purple-900) 100%);color:#fff;border-radius:24px;box-shadow:var(--sf-shadow);overflow:hidden}
+
+    /* ✅ Connect Card */
+    .connect-card{padding:56px 8%;background:linear-gradient(180deg,var(--sf-purple) 0%,var(--sf-purple-900) 100%);
+      color:#fff;border-radius:24px;box-shadow:var(--sf-shadow)}
     .connect-card .headline{font-size:clamp(28px,3.6vw,44px);font-weight:900}
     .connect-card .sub{color:rgba(255,255,255,.9);max-width:800px}
     .connect-grid{display:grid;gap:20px;margin-top:18px;grid-template-columns:repeat(2,minmax(0,1fr))}
-    @media (max-width:900px){.connect-grid{grid-template-columns:1fr}}
-    .connect-item{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.06);border:1px solid rgba(212,175,55,.18);padding:16px 18px;border-radius:18px;text-decoration:none;color:#fff;box-shadow:var(--sf-shadow-soft)}
-    .ci-icon{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(180deg, rgba(212,175,55,.95), rgba(212,175,55,.7));color:#2a1e00}
+    @media(max-width:900px){.connect-grid{grid-template-columns:1fr}}
+    .connect-item{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.06);
+      border:1px solid rgba(212,175,55,.18);padding:16px 18px;border-radius:18px;text-decoration:none;color:#fff}
+    .ci-icon{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+      background:linear-gradient(180deg,rgba(212,175,55,.95),rgba(212,175,55,.7));color:#2a1e00}
     .connect-actions{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+
+    /* ✅ Form */
     .form-frame{width:100%;border:0;border-radius:18px;box-shadow:0 10px 28px rgba(0,0,0,.12);background:#fff}
+
+    /* ✅ Footer */
     footer{background:#0c0614;color:#fff;padding:48px 0;text-align:center}
-    .whatsapp-float{position:fixed;right:18px;bottom:18px;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;font-size:26px;box-shadow:0 10px 24px rgba(0,0,0,.25);z-index:60}
+    .whatsapp-float{position:fixed;right:18px;bottom:18px;width:54px;height:54px;border-radius:50%;
+      display:grid;place-items:center;background:#25D366;color:#fff;font-size:26px;box-shadow:0 10px 24px rgba(0,0,0,.25);z-index:60}
   </style>
 </head>
+
 <body class="contact-page">
   <!-- ✅ NAVBAR -->
   <header>
@@ -71,7 +100,7 @@
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html" aria-current="page">Contact</a></li>
       </ul>
-      <a href="https://wa.me/919629370666?text=FIX" class="cta-btn">WhatsApp FIX</a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </nav>
   </header>
 
@@ -90,7 +119,7 @@
       <div>
         <h2 style="color:var(--sf-purple)">YOUR SALON. OUR SYSTEMS. ONE FREE MONTH TO PROVE IT WORKS.</h2>
         <h3>SEE THE FIXES BEFORE YOU PAY A SINGLE RUPEE.</h3>
-        <p>For 30 days, SALONFIX runs your salon like it’s our own. We track every number, plug the silent losses, and set up systems your team can follow — all before you commit to a single payment.</p>
+        <p>For 30 days, SALONFIX runs your salon like it’s our own. We track every number, fix silent losses, and set up systems your team can follow — all before you commit to a single payment.</p>
       </div>
       <div class="icon-grid">
         <div class="icon-row"><i class="fa-solid fa-gears"></i><div><strong>Daily Operations</strong><br/>Hygiene, attendance, stock tracking</div></div>
@@ -109,8 +138,8 @@
         <p class="sub">Tell us your top 3 pains — SALONFIX will run your salon like it’s our own. Start with your <span style="color:var(--sf-gold);font-weight:800">FREE 1-Month Trial</span>.</p>
         <div class="connect-grid">
           <a class="connect-item" href="tel:+919629370666"><span class="ci-icon"><i class="fa-solid fa-phone"></i></span><div><strong>Call Us Directly</strong><br/>+91 96293 70666</div></a>
-          <a class="connect-item" href="https://wa.me/919629370666?text=FIX" target="_blank"><span class="ci-icon"><i class="fa-brands fa-whatsapp"></i></span><div><strong>WhatsApp</strong><br/>+91 96293 70666</div></a>
-          <a class="connect-item" href="https://instagram.com/salonfix.in" target="_blank"><span class="ci-icon"><i class="fa-brands fa-instagram"></i></span><div><strong>Instagram DM</strong><br/>@salonfix.in</div></a>
+          <a class="connect-item" href="https://wa.me/919629370666?text=FIX"><span class="ci-icon"><i class="fa-brands fa-whatsapp"></i></span><div><strong>WhatsApp</strong><br/>+91 96293 70666</div></a>
+          <a class="connect-item" href="https://instagram.com/salonfix.in"><span class="ci-icon"><i class="fa-brands fa-instagram"></i></span><div><strong>Instagram DM</strong><br/>@salonfix.in</div></a>
           <a class="connect-item" href="mailto:salonfix2025@gmail.com"><span class="ci-icon"><i class="fa-solid fa-envelope"></i></span><div><strong>Email</strong><br/>salonfix2025@gmail.com</div></a>
         </div>
       </div>
@@ -127,12 +156,18 @@
   </section>
 
   <footer>
-    <div class="container">
-      <h3>LET'S SCALE YOUR SALON</h3>
-      <p>© 2025 SALONFIX. ALL RIGHTS RESERVED.</p>
-    </div>
+    <div class="container"><h3>LET'S SCALE YOUR SALON</h3><p>© 2025 SALONFIX. ALL RIGHTS RESERVED.</p></div>
   </footer>
-  <a href="https://wa.me/919629370666?text=FIX" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
-  <script>window.addEventListener('DOMContentLoaded',()=>AOS.init({duration:900,once:true}));</script>
+
+  <a href="https://wa.me/919629370666?text=FIX" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+
+  <script>
+    const burger=document.getElementById('burger'),nav=document.getElementById('site-nav');
+    if(burger&&nav){
+      burger.addEventListener('click',()=>{const open=nav.classList.toggle('open');document.body.classList.toggle('menu-open',open);burger.setAttribute('aria-expanded',open?'true':'false');});
+      nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');document.body.classList.remove('menu-open');burger.setAttribute('aria-expanded','false');}));
+    }
+    window.addEventListener('DOMContentLoaded',()=>AOS.init({duration:900,once:true}));
+  </script>
 </body>
 </html>
