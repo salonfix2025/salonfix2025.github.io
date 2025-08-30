@@ -372,4 +372,23 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
     padding: 16px;
   }
 }
+/* ==============================
+   Global Hero Banner Image Size
+   ============================== */
+   
+/* Make sure the hero images across all pages have the same height and alignment */
+.hero img, .alt-section .image img {
+  width: 100%; /* Ensures image fills the container */
+  height: 400px; /* Fixed height for uniformity */
+  object-fit: cover; /* Ensures images cover the container without distorting */
+  object-position: center center; /* Keeps the image centered */
+  border-radius: 12px; /* Optional: adds rounded corners for better appearance */
+}
+
+/* For smaller screens, ensure the hero image is responsive */
+@media (max-width: 768px) {
+  .hero img, .alt-section .image img {
+    height: 300px; /* Adjust height for smaller screens */
+  }
+}
 
