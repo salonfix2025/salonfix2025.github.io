@@ -1578,4 +1578,26 @@ html, body {
   color: var(--sf-gold) !important;
   font-weight: 800;
 }
+/* === HOMEPAGE HERO FULL SCREEN FIX === */
+.hero {
+  min-height: 100vh;              /* Full screen height */
+  height: 100vh;                  /* Force exact viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;        /* Center content vertically */
+  align-items: center;            /* Center horizontally */
+  text-align: center;
+  padding: 0 10%;
+  background: linear-gradient(135deg, rgba(75, 0, 130, 0.9), rgba(212, 175, 55, 0.6)),
+              url('assets/salon-bg.jpg') center/cover no-repeat;
+  color: var(--sf-white);
+  margin: 0;
+}
+
+/* Remove white gaps around hero */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
 
