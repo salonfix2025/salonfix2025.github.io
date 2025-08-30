@@ -1578,6 +1578,11 @@ html, body {
   color: var(--sf-gold) !important;
   font-weight: 800;
 }
+.card-purple strong,
+.card-purple span:first-child {
+  color: var(--sf-gold) !important;
+}
+
 /* === HOMEPAGE HERO FULL SCREEN FIX === */
 .hero {
   min-height: 100vh;              /* Full screen height */
