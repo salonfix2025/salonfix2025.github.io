@@ -676,3 +676,12 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
     background: var(--sf-gold);
     color: #1b1230;
 }
+.solution .image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.solution .image img {
+    width: 100%;
+    border-radius: 20px; /* Rounded corners for the image */
+}
