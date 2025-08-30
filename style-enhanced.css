@@ -391,4 +391,33 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
     height: 300px; /* Adjust height for smaller screens */
   }
 }
+/* ==============================
+   HERO BACKGROUND FIX
+   ============================== */
+
+/* Ensures the hero background is vivid and properly set */
+.hero {
+  position: relative;
+  background: url('path_to_your_image.jpg') center center no-repeat;
+  background-size: cover;  /* Make sure the image covers the section */
+  min-height: 60vh; /* Adjust for your preferred height */
+  display: grid;
+  place-items: center;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Adds a dark overlay for better text visibility */
+}
+
+.hero .hero-content {
+  position: relative;
+  z-index: 1;
+}
 
