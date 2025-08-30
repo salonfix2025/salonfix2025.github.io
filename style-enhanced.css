@@ -1531,6 +1531,32 @@ footer {
     max-width: 420px;        /* full-width button feel without edge-to-edge */
   }
 }
+.founder,
+.problems,
+.section-purple,
+.alt-section-purple,
+.hero,
+.section,
+.case {
+  max-width: 1200px;   /* keeps them inside screen */
+  margin: 0 auto;      /* center them */
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+@media (max-width: 768px){
+  .founder,
+  .problems,
+  .section-purple,
+  .alt-section-purple,
+  .hero,
+  .section,
+  .case {
+    margin: 0 10px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
 
 /* Very small phones */
 @media (max-width: 360px){
@@ -1538,5 +1564,8 @@ footer {
     padding: 88px 14px 64px;
   }
   .hero p{ font-size: 15px; }
+}
+html, body {
+  overflow-x: hidden; /* stop sideways scrolling */
 }
 
