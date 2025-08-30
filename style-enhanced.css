@@ -1415,4 +1415,12 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
     border-radius: 16px;
   }
 }
+/* Section headlines color fix */
+.section h2,
+.alt-section h2,
+.case h2,
+.reports-strip h2,
+.cta-strip h2 {
+  color: #4B0082 !important; /* Salonfix brand purple */
+}
 
