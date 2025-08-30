@@ -1157,3 +1157,46 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
   background: var(--sf-gold);
   color: #1b1230;
 }
+/* For problem card alignment */
+.problems {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Ensure the items wrap when necessary */
+  gap: 30px; /* Space between the cards */
+  margin: 0 10%; /* Left and right margin for space */
+}
+
+.problem-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  color: var(--sf-white);
+  font-weight: 600;
+  text-align: center;
+  flex: 1 1 calc(50% - 30px); /* Flex to take 50% width minus spacing */
+  /* Ensures two cards fit in one row */
+  max-width: calc(50% - 30px); /* Explicitly limit max width */
+}
+
+.problem-card:nth-child(3),
+.problem-card:nth-child(4) {
+  flex: 1 1 calc(50% - 30px); /* Maintain two cards per row for the last two */
+}
+
+.problem-card:nth-child(5) {
+  width: 100%; /* Make the 5th item take full width */
+}
+
+.problem-card:hover {
+  background: var(--sf-gold);
+  color: #1b1230;
+}
+
+/* For smaller screens (mobile-first) */
+@media (max-width: 768px) {
+  .problem-card {
+    flex: 1 1 100%; /* On mobile, stack them to 100% width */
+    max-width: 100%; /* Remove the max-width constraint on mobile */
+  }
+}
+
