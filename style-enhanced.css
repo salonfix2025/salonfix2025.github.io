@@ -1605,4 +1605,26 @@ body, html {
   padding: 0;
   overflow-x: hidden; /* prevent horizontal scroll */
 }
+/* === HERO FULL WIDTH FIX === */
+.hero {
+  min-height: 100vh; 
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 10%;
+  
+  /* Full width background fix */
+  width: 100vw;                  /* Force full viewport width */
+  margin: 0;
+  left: 0;
+  right: 0;
+
+  background: linear-gradient(135deg, rgba(75, 0, 130, 0.9), rgba(212, 175, 55, 0.6)),
+              url('assets/salon-bg.jpg') center center / cover no-repeat;
+  background-attachment: fixed;  /* keeps it consistent on scroll */
+  color: var(--sf-white);
+}
 
