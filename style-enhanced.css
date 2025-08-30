@@ -1815,4 +1815,20 @@ footer {
   margin: 0 auto;
   padding: 20px;
 }
+/* === Remove grey background everywhere === */
+body,
+.section,
+.alt-section,
+.reports-strip,
+.cta-strip,
+.connect-card,
+.contact-main {
+  background: #ffffff !important; /* reset to white */
+}
+
+/* Keep hero gradient */
+.hero {
+  background: linear-gradient(135deg, #4B0082 0%, #D4AF37 100%) !important;
+  color: #fff;
+}
 
