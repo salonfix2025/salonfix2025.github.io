@@ -1125,3 +1125,35 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
 .founder .content li {
     margin: 8px 0;
 }
+/* For the specific issue where cards are not aligned correctly */
+.problems {
+  display: flex;
+  justify-content: space-between; /* Ensures two groups of cards */
+  gap: 20px;
+  margin: 0 10%; /* Add left and right white space */
+  flex-wrap: wrap; /* Allow the items to wrap */
+}
+
+.problem-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  color: var(--sf-white);
+  font-weight: 600;
+  text-align: center;
+  width: 45%; /* Two items on one line */
+}
+
+.problem-card:nth-child(3),
+.problem-card:nth-child(4) {
+  width: 45%; /* For the last two items to align side by side */
+}
+
+.problem-card:nth-child(5) {
+  width: 100%; /* Force the fifth item to take up full width */
+}
+
+.problem-card:hover {
+  background: var(--sf-gold);
+  color: #1b1230;
+}
