@@ -1831,4 +1831,58 @@ body,
   background: linear-gradient(135deg, #4B0082 0%, #D4AF37 100%) !important;
   color: #fff;
 }
+/* === HERO: make it full-bleed and kill left white panel === */
+
+/* break the hero out of any centered container */
+.hero,
+#home-hero,
+.sf-hero {
+  position: relative !important;
+  width: 100vw !important;
+  max-width: 100% !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;   /* full-bleed trick */
+  margin-right: -50vw !important;
+  padding-left: clamp(16px, 6vw, 80px);
+  padding-right: clamp(16px, 6vw, 80px);
+  overflow: hidden;
+}
+
+/* paint the gradient on the hero itself (under all content) */
+.hero::before,
+#home-hero::before,
+.sf-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #4B0082 0%, #D4AF37 100%) !important;
+  z-index: 0;
+}
+
+/* keep hero content above the overlay */
+.hero * { position: relative; z-index: 1; }
+
+/* nuke any half-width column layout inside hero */
+.hero,
+.hero > * {
+  display: block !important;
+}
+.hero .image,
+.hero .left,
+.hero .right,
+.hero [class*="col-"] {
+  width: auto !important;
+  flex: 0 0 auto !important;
+}
+
+/* remove accidental background panels inside hero */
+.hero .container,
+.hero .wrapper,
+.hero .panel {
+  background: transparent !important;
+}
+
+/* prevent sideways scrolling from full-bleed sections */
+html, body { overflow-x: hidden; }
 
