@@ -264,4 +264,88 @@
           <p>Plug leaks with systems + SOPs.</p>
         </article>
 
-        <article class="card-purple lift" data-aos="fade-up" data-aos-delay="120
+        <article class="card-purple lift" data-aos="fade-up" data-aos-delay="120">
+          <div class="icon-chip">3</div>
+          <h3 style="margin-top:12px">Plan</h3>
+          <p>Profit strategies: pricing, offers, incentives.</p>
+        </article>
+
+        <article class="card-purple lift highlight-trial" data-aos="fade-up" data-aos-delay="180">
+          <div class="icon-chip">4</div>
+          <h3 style="margin-top:12px">Trial</h3>
+          <p><span style="color:var(--sf-gold);font-weight:800">FREE 1-Month Trial</span> — experience daily control, risk-free.</p>
+        </article>
+
+        <article class="card-purple lift" data-aos="fade-up" data-aos-delay="240">
+          <div class="icon-chip">5</div>
+          <h3 style="margin-top:12px">Implement</h3>
+          <p>We run your salon daily — so you don’t have to.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 🟣 OUR PROMISE -->
+  <section class="section light">
+    <div class="container grid grid-2" style="align-items:center">
+      <div data-aos="fade-right">
+        <h2>Our Promise to Every Salon Owner</h2>
+        <p><strong>SALONFIX builds and runs the systems your salon has been missing.</strong></p>
+        <p>Every number, checklist, and process is handled with precision — nothing left to chance.</p>
+        <p>The result? <strong>Clarity, control, and owner freedom.</strong></p>
+      </div>
+      <div data-aos="fade-left">
+        <img src="assets/about-promise.jpg" alt="The SALONFIX promise: clarity, control, freedom" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 🟣 CTA STRIP -->
+  <section class="sf-purple pad-lg">
+    <div class="container" data-aos="zoom-in" style="text-align:center">
+      <h3 style="color:#fff;font-weight:900">Ready to see daily numbers on WhatsApp — with zero leakage?</h3>
+      <a class="btn btn-gold" href="https://wa.me/919629370666?text=FIX">DM “FIX” — START FREE 1-MONTH TRIAL</a>
+    </div>
+  </section>
+
+  <!-- 🟣 CONTACT -->
+  <section class="section white" id="connect">
+    <div class="container">
+      <div class="card-purple" data-aos="fade-up" style="text-align:center">
+        <h2 class="headline">LET’S CONNECT</h2>
+        <p class="sub">Tell us your top 3 pains — SALONFIX will run your salon like it’s our own. Start with your <span style="color:var(--sf-gold);font-weight:800">FREE 1-Month Trial</span>.</p>
+        <div class="actions" style="margin-top:18px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
+          <a class="btn btn-gold" href="https://wa.me/919629370666?text=FIX">WhatsApp “FIX”</a>
+          <a class="btn btn-outline-gold" href="mailto:hello@salonfix.in">Email Us</a>
+          <a class="btn btn-outline-gold" href="/book-audit.html">Book Free Audit</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ FOOTER -->
+  <footer>
+    <div class="container">
+      <h3>“WE RUN YOUR SALON LIKE IT’S OUR OWN.”</h3>
+      <p>Your salon doesn’t need more tips or another app. It needs a dedicated partner to take over the operational weight — so you can step back and lead growth.</p>
+      <a href="https://wa.me/919629370666?text=FIX" class="btn btn-gold footer-cta">WHATSAPP US NOW</a>
+    </div>
+  </footer>
+
+  <!-- ✅ Floating WhatsApp -->
+  <a href="https://wa.me/919629370666?text=FIX" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+  <!-- ✅ Scripts -->
+  <script>
+    const burger=document.getElementById('burger');
+    const nav=document.getElementById('site-nav');
+    if(burger&&nav){
+      burger.addEventListener('click',()=>{const open=nav.classList.toggle('open');document.body.classList.toggle('menu-open',open);burger.setAttribute('aria-expanded',open?"true":"false")});
+      nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');document.body.classList.remove('menu-open');burger.setAttribute('aria-expanded','false')}));
+      document.addEventListener('keydown',e=>{if(e.key==='Escape'){nav.classList.remove('open');document.body.classList.remove('menu-open');burger.setAttribute('aria-expanded','false')}})
+    }
+    window.addEventListener('DOMContentLoaded',()=>AOS.init({duration:900,once:true}));
+  </script>
+</body>
+</html>
