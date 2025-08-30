@@ -450,4 +450,23 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
 .sf-grid--3 {
   gap: 30px; /* Add space between columns */
 }
+/* Make grid template columns responsive for 3 rows */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two items per row for the first two rows */
+  gap: 30px; /* Add spacing between the items */
+}
+
+.grid-3 > .card-purple {
+  height: 200px; /* Ensure the height for the boxes */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Ensure box 5 takes the full width in the last row */
+.grid-3 > .card-purple:nth-child(5) {
+  grid-column: span 2; /* Make box 5 span across the full row */
+}
 
