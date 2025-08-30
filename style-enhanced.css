@@ -1080,3 +1080,11 @@ p{line-height:1.6;color:rgba(27,18,48,.9);}
   margin-left: auto;
   align-self: flex-end;
 }
+.connect-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media(max-width:900px){
+  .connect-grid { grid-template-columns: 1fr; }
+}
