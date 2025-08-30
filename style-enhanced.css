@@ -1733,4 +1733,18 @@ footer,
 * {
   background-color: transparent;
 }
+/* HERO FULL SCREEN FIX */
+.hero {
+  width: 100vw;               /* Full viewport width */
+  min-height: 100vh;          /* Full viewport height */
+  margin: 0;                  /* Remove spacing */
+  padding: 0;                 /* Reset padding */
+  background: url('assets/salon-bg.jpg') center center no-repeat;
+  background-size: cover;     /* Ensure it fully covers */
+  background-attachment: fixed; /* Optional: keeps background fixed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
