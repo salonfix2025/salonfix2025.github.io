@@ -1008,3 +1008,46 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
 .founder .content li {
     margin: 8px 0;
 }
+.founder {
+  background: linear-gradient(145deg, var(--sf-purple), #3a005f);
+  color: var(--sf-white);
+  display: flex;
+  justify-content: flex-start; /* Align items horizontally */
+  align-items: center; /* Center content vertically */
+  gap: 40px;
+  padding: 40px;
+  width: 100%; /* Ensure it takes full width */
+}
+
+.founder .photo {
+  flex: 0 0 auto; /* Prevent the image from stretching */
+  width: 250px; /* Set a fixed size for the image */
+  height: 250px; /* Ensure the image remains square */
+  border-radius: 20px;
+  border: 5px solid var(--sf-gold);
+  box-shadow: 0 0 15px rgba(212,175,55,0.8);
+}
+
+.founder .content {
+  flex: 1;
+  min-width: 300px; /* Make sure text doesn’t break out of the container */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align the content to the left */
+  justify-content: flex-start;
+  text-align: left; /* Force text alignment to the left side */
+}
+
+.founder .content h2 {
+  margin-bottom: 15px;
+}
+
+.founder .content ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.founder .content li {
+  margin: 8px 0;
+}
