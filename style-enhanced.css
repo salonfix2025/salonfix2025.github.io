@@ -420,4 +420,34 @@ footer p{opacity:.9;max-width:800px;margin:0 auto 14px}
   position: relative;
   z-index: 1;
 }
+.hero {
+  background-size: cover;
+  background-position: center center;
+  height: 400px; /* Ensure consistent height for the image */
+}
+.card-purple {
+  height: 200px; /* Adjust the height of all the purple boxes */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.highlight-trial {
+  border: 2px solid var(--sf-gold);
+  animation: glowPulse 2.8s infinite;
+}
+
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 12px rgba(212,175,55,.3); }
+  50% { box-shadow: 0 0 28px rgba(212,175,55,.6); }
+  100% { box-shadow: 0 0 12px rgba(212,175,55,.3); }
+}
+.card-purple h3,
+.card-purple p {
+  color: #fff; /* Change text to white inside purple boxes */
+}
+.sf-grid--2,
+.sf-grid--3 {
+  gap: 30px; /* Add space between columns */
+}
 
