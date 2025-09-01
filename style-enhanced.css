@@ -260,17 +260,17 @@ nav.sf-navbar .cta-btn {
 }
 
 .hero h1 {
-  font-size: 4rem;  /* reduce headline font size */
+  font-size: 3.5rem;  /* reduce headline font size */
 }
 
 .hero p {
-  font-size: 2rem;  /* reduce subtext size */
+  font-size: 1.5rem;  /* reduce subtext size */
   max-width: 650px;   /* keep text width neat */
 }
 /* === Founder Image Rounded Square (No Border) === */
 .founder-img {
-  border-radius: 20px;   /* curved edges */
-  width: 320px;          /* control size */
+  border-radius: 30px;   /* curved edges */
+  width: 380px;          /* control size */
   height: auto;          /* keeps proportion */
   object-fit: cover;     /* crops neatly if not square */
   display: block;
