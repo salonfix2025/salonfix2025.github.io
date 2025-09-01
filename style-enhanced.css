@@ -301,3 +301,5 @@ section {
     padding: 60px 20px;     /* tighter on mobile with side breathing room */
   }
 }
+.hero { padding: 100px 0; }     /* hero gets more height */
+.footer { padding: 50px 0 30px; } /* footer gets balanced spacing */
