@@ -715,4 +715,20 @@ section {
     display: none;                /* hide arrows on mobile */
   }
 }
+/* Reels & Posts Alignment Fix */
+.reel-grid iframe {
+  flex: 0 0 auto;
+  width: 360px;                /* slightly slimmer for better fit */
+  height: 640px;               /* reel aspect ratio (9:16) */
+  border-radius: 12px;
+  border: none;
+  background: #fff;            /* white fallback */
+  overflow: hidden;
+}
+
+.reel-grid iframe.instagram-media {
+  width: 360px !important;
+  height: 640px !important;
+  margin: 0 auto !important;
+}
 
