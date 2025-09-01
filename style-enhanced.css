@@ -2401,3 +2401,46 @@ section h2 {
   max-width: 400px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
+/* --- Why salons lose profit section --- */
+.problems { padding: 56px 0; }
+.problems .wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.problems h2 {
+  text-align: center;
+  color: var(--sf-gold);
+  font-weight: 800;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.2;
+  margin: 0 0 28px;
+}
+
+/* pills: 2x2 grid centered */
+.problems .pill-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 28px;
+  justify-items: center;     /* centers each pill in its cell */
+  align-items: center;
+}
+
+.problems .pill {
+  background: var(--sf-gold);
+  color: #3a0b6d;            /* brand purple for text */
+  font-weight: 800;
+  padding: 16px 22px;
+  border-radius: 18px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.12);
+  width: 100%;
+  max-width: 520px;          /* keeps left two & right two visually aligned */
+  text-align: center;
+}
+
+/* Mobile: stack neatly */
+@media (max-width: 900px) {
+  .problems .pill-grid { grid-template-columns: 1fr; }
+  .problems .pill { max-width: 720px; }
+}
