@@ -755,14 +755,14 @@ section {
 
 .solution-text h2 {
   color: #D4AF37;
-  font-size: 3rem;           /* bigger heading */
-  font-weight: 800;
-  line-height: 1.3;
+  font-size: 2.5rem;           /* bigger heading */
+  font-weight: 900;
+  line-height: 1.5;
   margin-bottom: 40px;
 }
 
 .solution-text li {
-  font-size: 1.4rem;         /* bigger bullets */
+  font-size: 1.5rem;         /* bigger bullets */
   margin-bottom: 22px;       /* more spacing */
 }
 
