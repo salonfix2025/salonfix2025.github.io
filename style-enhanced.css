@@ -1323,30 +1323,50 @@ body {
   transform: scale(1.1);
   box-shadow: 0 6px 12px rgba(0,0,0,0.4);
 }
-/* Ensure full responsiveness */
-body, html {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;   /* 🚫 Prevent horizontal scroll */
-}
+/* General Reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;overflow-x:hidden}
 
-/* Every section should respect the screen width */
-section {
-  max-width: 100%;
-  overflow-x: hidden;
-}
+/* Ensure sections fit screen */
+section{width:100%;max-width:100%;overflow-x:hidden;padding:60px 5%}
+.section-narrow{max-width:1200px;margin:auto}
 
-/* Fix for grids that might overflow */
-.card-grid, .problems-grid, .reel-grid, .founder, .solution {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 16px; /* small safe padding */
-  box-sizing: border-box;
-}
+/* Hero */
+.hero{display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 5% 80px}
+.hero-content{max-width:800px;margin:auto}
 
-/* Images responsive */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+/* Responsive Grid Fix */
+.card-grid,.problems-grid,.reel-grid{
+  display:grid;
+  gap:20px;
 }
+.card-grid{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.problems-grid{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.reel-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.reel{width:100%;min-height:500px;border:0;border-radius:12px}
+
+/* Solution Section */
+.solution-container{
+  display:flex;align-items:center;gap:40px;flex-wrap:wrap;
+}
+.solution-text,.solution-image{flex:1;min-width:300px}
+.solution-image img{width:100%;border-radius:12px}
+
+/* Founder */
+.founder{display:flex;flex-wrap:wrap;align-items:center;gap:40px;text-align:left}
+.founder .photo{flex:1;min-width:280px;text-align:center}
+.founder img{max-width:100%;border-radius:12px}
+.founder .content{flex:1;min-width:280px}
+
+/* Footer */
+.footer-premium{padding:60px 5%;text-align:center;background:#2d004c;color:#fff}
+.footer-premium h2{font-size:1.8rem}
+.footer-cta{display:flex;gap:15px;justify-content:center;flex-wrap:wrap}
+
+/* Floating WhatsApp */
+.whatsapp-float{
+  position:fixed;width:60px;height:60px;bottom:20px;right:20px;
+  background:#25d366;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:28px;box-shadow:0 3px 8px rgba(0,0,0,.3);z-index:1000;
+}
+.whatsapp-float:hover{background:#1ebe5b}
