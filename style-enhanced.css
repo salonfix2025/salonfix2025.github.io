@@ -1779,3 +1779,28 @@ section{padding:100px 8%;width:100%}
 @keyframes pulse{0%{transform:scale(1);box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{transform:scale(1.1);box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{transform:scale(1);box-shadow:0 0 0 0 rgba(37,211,102,0)}}
 .whatsapp-float{position:fixed;width:55px;height:55px;bottom:25px;right:25px;background:#25d366;color:#fff;border-radius:50%;display:flex;justify-content:center;align-items:center;font-size:28px;box-shadow:0 4px 8px rgba(0,0,0,0.3);z-index:1000;animation:pulse 2.5s infinite}
 .whatsapp-float:hover{transform:scale(1.1);background:#1ebe5b}
+/* ===========================
+   📱 Mobile Debug Preview Mode
+   =========================== */
+@media (max-width: 768px) {
+  body.debug section {
+    outline: 2px dashed red;   /* highlight edges */
+    background-color: rgba(200,200,200,0.1); /* subtle tint */
+  }
+
+  body.debug .proof   { background-color: rgba(255,0,0,0.05); }
+  body.debug .problems{ background-color: rgba(0,255,0,0.05); }
+  body.debug .case    { background-color: rgba(0,0,255,0.05); }
+  body.debug .solution{ background-color: rgba(255,255,0,0.05); }
+  body.debug .founder { background-color: rgba(255,0,255,0.05); }
+  body.debug .reel-section { background-color: rgba(0,255,255,0.05); }
+  body.debug .footer-premium { background-color: rgba(128,0,128,0.1); }
+}
+/* 🚫 Fix Proof section scroll trap */
+.proof, 
+.proof .card-grid {
+  height: auto !important;
+  min-height: unset !important;
+  max-height: unset !important;
+  overflow: visible !important;
+}
