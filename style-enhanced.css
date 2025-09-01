@@ -343,3 +343,18 @@ section {
     font-size: 1.8rem;   /* slightly smaller on mobile */
   }
 }
+/* === Curve Edge Visibility Fix === */
+.curved-section {
+  margin: 0 auto;          /* center align */
+  max-width: 1200px;       /* keeps it from touching screen edges */
+  border-radius: 20px;     /* smooth rounded corners */
+  overflow: hidden;        /* clips content neatly inside */
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .curved-section {
+    margin: 0 15px;        /* small side gap on mobile */
+    max-width: 100%;
+  }
+}
