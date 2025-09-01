@@ -932,4 +932,19 @@ button.btn-gold:hover {
   font-size: 1.2rem;
   margin-bottom: 25px;
 }
+/* Hero Section Center Alignment */
+.hero-content {
+  text-align: center;        /* center all text */
+  max-width: 800px;          /* keep it neat */
+  margin: 0 auto;            /* center block itself */
+}
+
+.hero-content h1 {
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
 
