@@ -32,20 +32,24 @@
     h1{font-weight:900} h2{font-weight:800} h3{font-weight:800;color:var(--sf-gold)}
     p{line-height:1.7;color:rgba(27,18,48,.9)} .subtle{color:rgba(255,255,255,.9)}
 
-    /* ✅ NAVBAR */
-    header{position:sticky;top:0;background:#fff;z-index:50;border-bottom:1px solid rgba(0,0,0,.06)}
-    .navbar{display:flex;align-items:center;justify-content:space-between;padding:14px 6vw}
-    .logo a{font-weight:900;color:var(--sf-purple);text-decoration:none}
-    .nav-links{display:flex;gap:18px;list-style:none;margin:0;padding:0}
-    .nav-links a{text-decoration:none;color:var(--sf-ink);padding:8px 6px;border-bottom:2px solid transparent}
-    .nav-links a[aria-current="page"]{border-bottom:2px solid var(--sf-purple)}
+    /* Navbar */
+    nav.sf-navbar{
+      position:fixed;top:0;left:0;width:100%;
+      background:rgba(75,0,130,0.95);
+      display:flex;justify-content:space-between;align-items:center;
+      padding:15px 8%;z-index:1000;
+    }
+    nav.sf-navbar .logo a{font-weight:900;font-size:1.5rem;color:#fff;text-decoration:none}
+    nav.sf-navbar ul{display:flex;gap:25px;list-style:none;margin:0;padding:0}
+    nav.sf-navbar ul li a{color:#fff;text-decoration:none;font-weight:600;padding:8px 6px;border-bottom:2px solid transparent}
+    nav.sf-navbar ul li a:hover,nav.sf-navbar ul li a.active{color:var(--sf-gold);border-bottom:2px solid var(--sf-gold)}
+    nav.sf-navbar .cta-btn{background:var(--sf-gold);color:#1b1230;padding:10px 18px;border-radius:50px;font-weight:700;text-decoration:none}
     .burger{display:none;background:none;border:0;cursor:pointer}
-    .burger span{display:block;width:26px;height:2px;background:#333;margin:6px 0;transition:.2s}
-    @media (max-width:900px){
+    .burger span{display:block;width:26px;height:2px;background:#fff;margin:6px 0}
+    @media(max-width:900px){
       .burger{display:block}
-      .nav-links{position:fixed;inset:64px 0 auto 0;background:#fff;flex-direction:column;
-        padding:16px 6vw;gap:12px;transform:translateY(-120%);transition:transform .25s ease}
-      .nav-links.open{transform:translateY(0)}
+      nav.sf-navbar ul{position:fixed;inset:64px 0 auto 0;background:#4B0082;flex-direction:column;padding:20px;gap:16px;transform:translateY(-120%);transition:.25s}
+      nav.sf-navbar ul.open{transform:translateY(0)}
       body.menu-open{overflow:hidden}
     }
 
