@@ -1323,37 +1323,33 @@ body {
   transform: scale(1.1);
   box-shadow: 0 6px 12px rgba(0,0,0,0.4);
 }
-/* ✅ Navbar Fix for Mobile */
+/* ✅ Hero Section Full Width Fix */
+.hero {
+  width: 100%;
+  min-height: 90vh;              /* make sure it fills screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #6a11cb, #b06ab3); /* gradient stays */
+  background-size: cover;        /* stretch fully */
+  background-position: center;
+  box-sizing: border-box;        /* no extra white space */
+}
+
+.hero-content {
+  max-width: 100%;               /* allow full width */
+  padding: 0 15px;
+}
 @media (max-width: 768px) {
-  nav.sf-navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 5%;
-  }
-
-  nav.sf-navbar .logo {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  nav.sf-navbar .cta-btn {
-    margin-top: 10px;
-    width: 100%;               /* Full width on mobile */
-    text-align: center;
-    font-size: 1rem;
-  }
-
-  .burger {
-    display: block;
-  }
-
-  nav.sf-navbar ul {
-    width: 100%;
-    align-items: flex-start;
+  .hero {
+    min-height: 70vh;
+    padding: 40px 15px;
+    background-size: 100% 100%;  /* stretch gradient */
   }
 }
+
 
 
 
