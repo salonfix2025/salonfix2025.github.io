@@ -2681,3 +2681,11 @@ section h2 {
   text-align: center;
   margin-bottom: 30px;
 }
+/* === REELS SECTION HEADING === */
+.reel-section h2 {
+  text-align: center;
+  color: var(--sf-purple);
+  font-size: 2rem;      /* same size as 'Why salons lose profit' */
+  font-weight: 800;
+  margin-bottom: 30px;
+}
