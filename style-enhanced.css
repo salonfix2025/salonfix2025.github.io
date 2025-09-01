@@ -2369,3 +2369,35 @@ section h2 {
   width: 100%; /* ensures same width per card */
   box-shadow: 0 6px 16px rgba(0,0,0,.15);
 }
+/* Problems Section - 2x2 Layout */
+.problems {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr; /* 2 equal columns */
+  grid-template-rows: auto auto; /* 2 rows */
+  gap: 30px; /* spacing between boxes */
+  justify-items: center;
+  align-items: center;
+  padding: 40px 10%;
+  border-radius: 20px;
+}
+
+.problems h2 {
+  grid-column: span 2; /* Heading spans both columns */
+  text-align: center;
+  color: #D4AF37;
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.problems .problem-card {
+  background: #D4AF37;
+  color: #4B0082;
+  font-weight: 700;
+  padding: 24px;
+  border-radius: 16px;
+  text-align: center;
+  width: 100%; /* makes all cards same width */
+  max-width: 400px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
