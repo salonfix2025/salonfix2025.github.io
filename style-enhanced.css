@@ -1006,48 +1006,7 @@ button.btn-gold:hover {
   border: 2px solid #D4AF37;
   color: #D4AF37;
 }
-/* === Global Button Base === */
-a.btn-gold,
-a.btn-outline,
-button.btn-gold,
-button.btn-outline {
-  display: inline-block;
-  padding: 14px 28px;       /* consistent padding */
-  font-size: 1rem;          /* consistent font */
-  font-weight: 700;
-  border-radius: 8px;
-  text-decoration: none;
-  text-align: center;
-  min-height: 48px;         /* equal height */
-  line-height: 1.5;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
 
-/* === Gold Filled Button === */
-.btn-gold {
-  background: #D4AF37;
-  color: #4B0082;
-  border: none;
-}
-
-.btn-gold:hover {
-  background: #b9972f;
-  transform: scale(1.05);
-}
-
-/* === Outline Button === */
-.btn-outline {
-  background: transparent;
-  border: 2px solid #D4AF37;
-  color: #D4AF37;
-}
-
-.btn-outline:hover {
-  background: #D4AF37;
-  color: #4B0082;
-  transform: scale(1.05);
-}
 .hero-sub {
   text-align: center;
   font-size: 1.2rem;
