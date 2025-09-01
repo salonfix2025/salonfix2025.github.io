@@ -1950,25 +1950,25 @@ html {
 }
 /* ✅ Hero default (desktop/tablet) */
 .hero h1 {
-  font-size: 2.8rem;
-  line-height: 1.2;
-  font-weight: 800;
+  font-size: 5rem;
+  line-height: 1.8;
+  font-weight: 1000;
 }
 .hero-sub {
-  font-size: 1.2rem;
+  font-size: 2rem;
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
 /* ✅ Mobile alternate styling */
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .hero {
     padding: 40px 20px;
     text-align: center;
   }
 
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     line-height: 1.3;
   }
 
