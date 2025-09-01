@@ -2257,8 +2257,13 @@ section h2 {
 }
 .proof h2 {
   text-align: center;
-  font-size: 2rem;   /* Increase size */
-  font-weight: 800;  /* Make bold */
+  font-size: 4rem;   /* Increase size */
+  font-weight: 900;  /* Make bold */
   color: #4B0082;    /* Purple */
   margin-bottom: 30px;
+}
+.case .card {
+  background: linear-gradient(145deg, var(--sf-purple), #3a005f);
+  color: #D4AF37; /* Gold text */
+  font-weight: 800;
 }
