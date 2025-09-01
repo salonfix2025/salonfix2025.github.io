@@ -285,3 +285,19 @@ section {
     padding: 60px 20px;   /* slightly tighter on mobile, add side spacing */
   }
 }
+/* === Global Section Spacing (All Pages) === */
+section {
+  padding: 80px 0;          /* equal spacing top + bottom */
+}
+
+@media (max-width: 1024px) {
+  section {
+    padding: 70px 20px;     /* adjust for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 20px;     /* tighter on mobile with side breathing room */
+  }
+}
