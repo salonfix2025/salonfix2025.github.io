@@ -2053,3 +2053,77 @@ body { background: #ffffff; }
 .founder ul li {
   color: var(--sf-white) !important;
 }
+/* ===== HERO FIX (put at the very end) ===== */
+
+/* Make the hero fill the screen below the fixed nav */
+.hero{
+  position: relative;
+  min-height: calc(100vh - 72px); /* adjust if your nav height differs */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 96px 10% 48px;          /* top padding keeps text clear of nav */
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* If any overlay/pseudo is dimming the text, put it behind the text */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;                       /* overlay below the text */
+  background: linear-gradient(135deg, rgba(75,0,130,.85), rgba(212,175,55,.55));
+}
+
+/* Ensure hero content is above overlay and fully opaque */
+.hero > *{
+  position: relative;
+  z-index: 1 !important;
+  color: #fff !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* Strong, visible headline */
+.hero h1{
+  font-size: clamp(28px, 4.2vw, 56px) !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  text-align: center;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35);
+  margin: 0 0 16px;
+}
+
+/* Subhead readable on the gradient */
+.hero p{
+  font-size: clamp(16px, 1.4vw, 20px) !important;
+  color: #F4F4F6 !important;
+  max-width: 900px;
+  text-align: center;
+  margin: 0 0 22px;
+}
+
+/* Button spacing/visibility */
+.hero .btn,
+.hero a.btn{
+  margin-top: 6px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.20);
+}
+
+/* Safety: undo any global heading-dimming that might exist */
+h1.hero-title,
+.hero h1,
+.hero h2{
+  opacity: 1 !important;
+}
+
+/* Mobile spacing so nothing sits under the nav */
+@media (max-width: 768px){
+  .hero{
+    padding: 96px 6% 40px;
+    min-height: calc(100vh - 64px);
+  }
+}
