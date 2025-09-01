@@ -1494,3 +1494,35 @@ section{width:100%;max-width:100%;overflow-x:hidden;padding:60px 5%}
     border-radius: 6px;
   }
 }
+/* ===========================
+   🟢 Floating WhatsApp Animation
+   =========================== */
+@keyframes pulse {
+  0%   { transform: scale(1);   box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+  70%  { transform: scale(1.1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { transform: scale(1);   box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 3px 8px rgba(0,0,0,.3);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  animation: pulse 2.5s infinite;   /* ✅ pulsing effect */
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.15);
+  background: #1ebe5b;
+}
