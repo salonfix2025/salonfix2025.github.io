@@ -255,16 +255,16 @@ nav.sf-navbar .cta-btn {
 .whatsapp-float:hover { transform: translateY(-2px); }
 /* === HERO SIZE ADJUSTMENT === */
 .hero {
-  min-height: 60vh;   /* reduce height (was probably 100vh before) */
-  padding: 60px 20px; /* tighten padding top & bottom */
+  min-height: 80vh;   /* reduce height (was probably 100vh before) */
+  padding: 80px 20px; /* tighten padding top & bottom */
 }
 
 .hero h1 {
-  font-size: 2.5rem;  /* reduce headline font size */
+  font-size: 4rem;  /* reduce headline font size */
 }
 
 .hero p {
-  font-size: 1.1rem;  /* reduce subtext size */
+  font-size: 2rem;  /* reduce subtext size */
   max-width: 650px;   /* keep text width neat */
 }
 /* === Founder Image Rounded Square (No Border) === */
