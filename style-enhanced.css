@@ -1014,6 +1014,45 @@ button.btn-gold:hover {
   margin: 0 auto 25px auto;  /* centers and adds bottom spacing */
   max-width: 700px;          /* keeps line compact */
 }
+/* Base button styles */
+.btn-gold,
+.btn-outline {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  min-height: 50px;       /* locks equal height */
+  line-height: 1.5;
+  box-sizing: border-box; /* 🔑 makes border included in height */
+}
+
+/* Gold button */
+.btn-gold {
+  background: #D4AF37;
+  color: #4B0082;
+  border: 2px solid #D4AF37; /* added border so height matches outline */
+}
+
+.btn-gold:hover {
+  background: #b9972f;
+  transform: scale(1.05);
+}
+
+/* Outline button */
+.btn-outline {
+  background: transparent;
+  border: 2px solid #D4AF37;
+  color: #D4AF37;
+}
+
+.btn-outline:hover {
+  background: #D4AF37;
+  color: #4B0082;
+  transform: scale(1.05);
+}
 
 
 
