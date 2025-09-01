@@ -731,4 +731,9 @@ section {
   height: 640px !important;
   margin: 0 auto !important;
 }
+.reel-grid iframe.post {
+  width: 360px;
+  height: 360px;
+  border-radius: 12px;
+}
 
