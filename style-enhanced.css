@@ -1254,6 +1254,19 @@ body {
   gap: 20px;
   justify-content: center;
 }
+/* Shared narrower width for premium sections */
+.section-narrow {
+  max-width: 1100px;   /* reduce width */
+  margin: 0 auto;      /* center align */
+  padding: 60px 30px;  /* spacing inside */
+}
+
+/* Keep responsive on smaller screens */
+@media (max-width: 1200px) {
+  .section-narrow {
+    max-width: 95%;
+  }
+}
 
 
 
