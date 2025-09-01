@@ -303,3 +303,23 @@ section {
 }
 .hero { padding: 100px 0; }     /* hero gets more height */
 .footer { padding: 50px 0 30px; } /* footer gets balanced spacing */
+/* === Equal Spacing for Cards/Boxes === */
+.card, .box {
+  margin: 20px;           /* equal gap around each card */
+  padding: 30px;          /* inner padding for breathing room */
+  border-radius: 16px;    /* keep modern rounded corners */
+}
+
+.cards-container, .boxes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;              /* equal space between cards */
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .card, .box {
+    margin: 15px auto;
+    width: 100%;
+    max-width: 340px;     /* keeps them aligned neatly */
+  }
+}
