@@ -2340,3 +2340,32 @@ section h2 {
   transform: translateY(-2px);
   box-shadow: 0 12px 26px rgba(0,0,0,.14) !important;
 }
+/* === Force Problems into 2x2 layout === */
+.problems {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important; /* 2 equal columns */
+  gap: 24px !important; 
+  justify-items: center;
+  align-items: stretch;
+  margin: 0 10%; /* keeps left & right white space */
+  border-radius: 20px;
+}
+
+.problems h2 {
+  grid-column: span 2; /* heading takes full width */
+  text-align: center;
+  color: #D4AF37;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.problems .problem-card {
+  background: #D4AF37 !important;  /* gold background */
+  color: #4B0082 !important;       /* purple text */
+  font-weight: 700 !important;
+  padding: 24px;
+  border-radius: 16px;
+  text-align: center;
+  width: 100%; /* ensures same width per card */
+  box-shadow: 0 6px 16px rgba(0,0,0,.15);
+}
