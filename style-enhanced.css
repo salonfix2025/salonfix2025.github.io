@@ -2537,3 +2537,10 @@ section h2 {
   border-radius: 12px;
   text-align: center;
 }
+.problems h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--sf-gold);
+  margin-bottom: 30px;
+}
