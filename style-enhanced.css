@@ -2877,3 +2877,35 @@ section h2 {
   align-items: center;
   justify-content: center;
 }
+.problems {
+  background: linear-gradient(145deg, var(--sf-purple), #3a005f);
+  color: var(--sf-gold);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.problems h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  grid-gap: 20px;
+}
+
+.problem-card {
+  background: var(--sf-gold);
+  color: var(--sf-purple);
+  font-weight: 700;
+  padding: 40px; /* bigger box size */
+  border-radius: 12px;
+  text-align: center;
+  height: 100%; /* makes them equal height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
