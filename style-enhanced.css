@@ -654,4 +654,65 @@ section {
   margin: 0 auto;      /* center section */
   padding: 0 20px;     /* safe side padding */
 }
+/* Reels Section Proper Alignment */
+.reel-wrapper {
+  max-width: 1300px;         /* keeps row centered */
+  margin: 0 auto;
+  position: relative;
+  padding: 0 20px;
+}
+
+.reel-grid {
+  display: flex;
+  justify-content: center;   /* center all reels */
+  gap: 30px;                 /* equal spacing */
+  overflow-x: auto;          /* allows mobile swipe */
+  flex-wrap: nowrap;         /* keeps them in one row */
+  scroll-behavior: smooth;
+}
+
+.reel-grid::-webkit-scrollbar {
+  display: none;             /* clean look */
+}
+
+.reel-grid iframe {
+  flex: 0 0 auto;
+  width: 420px;              /* fixed width */
+  height: 550px;             /* fixed height */
+  border-radius: 12px;
+  border: none;
+}
+
+/* Arrows */
+.reel-arrows {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.reel-arrows span {
+  font-size: 1.3rem;
+  color: #4B0082;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.reel-arrows span:hover {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .reel-grid {
+    justify-content: flex-start;  /* align left on mobile */
+  }
+  .reel-arrows {
+    display: none;                /* hide arrows on mobile */
+  }
+}
 
