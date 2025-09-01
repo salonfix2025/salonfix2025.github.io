@@ -406,50 +406,7 @@ section {
   border-radius: 18px;
   text-align: center;
 }
-/* === 3 Boxes per Row === */
-.card-grid, .problems-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 per row */
-  gap: 30px;
-  justify-items: center;
-}
 
-.card, .problem-card {
-  width: 100%;
-  max-width: 320px;       /* control width */
-  min-height: 180px;      /* rectangle size */
-  padding: 30px 25px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  border-radius: 18px;
-  text-align: center;
-
-  display: flex;          /* center content */
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Special for card headings */
-.card h3 {
-  font-size: 1.6rem;
-  font-weight: 800;
-  margin-bottom: 10px;
-}
-
-/* Mobile: 1 per row */
-@media (max-width: 768px) {
-  .card-grid, .problems-grid {
-    grid-template-columns: 1fr; /* stack vertically */
-  }
-}
-
-/* Tablet: 2 per row */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .card-grid, .problems-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 /* === Solution Section Styling === */
 .solution-container {
   display: flex;
