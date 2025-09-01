@@ -1370,3 +1370,91 @@ section{width:100%;max-width:100%;overflow-x:hidden;padding:60px 5%}
   font-size:28px;box-shadow:0 3px 8px rgba(0,0,0,.3);z-index:1000;
 }
 .whatsapp-float:hover{background:#1ebe5b}
+/* ===========================
+   📱 MOBILE RESPONSIVE FIXES
+   =========================== */
+@media (max-width: 768px) {
+
+  /* Hero */
+  .hero {
+    padding: 80px 5% 60px;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+  .hero-sub {
+    font-size: 1rem;
+    margin: 15px 0 25px;
+  }
+
+  /* Proof + Problems + Case cards */
+  .card h3 {
+    font-size: 1.4rem;
+  }
+  .card p, .problem-card {
+    font-size: 0.95rem;
+  }
+
+  /* Solution */
+  .solution-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .solution-text ul {
+    text-align: left;
+    font-size: 0.95rem;
+  }
+
+  /* Founder */
+  .founder {
+    flex-direction: column;
+    text-align: center;
+  }
+  .founder .content {
+    text-align: center;
+  }
+  .founder h2 {
+    font-size: 1.6rem;
+  }
+  .founder p {
+    font-size: 1rem;
+  }
+
+  /* Reels */
+  .reel-grid {
+    grid-template-columns: 1fr; /* one column */
+  }
+  .reel {
+    min-height: 420px;
+    max-height: 70vh;
+  }
+
+  /* Footer */
+  .footer-premium h2 {
+    font-size: 1.4rem;
+  }
+  .footer-cta {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .footer-cta a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  .hero-sub {
+    font-size: 0.9rem;
+  }
+  .card h3 {
+    font-size: 1.2rem;
+  }
+  .reel {
+    min-height: 360px;
+  }
+}
