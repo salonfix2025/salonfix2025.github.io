@@ -1680,3 +1680,9 @@ section {
   border-radius: 12px;
   overflow: hidden;
 }
+/* 🚫 Remove scroll traps inside sections */
+.proof, .problems, .case, .solution, .founder, .reel-section {
+  height: auto !important;
+  min-height: unset !important;
+  overflow: visible !important;
+}
