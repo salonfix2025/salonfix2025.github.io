@@ -476,7 +476,7 @@ section {
 .card, .problem-card {
   transition: all 0.3s ease;
   cursor: pointer;
-  background: #fff; /* default white background */
+  background: f9f4ff /* default white background */
 }
 
 .card:hover, 
