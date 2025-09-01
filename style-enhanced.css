@@ -2615,3 +2615,12 @@ section h2 {
     justify-self: center;
   }
 }
+<section class="problems">
+  <h2>Why salons lose profit even when sales are high…</h2>
+  <div class="problems-grid">
+    <div class="problem-card">Manager salary ≠ System control</div>
+    <div class="problem-card">Petty cash leaks silently bleed profit</div>
+    <div class="problem-card">No rebooking system = empty chairs</div>
+    <div class="problem-card">Retail zero = weak team control</div>
+  </div>
+</section>
