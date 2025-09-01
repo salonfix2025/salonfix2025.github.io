@@ -1267,6 +1267,19 @@ body {
     max-width: 95%;
   }
 }
+/* Narrow layout for premium sections */
+.section-narrow {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 30px;
+}
+
+/* Responsive fallback */
+@media (max-width: 1200px) {
+  .section-narrow {
+    max-width: 95%;
+  }
+}
 
 
 
