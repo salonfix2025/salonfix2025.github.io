@@ -2287,3 +2287,56 @@ section h2 {
   font-weight: 900;
   margin-bottom: 30px;
 }
+/* === PROBLEMS section – hard overrides === */
+
+/* Section title */
+.problems h2,
+.problems .section-title {
+  text-align: center !important;
+  color: #D4AF37 !important;           /* gold */
+  font-weight: 800 !important;
+  font-size: clamp(28px, 3.2vw, 42px) !important;
+  margin: 0 0 28px !important;
+}
+
+/* Make a consistent inner container (optional but helps spacing) */
+.problems .container,
+.problems .wrap {
+  max-width: 1140px !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+}
+
+/* Target any pill/card in this section (use wide selectors to beat old styles) */
+.problems .problem-card,
+.problems .problem,
+.problems .issue,
+.problems .pill,
+.problems li.problem,
+.problems .cards .card {
+  background: #D4AF37 !important;      /* gold */
+  background-image: none !important;
+  color: #4B0082 !important;           /* purple text */
+  border: 0 !important;
+  border-radius: 18px !important;
+  padding: 18px 24px !important;
+  box-shadow: 0 8px 22px rgba(0,0,0,.10) !important;
+}
+
+/* Ensure inner text/icons inherit purple */
+.problems .problem-card *,
+.problems .problem *,
+.problems .issue *,
+.problems .pill * {
+  color: #4B0082 !important;
+  fill: #4B0082 !important;
+  stroke: #4B0082 !important;
+}
+
+/* Optional hover */
+.problems .problem-card:hover,
+.problems .problem:hover,
+.problems .pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0,0,0,.14) !important;
+}
