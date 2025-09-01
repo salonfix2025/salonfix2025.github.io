@@ -2267,3 +2267,16 @@ section h2 {
   color: #D4AF37; /* Gold text */
   font-weight: 800;
 }
+.problem-card {
+  background: var(--sf-gold);
+  color: var(--sf-purple);
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+.problem-card:hover {
+  background: #b38e2f; /* darker gold hover */
+  color: var(--sf-white);
+}
