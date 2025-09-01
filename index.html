@@ -134,6 +134,19 @@
 
   <!-- ✅ Floating WhatsApp -->
   <a href="https://wa.me/919629370666?text=FIX" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<script>
+  const reelGrid = document.querySelector('.reel-grid');
+  const leftArrow = document.querySelector('.arrow-left');
+  const rightArrow = document.querySelector('.arrow-right');
+
+  leftArrow.addEventListener('click', () => {
+    reelGrid.scrollBy({ left: -450, behavior: 'smooth' });
+  });
+
+  rightArrow.addEventListener('click', () => {
+    reelGrid.scrollBy({ left: 450, behavior: 'smooth' });
+  });
+</script>
 
 </body>
 </html>
