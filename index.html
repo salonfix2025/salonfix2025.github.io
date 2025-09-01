@@ -6,11 +6,14 @@
   <title>SALONFIX – Your In-House Business Partner</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style-enhanced.css">
+
+  <!-- ✅ AOS Animation Library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
   <!-- NAVBAR -->
-  <nav class="sf-navbar">
+  <nav class="sf-navbar" data-aos="fade-down">
     <div class="logo"><a href="index.html">SALONFIX</a></div>
     <ul id="site-nav">
       <li><a href="index.html" class="active">Home</a></li>
@@ -20,31 +23,31 @@
       <li><a href="blog.html">Testimonials</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <a href="https://wa.me/919629370666?text=FIX" class="cta-btn">WhatsApp FIX</a>
+    <a href="https://wa.me/919629370666?text=FIX" class="btn-gold">WhatsApp FIX</a>
     <button class="burger" id="burger"><span></span><span></span><span></span></button>
   </nav>
 
-  <section class="hero">
-  <div class="hero-content">
-    <h1>Busy salon. Bank balance still empty?</h1>
-    <p class="hero-sub">Sales ≠ Profit. SALONFIX tracks every rupee daily — no leaks, no guessing.</p>
-    <a href="#" class="btn-gold">Start FREE 1-Month Trial</a>
-  </div>
-</section>
-
+  <!-- HERO -->
+  <section class="hero" data-aos="fade-up">
+    <div class="hero-content">
+      <h1>Busy salon. Bank balance still empty?</h1>
+      <p class="hero-sub">Sales ≠ Profit. SALONFIX tracks every rupee daily — no leaks, no guessing.</p>
+      <a href="https://wa.me/919629370666?text=FIX" class="btn-gold" data-aos="zoom-in">Start FREE 1-Month Trial</a>
+    </div>
+  </section>
 
   <!-- PROOF -->
-  <section class="proof curved-section">
+  <section class="proof" data-aos="fade-up">
     <h2>4 branches · 6 weeks · Profit flipped</h2>
     <div class="card-grid">
-      <div class="card"><h3>+₹2.5L</h3><p>Profit in 30 days</p></div>
-      <div class="card"><h3>-30% Waste</h3><p>+20% Vendor Savings</p></div>
-      <div class="card"><h3>+8.4%</h3><p>Profit Growth in 6 weeks</p></div>
+      <div class="card" data-aos="fade-up" data-aos-delay="100"><h3>+₹2.5L</h3><p>Profit in 30 days</p></div>
+      <div class="card" data-aos="fade-up" data-aos-delay="200"><h3>-30% Waste</h3><p>+20% Vendor Savings</p></div>
+      <div class="card" data-aos="fade-up" data-aos-delay="300"><h3>+8.4%</h3><p>Profit Growth in 6 weeks</p></div>
     </div>
   </section>
 
   <!-- PROBLEMS -->
-  <section class="problems curved-section">
+  <section class="problems" data-aos="fade-up">
     <h2>Why salons lose profit even when sales are high…</h2>
     <div class="problems-grid">
       <div class="problem-card">Manager salary ≠ System control</div>
@@ -55,74 +58,62 @@
   </section>
 
   <!-- CASE -->
-  <section class="case curved-section">
+  <section class="case" data-aos="fade-up">
     <h2>From Chaos to Control.</h2>
     <div class="card-grid">
-      <div class="card">❌ Before: No daily numbers, rebooking 0, retail 3%</div>
-      <div class="card">🔄 After: Daily P&L + scripts → retail 11%</div>
-      <div class="card result-card">✅ Result: Profit +8.4% in 6 weeks</div>
+      <div class="card" data-aos="fade-up" data-aos-delay="100">❌ Before: No daily numbers, rebooking 0, retail 3%</div>
+      <div class="card" data-aos="fade-up" data-aos-delay="200">🔄 After: Daily P&L + scripts → retail 11%</div>
+      <div class="card result-card" data-aos="zoom-in" data-aos-delay="300">✅ Result: Profit +8.4% in 6 weeks</div>
     </div>
   </section>
 
   <!-- SOLUTION -->
-<section class="solution">
-  <div class="solution-container">
-    <!-- LEFT: Text -->
-    <div class="solution-text">
-      <h2>We don’t just consult.<br>We take over.</h2>
-      <ul>
-        <li>Daily reports on WhatsApp</li>
-        <li>Branch control with proof photos & logs</li>
-        <li>Staff accountability + incentive system</li>
-        <li>Owner Action Box = clear next steps</li>
-      </ul>
+  <section class="solution" data-aos="fade-up">
+    <div class="solution-container">
+      <div class="solution-text">
+        <h2>We don’t just consult.<br>We take over.</h2>
+        <ul>
+          <li>Daily reports on WhatsApp</li>
+          <li>Branch control with proof photos & logs</li>
+          <li>Staff accountability + incentive system</li>
+          <li>Owner Action Box = clear next steps</li>
+        </ul>
+      </div>
+      <div class="solution-image">
+        <img src="assets/about-different.jpg" alt="Salon team control">
+      </div>
     </div>
-
-    <!-- RIGHT: Image -->
-    <div class="solution-image">
-      <img src="assets/about-different.jpg" alt="Salon team control">
-    </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- FOUNDER -->
-<section class="founder curved-section">
-  <div class="photo">
-    <img src="assets/founder.jpg" alt="Jawhar Raj Rajkumar">
-  </div>
-  <div class="content">
-    <h2>I’m <span class="gold-text">JAWHAR RAJ RAJKUMAR</span> — I’ve fixed it all</h2>
-    <p>10+ years inside salons, turning chaos into profit across 100+ salon days</p>
-    <ul>
-      <li>🏆 10+ Years Running Salon Operations</li>
-      <li>💰 Proven Profit Growth Across Multiple Branches</li>
-      <li>📊 100+ Daily Operations Controlled</li>
-    </ul>
-    <a href="https://wa.me/919629370666?text=FIX" class="btn-gold founder-btn">
-      WhatsApp FIX — Start FREE Trial
-    </a>
-  </div>
-</section>
+  <section class="founder" data-aos="fade-up">
+    <div class="photo" data-aos="zoom-in" data-aos-delay="200">
+      <img src="assets/founder.jpg" alt="JAWHAR RAJ RAJKUMAR">
+    </div>
+    <div class="content" data-aos="fade-up" data-aos-delay="300">
+      <h2>I’m <span class="gold-text">JAWHAR RAJ RAJKUMAR</span> — I’ve fixed it all</h2>
+      <p>10+ years inside salons, turning chaos into profit across 100+ salon days</p>
+      <ul>
+        <li>🏆 10+ Years Running Salon Operations</li>
+        <li>💰 Proven Profit Growth Across Multiple Branches</li>
+        <li>📊 100+ Daily Operations Controlled</li>
+      </ul>
+      <a href="https://wa.me/919629370666?text=FIX" class="btn-gold">WhatsApp FIX — Start FREE Trial</a>
+    </div>
+  </section>
 
   <!-- REELS -->
-<section class="reel-section curved-section">
-  <h2>📲 Real Salon Fixes — Updated on Instagram</h2>
-  <div class="reel-wrapper">
+  <section class="reel-section" data-aos="fade-up">
+    <h2>📲 Real Salon Fixes — Updated on Instagram</h2>
     <div class="reel-grid">
-      <iframe src="https://www.instagram.com/p/DNnvtQ4ytxg/embed"></iframe>
-      <iframe src="https://www.instagram.com/p/DNNpbwGSKl9/embed"></iframe>
-      <iframe src="https://www.instagram.com/p/DNiXfh7S3Nm/embed"></iframe>
+      <iframe src="https://www.instagram.com/p/DNnvtQ4ytxg/embed" class="reel"></iframe>
+      <iframe src="https://www.instagram.com/p/DNNpbwGSKl9/embed" class="reel"></iframe>
+      <iframe src="https://www.instagram.com/p/DNiXfh7S3Nm/embed" class="reel"></iframe>
     </div>
-    <div class="reel-arrows">
-      <span class="arrow-left">◀</span>
-      <span class="arrow-right">▶</span>
-    </div>
-  </div>
-</section>
+  </section>
 
-  <!-- FOOTER (Full Width) -->
-  <footer class="footer-premium">
+  <!-- FOOTER -->
+  <footer class="footer-premium" data-aos="fade-up">
     <div class="footer-top">
       <h2>SALON OWNERS WORK LESS. <span>SALONFIX DOES THE REST.</span></h2>
       <p>Experience it yourself with our FREE 1-Month Trial.</p>
@@ -134,21 +125,16 @@
     <p class="copyright">© 2025 SALONFIX. All Rights Reserved.</p>
   </footer>
 
-   <!-- ✅ Floating WhatsApp -->
+  <!-- ✅ Floating WhatsApp -->
   <a href="https://wa.me/919629370666?text=FIX" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
-<script>
-  const reelGrid = document.querySelector('.reel-grid');
-  const leftArrow = document.querySelector('.arrow-left');
-  const rightArrow = document.querySelector('.arrow-right');
 
-  leftArrow.addEventListener('click', () => {
-    reelGrid.scrollBy({ left: -450, behavior: 'smooth' });
-  });
-
-  rightArrow.addEventListener('click', () => {
-    reelGrid.scrollBy({ left: 450, behavior: 'smooth' });
-  });
-</script>
-
+  <!-- ✅ AOS Init -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 900,
+      once: true
+    });
+  </script>
 </body>
 </html>
