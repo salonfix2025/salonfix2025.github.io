@@ -406,21 +406,6 @@ section {
   border-radius: 18px;
   text-align: center;
 }
-
-/* === Reels Section: Single row === */
-.reel-grid {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 30px;          /* space between each reel */
-}
-.reel-grid iframe {
-  width: 100%;
-  max-width: 420px;   /* keeps them neat like Instagram size */
-  min-height: 550px;  /* ensures proper height */
-  border-radius: 12px;
-  border: none;
-}
 /* === Solution Section Fix === */
 .solution-container {
   display: flex;
