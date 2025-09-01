@@ -407,12 +407,12 @@ section {
   text-align: center;
 }
 
-/* === Solution Section Styling === */
+/* === Solution Section Layout === */
 .solution-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 50px;
 }
 
 .solution-text {
@@ -420,11 +420,11 @@ section {
 }
 
 .solution-text h2 {
-  color: #D4AF37;      /* gold */
-  font-size: 2.5rem;
-  font-weight: 800;    /* bold */
-  margin-bottom: 25px;
+  color: #D4AF37;         /* gold */
+  font-size: 2.6rem;
+  font-weight: 800;
   line-height: 1.3;
+  margin-bottom: 30px;
 }
 
 .solution-text ul {
@@ -436,20 +436,22 @@ section {
 .solution-text li {
   position: relative;
   padding-left: 28px;
-  font-size: 1.3rem;   /* bigger bullet text */
+  font-size: 1.3rem;      /* larger font */
   margin-bottom: 15px;
-  color: #1b1230;      /* dark ink */
+  color: #1b1230;         /* dark ink */
+  line-height: 1.6;       /* keep on one line */
 }
 
 .solution-text li::before {
   content: "•";
-  color: #4B0082;      /* purple dot */
+  color: #4B0082;         /* purple bullet */
   font-size: 1.8rem;
   position: absolute;
   left: 0;
   top: -3px;
 }
 
+/* === Image Styling === */
 .solution-image {
   flex: 1;
   display: flex;
@@ -457,24 +459,27 @@ section {
 }
 
 .solution-image img {
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
   border-radius: 12px;
+  object-fit: cover;      /* makes it fill the section neatly */
 }
 
-/* Responsive: stack order */
+/* Responsive: stack */
 @media (max-width: 768px) {
   .solution-container {
     flex-direction: column;
     text-align: center;
   }
-
-  .desktop-only { display: none; }
-  .mobile-only { display: block; margin: 20px 0; }
-
   .solution-text h2 {
     font-size: 2rem;
   }
+  .solution-text li {
+    font-size: 1.1rem;
+  }
+  .solution-image img {
+    margin-top: 20px;
+    max-height: 300px;
+  }
 }
-@media (min-width: 769px) {
-  .mobile-only { display: none; }
-}
+
