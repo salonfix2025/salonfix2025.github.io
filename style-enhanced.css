@@ -917,36 +917,7 @@ button.btn-gold:hover {
     grid-template-columns: 1fr;  /* stack on small screens */
   }
 }
-/* Hero Section Center Alignment */
-.hero-content {
-  text-align: center;        /* center all text */
-  max-width: 800px;          /* keep it neat */
-  margin: 0 auto;            /* center block itself */
-}
 
-.hero-content h1 {
-  margin-bottom: 20px;
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
-}
-/* Hero Section Center Alignment */
-.hero-content {
-  text-align: center;        /* center all text */
-  max-width: 800px;          /* keep it neat */
-  margin: 0 auto;            /* center block itself */
-}
-
-.hero-content h1 {
-  margin-bottom: 20px;
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
-}
 /* Proof Cards Styling */
 .proof .card {
   background: linear-gradient(135deg, #4B0082, #2d004c);
@@ -976,18 +947,5 @@ button.btn-gold:hover {
   font-size: 1.1rem;        /* larger text */
   font-weight: 500;
 }
-/* Hero Headline */
-.hero-content h1 {
-  white-space: nowrap;    /* 🔑 keep in one line */
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 20px;
-}
 
-/* Hero Subheadline */
-.hero-content p {
-  font-size: 1.2rem;
-  font-weight: 600;       /* 🔑 make bold */
-  margin-bottom: 25px;
-}
 
