@@ -482,4 +482,19 @@ section {
     max-height: 300px;
   }
 }
+/* === Reels Section: Single Column === */
+.reel-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;          /* space between each reel */
+}
+
+.reel-grid iframe {
+  width: 100%;
+  max-width: 420px;   /* keeps them neat like Instagram size */
+  min-height: 550px;  /* ensures proper height */
+  border-radius: 12px;
+  border: none;
+}
 
