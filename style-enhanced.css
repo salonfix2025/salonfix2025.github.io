@@ -2518,3 +2518,22 @@ section h2 {
   .problems { padding: 48px 5%; }
   .problem-card { min-height: 72px; }
 }
+.problems {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columns */
+  gap: 20px;
+  background: var(--sf-purple);
+  color: var(--sf-white);
+  padding: 60px;
+  border-radius: 20px;
+  margin: 0 10%;
+}
+
+.problem-card {
+  background: var(--sf-gold);
+  color: var(--sf-purple);
+  font-weight: 700;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
