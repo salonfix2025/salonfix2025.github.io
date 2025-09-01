@@ -2544,3 +2544,74 @@ section h2 {
   color: var(--sf-gold);
   margin-bottom: 30px;
 }
+/* ===== Problems section: centered heading + 2x2 grid (desktop), 1-col (mobile) ===== */
+.problems{
+  /* center the whole block on the page */
+  max-width: 1120px;
+  margin-inline: auto;
+
+  /* visual + spacing */
+  background: var(--sf-purple);
+  color: var(--sf-white);
+  padding: 56px 5%;
+  border-radius: 20px;
+
+  /* let heading and cards participate in one layout */
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 26px;
+}
+
+.problems h2{
+  text-align: center;
+  font-size: clamp(1.6rem, 2.2vw + 1rem, 2.4rem);
+  font-weight: 800;
+  color: var(--sf-gold);
+  margin: 0 auto 8px;
+  line-height: 1.25;
+}
+
+/* the gold pills */
+.problems .problem-card{
+  background: var(--sf-gold);
+  color: var(--sf-purple);
+  font-weight: 800;
+  border-radius: 14px;
+  padding: 16px 20px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+}
+
+/* ——— Desktop / tablet (2 columns, 2 rows) ——— */
+@media (min-width: 900px){
+  .problems{
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    column-gap: 46px;    /* space between the two columns */
+    row-gap: 32px;       /* space between the two rows   */
+    justify-items: center;
+  }
+
+  .problems h2{
+    grid-column: 1 / -1; /* heading spans both columns */
+    margin-bottom: 18px;
+  }
+
+  .problems .problem-card{
+    width: 100%;
+    max-width: 420px;    /* keeps both sides visually balanced */
+  }
+}
+
+/* ——— Mobile (stacked, centered) ——— */
+@media (max-width: 899px){
+  .problems{
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+    padding: 42px 20px;
+  }
+
+  .problems .problem-card{
+    max-width: 520px;
+    justify-self: center;
+  }
+}
