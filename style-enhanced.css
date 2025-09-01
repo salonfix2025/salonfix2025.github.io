@@ -2222,3 +2222,30 @@ body .hero a[class*="btn"] {
     padding-bottom: 32px !important;
   }
 }
+/* ==============================
+   HOMEPAGE SLIDE SPACING FIX
+   ============================== */
+
+/* Give breathing room to every main section */
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-bottom: 60px; /* space between consecutive sections */
+}
+
+/* Make headings stand out with extra bottom space */
+section h2 {
+  margin-bottom: 40px;
+}
+
+/* Mobile adjustments so it doesn’t feel oversized */
+@media (max-width: 768px) {
+  section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-bottom: 40px;
+  }
+  section h2 {
+    margin-bottom: 28px;
+  }
+}
