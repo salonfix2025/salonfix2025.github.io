@@ -825,4 +825,49 @@ section {
   margin-bottom: 30px;
   text-align: center;
 }
+/* Founder Button Fix */
+.founder .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;   /* spacing between elements */
+}
+
+.founder-btn {
+  display: inline-block;
+  background: #D4AF37;   /* gold */
+  color: #4B0082;        /* purple text */
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-top: 15px;      /* spacing from list */
+}
+
+.founder-btn:hover {
+  background: #b9972f;   /* darker gold hover */
+  transform: scale(1.05);
+}
+/* === Global Button Styles === */
+a.btn-gold,
+button.btn-gold {
+  display: inline-block;
+  background: #D4AF37;   /* gold */
+  color: #4B0082;        /* purple text */
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+a.btn-gold:hover,
+button.btn-gold:hover {
+  background: #b9972f;   /* darker gold hover */
+  transform: scale(1.05);
+}
 
