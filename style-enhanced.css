@@ -629,4 +629,20 @@ section {
     right: 10px;
   }
 }
+/* Reels Grid Fix */
+.reel-grid {
+  display: flex;
+  flex-wrap: nowrap;   /* 🔑 keeps all in one row */
+  gap: 20px;           /* equal spacing */
+  overflow-x: auto;    /* allows scroll on small screens */
+  scroll-behavior: smooth;
+}
+
+.reel-grid iframe {
+  flex: 0 0 auto;      /* prevents wrapping */
+  width: 420px;        /* fixed width */
+  height: 550px;       /* fixed height */
+  border-radius: 12px;
+  border: none;
+}
 
