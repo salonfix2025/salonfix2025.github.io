@@ -2676,7 +2676,7 @@ section h2 {
 /* === CASE STUDY HEADING === */
 .case h2 {
   color: var(--sf-purple);
-  font-size: 2rem;   /* Increased size */
+  font-size: 4rem;   /* Increased size */
   font-weight: 900;
   text-align: center;
   margin-bottom: 30px;
