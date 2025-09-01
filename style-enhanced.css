@@ -645,4 +645,13 @@ section {
   border-radius: 12px;
   border: none;
 }
+.solution-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  max-width: 1100px;   /* 🔑 reduce overall width */
+  margin: 0 auto;      /* center section */
+  padding: 0 20px;     /* safe side padding */
+}
 
