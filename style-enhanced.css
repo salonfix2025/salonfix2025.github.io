@@ -870,4 +870,30 @@ button.btn-gold:hover {
   background: #b9972f;   /* darker gold hover */
   transform: scale(1.05);
 }
+.problem-card {
+  background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
+  background-size: 200% 200%;   /* allows smooth gradient */
+  color: #4B0082;              /* purple text */
+  font-weight: 600;
+  border-radius: 18px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* Add shimmer effect on hover */
+.problem-card:hover {
+  background-position: right center;  /* animate gradient */
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+@keyframes goldShimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.problem-card:hover {
+  animation: goldShimmer 2s linear infinite;
+}
 
