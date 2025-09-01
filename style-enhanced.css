@@ -2255,3 +2255,10 @@ section h2 {
   padding-left: 8%;
   padding-right: 8%;
 }
+.proof h2 {
+  text-align: center;
+  font-size: 2rem;   /* Increase size */
+  font-weight: 800;  /* Make bold */
+  color: #4B0082;    /* Purple */
+  margin-bottom: 30px;
+}
