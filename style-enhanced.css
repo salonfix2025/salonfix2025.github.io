@@ -977,8 +977,8 @@ button.btn-gold:hover {
   margin-bottom: 40px;
 }
 .result-card {
-  font-size: 2rem;   /* stretch text size */
-  font-weight: 800;
+  font-size: 3rem;   /* stretch text size */
+  font-weight: 900;
   color: #D4AF37;    /* optional: gold highlight */
 }
 
