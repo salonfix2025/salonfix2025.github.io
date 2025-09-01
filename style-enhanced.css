@@ -968,5 +968,11 @@ button.btn-gold:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
+.hero-content p {
+  text-align: center;     /* 🔑 center align */
+  font-size: 1.2rem;
+  font-weight: 600;       /* already bold */
+  margin-bottom: 25px;
+}
 
 
