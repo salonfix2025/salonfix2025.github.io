@@ -981,6 +981,31 @@ button.btn-gold:hover {
   font-weight: 900;
   color: #D4AF37;    /* optional: gold highlight */
 }
+.footer-cta a {
+  display: inline-block;
+  padding: 14px 28px;         /* equal padding */
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  min-height: 48px;           /* locks same height */
+  line-height: 1.5;
+}
+
+/* Gold filled button */
+.footer-cta .btn-gold {
+  background: #D4AF37;
+  color: #4B0082;
+  border: none;
+}
+
+/* Outline button */
+.footer-cta .btn-outline {
+  background: transparent;
+  border: 2px solid #D4AF37;
+  color: #D4AF37;
+}
 
 
 
