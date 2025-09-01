@@ -358,3 +358,29 @@ section {
     max-width: 100%;
   }
 }
+/* === Bigger Boxes & Fonts === */
+.card, .problem-card {
+  min-width: 260px;       /* larger width */
+  min-height: 160px;      /* larger height */
+  padding: 30px 25px;     /* more breathing room */
+  font-size: 1.2rem;      /* increase font size */
+  font-weight: 600;       /* bolder text */
+  border-radius: 18px;    /* keep nice round corners */
+  text-align: center;     /* align text neatly */
+}
+
+/* Special for card headings */
+.card h3 {
+  font-size: 1.6rem;      /* bigger numbers like +₹2.5L */
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .card, .problem-card {
+    min-width: 100%;      /* full width on small screens */
+    font-size: 1rem;      /* scale down slightly */
+    margin: 10px auto;
+  }
+}
