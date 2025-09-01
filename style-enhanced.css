@@ -2473,3 +2473,48 @@ section h2 {
   font-weight: 700;
   text-align: center;
 }
+/* ---- Problems layout polish ---- */
+.problems { padding: 60px 6%; }
+.problems h2 {
+  max-width: 900px;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+/* Center the 2×2 grid and control spacing */
+.problem-grid {
+  max-width: 920px;            /* keeps the row width tidy */
+  margin: 0 auto;              /* centers the grid */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 32px;              /* row-gap / column-gap */
+}
+
+/* Make each pill consistent */
+.problem-card {
+  background: var(--sf-gold);
+  color: var(--sf-purple);
+  border-radius: 18px;
+  padding: 18px 22px;
+  font-weight: 800;
+  text-align: center;
+
+  /* equal heights + perfect vertical centering */
+  min-height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* optional: subtle shadow so they pop */
+  box-shadow: 0 8px 22px rgba(0,0,0,.15);
+}
+
+/* Mobile: stack nicely with the same spacing */
+@media (max-width: 768px) {
+  .problem-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .problems { padding: 48px 5%; }
+  .problem-card { min-height: 72px; }
+}
