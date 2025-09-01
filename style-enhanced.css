@@ -2280,3 +2280,10 @@ section h2 {
   background: #b38e2f; /* darker gold hover */
   color: var(--sf-white);
 }
+.problems h2 {
+  text-align: center;
+  color: var(--sf-gold);
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
