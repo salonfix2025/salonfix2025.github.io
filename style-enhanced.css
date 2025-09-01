@@ -1971,3 +1971,48 @@ body { background: #ffffff; }
   font-size: 1.2rem;
   margin-bottom: 30px;
 }
+/* === HERO FULL SCREEN WITH CENTERED TEXT === */
+.hero {
+  position: relative;
+  height: 100vh;                        /* full viewport height */
+  width: 100vw;                         /* full viewport width */
+  display: flex;
+  justify-content: center;              /* center vertically */
+  align-items: center;                  /* center horizontally */
+  text-align: center;
+  padding: 0 10%;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(75,0,130,0.9), rgba(212,175,55,0.6));
+  z-index: 0;                           /* gradient behind */
+}
+
+.hero .hero-content {
+  position: relative;
+  z-index: 1;                           /* keep text above overlay */
+  max-width: 900px;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 4vw, 48px);    /* responsive headline */
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: clamp(16px, 2vw, 22px);
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.hero .btn, .hero .cta-btn {
+  font-size: 1.1rem;
+  padding: 14px 28px;
+  margin-top: 10px;
+}
