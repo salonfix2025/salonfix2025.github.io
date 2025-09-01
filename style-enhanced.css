@@ -1048,6 +1048,13 @@ button.btn-outline {
   color: #4B0082;
   transform: scale(1.05);
 }
+.hero-sub {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 auto 25px auto;  /* centers and adds bottom spacing */
+  max-width: 700px;          /* keeps line compact */
+}
 
 
 
