@@ -2016,3 +2016,22 @@ body { background: #ffffff; }
   padding: 14px 28px;
   margin-top: 10px;
 }
+/* === Fix alignment for profit issue boxes === */
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* two per row */
+  gap: 24px;                             /* equal spacing */
+  max-width: 1000px;
+  margin: 0 auto;                        /* center the grid */
+  padding: 20px;
+}
+
+.problems-grid .problem-card {
+  background: #4B0082; /* brand purple */
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
