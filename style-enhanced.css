@@ -947,5 +947,26 @@ button.btn-gold:hover {
   font-size: 1.1rem;        /* larger text */
   font-weight: 500;
 }
+.problem-card {
+  background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
+  color: #4B0082;              /* purple text */
+  font-weight: 700;
+  border-radius: 18px;
+  padding: 20px;               /* less padding = smaller height */
+  min-height: 120px;           /* reduced box height */
+  text-align: center;
+  font-size: 1.2rem;           /* bigger text */
+  line-height: 1.4;            /* balanced spacing */
+  display: flex;
+  align-items: center;         /* vertically center text */
+  justify-content: center;     /* horizontally center text */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.problem-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
 
 
