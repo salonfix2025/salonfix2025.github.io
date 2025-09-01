@@ -267,12 +267,11 @@ nav.sf-navbar .cta-btn {
   font-size: 1.1rem;  /* reduce subtext size */
   max-width: 650px;   /* keep text width neat */
 }
-/* === Founder Image Rounded Square === */
+/* === Founder Image Rounded Square (No Border) === */
 .founder-img {
-  border-radius: 20px;        /* curved edges, not circle */
-  border: 5px solid #D4AF37;  /* gold border */
-  padding: 5px;               /* spacing inside border */
-  width: 320px;               /* control size */
-  height: auto;               /* keep aspect ratio */
-  object-fit: cover;          /* crop neatly */
+  border-radius: 20px;   /* curved edges */
+  width: 320px;          /* control size */
+  height: auto;          /* keeps proportion */
+  object-fit: cover;     /* crops neatly if not square */
+  display: block;
 }
