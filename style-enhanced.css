@@ -2156,3 +2156,69 @@ h1.hero-title,
   position: relative;
   z-index: 1;   /* keeps text above gradient */
 }
+/* ===============================
+   HERO — bulletproof center + text reset
+   =============================== */
+
+/* Force the hero to fill the screen and center content */
+body section.hero,
+html body .hero {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;  /* vertical center */
+  align-items: center !important;       /* horizontal center */
+  text-align: center !important;
+  min-height: 100vh !important;         /* full screen */
+  padding: 0 10% !important;
+  position: relative !important;
+  overflow: hidden;                     /* just in case */
+  background: linear-gradient(135deg, rgba(75,0,130,0.9), rgba(212,175,55,0.6)),
+              url('assets/salon-bg.jpg') center/cover no-repeat !important;
+  color: #fff !important;
+  gap: 16px;                             /* space between h1, p, button */
+}
+
+/* Keep any overlay behind the content */
+body .hero::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(135deg, rgba(75,0,130,0.9), rgba(212,175,55,0.6)) !important;
+  z-index: 0 !important;
+}
+
+/* Make sure hero text sits above overlays and is fully visible */
+body .hero h1,
+body .hero p,
+body .hero a {
+  position: relative !important;
+  z-index: 1 !important;
+  opacity: 1 !important;
+  color: #ffffff !important;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+  mix-blend-mode: normal !important;
+  filter: none !important;
+  transform: none !important;
+  margin: 0 !important;
+}
+
+/* Sensible sizes that won’t get cut off */
+body .hero h1 { font-size: clamp(28px, 4vw + 14px, 56px) !important; font-weight: 800 !important; line-height: 1.2 !important; }
+body .hero p  { font-size: clamp(16px, 1.2vw + 10px, 20px) !important; }
+
+/* Button lift effect preserved */
+body .hero a.btn,
+body .hero a[class*="btn"] {
+  z-index: 1 !important;
+}
+
+/* Mobile: add breathing room if 100vh is tight with the fixed navbar */
+@media (max-width: 768px) {
+  body section.hero,
+  html body .hero {
+    min-height: calc(100vh - 64px) !important;
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+}
