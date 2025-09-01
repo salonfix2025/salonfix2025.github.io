@@ -15,25 +15,26 @@
     *{margin:0;padding:0;box-sizing:border-box;}
     body{font-family:'Montserrat',sans-serif;background:var(--sf-white);color:#1b1230;line-height:1.6;}
 
-    /* NAVBAR */
-    nav{
+   /* Navbar */
+    nav.sf-navbar{
       position:fixed;top:0;left:0;width:100%;
       background:rgba(75,0,130,0.95);
       display:flex;justify-content:space-between;align-items:center;
-      padding:15px 8%;z-index:1000;transition:0.3s;
+      padding:15px 8%;z-index:1000;
     }
-    nav .logo{font-size:1.5rem;font-weight:800;color:var(--sf-white);}
-    nav ul{display:flex;gap:25px;list-style:none;}
-    nav ul li a{color:var(--sf-white);text-decoration:none;font-weight:600;transition:0.3s;}
-    nav ul li a:hover, nav ul li a.active{color:var(--sf-gold);border-bottom:2px solid var(--sf-gold);}
-    nav .cta-btn{background:var(--sf-gold);color:#1b1230;padding:10px 18px;border-radius:50px;font-weight:700;text-decoration:none;}
-
-    section{padding:100px 10%;text-align:center;}
-    h1,h2{font-weight:800;}
-    .btn{padding:14px 28px;border-radius:50px;font-weight:700;cursor:pointer;text-decoration:none;transition:0.3s;}
-    .btn-gold{background:var(--sf-gold);color:#1b1230;}
-    .btn-outline{border:2px solid var(--sf-gold);background:transparent;color:var(--sf-gold);}
-    .btn:hover{box-shadow:0 0 12px rgba(212,175,55,0.7);}
+    nav.sf-navbar .logo a{font-weight:900;font-size:1.5rem;color:#fff;text-decoration:none}
+    nav.sf-navbar ul{display:flex;gap:25px;list-style:none;margin:0;padding:0}
+    nav.sf-navbar ul li a{color:#fff;text-decoration:none;font-weight:600;padding:8px 6px;border-bottom:2px solid transparent}
+    nav.sf-navbar ul li a:hover,nav.sf-navbar ul li a.active{color:var(--sf-gold);border-bottom:2px solid var(--sf-gold)}
+    nav.sf-navbar .cta-btn{background:var(--sf-gold);color:#1b1230;padding:10px 18px;border-radius:50px;font-weight:700;text-decoration:none}
+    .burger{display:none;background:none;border:0;cursor:pointer}
+    .burger span{display:block;width:26px;height:2px;background:#fff;margin:6px 0}
+    @media(max-width:900px){
+      .burger{display:block}
+      nav.sf-navbar ul{position:fixed;inset:64px 0 auto 0;background:#4B0082;flex-direction:column;padding:20px;gap:16px;transform:translateY(-120%);transition:.25s}
+      nav.sf-navbar ul.open{transform:translateY(0)}
+      body.menu-open{overflow:hidden}
+    }
 
     /* HERO */
     .hero{
