@@ -329,7 +329,7 @@ section {
 .solution h2,
 .reel-section h2 {
   color: #D4AF37;        /* gold */
-  font-size: 2.2rem;     /* bigger font */
+  font-size: 4rem;     /* bigger font */
   font-weight: 800;      /* extra bold */
   text-align: center;    /* keep it centered for impact */
   margin-bottom: 30px;   /* breathing room below */
@@ -340,7 +340,7 @@ section {
   .case h2,
   .solution h2,
   .reel-section h2 {
-    font-size: 1.8rem;   /* slightly smaller on mobile */
+    font-size: 4rem;   /* slightly smaller on mobile */
   }
 }
 /* === Curve Edge Visibility Fix === */
