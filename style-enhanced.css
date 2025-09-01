@@ -384,3 +384,162 @@ section {
     margin: 10px auto;
   }
 }
+/* === Equal Height for All Boxes === */
+.card-grid, .problems-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;                /* equal spacing between boxes */
+  justify-content: center;  /* center align */
+  align-items: stretch;     /* 🔑 makes all boxes equal height */
+}
+
+.card, .problem-card {
+  flex: 1 1 260px;          /* flexible but with min size */
+  display: flex;            
+  flex-direction: column;   /* stack text inside */
+  justify-content: center;  /* center vertically */
+  align-items: center;      /* center horizontally */
+  min-height: 180px;        /* base height */
+  padding: 30px 25px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 18px;
+  text-align: center;
+}
+/* === 3 Boxes per Row === */
+.card-grid, .problems-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  gap: 30px;
+  justify-items: center;
+}
+
+.card, .problem-card {
+  width: 100%;
+  max-width: 320px;       /* control width */
+  min-height: 180px;      /* rectangle size */
+  padding: 30px 25px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 18px;
+  text-align: center;
+
+  display: flex;          /* center content */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Special for card headings */
+.card h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+/* Mobile: 1 per row */
+@media (max-width: 768px) {
+  .card-grid, .problems-grid {
+    grid-template-columns: 1fr; /* stack vertically */
+  }
+}
+
+/* Tablet: 2 per row */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .card-grid, .problems-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* === Box Hover Effect === */
+.card, .problem-card {
+  transition: all 0.3s ease;   /* smooth animation */
+  cursor: pointer;             /* hand icon on hover */
+}
+
+.card:hover, .problem-card:hover {
+  transform: scale(1.05);      /* subtle zoom */
+  box-shadow: 0 10px 25px rgba(75, 0, 130, 0.3); /* purple shadow glow */
+}
+/* === Hover Text Color Change === */
+.card:hover, 
+.problem-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(75, 0, 130, 0.3);
+  color: #D4AF37; /* gold text on hover */
+}
+
+/* Make sure headings inside cards also turn gold */
+.card:hover h3 {
+  color: #D4AF37;
+}
+/* === Box Hover Effect with Background Shift === */
+.card, .problem-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: #fff; /* default white background */
+}
+
+.card:hover, 
+.problem-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(75, 0, 130, 0.3);
+  background: #f9f4ff; /* subtle light purple shift */
+  color: #D4AF37;      /* gold text on hover */
+}
+
+/* Headings inside cards also turn gold */
+.card:hover h3 {
+  color: #D4AF37;
+}
+/* === Global Box Styles === */
+.card, .problem-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: #fff;           /* default white background */
+  border-radius: 18px;
+  padding: 30px 25px;
+  text-align: center;
+}
+
+/* Hover effect for ALL boxes */
+.card:hover, 
+.problem-card:hover {
+  transform: scale(1.05);      /* subtle zoom */
+  box-shadow: 0 10px 25px rgba(75, 0, 130, 0.3); /* purple glow */
+  background: #f9f4ff;         /* light purple background */
+  color: #D4AF37;              /* gold text */
+}
+
+/* Headings inside cards also turn gold */
+.card:hover h3, 
+.problem-card:hover h3 {
+  color: #D4AF37;
+}
+/* === Global Box Styles with Smooth Hover === */
+.card, .problem-card {
+  background: #fff;            /* default white background */
+  border-radius: 18px;
+  padding: 30px 25px;
+  text-align: center;
+  cursor: pointer;
+
+  /* Smooth animation for all properties */
+  transition: transform 0.3s ease, 
+              box-shadow 0.3s ease, 
+              background 0.3s ease, 
+              color 0.3s ease;
+}
+
+.card:hover, 
+.problem-card:hover {
+  transform: scale(1.05);       /* subtle zoom */
+  box-shadow: 0 10px 25px rgba(75, 0, 130, 0.3); /* purple glow */
+  background: #f9f4ff;          /* light purple background */
+  color: #D4AF37;               /* gold text */
+}
+
+/* Headings inside cards also turn gold */
+.card:hover h3, 
+.problem-card:hover h3 {
+  color: #D4AF37;
+}
