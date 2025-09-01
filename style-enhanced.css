@@ -1661,3 +1661,22 @@ section {
   font-size:28px;box-shadow:0 4px 8px rgba(0,0,0,0.3);z-index:1000;transition:transform .2s
 }
 .whatsapp-float:hover{transform:scale(1.1)}
+/* 🚫 Kill independent scrolls */
+section, .card-grid, .problems-grid, .solution-container, .founder, .reel-grid {
+  overflow: visible !important;
+}
+
+/* ✅ Make sections flow */
+section {
+  width: 100%;
+  display: block;
+}
+
+/* ✅ Responsive reels */
+.reel {
+  width: 100%;
+  aspect-ratio: 9 / 16;   /* keeps vertical reel ratio */
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
