@@ -947,4 +947,47 @@ button.btn-gold:hover {
   font-size: 1.2rem;
   margin-bottom: 25px;
 }
+/* Proof Cards Styling */
+.proof .card {
+  background: linear-gradient(135deg, #4B0082, #2d004c);
+  color: #fff;
+  border-radius: 18px;
+  padding: 40px 30px;       /* bigger box */
+  text-align: center;
+  min-width: 280px;
+  min-height: 160px;        /* taller box */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proof .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.proof .card h3 {
+  font-size: 2rem;          /* bigger key number */
+  font-weight: 800;
+  color: #D4AF37;           /* gold */
+  margin-bottom: 12px;
+}
+
+.proof .card p {
+  font-size: 1.1rem;        /* larger text */
+  font-weight: 500;
+}
+/* Hero Headline */
+.hero-content h1 {
+  white-space: nowrap;    /* 🔑 keep in one line */
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+/* Hero Subheadline */
+.hero-content p {
+  font-size: 1.2rem;
+  font-weight: 600;       /* 🔑 make bold */
+  margin-bottom: 25px;
+}
 
