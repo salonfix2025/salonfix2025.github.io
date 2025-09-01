@@ -1458,3 +1458,39 @@ section{width:100%;max-width:100%;overflow-x:hidden;padding:60px 5%}
     min-height: 360px;
   }
 }
+/* ===========================
+   📱 Navbar Responsive Fixes
+   =========================== */
+@media (max-width: 768px) {
+  nav.sf-navbar {
+    padding: 12px 5%;
+  }
+
+  nav.sf-navbar .logo a {
+    font-size: 1.2rem;
+  }
+
+  nav.sf-navbar .cta-btn {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Hide CTA in top bar, move into menu */
+  nav.sf-navbar .cta-btn {
+    display: none;
+  }
+
+  nav.sf-navbar ul.open::after {
+    content: "📲 WhatsApp FIX";
+    display: block;
+    background: var(--sf-gold);
+    color: var(--sf-ink);
+    font-weight: 700;
+    text-align: center;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 6px;
+  }
+}
