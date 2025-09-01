@@ -1280,6 +1280,18 @@ body {
     max-width: 95%;
   }
 }
+/* Wider narrow layout */
+.section-narrow {
+  max-width: 1300px;   /* was 1100px */
+  margin: 0 auto;
+  padding: 70px 40px;  /* a touch more breathing space */
+}
+
+@media (max-width: 1400px) {
+  .section-narrow {
+    max-width: 95%;
+  }
+}
 
 
 
