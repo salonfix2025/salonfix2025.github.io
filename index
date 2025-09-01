@@ -5,227 +5,143 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SALONFIX – Your In-House Business Partner</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --sf-purple:#4B0082;
-      --sf-gold:#D4AF37;
-      --sf-white:#ffffff;
-      --sf-light:#f9f7f7;
-    }
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family:'Montserrat',sans-serif;background:var(--sf-white);color:#1b1230;line-height:1.6;}
+  <link rel="stylesheet" href="style-enhanced.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-   /* Navbar */
-    nav.sf-navbar{
-      position:fixed;top:0;left:0;width:100%;
-      background:rgba(75,0,130,0.95);
-      display:flex;justify-content:space-between;align-items:center;
-      padding:15px 8%;z-index:1000;
-    }
-    nav.sf-navbar .logo a{font-weight:900;font-size:1.5rem;color:#fff;text-decoration:none}
-    nav.sf-navbar ul{display:flex;gap:25px;list-style:none;margin:0;padding:0}
-    nav.sf-navbar ul li a{color:#fff;text-decoration:none;font-weight:600;padding:8px 6px;border-bottom:2px solid transparent}
-    nav.sf-navbar ul li a:hover,nav.sf-navbar ul li a.active{color:var(--sf-gold);border-bottom:2px solid var(--sf-gold)}
-    nav.sf-navbar .cta-btn{background:var(--sf-gold);color:#1b1230;padding:10px 18px;border-radius:50px;font-weight:700;text-decoration:none}
-    .burger{display:none;background:none;border:0;cursor:pointer}
-    .burger span{display:block;width:26px;height:2px;background:#fff;margin:6px 0}
-    @media(max-width:900px){
-      .burger{display:block}
-      nav.sf-navbar ul{position:fixed;inset:64px 0 auto 0;background:#4B0082;flex-direction:column;padding:20px;gap:16px;transform:translateY(-120%);transition:.25s}
-      nav.sf-navbar ul.open{transform:translateY(0)}
-      body.menu-open{overflow:hidden}
-    }
-
-    /* HERO */
-    .hero{
-      height:75vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
-      background:linear-gradient(135deg,rgba(75,0,130,0.9),rgba(212,175,55,0.6)),
-                  url('assets/salon-bg.jpg') center/cover no-repeat;
-      color:var(--sf-white);text-align:center;padding:0 10%;
-    }
-    .hero h1{font-size:2.6rem;margin-bottom:20px;}
-    .hero p{font-size:1.1rem;margin-bottom:30px;}
-
-    /* CARD GRIDS */
-    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:40px;}
-    .card{background:linear-gradient(145deg,var(--sf-purple),#3a005f);color:var(--sf-white);
-          padding:30px;border-radius:20px;box-shadow:0 4px 12px rgba(0,0,0,0.1);transition:0.3s;}
-    .card:hover{transform:translateY(-6px);}
-
-    /* PROOF */
-    .proof h2{color:var(--sf-gold);}
-
-    /* PROBLEMS */
-    .problems{background:linear-gradient(145deg,var(--sf-purple),#3a005f);color:var(--sf-white);}
-    .problems h2{margin-bottom:20px;}
-    .problem-card{background:rgba(255,255,255,0.1);border-radius:20px;padding:20px;color:var(--sf-white);font-weight:600;}
-    .problem-card:hover{background:var(--sf-gold);color:#1b1230;}
-
-    /* SOLUTION */
-    .solution{background:var(--sf-white);text-align:left;display:flex;flex-wrap:wrap;align-items:center;gap:40px;}
-    .solution .text{flex:1;min-width:300px;}
-    .solution .text h2{color:var(--sf-purple);margin-bottom:20px;}
-    .solution .text ul{list-style:none;padding:0;}
-    .solution .text li{margin:10px 0;padding-left:25px;position:relative;}
-    .solution .text li::before{content:"✔";color:var(--sf-gold);position:absolute;left:0;}
-    .solution .image{flex:1;min-width:300px;}
-    .solution .image img{width:100%;border-radius:20px;}
-
-    /* CASE STUDY */
-    .case{background:var(--sf-white);}
-    .case h2{color:var(--sf-gold);margin-bottom:30px;}
-    .case .card{background:linear-gradient(145deg,var(--sf-purple),#3a005f);}
-
-    /* FOUNDER */
-    .founder{background:linear-gradient(145deg,var(--sf-purple),#3a005f);color:var(--sf-white);
-             display:flex;flex-wrap:wrap;align-items:center;gap:40px;text-align:left;}
-    .founder .photo{flex:1;min-width:300px;}
-    .founder .photo img{width:100%;max-width:380px;border-radius:50%;border:5px solid var(--sf-gold);
-                        box-shadow:0 0 15px rgba(212,175,55,0.8);}
-    .founder .content{flex:1;min-width:300px;}
-    .founder .content h2{margin-bottom:15px;}
-    .founder .content ul{list-style:none;padding:0;margin-top:15px;}
-    .founder .content li{margin:8px 0;}
-
-    /* REELS */
-    .reel-grid{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;margin-top:30px;}
-    .reel-grid iframe{width:320px;height:440px;border-radius:20px;border:none;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
-
-    /* FINAL CTA */
-    .final{background:linear-gradient(145deg,var(--sf-purple),#3a005f);color:var(--sf-white);}
-    .final h2{font-size:2rem;margin-bottom:20px;}
-    .final .cta-group{margin-top:20px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap;}
-
-    /* FLOATING WHATSAPP */
-    .whatsapp-float{
-      position:fixed;bottom:20px;right:20px;
-      background:#25D366;color:white;
-      border-radius:50%;width:60px;height:60px;
-      display:flex;justify-content:center;align-items:center;
-      font-size:28px;text-decoration:none;
-      box-shadow:0 4px 12px rgba(0,0,0,0.2);z-index:2000;
-    }
-  </style>
-  <link rel="stylesheet" href="style-enhanced.css" />
+  <!-- ✅ AOS Animation Library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
-   <!-- ✅ NAVBAR -->
-  <nav class="sf-navbar">
-    <div class="logo"><a href="index.html">SALONFIX</a></div>
-    <ul id="site-nav">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">How We Work</a></li>
-      <li><a href="pricing.html">Partnership Plans</a></li>
-      <li><a href="blog.html" class="active">Testimonials</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a href="https://wa.me/919629370666?text=FIX" class="cta-btn">WhatsApp FIX</a>
-    <button class="burger" id="burger"><span></span><span></span><span></span></button>
-  </nav>
-
+   <!-- ✅ Navbar -->
+<nav class="sf-navbar">
+  <div class="logo">
+    <a href="index.html">SALONFIX</a>
+  </div>
+  <ul id="site-nav">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">How We Work</a></li>
+    <li><a href="pricing.html">Partnership Plans</a></li>
+    <li><a href="blog.html">Testimonials</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/919629370666?text=FIX" class="cta-btn">WhatsApp FIX</a>
+  <button class="burger" id="burger"><span></span><span></span><span></span></button>
+</nav>
+ 
   <!-- HERO -->
-  <section class="hero">
-    <h1>Busy salon. Bank balance still empty?</h1>
-    <p>Sales ≠ Profit. SALONFIX tracks every rupee daily — no leaks, no guessing.</p>
-    <a href="https://wa.me/919629370666?text=FIX" class="btn btn-gold">Lets Start FREE 1-Month Trial</a>
+  <section class="hero" data-aos="fade-up">
+    <div class="hero-content">
+      <h1>Busy salon. Bank balance still empty?</h1>
+      <p class="hero-sub">Sales ≠ Profit. SALONFIX tracks every rupee daily — no leaks, no guessing.</p>
+      <a href="https://wa.me/919629370666?text=FIX" class="btn-gold" data-aos="zoom-in">Start FREE 1-Month Trial</a>
+    </div>
   </section>
 
   <!-- PROOF -->
-  <section class="proof">
-    <h2>4 branches -  6 weeks -  Profit flipped </h2>
+  <section class="proof" data-aos="fade-up">
+    <h2>4 branches · 6 weeks · Profit flipped</h2>
     <div class="card-grid">
-      <div class="card"><h3>+₹2.5L</h3>
-        <p>Profit in 30 days</p></div>
-      <div class="card"><h3>-30% Waste</h3>
-        <p>+20% Vendor Savings</p></div>
-      <div class="card"><h3>+8.4%</h3>
-        <p>Profit Growth in 6 weeks</p></div>
+      <div class="card" data-aos="fade-up" data-aos-delay="100"><h3>+₹2.5L</h3><p>Profit in 30 days</p></div>
+      <div class="card" data-aos="fade-up" data-aos-delay="200"><h3>-30% Waste</h3><p>+20% Vendor Savings</p></div>
+      <div class="card" data-aos="fade-up" data-aos-delay="300"><h3>+8.4%</h3><p>Profit Growth in 6 weeks</p></div>
     </div>
   </section>
 
   <!-- PROBLEMS -->
-  <section class="problems">
+<section class="problems section-narrow" data-aos="fade-up">
   <h2>Why salons lose profit even when sales are high…</h2>
   <div class="problems-grid">
-    <div class="problem-card">Manager salary ≠ System control</div>
-    <div class="problem-card">Petty cash leaks silently bleed profit</div>
-    <div class="problem-card">No rebooking system = empty chairs</div>
-    <div class="problem-card">Retail zero = weak team control</div>
+    <div class="problem-card" data-aos="fade-up" data-aos-delay="100">Manager salary ≠ System control</div>
+    <div class="problem-card" data-aos="fade-up" data-aos-delay="200">Petty cash leaks silently bleed profit</div>
+    <div class="problem-card" data-aos="fade-up" data-aos-delay="300">No rebooking system = empty chairs</div>
+    <div class="problem-card" data-aos="fade-up" data-aos-delay="400">Retail zero = weak team control</div>
   </div>
 </section>
 
-  <!-- CASE STUDY -->
-  <section class="case">
+  <!-- CASE -->
+  <section class="case" data-aos="fade-up">
     <h2>From Chaos to Control.</h2>
     <div class="card-grid">
-      <div class="card">❌ Before: No daily numbers, rebooking 0, retail 3%</div>
-      <div class="card">🔄 After: Daily P&L + scripts → retail 11%</div>
-      <div class="card">✅ Result: Profit +8.4% in 6 weeks</div>
+      <div class="card" data-aos="fade-up" data-aos-delay="100">❌ Before: No daily numbers, rebooking 0, retail 3%</div>
+      <div class="card" data-aos="fade-up" data-aos-delay="200">🔄 After: Daily P&L + scripts → retail 11%</div>
+      <div class="card result-card" data-aos="zoom-in" data-aos-delay="300">✅ Result: Profit +8.4% in 6 weeks</div>
     </div>
   </section>
 
   <!-- SOLUTION -->
-<section class="solution">
-    <div class="text">
-        <h2>We don’t just consult. We take over.</h2>
-        <p>SALONFIX runs your branch daily with full proof & accountability:</p>
+  <section class="solution" data-aos="fade-up">
+    <div class="solution-container">
+      <div class="solution-text">
+        <h2>We don’t just consult.<br>We take over.</h2>
         <ul>
-            <li>Daily reports on WhatsApp</li>
-            <li>Branch control with proof photos & logs</li>
-            <li>Staff accountability + incentive system</li>
-            <li>Owner Action Box = clear next steps</li>
+          <li>Daily reports on WhatsApp</li>
+          <li>Branch control with proof photos & logs</li>
+          <li>Staff accountability + incentive system</li>
+          <li>Owner Action Box = clear next steps</li>
         </ul>
-    </div>
-    <div class="image">
-        <img src="assets/about-different.jpg" alt="Solution visual">
-    </div>
-</section>
-
-  <!-- FOUNDER -->
-  <section class="founder">
-    <div class="photo">
-      <img src="assets/founder.jpg" alt="Jawhar Raj Rajkumar">
-    </div>
-    <div class="content">
-      <h2>I’m <span class="gold-text">JAWHAR RAJ RAJKUMAR</span> — I’ve fixed it all.</h2>
-      <p>10+ years inside salons, turning chaos into profit across 100+ salon days.</p>
-      <ul>
-        <li>🏆 10+ Years Running Salon Operations</li>
-        <li>💰 Proven Profit Growth Across Multiple Branches</li>
-        <li>📊 100+ Daily Operations Controlled</li>
-      </ul>
-      <a href="https://wa.me/919629370666?text=FIX" class="btn btn-gold" style="margin-top:20px;">WhatsApp FIX — Start FREE Trial</a>
+      </div>
+      <div class="solution-image">
+        <img src="assets/about-different.jpg" alt="Salon team control">
+      </div>
     </div>
   </section>
 
+  <!-- FOUNDER -->
+<section class="founder section-narrow" data-aos="fade-up">
+  <div class="photo" data-aos="zoom-in" data-aos-delay="200">
+    <img src="assets/founder.jpg" alt="JAWHAR RAJ RAJKUMAR">
+  </div>
+  <div class="content" data-aos="fade-up" data-aos-delay="300">
+    <h2>I’m <span class="gold-text">JAWHAR RAJ RAJKUMAR</span> — I’ve fixed it all</h2>
+    <p>10+ years inside salons, turning chaos into profit across 100+ salon days</p>
+    <ul>
+      <li>🏆 10+ Years Running Salon Operations</li>
+      <li>💰 Proven Profit Growth Across Multiple Branches</li>
+      <li>📊 100+ Daily Operations Controlled</li>
+    </ul>
+    <a href="https://wa.me/919629370666?text=FIX" class="btn-gold" data-aos="zoom-in" data-aos-delay="400">
+      WhatsApp FIX — Start FREE Trial
+    </a>
+  </div>
+</section>
+
   <!-- REELS -->
-  <section class="reel-section">
-  <h2>📲 Real Salon fixes - Updated on Instagram</h2>
-  <div class="reel-grid">
-      <iframe src="https://www.instagram.com/p/DNnvtQ4ytxg/embed"></iframe>
-      <iframe src="https://www.instagram.com/p/DNNpbwGSKl9/embed"></iframe>
-      <iframe src="https://www.instagram.com/p/DNiXfh7S3Nm/embed"></iframe>
+  <section class="reel-section" data-aos="fade-up">
+    <h2>📲 Real Salon Fixes — Updated on Instagram</h2>
+    <div class="reel-grid">
+      <iframe src="https://www.instagram.com/p/DNnvtQ4ytxg/embed" class="reel"></iframe>
+      <iframe src="https://www.instagram.com/p/DNNpbwGSKl9/embed" class="reel"></iframe>
+      <iframe src="https://www.instagram.com/p/DNiXfh7S3Nm/embed" class="reel"></iframe>
     </div>
   </section>
 
   <!-- FOOTER -->
-<footer class="footer-premium">
-  <div class="footer-top">
-    <h2>SALON OWNERS WORK LESS. <span>SALONFIX DOES THE REST.</span></h2>
-    <p>Experience it yourself with our FREE 1-Month Trial.</p>
-    <div class="footer-cta">
-  <a href="https://wa.me/919629370666?text=FIX" class="btn-gold">WhatsApp FIX Now</a>
-  <a href="tel:+919629370666" class="btn-outline">Book Free Audit Call</a>
-</div>
-  </div>
+  <footer class="footer-premium" data-aos="fade-up">
+    <div class="footer-top">
+      <h2>SALON OWNERS WORK LESS. <span>SALONFIX DOES THE REST.</span></h2>
+      <p>Experience it yourself with our FREE 1-Month Trial.</p>
+      <div class="footer-cta">
+        <a href="https://wa.me/919629370666?text=FIX" class="btn-gold">WhatsApp FIX Now</a>
+        <a href="tel:+919629370666" class="btn-outline">Book Free Audit Call</a>
+      </div>
+    </div>
     <p class="copyright">© 2025 SALONFIX. All Rights Reserved.</p>
-  </div>
-</footer>
+  </footer>
 
-  <!-- FLOATING WHATSAPP -->
-  <a href="https://wa.me/919629370666?text=FIX" class="whatsapp-float">💬</a>
+  <!-- ✅ Floating WhatsApp Button -->
+<a href="https://wa.me/919629370666?text=FIX" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
+  <!-- ✅ AOS Init -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 900,
+      once: true
+    });
+  </script>
 </body>
 </html>
