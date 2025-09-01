@@ -275,3 +275,13 @@ nav.sf-navbar .cta-btn {
   object-fit: cover;     /* crops neatly if not square */
   display: block;
 }
+/* === Section Spacing Fix === */
+section {
+  padding: 80px 0;        /* equal top & bottom spacing */
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 20px;   /* slightly tighter on mobile, add side spacing */
+  }
+}
