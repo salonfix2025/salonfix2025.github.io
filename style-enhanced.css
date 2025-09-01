@@ -1323,33 +1323,30 @@ body {
   transform: scale(1.1);
   box-shadow: 0 6px 12px rgba(0,0,0,0.4);
 }
-/* ✅ Hero Section Full Width Fix */
-.hero {
-  width: 100%;
-  min-height: 90vh;              /* make sure it fills screen height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  background: linear-gradient(135deg, #6a11cb, #b06ab3); /* gradient stays */
-  background-size: cover;        /* stretch fully */
-  background-position: center;
-  box-sizing: border-box;        /* no extra white space */
+/* Ensure full responsiveness */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;   /* 🚫 Prevent horizontal scroll */
 }
 
-.hero-content {
-  max-width: 100%;               /* allow full width */
-  padding: 0 15px;
-}
-@media (max-width: 768px) {
-  .hero {
-    min-height: 70vh;
-    padding: 40px 15px;
-    background-size: 100% 100%;  /* stretch gradient */
-  }
+/* Every section should respect the screen width */
+section {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
+/* Fix for grids that might overflow */
+.card-grid, .problems-grid, .reel-grid, .founder, .solution {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 16px; /* small safe padding */
+  box-sizing: border-box;
+}
 
-
-
+/* Images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
