@@ -3300,3 +3300,19 @@ html {
     padding-bottom: 30px;
   }
 }
+/* ✅ About Hero – Increase Height */
+.about-page .hero {
+  min-height: 85vh;   /* taller hero for premium look */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+@media (max-width: 768px) {
+  .about-page .hero {
+    min-height: 70vh;   /* slightly shorter on mobile */
+    padding: 40px 16px;
+  }
+}
