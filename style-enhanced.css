@@ -379,4 +379,61 @@ nav.sf-navbar .cta-btn {
     text-align: center;
   }
 }
+/* ==============================
+   CASE – Premium Mobile Style
+   ============================== */
+.case-grid {
+  display: grid;
+  gap: 16px;
+  max-width: 92%;
+  margin: 0 auto;
+}
+
+.case-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-shadow: var(--shadow);
+}
+
+.case-card .icon {
+  font-size: 1.3rem;
+  color: var(--sf-gold);
+  flex-shrink: 0;
+}
+
+.case-card p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.result-card {
+  background: linear-gradient(145deg, var(--sf-gold), #FFD700);
+}
+
+.result-card p {
+  color: var(--sf-dark);
+}
+
+@media (max-width: 768px) {
+  .case h2 {
+    font-size: 1.5rem;
+    max-width: 90%;
+    margin: 0 auto 20px;
+    line-height: 1.4;
+  }
+  .case-card {
+    padding: 14px 16px;
+  }
+  .case-card p {
+    font-size: 0.95rem;
+  }
+}
 
