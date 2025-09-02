@@ -2265,3 +2265,31 @@ html {
   padding: 14px 28px;
   border-radius: 50px;
 }
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* ✅ equal 2-column */
+}
+
+@media (max-width: 900px) {
+  .grid-2 {
+    grid-template-columns: 1fr; /* ✅ stack on mobile */
+    text-align: center;
+  }
+}
+.footer-cta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* ✅ works on small screens */
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.footer-cta a {
+  font-size: 1.1rem;
+  padding: 14px 28px;
+  text-align: center;
+}
