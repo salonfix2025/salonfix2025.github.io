@@ -3316,3 +3316,21 @@ html {
     padding: 40px 16px;
   }
 }
+/* ✅ Fix unwanted horizontal scroll in Results + 5-Step Fix sections */
+@media (max-width: 768px) {
+  .card-purple,
+  .fix-grid,
+  .card,
+  .problem-card {
+    max-width: 95%;     /* reduce slightly below viewport */
+    margin: 0 auto;     /* center the cards */
+    box-sizing: border-box;
+  }
+
+  .reel-grid,
+  .solution-container,
+  .problems-grid {
+    max-width: 100%;
+    overflow-x: hidden; /* force stop horizontal scroll */
+  }
+}
