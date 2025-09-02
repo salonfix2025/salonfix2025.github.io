@@ -2180,3 +2180,27 @@ html {
 .card-purple p {
   color: #fff; /* ✅ makes headings + text white */
 }
+/* Fix card alignment */
+.card-purple {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* ✅ centers content vertically */
+  align-items: center;       /* ✅ centers content horizontally */
+  text-align: center;        /* ✅ aligns text neatly */
+  padding: 32px 24px;
+  min-height: 180px;         /* ✅ keeps all cards uniform height */
+}
+
+.card-purple h3 {
+  margin: 12px 0 6px;        /* ✅ consistent spacing */
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.card-purple p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fff;
+  opacity: 0.9;
+}
