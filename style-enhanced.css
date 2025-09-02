@@ -2477,3 +2477,24 @@ nav.sf-navbar ul li a.active {
     display: none !important;   /* hide burger on desktop */
   }
 }
+/* Default (mobile & tablet) */
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ✅ Desktop only */
+@media (min-width: 901px) {
+  .hero h1 {
+    font-size: 3rem;   /* bigger headline on desktop */
+  }
+
+  .hero p {
+    font-size: 1.25rem;  /* slightly larger paragraph */
+  }
+}
