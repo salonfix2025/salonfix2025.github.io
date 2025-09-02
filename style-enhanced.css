@@ -863,4 +863,8 @@ nav.sf-navbar .cta-btn {
   margin: 0 auto 20px;
   display: block;
 }
+.solution-image img,
+.founder-card .photo img {
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
 
