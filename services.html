@@ -9,6 +9,111 @@
   <link rel="stylesheet" href="style-enhanced.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    /* ==============================
+       PIPELINE STYLE
+       ============================== */
+    .pipeline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 900px;
+      margin: 30px auto;
+      position: relative;
+    }
+    .pipeline::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--sf-gold);
+      z-index: 0;
+    }
+    .step-circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--sf-purple);
+      color: var(--sf-gold);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 800;
+      font-size: 1.2rem;
+      position: relative;
+      z-index: 1;
+      box-shadow: var(--shadow);
+    }
+    .step-circle.gold {
+      background: var(--sf-gold);
+      color: var(--sf-purple);
+    }
+    .pipeline-labels {
+      display: flex;
+      justify-content: space-between;
+      max-width: 900px;
+      margin: 10px auto 30px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+    .pipeline-labels span {
+      flex: 1;
+    }
+
+    /* Step content */
+    .step-detail {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #fff;
+      border-radius: 14px;
+      padding: 24px 20px;
+      box-shadow: var(--shadow);
+    }
+    .step-detail h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: var(--sf-purple);
+    }
+    .step-detail p {
+      font-style: italic;
+      margin-bottom: 12px;
+      color: var(--sf-dark);
+    }
+    .step-detail ul {
+      padding-left: 20px;
+    }
+    .step-detail ul li {
+      margin-bottom: 8px;
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .pipeline {
+        flex-direction: column;
+      }
+      .pipeline::before {
+        width: 4px;
+        height: 100%;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+      }
+      .step-circle {
+        margin: 20px 0;
+      }
+      .pipeline-labels {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body class="services-page">
 
@@ -44,72 +149,79 @@
     </div>
   </section>
 
-  <!-- ✅ 5-STEP PROFIT FIX BOXES -->
+  <!-- ✅ PIPELINE VISUAL -->
   <section class="case">
     <h2>OUR 5-STEP PROFIT FIX</h2>
-    <div class="steps-grid">
-
-      <div class="step-card" data-aos="fade-up">
-        <div class="step-number-box">1</div>
-        <h3>Audit & Diagnose</h3>
-        <p><em>Every profit leak gets uncovered.</em></p>
-        <ul>
-          <li>Review sales, staff, stock, and client return rates.</li>
-          <li>Find leaks: petty cash misuse, vendor overpricing, wastage.</li>
-          <li>Spot weak systems: late staff, no rebooking, hygiene slips.</li>
-          <li>Deliver a clear baseline profit report.</li>
-        </ul>
-      </div>
-
-      <div class="step-card" data-aos="fade-up" data-aos-delay="100">
-        <div class="step-number-box">2</div>
-        <h3>Plug the Leaks</h3>
-        <p><em>Every leak gets a lock.</em></p>
-        <ul>
-          <li>Petty cash → every spend logged with proof.</li>
-          <li>Vendors → bills checked, savings unlocked with negotiation.</li>
-          <li>Stock → usage matched with billing, wastage closed.</li>
-          <li>Expenses → tracked daily to stop hidden drains.</li>
-        </ul>
-      </div>
-
-      <div class="step-card" data-aos="fade-up" data-aos-delay="200">
-        <div class="step-number-box">3</div>
-        <h3>Systemize Daily Operations</h3>
-        <p><em>Chaos turns into daily control.</em></p>
-        <ul>
-          <li>SOP routines: opening, mid-shift, evening, closing.</li>
-          <li>Staff proof photos: salon opened, cleaning done, POS reports.</li>
-          <li>Daily report → one WhatsApp snapshot.</li>
-          <li>Owner Action Box → repairs, purchases, clear next steps.</li>
-        </ul>
-      </div>
-
-      <div class="step-card gold" data-aos="fade-up" data-aos-delay="300">
-        <div class="step-number-box">4</div>
-        <h3>Train & Align Team</h3>
-        <p><em>Your team becomes your system.</em></p>
-        <ul>
-          <li>Rebooking scripts + reminders (chair, 24h, 72h).</li>
-          <li>Retail push: 2-item rule + mirror talk.</li>
-          <li>Hygiene standards with proof of compliance.</li>
-          <li>Incentives linked to rebooking %, retail %, and daily targets.</li>
-        </ul>
-      </div>
-
-      <div class="step-card" data-aos="fade-up" data-aos-delay="400">
-        <div class="step-number-box">5</div>
-        <h3>Monitor & Scale Profit</h3>
-        <p><em>Profit clarity, branch by branch.</em></p>
-        <ul>
-          <li><strong>Daily:</strong> WhatsApp report → sales, profit, rebooking %, retail %, pending issues.</li>
-          <li><strong>Weekly:</strong> Team performance review + Owner Action Box.</li>
-          <li><strong>Monthly:</strong> Income vs expenses deep-dive + profit projection.</li>
-          <li>Multi-branch ready: one system across outlets with no loss of control.</li>
-        </ul>
-      </div>
-
+    <div class="pipeline" data-aos="fade-up">
+      <div class="step-circle">1</div>
+      <div class="step-circle">2</div>
+      <div class="step-circle">3</div>
+      <div class="step-circle gold">4</div>
+      <div class="step-circle">5</div>
     </div>
+    <div class="pipeline-labels">
+      <span>Audit</span>
+      <span>Plug</span>
+      <span>Systemize</span>
+      <span>Trial</span>
+      <span>Implement</span>
+    </div>
+  </section>
+
+  <!-- ✅ STEP DETAILS -->
+  <section class="step-detail" data-aos="fade-up">
+    <h3>Audit & Diagnose</h3>
+    <p>Every profit leak gets uncovered.</p>
+    <ul>
+      <li>Review sales, staff, stock, and client return rates.</li>
+      <li>Find leaks: petty cash misuse, vendor overpricing, wastage.</li>
+      <li>Spot weak systems: late staff, no rebooking, hygiene slips.</li>
+      <li>Deliver a clear baseline profit report.</li>
+    </ul>
+  </section>
+
+  <section class="step-detail" data-aos="fade-up">
+    <h3>Plug the Leaks</h3>
+    <p>Every leak gets a lock.</p>
+    <ul>
+      <li>Petty cash → every spend logged with proof.</li>
+      <li>Vendors → bills checked, savings unlocked with negotiation.</li>
+      <li>Stock → usage matched with billing, wastage closed.</li>
+      <li>Expenses → tracked daily to stop hidden drains.</li>
+    </ul>
+  </section>
+
+  <section class="step-detail" data-aos="fade-up">
+    <h3>Systemize Daily Operations</h3>
+    <p>Chaos turns into daily control.</p>
+    <ul>
+      <li>SOP routines: opening, mid-shift, evening, closing.</li>
+      <li>Staff proof photos: salon opened, cleaning done, POS reports.</li>
+      <li>Daily report → one WhatsApp snapshot.</li>
+      <li>Owner Action Box → repairs, purchases, clear next steps.</li>
+    </ul>
+  </section>
+
+  <section class="step-detail" data-aos="fade-up">
+    <h3>Train & Align Team</h3>
+    <p>Your team becomes your system.</p>
+    <ul>
+      <li>Rebooking scripts + reminders (chair, 24h, 72h).</li>
+      <li>Retail push: 2-item rule + mirror talk.</li>
+      <li>Hygiene standards with proof of compliance.</li>
+      <li>Incentives linked to rebooking %, retail %, and daily targets.</li>
+    </ul>
+  </section>
+
+  <section class="step-detail" data-aos="fade-up">
+    <h3>Monitor & Scale Profit</h3>
+    <p>Profit clarity, branch by branch.</p>
+    <ul>
+      <li><strong>Daily:</strong> WhatsApp report → sales, profit, rebooking %, retail %, pending issues.</li>
+      <li><strong>Weekly:</strong> Team performance review + Owner Action Box.</li>
+      <li><strong>Monthly:</strong> Income vs expenses deep-dive + profit projection.</li>
+      <li>Multi-branch ready: one system across outlets with no loss of control.</li>
+    </ul>
   </section>
 
   <!-- ✅ FINAL CTA -->
