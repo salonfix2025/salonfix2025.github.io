@@ -503,4 +503,92 @@ nav.sf-navbar .cta-btn {
     margin-bottom: 10px;
   }
 }
+/* ==============================
+   FOUNDER – Premium Layout
+   ============================== */
+.founder-wrapper {
+  background: #fff;
+  padding: 50px 20px;
+}
+
+.founder-card {
+  background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
+  border-radius: 20px;
+  padding: 30px 20px;
+  color: #fff;
+  max-width: 92%;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.founder-card h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.founder-card .intro {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 20px;
+}
+
+.founder-card .photo img {
+  width: 100%;
+  max-width: 340px;
+  border-radius: 16px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.founder-list {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+  text-align: left;
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.founder-list li {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding-left: 28px;
+  position: relative;
+}
+
+.founder-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--sf-gold);
+  font-weight: bold;
+}
+
+.founder-cta {
+  display: inline-block;
+  padding: 14px 26px;
+  border-radius: 30px;
+  font-weight: 800;
+  box-shadow: var(--shadow);
+  margin-top: 10px;
+}
+
+/* Mobile refinements */
+@media (max-width: 768px) {
+  .founder-card h2 {
+    font-size: 1.4rem;
+  }
+  .founder-card .intro {
+    font-size: 0.95rem;
+  }
+  .founder-list li {
+    font-size: 0.9rem;
+  }
+}
 
