@@ -782,4 +782,69 @@ nav.sf-navbar .cta-btn {
     font-size: 1rem;
   }
 }
+/* ==============================
+   SOLUTION – Premium Layout
+   ============================== */
+.sub-purple {
+  color: var(--sf-purple);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 8px 0 20px;
+  text-align: center;
+}
+
+.solution-image img {
+  max-width: 95%;
+  border-radius: 14px;
+  margin: 0 auto 10px;
+  display: block;
+}
+
+.solution-list {
+  list-style: none;
+  margin: 10px auto 20px;
+  padding: 0;
+  max-width: 90%;
+}
+
+.solution-list li {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  padding-left: 28px;
+  position: relative;
+}
+
+.solution-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--sf-gold);
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+
+/* CTA button */
+.solution-cta {
+  display: block;
+  margin: 18px auto 0;
+  background: var(--sf-gold);
+  color: var(--sf-dark);
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 800;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: var(--shadow);
+  max-width: 90%;
+  transition: all 0.3s ease;
+}
+
+.solution-cta:hover,
+.solution-cta:active {
+  background: var(--sf-purple);
+  color: var(--sf-white);
+  box-shadow: var(--shadow-hover);
+}
 
