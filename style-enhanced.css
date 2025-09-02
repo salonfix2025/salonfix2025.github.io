@@ -1427,3 +1427,10 @@ h2 {
   font-size: 0.8rem;
   color: rgba(255,255,255,0.6);
 }
+/* Founder section - remove rounded edges */
+.founder,
+.founder-wrapper,
+.founder-card {
+  border-radius: 0 !important; /* removes curves */
+  max-width: 100%;             /* make it span full width */
+}
