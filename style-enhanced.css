@@ -1636,3 +1636,24 @@ h2 {
   font-weight: 900;
   text-align: center;
 }
+/* Fix big gap between heading and image/bullets */
+.solution {
+  padding-top: 20px !important;   /* reduce top padding */
+  padding-bottom: 20px !important;
+}
+
+.solution-image img {
+  margin-top: 0 !important;       /* remove extra margin */
+  margin-bottom: 10px !important; /* keep small breathing space */
+  display: block;
+}
+@media (max-width: 768px) {
+  .solution {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+  .solution-image img {
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
+  }
+}
