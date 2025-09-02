@@ -1728,3 +1728,9 @@ h2 {
 .footer-premium h2 span {
   color: #fff !important;   /* force white text */
 }
+.solution-text h2 {
+  white-space: pre-line;        /* respect line breaks */
+  text-align: center;           /* keep it centered */
+  font-size: 1.6rem;            /* adjust size for mobile */
+  line-height: 1.4;             /* tighter line spacing */
+}
