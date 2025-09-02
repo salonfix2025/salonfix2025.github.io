@@ -1657,3 +1657,18 @@ h2 {
     margin-bottom: 8px !important;
   }
 }
+/* Founder section full width fix */
+.founder-card,
+.about-page .founder {
+  max-width: 100% !important;  /* remove container limit */
+  width: 100% !important;      /* span entire screen */
+  margin: 0 !important;        /* no auto margins */
+  border-radius: 0 !important; /* no side curves */
+}
+
+/* Purple background flush to edges */
+.founder-card {
+  background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
