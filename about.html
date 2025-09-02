@@ -373,6 +373,7 @@
     nav.querySelectorAll('a').forEach(a =>
       a.addEventListener('click', () => {
         nav.classList.remove('open');
+        
         document.body.classList.remove('menu-open');
         burger.classList.remove('active');       // ✅ reset to ☰ when closed
         burger.setAttribute('aria-expanded','false');
@@ -393,6 +394,16 @@
     AOS.init({ duration: 900, once: true })
   );
 </script>
+  <!-- ✅ AOS Init -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 500,        // faster animations
+      easing: "ease-out",   // smoother motion
+      once: true,           // don’t repeat
+      offset: 50            // trigger a little earlier
+    });
+  </script>
 
 </body>
 </html>
