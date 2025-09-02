@@ -3414,3 +3414,26 @@ html, body {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch; /* iOS smooth */
 }
+/* ===========================
+   🚑 Scroll Trap Hotfix
+   =========================== */
+
+/* Force fix for Results + 5-Step sections */
+.section .card-purple,
+.fix-grid .card-purple {
+  max-width: 100% !important;   /* never exceed viewport */
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;  /* kill inner scrolls */
+}
+
+/* Ensure parent grids don’t stretch wider */
+.fix-grid,
+.section .card-grid {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  overflow: hidden !important;
+  display: grid;
+  justify-items: center;        /* keep items centered */
+}
