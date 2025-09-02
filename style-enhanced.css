@@ -2978,3 +2978,56 @@ nav.sf-navbar ul li a.active {
     margin-bottom: 8px !important;
   }
 }
+/* ================================
+   MOBILE HEADING RESIZE – HOME + ABOUT ONLY
+   ================================ */
+@media (max-width: 900px) {
+  /* HERO HEADINGS */
+  .hero h1 {
+    font-size: 1.7rem !important;
+    line-height: 1.3 !important;
+  }
+  .hero p, .hero .hero-sub {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* SECTION TITLES */
+  .proof h2,
+  .problems h2,
+  .case h2,
+  .solution h2,
+  .founder h2,
+  .reel-section h2,
+  .about-page .hero h1,
+  .about-page h2,
+  .about-page .promise h2 {
+    font-size: 1.4rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* SUBHEADINGS (h3, card titles, gold) */
+  .proof h3,
+  .card h3,
+  .card-purple h3,
+  .about-page h3 {
+    font-size: 1.1rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* FOOTER HEADLINE */
+  .footer-premium h2 {
+    font-size: 1.3rem !important;
+    line-height: 1.4 !important;
+  }
+}
+/* ✅ Enable smooth scrolling globally */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ✅ Reduce animation offset so AOS triggers earlier */
+[data-aos] {
+  transition-duration: 0.6s !important;  /* smoother, shorter animations */
+}
