@@ -1654,18 +1654,6 @@ section {
 .btn-gold {background:var(--sf-gold);color:var(--sf-dark)}
 .btn-outline {border:2px solid var(--sf-gold);color:var(--sf-gold);background:none}
 
-/* ✅ Floating WhatsApp */
-.whatsapp-float {
-  position:fixed;width:55px;height:55px;bottom:25px;right:25px;
-  background:#25d366;color:#fff;border-radius:50%;display:flex;justify-content:center;align-items:center;
-  font-size:28px;box-shadow:0 4px 8px rgba(0,0,0,0.3);z-index:1000;transition:transform .2s
-}
-.whatsapp-float:hover{transform:scale(1.1)}
-/* 🚫 Kill independent scrolls */
-section, .card-grid, .problems-grid, .solution-container, .founder, .reel-grid {
-  overflow: visible !important;
-}
-
 /* ✅ Make sections flow */
 section {
   width: 100%;
