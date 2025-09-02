@@ -961,4 +961,26 @@ nav.sf-navbar .cta-btn {
   background: linear-gradient(145deg, #2d004c, #4B0082);
   color: var(--sf-gold);
 }
+<!-- ✅ CASE -->
+<section class="case">
+  <h2><span>From Chaos</span> <span style="color:#D4AF37">to Control.</span></h2>
+  <div class="case-card">
+    
+    <div class="card" data-aos="fade-up" data-aos-delay="0">
+      <strong>Before</strong><br>
+      No daily numbers, rebooking 0, retail 3%
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="150">
+      <strong>After</strong><br>
+      Daily P&L + scripts → retail 11%
+    </div>
+
+    <div class="card result-card" data-aos="fade-up" data-aos-delay="300">
+      <strong>Result</strong><br>
+      Profit +8.4% in 6 weeks
+    </div>
+
+  </div>
+</section>
 
