@@ -1034,3 +1034,20 @@ section h2 {
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0,0,0,.15);
 }
+.reel-section h2,
+.solution h2,
+.case h2,
+.founder h2 {
+  text-align: center !important;
+  margin: 0 auto 12px auto;  /* tightened bottom gap */
+}
+section {
+  margin: 0 !important;
+  padding: 30px 16px !important; /* balanced spacing */
+}
+
+section img,
+section .card,
+section blockquote {
+  margin: 12px auto !important; /* small gap only */
+}
