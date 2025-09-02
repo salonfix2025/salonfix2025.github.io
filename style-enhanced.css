@@ -1153,3 +1153,22 @@ h2 {
   70% { box-shadow: 0 0 0 15px rgba(212,175,55, 0); }
   100% { box-shadow: 0 0 0 0 rgba(212,175,55, 0); }
 }
+.reel-grid {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px 0;
+}
+
+.reel-grid blockquote {
+  flex: 0 0 85%; /* each reel takes 85% width */
+  max-width: 85%;
+  border-radius: 16px;
+  overflow: hidden;
+  scroll-snap-align: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  margin: 0; /* remove default blockquote margin */
+}
+.reel-grid::-webkit-scrollbar { display: none; }
