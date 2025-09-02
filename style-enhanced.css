@@ -3094,3 +3094,20 @@ html {
     box-shadow: 0 4px 16px rgba(0,0,0,.2);
   }
 }
+@media (max-width: 900px) {
+  .card-grid .card {
+    padding: 18px 14px;          /* ✅ reduce padding */
+    font-size: 0.9rem;           /* ✅ slightly smaller text */
+    border-radius: 14px;         /* ✅ smaller corners */
+  }
+
+  .card-grid .card h3 {
+    font-size: 1.1rem;           /* ✅ reduce heading size */
+    margin-bottom: 6px;
+  }
+
+  .card-grid .card p {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+}
