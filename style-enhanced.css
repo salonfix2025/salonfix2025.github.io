@@ -847,4 +847,20 @@ nav.sf-navbar .cta-btn {
   color: var(--sf-white);
   box-shadow: var(--shadow-hover);
 }
+/* ==============================
+   FOUNDER – Extended Width & Larger Image
+   ============================== */
+.founder-card {
+  max-width: 96%;   /* wider than before */
+  margin: 0 auto;
+  padding: 30px 22px;
+}
+
+.founder-card .photo img {
+  width: 100%;
+  max-width: 360px; /* increased from 320px */
+  border-radius: 16px;
+  margin: 0 auto 20px;
+  display: block;
+}
 
