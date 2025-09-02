@@ -2507,3 +2507,18 @@ nav.sf-navbar ul li a.active {
 .about-page .hero a.btn {
   color: #2a1e00;           /* ✅ keep button text dark for contrast */
 }
+/* Fix grid for Why salons lose profit... section */
+.profit-boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ✅ 2 columns */
+  gap: 24px; /* space between boxes */
+}
+
+.profit-boxes .box {
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #D4AF37, #b88c20); /* gold gradient */
+  color: #2a1e00;
+  font-weight: 600;
+}
