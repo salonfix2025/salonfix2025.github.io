@@ -351,4 +351,32 @@ nav.sf-navbar .cta-btn {
     box-shadow: var(--shadow);
   }
 }
+/* ==============================
+   PROBLEMS – Mobile Refinements
+   ============================== */
+@media (max-width: 768px) {
+  .problems {
+    max-width: 92%;   /* breathing space */
+    margin: 0 auto;
+    padding: 40px 20px; /* reduced top/bottom */
+  }
+
+  .problems h2 {
+    font-size: 1.4rem;   /* slightly smaller */
+    max-width: 90%;      /* narrower for 3-line fit */
+    margin: 0 auto 24px; /* center + spacing */
+    line-height: 1.4;
+  }
+
+  .problem-card {
+    padding: 18px;       /* reduce box height */
+    min-height: auto;    /* no forced tall box */
+    font-size: 1.05rem;  /* slightly bigger text */
+    font-weight: 700;    /* bold */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* center text vertically */
+    text-align: center;
+  }
+}
 
