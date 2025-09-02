@@ -2482,3 +2482,19 @@ nav.sf-navbar ul li a.active {
   margin: 0 auto 24px;
   line-height: 1.7;
 }
+/* ✅ Desktop Nav: always visible */
+@media (min-width: 901px) {
+  nav.sf-navbar ul {
+    display: flex !important;   /* force flex on desktop */
+    position: static !important;
+    flex-direction: row;
+    align-items: center;
+    background: transparent;
+    transform: none !important;
+    gap: 25px;
+  }
+
+  .burger {
+    display: none !important;   /* hide burger on desktop */
+  }
+}
