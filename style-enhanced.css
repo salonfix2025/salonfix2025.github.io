@@ -3054,3 +3054,24 @@ html {
     display: none;
   }
 }
+@media (max-width: 900px) {
+  .reel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .reel-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(0,0,0,.2);
+    display: block;
+    transition: background 0.3s;
+  }
+
+  .reel-dots span.active {
+    background: var(--sf-gold); /* ✅ active dot = gold */
+  }
+}
