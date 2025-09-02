@@ -3075,3 +3075,22 @@ html {
     background: var(--sf-gold); /* ✅ active dot = gold */
   }
 }
+@media (max-width: 900px) {
+  .reel-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;   /* ✅ snap effect */
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding: 0 16px;
+    scroll-behavior: smooth;         /* ✅ smooth swipe */
+  }
+
+  .reel-grid iframe {
+    flex: 0 0 85%;
+    max-width: 85%;
+    scroll-snap-align: center;       /* ✅ center snapping */
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.2);
+  }
+}
