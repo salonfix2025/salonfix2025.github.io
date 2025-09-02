@@ -2239,3 +2239,29 @@ html {
   padding: 14px 28px;
   margin: 8px;
 }
+.section.promise .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* ✅ side by side */
+  gap: 40px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .section.promise .container {
+    grid-template-columns: 1fr;    /* ✅ stack for mobile */
+    text-align: center;
+  }
+}
+.footer-premium .footer-cta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;    /* ✅ wraps nicely on small screens */
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.footer-premium .footer-cta a {
+  font-size: 1.1rem;
+  padding: 14px 28px;
+  border-radius: 50px;
+}
