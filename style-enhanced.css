@@ -2510,55 +2510,7 @@ nav.sf-navbar ul li a.active {
   color: #2a1e00;
   font-weight: 600;
 }
-@media (max-width: 900px) {
-  nav.sf-navbar .cta-btn {
-    display: block;
-    margin: 20px auto 0;
-    width: 80%;                /* wider button on mobile */
-    text-align: center;
-    font-size: 1.1rem;
-    padding: 14px 0;
-    border-radius: 50px;
-    position: fixed;
-    bottom: 20px;              /* ✅ stick to bottom */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2000;
-  }
 
-  nav.sf-navbar ul {
-    padding-bottom: 80px;      /* leave space so menu doesn’t overlap button */
-  }
-}
-@media (max-width: 900px) {
-  nav.sf-navbar .cta-btn {
-    display: block;
-    margin: 20px auto 0;
-    width: 80%;
-    text-align: center;
-    font-size: 1.1rem;
-    padding: 14px 0;
-    border-radius: 50px;
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2000;
-
-    /* ✅ pulse effect */
-    animation: glowPulse 2.8s infinite;
-  }
-
-  nav.sf-navbar ul {
-    padding-bottom: 100px; /* extra room so list doesn’t overlap button */
-  }
-
-  @keyframes glowPulse {
-    0%   { box-shadow: 0 0 8px rgba(212,175,55,.4); }
-    50%  { box-shadow: 0 0 20px rgba(212,175,55,.8); }
-    100% { box-shadow: 0 0 8px rgba(212,175,55,.4); }
-  }
-}
 @media (max-width: 900px) {
   /* About hero headline */
   .about-page .hero h1 {
