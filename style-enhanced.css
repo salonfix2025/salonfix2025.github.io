@@ -2379,3 +2379,24 @@ nav.sf-navbar ul {
     border-bottom: 2px solid var(--sf-purple); /* ✅ purple underline for active */
   }
 }
+/* Hero Section */
+.hero {
+  padding: 80px 20px;   /* reduce vertical padding */
+  min-height: 60vh;     /* was likely 100vh, reduce to 60% of screen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 720px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+}
