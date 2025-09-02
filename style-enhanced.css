@@ -1345,3 +1345,85 @@ h2 {
     text-align: left;
   }
 }
+/* ✅ Premium Footer */
+.footer-premium {
+  background: linear-gradient(135deg, #4B0082 0%, #2d004c 100%);
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px 30px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -6px 20px rgba(0,0,0,0.2);
+}
+
+.footer-premium h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.footer-premium h2 .gold-gradient {
+  background: linear-gradient(90deg, #FFD700, #D4AF37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-premium p {
+  font-size: 0.95rem;
+  margin-bottom: 22px;
+  color: rgba(255,255,255,0.9);
+}
+
+.footer-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-cta a {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  padding: 14px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Gold Gradient Button */
+.btn-gold {
+  background: linear-gradient(135deg, #FFD700, #D4AF37);
+  color: #2d004c;
+  box-shadow: 0 4px 12px rgba(212,175,55,0.4);
+  transition: all 0.3s ease;
+}
+.btn-gold:hover {
+  box-shadow: 0 6px 18px rgba(212,175,55,0.6);
+}
+
+/* Outline Button */
+.btn-outline {
+  border: 2px solid #D4AF37;
+  color: #FFD700;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.btn-outline:hover {
+  background: linear-gradient(135deg, #FFD700, #D4AF37);
+  color: #2d004c;
+}
+
+/* Separator Line */
+.footer-separator {
+  border: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+  margin: 25px 0 15px;
+}
+
+/* Copyright */
+.copyright {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.6);
+}
