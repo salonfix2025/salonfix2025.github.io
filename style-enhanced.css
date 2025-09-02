@@ -1468,3 +1468,25 @@ h2 {
   margin-right: 8px;
   font-weight: 900;
 }
+/* ✅ Center heading + subheading + bullets in Solution section */
+.solution-text {
+  text-align: center;   /* forces everything inside to center */
+}
+
+.solution-text h3,
+.solution-text p {
+  text-align: center;   /* double ensure for subheadings */
+  margin: 10px 0;
+}
+
+.solution-text ul {
+  list-style: none;     /* remove dots */
+  margin: 20px 0;
+  padding: 0;
+}
+
+.solution-text ul li {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #1b1230;
+}
