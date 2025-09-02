@@ -912,4 +912,53 @@ nav.sf-navbar .cta-btn {
   0% { transform: translateX(-100%) rotate(25deg); }
   100% { transform: translateX(100%) rotate(25deg); }
 }
+/* ==============================
+   CASE SECTION
+   ============================== */
+.case {
+  background: #fff; /* clean white background */
+  padding: 60px 8%;
+  text-align: center;
+}
+
+.case h2 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+.case-card {
+  display: grid;
+  gap: 24px;
+}
+
+/* Equal height purple cards */
+.case .card {
+  background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: var(--shadow); /* floating premium effect */
+}
+
+/* Gold text highlight for headings */
+.case .card strong {
+  display: block;
+  color: var(--sf-gold);
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+/* Result card variation */
+.case .result-card {
+  background: linear-gradient(145deg, #2d004c, #4B0082);
+  color: var(--sf-gold);
+}
 
