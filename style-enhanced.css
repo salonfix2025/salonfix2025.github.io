@@ -3555,3 +3555,75 @@ html, body {
   gap: 20px;
   width: 100%;
 }
+/* ✅ Consistent Hero Height for Home & About */
+.home-page .hero,
+.about-page .hero {
+  min-height: 100vh !important;   /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px 80px !important; /* balanced space */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Headline */
+.home-page .hero h1,
+.about-page .hero h1 {
+  font-size: 2.6rem;   /* bigger, premium */
+  line-height: 1.3;
+  margin-bottom: 18px;
+}
+
+/* Subtext */
+.home-page .hero p,
+.about-page .hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CTA button */
+.home-page .hero .btn-gold,
+.about-page .hero .btn-gold {
+  padding: 16px 32px;
+  font-size: 1.05rem;
+  border-radius: 30px;
+  box-shadow: 0 6px 18px rgba(212,175,55,0.4);
+}
+/* ✅ Fix scroll trap inside 5-Step Profit Fix */
+.fix-grid,
+.fix-grid .card-purple {
+  height: auto !important;       /* let content define height */
+  min-height: unset !important;
+  max-height: unset !important;
+  overflow: visible !important;  /* stop inner scrolling */
+}
+
+/* Ensure grid behaves normally */
+.fix-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+/* 🔧 Fix scroll trap inside 5-Step Profit Fix */
+.fix-grid,
+.fix-grid .card-purple {
+  height: auto !important;       /* let the content set the height */
+  min-height: unset !important;
+  max-height: unset !important;
+  overflow: visible !important;  /* prevent inner scroll */
+}
+
+/* Make grid responsive & natural */
+.fix-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
