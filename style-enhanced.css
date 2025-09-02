@@ -1672,3 +1672,14 @@ h2 {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+.solution h2 {
+  margin-bottom: 10px !important; /* tighter */
+}
+
+.solution p.sub-purple {
+  margin-bottom: 15px !important; /* reduce gap before bullets */
+}
+
+.solution-list {
+  margin-top: 10px !important; /* keep bullets close */
+}
