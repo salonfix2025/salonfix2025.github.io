@@ -1559,3 +1559,87 @@ h2 {
     font-weight: 900;
   }
 }
+/* ==============================
+   CORRECTION UPDATES – FINAL
+   ============================== */
+
+/* 1. Founder Section – full width, no outer curves */
+.founder-wrapper,
+.founder-card {
+  border-radius: 0 !important;    /* remove outside curves */
+  width: 100% !important;         /* full width background */
+  max-width: 100% !important;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Keep founder inner image & bullet list styled normally */
+.founder-card .photo img {
+  border-radius: 16px; /* keep photo curved */
+}
+.founder-list li {
+  font-weight: 600;
+}
+
+/* 2. Problems Section – outer straight, inner gold boxes curved */
+.problems {
+  border-radius: 0 !important;  /* remove outside purple curve */
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0;
+}
+.problem-card {
+  border-radius: 15px !important; /* keep gold boxes curved */
+}
+
+/* 3. Case Section – restore rounded inner cards */
+.case {
+  border-radius: 0 !important; /* section edges straight */
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0;
+}
+.case .card {
+  border-radius: 16px !important; /* restore rounded look for cards */
+}
+
+/* 4. Solution Sections – bullets visible + gold checks + centered */
+.solution-text {
+  text-align: center;
+}
+.solution-text ul {
+  list-style: none;
+  margin: 16px auto;
+  padding: 0;
+  max-width: 500px;
+  text-align: left; /* neat alignment */
+}
+.solution-text ul li {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #1b1230;
+  position: relative;
+  padding-left: 26px;
+}
+.solution-text ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--sf-gold);
+  font-weight: 900;
+}
+
+/* 5. Gap Fix – tighten space in "Not Advice / Daily Control" section */
+.solution {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+.solution-image img {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+.solution-text p,
+.solution-text h3 {
+  margin-bottom: 10px !important;
+}
