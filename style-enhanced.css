@@ -1018,10 +1018,3 @@ section h2 {
   font-size: 1.8rem;
   font-weight: 800;
 }
-/* ✅ Fix gold box text */
-.result-card {
-  background: linear-gradient(135deg, #FFD700, #D4AF37);
-  color: #4B0082;     /* Salonfix Purple */
-  font-weight: 700;
-}
-
