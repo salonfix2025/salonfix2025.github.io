@@ -1051,3 +1051,21 @@ section .card,
 section blockquote {
   margin: 12px auto !important; /* small gap only */
 }
+/* ✅ Global Section Spacing Fix */
+section {
+  margin-top: 40px;   /* tighten gap above */
+  margin-bottom: 40px; /* tighten gap below */
+  padding-top: 20px;   /* keep little breathing space */
+  padding-bottom: 20px;
+}
+
+/* ✅ Optional override for sections needing more space */
+.section-tight {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.section-loose {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
