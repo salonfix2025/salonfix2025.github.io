@@ -2165,3 +2165,18 @@ html {
   color: #2a1e00;        /* dark ink for contrast */
   font-weight: 500;
 }
+/* 5-Step Fix Grid */
+.fix-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* ✅ First row = 3 */
+  gap: 24px;
+}
+
+.fix-grid article:nth-child(4),
+.fix-grid article:nth-child(5) {
+  grid-column: span 1; /* ✅ Puts 4th & 5th in second row */
+}
+.card-purple h3,
+.card-purple p {
+  color: #fff; /* ✅ makes headings + text white */
+}
