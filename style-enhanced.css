@@ -1683,3 +1683,18 @@ h2 {
 .solution-list {
   margin-top: 10px !important; /* keep bullets close */
 }
+.solution-text {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.solution-text .solution-list {
+  margin-bottom: 15px !important; /* reduce big gap */
+}
+
+.solution-image img {
+  max-width: 95%;
+  margin: 0 auto;
+  display: block;
+  border-radius: 12px;
+}
