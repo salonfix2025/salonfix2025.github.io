@@ -3375,3 +3375,42 @@ html {
     font-weight: 800;
   }
 }
+/* ===========================
+   🔧 SCROLL FIX PATCH
+   =========================== */
+
+/* Kill fixed heights & inner scrolls */
+.hero,
+.about-page .hero,
+.proof,
+.problems,
+.case,
+.solution,
+.founder,
+.reel-section,
+.fix-grid,
+.card-grid,
+.problems-grid {
+  min-height: unset !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+/* Prevent side-scroll on all grids */
+.fix-grid,
+.card-grid,
+.problems-grid,
+.reel-grid {
+  max-width: 100% !important;
+  margin: 0 auto;
+  overflow-x: hidden !important;
+  box-sizing: border-box;
+}
+
+/* Smooth global scrolling */
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* iOS smooth */
+}
