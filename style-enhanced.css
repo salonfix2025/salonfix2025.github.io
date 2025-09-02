@@ -3215,3 +3215,23 @@ html {
     text-align: left !important;
   }
 }
+/* ✅ Mobile section padding fix */
+@media (max-width: 768px) {
+  .problems,
+  .founder,
+  .case,
+  .solution,
+  .sf-purple {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  /* Also reduce card widths slightly */
+  .problem-card,
+  .card,
+  .solution-image img,
+  .photo img {
+    width: 100%;
+    border-radius: 18px; /* keep rounded corners visible */
+  }
+}
