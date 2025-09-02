@@ -203,7 +203,6 @@ nav.sf-navbar .cta-btn {
   .solution-container { flex-direction: column; }
   .solution-text ul { text-align: left; }
   .solution-text li { font-size: 1rem; margin-bottom: 6px; }
-  .solution-text ul { display: none; } /* no bullets in mobile */
 }
 
 /* ==============================
@@ -1532,4 +1531,31 @@ h2 {
   border-radius: 0 !important;   /* straight edges */
   width: 100% !important;
   margin: 0 auto;
+}
+/* ✅ Force show bullets in About sections on mobile */
+@media (max-width: 768px) {
+  .solution-text ul,
+  .gold-checks {
+    display: block !important;   /* always visible */
+    text-align: center !important;
+    margin: 15px auto;
+    padding: 0;
+  }
+
+  .solution-text ul li,
+  .gold-checks li {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1b1230;  /* dark text for contrast */
+  }
+
+  .solution-text ul li::before,
+  .gold-checks li::before {
+    content: "✔";
+    color: var(--sf-gold);
+    margin-right: 8px;
+    font-weight: 900;
+  }
 }
