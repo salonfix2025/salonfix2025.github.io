@@ -1,128 +1,153 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Services – SALONFIX</title>
-
-  <!-- ✅ Canonical + Favicon -->
-  <link rel="canonical" href="https://www.salonfix.in/services.html" />
-  <link rel="icon" href="assets/favicon.png" type="image/png" />
-
-  <!-- ✅ SEO -->
-  <meta name="description" content="SALONFIX Services — We run your salon like it’s our own. Daily operations, profit clarity, and growth systems. Start your FREE 1-Month Trial today." />
-  <meta name="theme-color" content="#4B0082" />
-
-  <!-- ✅ Open Graph -->
-  <meta property="og:site_name" content="SALONFIX" />
-  <meta property="og:title" content="SALONFIX Services" />
-  <meta property="og:description" content="Your in-house business partner — Daily operations, profit reports, and team control." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.salonfix.in/services.html" />
-  <meta property="og:image" content="assets/og-cover.png" />
-
-  <!-- ✅ Styles -->
-  <link rel="stylesheet" href="style-enhanced.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SALONFIX – How We Work</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style-enhanced.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
-<body>
+<body class="services-page">
 
-  <!-- ================= NAVBAR ================= -->
+  <!-- ✅ NAVBAR (same as index) -->
   <nav class="sf-navbar">
-    <div class="container flex between">
-      <a href="index.html" class="sf-logo">SALONFIX</a>
-      <ul class="sf-nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <a href="https://wa.me/919629370666?text=FIX" class="sf-btn">WhatsApp FIX</a>
+    <div class="logo">
+      <a href="index.html">SALONFIX</a>
     </div>
+    <ul id="site-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html" class="active">How We Work</a></li>
+      <li><a href="pricing.html">Partnership Plans</a></li>
+      <li><a href="blog.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://wa.me/919629370666?text=FIX" class="cta-btn-mobile">WhatsApp FIX</a></li>
+    </ul>
+    <a href="https://wa.me/919629370666?text=FIX" class="cta-btn desktop-only">WhatsApp FIX</a>
+    <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </nav>
 
-  <!-- ================= HERO ================= -->
-  <section class="sf-purple pad-xl center">
-    <div class="container narrow" data-aos="fade-up">
-      <h1 style="color:#fff">OUR SERVICES</h1>
-      <p style="color:rgba(255,255,255,.9);margin-top:12px">
-        SALONFIX is more than advice or software. We step in as your <strong>in-house business partner</strong> — 
-        running your salon like it’s our own, every single day.
+  <!-- ✅ HERO -->
+  <section class="hero">
+    <div class="hero-content" data-aos="zoom-in">
+      <h1>THE SALONFIX SYSTEM</h1>
+      <p class="hero-sub">
+        We don’t just consult — we take over.<br>
+        Our 5-Step Profit Fix runs your salon daily, with proof.<br>
+        Start with your FREE 1-Month Trial.
       </p>
+      <a href="https://wa.me/919629370666?text=FIX" class="btn-gold pulse">
+        WhatsApp FIX — Free Audit Call
+      </a>
     </div>
   </section>
 
-  <!-- ================= SERVICES GRID ================= -->
-  <section class="pad-xl">
-    <div class="container grid grid-3 gap-l">
-
-      <!-- Service 1 -->
-      <div class="sf-card" data-aos="fade-up">
-        <h3>🛠 Daily Operations Control</h3>
-        <p>
-          We monitor staff check-ins, sales entries, petty cash, vendor bills, and daily salon flow. 
-          Every task is tracked, so you never lose control — even across multiple branches.
-        </p>
-      </div>
-
-      <!-- Service 2 -->
-      <div class="sf-card" data-aos="fade-up" data-aos-delay="150">
-        <h3>📊 Profit Tracking & Reports</h3>
-        <p>
-          Clear daily profit reports. Weekly vs last week comparisons. 
-          No leakage, no hidden costs — just pure clarity on where your money goes and how much you truly earn.
-        </p>
-      </div>
-
-      <!-- Service 3 -->
-      <div class="sf-card" data-aos="fade-up" data-aos-delay="300">
-        <h3>🚀 Growth & Team Systems</h3>
-        <p>
-          We set systems for upselling, retail sales, and service consistency. 
-          Build a team that performs — not one you constantly chase. 
-          Control + growth = a salon that runs itself.
-        </p>
-      </div>
+  <!-- ✅ PAIN POINTS -->
+  <section class="problems section-narrow">
+    <h2>Where Salons Lose Profit (And Don’t Even Know It)</h2>
+    <div class="problems-grid">
+      <div class="problem-card" data-aos="fade-up">Petty cash leaks silently bleed profit</div>
+      <div class="problem-card" data-aos="fade-up">Vendor pricing & wastage hidden in plain sight</div>
+      <div class="problem-card" data-aos="fade-up">Retail sales ignored = weak team control</div>
+      <div class="problem-card" data-aos="fade-up">No rebooking system = clients don’t return</div>
     </div>
   </section>
 
-  <!-- ================= CTA ================= -->
-  <section class="connect-card">
-    <div class="container center" data-aos="zoom-in">
-      <h2>Run Your Salon Smarter</h2>
-      <p class="mt-s">Start your FREE 1-Month Trial today and see how SALONFIX takes daily control.</p>
-      <a href="https://wa.me/919629370666?text=FIX" class="sf-btn mt-m">WhatsApp ‘FIX’</a>
-    </div>
-  </section>
-
-  <!-- ================= FOOTER ================= -->
-  <footer class="sf-footer">
-    <div class="container grid grid-3">
-      <div>
-        <h3>SALONFIX</h3>
-        <p>Your in-house business partner for salons.</p>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="blog.html">Blog</a></li>
+  <!-- ✅ 5-STEP PROFIT FIX -->
+  <section class="solution">
+    <div class="solution-container">
+      <div class="solution-text">
+        <h2>Our 5-Step Profit Fix</h2>
+        <p class="sub-purple">This is how we turn chaos into control:</p>
+        <ul class="solution-list">
+          <li><strong>Audit</strong> — Diagnose sales leaks, staff gaps, pricing issues.</li>
+          <li><strong>Plug Leaks</strong> — Petty cash, vendor deals, product wastage.</li>
+          <li><strong>Systemize</strong> — Daily trackers, SOPs, photo proof for control.</li>
+          <li><strong>Train & Align</strong> — Rebooking, retail, hygiene — enforced daily.</li>
+          <li><strong>Scale Profit</strong> — Daily WhatsApp report + weekly reviews.</li>
         </ul>
       </div>
-      <div>
-        <h4>Contact</h4>
-        <p>📍 Chennai, India</p>
-        <p>📞 +91 96293 70666</p>
-        <a href="mailto:info@salonfix.in">info@salonfix.in</a>
+    </div>
+  </section>
+
+  <!-- ✅ DETAILED SERVICES -->
+  <section class="case">
+    <h2><span>What We Actually</span> <span style="color:#D4AF37">Do For You</span></h2>
+    <div class="case-card">
+      <div class="card">✔ Daily & Weekly Audit Reports</div>
+      <div class="card">✔ Vendor & Expense Control</div>
+      <div class="card">✔ Staff Coaching & Incentive Plans</div>
+      <div class="card">✔ Branch Control via WhatsApp Proof</div>
+      <div class="card">✔ AI Nudges & Owner Action Box</div>
+    </div>
+  </section>
+
+  <!-- ✅ PROOF -->
+  <section class="proof">
+    <h2>Real Results From Real Salons</h2>
+    <div class="card-grid">
+      <div class="card" data-aos="fade-up">
+        <h3>+₹2.5L</h3>
+        <p>Profit in 30 days</p>
+      </div>
+      <div class="card" data-aos="fade-up">
+        <h3>-30%</h3>
+        <p>Product Wastage Reduced</p>
+      </div>
+      <div class="card" data-aos="fade-up">
+        <h3>+8.4%</h3>
+        <p>Profit Growth in 6 weeks</p>
       </div>
     </div>
-    <p class="center mt-m">© 2025 SALONFIX. All rights reserved.</p>
+  </section>
+
+  <!-- ✅ FINAL CTA -->
+  <footer class="footer-premium">
+    <div class="footer-top">
+      <h2>YOUR PROFIT SHOULDN’T DEPEND ON YOUR PRESENCE</h2>
+      <p>Start with proof, not promises — your FREE 1-Month Trial begins today.</p>
+      <div class="footer-cta">
+        <a href="https://wa.me/919629370666?text=FIX" class="btn-gold pulse">WhatsApp FIX Now</a>
+        <a href="tel:+919629370666" class="btn-outline">Book Free Audit Call</a>
+      </div>
+    </div>
+    <p class="copyright">© 2025 SALONFIX. All Rights Reserved.</p>
   </footer>
 
+  <!-- ✅ Floating WhatsApp -->
+  <a href="https://wa.me/919629370666?text=FIX" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
   <!-- ✅ Scripts -->
-  <script src="assets/sf.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 600, easing: "ease-out", once: true, offset: 30 });
+
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('site-nav');
+    const overlay = document.getElementById('mobile-overlay');
+
+    function closeMenu() {
+      nav.classList.remove('open');
+      overlay.classList.remove('show');
+      burger.classList.remove('active');
+      document.body.classList.remove('menu-open');
+    }
+
+    if (burger && nav && overlay) {
+      burger.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        overlay.classList.toggle('show', open);
+        burger.classList.toggle('active', open);
+        document.body.classList.toggle('menu-open', open);
+      });
+      overlay.addEventListener('click', closeMenu);
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+    }
+  </script>
 </body>
 </html>
