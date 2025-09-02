@@ -31,23 +31,23 @@
     <button class="burger" id="burger"><span></span><span></span><span></span></button>
   </nav>
 
-  <!-- HERO (no animation) -->
+  <!-- HERO -->
   <section class="hero">
-  <div class="hero-content">
-    <h1>
-      <span class="hero-line">Busy salon,</span><br>
-      <span class="hero-line">Bank balance still empty?</span>
-    </h1>
-    <p class="hero-sub">
-      <span class="hero-line">Sales ≠ Profit.</span><br>
-      <span class="hero-line">SALONFIX tracks every rupee daily </span><br>
-      <span class="hero-line">no leaks, no guessing.</span>
-    </p>
-    <a href="https://wa.me/919629370666?text=FIX" class="btn-gold">
-      Start FREE 1-Month Trial
-    </a>
-  </div>
-</section>
+    <div class="hero-content">
+      <h1>
+        <span class="hero-line">Busy salon,</span><br>
+        <span class="hero-line">Bank balance still empty?</span>
+      </h1>
+      <p class="hero-sub">
+        <span class="hero-line">Sales ≠ Profit.</span><br>
+        <span class="hero-line">SALONFIX tracks every rupee daily </span><br>
+        <span class="hero-line">no leaks, no guessing.</span>
+      </p>
+      <a href="https://wa.me/919629370666?text=FIX" class="btn-gold">
+        Start FREE 1-Month Trial
+      </a>
+    </div>
+  </section>
 
   <!-- PROOF -->
   <section class="proof">
@@ -121,9 +121,9 @@
   <section class="reel-section">
     <h2 data-aos="fade-up">📲 Real Salon Fixes — Updated on Instagram</h2>
     <div class="reel-grid">
-      <iframe src="https://www.instagram.com/p/DNnvtQ4ytxg/embed" class="reel" scrolling="no" data-aos="fade-up" data-aos-delay="100"></iframe>
-      <iframe src="https://www.instagram.com/p/DNNpbwGSKl9/embed" class="reel" scrolling="no" data-aos="fade-up" data-aos-delay="200"></iframe>
-      <iframe src="https://www.instagram.com/p/DNiXfh7S3Nm/embed" class="reel" scrolling="no" data-aos="fade-up" data-aos-delay="300"></iframe>
+      <iframe src="https://www.instagram.com/p/DNnvtQ4ytxg/embed" class="reel" scrolling="no"></iframe>
+      <iframe src="https://www.instagram.com/p/DNNpbwGSKl9/embed" class="reel" scrolling="no"></iframe>
+      <iframe src="https://www.instagram.com/p/DNiXfh7S3Nm/embed" class="reel" scrolling="no"></iframe>
     </div>
     <div class="reel-dots"></div>
   </section>
@@ -131,11 +131,11 @@
   <!-- FOOTER -->
   <footer class="footer-premium">
     <div class="footer-top">
-      <h2 data-aos="fade-up">SALON OWNERS WORK LESS. <span>SALONFIX DOES THE REST.</span></h2>
-      <p data-aos="fade-up" data-aos-delay="100">Experience it yourself with our FREE 1-Month Trial.</p>
+      <h2>SALON OWNERS WORK LESS. <span>SALONFIX DOES THE REST.</span></h2>
+      <p>Experience it yourself with our FREE 1-Month Trial.</p>
       <div class="footer-cta">
-        <a href="https://wa.me/919629370666?text=FIX" class="btn-gold" data-aos="fade-up" data-aos-delay="200">WhatsApp FIX Now</a>
-        <a href="tel:+919629370666" class="btn-outline" data-aos="fade-up" data-aos-delay="300">Book Free Audit Call</a>
+        <a href="https://wa.me/919629370666?text=FIX" class="btn-gold">WhatsApp FIX Now</a>
+        <a href="tel:+919629370666" class="btn-outline">Book Free Audit Call</a>
       </div>
     </div>
     <p class="copyright">© 2025 SALONFIX. All Rights Reserved.</p>
@@ -146,89 +146,70 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
-    <!-- ✅ AOS Init -->
+  <!-- ✅ Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
+    // AOS init
     AOS.init({
-      duration: 600,   // smoother animation duration
+      duration: 600,
       easing: "ease-out",
       once: true,
-      offset: 30       // trigger earlier for smoother scroll
-    });
-  </script>
-
-  const burger = document.getElementById('burger');
-  const nav = document.getElementById('site-nav');
-
-  if (burger && nav) {
-    burger.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      document.body.classList.toggle('menu-open', open);
-      burger.setAttribute('aria-expanded', open ? "true" : "false");
+      offset: 30
     });
 
-    nav.querySelectorAll('a').forEach(a => 
-      a.addEventListener('click', () => {
-        nav.classList.remove('open');
-        document.body.classList.remove('menu-open');
-        burger.setAttribute('aria-expanded','false');
-      })
-    );
-  }
-</script>
-  <script>
-  // Mobile Reels Carousel Dots
-  const reelGrid = document.querySelector('.reel-grid');
-  const reels = document.querySelectorAll('.reel-grid iframe');
-  const reelDots = document.querySelector('.reel-dots');
+    // Burger menu
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('site-nav');
 
-  if (reelGrid && reels.length > 0 && reelDots) {
-    reels.forEach((_, i) => {
-      const dot = document.createElement('span');
-      if (i === 0) dot.classList.add('active');
-      reelDots.appendChild(dot);
-    });
+    if (burger && nav) {
+      burger.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        document.body.classList.toggle('menu-open', open);
+        burger.classList.toggle('active', open);
+        burger.setAttribute('aria-expanded', open ? "true" : "false");
+      });
 
-    const dots = reelDots.querySelectorAll('span');
-
-    reelGrid.addEventListener('scroll', () => {
-      const index = Math.round(reelGrid.scrollLeft / reelGrid.offsetWidth);
-      dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
-    });
-  }
-</script>
-  <script>
-  // Mobile Reels Carousel Dots + Snap
-  const reelGrid = document.querySelector('.reel-grid');
-  const reels = document.querySelectorAll('.reel-grid iframe');
-  const reelDots = document.querySelector('.reel-dots');
-
-  if (reelGrid && reels.length > 0 && reelDots) {
-    // Create dots
-    reels.forEach((_, i) => {
-      const dot = document.createElement('span');
-      if (i === 0) dot.classList.add('active');
-      reelDots.appendChild(dot);
-    });
-
-    const dots = reelDots.querySelectorAll('span');
-
-    // Snap detection
-    reelGrid.addEventListener('scroll', () => {
-      const index = Math.round(reelGrid.scrollLeft / reelGrid.offsetWidth);
-      dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
-    });
-
-    // Optional: tap dots to jump reels
-    dots.forEach((dot, i) => {
-      dot.addEventListener('click', () => {
-        reelGrid.scrollTo({
-          left: i * reelGrid.offsetWidth,
-          behavior: 'smooth'
+      nav.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          nav.classList.remove('open');
+          document.body.classList.remove('menu-open');
+          burger.classList.remove('active');
+          burger.setAttribute('aria-expanded','false');
         });
       });
-    });
-  }
-</script>
+    }
+
+    // Mobile Reels Carousel Dots + Snap
+    const reelGrid = document.querySelector('.reel-grid');
+    const reels = document.querySelectorAll('.reel-grid iframe');
+    const reelDots = document.querySelector('.reel-dots');
+
+    if (reelGrid && reels.length > 0 && reelDots) {
+      // Create dots
+      reels.forEach((_, i) => {
+        const dot = document.createElement('span');
+        if (i === 0) dot.classList.add('active');
+        reelDots.appendChild(dot);
+      });
+
+      const dots = reelDots.querySelectorAll('span');
+
+      // Snap detection
+      reelGrid.addEventListener('scroll', () => {
+        const index = Math.round(reelGrid.scrollLeft / reelGrid.offsetWidth);
+        dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+      });
+
+      // Tap dots to jump reels
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          reelGrid.scrollTo({
+            left: i * reelGrid.offsetWidth,
+            behavior: 'smooth'
+          });
+        });
+      });
+    }
+  </script>
 </body>
 </html>
