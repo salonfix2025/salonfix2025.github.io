@@ -1511,27 +1511,7 @@ h2 {
   margin-right: 8px;
   font-weight: 900;
 }
-/* ✅ Remove rounded edges + full width purple background */
-.founder-wrapper,
-.problems,
-.case,
-.proof,
-.solution {
-  border-radius: 0 !important;    /* removes curved corners */
-  width: 100% !important;         /* full width */
-  max-width: 100% !important;     /* no limit */
-  margin: 0;                      /* flush with page edges */
-}
 
-/* ✅ Make purple blocks extend fully */
-.founder-card,
-.problem-card,
-.case-card,
-.card-purple {
-  border-radius: 0 !important;   /* straight edges */
-  width: 100% !important;
-  margin: 0 auto;
-}
 /* ✅ Force show bullets in About sections on mobile */
 @media (max-width: 768px) {
   .solution-text ul,
