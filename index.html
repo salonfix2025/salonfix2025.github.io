@@ -1,224 +1,297 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SALONFIX – Your In-House Business Partner</title>
-  <link rel="icon" href="assets/favicon.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style-enhanced.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+/* ==============================
+   SALONFIX – Global Styles
+   ============================== */
+:root {
+  --sf-purple: #4B0082;
+  --sf-purple-dark: #2d004c;
+  --sf-gold: #D4AF37;
+  --sf-white: #fff;
+  --sf-dark: #1b1230;
+  --radius: 20px;
+  --shadow: 0 8px 22px rgba(0,0,0,.15);
+  --shadow-hover: 0 12px 28px rgba(0,0,0,.2);
+}
 
-  <!-- ✅ AOS Animation Library -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-</head>
-<body>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--sf-white);
+  color: var(--sf-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
 
-  <!-- ✅ Navbar -->
-  <nav class="sf-navbar">
-    <div class="logo">
-      <a href="index.html">SALONFIX</a>
-    </div>
-    <ul id="site-nav">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">How We Work</a></li>
-      <li><a href="pricing.html">Partnership Plans</a></li>
-      <li><a href="blog.html">Testimonials</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a href="https://wa.me/919629370666?text=FIX" class="cta-btn">WhatsApp FIX</a>
-    <button class="burger" id="burger"><span></span><span></span><span></span></button>
-  </nav>
+/* ==============================
+   NAVBAR
+   ============================== */
+nav.sf-navbar {
+  position: fixed; top: 0; left: 0; width: 100%;
+  background: rgba(75,0,130,0.95);
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 15px 8%; z-index: 2000;
+}
+nav.sf-navbar .logo a { font-weight: 900; font-size: 1.5rem; color: #fff; }
+nav.sf-navbar ul { display: flex; gap: 25px; list-style: none; }
+nav.sf-navbar ul li a {
+  color: #fff; font-weight: 600; padding: 8px 6px;
+  border-bottom: 2px solid transparent;
+}
+nav.sf-navbar ul li a:hover,
+nav.sf-navbar ul li a.active {
+  color: var(--sf-gold); border-bottom: 2px solid var(--sf-gold);
+}
+nav.sf-navbar .cta-btn {
+  background: var(--sf-gold); color: var(--sf-dark);
+  padding: 10px 18px; border-radius: 50px; font-weight: 700;
+}
+.burger { display: none; background: none; border: 0; cursor: pointer; }
+.burger span {
+  display: block; width: 26px; height: 2px; background: #fff; margin: 6px 0;
+}
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>
-        <span class="hero-line">Busy salon,</span><br>
-        <span class="hero-line">Bank balance still empty?</span>
-      </h1>
-      <p class="hero-sub">
-        <span class="hero-line">Sales ≠ Profit.</span><br>
-        <span class="hero-line">SALONFIX tracks every rupee daily </span><br>
-        <span class="hero-line">no leaks, no guessing.</span>
-      </p>
-      <a href="https://wa.me/919629370666?text=FIX" class="btn-gold">
-        Start FREE 1-Month Trial
-      </a>
-    </div>
-  </section>
+/* Mobile nav */
+@media(max-width: 900px) {
+  nav.sf-navbar .cta-btn { display: none; } /* hide WhatsApp FIX on mobile */
+  .burger { display: block; z-index: 2100; }
+  nav.sf-navbar ul {
+    position: fixed; inset: 64px 0 auto 0;
+    background: rgba(0,0,0,0.9); /* floating dark panel */
+    backdrop-filter: blur(8px);
+    flex-direction: column; align-items: center;
+    padding: 30px 0; gap: 22px;
+    transform: translateY(-120%); transition: .25s ease;
+    z-index: 1999;
+  }
+  nav.sf-navbar ul.open { transform: translateY(0); }
+  nav.sf-navbar ul li a {
+    font-size: 1.2rem; font-weight: 700; color: var(--sf-white);
+    width: 100%; text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+}
 
-  <!-- PROOF -->
-  <section class="proof">
-    <h2 data-aos="fade-up">4 branches · 6 weeks · Profit flipped</h2>
-    <div class="card-grid">
-      <div class="card" data-aos="fade-up" data-aos-delay="100"><h3>+₹2.5L</h3><p>Profit in 30 days</p></div>
-      <div class="card" data-aos="fade-up" data-aos-delay="200"><h3>-30% Waste</h3><p>+20% Vendor Savings</p></div>
-      <div class="card" data-aos="fade-up" data-aos-delay="300"><h3>+8.4%</h3><p>Profit Growth in 6 weeks</p></div>
-    </div>
-  </section>
+/* ==============================
+   HERO
+   ============================== */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  text-align: center;
+  padding: 100px 20px 80px;
+  background: linear-gradient(135deg, var(--sf-purple), var(--sf-gold));
+  color: var(--sf-white);
+}
+.hero h1 {
+  font-size: 2.6rem; font-weight: 900; margin-bottom: 18px; line-height: 1.3;
+  animation: zoomIn 1s ease-out 1;
+}
+.hero p { font-size: 1.2rem; margin-bottom: 28px; max-width: 750px; }
+.hero .btn-gold {
+  background: var(--sf-gold); color: var(--sf-dark);
+  padding: 16px 32px; border-radius: 30px; font-weight: 800;
+  box-shadow: 0 6px 18px rgba(212,175,55,0.4);
+  animation: pulseGold 2s infinite;
+}
+@keyframes zoomIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes pulseGold {
+  0% { box-shadow: 0 0 0 0 rgba(212,175,55,.5); }
+  70% { box-shadow: 0 0 0 15px rgba(212,175,55,0); }
+  100% { box-shadow: 0 0 0 0 rgba(212,175,55,0); }
+}
+/* Mobile hero */
+@media (max-width: 768px) {
+  .hero { padding: 80px 20px; min-height: 70vh; }
+  .hero h1 { font-size: 1.9rem; line-height: 1.4; }
+  .hero p { font-size: 1rem; line-height: 1.6; }
+}
 
-  <!-- PROBLEMS -->
-  <section class="sf-purple pad-xl profit-section">
-  <div class="container">
-    <h2 class="center">Why salons lose profit even when sales are high...</h2>
-    <div class="profit-grid mt-l">
-      <div class="profit-box">Manager salary ≠ System control</div>
-      <div class="profit-box">Petty cash leaks silently bleed profit</div>
-      <div class="profit-box">No rebooking system = empty chairs</div>
-      <div class="profit-box">Retail zero = weak team control</div>
-    </div>
-  </div>
-</section>
+/* ==============================
+   PROOF
+   ============================== */
+.proof { padding: 60px 8%; text-align: center; }
+.proof h2 {
+  font-size: 2.4rem; font-weight: 900;
+  color: var(--sf-purple);
+  margin-bottom: 30px;
+}
+.card-grid {
+  display: grid; grid-template-rows: repeat(3, 1fr);
+  gap: 24px;
+}
+.card {
+  background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
+  border-radius: var(--radius);
+  color: #fff; padding: 40px 30px;
+  box-shadow: var(--shadow);
+  transition: 0.3s;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.card h3 {
+  font-size: 2rem; font-weight: 800; color: var(--sf-gold); margin-bottom: 10px;
+}
+.card p { font-size: 1.1rem; color: #fff; }
+.card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
 
-  <!-- CASE -->
-  <section class="case">
-    <h2 data-aos="fade-up">From Chaos to Control.</h2>
-    <div class="card-grid">
-      <div class="card" data-aos="fade-up" data-aos-delay="100">❌ Before: No daily numbers, rebooking 0, retail 3%</div>
-      <div class="card" data-aos="fade-up" data-aos-delay="200">🔄 After: Daily P&L + scripts → retail 11%</div>
-      <div class="card result-card" data-aos="fade-up" data-aos-delay="300">✅ Result: Profit +8.4% in 6 weeks</div>
-    </div>
-  </section>
+/* Mobile proof */
+@media (max-width: 768px) {
+  .proof h2 { font-size: 1.6rem; text-align: center; }
+  .card-grid { grid-template-rows: none; grid-template-columns: 1fr; }
+  .card h3 { font-size: 1.4rem; }
+  .card p { font-size: 1rem; }
+}
 
-  <!-- SOLUTION -->
-  <section class="solution">
-    <div class="solution-container">
-      <div class="solution-text">
-        <h2 data-aos="fade-up">We don’t just consult.<br>We take over.</h2>
-        <ul>
-          <li data-aos="fade-up" data-aos-delay="100">Daily reports on WhatsApp</li>
-          <li data-aos="fade-up" data-aos-delay="200">Branch control with proof photos & logs</li>
-          <li data-aos="fade-up" data-aos-delay="300">Staff accountability + incentive system</li>
-          <li data-aos="fade-up" data-aos-delay="400">Owner Action Box = clear next steps</li>
-        </ul>
-      </div>
-      <div class="solution-image" data-aos="fade-up" data-aos-delay="500">
-        <img src="assets/about-different.jpg" alt="Salon team control">
-      </div>
-    </div>
-  </section>
+/* ==============================
+   PROBLEMS
+   ============================== */
+.problems {
+  background: var(--sf-purple); color: #fff;
+  border-radius: 20px; padding: 60px 8%;
+}
+.problems h2 {
+  text-align: center; margin-bottom: 30px;
+  font-size: 2.2rem; font-weight: 900;
+}
+.problems-grid {
+  display: grid; grid-template-columns: repeat(2,1fr); gap: 24px;
+}
+.problem-card {
+  background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
+  color: var(--sf-purple); padding: 24px;
+  border-radius: 15px; font-weight: 600;
+  text-align: center; min-height: 140px;
+  box-shadow: var(--shadow);
+}
+@media (max-width: 768px) {
+  .problems-grid { grid-template-columns: 1fr; }
+  .problems { max-width: 92%; margin: 0 auto; }
+}
 
-  <!-- FOUNDER -->
-  <section class="founder section-narrow">
-    <div class="photo" data-aos="fade-up" data-aos-delay="200">
-      <img src="assets/founder.jpg" alt="JAWHAR RAJ RAJKUMAR">
-    </div>
-    <div class="content">
-      <h2 data-aos="fade-up" data-aos-delay="300">I’m <span class="gold-text">JAWHAR RAJ RAJKUMAR</span> — I’ve fixed it all</h2>
-      <p data-aos="fade-up" data-aos-delay="400">10+ years inside salons, turning chaos into profit across 100+ salon days</p>
-      <ul>
-        <li data-aos="fade-up" data-aos-delay="500">🏆 10+ Years Running Salon Operations</li>
-        <li data-aos="fade-up" data-aos-delay="600">💰 Proven Profit Growth Across Multiple Branches</li>
-        <li data-aos="fade-up" data-aos-delay="700">📊 100+ Daily Operations Controlled</li>
-      </ul>
-      <a href="https://wa.me/919629370666?text=FIX" class="btn-gold" data-aos="fade-up" data-aos-delay="800">
-        WhatsApp FIX — Start FREE Trial
-      </a>
-    </div>
-  </section>
+/* ==============================
+   CASE
+   ============================== */
+.case { padding: 60px 8%; text-align: center; }
+.case h2 {
+  font-size: 2.4rem; font-weight: 900; margin-bottom: 30px;
+}
+.case h2 span { color: var(--sf-gold); }
+.case .card { color: var(--sf-gold); }
 
-  <!-- ================= REELS SECTION ================= -->
-<section class="pad-xl">
-  <div class="container center" data-aos="fade-up">
-    <h2>Real Salon Fixes — Updated on Instagram</h2>
-    <div class="reel-container">
-      <!-- Instagram Embed -->
-      <blockquote class="instagram-media" 
-        data-instgrm-permalink="https://www.instagram.com/reel/C_yourReelID/" 
-        data-instgrm-version="14" 
-        style="background:#fff; border:0; margin:0 auto; max-width:400px; width:100%; min-width:300px;">
-      </blockquote>
-    </div>
-  </div>
-</section>
+/* ==============================
+   SOLUTION
+   ============================== */
+.solution { padding: 80px 20px; background: #fff; }
+.solution-container {
+  display: flex; flex-wrap: wrap; gap: 40px; align-items: center;
+  max-width: 1100px; margin: 0 auto;
+}
+.solution-text { flex: 1; }
+.solution-text h2 {
+  color: var(--sf-gold); font-size: 2.2rem; font-weight: 800;
+}
+.solution-text ul { margin-top: 15px; padding-left: 20px; }
+.solution-text li { font-size: 1.1rem; margin-bottom: 10px; }
+.solution-image { flex: 1; text-align: center; }
+.solution-image img { max-width: 100%; border-radius: 12px; }
 
-<!-- ✅ Instagram embed script -->
-<script async src="//www.instagram.com/embed.js"></script>
+/* Mobile solution */
+@media (max-width: 768px) {
+  .solution-container { flex-direction: column; }
+  .solution-text ul { text-align: left; }
+  .solution-text li { font-size: 1rem; margin-bottom: 6px; }
+  .solution-text ul { display: none; } /* no bullets in mobile */
+}
 
-  <!-- FOOTER -->
-  <footer class="footer-premium">
-    <div class="footer-top">
-      <h2>SALON OWNERS WORK LESS. <span>SALONFIX DOES THE REST.</span></h2>
-      <p>Experience it yourself with our FREE 1-Month Trial.</p>
-      <div class="footer-cta">
-        <a href="https://wa.me/919629370666?text=FIX" class="btn-gold">WhatsApp FIX Now</a>
-        <a href="tel:+919629370666" class="btn-outline">Book Free Audit Call</a>
-      </div>
-    </div>
-    <p class="copyright">© 2025 SALONFIX. All Rights Reserved.</p>
-  </footer>
+/* ==============================
+   FOUNDER
+   ============================== */
+.founder {
+  background: var(--sf-purple); color: #fff;
+  border-radius: 20px;
+  display: flex; flex-wrap: wrap; gap: 40px; align-items: center;
+  padding: 60px 20px; max-width: 92%; margin: 0 auto;
+}
+.founder .photo img {
+  max-width: 320px; border-radius: 20px;
+}
+.founder .content h2 { font-size: 2rem; margin-bottom: 16px; }
+.founder .btn-gold {
+  display: inline-block; margin-top: 20px;
+  background: var(--sf-gold); color: var(--sf-dark);
+  padding: 14px 26px; border-radius: 30px;
+  font-weight: 800; animation: pulseGold 2s infinite;
+}
 
-  <!-- ✅ Floating WhatsApp Button -->
-  <a href="https://wa.me/919629370666?text=FIX" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+/* Mobile founder */
+@media (max-width: 900px) {
+  .founder { flex-direction: column; text-align: center; }
+  .founder ul { display: none; } /* no bullets in mobile */
+}
 
-  <!-- ✅ Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    // AOS init
-    AOS.init({
-      duration: 600,
-      easing: "ease-out",
-      once: true,
-      offset: 30
-    });
+/* ==============================
+   REELS
+   ============================== */
+.reel-section { padding: 60px 8%; text-align: center; }
+.reel-section h2 {
+  font-size: 2.2rem; font-weight: 900; margin-bottom: 30px;
+}
+.reel-grid {
+  display: flex; gap: 20px; overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.reel-grid iframe {
+  flex: 0 0 85%; max-width: 85%;
+  aspect-ratio: 9/16; border-radius: 12px; border: none;
+  scroll-snap-align: center;
+}
+.reel-grid::-webkit-scrollbar { display: none; }
 
-    // Burger menu
-    const burger = document.getElementById('burger');
-    const nav = document.getElementById('site-nav');
+/* ==============================
+   FOOTER
+   ============================== */
+.footer-premium {
+  background: linear-gradient(135deg, var(--sf-purple), var(--sf-purple-dark));
+  color: #fff; text-align: center;
+  padding: 60px 20px; border-radius: 20px 20px 0 0;
+}
+.footer-premium h2 {
+  font-size: 1.8rem; font-weight: 800; margin-bottom: 15px;
+}
+.footer-premium span { color: var(--sf-gold); }
+.footer-cta {
+  margin-top: 20px; display: flex; justify-content: center;
+  gap: 16px; flex-wrap: wrap;
+}
+.footer-cta a {
+  padding: 12px 24px; border-radius: 30px; font-weight: 700;
+}
+.footer-cta .btn-gold {
+  background: var(--sf-gold); color: var(--sf-dark);
+  animation: pulseGold 2s infinite;
+}
+.footer-cta .btn-outline {
+  border: 2px solid var(--sf-gold); color: var(--sf-gold);
+  background: none;
+}
 
-    if (burger && nav) {
-      burger.addEventListener('click', () => {
-        const open = nav.classList.toggle('open');
-        document.body.classList.toggle('menu-open', open);
-        burger.classList.toggle('active', open);
-        burger.setAttribute('aria-expanded', open ? "true" : "false");
-      });
-
-      nav.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-          nav.classList.remove('open');
-          document.body.classList.remove('menu-open');
-          burger.classList.remove('active');
-          burger.setAttribute('aria-expanded','false');
-        });
-      });
-    }
-
-    // Mobile Reels Carousel Dots + Snap
-    const reelGrid = document.querySelector('.reel-grid');
-    const reels = document.querySelectorAll('.reel-grid iframe');
-    const reelDots = document.querySelector('.reel-dots');
-
-    if (reelGrid && reels.length > 0 && reelDots) {
-      // Create dots
-      reels.forEach((_, i) => {
-        const dot = document.createElement('span');
-        if (i === 0) dot.classList.add('active');
-        reelDots.appendChild(dot);
-      });
-
-      const dots = reelDots.querySelectorAll('span');
-
-      // Snap detection
-      reelGrid.addEventListener('scroll', () => {
-        const index = Math.round(reelGrid.scrollLeft / reelGrid.offsetWidth);
-        dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
-      });
-
-      // Tap dots to jump reels
-      dots.forEach((dot, i) => {
-        dot.addEventListener('click', () => {
-          reelGrid.scrollTo({
-            left: i * reelGrid.offsetWidth,
-            behavior: 'smooth'
-          });
-        });
-      });
-    }
-  </script>
-</body>
-</html>
+/* ==============================
+   FLOATING WHATSAPP
+   ============================== */
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37,211,102,.6); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 15px rgba(37,211,102,0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+.whatsapp-float {
+  position: fixed; bottom: 20px; right: 20px;
+  background: #25d366; color: #fff;
+  border-radius: 50%; width: 60px; height: 60px;
+  display: flex; justify-content: center; align-items: center;
+  font-size: 28px; box-shadow: var(--shadow);
+  z-index: 3000; animation: pulse 2.5s infinite;
+}
