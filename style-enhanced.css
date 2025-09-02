@@ -1861,3 +1861,17 @@ h2 {
   line-height: 1.5;
   margin: 0;
 }
+/* Remove bullets only in Services page step cards */
+.services-page .step-card ul {
+  list-style: none;   /* no browser round bullets */
+  margin: 0;
+  padding: 0;
+}
+
+.services-page .step-card ul li {
+  padding-left: 0;   /* reset spacing */
+}
+
+.services-page .step-card ul li::before {
+  content: none !important;  /* remove ✔ icons */
+}
