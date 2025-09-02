@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pricing – SALONFIX</title>
+  <title>Partnership Plans – SALONFIX</title>
 
   <!-- ✅ Canonical + Favicon -->
   <link rel="canonical" href="https://www.salonfix.in/pricing.html" />
@@ -23,99 +23,10 @@
   <meta property="og:locale" content="en_IN" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- ✅ Performance & Libs -->
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-  <link rel="preload" as="image" href="assets/og-image.jpg" />
+  <!-- ✅ Fonts & Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
-
-  <!-- 🔮 Global Style System -->
-  <style>
-    :root{
-      --sf-purple:#4B0082; --sf-purple-900:#2d004c; --sf-gold:#D4AF37;
-      --sf-ink:#1b1230; --sf-white:#ffffff;
-      --sf-radius-lg:24px; --sf-radius:18px;
-      --sf-shadow:0 18px 40px rgba(0,0,0,.25);
-      --sf-shadow-soft:0 10px 24px rgba(0,0,0,.12);
-      --sf-shadow-hover:0 22px 48px rgba(0,0,0,.28);
-    }
-    html,body{margin:0;padding:0;font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--sf-ink)}
-    img{max-width:100%;height:auto;display:block}
-    h1,h2,h3{margin:0 0 .5rem;line-height:1.1}
-    h1{font-weight:900}
-    h2{font-weight:800}
-    h3{font-weight:800;color:var(--sf-gold)}
-    p{line-height:1.7}
-
-    .container{max-width:1200px;margin:0 auto;padding:0 6vw}
-    .grid{display:grid;gap:24px}
-    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    @media (max-width:900px){.grid-3{grid-template-columns:1fr}}
-
-    /* Navbar */
-    nav.sf-navbar{
-      position:fixed;top:0;left:0;width:100%;
-      background:rgba(75,0,130,0.95);
-      display:flex;justify-content:space-between;align-items:center;
-      padding:15px 8%;z-index:1000;
-    }
-    nav.sf-navbar .logo a{font-weight:900;font-size:1.5rem;color:#fff;text-decoration:none}
-    nav.sf-navbar ul{display:flex;gap:25px;list-style:none;margin:0;padding:0}
-    nav.sf-navbar ul li a{color:#fff;text-decoration:none;font-weight:600;padding:8px 6px;border-bottom:2px solid transparent}
-    nav.sf-navbar ul li a:hover,nav.sf-navbar ul li a.active{color:var(--sf-gold);border-bottom:2px solid var(--sf-gold)}
-    nav.sf-navbar .cta-btn{background:var(--sf-gold);color:#1b1230;padding:10px 18px;border-radius:50px;font-weight:700;text-decoration:none}
-    .burger{display:none;background:none;border:0;cursor:pointer}
-    .burger span{display:block;width:26px;height:2px;background:#fff;margin:6px 0;transition:.2s}
-    @media (max-width:900px){
-      .burger{display:block}
-      nav.sf-navbar ul{position:fixed;inset:64px 0 auto 0;background:#4B0082;flex-direction:column;padding:20px;gap:16px;transform:translateY(-120%);transition:transform .25s ease}
-      nav.sf-navbar ul.open{transform:translateY(0)}
-      body.menu-open{overflow:hidden}
-    }
-
-    /* Purple Hero */
-    .sf-purple{
-      position:relative;color:#fff;
-      background:linear-gradient(180deg, var(--sf-purple) 0%, var(--sf-purple-900) 100%);
-    }
-    .pad-xl{padding:84px 0}
-
-    /* Pricing cards */
-    .plans{padding:56px 0;background:#faf7ff}
-    .plans-grid{display:grid;gap:18px;grid-template-columns:repeat(4,minmax(0,1fr))}
-    @media (max-width:1100px){.plans-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media (max-width:680px){.plans-grid{grid-template-columns:1fr}}
-
-    .card-purple{
-      color:#fff;border-radius:24px;box-shadow:var(--sf-shadow);padding:24px;
-      background:linear-gradient(160deg, var(--sf-purple) 0%, var(--sf-purple-900) 100%);
-      border:1px solid rgba(212,175,55,.18);
-      transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-      display:flex;flex-direction:column;gap:10px
-    }
-    .card-purple:hover{transform:translateY(-4px);box-shadow:var(--sf-shadow-hover);border-color:var(--sf-gold)}
-    .card-purple p{color:rgba(255,255,255,.9)}
-    .plan-title{font-weight:900;font-size:20px;color:#fff}
-    .plan-sub{opacity:.95;color:rgba(255,255,255,.85)}
-    .price{font-size:22px;font-weight:900;color:var(--sf-gold)}
-    .card-purple a.btn{background:var(--sf-gold);color:#1b1230;font-weight:800}
-
-    /* CTA strip */
-    .cta-strip{padding:56px 0;background:#fff;text-align:center}
-
-    /* Connect Card */
-    .connect-card{padding:56px 8%;background:linear-gradient(180deg,var(--sf-purple) 0%,var(--sf-purple-900) 100%);color:#fff;border-radius:24px;box-shadow:var(--sf-shadow)}
-
-    /* Footer */
-    footer{background:#0c0614;color:#fff;padding:48px 0;text-align:center}
-    .footer-cta{display:inline-block;margin-top:14px}
-
-    /* Floating WhatsApp */
-    .whatsapp-float{position:fixed;right:18px;bottom:18px;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;font-size:26px;box-shadow:0 10px 24px rgba(0,0,0,.25);z-index:60}
-    .whatsapp-float:hover{transform:translateY(-2px)}
-  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <link rel="stylesheet" href="style-enhanced.css" />
 </head>
 
@@ -131,27 +42,32 @@
       <li><a href="pricing.html" class="active">Partnership Plans</a></li>
       <li><a href="blog.html">Testimonials</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://wa.me/919629370666?text=FIX" class="cta-btn-mobile">WhatsApp FIX</a></li>
     </ul>
-    <a href="https://wa.me/919629370666?text=FIX" class="cta-btn">WhatsApp FIX</a>
+    <a href="https://wa.me/919629370666?text=FIX" class="cta-btn desktop-only">WhatsApp FIX</a>
     <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </nav>
 
+  <!-- ✅ MOBILE NAV OVERLAY -->
+  <div id="mobile-overlay" class="mobile-overlay"></div>
+
   <!-- 🟣 HERO -->
-  <section class="sf-purple pad-xl">
-    <div class="container" data-aos="fade-up">
-      <h1 style="color:#fff;font-size:clamp(36px,5vw,64px)">Partnership Plans</h1>
-      <p class="subtle" style="max-width:760px;margin-top:10px">One format, one system — whether you run one salon or many.</p>
-      <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
-        <a class="btn btn-gold" href="https://wa.me/919629370666?text=FIX">DM “FIX” — Help Me Choose</a>
-        <a class="btn btn-outline-gold" href="#plans">Compare Plans</a>
+  <section class="hero sf-purple">
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Partnership Plans</h1>
+      <p class="hero-sub">One format, one system — whether you run one salon or many.</p>
+      <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+        <a class="btn-gold" href="https://wa.me/919629370666?text=FIX">DM “FIX” — Help Me Choose</a>
+        <a class="btn-outline" href="#plans">Compare Plans</a>
       </div>
     </div>
   </section>
 
-  <!-- 🟣 PLANS -->
+  <!-- 🟣 PLANS GRID -->
   <section id="plans" class="plans">
     <div class="container">
       <div class="plans-grid" data-aos="fade-up">
+
         <!-- START STRONG -->
         <article class="card-purple">
           <div>
@@ -160,7 +76,7 @@
           </div>
           <p>Full SOP setup, stock audit & front desk coaching. Perfect for salons starting fresh or rebooting systems.</p>
           <div class="price">₹25K–₹50K (1–2 weeks setup)</div>
-          <a class="btn" href="https://wa.me/919629370666?text=FIX">Choose START STRONG</a>
+          <a class="btn-gold" href="https://wa.me/919629370666?text=FIX">Choose START STRONG</a>
         </article>
 
         <!-- STAY SHARP -->
@@ -171,7 +87,7 @@
           </div>
           <p>Daily numbers, weekly oversight & monthly dashboards. Keeps your salon on track every single day.</p>
           <div class="price">₹30K–₹75K / month</div>
-          <a class="btn" href="https://wa.me/919629370666?text=FIX">Choose STAY SHARP</a>
+          <a class="btn-gold" href="https://wa.me/919629370666?text=FIX">Choose STAY SHARP</a>
         </article>
 
         <!-- STYLE EMPIRE -->
@@ -182,7 +98,7 @@
           </div>
           <p>One SOP, one reporting format — across every branch. Centralized control for growing salon groups.</p>
           <div class="price">Starts ₹75K / month</div>
-          <a class="btn" href="https://wa.me/919629370666?text=FIX">Choose STYLE EMPIRE</a>
+          <a class="btn-gold" href="https://wa.me/919629370666?text=FIX">Choose STYLE EMPIRE</a>
         </article>
 
         <!-- LIGHT TOUCH -->
@@ -193,8 +109,9 @@
           </div>
           <p>WhatsApp guidance, monthly reviews & strategic advice. Best for owner-managed salons needing minimal direction.</p>
           <div class="price">₹15K / month</div>
-          <a class="btn" href="https://wa.me/919629370666?text=FIX">Choose LIGHT TOUCH</a>
+          <a class="btn-gold" href="https://wa.me/919629370666?text=FIX">Choose LIGHT TOUCH</a>
         </article>
+
       </div>
     </div>
   </section>
@@ -203,17 +120,17 @@
   <section class="cta-strip">
     <div class="container" data-aos="zoom-in">
       <h3 style="font-weight:900">Prefer to test first? Start your FREE 1-Month Trial.</h3>
-      <a class="btn btn-gold" href="https://wa.me/919629370666?text=FIX">DM “FIX” — START FREE TRIAL</a>
+      <a class="btn-gold" href="https://wa.me/919629370666?text=FIX">DM “FIX” — START FREE TRIAL</a>
     </div>
   </section>
 
- <!-- FOOTER -->
+  <!-- 🟣 FOOTER -->
   <footer class="footer-premium">
     <div class="footer-top">
-      <h2>READY TO LET SALONFIX WORK  <span>FOR YOU?</span></h2>
-      <p>Prefer to test first? Start your FREE 1-Month Trial </p>
+      <h2>READY TO LET SALONFIX WORK <span>FOR YOU?</span></h2>
+      <p>Prefer to test first? Start your FREE 1-Month Trial</p>
       <div class="footer-cta">
-        <a href="https://wa.me/919629370666?text=FIX" class="btn-gold">DM "FIX " - Start Free 1-Month Trail</a>
+        <a href="https://wa.me/919629370666?text=FIX" class="btn-gold">DM “FIX” — Start Free Trial</a>
         <a href="tel:+919629370666" class="btn-outline">Book Free Audit Call</a>
       </div>
     </div>
@@ -224,15 +141,31 @@
   <a href="https://wa.me/919629370666?text=FIX" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
   <!-- ✅ Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    const burger=document.getElementById('burger');
-    const nav=document.getElementById('site-nav');
-    if(burger&&nav){
-      burger.addEventListener('click',()=>{const open=nav.classList.toggle('open');document.body.classList.toggle('menu-open',open);burger.setAttribute('aria-expanded',open?"true":"false")});
-      nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');document.body.classList.remove('menu-open');burger.setAttribute('aria-expanded','false')}));
-      document.addEventListener('keydown',e=>{if(e.key==='Escape'){nav.classList.remove('open');document.body.classList.remove('menu-open');burger.setAttribute('aria-expanded','false')}})
+    AOS.init({ duration: 900, once: true });
+
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('site-nav');
+    const overlay = document.getElementById('mobile-overlay');
+
+    function closeMenu() {
+      nav.classList.remove('open');
+      overlay.classList.remove('show');
+      burger.classList.remove('active');
+      document.body.classList.remove('menu-open');
     }
-    window.addEventListener('DOMContentLoaded',()=>AOS.init({duration:900,once:true}));
+
+    if (burger && nav && overlay) {
+      burger.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        overlay.classList.toggle('show', open);
+        burger.classList.toggle('active', open);
+        document.body.classList.toggle('menu-open', open);
+      });
+      overlay.addEventListener('click', closeMenu);
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+    }
   </script>
 </body>
 </html>
