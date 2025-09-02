@@ -2670,3 +2670,120 @@ nav.sf-navbar ul li a.active {
     border-radius: 14px;
   }
 }
+@media (max-width: 900px) {
+  /* Section headings */
+  .about-page .section h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 16px;
+    color: var(--sf-purple);
+  }
+
+  /* Section subheadings (like “We Take Daily Control”) */
+  .about-page .section h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 12px;
+    color: var(--sf-gold);
+  }
+
+  /* Paragraphs */
+  .about-page .section p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: center;
+    margin: 0 auto 14px;
+    max-width: 90%;
+  }
+
+  /* Bullet lists */
+  .about-page .section ul {
+    padding: 0;
+    margin: 0 auto 18px;
+    text-align: center;
+    list-style-position: inside;
+  }
+
+  .about-page .section ul li {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 10px;
+  }
+
+  /* Section images */
+  .about-page .section img {
+    margin: 20px auto 0;
+    display: block;
+    max-width: 90%;
+    border-radius: 14px;
+  }
+}
+@media (max-width: 900px) {
+  /* Section headings */
+  .home-page .section h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 16px;
+    color: var(--sf-purple);
+  }
+
+  /* Subheadings (if present) */
+  .home-page .section h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 12px;
+    color: var(--sf-gold);
+  }
+
+  /* Paragraphs */
+  .home-page .section p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: center;
+    margin: 0 auto 14px;
+    max-width: 90%;
+  }
+
+  /* Bullet lists */
+  .home-page .section ul {
+    padding: 0;
+    margin: 0 auto 18px;
+    text-align: center;
+    list-style-position: inside;
+  }
+
+  .home-page .section ul li {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 10px;
+  }
+
+  /* Section images */
+  .home-page .section img {
+    margin: 20px auto 0;
+    display: block;
+    max-width: 90%;
+    border-radius: 14px;
+  }
+
+  /* Profit boxes (2x2 grid on mobile) */
+  .home-page .profit-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* ✅ 2 left, 2 right */
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .home-page .profit-boxes .box {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    padding: 18px;
+    border-radius: 12px;
+    font-weight: 600;
+  }
+}
