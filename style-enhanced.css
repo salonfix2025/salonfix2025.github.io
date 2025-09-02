@@ -1018,3 +1018,19 @@ section h2 {
   font-size: 1.8rem;
   font-weight: 800;
 }
+.reel-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.reel-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.reel-grid blockquote {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
