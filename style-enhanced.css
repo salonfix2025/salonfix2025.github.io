@@ -3149,3 +3149,60 @@ html {
     line-height: 1.3;
   }
 }
+@media (max-width: 900px) {
+  /* ✅ Proof / Stats Boxes */
+  .card-grid .card {
+    padding: 16px 12px;
+    font-size: 0.9rem;
+    border-radius: 12px;
+    margin-bottom: 14px;
+  }
+
+  .card-grid .card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+  }
+
+  .card-grid .card p {
+    font-size: 0.82rem;
+    line-height: 1.3;
+  }
+
+  /* ✅ Problem Cards */
+  .problems-grid .problem-card {
+    padding: 14px 12px;          /* reduced padding */
+    font-size: 0.88rem;          /* smaller font */
+    line-height: 1.35;           /* tighter spacing */
+    border-radius: 10px;         /* slightly smaller corners */
+    margin-bottom: 12px;         /* reduce spacing between boxes */
+  }
+}
+@media (max-width: 900px) {
+  /* ✅ 5-Step Profit Fix grid layout */
+  .fix-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* two per row */
+    gap: 14px;
+  }
+
+  .fix-grid article {
+    padding: 14px 12px;
+    border-radius: 12px;
+    font-size: 0.88rem;
+  }
+
+  /* ✅ Make the last one span full width */
+  .fix-grid article:last-child {
+    grid-column: span 2;
+  }
+
+  .fix-grid h3 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+
+  .fix-grid p {
+    font-size: 0.82rem;
+    line-height: 1.3;
+  }
+}
