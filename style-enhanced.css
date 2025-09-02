@@ -1181,3 +1181,26 @@ h2 {
 .solution-list {
   margin-top: 8px; /* tighten spacing above list */
 }
+/* ✅ Problems Section Alignment Fix */
+.problems {
+  text-align: center;
+  padding: 40px 20px; /* keep equal padding */
+}
+
+.problems-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 600px;   /* keeps it centered */
+  margin: 0 auto;     /* ✅ center horizontally */
+}
+
+.problem-card {
+  background: linear-gradient(135deg, #FFD700, #D4AF37);
+  color: #2d004c;
+  font-weight: 600;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center; /* ✅ text stays centered */
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
