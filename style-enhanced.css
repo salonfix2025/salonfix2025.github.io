@@ -2204,20 +2204,3 @@ html {
   color: #fff;
   opacity: 0.9;
 }
-.section.promise .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;  /* ✅ equal 2-column layout */
-  gap: 40px;
-}
-
-.section.promise h2 {
-  font-size: 2.4rem;
-  font-weight: 900;
-  margin-bottom: 18px;
-}
-
-.section.promise p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  margin-bottom: 14px;
-}
