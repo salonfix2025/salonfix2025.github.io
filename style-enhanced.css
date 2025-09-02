@@ -2864,3 +2864,44 @@ nav.sf-navbar ul li a.active {
     padding: 45px 16px;
   }
 }
+@media (max-width: 900px) {
+  .footer-premium {
+    padding: 32px 16px;        /* less vertical space */
+    text-align: center;
+  }
+
+  .footer-premium h2 {
+    font-size: 1.4rem;         /* smaller but bold */
+    font-weight: 900;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  .footer-premium p {
+    font-size: 0.95rem;        /* smaller text */
+    line-height: 1.5;
+    margin-bottom: 16px;
+    color: rgba(255,255,255,.85);
+  }
+
+  .footer-premium .footer-cta {
+    display: flex;
+    flex-direction: column;    /* stack buttons on mobile */
+    gap: 12px;
+    margin-top: 14px;
+  }
+
+  .footer-premium .footer-cta a {
+    font-size: 1rem;
+    padding: 12px 0;
+    border-radius: 40px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .footer-premium .copyright {
+    font-size: 0.8rem;
+    margin-top: 16px;
+    opacity: 0.8;
+  }
+}
