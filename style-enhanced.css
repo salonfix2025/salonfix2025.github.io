@@ -3235,3 +3235,20 @@ html {
     border-radius: 18px; /* keep rounded corners visible */
   }
 }
+/* ✅ Mobile Fix: 5-Step Profit Section */
+@media (max-width: 768px) {
+  .section h2 {
+    margin-top: 32px !important; /* Prevent heading cutoff */
+  }
+
+  .fix-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 16px; /* Adjust spacing between cards */
+  }
+
+  .fix-grid .card-purple {
+    padding: 16px !important; /* Slightly smaller for mobile */
+    font-size: 0.9rem !important; /* Compact text size */
+  }
+}
