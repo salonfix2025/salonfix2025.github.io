@@ -176,5 +176,26 @@
     );
   }
 </script>
+  <script>
+  // Mobile Reels Carousel Dots
+  const reelGrid = document.querySelector('.reel-grid');
+  const reels = document.querySelectorAll('.reel-grid iframe');
+  const reelDots = document.querySelector('.reel-dots');
+
+  if (reelGrid && reels.length > 0 && reelDots) {
+    reels.forEach((_, i) => {
+      const dot = document.createElement('span');
+      if (i === 0) dot.classList.add('active');
+      reelDots.appendChild(dot);
+    });
+
+    const dots = reelDots.querySelectorAll('span');
+
+    reelGrid.addEventListener('scroll', () => {
+      const index = Math.round(reelGrid.scrollLeft / reelGrid.offsetWidth);
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+    });
+  }
+</script>
 </body>
 </html>
