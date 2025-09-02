@@ -1,121 +1,186 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About SALONFIX – YOUR IN-HOUSE BUSINESS PARTNER</title>
-
-  <!-- ✅ Canonical + Favicon -->
   <link rel="canonical" href="https://www.salonfix.in/about.html" />
   <link rel="icon" href="assets/favicon.png" type="image/png" />
-
-  <!-- ✅ SEO -->
-  <meta name="description" content="Meet JAWHAR RAJ RAJKUMAR — Founder of SALONFIX. With 10+ years inside salons, he created SALONFIX to be your in-house business partner. Start with a FREE 1-Month Trial." />
+  <meta name="description" content="SALONFIX is YOUR IN-HOUSE BUSINESS PARTNER — we run your salon like it’s our own. We take daily control of operations, numbers, and growth. Start with a FREE 1-Month Trial." />
   <meta name="theme-color" content="#4B0082" />
 
-  <!-- ✅ Open Graph -->
-  <meta property="og:site_name" content="SALONFIX" />
-  <meta property="og:title" content="About SALONFIX – Your In-House Business Partner" />
-  <meta property="og:description" content="SALONFIX runs your salon like it’s our own — daily operations, numbers, and growth. Meet the founder and our story." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.salonfix.in/about.html" />
-  <meta property="og:image" content="assets/og-cover.png" />
-
-  <!-- ✅ Styles -->
+  <!-- Fonts + CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style-enhanced.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
-<body>
+<body class="about-page">
 
-  <!-- ================= NAVBAR ================= -->
+  <!-- ✅ Navbar -->
   <nav class="sf-navbar">
-    <div class="container flex between">
-      <a href="index.html" class="sf-logo">SALONFIX</a>
-      <ul class="sf-nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <a href="https://wa.me/919629370666?text=FIX" class="sf-btn">WhatsApp FIX</a>
-    </div>
+    <div class="logo"><a href="index.html">SALONFIX</a></div>
+    <ul id="site-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="services.html">How We Work</a></li>
+      <li><a href="pricing.html">Partnership Plans</a></li>
+      <li><a href="blog.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="https://wa.me/919629370666?text=FIX" class="cta-btn">WhatsApp FIX</a>
+    <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </nav>
 
-  <!-- ================= HERO ================= -->
-  <section class="sf-purple pad-xl">
-    <div class="container grid grid-2" style="align-items:center">
-      <div data-aos="fade-right">
-        <img src="assets/founder.jpg" alt="JAWHAR RAJ RAJKUMAR" 
-             style="width:100%;max-width:380px;height:auto;border-radius:20px;display:block;">
-      </div>
-      <div data-aos="fade-left">
-        <h1 style="color:#fff">MEET THE FOUNDER — <br/>JAWHAR RAJ RAJKUMAR</h1>
-        <p style="color:rgba(255,255,255,.9);margin-top:12px">
-          “I’ve spent over a decade inside salons — running teams, fixing systems, and turning chaos into profit. 
-          I created SALONFIX so owners don’t have to focus on anything except walking into their salon and 
-          seeing it run perfectly. We run your salon like it’s our own — daily.”
-        </p>
-        <ul style="color:#fff;margin:18px 0 0 0;list-style:none;padding:0">
-          <li>🏆 10+ Years Running Salon Operations</li>
-          <li>💰 Proven Profit Growth Across Multiple Branches</li>
-          <li>📊 100+ Daily Operations Controlled</li>
-        </ul>
-        <a href="https://wa.me/919629370666?text=FIX" class="sf-btn-light" style="margin-top:20px;display:inline-block;">Start FREE 1-Month Trial</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= STORY ================= -->
-  <section class="pad-xl">
-    <div class="container narrow" data-aos="fade-up">
-      <h2 class="center">OUR STORY</h2>
-      <p class="center mt-s">
-        SALONFIX was born from the struggles of salon owners who were constantly in chaos — staff not accountable, 
-        money leaking daily, and no clear view of profit. <br><br>
-        We are not an app. We are not just consultants. <br>
-        We are <strong>your in-house business partner</strong>. 
-        Every day, we manage operations, numbers, and growth — while you focus on your clients.
+  <!-- 🟣 HERO -->
+  <section class="hero">
+    <div class="hero-content" data-aos="fade-up">
+      <h1>About <span style="color:var(--sf-gold)">SALONFIX</span></h1>
+      <p class="hero-sub">
+        YOUR IN-HOUSE BUSINESS PARTNER — running your salon like it’s our own.  
+        <br><strong>Daily control. Zero leakage. Measurable growth.</strong>
       </p>
+      <a href="https://wa.me/919629370666?text=FIX" class="btn-gold">Start FREE 1-Month Trial</a>
     </div>
   </section>
 
-  <!-- ================= CTA ================= -->
-  <section class="connect-card">
-    <div class="container center" data-aos="zoom-in">
-      <h2>Work Less. Earn More. Grow Faster.</h2>
-      <p class="mt-s">Your FREE 1-Month Trial starts today — let us run your salon like it’s our own.</p>
-      <a href="https://wa.me/919629370666?text=FIX" class="sf-btn mt-m">DM ‘FIX’ on WhatsApp</a>
+  <!-- 🟣 FOUNDER -->
+  <section class="founder section-narrow">
+    <div class="photo" data-aos="fade-up">
+      <img src="assets/founder.jpg" alt="JAWHAR RAJ RAJKUMAR" />
+    </div>
+    <div class="content">
+      <h2 data-aos="fade-up">MEET THE FOUNDER</h2>
+      <p data-aos="fade-up">
+        “I’ve spent over a decade inside salons — running teams, fixing systems, and flipping chaos into profit.  
+        I created SALONFIX so owners walk in every day to a salon that runs perfectly — <strong>without chasing numbers or staff.</strong>”
+      </p>
+      <ul>
+        <li data-aos="fade-up">🏆 10+ Years in Salon Operations</li>
+        <li data-aos="fade-up">💰 Proven Profit Growth Across Multiple Branches</li>
+        <li data-aos="fade-up">📊 100+ Daily Operations Controlled</li>
+      </ul>
+      <a href="https://wa.me/919629370666?text=FIX" class="btn-gold">WhatsApp FIX — Start FREE Trial</a>
     </div>
   </section>
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="sf-footer">
-    <div class="container grid grid-3">
-      <div>
-        <h3>SALONFIX</h3>
-        <p>Your in-house business partner for salons.</p>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
+  <!-- 🟣 REAL RESULTS -->
+  <section class="proof">
+    <h2 data-aos="fade-up">REAL RESULTS WITH SALONFIX</h2>
+    <p>Salon owners trust us because results are <strong>proven — not promised.</strong></p>
+    <div class="card-grid">
+      <div class="card-purple" data-aos="fade-up"><h3>📉 30% Less Wastage</h3><p>Stock & petty cash controlled with photo-proof systems.</p></div>
+      <div class="card-purple" data-aos="fade-up"><h3>💸 +20% Vendor Savings</h3><p>Better deals through strict vendor checks & audits.</p></div>
+      <div class="card-purple" data-aos="fade-up"><h3>📊 Consistent Growth</h3><p>From chaos to scaling — multi-branch owners see profit flips in weeks.</p></div>
+    </div>
+  </section>
+
+  <!-- 🟣 WHY SALONFIX -->
+  <section class="solution">
+    <div class="solution-container">
+      <div class="solution-text" data-aos="fade-right">
+        <h2>WHY SALONFIX EXISTS</h2>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li>Staff chaos & low accountability</li>
+          <li>Profits unclear — leaks in cash & stock</li>
+          <li>Owners trapped in daily firefighting</li>
+        </ul>
+        <p>That’s where SALONFIX steps in: <strong>we run the backend daily, track every rupee, and give owners freedom to grow.</strong></p>
+      </div>
+      <div class="solution-image" data-aos="fade-left">
+        <img src="assets/about-why.jpg" alt="Why SALONFIX exists" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 🟣 DIFFERENCE -->
+  <section class="solution">
+    <div class="solution-container">
+      <div class="solution-image" data-aos="fade-right">
+        <img src="assets/about-different.jpg" alt="How SALONFIX is different" />
+      </div>
+      <div class="solution-text" data-aos="fade-left">
+        <h2 style="color:var(--sf-gold)">NOT ADVICE. NOT SOFTWARE.</h2>
+        <h3>We Take Daily Control.</h3>
+        <ul>
+          <li>📈 Daily Clarity — one-page numbers on WhatsApp</li>
+          <li>👥 Team Accountability — proof-based SOPs</li>
+          <li>📦 Stock Control — no waste, no theft</li>
+          <li>🚀 Growth Moves — pricing, rebooking, expansion</li>
         </ul>
       </div>
-      <div>
-        <h4>Contact</h4>
-        <p>📍 Chennai, India</p>
-        <p>📞 +91 96293 70666</p>
-        <a href="mailto:info@salonfix.in">info@salonfix.in</a>
+    </div>
+  </section>
+
+  <!-- 🟣 5-STEP PROFIT FIX -->
+  <section class="proof">
+    <h2 data-aos="fade-up">OUR 5-STEP PROFIT FIX</h2>
+    <p>Audit → Plug Leaks → Profit Plan → <span style="color:var(--sf-gold);font-weight:800">FREE Trial</span> → Daily Implementation.</p>
+    <div class="fix-grid">
+      <div class="card-purple" data-aos="fade-up"><h3>1. Audit</h3><p>Find every leak.</p></div>
+      <div class="card-purple" data-aos="fade-up"><h3>2. Solutions</h3><p>Plug leaks with SOPs.</p></div>
+      <div class="card-purple" data-aos="fade-up"><h3>3. Plan</h3><p>Pricing, offers, incentives.</p></div>
+      <div class="card-purple highlight-trial" data-aos="fade-up"><h3>4. Trial</h3><p><strong>FREE 1-Month Trial</strong></p></div>
+      <div class="card-purple" data-aos="fade-up"><h3>5. Implement</h3><p>We run your salon daily.</p></div>
+    </div>
+  </section>
+
+  <!-- 🟣 PROMISE -->
+  <section class="solution">
+    <div class="solution-container">
+      <div class="solution-text" data-aos="fade-right">
+        <h2>OUR PROMISE</h2>
+        <p><strong>SALONFIX builds & runs the systems your salon has been missing.</strong></p>
+        <p>Every number, checklist, and proof arrives daily — nothing left to chance.</p>
+        <p>The result? <strong>Clarity, control, and owner freedom.</strong></p>
+      </div>
+      <div class="solution-image" data-aos="fade-left">
+        <img src="assets/about-promise.jpg" alt="The SALONFIX promise" />
       </div>
     </div>
-    <p class="center mt-m">© 2025 SALONFIX. All rights reserved.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-premium">
+    <div class="footer-top">
+      <h2>Ready to see daily numbers on WhatsApp <span>with zero leakage?</span></h2>
+      <p>Experience it yourself with our FREE 1-Month Trial</p>
+      <div class="footer-cta">
+        <a href="https://wa.me/919629370666?text=FIX" class="btn-gold">DM "FIX" – Start Free 1-Month Trial</a>
+        <a href="tel:+919629370666" class="btn-outline">Book Free Audit Call</a>
+      </div>
+    </div>
+    <p class="copyright">© 2025 SALONFIX. All Rights Reserved.</p>
   </footer>
 
+  <!-- ✅ Floating WhatsApp -->
+  <a href="https://wa.me/919629370666?text=FIX" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
   <!-- ✅ Scripts -->
-  <script src="assets/sf.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Init AOS
+    AOS.init({ duration: 600, once: true, offset: 20 });
+
+    // Burger menu
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('site-nav');
+    if (burger && nav) {
+      burger.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        document.body.classList.toggle('menu-open', open);
+        burger.classList.toggle('active', open);
+        burger.setAttribute('aria-expanded', open ? "true" : "false");
+      });
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        nav.classList.remove('open');
+        document.body.classList.remove('menu-open');
+        burger.classList.remove('active');
+        burger.setAttribute('aria-expanded','false');
+      }));
+    }
+  </script>
 </body>
 </html>
