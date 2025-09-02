@@ -295,4 +295,60 @@ nav.sf-navbar .cta-btn {
   font-size: 28px; box-shadow: var(--shadow);
   z-index: 3000; animation: pulse 2.5s infinite;
 }
+/* ==============================
+   MOBILE NAV – PREMIUM CARD STYLE
+   ============================== */
+@media(max-width: 900px) {
+  nav.sf-navbar .cta-btn { display: none; } /* hide top button */
+  .burger { display: block; z-index: 2100; }
+
+  nav.sf-navbar ul {
+    position: fixed;
+    top: 80px; left: 50%;
+    transform: translate(-50%, -120%); /* start hidden */
+    width: 90%; max-width: 380px;
+    background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
+    border-radius: 20px;
+    padding: 30px 0;
+    flex-direction: column; align-items: center;
+    gap: 22px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+    transition: transform 0.3s ease;
+    z-index: 1999;
+  }
+
+  nav.sf-navbar ul.open {
+    transform: translate(-50%, 0); /* slide down */
+  }
+
+  nav.sf-navbar ul li a {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  nav.sf-navbar ul li a:hover,
+  nav.sf-navbar ul li a.active {
+    color: var(--sf-gold);
+    border-bottom: 1px solid var(--sf-gold);
+  }
+
+  /* WhatsApp button inside card */
+  nav.sf-navbar ul li:last-child {
+    border-bottom: none;
+  }
+  nav.sf-navbar ul .cta-btn-mobile {
+    margin-top: 10px;
+    background: var(--sf-gold);
+    color: var(--sf-dark);
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 800;
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+}
 
