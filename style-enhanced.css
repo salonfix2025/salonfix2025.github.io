@@ -1490,3 +1490,25 @@ h2 {
   font-weight: 600;
   color: #1b1230;
 }
+/* Center text utility */
+.center-text {
+  text-align: center;
+}
+
+/* Premium gold check bullets */
+.gold-checks {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+.gold-checks li {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #1b1230; /* dark text */
+}
+.gold-checks li::before {
+  content: "✔";
+  color: var(--sf-gold);
+  margin-right: 8px;
+  font-weight: 900;
+}
