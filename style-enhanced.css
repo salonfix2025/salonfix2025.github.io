@@ -3539,3 +3539,19 @@ html, body {
   border-radius: 30px;
   box-shadow: 0 6px 18px rgba(212,175,55,0.4);
 }
+/* ✅ Fix scroll trap inside 5-Step Profit Fix */
+.fix-grid,
+.fix-grid .card-purple {
+  height: auto !important;       /* let content define height */
+  min-height: unset !important;
+  max-height: unset !important;
+  overflow: visible !important;  /* stop inner scrolling */
+}
+
+/* Ensure grid behaves normally */
+.fix-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
