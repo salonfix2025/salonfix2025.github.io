@@ -2787,3 +2787,80 @@ nav.sf-navbar ul li a.active {
     font-weight: 600;
   }
 }
+@media (max-width: 900px) {
+  /* General sections */
+  .home-page .section,
+  .about-page .section {
+    padding: 40px 16px;   /* reduce section padding */
+  }
+
+  /* Headlines */
+  .home-page .section h2,
+  .about-page .section h2 {
+    font-size: 1.8rem;    /* slightly smaller */
+    margin-bottom: 12px;
+  }
+
+  /* Subheadings */
+  .home-page .section h3,
+  .about-page .section h3 {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+  }
+
+  /* Paragraphs */
+  .home-page .section p,
+  .about-page .section p {
+    font-size: 0.95rem;
+    line-height: 1.5;     /* tighter line spacing */
+    margin-bottom: 12px;
+  }
+
+  /* Bullet lists */
+  .home-page .section ul li,
+  .about-page .section ul li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 6px;
+  }
+
+  /* Images */
+  .home-page .section img,
+  .about-page .section img {
+    margin-top: 14px;
+    max-width: 85%;
+  }
+
+  /* Cards / Boxes (Real Results, Profit Fix, etc.) */
+  .card-purple {
+    padding: 20px 16px;   /* shrink padding inside cards */
+    min-height: auto;     /* let cards shrink naturally */
+  }
+
+  .card-purple h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  .card-purple p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  /* Profit boxes (Home Page 2x2 grid) */
+  .home-page .profit-boxes {
+    gap: 12px;
+  }
+
+  .home-page .profit-boxes .box {
+    font-size: 0.9rem;
+    padding: 14px;
+  }
+
+  /* Hero scrunch (extra) */
+  .home-page .hero,
+  .about-page .hero {
+    min-height: 50vh;
+    padding: 45px 16px;
+  }
+}
