@@ -3452,3 +3452,24 @@ html, body {
   pointer-events: auto;           /* keep clickable */
   visibility: visible !important; /* always visible */
 }
+/* ===========================
+   🚫 Disable animations globally for Results + 5-Step Fix
+   =========================== */
+
+/* Real Results cards */
+.section .card-purple,
+.section .card-purple[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+  visibility: visible !important;
+}
+
+/* 5-Step Profit Fix cards */
+.fix-grid .card-purple,
+.fix-grid .card-purple[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+  visibility: visible !important;
+}
