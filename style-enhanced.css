@@ -1181,6 +1181,14 @@ h2 {
 .solution-list {
   margin-top: 8px; /* tighten spacing above list */
 }
+.solution-image {
+  margin-bottom: 0 !important;
+}
+
+.solution-list {
+  margin-top: 0 !important;
+}
+
 /* ✅ Problems Section Alignment Fix */
 .problems {
   text-align: center;
