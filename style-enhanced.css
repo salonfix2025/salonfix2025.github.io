@@ -1434,3 +1434,17 @@ h2 {
   border-radius: 0 !important; /* removes curves */
   max-width: 100%;             /* make it span full width */
 }
+/* Why Salonfix Exists - bullet visibility fix */
+.solution-text ul,
+.solution-text ul li {
+  color: #fff;             /* make them visible on purple background */
+  font-weight: 600;        /* stronger look */
+  margin-bottom: 10px;
+}
+
+.solution-text ul li::before {
+  content: "✔";            /* gold check mark */
+  color: var(--sf-gold);
+  margin-right: 8px;
+  font-weight: 900;
+}
