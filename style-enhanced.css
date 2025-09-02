@@ -2905,3 +2905,25 @@ nav.sf-navbar ul li a.active {
     opacity: 0.8;
   }
 }
+@media (max-width: 900px) {
+  .home-page .consult-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home-page .consult-section .headline {
+    order: 1;  /* headline first */
+  }
+
+  .home-page .consult-section img {
+    order: 2;  /* photo second */
+    margin: 16px auto;
+    max-width: 90%;
+    border-radius: 14px;
+  }
+
+  .home-page .consult-section .bullets {
+    order: 3;  /* bullets after photo */
+    margin-top: 12px;
+  }
+}
