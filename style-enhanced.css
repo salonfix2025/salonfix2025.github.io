@@ -1172,3 +1172,12 @@ h2 {
   margin: 0; /* remove default blockquote margin */
 }
 .reel-grid::-webkit-scrollbar { display: none; }
+/* ✅ Reduce gap between image and text in solution section */
+.solution-image img {
+  display: block;
+  margin-bottom: 12px; /* reduce bottom spacing */
+}
+
+.solution-list {
+  margin-top: 8px; /* tighten spacing above list */
+}
