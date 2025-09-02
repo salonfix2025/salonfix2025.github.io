@@ -3350,3 +3350,28 @@ html {
     box-sizing: border-box;
   }
 }
+/* ✅ Mobile Premium About Hero */
+@media (max-width: 768px) {
+  .about-page .hero {
+    padding: 80px 20px;   /* more breathing space top/bottom */
+    text-align: center;   /* center everything */
+  }
+
+  .about-page .hero h1 {
+    font-size: 1.9rem;    /* slightly larger for premium look */
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+
+  .about-page .hero p {
+    font-size: 1.1rem;
+    line-height: 1.6;     /* smoother readability */
+    margin-bottom: 22px;
+  }
+
+  .about-page .hero .btn-gold {
+    padding: 14px 26px;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+}
