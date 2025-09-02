@@ -9,87 +9,6 @@
   <link rel="stylesheet" href="style-enhanced.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <style>
-    /* ==============================
-       STEP GRID (Short Version)
-       ============================== */
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      max-width: 1100px;
-      margin: 40px auto;
-      text-align: left;
-    }
-    .step-card {
-      background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
-      border-radius: 16px;
-      padding: 28px 22px;
-      color: #fff;
-      box-shadow: var(--shadow);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .step-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
-    .step-card.gold {
-      background: linear-gradient(135deg, #FFD700, #D4AF37);
-      color: var(--sf-purple);
-      font-weight: 700;
-      animation: glowPulse 3s infinite;
-    }
-    .step-number-box {
-      background: linear-gradient(135deg, #FFD700, #D4AF37);
-      color: var(--sf-dark);
-      font-weight: 900;
-      font-size: 1rem;
-      display: inline-block;
-      padding: 8px 12px;
-      border-radius: 6px;
-      margin-bottom: 12px;
-      box-shadow: 0 4px 10px rgba(212,175,55,0.4);
-    }
-    .step-card h3 {
-      font-size: 1.2rem;
-      font-weight: 800;
-      margin-bottom: 6px;
-    }
-    .step-card p {
-      font-style: italic;
-      font-size: 0.95rem;
-      margin-bottom: 12px;
-      line-height: 1.4;
-    }
-    .step-card ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .step-card ul li {
-      position: relative;
-      padding-left: 22px;
-      font-size: 0.9rem;
-      margin-bottom: 8px;
-      line-height: 1.4;
-    }
-    .step-card ul li::before {
-      content: "✔";
-      position: absolute;
-      left: 0;
-      color: var(--sf-gold);
-      font-weight: 900;
-    }
-    /* Gold card glow animation */
-    @keyframes glowPulse {
-      0% { box-shadow: 0 0 0 0 rgba(212,175,55,0.6); }
-      50% { box-shadow: 0 0 25px 10px rgba(212,175,55,0.4); }
-      100% { box-shadow: 0 0 0 0 rgba(212,175,55,0); }
-    }
-    /* Mobile: stack one per row */
-    @media (max-width: 768px) {
-      .steps-grid { grid-template-columns: 1fr; }
-      .step-card { text-align: center; }
-      .step-card ul li { text-align: left; }
-    }
-  </style>
 </head>
 <body class="services-page">
 
@@ -132,6 +51,7 @@
 
       <div class="step-card" data-aos="fade-up">
         <div class="step-number-box">1</div>
+        <i class="fas fa-search step-icon"></i>
         <h3>Audit & Diagnose</h3>
         <p>Every profit leak gets uncovered.</p>
         <ul>
@@ -142,6 +62,7 @@
 
       <div class="step-card" data-aos="fade-up" data-aos-delay="100">
         <div class="step-number-box">2</div>
+        <i class="fas fa-shield-alt step-icon"></i>
         <h3>Plug the Leaks</h3>
         <p>Every leak gets a lock.</p>
         <ul>
@@ -152,6 +73,7 @@
 
       <div class="step-card" data-aos="fade-up" data-aos-delay="200">
         <div class="step-number-box">3</div>
+        <i class="fas fa-tasks step-icon"></i>
         <h3>Systemize Operations</h3>
         <p>Chaos turns into daily control.</p>
         <ul>
@@ -162,6 +84,7 @@
 
       <div class="step-card gold" data-aos="fade-up" data-aos-delay="300">
         <div class="step-number-box">4</div>
+        <i class="fas fa-users step-icon"></i>
         <h3>Train & Align Team</h3>
         <p>Your team becomes your system.</p>
         <ul>
@@ -172,12 +95,56 @@
 
       <div class="step-card" data-aos="fade-up" data-aos-delay="400">
         <div class="step-number-box">5</div>
+        <i class="fas fa-chart-line step-icon"></i>
         <h3>Monitor & Scale Profit</h3>
         <p>Profit clarity, branch by branch.</p>
         <ul>
           <li>Daily, weekly, monthly profit reports.</li>
           <li>Multi-branch control with one system.</li>
         </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ✅ FAQ ACCORDION -->
+  <section class="faq">
+    <h2>FREQUENTLY ASKED QUESTIONS</h2>
+    <div class="faq-grid">
+
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+        <button class="faq-question">How is SALONFIX different from a consultant or software?</button>
+        <div class="faq-answer">
+          <p>Consultants give advice, software gives data — but SALONFIX takes <strong>daily control</strong> of your salon. We track every rupee, every staff task, and every branch, just like an in-house manager.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+        <button class="faq-question">What happens in the FREE 1-Month Trial?</button>
+        <div class="faq-answer">
+          <p>We run your salon systems for 30 days — daily WhatsApp reports, staff accountability, vendor control. You see proof of profit clarity before deciding.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+        <button class="faq-question">Will my staff resist SALONFIX?</button>
+        <div class="faq-answer">
+          <p>No. We work with your team, not against them. Staff actually like SALONFIX because incentives and rules are <strong>clear and fair</strong>.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+        <button class="faq-question">Can SALONFIX manage multiple branches?</button>
+        <div class="faq-answer">
+          <p>Yes. Our system is built for <strong>multi-branch owners</strong>. You’ll see one dashboard of all branches with no loss of control.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+        <button class="faq-question">What do I need to get started?</button>
+        <div class="faq-answer">
+          <p>Just WhatsApp us “FIX.” We set up your trial in 24 hours. No contracts, no risk.</p>
+        </div>
       </div>
 
     </div>
@@ -227,6 +194,16 @@
       overlay.addEventListener('click', closeMenu);
       nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
     }
+
+    // Accordion FAQ
+    const faqItems = document.querySelectorAll(".faq-item");
+    faqItems.forEach(item => {
+      const question = item.querySelector(".faq-question");
+      question.addEventListener("click", () => {
+        faqItems.forEach(i => i.classList.remove("active"));
+        item.classList.toggle("active");
+      });
+    });
   </script>
 </body>
 </html>
