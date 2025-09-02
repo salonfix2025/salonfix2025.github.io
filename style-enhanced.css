@@ -1448,3 +1448,23 @@ h2 {
   margin-right: 8px;
   font-weight: 900;
 }
+/* Show & style Why Salonfix Exists list */
+.solution-text ul {
+  margin: 16px 0;
+  padding-left: 0;       /* remove default browser padding */
+  list-style: none;      /* remove normal dots */
+}
+
+.solution-text ul li {
+  color: #fff;           /* visible on purple/dark backgrounds */
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: left;      /* neat alignment under heading */
+}
+
+.solution-text ul li::before {
+  content: "✔";
+  color: var(--sf-gold); /* gold checkmark */
+  margin-right: 8px;
+  font-weight: 900;
+}
