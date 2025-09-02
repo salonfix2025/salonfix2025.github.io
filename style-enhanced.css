@@ -2382,7 +2382,7 @@ nav.sf-navbar ul {
 /* Hero Section */
 .hero {
   padding: 80px 20px;   /* reduce vertical padding */
-  min-height: 60vh;     /* was likely 100vh, reduce to 60% of screen */
+  min-height: 80vh;     /* was likely 100vh, reduce to 60% of screen */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2460,27 +2460,6 @@ nav.sf-navbar ul li a.active {
     border-bottom: 1px solid rgba(0,0,0,0.08);
     width: 100%;
   }
-}
-/* About Page Hero */
-.about-page .hero {
-  padding: 100px 20px;   /* slightly more vertical space */
-  min-height: 70vh;      /* increase height from ~60vh to ~70vh */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.about-page .hero h1 {
-  font-size: 2.6rem;
-  margin-bottom: 18px;
-}
-
-.about-page .hero p {
-  font-size: 1.15rem;
-  max-width: 720px;
-  margin: 0 auto 24px;
-  line-height: 1.7;
 }
 /* ✅ Desktop Nav: always visible */
 @media (min-width: 901px) {
