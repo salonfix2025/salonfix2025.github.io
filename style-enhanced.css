@@ -2049,3 +2049,71 @@ html {
     word-break: break-word; /* force long words to wrap */
   }
 }
+/* About Page - Founder Section */
+.about-founder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.about-founder .photo img {
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.about-founder .content {
+  flex: 1;
+  max-width: 650px;
+  color: #fff;
+}
+
+.about-founder h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.about-founder p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-founder ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+.about-founder ul li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.about-founder .btn-gold {
+  display: inline-block;
+  padding: 12px 28px;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .about-founder {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-founder .photo img {
+    width: 80%;
+    max-width: 260px;
+    margin-bottom: 20px;
+  }
+  .about-founder .content {
+    max-width: 100%;
+  }
+}
