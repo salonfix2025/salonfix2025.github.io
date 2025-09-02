@@ -983,4 +983,25 @@ nav.sf-navbar .cta-btn {
 
   </div>
 </section>
+/* ✅ Tighten gaps between sections */
+section {
+  margin-top: 20px;   /* reduce top gap */
+  margin-bottom: 20px; /* reduce bottom gap */
+  padding-top: 30px;   /* reduce padding */
+  padding-bottom: 30px;
+}
+
+/* ✅ For headings inside sections */
+section h2, section h3 {
+  margin-top: 0;
+  margin-bottom: 15px; /* small clean gap */
+}
+
+/* ✅ Extra tighten for Founder & Reels (to avoid big white space) */
+.founder, .reel-section {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
 
