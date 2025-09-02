@@ -295,3 +295,14 @@ nav.sf-navbar .cta-btn {
   font-size: 28px; box-shadow: var(--shadow);
   z-index: 3000; animation: pulse 2.5s infinite;
 }
+/* === Reel Embed Fix === */
+.reel-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.instagram-media {
+  border-radius: 12px !important;
+  box-shadow: var(--shadow);
+}
