@@ -1004,4 +1004,24 @@ section h2, section h3 {
   padding-top: 25px;
   padding-bottom: 25px;
 }
+/* ✅ Global Section Spacing */
+section {
+  margin-top: 10px;      /* tightened */
+  margin-bottom: 20px;   /* consistent small spacing */
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+/* ✅ Fix gold box text */
+.result-card {
+  background: linear-gradient(135deg, #FFD700, #D4AF37);
+  color: #4B0082;     /* Salonfix Purple */
+  font-weight: 700;
+}
 
