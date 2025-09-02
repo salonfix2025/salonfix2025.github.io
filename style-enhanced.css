@@ -3287,3 +3287,16 @@ html {
     box-shadow: 0 6px 18px rgba(212,175,55,0.4); /* subtle glow */
   }
 }
+/* ✅ Fix scroll issues in About Page */
+.about-page section {
+  scroll-margin-top: 70px;   /* stops sticky jumps */
+  padding-top: 40px;         /* reduce tall spacing */
+  padding-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .about-page section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
