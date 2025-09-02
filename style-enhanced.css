@@ -3334,3 +3334,19 @@ html {
     overflow-x: hidden; /* force stop horizontal scroll */
   }
 }
+/* ✅ Fix mobile scroll only for Results + 5-Step Fix sections */
+@media (max-width: 768px) {
+  /* REAL RESULTS WITH SALONFIX */
+  .section .card-purple {
+    max-width: 95%;     /* shrink slightly to fit */
+    margin: 0 auto;     /* center the cards */
+    box-sizing: border-box;
+  }
+
+  /* OUR 5-STEP PROFIT FIX */
+  .fix-grid .card-purple {
+    max-width: 95%;     /* shrink slightly */
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}
