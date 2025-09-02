@@ -3437,3 +3437,18 @@ html, body {
   display: grid;
   justify-items: center;        /* keep items centered */
 }
+/* ===========================
+   🚫 Disable animations for Results + 5-Step Fix
+   =========================== */
+.section .card-purple,
+.fix-grid .card-purple {
+  opacity: 1 !important;          /* fully visible */
+  transform: none !important;     /* no movement */
+  transition: none !important;    /* no fade or slide */
+}
+
+.section .card-purple[data-aos],
+.fix-grid .card-purple[data-aos] {
+  pointer-events: auto;           /* keep clickable */
+  visibility: visible !important; /* always visible */
+}
