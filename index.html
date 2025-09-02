@@ -145,17 +145,17 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- ✅ AOS Init -->
+    <!-- ✅ AOS Init -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({
-  duration: 500,        // faster animations
-  easing: "ease-out",   // smoother motion
-  once: true,           // don’t repeat
-  offset: 50            // trigger a little earlier
-});
+      duration: 600,   // smoother animation duration
+      easing: "ease-out",
+      once: true,
+      offset: 30       // trigger earlier for smoother scroll
+    });
   </script>
-  <script>
+
   const burger = document.getElementById('burger');
   const nav = document.getElementById('site-nav');
 
