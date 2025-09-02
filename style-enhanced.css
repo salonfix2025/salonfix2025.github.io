@@ -1189,26 +1189,33 @@ h2 {
   margin-top: 0 !important;
 }
 
-/* ✅ Problems Section Alignment Fix */
+/* ✅ Problems Section Alignment Fix (Force Center) */
 .problems {
   text-align: center;
-  padding: 40px 20px; /* keep equal padding */
+  padding: 20px 15px;
+}
+
+.problems h2 {
+  margin-bottom: 20px;
 }
 
 .problems-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex !important;          /* force flex instead of grid */
+  flex-direction: column !important; /* stack vertically */
+  align-items: center !important;    /* ✅ center horizontally */
   gap: 16px;
-  max-width: 600px;   /* keeps it centered */
-  margin: 0 auto;     /* ✅ center horizontally */
+  margin: 0 auto;
+  width: 100%;
 }
 
 .problem-card {
   background: linear-gradient(135deg, #FFD700, #D4AF37);
   color: #2d004c;
-  font-weight: 600;
-  padding: 16px;
+  font-weight: 700;
+  padding: 16px 20px;
   border-radius: 12px;
-  text-align: center; /* ✅ text stays centered */
+  text-align: center;
   box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  max-width: 500px;   /* ✅ keeps them from stretching full width */
+  width: 100%;
 }
