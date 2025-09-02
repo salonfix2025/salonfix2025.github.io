@@ -1723,3 +1723,8 @@ h2 {
   margin: 20px auto;
   display: block;
 }
+/* Footer heading fix */
+.footer-premium h2,
+.footer-premium h2 span {
+  color: #fff !important;   /* force white text */
+}
