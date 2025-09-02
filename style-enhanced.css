@@ -1219,3 +1219,26 @@ h2 {
   max-width: 500px;   /* ✅ keeps them from stretching full width */
   width: 100%;
 }
+/* ✅ Problems Grid Fix (restore original center layout) */
+.problems {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* ✅ responsive */
+  gap: 20px;
+  max-width: 800px; /* ✅ keeps it centered */
+  margin: 0 auto;   /* ✅ center align */
+}
+
+.problem-card {
+  background: linear-gradient(135deg, #FFD700, #D4AF37);
+  color: #2d004c;
+  font-weight: 700;
+  padding: 18px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
