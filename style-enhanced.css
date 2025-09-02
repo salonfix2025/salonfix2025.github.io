@@ -2927,3 +2927,28 @@ nav.sf-navbar ul li a.active {
     margin-top: 12px;
   }
 }
+@media (max-width: 900px) {
+  /* Main big headlines (Hero h1, Section h1) */
+  .home-page h1,
+  .about-page h1 {
+    font-size: 1.9rem;     /* reduced from ~2.5-3rem */
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  /* Section titles (Why, Promise, Founder, etc.) */
+  .home-page h2,
+  .about-page h2 {
+    font-size: 1.6rem;     /* premium but compact */
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+
+  /* Subheadings (gold h3 text, smaller callouts) */
+  .home-page h3,
+  .about-page h3 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+}
