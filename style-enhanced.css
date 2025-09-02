@@ -436,4 +436,71 @@ nav.sf-navbar .cta-btn {
     font-size: 0.95rem;
   }
 }
+/* ==============================
+   SOLUTION – Premium Mobile Layout
+   ============================== */
+.sub-purple {
+  color: var(--sf-purple);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+.solution-list {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.solution-list li {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--sf-dark);
+  margin-bottom: 12px;
+  padding-left: 28px;
+  position: relative;
+  line-height: 1.4;
+}
+
+/* Purple/Gold check icons */
+.solution-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  color: var(--sf-gold);
+  font-size: 1.1rem;
+}
+
+/* CTA button alignment */
+.solution-cta {
+  display: inline-block;
+  margin-top: 10px;
+  text-align: center;
+  padding: 14px 26px;
+  border-radius: 30px;
+  font-weight: 800;
+  box-shadow: var(--shadow);
+}
+
+/* Mobile refinements */
+@media (max-width: 768px) {
+  .solution-text h2 {
+    font-size: 1.6rem;
+    line-height: 1.3;    /* tighter line spacing */
+    margin-bottom: 10px;
+  }
+
+  .solution-image img {
+    margin-top: 10px;
+    border-radius: 14px;
+  }
+
+  .solution-list li {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+}
 
