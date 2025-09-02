@@ -2498,3 +2498,12 @@ nav.sf-navbar ul li a.active {
     font-size: 1.25rem;  /* slightly larger paragraph */
   }
 }
+.about-page .hero h1,
+.about-page .hero p,
+.about-page .hero strong {
+  color: #fff !important;   /* ✅ force white text */
+}
+
+.about-page .hero a.btn {
+  color: #2a1e00;           /* ✅ keep button text dark for contrast */
+}
