@@ -3031,3 +3031,26 @@ html {
 [data-aos] {
   transition-duration: 0.6s !important;  /* smoother, shorter animations */
 }
+@media (max-width: 900px) {
+  .reel-grid {
+    display: flex;
+    overflow-x: auto;       /* ✅ horizontal scroll */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .reel-grid iframe {
+    flex: 0 0 85%;          /* ✅ one reel visible at a time */
+    max-width: 85%;
+    scroll-snap-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.2);
+  }
+
+  /* Hide scrollbar for cleaner look */
+  .reel-grid::-webkit-scrollbar {
+    display: none;
+  }
+}
