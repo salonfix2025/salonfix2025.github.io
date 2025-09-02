@@ -591,4 +591,23 @@ nav.sf-navbar .cta-btn {
     font-size: 0.9rem;
   }
 }
+/* ==============================
+   REELS – Premium Heading
+   ============================== */
+.reel-section h2 {
+  background: linear-gradient(90deg, var(--sf-purple), var(--sf-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.6rem;    /* reduced font size */
+  font-weight: 800;
+  line-height: 1.3;     /* tighter line spacing */
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .reel-section h2 {
+    font-size: 1.3rem;   /* smaller on mobile */
+    line-height: 1.25;
+  }
+}
 
