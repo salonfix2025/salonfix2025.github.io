@@ -3252,3 +3252,12 @@ html {
     font-size: 0.9rem !important; /* Compact text size */
   }
 }
+/* ✅ Mobile: reduce section width so curves show */
+@media (max-width: 768px) {
+  .problems,
+  .founder {
+    max-width: 92%;   /* narrower than full width */
+    margin: 0 auto;   /* center align */
+    border-radius: 20px; /* make sure curves are visible */
+  }
+}
