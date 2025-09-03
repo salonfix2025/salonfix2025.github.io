@@ -3,123 +3,181 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Services – SALONFIX</title>
+  <title>SALONFIX – How We Work</title>
+  <link rel="canonical" href="https://www.salonfix.in/services.html" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
 
-  <!-- ✅ Global CSS -->
-  <link rel="stylesheet" href="style-enhanced.css" />
-  <link rel="stylesheet" href="mobile-lock.css" />
-
-  <!-- ✅ AOS Animations -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Fonts + CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style-enhanced.css">
+  <link rel="stylesheet" href="mobile-lock.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
 <body class="services-page">
 
   <!-- ✅ Navbar -->
   <nav class="sf-navbar">
-    <div class="logo">SALONFIX</div>
-    <ul>
+    <div class="logo"><a href="index.html">SALONFIX</a></div>
+    <ul id="site-nav">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="services.html" class="active">How We Work</a></li>
       <li><a href="pricing.html">Partnership Plans</a></li>
-      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="blog.html">Testimonials</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <div class="burger"><span></span><span></span><span></span></div>
+    <a href="https://wa.me/919629370666?text=FIX" class="cta-btn desktop-only">WhatsApp FIX</a>
+    <button class="burger" id="burger"><span></span><span></span><span></span></button>
   </nav>
 
-  <!-- ✅ Hero -->
-  <section class="services-hero" data-aos="fade-up">
-    <h1>HOW WE WORK</h1>
-    <p>The SALONFIX 5-Step Profit Fix turns chaos into daily control.<br>
-    We don’t just consult – we run your salon like it’s our own.</p>
-    <a href="https://wa.me/919629370666?text=FIX" class="btn-gold">WhatsApp FIX — Free Audit Call</a>
+  <!-- ✅ Mobile Nav Overlay -->
+  <div id="mobile-overlay" class="mobile-overlay"></div>
+
+  <!-- 🟣 Hero -->
+  <section class="hero sf-purple">
+    <div class="hero-content" data-aos="zoom-in">
+      <h1>HOW WE WORK</h1>
+      <p class="hero-sub">The SALONFIX 5-Step Profit Fix turns chaos into daily control.<br>We don’t just consult — we run your salon like it’s our own.</p>
+      <a href="https://wa.me/919629370666?text=FIX" class="btn-gold pulse">WhatsApp FIX — Free Audit Call</a>
+    </div>
   </section>
 
-  <!-- ✅ 5-Step Profit Fix -->
-  <section class="profit-fix">
+  <!-- 🟣 5-Step Profit Fix -->
+  <section class="case">
     <h2 data-aos="fade-up">OUR 5-STEP PROFIT FIX</h2>
     <div class="steps-grid">
-
-      <div class="step-card" data-aos="fade-right">
-        <h3>1. Audit & Diagnose</h3>
-        <p>Every profit leak gets uncovered.<br>Sales, staff, stock, and returns reviewed.<br>Baseline profit report delivered.</p>
-      </div>
-
-      <div class="step-card" data-aos="fade-left">
-        <h3>2. Plug the Leaks</h3>
-        <p>Every leak gets a lock.<br>Cash, vendors, and stock under proof-based control.</p>
-      </div>
-
-      <div class="step-card" data-aos="fade-right">
-        <h3>3. Systemize Operations</h3>
-        <p>Chaos turns into daily control.<br>SOP routines run on proof, not trust.<br>WhatsApp daily reports with Action Box.</p>
-      </div>
-
-      <div class="step-card" data-aos="fade-left">
-        <h3>4. Train & Align Team</h3>
-        <p>Your team becomes your system.<br>Scripts for rebooking & retail push.<br>Incentives linked directly to results.</p>
-      </div>
-
       <div class="step-card" data-aos="fade-up">
-        <h3>5. Monitor & Scale Profit</h3>
-        <p>Profit clarity, branch by branch.<br>Daily, weekly, monthly reports.<br>Multi-branch control with one system.</p>
+        <div class="step-number-box">1</div>
+        <i class="fas fa-search step-icon"></i>
+        <h3>Audit & Diagnose</h3>
+        <p>Every profit leak gets uncovered.</p>
+        <ul>
+          <li>Sales, staff, stock, and returns reviewed.</li>
+          <li>Baseline profit report delivered.</li>
+        </ul>
       </div>
 
+      <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="step-number-box">2</div>
+        <i class="fas fa-shield-alt step-icon"></i>
+        <h3>Plug the Leaks</h3>
+        <p>Every leak gets a lock.</p>
+        <ul>
+          <li>Cash, vendors, stock under proof-based control.</li>
+          <li>Daily expenses tracked — no blind drains.</li>
+        </ul>
+      </div>
+
+      <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="step-number-box">3</div>
+        <i class="fas fa-tasks step-icon"></i>
+        <h3>Systemize Operations</h3>
+        <p>Chaos turns into daily control.</p>
+        <ul>
+          <li>SOP routines run on proof, not trust.</li>
+          <li>WhatsApp daily report with Action Box.</li>
+        </ul>
+      </div>
+
+      <div class="step-card gold" data-aos="fade-up" data-aos-delay="300">
+        <div class="step-number-box">4</div>
+        <i class="fas fa-users step-icon"></i>
+        <h3>Train & Align Team</h3>
+        <p>Your team becomes your system.</p>
+        <ul>
+          <li>Scripts for rebooking & retail push.</li>
+          <li>Incentives linked directly to results.</li>
+        </ul>
+      </div>
+
+      <div class="step-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="step-number-box">5</div>
+        <i class="fas fa-chart-line step-icon"></i>
+        <h3>Monitor & Scale Profit</h3>
+        <p>Profit clarity, branch by branch.</p>
+        <ul>
+          <li>Daily, weekly, monthly profit reports.</li>
+          <li>Multi-branch control with one system.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <!-- ✅ FAQ -->
-  <section class="faq-section">
+  <!-- 🟣 FAQ -->
+  <section class="faq">
     <h2 data-aos="fade-up">FREQUENTLY ASKED QUESTIONS</h2>
-    <div class="faq">
-
-      <details data-aos="fade-up">
-        <summary>How is SALONFIX different from a consultant or software?</summary>
-        <p>Consultants give advice, software gives data — but SALONFIX takes <strong>daily control</strong> of your salon. We track every rupee, every staff task, and every branch, just like an in-house manager.</p>
-      </details>
-
-      <details data-aos="fade-up">
-        <summary>What happens in the FREE 1-Month Trial?</summary>
-        <p>We run your salon systems for 30 days — daily WhatsApp reports, staff accountability, vendor control. You see proof of profit clarity before deciding.</p>
-      </details>
-
-      <details data-aos="fade-up">
-        <summary>Will my staff resist SALONFIX?</summary>
-        <p>No. We work with your team, not against them. Staff like SALONFIX because incentives and rules are <strong>clear and fair</strong>.</p>
-      </details>
-
-      <details data-aos="fade-up">
-        <summary>Can SALONFIX manage multiple branches?</summary>
-        <p>Yes. Our system is built for <strong>multi-branch owners</strong>. One dashboard for all branches with zero loss of control.</p>
-      </details>
-
-      <details data-aos="fade-up">
-        <summary>What do I need to get started?</summary>
-        <p>Just WhatsApp us “FIX.” We set up your trial in 24 hours. No contracts, no risk.</p>
-      </details>
-
+    <div class="faq-grid">
+      <div class="faq-item" data-aos="fade-right">
+        <button class="faq-question">How is SALONFIX different from a consultant or software?</button>
+        <div class="faq-answer"><p>Consultants give advice, software gives data — but SALONFIX takes <strong>daily control</strong> of your salon.</p></div>
+      </div>
+      <div class="faq-item" data-aos="fade-left" data-aos-delay="100">
+        <button class="faq-question">What happens in the FREE 1-Month Trial?</button>
+        <div class="faq-answer"><p>We run your salon systems for 30 days — daily WhatsApp reports, staff accountability, vendor control. You see proof before deciding.</p></div>
+      </div>
+      <div class="faq-item" data-aos="fade-right" data-aos-delay="200">
+        <button class="faq-question">Will my staff resist SALONFIX?</button>
+        <div class="faq-answer"><p>No. Staff like SALONFIX because incentives and rules are <strong>clear and fair</strong>.</p></div>
+      </div>
+      <div class="faq-item" data-aos="fade-left" data-aos-delay="300">
+        <button class="faq-question">Can SALONFIX manage multiple branches?</button>
+        <div class="faq-answer"><p>Yes. Built for <strong>multi-branch owners</strong>. One dashboard of all branches.</p></div>
+      </div>
+      <div class="faq-item" data-aos="fade-right" data-aos-delay="400">
+        <button class="faq-question">What do I need to get started?</button>
+        <div class="faq-answer"><p>Just WhatsApp us “FIX.” We set up your trial in 24 hours. No contracts, no risk.</p></div>
+      </div>
     </div>
   </section>
 
-  <!-- ✅ Final CTA -->
-  <section class="about-cta" data-aos="fade-up">
-    <h2>Your Salon Doesn’t Need Your Presence to Stay Profitable</h2>
-    <p>Start with proof, not promises — your FREE 1-Month Trial begins today.</p>
-    <a href="https://wa.me/919629370666?text=FIX" class="btn-gold">WhatsApp FIX Now</a>
-    <a href="contact.html" class="btn-outline">Book Free Audit Call</a>
-  </section>
-
-  <!-- ✅ Footer -->
+  <!-- 🟣 Final CTA -->
   <footer class="footer-premium">
-    <p>© 2025 SALONFIX. All Rights Reserved.</p>
+    <div class="footer-top">
+      <h2>YOUR SALON DOESN’T NEED YOUR PRESENCE TO STAY PROFITABLE</h2>
+      <p>Start with proof, not promises — your FREE 1-Month Trial begins today.</p>
+      <div class="footer-cta">
+        <a href="https://wa.me/919629370666?text=FIX" class="btn-gold pulse">WhatsApp FIX Now</a>
+        <a href="tel:+919629370666" class="btn-outline">Book Free Audit Call</a>
+      </div>
+    </div>
+    <p class="copyright">© 2025 SALONFIX. All Rights Reserved.</p>
   </footer>
 
+  <!-- ✅ Floating WhatsApp -->
+  <a href="https://wa.me/919629370666?text=FIX" class="whatsapp-float pulse"><i class="fab fa-whatsapp"></i></a>
+
+  <!-- ✅ Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init();
-    document.querySelector(".burger").addEventListener("click", function(){
-      document.querySelector("nav.sf-navbar ul").classList.toggle("open");
+    AOS.init({ duration: 800, easing: "ease-in-out", once: true, offset: 40 });
+
+    // Navbar toggle
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('site-nav');
+    const overlay = document.getElementById('mobile-overlay');
+    function closeMenu() {
+      nav.classList.remove('open'); overlay.classList.remove('show');
+      burger.classList.remove('active'); document.body.classList.remove('menu-open');
+    }
+    if (burger && nav && overlay) {
+      burger.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        overlay.classList.toggle('show', open);
+        burger.classList.toggle('active', open);
+        document.body.classList.toggle('menu-open', open);
+      });
+      overlay.addEventListener('click', closeMenu);
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+    }
+
+    // FAQ accordion
+    const faqItems = document.querySelectorAll(".faq-item");
+    faqItems.forEach(item => {
+      item.querySelector(".faq-question").addEventListener("click", () => {
+        faqItems.forEach(i => i.classList.remove("active"));
+        item.classList.toggle("active");
+      });
     });
   </script>
 </body>
