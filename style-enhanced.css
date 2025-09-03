@@ -2173,25 +2173,3 @@ h2 {
   text-transform: uppercase;
   text-align: center;
 }
-/* Founder Heading Fix with Gold Underline */
-.founder h2.center-text.gold-text {
-  color: var(--sf-gold) !important;
-  font-size: 2rem;
-  font-weight: 900;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  text-align: center;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 8px;
-}
-
-.founder h2.center-text.gold-text::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, #FFD700, #D4AF37);
-  margin: 10px auto 0 auto;
-  border-radius: 2px;
-}
