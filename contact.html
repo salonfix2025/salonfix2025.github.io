@@ -63,11 +63,23 @@
         <p>For 30 days, SALONFIX runs your salon like it’s our own. We track every number, fix silent losses, and set up systems your team can follow — all before you commit to a single payment.</p>
       </div>
       <div class="icon-grid">
-        <div class="icon-row"><i class="fa-solid fa-gears"></i><div><strong>Daily Operations</strong><br/>Hygiene, attendance, stock tracking</div></div>
-        <div class="icon-row"><i class="fa-solid fa-indian-rupee-sign"></i><div><strong>Financial Data</strong><br/>Profit clarity, audits, performance insights</div></div>
-        <div class="icon-row"><i class="fa-solid fa-people-arrows"></i><div><strong>Client Retention & Referrals</strong><br/>Systems to keep clients returning & bringing friends</div></div>
-        <div class="icon-row"><i class="fa-solid fa-arrow-trend-up"></i><div><strong>Growth Moves</strong><br/>Team management, pricing tweaks, expansion guidance</div></div>
-      </div>
+  <div class="icon-row" data-aos="fade-right" data-aos-delay="0">
+    <i class="fa-solid fa-gears"></i>
+    <div><strong>Daily Operations</strong><br/>Hygiene, attendance, stock tracking</div>
+  </div>
+  <div class="icon-row" data-aos="fade-left" data-aos-delay="150">
+    <i class="fa-solid fa-indian-rupee-sign"></i>
+    <div><strong>Financial Data</strong><br/>Profit clarity, audits, performance insights</div>
+  </div>
+  <div class="icon-row" data-aos="fade-right" data-aos-delay="300">
+    <i class="fa-solid fa-people-arrows"></i>
+    <div><strong>Client Retention & Referrals</strong><br/>Systems to keep clients returning & bringing friends</div>
+  </div>
+  <div class="icon-row" data-aos="fade-left" data-aos-delay="450">
+    <i class="fa-solid fa-arrow-trend-up"></i>
+    <div><strong>Growth Moves</strong><br/>Team management, pricing tweaks, expansion guidance</div>
+  </div>
+</div>
     </div>
   </section>
 
@@ -115,7 +127,11 @@
   <!-- ✅ Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 900, once: true });
+    AOS.init({ 
+  duration: 900, 
+  once: false,   // run every time element enters viewport
+  mirror: true   // animate when scrolling up as well
+});
 
     const burger = document.getElementById('burger');
     const nav = document.getElementById('site-nav');
