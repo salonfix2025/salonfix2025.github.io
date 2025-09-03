@@ -355,14 +355,3 @@ nav.sf-navbar ul li a:hover {
   box-shadow: 0 8px 20px rgba(0,0,0,.15);
   overflow: hidden;
 }
-@media (max-width: 768px) {
-  .reel-grid {
-    gap: 16px !important;
-    padding: 0 12px 20px !important;
-  }
-  .reel-grid blockquote {
-    flex: 0 0 90% !important;  /* Each embed takes most of screen */
-    max-width: 90% !important;
-    border-radius: 14px !important;
-  }
-}
