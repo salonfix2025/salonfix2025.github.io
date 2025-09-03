@@ -2138,3 +2138,16 @@ h2 {
   margin-top: 25px;
   margin-bottom: 25px;
 }
+/* Contact Page – Hero Headline Fix */
+.contact-page .hero h2,
+.contact-page .hero h1 {
+  max-width: 92%;
+  margin: 0 auto 15px auto;
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1.4;
+  text-align: justify;         /* justified text */
+  text-align-last: center;     /* center the last line */
+  word-break: break-word;      /* break long words if needed */
+  display: block;
+}
