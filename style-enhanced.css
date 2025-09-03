@@ -1221,10 +1221,13 @@ h2 {
 
 /* ✅ About Page Styling */
 .about-page .hero {
-  background: linear-gradient(135deg, var(--sf-purple), var(--sf-purple-dark));
-  color: #fff;
-  padding: 100px 20px 70px;
+   min-height: 100vh;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
   text-align: center;
+  padding: 100px 20px 80px;
+  background: linear-gradient(135deg, var(--sf-purple), var(--sf-gold));
+  color: var(--sf-white);
 }
 
 .about-page .hero h1 {
