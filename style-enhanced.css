@@ -2164,3 +2164,34 @@ h2 {
   text-align-last: center; /* keep last line centered */
   margin-bottom: 16px;
 }
+/* Founder Heading Fix */
+.founder h2.center-text.gold-text {
+  color: var(--sf-gold) !important;   /* Force visible gold */
+  font-size: 2rem;                    /* Bigger for clarity */
+  font-weight: 900;                   /* Extra bold */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+/* Founder Heading Fix with Gold Underline */
+.founder h2.center-text.gold-text {
+  color: var(--sf-gold) !important;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.founder h2.center-text.gold-text::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #FFD700, #D4AF37);
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+}
