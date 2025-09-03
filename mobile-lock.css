@@ -1,9 +1,9 @@
 /* ==============================
-   MOBILE LOCK – SALONFIX (GLOBAL + INDEX + ABOUT + SERVICES)
+   MOBILE LOCK – SALONFIX (GLOBAL)
    ============================== */
 @media (max-width: 768px) {
 
-  /* ✅ Global */
+  /* ✅ Global Reset */
   html, body {
     font-size: 15px !important;
     line-height: 1.5 !important;
@@ -26,6 +26,7 @@
     width: 70%;
     max-width: 300px;
     display: none;
+    z-index: 1000;
   }
   nav.sf-navbar ul.open { display: flex !important; }
   nav.sf-navbar ul li a {
@@ -35,206 +36,138 @@
   }
   .burger { display: flex !important; }
 
-  /* ✅ Hero */
-  .hero {
-    padding: 80px 20px !important;
-  }
-  .hero h1 {
-    font-size: 1.8rem !important;
-    line-height: 1.3 !important;
-  }
-  .hero p {
-    font-size: 1rem !important;
-    margin-bottom: 18px !important;
-  }
+  /* ✅ Buttons (all CTAs) */
   .btn-gold {
     font-size: 1rem !important;
     padding: 12px 20px !important;
     border-radius: 30px;
-    background: linear-gradient(45deg, #FFD700, #D4AF37, #FFD700);
-    background-size: 300% 300%;
-    animation: shimmer 4s infinite linear, pulse 2s infinite ease-in-out;
-    text-align: center;
     font-weight: 700;
-    color: #000 !important;
-    box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
-  }
-
-  /* ✅ Metrics */
-  .metrics {
-    padding: 50px 16px !important;
-  }
-  .metrics h2 {
-    font-size: 1.2rem !important;
-    margin-bottom: 20px !important;
-    color: var(--sf-purple);
-  }
-  .metric-cards {
-    flex-direction: column !important;
-    gap: 14px !important;
-  }
-  .metric-card {
-    font-size: 1rem !important;
-    width: 100% !important;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-  }
-
-  /* ✅ Why Salons Lose Profit */
-  .problems {
-    padding: 50px 16px !important;
-  }
-  .problems h2 {
-    font-size: 1.2rem !important;
-    margin-bottom: 20px !important;
-    color: var(--sf-purple);
-  }
-  .profit-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 14px !important;
-  }
-  .problem-card {
-    font-size: 0.95rem !important;
-    padding: 18px !important;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-  }
-
-  /* ✅ Chaos Section */
-  .chaos {
-    padding: 50px 16px !important;
-  }
-  .chaos h2 {
-    font-size: 1.2rem !important;
-    margin-bottom: 20px !important;
-    color: var(--sf-purple);
-  }
-  .chaos-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr !important;
-    gap: 12px !important;
-  }
-  .chaos-card {
-    font-size: 0.9rem !important;
-    padding: 18px !important;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-  }
-
-  /* ✅ Takeover Section */
-  .takeover {
-    padding: 50px 16px !important;
-  }
-  .takeover h2 {
-    font-size: 1.2rem !important;
-    margin-bottom: 14px !important;
-    color: var(--sf-purple);
-  }
-  .takeover img {
-    width: 100%;
-    border-radius: 16px;
-    margin: 20px 0;
-  }
-  .takeover p {
-    font-size: 0.95rem !important;
-  }
-
-  /* ✅ Founder Section */
-  .founder-section,
-  .founder {
-    background: var(--sf-purple);
-    color: #fff;
+    text-decoration: none;
     text-align: center;
-    padding: 50px 20px !important;
+    background: linear-gradient(45deg, #D4AF37, #FFD700, #D4AF37);
+    background-size: 300% 300%;
+    color: #000 !important;
+    animation: shimmer 3s infinite linear, pulseBtn 2s infinite;
+    display: inline-block;
+    box-shadow: 0 0 15px rgba(212,175,55,0.7);
   }
-  .founder img {
-    width: 100%;
-    max-width: 280px;
-    border-radius: 20px;
-    margin: 0 auto 20px;
+  @keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
-  .founder p {
-    font-size: 1rem !important;
-    margin-bottom: 14px;
-  }
-  .founder-list {
-    font-size: 0.9rem !important;
-    margin-bottom: 18px;
-  }
-
-  /* ✅ Footer */
-  .footer-premium {
-    padding: 50px 16px !important;
-  }
-  .footer-premium h2 {
-    font-size: 1.1rem !important;
-    line-height: 1.4 !important;
-  }
-  .footer-premium p {
-    font-size: 0.9rem !important;
-  }
-  .footer-cta {
-    flex-direction: column !important;
-    gap: 12px !important;
-  }
-  .footer-cta a {
-    font-size: 0.95rem !important;
-    padding: 12px 20px !important;
-    border-radius: 30px;
+  @keyframes pulseBtn {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 15px rgba(212,175,55,0.6); }
+    50% { transform: scale(1.05); box-shadow: 0 0 25px rgba(212,175,55,0.9); }
   }
 
   /* ✅ WhatsApp Float */
   .whatsapp-float {
-    position: fixed !important;
-    bottom: 20px !important;
-    right: 20px !important;
-    width: 56px;
-    height: 56px;
-    background: linear-gradient(45deg, #FFD700, #D4AF37, #FFD700);
-    background-size: 300% 300%;
+    position: fixed;
+    bottom: 16px !important;
+    right: 16px !important;
+    font-size: 28px !important;
+    padding: 14px !important;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff !important;
-    font-size: 26px;
-    z-index: 9999;
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
-    animation: shimmer 4s infinite linear, pulse 2s infinite ease-in-out;
-    text-decoration: none;
+    background: linear-gradient(45deg, #D4AF37, #FFD700, #D4AF37);
+    background-size: 300% 300%;
+    animation: shimmer 3s infinite linear, pulseBtn 2s infinite;
+    color: #000 !important;
+    z-index: 1100;
   }
 }
 
-/* ✅ Reels Horizontal Swipe */
+/* ==============================
+   INDEX PAGE – MOBILE
+   ============================== */
 @media (max-width: 768px) {
+
+  /* Hero */
+  .hero { padding: 80px 20px !important; }
+  .hero h1 { font-size: 1.8rem !important; line-height: 1.3 !important; }
+  .hero p { font-size: 1rem !important; margin-bottom: 18px !important; }
+
+  /* Metrics */
+  .proof h2 { color: var(--sf-purple); font-size: 1.2rem !important; margin-bottom: 16px; }
+  .card-grid { display: flex; flex-direction: column; gap: 14px; }
+  .card { text-align: center; padding: 20px; border-radius: 16px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
+
+  /* Why Salons Lose Profit */
+  .problems h2 { color: var(--sf-purple); font-size: 1.2rem !important; }
+  .problems-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .problem-card { padding: 18px; border-radius: 14px; background: #fff; box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
+
+  /* Chaos to Control */
+  .case h2 { color: var(--sf-purple); }
+  .case-card { display: flex; flex-direction: column; gap: 12px; }
+  .case-card .card { flex: 1; padding: 18px; border-radius: 16px; background: #fff; box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
+
+  /* Takeover */
+  .solution h2 { color: var(--sf-purple); }
+  .solution-image img { border-radius: 16px; }
+
+  /* Founder */
+  .founder-wrapper { background: var(--sf-purple); color: #fff; padding: 50px 20px; text-align: center; }
+  .founder-wrapper h2, .founder-wrapper p, .founder-list li { color: #fff !important; }
+  .founder-wrapper img { border-radius: 18px; max-width: 260px; margin: 0 auto 20px; }
+
+  /* Reels – Horizontal Swipe */
   .reel-grid {
     display: flex !important;
     overflow-x: auto !important;
     scroll-snap-type: x mandatory;
-    gap: 16px !important;
-    padding: 0 12px 20px !important;
+    gap: 16px;
+    padding: 0 12px 20px;
   }
   .reel-grid blockquote {
-    flex: 0 0 85% !important;
-    max-width: 85% !important;
-    scroll-snap-align: center;
+    flex: 0 0 90% !important;
+    max-width: 90% !important;
     border-radius: 14px !important;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    scroll-snap-align: center;
   }
-  .reel-grid::-webkit-scrollbar { display: none; }
 }
 
-/* ✅ Animations (different per card) */
-[data-aos="fade-up"]   { transition-delay: .1s; }
-[data-aos="fade-right"]{ transition-delay: .2s; }
-[data-aos="fade-left"] { transition-delay: .3s; }
+/* ==============================
+   ABOUT PAGE – MOBILE
+   ============================== */
+@media (max-width: 768px) {
 
-/* ✅ Keyframes */
-@keyframes shimmer {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  /* Founder Section */
+  .founder-section { background: var(--sf-purple); color: #fff; text-align: center; padding: 50px 20px; }
+  .founder-section img { max-width: 320px; border-radius: 18px; margin: 0 auto 20px; display: block; }
+  .founder-section ul { list-style: none; padding: 0; margin: 20px 0; }
+  .founder-section ul li::before { display: none; }
+
+  /* Real Results */
+  .results-section h2 { color: var(--sf-purple); }
+  .result-card { background: #fff; border-radius: 16px; padding: 18px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); margin-bottom: 14px; }
+
+  /* Why SALONFIX Exists */
+  .why-section { background: var(--sf-purple); color: #fff; padding: 40px 20px; }
+  .why-section img { border-radius: 16px; margin: 20px 0; }
+
+  /* 5 Step Profit Fix */
+  .profit-fix .sf-box { background: var(--sf-purple); color: #fff; border-radius: 12px; padding: 18px; margin-bottom: 14px; }
+
+  /* Promise */
+  .promise-section img { border-radius: 16px; margin-bottom: 18px; }
 }
-@keyframes pulse {
-  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212,175,55,.6); }
-  50% { transform: scale(1.08); box-shadow: 0 0 20px rgba(212,175,55,.9); }
-  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212,175,55,.6); }
+
+/* ==============================
+   SERVICES PAGE – MOBILE
+   ============================== */
+@media (max-width: 768px) {
+
+  /* Steps Grid */
+  .steps-grid { display: flex; flex-direction: column; gap: 18px; }
+  .step-card { background: #fff; border-radius: 16px; padding: 20px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); text-align: left; }
+  .step-card h3 { color: var(--sf-purple); }
+  .step-card.gold { border: 2px solid var(--sf-gold); }
+
+  /* FAQ Accordion */
+  .faq-grid { display: flex; flex-direction: column; gap: 12px; }
+  .faq-item { background: #fff; border-radius: 12px; padding: 14px; box-shadow: 0 6px 16px rgba(0,0,0,0.06); }
+  .faq-question { font-weight: 700; color: var(--sf-purple); background: none; border: none; width: 100%; text-align: left; }
+  .faq-answer { display: none; margin-top: 10px; }
+  .faq-item.active .faq-answer { display: block; }
 }
