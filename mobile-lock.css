@@ -176,3 +176,222 @@
     border-radius: 14px !important;
   }
 }
+/* ==============================
+   ABOUT PAGE – MOBILE LOCK STYLES
+   ============================== */
+@media (max-width: 768px) {
+
+  /* 🔹 General Reset */
+  body.about-page {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  /* 🔹 Section Headings */
+  .about-page h1,
+  .about-page h2,
+  .about-page h3 {
+    font-size: 1.6rem !important;
+    text-align: center;
+    color: var(--sf-purple);
+    margin-bottom: 14px;
+    line-height: 1.3;
+  }
+
+  /* 🔹 Founder Section */
+  .founder-section {
+    background: var(--sf-purple);
+    color: #fff;
+    padding: 40px 20px;
+    border-radius: 0;
+    text-align: center;
+  }
+
+  .founder-section h2 {
+    color: #fff !important;
+    font-size: 1.8rem !important;
+    margin-bottom: 20px;
+  }
+
+  .founder-section img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 18px;
+    margin: 0 auto 20px auto;
+    display: block;
+  }
+
+  .founder-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 auto 18px auto;
+    max-width: 90%;
+  }
+
+  .founder-bullets {
+    margin: 18px 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .founder-bullets li {
+    margin: 8px 0;
+    text-align: left;
+    padding-left: 5px;
+  }
+
+  /* 🔹 Real Results */
+  .results-section {
+    background: #fff;
+    padding: 40px 20px;
+  }
+
+  .results-section h2 {
+    color: var(--sf-purple);
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .result-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 18px;
+    margin-bottom: 16px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+
+  .result-card strong {
+    color: var(--sf-purple);
+  }
+
+  /* 🔹 Why SALONFIX Exists */
+  .why-section h2 {
+    color: var(--sf-purple);
+    font-size: 1.6rem;
+  }
+
+  .why-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .why-section img {
+    width: 100%;
+    border-radius: 16px;
+    margin: 20px 0;
+  }
+
+  .why-highlight {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--sf-gold);
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  /* 🔹 5-Step Profit Fix */
+  .profit-fix {
+    background: #fff;
+    padding: 40px 20px;
+  }
+
+  .profit-fix h2 {
+    color: var(--sf-purple);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .profit-fix ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .profit-fix li {
+    margin: 14px 0;
+    padding: 16px;
+    border-radius: 12px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  }
+
+  .profit-fix li strong {
+    color: var(--sf-purple);
+  }
+
+  /* 🔹 Promise Section */
+  .promise-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .promise-section h2 {
+    color: var(--sf-purple);
+    margin-bottom: 16px;
+  }
+
+  .promise-section img {
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 18px;
+  }
+
+  /* 🔹 Final CTA */
+  .about-cta {
+    background: var(--sf-purple);
+    padding: 40px 20px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .about-cta h2 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 14px;
+  }
+
+  .about-cta p {
+    color: #eee;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .about-cta .btn-gold {
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 14px;
+    border-radius: 30px;
+    font-weight: 700;
+    background: linear-gradient(45deg, #D4AF37, #FFD700, #D4AF37);
+    background-size: 300% 300%;
+    color: #000 !important;
+    animation: shimmer 3s infinite linear;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .about-cta .btn-outline {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border: 2px solid var(--sf-gold);
+    border-radius: 30px;
+    color: var(--sf-gold) !important;
+    background: transparent;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  /* 🔹 Glitter Animation */
+  @keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+}
