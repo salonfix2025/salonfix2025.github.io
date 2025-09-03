@@ -2173,3 +2173,19 @@ h2 {
   text-transform: uppercase;
   text-align: center;
 }
+/* Force "MEET THE FOUNDER" in one line */
+.founder h2.center-text.gold-text {
+  white-space: nowrap;   /* ✅ prevents line break */
+  font-size: 2rem;       /* adjust for desktop */
+  font-weight: 900;
+  text-align: center;
+  color: var(--sf-gold) !important;
+  margin-bottom: 16px;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .founder h2.center-text.gold-text {
+    font-size: 1.6rem;   /* ✅ smaller so it fits on one line */
+  }
+}
