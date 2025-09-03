@@ -1972,3 +1972,14 @@ h2 {
   background: linear-gradient(180deg, rgba(212,175,55,.95), rgba(212,175,55,.7));
   color: #2a1e00;
 }
+/* Contact Page – Connect Section Purple Background */
+.contact-page #connect {
+  background: linear-gradient(180deg, var(--sf-purple), var(--sf-purple-900));
+  color: #fff;
+}
+
+.contact-page #connect .connect-item {
+  background: rgba(255,255,255,.08);  /* softer boxes */
+  border: 1px solid rgba(255,255,255,.15);
+  color: #fff;
+}
