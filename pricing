@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Partnership Plans – SALONFIX</title>
+
+  <!-- ✅ Canonical + Favicon -->
+  <link rel="canonical" href="https://www.salonfix.in/pricing.html" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+  <!-- ✅ SEO -->
+  <meta name="description" content="SALONFIX is YOUR IN-HOUSE BUSINESS PARTNER — one format, one system, for single or multi-branch salons. Start with a FREE 1-Month Trial." />
+  <meta name="theme-color" content="#4B0082" />
+
+  <!-- ✅ Open Graph / Twitter -->
+  <meta property="og:site_name" content="SALONFIX" />
+  <meta property="og:title" content="SALONFIX – Partnership Plans" />
+  <meta property="og:description" content="START STRONG, STAY SHARP, STYLE EMPIRE, and LIGHT TOUCH — choose the plan that fits your salon. FREE 1-Month Trial." />
+  <meta property="og:image" content="https://www.salonfix.in/assets/og-image.jpg" />
+  <meta property="og:url" content="https://www.salonfix.in/pricing.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- ✅ Fonts & Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="style-enhanced.css" />
+
+  <style>
+    /* 🔧 Pricing page specific adjustments */
+    .plans-grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    @media (max-width: 1100px) {
+      .plans-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 680px) {
+      .plans-grid { grid-template-columns: 1fr; gap: 28px; } /* spacing for mobile */
+    }
+
+    .card-purple {
+      color: #fff;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 32px 24px;
+      background: linear-gradient(160deg, var(--sf-purple) 0%, var(--sf-purple-dark) 100%);
+      border: 1px solid rgba(212,175,55,.18);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      min-height: 320px; /* increased height */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-purple:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--sf-gold);
+    }
+    .plan-title {
+      font-weight: 900;
+      font-size: 1.4rem;
+      color: var(--sf-gold);
+      margin-bottom: 6px;
+    }
+    .plan-sub {
+      opacity: .95;
+      color: rgba(255,255,255,.85);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+    .card-purple p {
+      color: rgba(255,255,255,.9);
+      flex-grow: 1;
+    }
+    .price {
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: var(--sf-gold);
+      margin: 12px 0;
+    }
+    .card-purple .btn-gold {
+      text-align: center;
+      display: block;
+      border-radius: 30px;
+      font-weight: 800;
+      padding: 12px;
+    }
+  </style>
+</head>
+
+<body class="pricing-page">
+
+  <!-- ✅ NAVBAR -->
+  <nav class="sf-navbar">
+    <div class="logo"><a href="index.html">SALONFIX</a></div>
+    <ul id="site-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">How We Work</a></li>
+      <li><a href="pricing.html" class="active">Partnership Plans</a></li>
+      <li><a href="blog.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="https://wa.me/919629370666?text=FIX" class="cta-btn desktop-only">WhatsApp FIX</a>
+    <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- ✅ MOBILE NAV OVERLAY -->
+  <div id="mobile-overlay" class="mobile-overlay"></div>
+
+  <!-- 🟣 HERO -->
+  <section class="hero sf-purple">
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Partnership Plans</h1>
+      <p class="hero-sub">One format, one system — whether you run one salon or many.</p>
+      <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+        <a class="btn-gold" href="https://wa.me/919629370666?text=FIX">DM “FIX” — Help Me Choose</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🟣 PLANS GRID -->
+  <section id="plans" class="plans">
+    <div class="container">
+      <div class="plans-grid" data-aos="fade-up">
+
+        <!-- START STRONG -->
+        <article class="card-purple">
+          <div>
+            <div class="plan-title">START STRONG</div>
+            <div class="plan-sub">System Setup & Reset</div>
+            <p>Full SOP setup, stock audit & front desk coaching. Perfect for salons starting fresh or rebooting systems.</p>
+          </div>
+          <div>
+            <div class="price">₹25K–₹50K (1–2 weeks setup)</div>
+            <a class="btn-gold" href="https://wa.me/919629370666?text=FIX">Choose START STRONG</a>
+          </div>
+        </article>
+
+        <!-- STAY SHARP -->
+        <article class="card-purple">
+          <div>
+            <div class="plan-title">STAY SHARP</div>
+            <div class="plan-sub">Ongoing Operations Control</div>
+            <p>Daily numbers, weekly oversight & monthly dashboards. Keeps your salon on track every single day.</p>
+          </div>
+          <div>
+            <div class="price">₹30K–₹75K / month</div>
+            <a class="btn-gold" href="https://wa.me/919629370666?text=FIX">Choose STAY SHARP</a>
+          </div>
+        </article>
+
+        <!-- STYLE EMPIRE -->
+        <article class="card-purple">
+          <div>
+            <div class="plan-title">STYLE EMPIRE</div>
+            <div class="plan-sub">Multi-Branch Ops</div>
+            <p>One SOP, one reporting format — across every branch. Centralized control for growing salon groups.</p>
+          </div>
+          <div>
+            <div class="price">Starts ₹75K / month</div>
+            <a class="btn-gold" href="https://wa.me/919629370666?text=FIX">Choose STYLE EMPIRE</a>
+          </div>
+        </article>
+
+        <!-- LIGHT TOUCH -->
+        <article class="card-purple">
+          <div>
+            <div class="plan-title">LIGHT TOUCH</div>
+            <div class="plan-sub">Remote Strategic Support</div>
+            <p>WhatsApp guidance, monthly reviews & strategic advice. Best for owner-managed salons needing minimal direction.</p>
+          </div>
+          <div>
+            <div class="price">₹15K / month</div>
+            <a class="btn-gold" href="https://wa.me/919629370666?text=FIX">Choose LIGHT TOUCH</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 🟣 CTA STRIP -->
+  <section class="cta-strip">
+    <div class="container" data-aos="zoom-in">
+      <h3 style="font-weight:900">Prefer to test first? Start your FREE 1-Month Trial.</h3>
+      <a class="btn-gold" href="https://wa.me/919629370666?text=FIX">DM “FIX” — START FREE TRIAL</a>
+    </div>
+  </section>
+
+  <!-- 🟣 FOOTER -->
+  <footer class="footer-premium">
+    <div class="footer-top">
+      <h2>READY TO LET SALONFIX WORK <span>FOR YOU?</span></h2>
+      <div class="footer-cta">
+        <a href="tel:+919629370666" class="btn-outline">Book Free Audit Call</a>
+      </div>
+    </div>
+    <p class="copyright">© 2025 SALONFIX. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ✅ Floating WhatsApp -->
+  <a href="https://wa.me/919629370666?text=FIX" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+  <!-- ✅ Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ 
+  duration: 900,
+  once: false,   // ❌ run every time element scrolls into view
+  mirror: true   // ✅ also animate when scrolling back up
+});
+
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('site-nav');
+    const overlay = document.getElementById('mobile-overlay');
+
+    function closeMenu() {
+      nav.classList.remove('open');
+      overlay.classList.remove('show');
+      burger.classList.remove('active');
+      document.body.classList.remove('menu-open');
+    }
+
+    if (burger && nav && overlay) {
+      burger.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        overlay.classList.toggle('show', open);
+        burger.classList.toggle('active', open);
+        document.body.classList.toggle('menu-open', open);
+      });
+      overlay.addEventListener('click', closeMenu);
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+    }
+  </script>
+</body>
+</html>
