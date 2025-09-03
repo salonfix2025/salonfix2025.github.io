@@ -4,144 +4,226 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SALONFIX – Your In-House Business Partner</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style-enhanced.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- ✅ AOS Animation Library -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
-<body>
+<body class="home-page">
 
-   <!-- ✅ Navbar -->
-<nav class="sf-navbar">
-  <div class="logo">
-    <a href="index.html">SALONFIX</a>
-  </div>
-  <ul id="site-nav">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">How We Work</a></li>
-    <li><a href="pricing.html">Partnership Plans</a></li>
-    <li><a href="blog.html">Testimonials</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <a href="https://wa.me/919629370666?text=FIX" class="cta-btn">WhatsApp FIX</a>
-  <button class="burger" id="burger"><span></span><span></span><span></span></button>
-</nav>
- 
-  <!-- HERO -->
-  <section class="hero" data-aos="fade-up">
-    <div class="hero-content">
-      <h1>Busy salon. Bank balance still empty?</h1>
-      <p class="hero-sub">Sales ≠ Profit. SALONFIX tracks every rupee daily — no leaks, no guessing.</p>
-      <a href="https://wa.me/919629370666?text=FIX" class="btn-gold" data-aos="zoom-in">Start FREE 1-Month Trial</a>
+  <!-- ✅ NAVBAR -->
+  <nav class="sf-navbar">
+    <div class="logo">
+      <a href="index.html">SALONFIX</a>
+    </div>
+    <ul id="site-nav">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">How We Work</a></li>
+      <li><a href="pricing.html">Partnership Plans</a></li>
+      <li><a href="blog.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="https://wa.me/919629370666?text=FIX" class="cta-btn desktop-only">WhatsApp FIX</a>
+    <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- ✅ MOBILE NAV OVERLAY -->
+  <div id="mobile-overlay" class="mobile-overlay"></div>
+
+  <!-- ✅ HERO -->
+  <section class="hero">
+    <div class="hero-content" data-aos="zoom-in">
+      <h1>
+        Busy salon<br>Bank balance still empty?
+      </h1>
+      <p class="hero-sub">
+        Sales ≠ Profit.<br>
+        SALONFIX tracks every rupee daily.<br>
+        No leaks, no guessing.
+      </p>
+      <a href="https://wa.me/919629370666?text=FIX" class="btn-gold pulse">
+        Start FREE 1-Month Trial
+      </a>
     </div>
   </section>
 
-  <!-- PROOF -->
-  <section class="proof" data-aos="fade-up">
+  <!-- ✅ PROOF -->
+  <section class="proof">
     <h2>4 branches · 6 weeks · Profit flipped</h2>
     <div class="card-grid">
-      <div class="card" data-aos="fade-up" data-aos-delay="100"><h3>+₹2.5L</h3><p>Profit in 30 days</p></div>
-      <div class="card" data-aos="fade-up" data-aos-delay="200"><h3>-30% Waste</h3><p>+20% Vendor Savings</p></div>
-      <div class="card" data-aos="fade-up" data-aos-delay="300"><h3>+8.4%</h3><p>Profit Growth in 6 weeks</p></div>
+      <div class="card" data-aos="fade-up">
+        <h3>+₹2.5L</h3>
+        <p>Profit in 30 days</p>
+      </div>
+      <div class="card" data-aos="fade-up">
+        <h3>-30% Waste</h3>
+        <p>+20% Vendor Savings</p>
+      </div>
+      <div class="card" data-aos="fade-up">
+        <h3>+8.4%</h3>
+        <p>Profit Growth in 6 weeks</p>
+      </div>
     </div>
   </section>
 
-  <!-- PROBLEMS -->
-<section class="problems section-narrow" data-aos="fade-up">
-  <h2>Why salons lose profit even when sales are high…</h2>
-  <div class="problems-grid">
-    <div class="problem-card" data-aos="fade-up" data-aos-delay="100">Manager salary ≠ System control</div>
-    <div class="problem-card" data-aos="fade-up" data-aos-delay="200">Petty cash leaks silently bleed profit</div>
-    <div class="problem-card" data-aos="fade-up" data-aos-delay="300">No rebooking system = empty chairs</div>
-    <div class="problem-card" data-aos="fade-up" data-aos-delay="400">Retail zero = weak team control</div>
+  <!-- ✅ PROBLEMS -->
+  <section class="problems section-narrow">
+    <h2>Why salons lose profit even when sales are high…</h2>
+    <div class="problems-grid">
+      <div class="problem-card" data-aos="fade-right">Manager salary ≠ System control</div>
+      <div class="problem-card" data-aos="fade-left">Petty cash leaks silently bleed profit</div>
+      <div class="problem-card" data-aos="fade-right">No rebooking system = empty chairs</div>
+      <div class="problem-card" data-aos="fade-left">Retail zero = weak team control</div>
+    </div>
+  </section>
+
+  <!-- ✅ CASE -->
+<section class="case">
+  <h2><span>From Chaos</span> <span style="color:#D4AF37">to Control.</span></h2>
+  <div class="case-card">
+    
+    <div class="card">
+      <strong>Before</strong><br>
+      No daily numbers, rebooking 0, retail 3%
+    </div>
+
+    <div class="card">
+      <strong>After</strong><br>
+      Daily P&L + scripts → retail 11%
+    </div>
+
+    <div class="card result-card">
+      <strong>Result</strong><br>
+      Profit +8.4% in 6 weeks
+    </div>
+
   </div>
 </section>
 
-  <!-- CASE -->
-  <section class="case" data-aos="fade-up">
-    <h2>From Chaos to Control.</h2>
-    <div class="card-grid">
-      <div class="card" data-aos="fade-up" data-aos-delay="100">❌ Before: No daily numbers, rebooking 0, retail 3%</div>
-      <div class="card" data-aos="fade-up" data-aos-delay="200">🔄 After: Daily P&L + scripts → retail 11%</div>
-      <div class="card result-card" data-aos="zoom-in" data-aos-delay="300">✅ Result: Profit +8.4% in 6 weeks</div>
-    </div>
-  </section>
+<!-- ✅ SOLUTION -->
+<section class="solution">
+  <div class="solution-container">
 
-  <!-- SOLUTION -->
-  <section class="solution" data-aos="fade-up">
-    <div class="solution-container">
-      <div class="solution-text">
-        <h2>We don’t just consult.<br>We take over.</h2>
-        <ul>
-          <li>Daily reports on WhatsApp</li>
-          <li>Branch control with proof photos & logs</li>
-          <li>Staff accountability + incentive system</li>
-          <li>Owner Action Box = clear next steps</li>
-        </ul>
-      </div>
+    <!-- Text + Bullets + Image Together -->
+    <div class="solution-text">
+      <h2>We don’t just consult<br>We take over</h2>
+      <p class="sub-purple">Our takeover system ensures daily clarity & control.</p>
+<!-- Place image directly under Our takeover system ensures daily clarity & control -->
       <div class="solution-image">
-        <img src="assets/about-different.jpg" alt="Salon team control">
+        <img src="assets/about-different.jpg" alt="Salon team control" data-aos="fade-up" data-aos-duration="800">
       </div>
-    </div>
-  </section>
+      <ul class="solution-list">
+        <li>Daily reports on WhatsApp</li>
+        <li>Branch control with proof photos & logs</li>
+        <li>Staff accountability + incentive system</li>
+        <li>Owner Action Box = clear next steps</li>
+      </ul>
 
-  <!-- FOUNDER -->
-<section class="founder section-narrow" data-aos="fade-up">
-  <div class="photo" data-aos="zoom-in" data-aos-delay="200">
-    <img src="assets/founder.jpg" alt="JAWHAR RAJ RAJKUMAR">
+      
+    </div>
+
   </div>
-  <div class="content" data-aos="fade-up" data-aos-delay="300">
-    <h2>I’m <span class="gold-text">JAWHAR RAJ RAJKUMAR</span> — I’ve fixed it all</h2>
-    <p>10+ years inside salons, turning chaos into profit across 100+ salon days</p>
-    <ul>
-      <li>🏆 10+ Years Running Salon Operations</li>
-      <li>💰 Proven Profit Growth Across Multiple Branches</li>
-      <li>📊 100+ Daily Operations Controlled</li>
+</section>
+
+  <!-- ✅ FOUNDER -->
+<section class="founder-wrapper">
+  <div class="founder-card">
+
+    <!-- Text First -->
+    <div class="content">
+      <h2>I’m <span class="gold-text">JAWHAR RAJ RAJKUMAR</span> - I’ve fixed it all</h2>
+      <p class="intro">10+ years inside salons, turning chaos into profit across 100+ salon days</p>
+    </div>
+
+    <!-- Image -->
+    <div class="photo">
+      <img src="assets/founder.jpg" alt="JAWHAR RAJ RAJKUMAR" data-aos="zoom-in" data-aos-duration="900">
+    </div>
+
+    <!-- Bullets -->
+    <ul class="founder-list">
+      <li>10+ Years Running Salon Operations</li>
+      <li>Proven Profit Growth Across Multiple Branches</li>
+      <li>100+ Daily Operations Controlled</li>
     </ul>
-    <a href="https://wa.me/919629370666?text=FIX" class="btn-gold" data-aos="zoom-in" data-aos-delay="400">
+
+    <!-- CTA -->
+    <a href="https://wa.me/919629370666?text=FIX" class="btn-gold founder-cta">
       WhatsApp FIX — Start FREE Trial
     </a>
   </div>
 </section>
 
-  <!-- REELS -->
-  <section class="reel-section" data-aos="fade-up">
-    <h2>📲 Real Salon Fixes — Updated on Instagram</h2>
-    <div class="reel-grid">
-      <iframe src="https://www.instagram.com/p/DNnvtQ4ytxg/embed" class="reel"></iframe>
-      <iframe src="https://www.instagram.com/p/DNNpbwGSKl9/embed" class="reel"></iframe>
-      <iframe src="https://www.instagram.com/p/DNiXfh7S3Nm/embed" class="reel"></iframe>
-    </div>
-  </section>
+  <!-- ✅ REELS -->
+<section class="reel-section">
+  <h2><span class="gradient-text">Real Salon Fixes — Updated on Instagram</span></h2>
+  <div class="reel-grid">
+    
+    <blockquote class="instagram-media" 
+      data-instgrm-permalink="https://www.instagram.com/p/DNnvtQ4ytxg/"
+      data-instgrm-version="14"></blockquote>
 
-  <!-- FOOTER -->
-  <footer class="footer-premium" data-aos="fade-up">
+    <blockquote class="instagram-media" 
+      data-instgrm-permalink="https://www.instagram.com/p/DNNpbwGSKl9/"
+      data-instgrm-version="14"></blockquote>
+
+    <blockquote class="instagram-media" 
+      data-instgrm-permalink="https://www.instagram.com/p/DNiXfh7S3Nm/"
+      data-instgrm-version="14"></blockquote>
+
+  </div>
+</section>
+
+<!-- ✅ Instagram Embed Script -->
+<script async src="//www.instagram.com/embed.js"></script>
+
+  <!-- ✅ FOOTER -->
+  <footer class="footer-premium">
     <div class="footer-top">
       <h2>SALON OWNERS WORK LESS. <span>SALONFIX DOES THE REST.</span></h2>
       <p>Experience it yourself with our FREE 1-Month Trial.</p>
       <div class="footer-cta">
-        <a href="https://wa.me/919629370666?text=FIX" class="btn-gold">WhatsApp FIX Now</a>
+        <a href="https://wa.me/919629370666?text=FIX" class="btn-gold pulse">WhatsApp FIX Now</a>
         <a href="tel:+919629370666" class="btn-outline">Book Free Audit Call</a>
       </div>
     </div>
     <p class="copyright">© 2025 SALONFIX. All Rights Reserved.</p>
   </footer>
 
-  <!-- ✅ Floating WhatsApp Button -->
-<a href="https://wa.me/919629370666?text=FIX" class="whatsapp-float" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
+  <!-- ✅ Floating WhatsApp -->
+  <a href="https://wa.me/919629370666?text=FIX" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
-  <!-- ✅ AOS Init -->
+  <!-- ✅ Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 900,
-      once: true
-    });
+    AOS.init({ duration: 600, easing: "ease-out", once: true, offset: 30 });
+
+    // Burger + overlay
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('site-nav');
+    const overlay = document.getElementById('mobile-overlay');
+
+    function closeMenu() {
+      nav.classList.remove('open');
+      overlay.classList.remove('show');
+      burger.classList.remove('active');
+      document.body.classList.remove('menu-open');
+    }
+
+    if (burger && nav && overlay) {
+      burger.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        overlay.classList.toggle('show', open);
+        burger.classList.toggle('active', open);
+        document.body.classList.toggle('menu-open', open);
+      });
+      overlay.addEventListener('click', closeMenu);
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+    }
   </script>
 </body>
 </html>
