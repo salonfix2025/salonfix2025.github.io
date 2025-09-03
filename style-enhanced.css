@@ -2109,3 +2109,32 @@ h2 {
   0% { transform: translateX(-100%) rotate(25deg); }
   100% { transform: translateX(100%) rotate(25deg); }
 }
+/* ==============================
+   CONTACT PAGE – Premium Fix
+   ============================== */
+
+/* Pop effect on touch */
+.contact-page .connect-item:hover,
+.contact-page .connect-item:active {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(212,175,55,0.4);
+}
+
+/* Gold glitter icons */
+.contact-page .ci-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
+  color: #2d004c;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px rgba(212,175,55,0.6), 0 0 20px rgba(212,175,55,0.4);
+}
+
+/* Reduce extra gap between sections */
+.contact-page section {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
