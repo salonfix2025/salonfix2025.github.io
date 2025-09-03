@@ -1,5 +1,5 @@
 /* ==============================
-   SALONFIX – Global Styles
+   SALONFIX – Global Styles (Mobile-First)
    ============================== */
 :root {
   --sf-purple: #4B0082;
@@ -12,6 +12,7 @@
   --shadow-hover: 0 12px 28px rgba(0,0,0,.2);
 }
 
+/* Reset */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body {
   font-family: 'Montserrat', sans-serif;
@@ -26,226 +27,297 @@ html, body {
    NAVBAR
    ============================== */
 nav.sf-navbar {
-  position: fixed; top: 0; left: 0; width: 100%;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
   background: rgba(75,0,130,0.95);
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 15px 8%; z-index: 2000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  z-index: 2000;
 }
-nav.sf-navbar .logo a { font-weight: 900; font-size: 1.5rem; color: #fff; }
-nav.sf-navbar ul { display: flex; gap: 25px; list-style: none; }
-nav.sf-navbar ul li a {
-  color: #fff; font-weight: 600; padding: 8px 6px;
-  border-bottom: 2px solid transparent;
+nav.sf-navbar .logo a {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
 }
-nav.sf-navbar ul li a:hover,
-nav.sf-navbar ul li a.active {
-  color: var(--sf-gold); border-bottom: 2px solid var(--sf-gold);
+nav.sf-navbar ul {
+  display: none; /* hidden on mobile */
+  list-style: none;
 }
 nav.sf-navbar .cta-btn {
-  background: var(--sf-gold); color: var(--sf-dark);
-  padding: 10px 18px; border-radius: 50px; font-weight: 700;
+  display: none; /* hidden on mobile */
 }
-.burger { display: none; background: none; border: 0; cursor: pointer; }
+.burger {
+  display: block;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
 .burger span {
-  display: block; width: 26px; height: 2px; background: #fff; margin: 6px 0;
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #fff;
+  margin: 6px 0;
 }
 
-/* Mobile nav */
-@media(max-width: 900px) {
-  nav.sf-navbar .cta-btn { display: none; } /* hide WhatsApp FIX on mobile */
-  .burger { display: block; z-index: 2100; }
-  nav.sf-navbar ul {
-    position: fixed; inset: 64px 0 auto 0;
-    background: rgba(0,0,0,0.9); /* floating dark panel */
-    backdrop-filter: blur(8px);
-    flex-direction: column; align-items: center;
-    padding: 30px 0; gap: 22px;
-    transform: translateY(-120%); transition: .25s ease;
-    z-index: 1999;
-  }
-  nav.sf-navbar ul.open { transform: translateY(0); }
-  nav.sf-navbar ul li a {
-    font-size: 1.2rem; font-weight: 700; color: var(--sf-white);
-    width: 100%; text-align: center;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-  }
+/* Mobile menu panel */
+nav.sf-navbar ul.open {
+  position: fixed;
+  top: 70px; left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 380px;
+  background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
+  border-radius: 20px;
+  padding: 28px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+}
+nav.sf-navbar ul li a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+nav.sf-navbar ul li a.active,
+nav.sf-navbar ul li a:hover {
+  color: var(--sf-gold);
+  border-bottom: 1px solid var(--sf-gold);
 }
 
 /* ==============================
    HERO
    ============================== */
 .hero {
-  min-height: 100vh;
-  display: flex; flex-direction: column;
-  justify-content: center; align-items: center;
+  padding: 80px 20px;
   text-align: center;
-  padding: 100px 20px 80px;
   background: linear-gradient(135deg, var(--sf-purple), var(--sf-gold));
-  color: var(--sf-white);
+  color: #fff;
 }
 .hero h1 {
-  font-size: 2.6rem; font-weight: 900; margin-bottom: 18px; line-height: 1.3;
-  animation: zoomIn 1s ease-out 1;
+  font-size: 1.9rem;
+  font-weight: 900;
+  line-height: 1.3;
+  margin-bottom: 16px;
 }
-.hero p { font-size: 1.2rem; margin-bottom: 28px; max-width: 750px; }
-.hero .btn-gold {
-  background: var(--sf-gold); color: var(--sf-dark);
-  padding: 16px 32px; border-radius: 30px; font-weight: 800;
-  box-shadow: 0 6px 18px rgba(212,175,55,0.4);
+.hero p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.btn-gold {
+  background: linear-gradient(135deg, #FFD700, #D4AF37);
+  color: #2d004c;
+  padding: 14px 26px;
+  border-radius: 30px;
+  font-weight: 800;
+  display: inline-block;
+  text-decoration: none;
   animation: pulseGold 2s infinite;
 }
-@keyframes zoomIn {
-  from { transform: scale(0.9); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
 @keyframes pulseGold {
-  0% { box-shadow: 0 0 0 0 rgba(212,175,55,.5); }
+  0% { box-shadow: 0 0 0 0 rgba(212,175,55,.6); }
   70% { box-shadow: 0 0 0 15px rgba(212,175,55,0); }
   100% { box-shadow: 0 0 0 0 rgba(212,175,55,0); }
 }
-/* Mobile hero */
-@media (max-width: 768px) {
-  .hero { padding: 80px 20px; min-height: 70vh; }
-  .hero h1 { font-size: 1.9rem; line-height: 1.4; }
-  .hero p { font-size: 1rem; line-height: 1.6; }
-}
 
 /* ==============================
-   PROOF
+   PROOF / CARDS
    ============================== */
-.proof { padding: 60px 8%; text-align: center; }
+.proof {
+  padding: 40px 16px;
+  text-align: center;
+}
 .proof h2 {
-  font-size: 2.4rem; font-weight: 900;
-  color: var(--sf-purple);
-  margin-bottom: 30px;
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin-bottom: 20px;
 }
 .card-grid {
-  display: grid; grid-template-rows: repeat(3, 1fr);
-  gap: 24px;
+  display: grid;
+  gap: 16px;
+}
+.card, .card-purple {
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  text-align: center;
 }
 .card {
+  background: #fff;
+}
+.card-purple {
   background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
-  border-radius: var(--radius);
-  color: #fff; padding: 40px 30px;
-  box-shadow: var(--shadow);
-  transition: 0.3s;
-  display: flex; flex-direction: column; justify-content: center;
+  color: #fff;
 }
-.card h3 {
-  font-size: 2rem; font-weight: 800; color: var(--sf-gold); margin-bottom: 10px;
-}
-.card p { font-size: 1.1rem; color: #fff; }
-.card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
-
-/* Mobile proof */
-@media (max-width: 768px) {
-  .proof h2 { font-size: 1.6rem; text-align: center; }
-  .card-grid { grid-template-rows: none; grid-template-columns: 1fr; }
-  .card h3 { font-size: 1.4rem; }
-  .card p { font-size: 1rem; }
-}
+.card h3 { color: var(--sf-gold); margin-bottom: 8px; }
 
 /* ==============================
    PROBLEMS
    ============================== */
 .problems {
-  background: var(--sf-purple); color: #fff;
-  border-radius: 20px; padding: 60px 8%;
+  background: var(--sf-purple);
+  color: #fff;
+  padding: 40px 16px;
 }
 .problems h2 {
-  text-align: center; margin-bottom: 30px;
-  font-size: 2.2rem; font-weight: 900;
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-align: center;
 }
 .problems-grid {
-  display: grid; grid-template-columns: repeat(2,1fr); gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 .problem-card {
-  background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
-  color: var(--sf-purple); padding: 24px;
-  border-radius: 15px; font-weight: 600;
-  text-align: center; min-height: 140px;
-  box-shadow: var(--shadow);
-}
-@media (max-width: 768px) {
-  .problems-grid { grid-template-columns: 1fr; }
-  .problems { max-width: 92%; margin: 0 auto; }
+  background: linear-gradient(135deg, #FFD700, #D4AF37);
+  color: #2d004c;
+  font-weight: 700;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
 }
 
 /* ==============================
    CASE
    ============================== */
-.case { padding: 60px 8%; text-align: center; }
-.case h2 {
-  font-size: 2.4rem; font-weight: 900; margin-bottom: 30px;
+.case {
+  padding: 40px 16px;
+  text-align: center;
 }
-.case h2 span { color: var(--sf-gold); }
-.case .card { color: var(--sf-gold); }
+.case h2 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.case-card {
+  display: grid;
+  gap: 16px;
+}
+.case .card {
+  background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
+  color: #fff;
+}
+.case .result-card {
+  background: linear-gradient(135deg, #FFD700, #D4AF37);
+  color: var(--sf-purple);
+}
 
 /* ==============================
    SOLUTION
    ============================== */
-.solution { padding: 80px 20px; background: #fff; }
-.solution-container {
-  display: flex; flex-wrap: wrap; gap: 40px; align-items: center;
-  max-width: 1100px; margin: 0 auto;
+.solution {
+  padding: 40px 16px;
+  text-align: center;
 }
-.solution-text { flex: 1; }
 .solution-text h2 {
-  color: var(--sf-gold); font-size: 2.2rem; font-weight: 800;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--sf-purple);
 }
-.solution-text ul { margin-top: 15px; padding-left: 20px; }
-.solution-text li { font-size: 1.1rem; margin-bottom: 10px; }
-.solution-image { flex: 1; text-align: center; }
-.solution-image img { max-width: 100%; border-radius: 12px; }
-
-/* Mobile solution */
-@media (max-width: 768px) {
-  .solution-container { flex-direction: column; }
-  .solution-text ul { text-align: left; }
-  .solution-text li { font-size: 1rem; margin-bottom: 6px; }
+.sub-purple {
+  color: var(--sf-purple);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.solution-list {
+  list-style: none;
+  margin: 16px auto;
+  padding: 0;
+  max-width: 500px;
+  text-align: left;
+}
+.solution-list li {
+  margin-bottom: 8px;
+  font-weight: 600;
+  padding-left: 24px;
+  position: relative;
+}
+.solution-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--sf-gold);
+  font-weight: 900;
 }
 
 /* ==============================
    FOUNDER
    ============================== */
-.founder {
-  background: var(--sf-purple); color: #fff;
-  border-radius: 20px;
-  display: flex; flex-wrap: wrap; gap: 40px; align-items: center;
-  padding: 60px 20px; max-width: 92%; margin: 0 auto;
+.founder-wrapper {
+  background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
+  padding: 40px 16px;
+  color: #fff;
+  text-align: center;
 }
-.founder .photo img {
-  max-width: 320px; border-radius: 20px;
+.founder-card {
+  max-width: 1000px;
+  margin: 0 auto;
 }
-.founder .content h2 { font-size: 2rem; margin-bottom: 16px; }
-.founder .btn-gold {
-  display: inline-block; margin-top: 20px;
-  background: var(--sf-gold); color: var(--sf-dark);
-  padding: 14px 26px; border-radius: 30px;
-  font-weight: 800; animation: pulseGold 2s infinite;
+.founder-card h2 {
+  color: var(--sf-gold);
+  font-size: 1.5rem;
+  font-weight: 900;
+  white-space: nowrap; /* always one line */
 }
-
-/* Mobile founder */
-@media (max-width: 900px) {
-  .founder { flex-direction: column; text-align: center; }
-  .founder ul { display: none; } /* no bullets in mobile */
+.founder-card .photo img {
+  max-width: 280px;
+  border-radius: 16px;
+  margin: 20px auto;
+  display: block;
+}
+.founder-list {
+  list-style: none;
+  margin: 16px auto;
+  padding: 0;
+  max-width: 320px;
+  text-align: left;
+}
+.founder-list li {
+  font-weight: 600;
+  margin-bottom: 8px;
+  padding-left: 24px;
+  position: relative;
+}
+.founder-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--sf-gold);
 }
 
 /* ==============================
    REELS
    ============================== */
-.reel-section { padding: 60px 8%; text-align: center; }
-.reel-section h2 {
-  font-size: 2.2rem; font-weight: 900; margin-bottom: 30px;
+.reel-section {
+  padding: 30px 16px;
+  text-align: center;
 }
 .reel-grid {
-  display: flex; gap: 20px; overflow-x: auto;
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
   scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
 }
-.reel-grid iframe {
-  flex: 0 0 85%; max-width: 85%;
-  aspect-ratio: 9/16; border-radius: 12px; border: none;
+.reel-grid blockquote {
+  flex: 0 0 85%;
+  max-width: 85%;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
   scroll-snap-align: center;
 }
 .reel-grid::-webkit-scrollbar { display: none; }
@@ -255,2133 +327,69 @@ nav.sf-navbar .cta-btn {
    ============================== */
 .footer-premium {
   background: linear-gradient(135deg, var(--sf-purple), var(--sf-purple-dark));
-  color: #fff; text-align: center;
-  padding: 60px 20px; border-radius: 20px 20px 0 0;
+  color: #fff;
+  text-align: center;
+  padding: 40px 16px;
 }
 .footer-premium h2 {
-  font-size: 1.8rem; font-weight: 800; margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 16px;
 }
 .footer-premium span { color: var(--sf-gold); }
 .footer-cta {
-  margin-top: 20px; display: flex; justify-content: center;
-  gap: 16px; flex-wrap: wrap;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 .footer-cta a {
-  padding: 12px 24px; border-radius: 30px; font-weight: 700;
-}
-.footer-cta .btn-gold {
-  background: var(--sf-gold); color: var(--sf-dark);
-  animation: pulseGold 2s infinite;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
 }
 .footer-cta .btn-outline {
-  border: 2px solid var(--sf-gold); color: var(--sf-gold);
+  border: 2px solid var(--sf-gold);
+  color: var(--sf-gold);
   background: none;
 }
 
 /* ==============================
    FLOATING WHATSAPP
    ============================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  width: 60px; height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  box-shadow: var(--shadow);
+  z-index: 3000;
+  animation: pulse 2.5s infinite;
+}
 @keyframes pulse {
   0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37,211,102,.6); }
   70% { transform: scale(1.1); box-shadow: 0 0 0 15px rgba(37,211,102,0); }
   100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37,211,102,0); }
 }
-.whatsapp-float {
-  position: fixed; bottom: 20px; right: 20px;
-  background: #25d366; color: #fff;
-  border-radius: 50%; width: 60px; height: 60px;
-  display: flex; justify-content: center; align-items: center;
-  font-size: 28px; box-shadow: var(--shadow);
-  z-index: 3000; animation: pulse 2.5s infinite;
-}
-/* ==============================
-   MOBILE NAV – PREMIUM CARD STYLE
-   ============================== */
-@media(max-width: 900px) {
-  nav.sf-navbar .cta-btn { display: none; } /* hide top button */
-  .burger { display: block; z-index: 2100; }
-
-  nav.sf-navbar ul {
-    position: fixed;
-    top: 80px; left: 50%;
-    transform: translate(-50%, -120%); /* start hidden */
-    width: 90%; max-width: 380px;
-    background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
-    border-radius: 20px;
-    padding: 30px 0;
-    flex-direction: column; align-items: center;
-    gap: 22px;
-    box-shadow: 0 12px 28px rgba(0,0,0,0.35);
-    transition: transform 0.3s ease;
-    z-index: 1999;
-  }
-
-  nav.sf-navbar ul.open {
-    transform: translate(-50%, 0); /* slide down */
-  }
-
-  nav.sf-navbar ul li a {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #fff;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-  }
-  nav.sf-navbar ul li a:hover,
-  nav.sf-navbar ul li a.active {
-    color: var(--sf-gold);
-    border-bottom: 1px solid var(--sf-gold);
-  }
-
-  /* WhatsApp button inside card */
-  nav.sf-navbar ul li:last-child {
-    border-bottom: none;
-  }
-  nav.sf-navbar ul .cta-btn-mobile {
-    margin-top: 10px;
-    background: var(--sf-gold);
-    color: var(--sf-dark);
-    padding: 12px 24px;
-    border-radius: 30px;
-    font-weight: 800;
-    text-align: center;
-    box-shadow: var(--shadow);
-  }
-}
-/* ==============================
-   PROBLEMS – Mobile Refinements
-   ============================== */
-@media (max-width: 768px) {
-  .problems {
-    max-width: 92%;   /* breathing space */
-    margin: 0 auto;
-    padding: 40px 20px; /* reduced top/bottom */
-  }
-
-  .problems h2 {
-    font-size: 1.4rem;   /* slightly smaller */
-    max-width: 90%;      /* narrower for 3-line fit */
-    margin: 0 auto 24px; /* center + spacing */
-    line-height: 1.4;
-  }
-
-  .problem-card {
-    padding: 18px;       /* reduce box height */
-    min-height: auto;    /* no forced tall box */
-    font-size: 1.05rem;  /* slightly bigger text */
-    font-weight: 700;    /* bold */
-    display: flex;
-    justify-content: center;
-    align-items: center; /* center text vertically */
-    text-align: center;
-  }
-}
-/* ==============================
-   CASE – Premium Mobile Style
-   ============================== */
-.case-grid {
-  display: grid;
-  gap: 16px;
-  max-width: 92%;
-  margin: 0 auto;
-}
-
-.case-card {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
-  border-radius: 16px;
-  padding: 16px 18px;
-  box-shadow: var(--shadow);
-}
-
-.case-card .icon {
-  font-size: 1.3rem;
-  color: var(--sf-gold);
-  flex-shrink: 0;
-}
-
-.case-card p {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1.4;
-  text-align: left;
-}
-
-.result-card {
-  background: linear-gradient(145deg, var(--sf-gold), #FFD700);
-}
-
-.result-card p {
-  color: var(--sf-dark);
-}
-
-@media (max-width: 768px) {
-  .case h2 {
-    font-size: 1.5rem;
-    max-width: 90%;
-    margin: 0 auto 20px;
-    line-height: 1.4;
-  }
-  .case-card {
-    padding: 14px 16px;
-  }
-  .case-card p {
-    font-size: 0.95rem;
-  }
-}
-/* ==============================
-   SOLUTION – Premium Mobile Layout
-   ============================== */
-.sub-purple {
-  color: var(--sf-purple);
-  font-size: 1rem;
-  font-weight: 600;
-  margin-top: 8px;
-  margin-bottom: 20px;
-}
-
-.solution-list {
-  list-style: none;
-  margin: 20px 0;
-  padding: 0;
-}
-
-.solution-list li {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--sf-dark);
-  margin-bottom: 12px;
-  padding-left: 28px;
-  position: relative;
-  line-height: 1.4;
-}
-
-/* Purple/Gold check icons */
-.solution-list li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-weight: bold;
-  color: var(--sf-gold);
-  font-size: 1.1rem;
-}
-
-/* CTA button alignment */
-.solution-cta {
-  display: inline-block;
-  margin-top: 10px;
-  text-align: center;
-  padding: 14px 26px;
-  border-radius: 30px;
-  font-weight: 800;
-  box-shadow: var(--shadow);
-}
-
-/* Mobile refinements */
-@media (max-width: 768px) {
-  .solution-text h2 {
-    font-size: 1.6rem;
-    line-height: 1.3;    /* tighter line spacing */
-    margin-bottom: 10px;
-  }
-
-  .solution-image img {
-    margin-top: 10px;
-    border-radius: 14px;
-  }
-
-  .solution-list li {
-    font-size: 0.95rem;
-    margin-bottom: 10px;
-  }
-}
-/* ==============================
-   FOUNDER – Premium Layout
-   ============================== */
-.founder-wrapper {
-  background: #fff;
-  padding: 50px 20px;
-}
-
-.founder-card {
-  background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
-  border-radius: 20px;
-  padding: 30px 20px;
-  color: #fff;
-  max-width: 92%;
-  margin: 0 auto;
-  text-align: center;
-  box-shadow: var(--shadow);
-}
-
-.founder-card h2 {
-  font-size: 1.6rem;
-  font-weight: 800;
-  line-height: 1.3;
-  margin-bottom: 12px;
-}
-
-.founder-card .intro {
-  font-size: 1rem;
-  font-weight: 500;
-  color: rgba(255,255,255,0.9);
-  margin-bottom: 20px;
-}
-
-.founder-card .photo img {
-  width: 100%;
-  max-width: 340px;
-  border-radius: 16px;
-  margin: 0 auto 20px;
-  display: block;
-}
-
-.founder-list {
-  list-style: none;
-  margin: 0 0 20px;
-  padding: 0;
-  text-align: left;
-  max-width: 340px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.founder-list li {
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-  padding-left: 28px;
-  position: relative;
-}
-
-.founder-list li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: var(--sf-gold);
-  font-weight: bold;
-}
-
-.founder-cta {
-  display: inline-block;
-  padding: 14px 26px;
-  border-radius: 30px;
-  font-weight: 800;
-  box-shadow: var(--shadow);
-  margin-top: 10px;
-}
-
-/* Mobile refinements */
-@media (max-width: 768px) {
-  .founder-card h2 {
-    font-size: 1.4rem;
-  }
-  .founder-card .intro {
-    font-size: 0.95rem;
-  }
-  .founder-list li {
-    font-size: 0.9rem;
-  }
-}
-/* ==============================
-   REELS – Premium Heading
-   ============================== */
-.reel-section h2 {
-  background: linear-gradient(90deg, var(--sf-purple), var(--sf-gold));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 1.6rem;    /* reduced font size */
-  font-weight: 800;
-  line-height: 1.3;     /* tighter line spacing */
-  margin-bottom: 20px;
-}
-
-@media (max-width: 768px) {
-  .reel-section h2 {
-    font-size: 1.3rem;   /* smaller on mobile */
-    line-height: 1.25;
-  }
-}
-/* ==============================
-   CASE – Text Styling to Match Proof
-   ============================== */
-.case .card {
-  background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
-  border-radius: var(--radius);
-  color: #fff;
-  padding: 40px 30px;
-  box-shadow: var(--shadow);
-  min-height: 160px;
-
-  /* Flex for center alignment */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-  font-size: 1.1rem;   /* same as proof */
-  font-weight: 600;
-  line-height: 1.5;
-}
-
-.case .card strong {
-  font-size: 1.4rem;   /* highlight numbers/keywords like proof h3 */
-  font-weight: 800;
-  color: var(--sf-gold);
-  margin-bottom: 8px;
-  display: block;
-}
-
-.case .result-card {
-  background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
-  color: var(--sf-purple);
-  font-weight: 700;
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-  .case .card {
-    padding: 30px 20px;
-    min-height: 140px;
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-  .case .card strong {
-    font-size: 1.2rem;
-  }
-}
-/* ==============================
-   CASE – Equal Height + Premium Style
-   ============================== */
-.case .card-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-.case .card {
-  background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
-  border-radius: var(--radius);
-  color: #fff;
-  padding: 40px 30px;
-  box-shadow: var(--shadow);
-  min-height: 160px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: 600;
-  line-height: 1.5;
-}
-
-.case .card strong {
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: var(--sf-gold);
-  margin-bottom: 6px;
-  display: block;
-}
-
-.case .result-card {
-  background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
-  color: var(--sf-purple);
-  font-weight: 700;
-}
-
-/* Icons */
-.case .icon {
-  font-size: 1.6rem;
-  font-weight: 900;
-  margin-bottom: 6px;
-  display: inline-block;
-}
-.case .icon.before { color: #FF4C4C; }    /* Red ✘ */
-.case .icon.after  { color: var(--sf-gold); } /* Gold ⟳ */
-.case .icon.result { color: #28a745; }    /* Green ✔ */
-
-/* Mobile */
-@media (max-width: 768px) {
-  .case .card {
-    padding: 30px 20px;
-    min-height: 140px;
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-  .case .card strong {
-    font-size: 1.1rem;
-  }
-}
-/* ==============================
-   CASE
-   ============================== */
-.case {
-  padding: 60px 8%;
-  text-align: center;
-}
-
-.case h2 {
-  font-size: 2.2rem;        /* bigger headline */
-  font-weight: 900;         /* extra heavy */
-  margin-bottom: 30px;
-}
-
-.case-card {
-  display: grid;
-  grid-template-rows: repeat(3, 1fr); /* equal height */
-  gap: 24px;
-}
-
-.case .card {
-  border-radius: 18px;
-  padding: 28px 22px;
-  box-shadow: var(--shadow);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 140px;         /* equal height with proof cards */
-}
-
-.case .card p {
-  margin: 0;
-  font-size: 1.1rem;        /* increased size */
-  font-weight: 700;         /* heavy */
-  line-height: 1.5;
-}
-
-/* Purple cards with gold text */
-.purple-card {
-  background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
-  color: var(--sf-gold);
-}
-
-/* Gold card with purple text */
-.gold-card {
-  background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
-  color: var(--sf-purple);
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .case h2 {
-    font-size: 1.8rem;
-    line-height: 1.3;
-  }
-  .case .card p {
-    font-size: 1rem;
-  }
-}
-/* ==============================
-   SOLUTION – Premium Layout
-   ============================== */
-.sub-purple {
-  color: var(--sf-purple);
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 8px 0 20px;
-  text-align: center;
-}
-
-.solution-image img {
-  max-width: 95%;
-  border-radius: 14px;
-  margin: 0 auto 10px;
-  display: block;
-}
-
-.solution-list {
-  list-style: none;
-  margin: 10px auto 20px;
-  padding: 0;
-  max-width: 90%;
-}
-
-.solution-list li {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-  line-height: 1.4;
-  padding-left: 28px;
-  position: relative;
-}
-
-.solution-list li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: var(--sf-gold);
-  font-weight: 900;
-  font-size: 1.1rem;
-}
-
-/* CTA button */
-.solution-cta {
-  display: block;
-  margin: 18px auto 0;
-  background: var(--sf-gold);
-  color: var(--sf-dark);
-  padding: 14px 28px;
-  border-radius: 30px;
-  font-weight: 800;
-  text-decoration: none;
-  text-align: center;
-  box-shadow: var(--shadow);
-  max-width: 90%;
-  transition: all 0.3s ease;
-}
-
-.solution-cta:hover,
-.solution-cta:active {
-  background: var(--sf-purple);
-  color: var(--sf-white);
-  box-shadow: var(--shadow-hover);
-}
-/* ==============================
-   FOUNDER – Extended Width & Larger Image
-   ============================== */
-.founder-card {
-  max-width: 96%;   /* wider than before */
-  margin: 0 auto;
-  padding: 30px 22px;
-}
-
-.founder-card .photo img {
-  width: 100%;
-  max-width: 360px; /* increased from 320px */
-  border-radius: 16px;
-  margin: 0 auto 20px;
-  display: block;
-}
-.solution-image img,
-.founder-card .photo img {
-  transition: transform 0.6s ease, opacity 0.6s ease;
-}
-/* Founder CTA Gold Button */
-.founder-card .btn-gold {
-  display: inline-block;
-  background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
-  color: #2d004c;
-  padding: 14px 28px;
-  border-radius: 30px;
-  font-weight: 800;
-  font-size: 1rem;
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(212,175,55,0.5);
-  animation: pulseGold 2.5s infinite;
-}
-
-/* Pulse effect */
-@keyframes pulseGold {
-  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212,175,55,.6); }
-  70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(212,175,55,0); }
-  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212,175,55,0); }
-}
-
-/* Glitter Shine */
-.founder-card .btn-gold::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    120deg,
-    rgba(255,255,255,0) 0%,
-    rgba(255,255,255,.6) 50%,
-    rgba(255,255,255,0) 100%
-  );
-  transform: rotate(25deg);
-  animation: shimmer 3s infinite;
-}
-
-@keyframes shimmer {
-  0% { transform: translateX(-100%) rotate(25deg); }
-  100% { transform: translateX(100%) rotate(25deg); }
-}
-/* ==============================
-   CASE SECTION
-   ============================== */
-.case {
-  background: #fff; /* clean white background */
-  padding: 60px 8%;
-  text-align: center;
-}
-
-.case h2 {
-  font-size: 2.4rem;
-  font-weight: 900;
-  margin-bottom: 30px;
-}
-
-.case-card {
-  display: grid;
-  gap: 24px;
-}
-
-/* Equal height purple cards */
-.case .card {
-  background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
-  color: #fff;
-  border-radius: var(--radius);
-  padding: 28px 24px;
-  font-size: 1.1rem;
-  font-weight: 500;
-  min-height: 130px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  box-shadow: var(--shadow); /* floating premium effect */
-}
-
-/* Gold text highlight for headings */
-.case .card strong {
-  display: block;
-  color: var(--sf-gold);
-  font-size: 1.2rem;
-  font-weight: 800;
-  margin-bottom: 8px;
-}
-
-/* Result card variation */
-.case .result-card {
-  background: linear-gradient(145deg, #2d004c, #4B0082);
-  color: var(--sf-gold);
-}
-<!-- ✅ CASE -->
-<section class="case">
-  <h2><span>From Chaos</span> <span style="color:#D4AF37">to Control.</span></h2>
-  <div class="case-card">
-    
-    <div class="card" data-aos="fade-up" data-aos-delay="0">
-      <strong>Before</strong><br>
-      No daily numbers, rebooking 0, retail 3%
-    </div>
-
-    <div class="card" data-aos="fade-up" data-aos-delay="150">
-      <strong>After</strong><br>
-      Daily P&L + scripts → retail 11%
-    </div>
-
-    <div class="card result-card" data-aos="fade-up" data-aos-delay="300">
-      <strong>Result</strong><br>
-      Profit +8.4% in 6 weeks
-    </div>
-
-  </div>
-</section>
-/* ✅ Tighten gaps between sections */
-section {
-  margin-top: 20px;   /* reduce top gap */
-  margin-bottom: 20px; /* reduce bottom gap */
-  padding-top: 30px;   /* reduce padding */
-  padding-bottom: 30px;
-}
-
-/* ✅ For headings inside sections */
-section h2, section h3 {
-  margin-top: 0;
-  margin-bottom: 15px; /* small clean gap */
-}
-
-/* ✅ Extra tighten for Founder & Reels (to avoid big white space) */
-.founder, .reel-section {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-/* ✅ Global Section Spacing */
-section {
-  margin-top: 10px;      /* tightened */
-  margin-bottom: 20px;   /* consistent small spacing */
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-section h2 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-size: 1.8rem;
-  font-weight: 800;
-}
-.reel-section {
-  text-align: center;
-  padding: 20px;
-}
-
-.reel-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-.reel-grid blockquote {
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,.15);
-}
-.reel-section h2,
-.solution h2,
-.case h2,
-.founder h2 {
-  text-align: center !important;
-  margin: 0 auto 12px auto;  /* tightened bottom gap */
-}
-section {
-  margin: 0 !important;
-  padding: 30px 16px !important; /* balanced spacing */
-}
-
-section img,
-section .card,
-section blockquote {
-  margin: 12px auto !important; /* small gap only */
-}
-/* ✅ Global Section Spacing Fix */
-section {
-  margin-top: 40px;   /* tighten gap above */
-  margin-bottom: 40px; /* tighten gap below */
-  padding-top: 20px;   /* keep little breathing space */
-  padding-bottom: 20px;
-}
-
-/* ✅ Optional override for sections needing more space */
-.section-tight {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.section-loose {
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
-/* ==============================
-   SECTION SPACING FIX
-   ============================== */
-section {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-section.hero {
-  margin-top: 0;
-  padding: 80px 20px 60px;
-}
-
-section.proof,
-section.problems,
-section.case,
-section.solution,
-section.founder-wrapper,
-section.reel-section {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.footer-premium {
-  margin-top: 40px;
-  padding: 50px 20px;
-}
 
 /* ==============================
-   HEADINGS CENTER + PREMIUM STYLE
-   ============================== */
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.solution-text h2 {
-  text-align: center;
-  line-height: 1.3;
-  margin-bottom: 12px;
-}
-
-.solution-text .sub-purple {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* ==============================
-   CASE SECTION FIX
-   ============================== */
-.case h2 {
-  font-size: 28px;
-  font-weight: 900;
-  margin-bottom: 24px;
-}
-
-/* ==============================
-   BUTTONS
-   ============================== */
-.btn-gold {
-  background: linear-gradient(135deg, #FFD700, #D4AF37);
-  color: #2d004c;
-  font-weight: 700;
-  padding: 14px 28px;
-  border-radius: 12px;
-  display: inline-block;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-gold:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-}
-
-.btn-gold.pulse {
-  animation: pulseGold 2s infinite;
-}
-
-@keyframes pulseGold {
-  0% { box-shadow: 0 0 0 0 rgba(212,175,55, 0.6); }
-  70% { box-shadow: 0 0 0 15px rgba(212,175,55, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(212,175,55, 0); }
-}
-.reel-grid {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding: 10px 0;
-}
-
-.reel-grid blockquote {
-  flex: 0 0 85%; /* each reel takes 85% width */
-  max-width: 85%;
-  border-radius: 16px;
-  overflow: hidden;
-  scroll-snap-align: center;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-  margin: 0; /* remove default blockquote margin */
-}
-.reel-grid::-webkit-scrollbar { display: none; }
-/* ✅ Reduce gap between image and text in solution section */
-.solution-image img {
-  display: block;
-  margin-bottom: 12px; /* reduce bottom spacing */
-}
-
-.solution-list {
-  margin-top: 8px; /* tighten spacing above list */
-}
-.solution-image {
-  margin-bottom: 0 !important;
-}
-
-.solution-list {
-  margin-top: 0 !important;
-}
-
-/* ✅ Problems Section Alignment Fix (Force Center) */
-.problems {
-  text-align: center;
-  padding: 20px 15px;
-}
-
-.problems h2 {
-  margin-bottom: 20px;
-}
-
-.problems-grid {
-  display: flex !important;          /* force flex instead of grid */
-  flex-direction: column !important; /* stack vertically */
-  align-items: center !important;    /* ✅ center horizontally */
-  gap: 16px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.problem-card {
-  background: linear-gradient(135deg, #FFD700, #D4AF37);
-  color: #2d004c;
-  font-weight: 700;
-  padding: 16px 20px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-  max-width: 500px;   /* ✅ keeps them from stretching full width */
-  width: 100%;
-}
-
-/* ✅ About Page Styling */
-.about-page .hero {
-   min-height: 100vh;
-  display: flex; flex-direction: column;
-  justify-content: center; align-items: center;
-  text-align: center;
-  padding: 100px 20px 80px;
-  background: linear-gradient(135deg, var(--sf-purple), var(--sf-gold));
-  color: var(--sf-white);
-}
-
-.about-page .hero h1 {
-  font-size: 2.4rem;
-  font-weight: 900;
-  margin-bottom: 15px;
-}
-
-.about-page .hero-sub {
-  font-size: 1.1rem;
-  margin-bottom: 25px;
-}
-
-/* ✅ Founder Section */
-.about-page .founder {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 50px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  align-items: center;
-  text-align: left;
-}
-
-.about-page .founder .photo img {
-  border-radius: 20px;
-  max-width: 320px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.about-page .founder ul {
-  margin: 20px 0;
-  padding: 0;
-  list-style: none;
-}
-
-.about-page .founder li {
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-/* ✅ Proof + Fix Grids */
-.card-purple {
-  background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
-  color: #fff;
-  padding: 24px;
-  border-radius: 16px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
-  text-align: center;
-}
-
-.card-purple:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-}
-
-.fix-grid,
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.highlight-trial {
-  background: linear-gradient(135deg, #FFD700, #D4AF37);
-  color: #2d004c;
-  font-weight: 700;
-}
-
-/* ✅ Solution Sections */
-.solution h2 {
-  text-align: center;
-  margin-bottom: 15px;
-  font-size: 1.8rem;
-  font-weight: 800;
-}
-
-.solution-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  align-items: center;
-  padding: 40px 20px;
-}
-
-.solution-text, .solution-image {
-  flex: 1 1 450px;
-}
-
-.solution-text ul {
-  margin-top: 15px;
-  padding-left: 20px;
-}
-
-.solution-text li {
-  margin-bottom: 8px;
-  font-weight: 500;
-}
-
-/* ✅ Responsive */
-@media (max-width: 768px) {
-  .about-page .founder {
-    flex-direction: column;
-    text-align: center;
-  }
-  .solution-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .solution-text ul {
-    text-align: left;
-  }
-}
-/* ✅ Premium Footer */
-.footer-premium {
-  background: linear-gradient(135deg, #4B0082 0%, #2d004c 100%);
-  color: #fff;
-  text-align: center;
-  padding: 50px 20px 30px;
-  border-radius: 0 !important;  /* ✅ Removes curve edges */
-  box-shadow: 0 -6px 20px rgba(0,0,0,0.2);
-}
-
-.footer-premium h2 {
-  font-size: 1.4rem;
-  font-weight: 800;
-  margin-bottom: 12px;
-  line-height: 1.4;
-}
-
-.footer-premium h2 .gold-gradient {
-  background: linear-gradient(90deg, #FFD700, #D4AF37);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.footer-premium p {
-  font-size: 0.95rem;
-  margin-bottom: 22px;
-  color: rgba(255,255,255,0.9);
-}
-
-.footer-cta {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.footer-cta a {
-  display: block;
-  text-align: center;
-  font-weight: 700;
-  padding: 14px 20px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-/* Gold Gradient Button */
-.btn-gold {
-  background: linear-gradient(135deg, #FFD700, #D4AF37);
-  color: #2d004c;
-  box-shadow: 0 4px 12px rgba(212,175,55,0.4);
-  transition: all 0.3s ease;
-}
-.btn-gold:hover {
-  box-shadow: 0 6px 18px rgba(212,175,55,0.6);
-}
-
-/* Outline Button */
-.btn-outline {
-  border: 2px solid #D4AF37;
-  color: #FFD700;
-  background: transparent;
-  transition: all 0.3s ease;
-}
-.btn-outline:hover {
-  background: linear-gradient(135deg, #FFD700, #D4AF37);
-  color: #2d004c;
-}
-
-/* Separator Line */
-.footer-separator {
-  border: 0;
-  height: 1px;
-  background: rgba(255,255,255,0.2);
-  margin: 25px 0 15px;
-}
-
-/* Copyright */
-.copyright {
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.6);
-}
-/* Founder section - remove rounded edges */
-.founder,
-.founder-wrapper,
-.founder-card {
-  border-radius: 0 !important; /* removes curves */
-  max-width: 100%;             /* make it span full width */
-}
-/* Why Salonfix Exists - bullet visibility fix */
-.solution-text ul,
-.solution-text ul li {
-  color: #fff;             /* make them visible on purple background */
-  font-weight: 600;        /* stronger look */
-  margin-bottom: 10px;
-}
-
-.solution-text ul li::before {
-  content: "✔";            /* gold check mark */
-  color: var(--sf-gold);
-  margin-right: 8px;
-  font-weight: 900;
-}
-/* Show & style Why Salonfix Exists list */
-.solution-text ul {
-  margin: 16px 0;
-  padding-left: 0;       /* remove default browser padding */
-  list-style: none;      /* remove normal dots */
-}
-
-.solution-text ul li {
-  color: #fff;           /* visible on purple/dark backgrounds */
-  font-weight: 600;
-  margin-bottom: 10px;
-  text-align: left;      /* neat alignment under heading */
-}
-
-.solution-text ul li::before {
-  content: "✔";
-  color: var(--sf-gold); /* gold checkmark */
-  margin-right: 8px;
-  font-weight: 900;
-}
-/* ✅ Center heading + subheading + bullets in Solution section */
-.solution-text {
-  text-align: center;   /* forces everything inside to center */
-}
-
-.solution-text h3,
-.solution-text p {
-  text-align: center;   /* double ensure for subheadings */
-  margin: 10px 0;
-}
-
-.solution-text ul {
-  list-style: none;     /* remove dots */
-  margin: 20px 0;
-  padding: 0;
-}
-
-.solution-text ul li {
-  margin-bottom: 10px;
-  font-weight: 600;
-  color: #1b1230;
-}
-/* Center text utility */
-.center-text {
-  text-align: center;
-}
-
-/* Premium gold check bullets */
-.gold-checks {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-}
-.gold-checks li {
-  margin-bottom: 10px;
-  font-weight: 600;
-  color: #1b1230; /* dark text */
-}
-.gold-checks li::before {
-  content: "✔";
-  color: var(--sf-gold);
-  margin-right: 8px;
-  font-weight: 900;
-}
-
-/* ✅ Force show bullets in About sections on mobile */
-@media (max-width: 768px) {
-  .solution-text ul,
-  .gold-checks {
-    display: block !important;   /* always visible */
-    text-align: center !important;
-    margin: 15px auto;
-    padding: 0;
-  }
-
-  .solution-text ul li,
-  .gold-checks li {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #1b1230;  /* dark text for contrast */
-  }
-
-  .solution-text ul li::before,
-  .gold-checks li::before {
-    content: "✔";
-    color: var(--sf-gold);
-    margin-right: 8px;
-    font-weight: 900;
-  }
-}
-/* ==============================
-   CORRECTION UPDATES – FINAL
-   ============================== */
-
-/* 1. Founder Section – full width, no outer curves */
-.founder-wrapper,
-.founder-card {
-  border-radius: 0 !important;    /* remove outside curves */
-  width: 100% !important;         /* full width background */
-  max-width: 100% !important;
-  margin: 0;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-/* Keep founder inner image & bullet list styled normally */
-.founder-card .photo img {
-  border-radius: 16px; /* keep photo curved */
-}
-.founder-list li {
-  font-weight: 600;
-}
-
-/* 2. Problems Section – outer straight, inner gold boxes curved */
-.problems {
-  border-radius: 0 !important;  /* remove outside purple curve */
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0;
-}
-.problem-card {
-  border-radius: 15px !important; /* keep gold boxes curved */
-}
-
-/* 3. Case Section – restore rounded inner cards */
-.case {
-  border-radius: 0 !important; /* section edges straight */
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0;
-}
-.case .card {
-  border-radius: 16px !important; /* restore rounded look for cards */
-}
-
-/* 4. Solution Sections – bullets visible + gold checks + centered */
-.solution-text {
-  text-align: center;
-}
-.solution-text ul {
-  list-style: none;
-  margin: 16px auto;
-  padding: 0;
-  max-width: 500px;
-  text-align: left; /* neat alignment */
-}
-.solution-text ul li {
-  margin-bottom: 10px;
-  font-weight: 600;
-  color: #1b1230;
-  position: relative;
-  padding-left: 26px;
-}
-.solution-text ul li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: var(--sf-gold);
-  font-weight: 900;
-}
-
-/* 5. Gap Fix – tighten space in "Not Advice / Daily Control" section */
-.solution {
-  padding-top: 30px !important;
-  padding-bottom: 30px !important;
-}
-.solution-image img {
-  margin-top: 10px !important;
-  margin-bottom: 10px !important;
-}
-.solution-text p,
-.solution-text h3 {
-  margin-bottom: 10px !important;
-}
-.founder .photo img {
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.founder .photo img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.25);
-}
-/* ✅ About page section headings in purple */
-.about-page h2 {
-  color: var(--sf-purple) !important;
-  font-weight: 900;
-  text-align: center;
-}
-/* Fix big gap between heading and image/bullets */
-.solution {
-  padding-top: 20px !important;   /* reduce top padding */
-  padding-bottom: 20px !important;
-}
-
-.solution-image img {
-  margin-top: 0 !important;       /* remove extra margin */
-  margin-bottom: 10px !important; /* keep small breathing space */
-  display: block;
-}
-@media (max-width: 768px) {
-  .solution {
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-  }
-  .solution-image img {
-    margin-top: 0 !important;
-    margin-bottom: 8px !important;
-  }
-}
-/* Founder section full width fix */
-.founder-card,
-.about-page .founder {
-  max-width: 100% !important;  /* remove container limit */
-  width: 100% !important;      /* span entire screen */
-  margin: 0 !important;        /* no auto margins */
-  border-radius: 0 !important; /* no side curves */
-}
-
-/* Purple background flush to edges */
-.founder-card {
-  background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-.solution h2 {
-  margin-bottom: 10px !important; /* tighter */
-}
-
-.solution p.sub-purple {
-  margin-bottom: 15px !important; /* reduce gap before bullets */
-}
-
-.solution-list {
-  margin-top: 10px !important; /* keep bullets close */
-}
-.solution-text {
-  text-align: center;
-  margin: 0 auto;
-}
-
-.solution-text .solution-list {
-  margin-bottom: 15px !important; /* reduce big gap */
-}
-
-.solution-image img {
-  max-width: 95%;
-  margin: 0 auto;
-  display: block;
-  border-radius: 12px;
-}
-/* Founder wrapper - full width purple background */
-.founder-wrapper {
-  background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
-  width: 100% !important;
-  margin: 0;
-  padding: 50px 20px;
-  border-radius: 0 !important; /* no curve edges */
-}
-
-/* Inner card - transparent so wrapper shows */
-.founder-card {
-  background: transparent !important;
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-  color: #fff;
-}
-
-/* Image still rounded */
-.founder-card .photo img {
-  max-width: 360px;
-  border-radius: 16px;
-  margin: 20px auto;
-  display: block;
-}
-/* Footer heading fix */
-.footer-premium h2,
-.footer-premium h2 span {
-  color: #fff !important;   /* force white text */
-}
-.solution-text h2 {
-  white-space: pre-line;        /* respect line breaks */
-  text-align: center;           /* keep it centered */
-  font-size: 1.6rem;            /* adjust size for mobile */
-  line-height: 1.4;             /* tighter line spacing */
-}
-/* ==============================
-   5-STEP PROFIT FIX BOXES
-   ============================== */
-.steps-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  max-width: 1100px;
-  margin: 40px auto;
-  text-align: center;
-}
-
-.step-card {
-  background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
-  border-radius: 16px;
-  padding: 30px 20px;
-  color: #fff;
-  box-shadow: var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.step-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-hover);
-}
-
-.step-card.gold {
-  background: linear-gradient(135deg, #FFD700, #D4AF37);
-  color: var(--sf-purple);
-  font-weight: 700;
-}
-
-.step-number-box {
-  background: linear-gradient(135deg, #FFD700, #D4AF37);
-  color: var(--sf-dark);
-  font-weight: 900;
-  font-size: 1rem;
-  display: inline-block;
-  padding: 8px 12px;
-  border-radius: 6px;
-  margin-bottom: 12px;
-  box-shadow: 0 4px 10px rgba(212,175,55,0.4);
-}
-
-.step-card h3 {
-  font-size: 1.2rem;
-  font-weight: 800;
-  margin-bottom: 8px;
-}
-
-.step-card p {
-  font-size: 0.95rem;
-  font-weight: 500;
-  line-height: 1.4;
-  margin: 0;
-}
-/* ==============================
-   FAQ ACCORDION
-   ============================== */
-.faq {
-  background: #fff;
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-.faq h2 {
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: var(--sf-purple);
-  margin-bottom: 30px;
-}
-.faq-item {
-  border: 1px solid #eee;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  box-shadow: var(--shadow);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-.faq-item:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-hover);
-}
-.faq-question {
-  width: 100%;
-  background: none;
-  border: none;
-  outline: none;
-  text-align: left;
-  padding: 18px 20px;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--sf-purple);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.faq-question::after {
-  content: "+";
-  font-weight: 900;
-  font-size: 1.2rem;
-  color: var(--sf-gold);
-  transition: transform 0.3s ease;
-}
-.faq-item.active .faq-question::after {
-  content: "–";
-  transform: rotate(180deg);
-}
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.3s ease;
-  background: #fafafa;
-  padding: 0 20px;
-}
-.faq-item.active .faq-answer {
-  max-height: 500px;
-  padding: 15px 20px;
-}
-.faq-answer p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin: 0;
-}
-/* Remove bullets only in Services page step cards */
-.services-page .step-card ul {
-  list-style: none;   /* no browser round bullets */
-  margin: 0;
-  padding: 0;
-}
-
-.services-page .step-card ul li {
-  padding-left: 0;   /* reset spacing */
-}
-
-.services-page .step-card ul li::before {
-  content: none !important;  /* remove ✔ icons */
-}
-<div class="plans-grid">
-
-  <!-- START STRONG -->
-  <article class="card-purple" data-aos="zoom-in" data-aos-delay="0">
-    ...
-  </article>
-
-  <!-- STAY SHARP -->
-  <article class="card-purple" data-aos="zoom-in" data-aos-delay="150">
-    ...
-  </article>
-
-  <!-- STYLE EMPIRE -->
-  <article class="card-purple" data-aos="zoom-in" data-aos-delay="300">
-    ...
-  </article>
-
-  <!-- LIGHT TOUCH -->
-  <article class="card-purple" data-aos="zoom-in" data-aos-delay="450">
-    ...
-  </article>
-
-</div>
-/* ==============================
-   CONTACT PAGE – Custom Styling
-   ============================== */
-.contact-page .icon-grid {
-  display: grid;
-  gap: 14px;
-}
-
-.contact-page .icon-row {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: var(--sf-shadow-soft);
-  padding: 14px;
-}
-
-.contact-page .icon-row i {
-  font-size: 20px;
-  color: var(--sf-purple);
-  margin-top: 3px;
-}
-
-/* Connect Card */
-.contact-page .connect-card {
-  padding: 56px 8%;
-  background: linear-gradient(180deg, var(--sf-purple) 0%, var(--sf-purple-900) 100%);
-  color: #fff;
-  border-radius: 24px;
-  box-shadow: var(--sf-shadow);
-}
-
-.contact-page .connect-card .headline {
-  font-size: clamp(28px,3.6vw,44px);
-  font-weight: 900;
-}
-
-.contact-page .connect-card .sub {
-  color: rgba(255,255,255,.9);
-  max-width: 800px;
-}
-
-.contact-page .connect-grid {
-  display: grid;
-  gap: 20px;
-  margin-top: 18px;
-  grid-template-columns: repeat(2,minmax(0,1fr));
-}
-@media(max-width:900px){
-  .contact-page .connect-grid { grid-template-columns:1fr; }
-}
-
-.contact-page .connect-item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(212,175,55,.18);
-  padding: 16px 18px;
-  border-radius: 18px;
-  text-decoration: none;
-  color: #fff;
-}
-
-.contact-page .ci-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(180deg, rgba(212,175,55,.95), rgba(212,175,55,.7));
-  color: #2a1e00;
-}
-/* Contact Page – Connect Section Purple Background */
-.contact-page #connect {
-  background: linear-gradient(180deg, var(--sf-purple), var(--sf-purple-900));
-  color: #fff;
-}
-
-.contact-page #connect .connect-item {
-  background: rgba(255,255,255,.08);  /* softer boxes */
-  border: 1px solid rgba(255,255,255,.15);
-  color: #fff;
-}
-/* Contact Page – Purple Connect Section */
-.contact-page #connect {
-  background: linear-gradient(180deg, var(--sf-purple), var(--sf-purple-900));
-  color: #fff;
-}
-
-.contact-page #connect .headline {
-  color: #fff;
-}
-
-.contact-page #connect .sub {
-  color: rgba(255,255,255,0.9);
-}
-
-.contact-page #connect .connect-item {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.18);
-  color: #fff;
-}
-
-.contact-page #connect .ci-icon {
-  background: linear-gradient(135deg, #FFD700, #D4AF37);
-  color: #2d004c;
-}
-/* ✅ Final Override – Contact Page Connect Section */
-.contact-page #connect {
-  background: linear-gradient(180deg, var(--sf-purple), var(--sf-purple-dark)) !important;
-  padding: 50px 20px !important;
-  color: #fff !important;
-}
-
-.contact-page #connect .connect-card {
-  background: transparent !important;   /* remove inner white */
-  box-shadow: none !important;
-  border: none !important;
-}
-
-.contact-page #connect .headline,
-.contact-page #connect .sub {
-  color: #fff !important;
-}
-
-.contact-page #connect .connect-item {
-  background: rgba(255,255,255,0.08) !important;
-  border: 1px solid rgba(255,255,255,0.18) !important;
-  color: #fff !important;
-}
-
-.contact-page #connect .ci-icon {
-  background: linear-gradient(135deg, #FFD700, #D4AF37) !important;
-  color: #2d004c !important;
-}
-/* CONTACT PAGE – Premium LET’S CONNECT Section */
-   /* ✨ Gold Glitter Border */
-  border: 2px solid transparent;
-  background-image: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark)),
-                    linear-gradient(145deg, #FFD700, #D4AF37, #FFD700);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-/* Hover/Touch Pop Effect */
-.contact-page .connect-item:hover,
-.contact-page .connect-item:active {
-  transform: scale(1.04);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
-}
-
-/* Premium Icon Style – Gold Glitter Effect */
-.contact-page .ci-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  font-size: 20px;
-  color: #2d004c;
-
-  background: linear-gradient(135deg, #FFD700, #D4AF37, #FFD700);
-  box-shadow: 0 0 12px rgba(212,175,55,0.8), inset 0 0 6px rgba(255,255,255,0.5);
-}
-/* ==============================
-   CONTACT PAGE – Premium Connect Section
-   ============================== */
-
-/* Gold Glitter Icons */
-.contact-page .ci-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  font-size: 20px;
-  color: #2d004c;
-  position: relative;
-  overflow: hidden;
-
-  background: linear-gradient(135deg, #FFD700, #D4AF37, #FFD700);
-  box-shadow: 0 0 12px rgba(212,175,55,0.8), inset 0 0 6px rgba(255,255,255,0.5);
-}
-
-/* ✨ Glitter Shine Animation */
-.contact-page .ci-icon::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    120deg,
-    rgba(255,255,255,0) 0%,
-    rgba(255,255,255,0.7) 50%,
-    rgba(255,255,255,0) 100%
-  );
-  transform: rotate(25deg);
-  animation: shimmer 3s infinite linear;
-}
-
-@keyframes shimmer {
-  0% { transform: translateX(-100%) rotate(25deg); }
-  100% { transform: translateX(100%) rotate(25deg); }
-}
-/* ==============================
-   CONTACT PAGE – Premium Fix
-   ============================== */
-
-/* Pop effect on touch */
-.contact-page .connect-item:hover,
-.contact-page .connect-item:active {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 6px 20px rgba(212,175,55,0.4);
-}
-
-/* Gold glitter icons */
-.contact-page .ci-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
-  color: #2d004c;
-  font-size: 1.2rem;
-  box-shadow: 0 0 10px rgba(212,175,55,0.6), 0 0 20px rgba(212,175,55,0.4);
-}
-
-/* Reduce extra gap between sections */
-.contact-page section {
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-/* Contact Page – Hero Headline Fix */
-.contact-page .hero h2,
-.contact-page .hero h1 {
-  max-width: 92%;
-  margin: 0 auto 15px auto;
-  font-size: 1.6rem;
-  font-weight: 900;
-  line-height: 1.4;
-  text-align: justify;         /* justified text */
-  text-align-last: center;     /* center the last line */
-  word-break: break-word;      /* break long words if needed */
-  display: block;
-}
-/* ✅ Fix headline in Contact page */
-.contact-page .headline-fix {
-  font-size: clamp(22px, 4.5vw, 34px);
-  font-weight: 900;
-  color: var(--sf-purple);
-  line-height: 1.35;
-  text-align: justify;   /* distribute words evenly */
-  text-align-last: center; /* keep last line centered */
-  margin-bottom: 16px;
-}
-/* Founder Heading Fix */
-.founder h2.center-text.gold-text {
-  color: var(--sf-gold) !important;   /* Force visible gold */
-  font-size: 2rem;                    /* Bigger for clarity */
-  font-weight: 900;                   /* Extra bold */
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  text-align: center;
-}
-/* Force "MEET THE FOUNDER" in one line */
-.founder h2.center-text.gold-text {
-  white-space: nowrap;   /* ✅ prevents line break */
-  font-size: 2rem;       /* adjust for desktop */
-  font-weight: 900;
-  text-align: center;
-  color: var(--sf-gold) !important;
-  margin-bottom: 16px;
-}
-
-/* Mobile adjustment */
-@media (max-width: 768px) {
-  .founder h2.center-text.gold-text {
-    font-size: 1.6rem;   /* ✅ smaller so it fits on one line */
-  }
-}
-/* ==============================
-   🔒 MOBILE LOCK (Do Not Alter Mobile Visuals)
-   ============================== */
-@media (max-width: 768px) {
-  html, body {
-    font-size: 100% !important;
-    line-height: 1.6 !important;
-  }
-
-  /* Lock navbar */
-  nav.sf-navbar, nav.sf-navbar ul, nav.sf-navbar ul li a,
-  .burger, .cta-btn-mobile {
-    all: unset !important;
-    display: revert !important;
-  }
-
-  /* Lock hero */
-  .hero, .hero h1, .hero p, .hero .btn-gold {
-    all: unset !important;
-    display: revert !important;
-  }
-
-  /* Lock sections (proof, problems, case, solution, founder, reel, footer, contact) */
-  .proof, .problems, .case, .solution, .founder,
-  .reel-section, .footer-premium, .contact-page section,
-  .contact-page .connect-card, .contact-page .connect-item {
-    all: unset !important;
-    display: revert !important;
-  }
-
-  /* Lock lists and bullets */
-  ul, ul li {
-    all: unset !important;
-    display: revert !important;
-  }
-
-  /* Lock WhatsApp float */
-  .whatsapp-float {
-    all: unset !important;
-    display: revert !important;
-  }
-}
-/* ==============================
-   🔒 MOBILE LOCK (Do Not Alter Mobile Visuals)
-   ============================== */
-@media (max-width: 768px) {
-  body.about-page,
-  body.contact-page,
-  body.services-page,
-  body.testimonials-page {
-    all: unset !important;
-    display: revert !important;
-  }
-
-  /* Freeze nav, hero, founder, proof, solution, case, footer */
-  nav.sf-navbar, .hero, .founder, .proof, .solution, .case, .footer-premium,
-  .reel-section, .contact-page section, .testimonials, .fix-grid {
-    all: unset !important;
-    display: revert !important;
-  }
-
-  /* Preserve buttons + WhatsApp float */
-  .btn-gold, .btn-outline, .whatsapp-float {
-    all: unset !important;
-    display: revert !important;
-  }
-
-  /* Preserve text sizes */
-  h1, h2, h3, p, ul, li {
-    all: unset !important;
-    display: revert !important;
-  }
-}
-
-/* ==============================
-   🖥 DESKTOP ONLY OVERRIDES
+   DESKTOP ENHANCEMENTS (≥769px)
    ============================== */
 @media (min-width: 769px) {
-  /* Example: you can freely refine desktop without touching mobile */
-  .about-page .hero h1 {
-    font-size: 3rem;
-    line-height: 1.2;
-  }
-
-  .about-page .founder .content {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-}
-/* ==============================
-   MOBILE OPTIMIZATION (≤768px)
-   ============================== */
-@media (max-width: 768px) {
-  /* ✅ HERO */
-  .hero {
-    padding: 70px 16px !important;
-    min-height: 70vh !important;
-  }
-  .hero h1 {
-    font-size: 1.8rem !important;
-    line-height: 1.3 !important;
-  }
-  .hero p {
-    font-size: 1rem !important;
-    line-height: 1.5 !important;
-  }
-
-  /* ✅ NAVBAR */
-  nav.sf-navbar ul {
-    width: 90%;
-    max-width: 380px;
-    border-radius: 16px;
-    padding: 28px 0;
-  }
-  nav.sf-navbar ul li a {
-    font-size: 1.1rem;
-    font-weight: 700;
-  }
-
-  /* ✅ FOUNDER */
-  .founder h2.center-text.gold-text {
-    font-size: 1.5rem !important;
-    white-space: nowrap !important;
-    line-height: 1.2 !important;
-    text-align: center !important;
-  }
-  .founder-card,
-  .founder-wrapper {
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 30px 16px !important;
-  }
-  .founder-card .photo img {
-    max-width: 280px !important;
-  }
-  .founder-list {
-    margin: 16px auto;
-    font-size: 0.95rem;
-  }
-
-  /* ✅ PROBLEMS */
-  .problems {
-    max-width: 92%;
-    margin: 0 auto;
-    padding: 30px 16px !important;
-  }
-  .problem-card {
-    font-size: 1rem;
-    padding: 16px;
-    min-height: auto !important;
-  }
-
-  /* ✅ CASE */
-  .case {
-    padding: 30px 16px !important;
-  }
-  .case h2 {
-    font-size: 1.6rem !important;
-    line-height: 1.3;
-  }
-  .case .card {
-    padding: 20px;
-    font-size: 1rem;
-    min-height: 120px !important;
-  }
-
-  /* ✅ SOLUTION */
-  .solution {
-    padding: 30px 16px !important;
-  }
-  .solution-text h2 {
-    font-size: 1.5rem !important;
-    line-height: 1.3;
-  }
-  .solution-list li {
-    font-size: 0.95rem !important;
-    margin-bottom: 8px;
-  }
-
-  /* ✅ REELS */
-  .reel-section {
-    padding: 20px 10px !important;
-  }
-  .reel-grid {
-    gap: 12px !important;
-  }
-
-  /* ✅ FOOTER */
-  .footer-premium {
-    padding: 30px 16px !important;
-  }
-  .footer-premium h2 {
-    font-size: 1.2rem !important;
-    line-height: 1.3 !important;
-  }
+  nav.sf-navbar ul { display: flex; gap: 25px; }
+  nav.sf-navbar .cta-btn { display: block; }
+  .hero h1 { font-size: 2.6rem; }
+  .proof h2 { font-size: 2rem; }
+  .case h2 { font-size: 2rem; }
+  .solution-text h2 { font-size: 2rem; }
+  .founder-card h2 { font-size: 2rem; }
+  .footer-premium h2 { font-size: 1.6rem; }
 }
