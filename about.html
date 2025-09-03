@@ -12,7 +12,7 @@
   <!-- Fonts + CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style-enhanced.css">
-<link rel="stylesheet" href="mobile-lock.css">
+  <link rel="stylesheet" href="mobile-lock.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
@@ -33,12 +33,12 @@
     <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </nav>
   
-<!-- ✅ HERO -->
+  <!-- ✅ HERO -->
   <section class="hero">
     <div class="hero-content" data-aos="zoom-in">
       <h1>About <span style="color:var(--sf-gold)">SALONFIX</span></h1>
       <p class="hero-sub">
-        YOUR IN-HOUSE BUSINESS PARTNER   running your salon like it’s our own.  
+        YOUR IN-HOUSE BUSINESS PARTNER running your salon like it’s our own.  
         <br><strong>Daily control | Zero leakage | Measurable growth.</strong>
       </p>
       <a href="https://wa.me/919629370666?text=FIX" class="btn-gold pulse">
@@ -47,13 +47,12 @@
     </div>
   </section>
 
-
   <!-- 🟣 FOUNDER -->
   <section class="founder section-narrow">
     <h2 class="center-text gold-text">MEET THE FOUNDER</h2>
     <div class="photo" data-aos="zoom-in" data-aos-duration="1200">
-  <img src="assets/founder.jpg" alt="JAWHAR RAJ RAJKUMAR" />
-</div>
+      <img src="assets/founder.jpg" alt="JAWHAR RAJ RAJKUMAR" />
+    </div>
     <div class="content">
       <p data-aos="fade-up">
         “I’ve spent over a decade inside salons — running teams, fixing systems, and flipping chaos into profit.  
@@ -80,53 +79,40 @@
   </section>
 
   <!-- 🟣 WHY SALONFIX -->
-<section class="solution">
-  <!-- Heading -->
-  <h2 class="center-text gold-text">WHY SALONFIX EXISTS</h2>
-
-  <!-- Image -->
-  <div class="solution-image" data-aos="fade-up">
-    <img src="assets/about-why.jpg" alt="Why SALONFIX exists" />
-  </div>
-
-  <!-- Bullets -->
-  <div class="solution-text">
-    <ul class="gold-checks center-text">
-      <li>Staff chaos & low accountability</li>
-      <li>Profits unclear — leaks in cash & stock</li>
-      <li>Owners trapped in daily firefighting</li>
-    </ul>
-
-    <!-- Supporting text -->
-    <p class="center-text">
-      That’s where SALONFIX steps in: 
-      <strong>we run the backend daily, track every rupee, and give owners freedom to grow.</strong>
-    </p>
-  </div>
-</section>
-
+  <section class="solution">
+    <h2 class="center-text gold-text">WHY SALONFIX EXISTS</h2>
+    <div class="solution-image" data-aos="fade-up">
+      <img src="assets/about-why.jpg" alt="Why SALONFIX exists" />
+    </div>
+    <div class="solution-text">
+      <ul class="gold-checks center-text">
+        <li>Staff chaos & low accountability</li>
+        <li>Profits unclear — leaks in cash & stock</li>
+        <li>Owners trapped in daily firefighting</li>
+      </ul>
+      <p class="center-text">
+        That’s where SALONFIX steps in: 
+        <strong>we run the backend daily, track every rupee, and give owners freedom to grow.</strong>
+      </p>
+    </div>
+  </section>
 
   <!-- 🟣 DIFFERENCE -->
-<section class="solution">
-  <!-- Headings -->
-  <h2 class="center-text gold-text">NOT ADVICE. NOT SOFTWARE.</h2>
-  <h3 class="center-text">We Take Daily Control.</h3>
-
-  <!-- Image -->
-  <div class="solution-image" data-aos="fade-up">
-    <img src="assets/about-different.jpg" alt="How SALONFIX is different" />
-  </div>
-
-  <!-- Bullets -->
-  <div class="solution-text">
-    <ul class="gold-checks center-text">
-      <li>Daily Clarity — one-page numbers on WhatsApp</li>
-      <li>Team Accountability — proof-based SOPs</li>
-      <li>Stock Control — no waste, no theft</li>
-      <li>Growth Moves — pricing, rebooking, expansion</li>
-    </ul>
-  </div>
-</section>
+  <section class="solution">
+    <h2 class="center-text gold-text">NOT ADVICE. NOT SOFTWARE.</h2>
+    <h3 class="center-text">We Take Daily Control.</h3>
+    <div class="solution-image" data-aos="fade-up">
+      <img src="assets/about-different.jpg" alt="How SALONFIX is different" />
+    </div>
+    <div class="solution-text">
+      <ul class="gold-checks center-text">
+        <li>Daily Clarity — one-page numbers on WhatsApp</li>
+        <li>Team Accountability — proof-based SOPs</li>
+        <li>Stock Control — no waste, no theft</li>
+        <li>Growth Moves — pricing, rebooking, expansion</li>
+      </ul>
+    </div>
+  </section>
 
   <!-- 🟣 5-STEP PROFIT FIX -->
   <section class="proof">
@@ -174,10 +160,8 @@
   <!-- ✅ Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    // Init AOS
     AOS.init({ duration: 600, once: true, offset: 20 });
 
-    // Burger menu
     const burger = document.getElementById('burger');
     const nav = document.getElementById('site-nav');
     if (burger && nav) {
