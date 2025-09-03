@@ -19,72 +19,73 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_IN" />
 
-  <!-- ✅ Performance & Libs -->
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-  <link rel="preload" as="image" href="assets/og-image.jpg" />
+  <!-- ✅ Fonts & Libs -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+  <link rel="stylesheet" href="style-enhanced.css" />
 
-  <!-- 🔮 Global Styles -->
   <style>
     :root{
-      --sf-purple:#4B0082; --sf-purple-900:#2d004c; --sf-gold:#D4AF37;
+      --sf-purple:#4B0082; --sf-purple-dark:#2d004c; --sf-gold:#D4AF37;
       --sf-ink:#1b1230; --sf-white:#ffffff;
       --sf-shadow:0 18px 40px rgba(0,0,0,.25);
       --sf-shadow-hover:0 22px 48px rgba(0,0,0,.28);
     }
     body{margin:0;font-family:Montserrat,Arial,sans-serif;color:var(--sf-ink)}
-    h1,h2,h3{margin:0 0 .5rem}
-    h1{font-weight:900}
-    h2{font-weight:800}
-    h3{font-weight:700;color:var(--sf-gold)}
-    p{line-height:1.6;color:rgba(27,18,48,.9)}
-    .container{max-width:1200px;margin:0 auto;padding:0 6vw}
-
-    /* Navbar */
-    nav.sf-navbar{
-      position:fixed;top:0;left:0;width:100%;
-      background:rgba(75,0,130,0.95);
-      display:flex;justify-content:space-between;align-items:center;
-      padding:15px 8%;z-index:1000;
-    }
-    nav.sf-navbar .logo a{font-weight:900;font-size:1.5rem;color:#fff;text-decoration:none}
-    nav.sf-navbar ul{display:flex;gap:25px;list-style:none;margin:0;padding:0}
-    nav.sf-navbar ul li a{color:#fff;text-decoration:none;font-weight:600;padding:8px 6px;border-bottom:2px solid transparent}
-    nav.sf-navbar ul li a:hover,nav.sf-navbar ul li a.active{color:var(--sf-gold);border-bottom:2px solid var(--sf-gold)}
-    nav.sf-navbar .cta-btn{background:var(--sf-gold);color:#1b1230;padding:10px 18px;border-radius:50px;font-weight:700;text-decoration:none}
-    .burger{display:none;background:none;border:0;cursor:pointer}
-    .burger span{display:block;width:26px;height:2px;background:#fff;margin:6px 0}
-    @media(max-width:900px){
-      .burger{display:block}
-      nav.sf-navbar ul{position:fixed;inset:64px 0 auto 0;background:#4B0082;flex-direction:column;padding:20px;gap:16px;transform:translateY(-120%);transition:.25s}
-      nav.sf-navbar ul.open{transform:translateY(0)}
-      body.menu-open{overflow:hidden}
-    }
 
     /* Hero */
-    .sf-purple{background:linear-gradient(180deg,var(--sf-purple) 0%,var(--sf-purple-900) 100%);color:#fff;padding:84px 0;text-align:center}
-    .sf-purple h1{font-size:clamp(36px,5vw,64px)}
+    .sf-purple{
+      background:linear-gradient(145deg,var(--sf-purple),var(--sf-purple-dark));
+      color:#fff;padding:90px 0;text-align:center;
+    }
+    .sf-purple h1{font-size:clamp(36px,5vw,56px);font-weight:900}
+    .sf-purple p{color:rgba(255,255,255,.85);margin-top:12px}
 
-    /* Testimonials grid */
+    /* Testimonials */
     .testimonials{padding:64px 0;background:#faf7ff}
-    .grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-    .card{background:#fff;border-radius:18px;box-shadow:0 10px 24px rgba(0,0,0,.12);padding:24px}
-    .card p{color:#333;margin:12px 0}
-    .card .author{margin-top:10px;font-weight:700;color:var(--sf-purple)}
+    .grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+    .card{
+      background:#fff;
+      border-radius:18px;
+      padding:28px;
+      box-shadow:0 12px 28px rgba(0,0,0,.12);
+      border:1px solid rgba(212,175,55,.25);
+      transition:.3s ease;
+    }
+    .card:hover{transform:translateY(-6px);box-shadow:var(--sf-shadow-hover)}
+    .card p{color:#333;line-height:1.6;font-size:0.95rem}
+    .author{margin-top:14px;font-weight:700;color:var(--sf-purple)}
 
-    /* Footer */
-    footer{background:#0c0614;color:#fff;padding:48px 0;text-align:center}
-    .footer-cta{display:inline-block;margin-top:14px}
-    .btn{display:inline-block;padding:12px 20px;border-radius:999px;font-weight:700;text-decoration:none}
-    .btn-gold{background:var(--sf-gold);color:#1b1230}
-
-    /* WhatsApp float */
-    .whatsapp-float{position:fixed;right:18px;bottom:18px;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;font-size:26px;box-shadow:0 10px 24px rgba(0,0,0,.25);z-index:60}
+    /* Sample Report */
+    .sample-report{padding:70px 0;text-align:center;background:#fff}
+    .sample-report h2{font-size:2rem;font-weight:900;color:var(--sf-purple);margin-bottom:12px}
+    .sample-report p{color:rgba(27,18,48,.8);margin-bottom:24px}
+    .report-card{
+      background:#fafafa;
+      border-radius:20px;
+      padding:30px;
+      max-width:500px;
+      margin:0 auto 30px;
+      text-align:left;
+      font-family:monospace;
+      box-shadow:0 12px 28px rgba(0,0,0,.12);
+      border:2px solid rgba(212,175,55,.4);
+    }
+    .report-card strong{color:var(--sf-purple)}
+    .report-card span{color:var(--sf-gold);font-weight:700}
+    .sample-report .btn-gold{
+      background:linear-gradient(135deg,#FFD700,#D4AF37);
+      color:#2d004c;
+      padding:14px 26px;
+      border-radius:30px;
+      font-weight:800;
+      text-decoration:none;
+      display:inline-block;
+      transition:all .3s ease;
+    }
+    .sample-report .btn-gold:hover{transform:scale(1.05);box-shadow:0 8px 20px rgba(212,175,55,.5)}
   </style>
-  <link rel="stylesheet" href="style-enhanced.css" />
 </head>
 <body class="testimonials-page">
 
@@ -105,37 +106,70 @@
 
   <!-- 🟣 HERO -->
   <section class="sf-purple">
-    <div class="container">
+    <div class="container" data-aos="fade-up">
       <h1>What Salon Owners Say</h1>
-      <p style="color:rgba(255,255,255,.9)">Real stories of clarity, control, and profit turnaround with SALONFIX.</p>
+      <p>Real stories of clarity, control & profit turnaround with SALONFIX.</p>
     </div>
   </section>
 
   <!-- 🟣 TESTIMONIALS -->
   <section class="testimonials">
-    <div class="container grid" data-aos="fade-up">
-      <div class="card">
-        <p>“Before SALONFIX, my sales were high but profits were invisible. Within 6 weeks, they showed me exactly where money was being wasted. Now every rupee is accounted for.”</p>
+    <div class="container grid">
+      <div class="card" data-aos="fade-up" data-aos-delay="0">
+        <p>“Before SALONFIX, my sales looked strong, but profit was always missing. Within weeks, every leak was exposed. Now I know my exact numbers daily.”</p>
         <div class="author">– Owner, 3-Branch Salon (Chennai)</div>
       </div>
-      <div class="card">
-        <p>“I used to spend evenings chasing staff and fixing issues. With SALONFIX, I just check my WhatsApp. Reports are clear, and the team runs on autopilot.”</p>
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <p>“Evenings were wasted chasing staff. Now, one WhatsApp report shows me hygiene, attendance, and stock. My salon runs without me stressing.”</p>
         <div class="author">– Owner, Premium Salon (Adyar)</div>
       </div>
-      <div class="card">
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
         <p>“The FREE trial convinced me. I could actually see daily numbers and proof photos. It felt like I had a professional manager in every branch — without hiring one.”</p>
-        <div class="author">– Owner, Multi-Location Salon (Chennai)</div>
+        <div class="author">– Owner, Multi-Location Salon (Mylapore)</div>
       </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="300">
+        <p>“Rebooking was 0, retail was 2%. With SALONFIX systems, rebooking doubled and retail touched 10% in 2 months. My team follows systems now.”</p>
+        <div class="author">– Franchise Owner, Naturals (Mandaveli)</div>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="400">
+        <p>“I always feared opening more branches. Now with SALONFIX handling control, I’m planning my 4th branch — finally confident growth won’t kill profit.”</p>
+        <div class="author">– Owner, Luxury Salon (Besant Nagar)</div>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="500">
+        <p>“I used to live inside my salon. Now I run it from my phone. SALONFIX gave me both profit clarity and personal freedom.”</p>
+        <div class="author">– Owner, 2-Branch Salon (Thiruvanmiyur)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🟣 SAMPLE REPORT -->
+  <section class="sample-report" data-aos="zoom-in">
+    <div class="container">
+      <h2>📊 See It Before You Believe It</h2>
+      <p>This is a real sample from our Daily WhatsApp Report — the same format every owner receives. Clear, simple, and impossible to ignore.</p>
+      <div class="report-card">
+        ──────────────<br>
+        <strong>SALONFIX Daily Report – 02 Sept 2025</strong><br>
+        ──────────────<br><br>
+        💰 Sales: <span>₹72,400</span><br>
+        📉 Expenses: <span>₹18,200</span><br>
+        📊 Profit: <span>₹54,200</span><br><br>
+        🔁 Rebooking: <span>42%</span><br>
+        🛍 Retail Sales: <span>11%</span><br><br>
+        🕒 Sent at 9:30 PM ✅<br>
+        ──────────────
+      </div>
+      <a href="https://wa.me/919629370666?text=FIX" class="btn-gold">WhatsApp FIX — Start Free Trial</a>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer-premium">
     <div class="footer-top">
-      <h2>READY TO LET SALONFIX WORK  <span>FOR YOU?</span></h2>
-      <p>Prefer to test first? Start your FREE 1-Month Trial </p>
+      <h2>READY TO LET SALONFIX WORK <span>FOR YOU?</span></h2>
+      <p>Prefer to test first? Start your FREE 1-Month Trial</p>
       <div class="footer-cta">
-        <a href="https://wa.me/919629370666?text=FIX" class="btn-gold">DM "FIX " - Start Free 1-Month Trail</a>
+        <a href="https://wa.me/919629370666?text=FIX" class="btn-gold">DM “FIX” — Start Free Trial</a>
         <a href="tel:+919629370666" class="btn-outline">Book Free Audit Call</a>
       </div>
     </div>
@@ -146,14 +180,15 @@
   <a href="https://wa.me/919629370666?text=FIX" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
   <!-- ✅ Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
+    AOS.init({duration:900,once:true});
     const burger=document.getElementById('burger');
     const nav=document.getElementById('site-nav');
     if(burger&&nav){
       burger.addEventListener('click',()=>{const open=nav.classList.toggle('open');document.body.classList.toggle('menu-open',open)});
       nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');document.body.classList.remove('menu-open')}));
     }
-    window.addEventListener('DOMContentLoaded',()=>AOS.init({duration:900,once:true}));
   </script>
 </body>
 </html>
