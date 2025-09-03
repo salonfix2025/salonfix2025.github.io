@@ -2035,3 +2035,70 @@ h2 {
   background: linear-gradient(135deg, #FFD700, #D4AF37) !important;
   color: #2d004c !important;
 }
+/* CONTACT PAGE – Premium LET’S CONNECT Section */
+.contact-page #connect {
+  background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
+  color: #fff;
+  border-radius: 20px;
+  max-width: 95%;
+  margin: 0 auto;              /* center horizontally */
+  padding: 40px 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+/* Keep LET'S CONNECT headline white */
+.contact-page #connect .headline {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* Subtext styling */
+.contact-page #connect .sub {
+  text-align: center;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 20px;
+}
+
+/* Premium Contact Items */
+.contact-page .connect-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-radius: 18px;
+  padding: 18px;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255,255,255,0.05);
+  
+  /* ✨ Gold Glitter Border */
+  border: 2px solid transparent;
+  background-image: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark)),
+                    linear-gradient(145deg, #FFD700, #D4AF37, #FFD700);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover/Touch Pop Effect */
+.contact-page .connect-item:hover,
+.contact-page .connect-item:active {
+  transform: scale(1.04);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+}
+
+/* Premium Icon Style – Gold Glitter Effect */
+.contact-page .ci-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  color: #2d004c;
+
+  background: linear-gradient(135deg, #FFD700, #D4AF37, #FFD700);
+  box-shadow: 0 0 12px rgba(212,175,55,0.8), inset 0 0 6px rgba(255,255,255,0.5);
+}
