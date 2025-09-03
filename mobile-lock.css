@@ -4,169 +4,164 @@
 @media (max-width: 768px) {
 
   /* ✅ Global */
-  body, html {
-    overflow-x: hidden !important;
+  html, body {
     font-size: 15px !important;
     line-height: 1.5 !important;
+    overflow-x: hidden !important;
   }
 
   /* ✅ Navbar */
   nav.sf-navbar {
-    padding: 14px 20px !important;
+    padding: 12px 18px !important;
   }
   nav.sf-navbar ul {
-    width: 90% !important;
-    max-width: 340px !important;
-    border-radius: 18px !important;
-    margin: 0 auto !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: var(--sf-purple-dark);
+    border-radius: 18px;
+    padding: 18px;
+    width: 70%;
+    max-width: 300px;
+    display: none;
   }
+  nav.sf-navbar ul.open { display: flex !important; }
   nav.sf-navbar ul li a {
-    font-size: 1.05rem !important;
+    font-size: 1.1rem !important;
     font-weight: 700 !important;
+    color: #fff !important;
   }
+  .burger { display: flex !important; }
 
   /* ✅ Hero */
   .hero {
-    padding: 70px 20px 60px !important;
-    min-height: 70vh !important;
+    padding: 80px 20px !important;
   }
   .hero h1 {
-    font-size: 1.9rem !important;
+    font-size: 1.8rem !important;
     line-height: 1.3 !important;
-    margin-bottom: 12px !important;
   }
   .hero p {
     font-size: 1rem !important;
-    line-height: 1.6 !important;
-    margin-bottom: 20px !important;
+    margin-bottom: 18px !important;
   }
-  .hero .btn-gold {
+  .btn-gold {
     font-size: 1rem !important;
     padding: 12px 20px !important;
   }
 
-  /* ✅ Problems Section */
-  .problems h2 {
-    font-size: 1.4rem !important;
-    margin-bottom: 18px !important;
-    text-align: center !important;
+  /* ✅ Metrics */
+  .metrics {
+    padding: 50px 16px !important;
   }
-  .problems-grid {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 16px !important;
+  .metrics h2 {
+    font-size: 1.2rem !important;
+    margin-bottom: 20px !important;
+  }
+  .metric-cards {
+    flex-direction: column !important;
+    gap: 14px !important;
+  }
+  .metric-card {
+    font-size: 1rem !important;
+    width: 100% !important;
+  }
+
+  /* ✅ Why Profit Loses */
+  .problems {
+    padding: 50px 16px !important;
+  }
+  .problems h2 {
+    font-size: 1.2rem !important;
+    margin-bottom: 20px !important;
+  }
+  .profit-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
   }
   .problem-card {
-    padding: 20px !important;
     font-size: 0.95rem !important;
-    border-radius: 12px !important;
-    min-height: 120px !important;
-    background: linear-gradient(135deg, #FFD700, #D4AF37) !important;
-    color: var(--sf-purple) !important;
+    padding: 18px !important;
   }
 
-  /* ✅ Case Section */
-  .case h2 {
-    font-size: 1.4rem !important;
-    margin-bottom: 18px !important;
+  /* ✅ Chaos Section */
+  .chaos {
+    padding: 50px 16px !important;
   }
-  .case-card {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 16px !important;
+  .chaos h2 {
+    font-size: 1.2rem !important;
+    margin-bottom: 20px !important;
   }
-  .case .card {
-    padding: 20px !important;
-    font-size: 0.95rem !important;
-    border-radius: 14px !important;
-    text-align: center !important;
+  .chaos-grid {
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 12px !important;
+  }
+  .chaos-card {
+    font-size: 0.9rem !important;
+    padding: 18px !important;
   }
 
-  /* ✅ Solution Section */
-  .solution h2 {
-    font-size: 1.4rem !important;
+  /* ✅ Takeover Section */
+  .takeover {
+    padding: 50px 16px !important;
+  }
+  .takeover h2 {
+    font-size: 1.2rem !important;
     margin-bottom: 14px !important;
   }
-  .solution-image img {
-    max-width: 100% !important;
-    height: auto !important;
-    max-height: 380px !important; /* prevent long scroll */
-    object-fit: cover !important;
-    border-radius: 14px !important;
-    margin: 0 auto 18px !important;
-    display: block;
-  }
-  .solution-list li,
-  .gold-checks li {
+  .takeover p {
     font-size: 0.95rem !important;
-    margin-bottom: 8px !important;
-    list-style: none !important; /* no bullets */
   }
 
   /* ✅ Founder Section */
-  .founder-card img {
-    max-width: 280px !important;
-    margin: 0 auto 18px !important;
-    display: block;
-    border-radius: 14px !important;
+  .founder {
+    padding: 50px 16px !important;
   }
-  .founder-card h2 {
-    font-size: 1.5rem !important;
-    margin-bottom: 10px !important;
-    text-align: center !important;
+  .founder h2 {
+    font-size: 1.3rem !important;
+    line-height: 1.3 !important;
   }
-  .founder-card .intro {
-    font-size: 1rem !important;
-    margin-bottom: 15px !important;
-    text-align: center !important;
+  .founder p {
+    font-size: 0.95rem !important;
+  }
+  .founder img {
+    max-width: 260px !important;
   }
   .founder-list {
-    font-size: 0.95rem !important;
-    margin: 12px 0 !important;
-    text-align: center !important;
-    list-style: none !important; /* no dots */
-    padding: 0 !important;
+    font-size: 0.9rem !important;
   }
-  .founder-list li {
-    margin-bottom: 8px !important;
-  }
-  .founder-cta {
+  .founder .btn-gold {
     font-size: 1rem !important;
     padding: 12px 20px !important;
-    margin-top: 16px !important;
-    display: block;
-    text-align: center !important;
-  }
-
-  /* ✅ Reels Section */
-  .reel-section h2 {
-    font-size: 1.4rem !important;
-    margin-bottom: 14px !important;
-  }
-  .reel-grid {
-    display: flex !important;
-    overflow-x: auto !important;
-    gap: 14px !important;
-    scroll-snap-type: x mandatory !important;
-    padding: 0 10px !important;
-  }
-  .reel-grid blockquote,
-  .reel-grid iframe {
-    flex: 0 0 85% !important;
-    max-width: 85% !important;
-    border-radius: 12px !important;
-    scroll-snap-align: center !important;
   }
 
   /* ✅ Footer */
+  .footer-premium {
+    padding: 50px 16px !important;
+  }
   .footer-premium h2 {
-    font-size: 1.2rem !important;
+    font-size: 1.1rem !important;
     line-height: 1.4 !important;
   }
   .footer-premium p {
     font-size: 0.9rem !important;
   }
+  .footer-cta {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
   .footer-cta a {
     font-size: 0.95rem !important;
     padding: 12px 20px !important;
+  }
+
+  /* ✅ WhatsApp Float */
+  .whatsapp-float {
+    bottom: 14px !important;
+    right: 14px !important;
+    font-size: 24px !important;
+    padding: 10px !important;
   }
 }
