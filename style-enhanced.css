@@ -2278,3 +2278,110 @@ h2 {
     margin: 0 auto;
   }
 }
+/* ==============================
+   MOBILE OPTIMIZATION (≤768px)
+   ============================== */
+@media (max-width: 768px) {
+  /* ✅ HERO */
+  .hero {
+    padding: 70px 16px !important;
+    min-height: 70vh !important;
+  }
+  .hero h1 {
+    font-size: 1.8rem !important;
+    line-height: 1.3 !important;
+  }
+  .hero p {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* ✅ NAVBAR */
+  nav.sf-navbar ul {
+    width: 90%;
+    max-width: 380px;
+    border-radius: 16px;
+    padding: 28px 0;
+  }
+  nav.sf-navbar ul li a {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  /* ✅ FOUNDER */
+  .founder h2.center-text.gold-text {
+    font-size: 1.5rem !important;
+    white-space: nowrap !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+  }
+  .founder-card,
+  .founder-wrapper {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 30px 16px !important;
+  }
+  .founder-card .photo img {
+    max-width: 280px !important;
+  }
+  .founder-list {
+    margin: 16px auto;
+    font-size: 0.95rem;
+  }
+
+  /* ✅ PROBLEMS */
+  .problems {
+    max-width: 92%;
+    margin: 0 auto;
+    padding: 30px 16px !important;
+  }
+  .problem-card {
+    font-size: 1rem;
+    padding: 16px;
+    min-height: auto !important;
+  }
+
+  /* ✅ CASE */
+  .case {
+    padding: 30px 16px !important;
+  }
+  .case h2 {
+    font-size: 1.6rem !important;
+    line-height: 1.3;
+  }
+  .case .card {
+    padding: 20px;
+    font-size: 1rem;
+    min-height: 120px !important;
+  }
+
+  /* ✅ SOLUTION */
+  .solution {
+    padding: 30px 16px !important;
+  }
+  .solution-text h2 {
+    font-size: 1.5rem !important;
+    line-height: 1.3;
+  }
+  .solution-list li {
+    font-size: 0.95rem !important;
+    margin-bottom: 8px;
+  }
+
+  /* ✅ REELS */
+  .reel-section {
+    padding: 20px 10px !important;
+  }
+  .reel-grid {
+    gap: 12px !important;
+  }
+
+  /* ✅ FOOTER */
+  .footer-premium {
+    padding: 30px 16px !important;
+  }
+  .footer-premium h2 {
+    font-size: 1.2rem !important;
+    line-height: 1.3 !important;
+  }
+}
