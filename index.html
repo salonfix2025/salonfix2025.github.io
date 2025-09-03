@@ -5,12 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SALONFIX – Your In-House Business Partner</title>
   <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+  <!-- Fonts + Core CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style-enhanced.css" />
   <link rel="stylesheet" href="mobile-lock.css" />
+
+  <!-- Libraries -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
-<body>
+<body class="home-page">
 
   <!-- ✅ NAVBAR -->
   <nav class="sf-navbar">
@@ -24,7 +29,7 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <a href="https://wa.me/919629370666?text=FIX" class="cta-btn desktop-only">WhatsApp FIX</a>
-    <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <button class="burger" id="burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
   </nav>
 
   <!-- ✅ MOBILE NAV OVERLAY -->
@@ -34,7 +39,7 @@
   <section class="hero sf-purple">
     <div class="hero-content" data-aos="zoom-in">
       <h1>Busy salon<br/>Bank balance still empty?</h1>
-      <p>Sales ≠ Profit.<br>SALONFIX tracks every rupee daily.<br>No leaks, no guessing.</p>
+      <p>Sales ≠ Profit.<br/>SALONFIX tracks every rupee daily.<br/>No leaks, no guessing.</p>
       <a href="https://wa.me/919629370666?text=FIX" class="btn-gold pulse">Start FREE 1-Month Trial</a>
     </div>
   </section>
@@ -43,13 +48,13 @@
   <section class="metrics">
     <h2>4 Branches • 6 Weeks • Profit Flipped</h2>
     <div class="metric-cards">
-      <div class="metric-card">+₹2.5L<br><small>Profit in 30 days</small></div>
-      <div class="metric-card">-30% Waste<br><small>+20% Vendor Savings</small></div>
-      <div class="metric-card">+8.4%<br><small>Profit Growth in 6 weeks</small></div>
+      <div class="metric-card">+₹2.5L<br/><small>Profit in 30 days</small></div>
+      <div class="metric-card">-30% Waste<br/><small>+20% Vendor Savings</small></div>
+      <div class="metric-card">+8.4%<br/><small>Profit Growth in 6 weeks</small></div>
     </div>
   </section>
 
-  <!-- ✅ WHY PROFIT LOSES -->
+  <!-- ✅ WHY SALONS LOSE PROFIT -->
   <section class="problems">
     <h2>Why salons lose profit even when sales are high…</h2>
     <div class="profit-grid">
@@ -73,7 +78,10 @@
   <!-- ✅ TAKEOVER -->
   <section class="takeover">
     <h2>We don’t just consult<br/>We take over</h2>
-    <p>Our takeover system ensures daily clarity &amp; control.</p>
+    <p class="sub-purple">Our takeover system ensures daily clarity &amp; control.</p>
+    <div class="solution-image">
+      <img src="assets/about-different.jpg" alt="Salon team control" data-aos="fade-up" data-aos-duration="800" />
+    </div>
     <div class="takeover-points">
       <p>📲 Daily reports on WhatsApp</p>
       <p>📝 Branch control with proof photos &amp; logs</p>
@@ -86,7 +94,7 @@
   <section class="founder">
     <h2>I’m <span>JAWHAR RAJ RAJKUMAR</span> – I’ve fixed it all</h2>
     <p>10+ years inside salons, turning chaos into profit across 100+ salon days</p>
-    <img src="assets/founder.jpg" alt="JAWHAR RAJ RAJKUMAR" />
+    <img src="assets/founder.jpg" alt="JAWHAR RAJ RAJKUMAR" data-aos="zoom-in" data-aos-duration="900" />
     <ul class="founder-list">
       <li>10+ Years Running Salon Operations</li>
       <li>Proven Profit Growth Across Multiple Branches</li>
@@ -94,6 +102,25 @@
     </ul>
     <a href="https://wa.me/919629370666?text=FIX" class="btn-gold pulse">WhatsApp FIX — Start FREE Trial</a>
   </section>
+
+  <!-- ✅ REELS -->
+  <section class="reel-section">
+    <h2><span class="gradient-text">Real Salon Fixes — Updated on Instagram</span></h2>
+    <div class="reel-grid">
+      <blockquote class="instagram-media" 
+        data-instgrm-permalink="https://www.instagram.com/p/DNnvtQ4ytxg/"
+        data-instgrm-version="14"></blockquote>
+      <blockquote class="instagram-media" 
+        data-instgrm-permalink="https://www.instagram.com/p/DNNpbwGSKl9/"
+        data-instgrm-version="14"></blockquote>
+      <blockquote class="instagram-media" 
+        data-instgrm-permalink="https://www.instagram.com/p/DNiXfh7S3Nm/"
+        data-instgrm-version="14"></blockquote>
+    </div>
+  </section>
+
+  <!-- ✅ Instagram Embed Script -->
+  <script async src="//www.instagram.com/embed.js"></script>
 
   <!-- ✅ FOOTER -->
   <footer class="footer-premium">
@@ -109,7 +136,9 @@
   </footer>
 
   <!-- ✅ Floating WhatsApp -->
-  <a href="https://wa.me/919629370666?text=FIX" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://wa.me/919629370666?text=FIX" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
   <!-- ✅ Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
