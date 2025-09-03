@@ -482,3 +482,67 @@ nav.sf-navbar ul li a:hover {
 .whatsapp-float:hover::after {
   animation: shimmerGreen 1.3s ease forwards;
 }
+/* ==============================
+   SALONFIX — Premium CTA Buttons
+   ============================== */
+
+/* ✅ Main Gold Shimmer CTA */
+.btn-gold,
+.cta-primary,
+.footer-cta a.primary,
+.about-cta .btn-gold {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  /* Gold shimmer */
+  background: linear-gradient(45deg, #FFD700, #D4AF37, #FFD700);
+  background-size: 300% 300%;
+  animation: shimmer 3s infinite linear;
+
+  /* Text */
+  color: #111 !important;
+  -webkit-text-fill-color: #111 !important;
+
+  /* Glow */
+  box-shadow: 0 0 15px rgba(212,175,55,0.7);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* ✅ Hover / Active Effect */
+.btn-gold:hover,
+.cta-primary:hover,
+.footer-cta a.primary:hover,
+.about-cta .btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(212,175,55,0.9);
+}
+
+/* ✅ Outline Secondary CTA */
+.btn-outline,
+.cta-secondary,
+.footer-cta a.secondary {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  border: 2px solid var(--sf-gold);
+  color: var(--sf-gold) !important;
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover,
+.cta-secondary:hover,
+.footer-cta a.secondary:hover {
+  background: var(--sf-gold);
+  color: #000 !important;
+}
