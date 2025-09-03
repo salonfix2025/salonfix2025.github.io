@@ -1,118 +1,240 @@
 /* ==============================
-   MOBILE LOCK – SALONFIX (GLOBAL + INDEX)
+   MOBILE LOCK – SALONFIX (GLOBAL + INDEX + ABOUT + SERVICES)
    ============================== */
 @media (max-width: 768px) {
-  html, body { font-size: 15px !important; line-height: 1.5 !important; overflow-x: hidden !important; }
 
-  /* Navbar */
-  nav.sf-navbar { padding: 12px 18px !important; }
+  /* ✅ Global */
+  html, body {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    overflow-x: hidden !important;
+  }
+
+  /* ✅ Navbar */
+  nav.sf-navbar {
+    padding: 12px 18px !important;
+  }
   nav.sf-navbar ul {
-    flex-direction: column !important; gap: 14px !important;
-    position: absolute; top: 60px; right: 20px;
-    background: var(--sf-purple-dark); border-radius: 18px; padding: 18px;
-    width: 70%; max-width: 300px; display: none;
+    flex-direction: column !important;
+    gap: 14px !important;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: var(--sf-purple-dark);
+    border-radius: 18px;
+    padding: 18px;
+    width: 70%;
+    max-width: 300px;
+    display: none;
   }
   nav.sf-navbar ul.open { display: flex !important; }
-  nav.sf-navbar ul li a { font-size: 1.1rem !important; font-weight: 700 !important; color: #fff !important; }
+  nav.sf-navbar ul li a {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    color: #fff !important;
+  }
   .burger { display: flex !important; }
 
-  /* Hero */
-  .hero { padding: 80px 20px !important; }
-  .hero h1 { font-size: 1.8rem !important; line-height: 1.3 !important; }
-  .hero p { font-size: 1rem !important; margin-bottom: 18px !important; }
-  .btn-gold { font-size: 1rem !important; padding: 12px 20px !important; }
+  /* ✅ Hero */
+  .hero {
+    padding: 80px 20px !important;
+  }
+  .hero h1 {
+    font-size: 1.8rem !important;
+    line-height: 1.3 !important;
+  }
+  .hero p {
+    font-size: 1rem !important;
+    margin-bottom: 18px !important;
+  }
+  .btn-gold {
+    font-size: 1rem !important;
+    padding: 12px 20px !important;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #FFD700, #D4AF37, #FFD700);
+    background-size: 300% 300%;
+    animation: shimmer 4s infinite linear, pulse 2s infinite ease-in-out;
+    text-align: center;
+    font-weight: 700;
+    color: #000 !important;
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+  }
 
-  /* Metrics */
-  .metrics { padding: 50px 16px !important; }
-  .metrics h2 { font-size: 1.2rem !important; margin-bottom: 20px !important; }
-  .metric-cards { flex-direction: column !important; gap: 14px !important; }
-  .metric-card { font-size: 1rem !important; width: 100% !important; }
+  /* ✅ Metrics */
+  .metrics {
+    padding: 50px 16px !important;
+  }
+  .metrics h2 {
+    font-size: 1.2rem !important;
+    margin-bottom: 20px !important;
+    color: var(--sf-purple);
+  }
+  .metric-cards {
+    flex-direction: column !important;
+    gap: 14px !important;
+  }
+  .metric-card {
+    font-size: 1rem !important;
+    width: 100% !important;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  }
 
-  /* Why Profit Loses */
-  .problems { padding: 50px 16px !important; }
-  .problems h2 { font-size: 1.2rem !important; margin-bottom: 20px !important; }
-  .problems-grid { grid-template-columns: repeat(2,1fr) !important; gap: 14px !important; }
-  .problem-card { font-size: 0.95rem !important; padding: 18px !important; }
+  /* ✅ Why Salons Lose Profit */
+  .problems {
+    padding: 50px 16px !important;
+  }
+  .problems h2 {
+    font-size: 1.2rem !important;
+    margin-bottom: 20px !important;
+    color: var(--sf-purple);
+  }
+  .profit-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+  }
+  .problem-card {
+    font-size: 0.95rem !important;
+    padding: 18px !important;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  }
 
-  /* Chaos */
-  .case { padding: 50px 16px !important; }
-  .case h2 { font-size: 1.2rem !important; margin-bottom: 20px !important; }
-  .case-card { grid-template-columns: 1fr 1fr 1fr !important; gap: 12px !important; }
-  .case .card { font-size: 0.9rem !important; padding: 18px !important; }
+  /* ✅ Chaos Section */
+  .chaos {
+    padding: 50px 16px !important;
+  }
+  .chaos h2 {
+    font-size: 1.2rem !important;
+    margin-bottom: 20px !important;
+    color: var(--sf-purple);
+  }
+  .chaos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 12px !important;
+  }
+  .chaos-card {
+    font-size: 0.9rem !important;
+    padding: 18px !important;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  }
 
-  /* Takeover */
-  .solution { padding: 50px 16px !important; }
-  .solution h2 { font-size: 1.2rem !important; margin-bottom: 14px !important; }
-  .solution p { font-size: 0.95rem !important; }
+  /* ✅ Takeover Section */
+  .takeover {
+    padding: 50px 16px !important;
+  }
+  .takeover h2 {
+    font-size: 1.2rem !important;
+    margin-bottom: 14px !important;
+    color: var(--sf-purple);
+  }
+  .takeover img {
+    width: 100%;
+    border-radius: 16px;
+    margin: 20px 0;
+  }
+  .takeover p {
+    font-size: 0.95rem !important;
+  }
 
-  /* Founder */
-  .founder-wrapper { padding: 50px 16px !important; background: var(--sf-purple); color: #fff; }
-  .founder h2 { font-size: 1.3rem !important; line-height: 1.3 !important; color: #fff; }
-  .founder p { font-size: 0.95rem !important; }
-  .founder img { max-width: 260px !important; border-radius: 16px; }
-  .founder-list { font-size: 0.9rem !important; }
-  .founder .btn-gold { font-size: 1rem !important; padding: 12px 20px !important; }
+  /* ✅ Founder Section */
+  .founder-section,
+  .founder {
+    background: var(--sf-purple);
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px !important;
+  }
+  .founder img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 20px;
+    margin: 0 auto 20px;
+  }
+  .founder p {
+    font-size: 1rem !important;
+    margin-bottom: 14px;
+  }
+  .founder-list {
+    font-size: 0.9rem !important;
+    margin-bottom: 18px;
+  }
 
-  /* Footer */
-  .footer-premium { padding: 50px 16px !important; }
-  .footer-premium h2 { font-size: 1.1rem !important; line-height: 1.4 !important; }
-  .footer-premium p { font-size: 0.9rem !important; }
-  .footer-cta { flex-direction: column !important; gap: 12px !important; }
-  .footer-cta a { font-size: 0.95rem !important; padding: 12px 20px !important; }
+  /* ✅ Footer */
+  .footer-premium {
+    padding: 50px 16px !important;
+  }
+  .footer-premium h2 {
+    font-size: 1.1rem !important;
+    line-height: 1.4 !important;
+  }
+  .footer-premium p {
+    font-size: 0.9rem !important;
+  }
+  .footer-cta {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+  .footer-cta a {
+    font-size: 0.95rem !important;
+    padding: 12px 20px !important;
+    border-radius: 30px;
+  }
 
-  /* WhatsApp Float */
-  .whatsapp-float { bottom: 14px !important; right: 14px !important; font-size: 24px !important; padding: 10px !important; }
+  /* ✅ WhatsApp Float */
+  .whatsapp-float {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(45deg, #FFD700, #D4AF37, #FFD700);
+    background-size: 300% 300%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff !important;
+    font-size: 26px;
+    z-index: 9999;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
+    animation: shimmer 4s infinite linear, pulse 2s infinite ease-in-out;
+    text-decoration: none;
+  }
 }
 
-/* Reels */
+/* ✅ Reels Horizontal Swipe */
 @media (max-width: 768px) {
-  .reel-grid { gap: 16px !important; padding: 0 12px 20px !important; }
-  .reel-grid blockquote { flex: 0 0 90% !important; max-width: 90% !important; border-radius: 14px !important; }
+  .reel-grid {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    gap: 16px !important;
+    padding: 0 12px 20px !important;
+  }
+  .reel-grid blockquote {
+    flex: 0 0 85% !important;
+    max-width: 85% !important;
+    scroll-snap-align: center;
+    border-radius: 14px !important;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  }
+  .reel-grid::-webkit-scrollbar { display: none; }
 }
 
-/* ==============================
-   ABOUT PAGE – MOBILE LOCK
-   ============================== */
-@media (max-width: 768px) {
-  body.about-page section { padding: 50px 18px !important; }
+/* ✅ Animations (different per card) */
+[data-aos="fade-up"]   { transition-delay: .1s; }
+[data-aos="fade-right"]{ transition-delay: .2s; }
+[data-aos="fade-left"] { transition-delay: .3s; }
 
-  /* Founder */
-  body.about-page .founder { background: var(--sf-purple); color: #fff; text-align: center; }
-  body.about-page .founder img { max-width: 300px; border-radius: 16px; margin: 0 auto 20px; }
-  body.about-page .founder h2 { color:#fff; font-size:1.5rem !important; }
-  body.about-page .founder p, body.about-page .founder li { font-size:0.95rem !important; }
-
-  /* Results */
-  body.about-page .proof { padding:40px 20px; }
-  body.about-page .proof h2 { color:var(--sf-purple); }
-  body.about-page .card-purple { border-radius:16px; padding:18px; margin-bottom:16px; }
-
-  /* Why */
-  body.about-page .solution h2 { color:var(--sf-purple); }
-  body.about-page .solution img { width:100%; border-radius:16px; margin:20px 0; }
-  body.about-page .solution ul { list-style:none; padding:0; font-size:0.95rem; }
-
-  /* 5-Step Fix */
-  body.about-page .fix-grid { display:flex; flex-direction:column; gap:16px; }
-  body.about-page .fix-grid .card-purple { padding:18px; border-radius:16px; }
-
-  /* Promise */
-  body.about-page .promise-section img { width:100%; border-radius:16px; margin-bottom:18px; }
+/* ✅ Keyframes */
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
-
-/* ==============================
-   SERVICES PAGE – MOBILE LOCK
-   ============================== */
-@media (max-width: 768px) {
-  body.services-page section { padding: 50px 18px !important; }
-
-  /* Steps */
-  body.services-page .steps-grid { display:flex; flex-direction:column; gap:18px; }
-  body.services-page .step-card { padding:20px; border-radius:16px; box-shadow:0 6px 14px rgba(0,0,0,0.1); }
-
-  /* FAQ */
-  body.services-page .faq-grid { display:flex; flex-direction:column; gap:14px; }
-  body.services-page .faq-item { border-radius:12px; padding:16px; box-shadow:0 4px 10px rgba(0,0,0,0.08); }
-  body.services-page .faq-question { font-size:1rem; font-weight:600; text-align:left; }
-  body.services-page .faq-answer { font-size:0.95rem; line-height:1.5; margin-top:8px; }
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212,175,55,.6); }
+  50% { transform: scale(1.08); box-shadow: 0 0 20px rgba(212,175,55,.9); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212,175,55,.6); }
 }
