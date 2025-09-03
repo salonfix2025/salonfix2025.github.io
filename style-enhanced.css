@@ -2231,3 +2231,50 @@ h2 {
     display: revert !important;
   }
 }
+/* ==============================
+   🔒 MOBILE LOCK (Do Not Alter Mobile Visuals)
+   ============================== */
+@media (max-width: 768px) {
+  body.about-page,
+  body.contact-page,
+  body.services-page,
+  body.testimonials-page {
+    all: unset !important;
+    display: revert !important;
+  }
+
+  /* Freeze nav, hero, founder, proof, solution, case, footer */
+  nav.sf-navbar, .hero, .founder, .proof, .solution, .case, .footer-premium,
+  .reel-section, .contact-page section, .testimonials, .fix-grid {
+    all: unset !important;
+    display: revert !important;
+  }
+
+  /* Preserve buttons + WhatsApp float */
+  .btn-gold, .btn-outline, .whatsapp-float {
+    all: unset !important;
+    display: revert !important;
+  }
+
+  /* Preserve text sizes */
+  h1, h2, h3, p, ul, li {
+    all: unset !important;
+    display: revert !important;
+  }
+}
+
+/* ==============================
+   🖥 DESKTOP ONLY OVERRIDES
+   ============================== */
+@media (min-width: 769px) {
+  /* Example: you can freely refine desktop without touching mobile */
+  .about-page .hero h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+
+  .about-page .founder .content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
