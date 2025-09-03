@@ -2191,3 +2191,78 @@ h2 {
   0% { transform: translateX(-100%) rotate(25deg); }
   100% { transform: translateX(100%) rotate(25deg); }
 }
+/* ==============================
+   CONTACT PAGE – Premium Fix
+   ============================== */
+
+/* Purple rounded container with less side white space */
+.contact-page #connect {
+  max-width: 92%;               /* reduce side white space */
+  margin: 20px auto;             /* tighter spacing top/bottom */
+  padding: 30px 20px;            /* tighter padding */
+  background: linear-gradient(180deg, var(--sf-purple), var(--sf-purple-dark));
+  border-radius: 22px;           /* rounded box */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+/* Headline stays white */
+.contact-page #connect .headline {
+  color: #fff;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+/* Subtext */
+.contact-page #connect .sub {
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 20px;
+}
+
+/* Grid layout tighter */
+.contact-page .connect-grid {
+  display: grid;
+  gap: 14px;                     /* reduced gap */
+  grid-template-columns: 1fr;    /* stack items on mobile */
+}
+
+/* Contact items styled premium */
+.contact-page .connect-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255,255,255,0.05);
+  border: 1.5px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Gold glitter border */
+.contact-page .connect-item {
+  border-image: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B) 1;
+}
+
+/* Hover / tap effect */
+.contact-page .connect-item:hover,
+.contact-page .connect-item:active {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(212,175,55,0.4);
+}
+
+/* Gold glitter icon box */
+.contact-page .ci-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
+  color: #2d004c;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px rgba(212,175,55,0.5), 0 0 20px rgba(212,175,55,0.3);
+}
