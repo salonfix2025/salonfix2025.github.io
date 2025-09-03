@@ -1,5 +1,5 @@
 /* ==============================
-   MOBILE LOCK – SALONFIX
+   MOBILE LOCK – SALONFIX (GLOBAL + INDEX)
    ============================== */
 @media (max-width: 768px) {
 
@@ -165,33 +165,35 @@
     padding: 10px !important;
   }
 }
+
+/* ✅ Reels Section (Index) */
 @media (max-width: 768px) {
   .reel-grid {
     gap: 16px !important;
     padding: 0 12px 20px !important;
   }
   .reel-grid blockquote {
-    flex: 0 0 90% !important;  /* Each embed takes most of screen */
+    flex: 0 0 90% !important;  
     max-width: 90% !important;
     border-radius: 14px !important;
   }
 }
+
 /* ==============================
-   ABOUT PAGE – MOBILE LOCK STYLES
+   ABOUT PAGE – MOBILE LOCK (Scoped)
    ============================== */
 @media (max-width: 768px) {
 
-  /* 🔹 General Reset */
   body.about-page {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
   }
 
-  /* 🔹 Section Headings */
-  .about-page h1,
-  .about-page h2,
-  .about-page h3 {
+  /* ✅ Section Headings */
+  body.about-page h1,
+  body.about-page h2,
+  body.about-page h3 {
     font-size: 1.6rem !important;
     text-align: center;
     color: var(--sf-purple);
@@ -199,63 +201,43 @@
     line-height: 1.3;
   }
 
-  /* 🔹 Founder Section */
-  .founder-section {
+  /* ✅ Founder Section */
+  body.about-page .founder-section {
     background: var(--sf-purple);
     color: #fff;
-    padding: 40px 20px;
-    border-radius: 0;
+    padding: 50px 20px !important;
     text-align: center;
   }
-
-  .founder-section h2 {
-    color: #fff !important;
-    font-size: 1.8rem !important;
-    margin-bottom: 20px;
-  }
-
-  .founder-section img {
+  body.about-page .founder-section img {
     width: 100%;
     max-width: 320px;
     border-radius: 18px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 20px;
     display: block;
   }
-
-  .founder-section p {
+  body.about-page .founder-section p {
     font-size: 1rem;
     line-height: 1.6;
-    margin: 0 auto 18px auto;
-    max-width: 90%;
+    margin-bottom: 18px;
   }
-
-  .founder-bullets {
-    margin: 18px 0;
-    padding: 0;
+  body.about-page .founder-section ul {
     list-style: none;
-    font-size: 1rem;
-    line-height: 1.5;
+    margin: 0 0 20px;
+    padding: 0;
   }
-
-  .founder-bullets li {
+  body.about-page .founder-section ul li {
     margin: 8px 0;
-    text-align: left;
-    padding-left: 5px;
   }
 
-  /* 🔹 Real Results */
-  .results-section {
-    background: #fff;
+  /* ✅ Real Results */
+  body.about-page .results-section {
     padding: 40px 20px;
+    background: #fff;
   }
-
-  .results-section h2 {
+  body.about-page .results-section h2 {
     color: var(--sf-purple);
-    font-size: 1.6rem;
-    margin-bottom: 20px;
   }
-
-  .result-card {
+  body.about-page .result-card {
     background: #fff;
     border-radius: 16px;
     padding: 18px;
@@ -264,300 +246,61 @@
     text-align: left;
   }
 
-  .result-card strong {
-    color: var(--sf-purple);
-  }
-
-  /* 🔹 Why SALONFIX Exists */
-  .why-section h2 {
-    color: var(--sf-purple);
-    font-size: 1.6rem;
-  }
-
-  .why-section p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  .why-section img {
-    width: 100%;
-    border-radius: 16px;
-    margin: 20px 0;
-  }
-
-  .why-highlight {
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: var(--sf-gold);
-    text-align: center;
-    margin: 20px 0;
-  }
-
-  /* 🔹 5-Step Profit Fix */
-  .profit-fix {
-    background: #fff;
-    padding: 40px 20px;
-  }
-
-  .profit-fix h2 {
-    color: var(--sf-purple);
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .profit-fix ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .profit-fix li {
-    margin: 14px 0;
-    padding: 16px;
-    border-radius: 12px;
-    background: #f9f9f9;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-  }
-
-  .profit-fix li strong {
-    color: var(--sf-purple);
-  }
-
-  /* 🔹 Promise Section */
-  .promise-section {
-    padding: 40px 20px;
-    text-align: center;
-  }
-
-  .promise-section h2 {
-    color: var(--sf-purple);
-    margin-bottom: 16px;
-  }
-
-  .promise-section img {
-    width: 100%;
-    border-radius: 16px;
-    margin-bottom: 18px;
-  }
-
-  /* 🔹 Final CTA */
-  .about-cta {
-    background: var(--sf-purple);
-    padding: 40px 20px;
-    text-align: center;
-    color: #fff;
-  }
-
-  .about-cta h2 {
-    color: #fff;
-    font-size: 1.4rem;
-    margin-bottom: 14px;
-  }
-
-  .about-cta p {
-    color: #eee;
-    font-size: 1rem;
-    margin-bottom: 20px;
-  }
-
-  .about-cta .btn-gold {
-    display: block;
-    width: 100%;
-    margin-bottom: 16px;
-    padding: 14px;
-    border-radius: 30px;
-    font-weight: 700;
-    background: linear-gradient(45deg, #D4AF37, #FFD700, #D4AF37);
-    background-size: 300% 300%;
-    color: #000 !important;
-    animation: shimmer 3s infinite linear;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  .about-cta .btn-outline {
-    display: block;
-    width: 100%;
-    padding: 14px;
-    border: 2px solid var(--sf-gold);
-    border-radius: 30px;
-    color: var(--sf-gold) !important;
-    background: transparent;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-  /* 🔹 Glitter Animation */
-  @keyframes shimmer {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-
-}
-/* ==============================
-   ABOUT PAGE – MOBILE LOCK
-   ============================== */
-@media (max-width: 768px) {
-
-  /* ✅ General Reset for Mobile */
-  body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-
-  section {
-    padding: 50px 18px !important;
-  }
-
-  h2, h3, h4 {
-    margin-bottom: 18px;
-    text-align: center;
-  }
-
-  /* ✅ Founder Section */
-  .founder-section {
-    background: var(--sf-purple);
-    color: #fff;
-    text-align: center;
-    padding: 60px 20px !important;
-  }
-
-  .founder-section img {
-    width: 100%;
-    max-width: 340px;
-    border-radius: 20px;
-    margin: 0 auto 20px;
-    display: block;
-  }
-
-  .founder-section p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 16px 0;
-  }
-
-  .founder-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-  }
-
-  .founder-section ul li {
-    margin: 10px 0;
-    font-size: 1rem;
-  }
-
-  .founder-section ul li::before {
-    display: none; /* remove bullet dots */
-  }
-
-  .founder-section .cta {
-    display: inline-block;
-    padding: 14px 28px;
-    background: linear-gradient(90deg, #D4AF37, #FFD700);
-    color: #000;
-    font-weight: 700;
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0 0 15px rgba(212,175,55,0.8);
-    margin-top: 25px;
-  }
-
-  /* ✅ Real Results */
-  .results-section h2 {
-    color: var(--sf-purple);
-    font-size: 1.4rem;
-  }
-
-  .results-section p {
-    margin: 8px 0;
-  }
-
-  .results-section strong {
-    color: var(--sf-purple);
-  }
-
   /* ✅ Why SALONFIX Exists */
-  .why-section h2 {
-    color: var(--sf-purple);
-    font-size: 1.4rem;
+  body.about-page .why-section {
+    background: var(--sf-purple);
+    color: #fff;
+    padding: 40px 20px;
   }
-
-  .why-section img {
+  body.about-page .why-section img {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 16px;
     margin: 20px 0;
   }
-
-  .why-section strong {
+  body.about-page .why-highlight {
+    font-size: 1.2rem;
+    font-weight: 700;
     color: var(--sf-gold);
+    margin: 20px 0;
+    text-align: center;
   }
 
-  /* ✅ 5 Step Profit Fix */
-  .steps-section {
-    padding: 40px 15px;
+  /* ✅ 5-Step Profit Fix */
+  body.about-page .profit-fix {
+    background: #fff;
+    padding: 40px 20px;
   }
-
-  .step-card {
-    background: linear-gradient(180deg, #fff, #fffbe7);
+  body.about-page .profit-steps .sf-box {
+    margin-bottom: 14px;
     padding: 18px;
+    border-radius: 12px;
+    background: var(--sf-purple);
+    color: #fff;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  }
+
+  /* ✅ Promise Section */
+  body.about-page .promise {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  body.about-page .promise img {
+    width: 100%;
     border-radius: 16px;
     margin-bottom: 18px;
-    box-shadow: 0 6px 16px rgba(0,0,0,.08);
+  }
+
+  /* ✅ Footer CTA */
+  body.about-page .sf-footer {
     text-align: center;
+    padding: 40px 20px;
   }
-
-  .step-card h3 {
-    margin-bottom: 8px;
-    color: var(--sf-purple);
-  }
-
-  .step-card p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-
-  /* ✅ Our Promise */
-  .promise-section h2 {
-    color: var(--sf-purple);
-    font-size: 1.4rem;
-  }
-
-  .promise-section img {
+  body.about-page .sf-footer .cta-btn {
+    display: block;
     width: 100%;
-    border-radius: 20px;
-    margin: 20px 0;
-  }
-
-  /* ✅ Footer CTAs */
-  .footer-cta {
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  .footer-cta a.primary {
-    display: block;
+    margin: 12px 0;
     padding: 14px;
-    margin: 12px auto;
-    background: linear-gradient(90deg, #D4AF37, #FFD700);
-    color: #000;
+    border-radius: 30px;
     font-weight: 700;
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0 0 15px rgba(212,175,55,0.7);
-  }
-
-  .footer-cta a.secondary {
-    display: block;
-    padding: 14px;
-    margin: 12px auto;
-    border: 2px solid var(--sf-purple);
-    color: var(--sf-purple);
-    font-weight: 600;
-    border-radius: 50px;
-    text-decoration: none;
-    background: #fff;
   }
 }
