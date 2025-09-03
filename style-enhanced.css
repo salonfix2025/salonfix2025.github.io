@@ -330,6 +330,36 @@ nav.sf-navbar ul li a:hover {
     gap: 16px !important;
     padding: 0 12px 20px !important;
   }
+  /* REELS */
+.reel-section {
+  padding: 60px 8%;
+  text-align: center;
+  background: #faf7ff;
+}
+
+.reel-grid {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.reel-grid blockquote {
+  flex: 0 0 350px;       /* Fixed width card */
+  max-width: 350px;
+  border-radius: 18px;
+  scroll-snap-align: center;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .reel-grid {
+    gap: 16px !important;
+    padding: 0 12px 20px !important;
+  }
   .reel-grid blockquote {
     flex: 0 0 90% !important;  /* Each embed takes most of screen */
     max-width: 90% !important;
