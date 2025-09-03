@@ -2036,42 +2036,7 @@ h2 {
   color: #2d004c !important;
 }
 /* CONTACT PAGE – Premium LET’S CONNECT Section */
-.contact-page #connect {
-  background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
-  color: #fff;
-  border-radius: 20px;
-  max-width: 95%;
-  margin: 0 auto;              /* center horizontally */
-  padding: 40px 20px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-}
-
-/* Keep LET'S CONNECT headline white */
-.contact-page #connect .headline {
-  color: #fff;
-  text-align: center;
-  margin-bottom: 12px;
-}
-
-/* Subtext styling */
-.contact-page #connect .sub {
-  text-align: center;
-  color: rgba(255,255,255,0.9);
-  margin-bottom: 20px;
-}
-
-/* Premium Contact Items */
-.contact-page .connect-item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  border-radius: 18px;
-  padding: 18px;
-  text-decoration: none;
-  color: #fff;
-  background: rgba(255,255,255,0.05);
-  
-  /* ✨ Gold Glitter Border */
+   /* ✨ Gold Glitter Border */
   border: 2px solid transparent;
   background-image: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark)),
                     linear-gradient(145deg, #FFD700, #D4AF37, #FFD700);
@@ -2105,53 +2070,6 @@ h2 {
 /* ==============================
    CONTACT PAGE – Premium Connect Section
    ============================== */
-.contact-page #connect {
-  background: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark));
-  color: #fff;
-  border-radius: 20px;
-  max-width: 95%;
-  margin: 0 auto;
-  padding: 40px 20px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-}
-
-.contact-page #connect .headline {
-  color: #fff;
-  text-align: center;
-  margin-bottom: 12px;
-}
-
-.contact-page #connect .sub {
-  text-align: center;
-  color: rgba(255,255,255,0.9);
-  margin-bottom: 20px;
-}
-
-/* Contact Item Cards */
-.contact-page .connect-item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  border-radius: 18px;
-  padding: 18px;
-  text-decoration: none;
-  color: #fff;
-
-  border: 2px solid transparent;
-  background-image: linear-gradient(145deg, var(--sf-purple), var(--sf-purple-dark)),
-                    linear-gradient(145deg, #FFD700, #D4AF37, #FFD700);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.contact-page .connect-item:hover,
-.contact-page .connect-item:active {
-  transform: scale(1.05);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.4);
-}
 
 /* Gold Glitter Icons */
 .contact-page .ci-icon {
@@ -2190,79 +2108,4 @@ h2 {
 @keyframes shimmer {
   0% { transform: translateX(-100%) rotate(25deg); }
   100% { transform: translateX(100%) rotate(25deg); }
-}
-/* ==============================
-   CONTACT PAGE – Premium Fix
-   ============================== */
-
-/* Purple rounded container with less side white space */
-.contact-page #connect {
-  max-width: 92%;               /* reduce side white space */
-  margin: 20px auto;             /* tighter spacing top/bottom */
-  padding: 30px 20px;            /* tighter padding */
-  background: linear-gradient(180deg, var(--sf-purple), var(--sf-purple-dark));
-  border-radius: 22px;           /* rounded box */
-  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-}
-
-/* Headline stays white */
-.contact-page #connect .headline {
-  color: #fff;
-  font-weight: 900;
-  margin-bottom: 12px;
-}
-
-/* Subtext */
-.contact-page #connect .sub {
-  color: rgba(255,255,255,0.9);
-  margin-bottom: 20px;
-}
-
-/* Grid layout tighter */
-.contact-page .connect-grid {
-  display: grid;
-  gap: 14px;                     /* reduced gap */
-  grid-template-columns: 1fr;    /* stack items on mobile */
-}
-
-/* Contact items styled premium */
-.contact-page .connect-item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 14px 18px;
-  border-radius: 16px;
-  text-decoration: none;
-  color: #fff;
-  background: rgba(255,255,255,0.05);
-  border: 1.5px solid transparent;
-  background-clip: padding-box, border-box;
-  background-origin: border-box;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Gold glitter border */
-.contact-page .connect-item {
-  border-image: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B) 1;
-}
-
-/* Hover / tap effect */
-.contact-page .connect-item:hover,
-.contact-page .connect-item:active {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 6px 20px rgba(212,175,55,0.4);
-}
-
-/* Gold glitter icon box */
-.contact-page .ci-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
-  color: #2d004c;
-  font-size: 1.2rem;
-  box-shadow: 0 0 10px rgba(212,175,55,0.5), 0 0 20px rgba(212,175,55,0.3);
 }
