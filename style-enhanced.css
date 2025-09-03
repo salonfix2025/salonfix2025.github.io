@@ -1983,3 +1983,27 @@ h2 {
   border: 1px solid rgba(255,255,255,.15);
   color: #fff;
 }
+/* Contact Page – Purple Connect Section */
+.contact-page #connect {
+  background: linear-gradient(180deg, var(--sf-purple), var(--sf-purple-900));
+  color: #fff;
+}
+
+.contact-page #connect .headline {
+  color: #fff;
+}
+
+.contact-page #connect .sub {
+  color: rgba(255,255,255,0.9);
+}
+
+.contact-page #connect .connect-item {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #fff;
+}
+
+.contact-page #connect .ci-icon {
+  background: linear-gradient(135deg, #FFD700, #D4AF37);
+  color: #2d004c;
+}
