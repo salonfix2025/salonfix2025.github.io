@@ -2189,3 +2189,45 @@ h2 {
     font-size: 1.6rem;   /* ✅ smaller so it fits on one line */
   }
 }
+/* ==============================
+   🔒 MOBILE LOCK (Do Not Alter Mobile Visuals)
+   ============================== */
+@media (max-width: 768px) {
+  html, body {
+    font-size: 100% !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Lock navbar */
+  nav.sf-navbar, nav.sf-navbar ul, nav.sf-navbar ul li a,
+  .burger, .cta-btn-mobile {
+    all: unset !important;
+    display: revert !important;
+  }
+
+  /* Lock hero */
+  .hero, .hero h1, .hero p, .hero .btn-gold {
+    all: unset !important;
+    display: revert !important;
+  }
+
+  /* Lock sections (proof, problems, case, solution, founder, reel, footer, contact) */
+  .proof, .problems, .case, .solution, .founder,
+  .reel-section, .footer-premium, .contact-page section,
+  .contact-page .connect-card, .contact-page .connect-item {
+    all: unset !important;
+    display: revert !important;
+  }
+
+  /* Lock lists and bullets */
+  ul, ul li {
+    all: unset !important;
+    display: revert !important;
+  }
+
+  /* Lock WhatsApp float */
+  .whatsapp-float {
+    all: unset !important;
+    display: revert !important;
+  }
+}
