@@ -739,3 +739,45 @@ nav.sf-navbar ul li a.active::after {
   }
   .founder .btn-gold { justify-self: center; }
 }
+/* ==============================
+   🔧 Correction 6 – Reels Section Horizontal Layout
+   ============================== */
+.reel-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.reel-section h2 {
+  margin-bottom: 30px;
+}
+
+.reel-grid {
+  display: flex;
+  flex-wrap: nowrap;   /* ❌ prevent wrapping */
+  gap: 24px;
+  overflow-x: auto;    /* ✅ enable horizontal scroll */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
+}
+
+.reel-grid blockquote {
+  flex: 0 0 320px;     /* fixed width like Instagram embed */
+  max-width: 90%;
+  margin: 0 auto;
+  scroll-snap-align: start;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  background: #fff;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.reel-grid blockquote:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(212,175,55,0.4);
+}
+
+/* Hide scrollbar for clean look */
+.reel-grid::-webkit-scrollbar { display: none; }
+.reel-grid { -ms-overflow-style: none; scrollbar-width: none; }
