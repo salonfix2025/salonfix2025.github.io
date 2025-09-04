@@ -984,3 +984,33 @@ body {
     font-size: 0.85rem;
   }
 }
+/* ==============================
+   GLOBAL LIST STYLE FIX – GOLD CHECKMARKS
+   ============================== */
+@media (max-width: 768px) {
+  /* All unordered lists inside main sections */
+  section ul {
+    list-style: none !important;   /* remove default bullets */
+    padding-left: 0 !important;
+    margin: 12px 0 !important;
+  }
+
+  section ul li {
+    margin-bottom: 8px;
+    padding-left: 22px;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* Gold checkmark */
+  section ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--sf-gold);
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+}
