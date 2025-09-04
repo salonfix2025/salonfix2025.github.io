@@ -221,3 +221,57 @@
   .faq-answer { display: none; margin-top: 10px; }
   .faq-item.active .faq-answer { display: block; }
 }
+/* ==============================
+   FAQ – Enhanced Interactions
+   ============================== */
+@media (max-width: 768px) {
+  .faq-item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  .faq-item.active {
+    box-shadow: 0 8px 20px rgba(75, 0, 130, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .faq-question {
+    font-weight: 700;
+    color: var(--sf-purple);
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  .faq-question::after {
+    content: "\f078"; /* FontAwesome chevron-down */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+  }
+  .faq-item.active .faq-question::after {
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: scaleY(0.95);
+    transition: all 0.35s ease;
+  }
+  .faq-item.active .faq-answer {
+    max-height: 500px;
+    opacity: 1;
+    transform: scaleY(1);
+    margin-top: 12px;
+  }
+}
