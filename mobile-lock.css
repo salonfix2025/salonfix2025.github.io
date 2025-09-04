@@ -639,3 +639,79 @@
     margin-top: 10px;
   }
 }
+/* ==============================
+   TESTIMONIALS PAGE – MOBILE LOCK
+   ============================== */
+@media (max-width: 768px) {
+
+  /* ✅ Hero */
+  body.testimonials-page .hero h1 {
+    font-size: 1.8rem !important;
+    margin-bottom: 14px !important;
+  }
+  body.testimonials-page .hero p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    padding: 0 10px;
+  }
+
+  /* ✅ Testimonials Grid */
+  body.testimonials-page .testimonials {
+    padding: 50px 12px !important;
+  }
+  body.testimonials-page .testimonials .grid {
+    gap: 18px !important;
+  }
+  body.testimonials-page .testimonials .card {
+    padding: 32px 20px !important;
+    border-radius: 16px !important;
+    box-shadow: 0 6px 16px rgba(0,0,0,.08);
+    margin: 0 auto;
+    max-width: 92%; /* reduce edge-to-edge stretch */
+  }
+  body.testimonials-page .testimonials .card p {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+  }
+  body.testimonials-page .testimonials .author {
+    margin-top: 12px !important;
+    font-size: 0.9rem !important;
+    color: var(--sf-purple);
+    opacity: 0.9;
+  }
+
+  /* ✅ Sample Report */
+  body.testimonials-page .sample-report {
+    padding: 50px 12px !important;
+  }
+  body.testimonials-page .sample-report h2 {
+    font-size: 1.4rem !important;
+    margin: 20px 0 12px !important;
+    text-align: center;
+  }
+  body.testimonials-page .sample-report p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+  body.testimonials-page .sample-report .report-card {
+    max-width: 90% !important;
+    margin: 0 auto 24px auto !important;
+    padding: 20px !important;
+    border-radius: 14px !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* ✅ Footer CTA */
+  body.testimonials-page .footer-premium {
+    padding: 40px 16px !important;
+    text-align: center;
+  }
+  body.testimonials-page .footer-premium h2 {
+    font-size: 1.2rem !important;
+    margin-bottom: 12px !important;
+  }
+  body.testimonials-page .footer-cta {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+}
