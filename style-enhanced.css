@@ -1413,48 +1413,49 @@ nav.sf-navbar ul li a.active::after {
   }
 }
 /* ==============================
-   FOUNDER SECTION – DESKTOP ONLY
+   FOUNDER SECTION – DESKTOP ONLY (Final Merged)
    ============================== */
 @media (min-width: 769px) {
   .founder-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 40px;
-    max-width: 1200px;
+    gap: 60px;
+    width: 100%;              /* full width background */
     margin: 0 auto;
-    padding: 70px 40px;
+    padding: 80px 8%;         /* balanced inside spacing */
     background: var(--sf-purple);
-    border-radius: 20px;
   }
 
   .founder-section h2 {
     color: var(--sf-gold);
-    font-size: 2rem;
+    font-size: 2.3rem;        /* balanced between 2.2 and 2.4 */
     font-weight: 900;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     text-align: left;
   }
 
   .founder-section p {
     color: var(--sf-white);
-    font-size: 1.05rem;
-    line-height: 1.7;
-    margin-bottom: 18px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
     text-align: left;
+    max-width: 550px;
   }
 
   .founder-section ul {
     color: var(--sf-white);
-    margin: 0 0 20px 0;
+    margin: 0 0 24px 0;
     padding: 0;
     list-style: none;
     text-align: left;
   }
   .founder-section ul li {
-    margin-bottom: 10px;
-    padding-left: 22px;
+    margin-bottom: 12px;
+    padding-left: 26px;
     position: relative;
+    font-size: 1rem;
   }
   .founder-section ul li::before {
     content: "✔";
@@ -1465,15 +1466,16 @@ nav.sf-navbar ul li a.active::after {
   }
 
   .founder-section .founder-cta {
-    margin-top: 10px;
+    margin-top: 12px;
     text-align: left;
+    display: inline-block;
   }
 
   .founder-section img {
-    border-radius: 20px;
-    max-width: 380px;
+    max-width: 400px;         /* slightly larger image */
     margin-left: auto;
     display: block;
-    box-shadow: var(--shadow);
+    border-radius: 12px;      /* subtle rounding */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25); /* premium shadow */
   }
 }
