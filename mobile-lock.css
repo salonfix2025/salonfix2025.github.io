@@ -745,3 +745,33 @@
     color: var(--sf-gold);
   }
 }
+/* ==============================
+   CTA Buttons – Mobile Tap Fix
+   ============================== */
+@media (max-width: 768px) {
+  .btn-gold,
+  .btn-outline,
+  .cta-btn,
+  .whatsapp-float {
+    -webkit-tap-highlight-color: transparent; /* remove grey overlay */
+    outline: none !important;
+  }
+
+  /* On focus */
+  .btn-gold:focus,
+  .btn-outline:focus,
+  .cta-btn:focus,
+  .whatsapp-float:focus {
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.8) !important; /* gold glow */
+  }
+
+  /* On click/tap */
+  .btn-gold:active,
+  .btn-outline:active,
+  .cta-btn:active,
+  .whatsapp-float:active {
+    transform: scale(0.97); /* subtle press effect */
+    box-shadow: 0 0 18px rgba(212, 175, 55, 1) !important; /* strong glow */
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+}
