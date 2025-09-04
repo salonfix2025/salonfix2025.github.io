@@ -1479,3 +1479,77 @@ nav.sf-navbar ul li a.active::after {
     box-shadow: 0 8px 20px rgba(0,0,0,0.25); /* premium shadow */
   }
 }
+/* ==============================
+   FOUNDER SECTION – DESKTOP ONLY (Text Left, Image Right)
+   ============================== */
+@media (min-width: 769px) {
+  .founder-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* text left, image right */
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 8%;
+    background: var(--sf-purple);
+  }
+
+  /* Force all text items into the left column */
+  .founder-section > h2,
+  .founder-section > p,
+  .founder-section > ul,
+  .founder-section > .founder-cta {
+    grid-column: 1;
+    max-width: 550px;  /* keeps text column tidy */
+    text-align: left;
+  }
+
+  .founder-section h2 {
+    color: var(--sf-gold);
+    font-size: 2.4rem;
+    font-weight: 900;
+    margin-bottom: 24px;
+  }
+
+  .founder-section p {
+    color: var(--sf-white);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .founder-section ul {
+    color: var(--sf-white);
+    margin: 0 0 24px 0;
+    padding: 0;
+    list-style: none;
+  }
+  .founder-section ul li {
+    margin-bottom: 12px;
+    padding-left: 26px;
+    position: relative;
+    font-size: 1rem;
+  }
+  .founder-section ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--sf-gold);
+    font-weight: bold;
+  }
+
+  .founder-section .founder-cta {
+    margin-top: 12px;
+    display: inline-block;
+  }
+
+  /* Image stays alone on right */
+  .founder-section img {
+    grid-column: 2;
+    max-width: 400px;
+    margin-left: auto;
+    display: block;
+    border-radius: 12px; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  }
+}
