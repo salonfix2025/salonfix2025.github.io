@@ -1231,3 +1231,30 @@ body {
 body {
   padding-top: 70px !important; /* equal to navbar height */
 }
+/* Founder Bullets – Gold Checkmarks */
+.founder-bullets {
+  list-style: none !important;
+  padding: 0;
+  margin: 18px 0 0 0;
+}
+
+.founder-bullets li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.founder-bullets li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 900;
+  color: var(--sf-gold);
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
