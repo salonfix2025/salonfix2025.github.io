@@ -453,3 +453,99 @@ nav.sf-navbar ul li a.active::after {
   0% { left: -75%; }
   100% { left: 125%; }
 }
+/* ==============================
+   🔧 OVERRIDE PACK (Corrections 1, 3, 4, 5, 6)
+   ============================== */
+
+/* ✅ Correction 1 & 3 – Gold Gradient Boxes */
+.problems .problem-card,
+.chaos .chaos-card {
+  background: linear-gradient(135deg, #FFD700, #D4AF37);
+  color: var(--sf-purple) !important;
+  font-weight: 700;
+  text-align: center;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(212,175,55,0.35);
+  transition: all 0.3s ease;
+}
+.problems .problem-card:hover,
+.chaos .chaos-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(212,175,55,0.6);
+}
+
+/* ✅ Correction 4 – Takeover Section (Image Left, Text Right) */
+.takeover {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  text-align: left;
+}
+.takeover h2 {
+  color: var(--sf-purple);
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+.takeover p,
+.takeover ul {
+  color: var(--sf-dark);
+  line-height: 1.6;
+}
+.takeover img {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+.takeover img:hover { transform: scale(1.02); box-shadow: 0 10px 28px rgba(212,175,55,0.5); }
+
+/* ✅ Correction 5 – Founder Section (Image Right, Text Left) */
+.founder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  text-align: left;
+}
+.founder h2 {
+  color: var(--sf-gold);
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+.founder p,
+.founder ul {
+  color: #fff;
+  line-height: 1.6;
+}
+.founder img {
+  order: 2; /* force image to the right */
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+.founder img:hover { transform: scale(1.02); box-shadow: 0 10px 28px rgba(212,175,55,0.5); }
+
+/* ✅ Correction 6 – Instagram Section One-Column */
+.instagram-feed {
+  display: flex;
+  flex-direction: column !important;
+  align-items: center;
+  gap: 24px;
+}
+.instagram-feed iframe,
+.instagram-feed .insta-post {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+/* ✅ Responsive Fixes for Mobile */
+@media (max-width: 768px) {
+  .takeover,
+  .founder {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .founder img { order: unset; }
+}
