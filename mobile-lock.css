@@ -715,3 +715,10 @@
     gap: 12px !important;
   }
 }
+/* ✅ Correction 3: Balanced spacing between sections (Index + About) */
+@media (max-width: 768px) {
+  body.home-page section,
+  body.about-page section {
+    margin-bottom: 28px !important; /* reduced from 40px */
+  }
+}
