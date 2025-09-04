@@ -1014,3 +1014,36 @@ body {
     font-size: 0.9rem;
   }
 }
+/* ==============================
+   PARTNERSHIP PLANS – MOBILE CARDS FIX
+   ============================== */
+@media (max-width: 768px) {
+  body.pricing-page .plans-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 26px !important;     /* more space between boxes */
+    align-items: center;      /* center all cards */
+    padding: 0 5% !important; /* framed look */
+  }
+
+  body.pricing-page .card-purple {
+    width: 88% !important;    /* narrower width */
+    max-width: 340px !important;  /* cap for premium look */
+    border-radius: 20px !important;
+    margin: 0 auto !important;
+    padding: 22px !important;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  }
+
+  body.pricing-page .card-purple .plan-title {
+    color: var(--sf-gold) !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 10px !important;
+  }
+
+  body.pricing-page .card-purple .btn-gold {
+    width: 100% !important;
+    margin-top: 14px;
+    text-align: center;
+  }
+}
