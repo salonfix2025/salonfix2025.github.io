@@ -841,3 +841,31 @@
     margin-bottom: 16px !important;
   }
 }
+/* ==============================
+   SERVICES PAGE – REMOVE DEFAULT BULLETS
+   ============================== */
+@media (max-width: 768px) {
+  .services-page .step-card ul {
+    list-style: none !important;   /* remove bullets */
+    padding-left: 0 !important;    /* remove left indentation */
+    margin-top: 8px !important;
+  }
+
+  .services-page .step-card ul li {
+    margin-bottom: 6px;
+    padding-left: 18px;
+    position: relative;
+    color: #fff;                   /* match step card text */
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* Optional: subtle gold checkmark instead of bullets */
+  .services-page .step-card ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--sf-gold);
+    font-size: 0.85rem;
+  }
+}
