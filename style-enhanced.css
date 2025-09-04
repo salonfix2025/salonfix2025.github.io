@@ -1107,3 +1107,53 @@ nav.sf-navbar ul li a.active::after {
     box-shadow: 0 12px 30px rgba(212,175,55,0.5);
   }
 }
+/* ==============================
+   5-STEP PROFIT FIX (Desktop Layout)
+   ============================== */
+.profit-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.profit-steps .sf-box {
+  background: var(--sf-purple);
+  border-radius: 18px;
+  padding: 28px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: all .3s ease;
+  color: var(--sf-white);
+}
+
+.profit-steps .sf-box h3 {
+  color: var(--sf-gold);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.profit-steps .sf-box p {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.profit-steps .sf-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(212,175,55,0.6);
+}
+
+/* Make last 2 cards go into row 2 */
+.profit-steps .sf-box:nth-child(4),
+.profit-steps .sf-box:nth-child(5) {
+  grid-column: span 1;
+}
+
+@media (max-width: 768px) {
+  /* Respect mobile-lock.css */
+  .profit-steps {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
