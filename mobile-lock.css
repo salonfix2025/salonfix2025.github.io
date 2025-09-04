@@ -869,3 +869,23 @@
     font-size: 0.85rem;
   }
 }
+/* ==============================
+   PRICING PAGE – MOBILE BOXES
+   ============================== */
+@media (max-width: 768px) {
+  .pricing-page .plan-card {
+    width: 88% !important;       /* narrower width */
+    max-width: 340px;            /* cap for premium look */
+    margin: 0 auto 24px auto;    /* center + spacing between cards */
+    border-radius: 20px !important;
+    padding: 22px !important;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  }
+
+  /* CTA button inside each card */
+  .pricing-page .plan-card .btn-gold {
+    width: 100% !important;
+    text-align: center;
+    margin-top: 14px;
+  }
+}
