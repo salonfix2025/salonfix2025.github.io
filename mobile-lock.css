@@ -315,3 +315,106 @@
     margin-left: 12px;
   }
 }
+/* ==============================
+   MOBILE LOCK – CORRECTIONS 1–6
+   ============================== */
+@media (max-width: 768px) {
+
+  /* ✅ Correction 1: Why Salons Lose Profit */
+  .problems {
+    background: var(--sf-purple);
+    padding: 50px 20px;
+  }
+  .problems h2 {
+    color: #fff !important;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .profit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .problem-card {
+    background: linear-gradient(145deg, #fff, #f9f9f9);
+    color: var(--sf-purple);
+    font-weight: 600;
+    text-align: center;
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  }
+
+  /* ✅ Correction 2: Real Results – add spacing + left/right animation */
+  .results-section {
+    padding: 50px 20px;
+  }
+  .result-card {
+    margin-bottom: 20px !important;
+    animation: fadeInLeft 0.8s ease both;
+  }
+  .result-card:nth-child(even) {
+    animation: fadeInRight 0.8s ease both;
+  }
+  @keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-40px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(40px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  /* ✅ Correction 3: More spacing between sections */
+  section {
+    margin-bottom: 40px !important;
+  }
+
+  /* ✅ Correction 4: Why SALONFIX Exists – clean purple section */
+  .why-section {
+    background: var(--sf-purple);
+    color: #fff;
+    padding: 50px 20px;
+  }
+  .why-section img {
+    border-radius: 14px;
+    margin: 20px 0;
+  }
+
+  /* ✅ Correction 5: 5-Step Profit Fix (reduced width + spacing) */
+  .profit-fix {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .profit-fix .sf-box {
+    background: var(--sf-purple);
+    color: #fff;
+    border-radius: 14px;
+    padding: 20px;
+    width: 90%;           /* reduce width so it doesn’t stretch full */
+    max-width: 320px;     /* cap width for premium look */
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    text-align: center;
+  }
+
+  /* ✅ Correction 6: Promise Section – reduce width & keep clean */
+  .promise-section {
+    background: #fff;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .promise-section img {
+    border-radius: 14px;
+    max-width: 90%;
+    margin-bottom: 18px;
+  }
+  .promise-section p {
+    max-width: 90%;
+    text-align: center;
+  }
+}
