@@ -889,3 +889,21 @@
     margin-top: 14px;
   }
 }
+/* ==============================
+   NAVBAR – STATIC (Default Flow)
+   ============================== */
+.sf-navbar {
+  position: relative; /* no fixed */
+  top: auto;
+  left: auto;
+  width: 100%;
+  z-index: 1000;
+  background: var(--sf-purple); /* keep solid background */
+  box-shadow: none; /* optional, remove shadow */
+}
+
+/* Remove body push down */
+body {
+  padding-top: 0 !important;
+  margin: 0;
+}
