@@ -549,3 +549,65 @@ nav.sf-navbar ul li a.active::after {
   }
   .founder img { order: unset; }
 }
+/* ==============================
+   🔧 Correction 4 Refined – Takeover Section
+   ============================== */
+.takeover {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* image left, text right */
+  gap: 50px;
+  align-items: center;
+  padding: 80px 40px;
+}
+
+.takeover img {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+.takeover img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 28px rgba(212,175,55,0.6);
+}
+
+.takeover .content {
+  text-align: left;
+}
+
+.takeover h2 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--sf-purple);
+  margin-bottom: 18px;
+}
+
+.takeover p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: var(--sf-dark);
+}
+
+.takeover ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.takeover ul li {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+/* ✅ Responsive fix */
+@media (max-width: 768px) {
+  .takeover {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .takeover .content {
+    text-align: center;
+  }
+}
