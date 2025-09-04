@@ -611,3 +611,65 @@ nav.sf-navbar ul li a.active::after {
     text-align: center;
   }
 }
+/* ==============================
+   🔧 Correction 4 – Takeover Layout Fix
+   ============================== */
+.takeover {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "head image"
+    "sub image"
+    "points image";
+  gap: 20px 50px;
+  align-items: center;
+  padding: 80px 40px;
+}
+
+/* Place elements into grid */
+.takeover h2 { 
+  grid-area: head; 
+  text-align: left;
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--sf-purple);
+}
+.takeover .sub-purple { 
+  grid-area: sub; 
+  text-align: left;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.takeover .solution-image { grid-area: image; }
+.takeover .takeover-points { 
+  grid-area: points; 
+  text-align: left;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+/* Image polish */
+.takeover img {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: all .3s ease;
+}
+.takeover img:hover { transform: scale(1.03); box-shadow: 0 10px 28px rgba(212,175,55,0.6); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .takeover {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "head"
+      "sub"
+      "image"
+      "points";
+    text-align: center;
+  }
+  .takeover h2,
+  .takeover .sub-purple,
+  .takeover .takeover-points {
+    text-align: center;
+  }
+}
