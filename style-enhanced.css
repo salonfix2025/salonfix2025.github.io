@@ -159,231 +159,221 @@ nav.sf-navbar ul li a.active::after {
 }
 
 /* ==============================
-   METRICS
+   FOUNDER SECTION – Desktop Only
    ============================== */
-.metrics { background: #fff; text-align: center; padding: 70px 20px; }
-.metrics h2 { color: var(--sf-purple); }
-.metric-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px; margin-top: 24px; }
-.metric-card {
-  background: #fff;
-  border-radius: var(--radius);
-  padding: 26px;
-  min-width: 180px;
-  font-weight: 800;
-  color: var(--sf-purple);
-  box-shadow: var(--shadow);
-  text-align: center;
-  transition: all 0.3s ease;
-}
-.metric-card:hover { transform: translateY(-4px); box-shadow: 0 8px 22px rgba(212,175,55,0.5); }
+@media (min-width: 769px) {
+  .founder-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* text left, image right */
+    align-items: start;
+    gap: 60px;
+    width: 100%;
+    margin: 0 auto 80px;
+    padding: 80px 8%;
+    background: var(--sf-purple);
+  }
 
-/* ==============================
-   WHY PROFIT LOSES (Correction 1)
-   ============================== */
-.problems {
-  background: var(--sf-purple);
-  color: var(--sf-white);
-  padding: 70px 8%;
-  text-align: center;
-  border-radius: 30px;
-  max-width: 1100px;
-  margin: 0 auto 70px;
-}
-.problems h2 { color: #fff; }
-.profit-grid {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-template-rows: repeat(2,auto);
-  gap: 24px;
-}
-.problem-card {
-  background: linear-gradient(135deg,#FFD700,#D4AF37);
-  color: var(--sf-purple);
-  border-radius: var(--radius);
-  padding: 28px;
-  font-weight: 700;
-  box-shadow: var(--shadow);
-  animation: fadeInUp 1s ease both;
-}
-@keyframes fadeInUp {
-  from { opacity:0; transform: translateY(30px); }
-  to { opacity:1; transform: translateY(0); }
-}
+  /* text left */
+  .founder-section > *:not(img) {
+    grid-column: 1;
+    text-align: left;
+    max-width: 560px;
+  }
 
-/* ==============================
-   CHAOS TO CONTROL (Correction 3)
-   ============================== */
-.chaos { background: #fff; text-align: center; padding: 70px 8%; }
-.chaos h2 { color: var(--sf-purple); max-width: 75%; margin: 0 auto 30px; font-size: 2rem; }
-.chaos-grid {
-  display: flex; justify-content: center; gap: 26px; flex-wrap: wrap;
-}
-.chaos-card {
-  background: #fff;
-  border-radius: var(--radius);
-  padding: 32px;
-  box-shadow: var(--shadow);
-  font-size: 1.1rem;
-  font-weight: 600;
-  transition: all .3s ease;
-  min-width: 260px;
-}
-.chaos-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(212,175,55,0.5); }
+  .founder-section h2 {
+    color: var(--sf-gold);
+    font-size: 2.4rem;
+    font-weight: 900;
+    margin-bottom: 24px;
+  }
 
-/* ==============================
-   TAKEOVER (Correction 4 + 10)
-   ============================== */
-.takeover {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-  padding: 80px 8%;
-}
-.takeover h2 { color: var(--sf-purple); text-align: left; font-size: 2rem; }
-.takeover p { color: var(--sf-dark); text-align: left; }
+  .founder-section p {
+    color: var(--sf-white);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
 
-/* ==============================
-   FOUNDER (Homepage - Correction 5)
-   ============================== */
-.founder {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-  background: var(--sf-purple);
-  color: #fff;
-  padding: 90px 8%;
-  border-radius: 30px;
-}
-.founder h2 { font-size: 2rem; text-align: left; }
-.founder p { color: rgba(255,255,255,.9); text-align: left; }
-.founder img {
-  max-width: 400px;
-  border-radius: 20px;
-  box-shadow: var(--shadow);
-  justify-self: center;
+  .founder-section ul {
+    margin: 0 0 24px 0;
+    padding: 0;
+    list-style: none;
+    color: var(--sf-white);
+  }
+  .founder-section ul li {
+    margin-bottom: 12px;
+    padding-left: 26px;
+    position: relative;
+    font-size: 1rem;
+  }
+  .founder-section ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--sf-gold);
+    font-weight: bold;
+  }
+
+  .founder-section .founder-cta {
+    margin-top: 16px;
+    display: inline-block;
+    text-align: left;
+  }
+
+  /* image right */
+  .founder-section img {
+    grid-column: 2;
+    max-width: 400px;
+    margin-left: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  }
 }
 
 /* ==============================
-   RESULTS (Correction 2)
+   WHY SALONFIX EXISTS – Desktop
    ============================== */
-.results {
-  background: #fff;
-  text-align: center;
-  padding: 80px 8%;
-}
-.results h2 {
-  color: var(--sf-purple);
-  max-width: 75%;
-  margin: 0 auto 30px;
-  font-size: 2rem;
-}
-.results-grid {
-  display: flex;
-  justify-content: center;
-  gap: 28px;
-  flex-wrap: wrap;
-}
-.results-card {
-  background: linear-gradient(135deg,#FFD700,#D4AF37);
-  color: var(--sf-purple-dark);
-  padding: 28px;
-  min-width: 220px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  font-weight: 700;
-  transition: all 0.3s ease;
-}
-.results-card:hover { transform: translateY(-4px); box-shadow: 0 8px 22px rgba(212,175,55,0.5); }
-
-/* ==============================
-   FAQ (Correction 13)
-   ============================== */
-.faq-grid { display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: 0 auto; }
-.faq-item {
-  background: #fff;
-  border-radius: 16px;
-  padding: 18px 24px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-}
-.faq-question {
-  font-weight: 800;
-  font-size: 1.1rem;
-  color: var(--sf-purple);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-}
-.faq-question::after { content: "+"; font-weight: 900; font-size: 1.4rem; }
-.faq-item.active .faq-question::after { content: "–"; }
-.faq-answer { max-height: 0; overflow: hidden; opacity: 0; transition: all 0.4s ease; }
-.faq-item.active .faq-answer { max-height: 400px; opacity: 1; margin-top: 14px; }
-
-/* ==============================
-   CONTACT – Free Trial (Correction 14)
-   ============================== */
-.trial-section {
-  background: linear-gradient(160deg, var(--sf-purple), var(--sf-purple-dark));
-  color: #fff;
-  border-radius: 30px;
-  padding: 80px 8%;
-  text-align: center;
-}
-.trial-grid {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 26px;
-  margin-top: 30px;
-}
-.trial-card {
-  background: #fff;
-  color: var(--sf-dark);
-  border-radius: 20px;
-  padding: 28px;
-  box-shadow: var(--shadow);
-  text-align: left;
-  transition: all .3s ease;
-}
-.trial-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(212,175,55,0.6); }
-.trial-card-icon {
-  width: 42px; height: 42px; border-radius: 50%;
-  background: linear-gradient(45deg, #FFD700, #D4AF37);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.2rem; margin-bottom: 10px;
+@media (min-width: 769px) {
+  .why-section {
+    max-width: 1200px;
+    margin: 0 auto 90px;
+    padding: 80px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .why-section h2 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--sf-purple);
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .why-section p { font-size: 1.05rem; line-height: 1.6; color: var(--sf-dark); text-align: left; }
+  .why-section img {
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    transition: all .3s ease;
+  }
+  .why-section img:hover { transform: scale(1.03); box-shadow: 0 12px 30px rgba(212,175,55,0.5); }
 }
 
 /* ==============================
-   CONTACT – Let's Connect (Correction 15)
+   OUR PROMISE – Desktop
    ============================== */
-.connect-card {
-  background: none;
-  padding: 80px 8%;
-  text-align: center;
+@media (min-width: 769px) {
+  .promise-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
+  .promise-section img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    transition: transform .3s ease, box-shadow .3s ease;
+  }
+  .promise-section img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 28px rgba(212,175,55,0.5);
+  }
+  .promise-section p { font-size: 1.1rem; line-height: 1.7; color: var(--sf-dark); }
 }
-.connect-grid {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 26px;
-  max-width: 900px;
-  margin: 0 auto;
+
+/* ==============================
+   RESULTS – Desktop
+   ============================== */
+@media (min-width: 769px) {
+  .results-section {
+    max-width: 1200px;
+    margin: 0 auto 90px;
+    padding: 80px 40px;
+    text-align: center;
+  }
+  .results-section h2 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--sf-purple);
+    margin-bottom: 18px;
+  }
+  .results-section p {
+    font-size: 1.05rem;
+    color: var(--sf-dark);
+    margin-bottom: 40px;
+  }
+  .results-section .card-grid {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+  }
+  .results-section .result-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 28px 24px;
+    flex: 1 1 300px;
+    max-width: 340px;
+    box-shadow: var(--shadow);
+    transition: all .3s ease;
+    text-align: center;
+  }
+  .results-section .result-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(212,175,55,0.45);
+  }
+  .results-section .result-card h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--sf-purple);
+  }
+  .results-section .result-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--sf-dark);
+  }
 }
-.connect-item {
-  background: linear-gradient(135deg,#FFD700,#D4AF37);
-  color: var(--sf-purple-dark);
-  border-radius: 20px;
-  padding: 30px;
-  font-weight: 700;
-  box-shadow: var(--shadow);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: all .3s ease;
+
+/* ==============================
+   5-STEP PROFIT FIX – Desktop
+   ============================== */
+@media (min-width: 769px) {
+  .profit-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    max-width: 1100px;
+    margin: 40px auto;
+  }
+  .profit-steps .sf-box {
+    background: var(--sf-purple);
+    border-radius: 18px;
+    padding: 28px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all .3s ease;
+    color: var(--sf-white);
+  }
+  .profit-steps .sf-box h3 {
+    color: var(--sf-gold);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  .profit-steps .sf-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(212,175,55,0.6);
+  }
+  /* place last 2 boxes on second row */
+  .profit-steps .sf-box:nth-child(4),
+  .profit-steps .sf-box:nth-child(5) {
+    grid-column: span 1;
+  }
 }
-.connect-item:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(212,175,55,0.6); }
 
 /* ==============================
    FOOTER
@@ -435,1192 +425,6 @@ nav.sf-navbar ul li a.active::after {
   transition: all .3s ease;
   z-index: 3000;
   cursor: pointer;
-  overflow: hidden;
 }
 .whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 10px 26px rgba(37,211,102,0.6); }
 .whatsapp-float:active { transform: scale(0.96); box-shadow: inset 0 4px 10px rgba(37,211,102,0.4); }
-.whatsapp-float::after {
-  content: "";
-  position: absolute;
-  top: 0; left: -75%;
-  width: 50%; height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,.65), transparent);
-  transform: skewX(-20deg);
-  border-radius: 50%;
-}
-.whatsapp-float:hover::after { animation: shimmerGreen 1.3s ease forwards; }
-@keyframes shimmerGreen {
-  0% { left: -75%; }
-  100% { left: 125%; }
-}
-/* ==============================
-   🔧 OVERRIDE PACK (Corrections 1, 3, 4, 5, 6)
-   ============================== */
-
-/* ✅ Correction 1 & 3 – Gold Gradient Boxes */
-.problems .problem-card,
-.chaos .chaos-card {
-  background: linear-gradient(135deg, #FFD700, #D4AF37);
-  color: var(--sf-purple) !important;
-  font-weight: 700;
-  text-align: center;
-  border-radius: var(--radius);
-  box-shadow: 0 6px 18px rgba(212,175,55,0.35);
-  transition: all 0.3s ease;
-}
-.problems .problem-card:hover,
-.chaos .chaos-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(212,175,55,0.6);
-}
-
-/* ✅ Correction 4 – Takeover Section (Image Left, Text Right) */
-.takeover {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-  text-align: left;
-}
-.takeover h2 {
-  color: var(--sf-purple);
-  font-weight: 900;
-  margin-bottom: 18px;
-}
-.takeover p,
-.takeover ul {
-  color: var(--sf-dark);
-  line-height: 1.6;
-}
-.takeover img {
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease;
-}
-.takeover img:hover { transform: scale(1.02); box-shadow: 0 10px 28px rgba(212,175,55,0.5); }
-
-/* ✅ Correction 5 – Founder Section (Image Right, Text Left) */
-.founder {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-  text-align: left;
-}
-.founder h2 {
-  color: var(--sf-gold);
-  font-weight: 900;
-  margin-bottom: 18px;
-}
-.founder p,
-.founder ul {
-  color: #fff;
-  line-height: 1.6;
-}
-.founder img {
-  order: 2; /* force image to the right */
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease;
-}
-.founder img:hover { transform: scale(1.02); box-shadow: 0 10px 28px rgba(212,175,55,0.5); }
-
-/* ✅ Correction 6 – Instagram Section One-Column */
-.instagram-feed {
-  display: flex;
-  flex-direction: column !important;
-  align-items: center;
-  gap: 24px;
-}
-.instagram-feed iframe,
-.instagram-feed .insta-post {
-  max-width: 400px;
-  width: 100%;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-}
-
-/* ✅ Responsive Fixes for Mobile */
-@media (max-width: 768px) {
-  .takeover,
-  .founder {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .founder img { order: unset; }
-}
-/* ==============================
-   🔧 Correction 4 Refined – Takeover Section
-   ============================== */
-.takeover {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* image left, text right */
-  gap: 50px;
-  align-items: center;
-  padding: 80px 40px;
-}
-
-.takeover img {
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease;
-}
-.takeover img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 28px rgba(212,175,55,0.6);
-}
-
-.takeover .content {
-  text-align: left;
-}
-
-.takeover h2 {
-  font-size: 2.2rem;
-  font-weight: 900;
-  color: var(--sf-purple);
-  margin-bottom: 18px;
-}
-
-.takeover p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  color: var(--sf-dark);
-}
-
-.takeover ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.takeover ul li {
-  font-size: 1.1rem;
-  margin-bottom: 12px;
-  line-height: 1.6;
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-}
-
-/* ✅ Responsive fix */
-@media (max-width: 768px) {
-  .takeover {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .takeover .content {
-    text-align: center;
-  }
-}
-/* ==============================
-   🔧 Correction 4 – Takeover Layout Fix
-   ============================== */
-.takeover {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "head image"
-    "sub image"
-    "points image";
-  gap: 20px 50px;
-  align-items: center;
-  padding: 80px 40px;
-}
-
-/* Place elements into grid */
-.takeover h2 { 
-  grid-area: head; 
-  text-align: left;
-  font-size: 2.4rem;
-  font-weight: 900;
-  color: var(--sf-purple);
-}
-.takeover .sub-purple { 
-  grid-area: sub; 
-  text-align: left;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-.takeover .solution-image { grid-area: image; }
-.takeover .takeover-points { 
-  grid-area: points; 
-  text-align: left;
-  font-size: 1.15rem;
-  line-height: 1.6;
-}
-
-/* Image polish */
-.takeover img {
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  transition: all .3s ease;
-}
-.takeover img:hover { transform: scale(1.03); box-shadow: 0 10px 28px rgba(212,175,55,0.6); }
-
-/* Responsive */
-@media (max-width: 768px) {
-  .takeover {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "head"
-      "sub"
-      "image"
-      "points";
-    text-align: center;
-  }
-  .takeover h2,
-  .takeover .sub-purple,
-  .takeover .takeover-points {
-    text-align: center;
-  }
-}
-/* ==============================
-   🔧 Correction 5 – Founder Layout Fix
-   ============================== */
-.founder {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "head image"
-    "sub  image"
-    "list image"
-    "cta  image";
-  gap: 20px 50px;
-  align-items: center;
-  padding: 100px 40px;
-  text-align: left;
-  background: var(--sf-purple);
-  color: #fff;
-}
-
-/* Place items into grid */
-.founder h2 { 
-  grid-area: head;
-  font-size: 2.4rem;
-  font-weight: 900;
-}
-.founder p { 
-  grid-area: sub;
-  font-size: 1.2rem;
-  margin: 10px 0 20px;
-}
-.founder img { 
-  grid-area: image;
-  max-width: 380px;
-  margin: 0 auto;
-  border-radius: 20px;
-  box-shadow: var(--shadow);
-  transition: all .3s ease;
-}
-.founder img:hover { transform: scale(1.03); box-shadow: 0 10px 28px rgba(212,175,55,0.6); }
-.founder ul { 
-  grid-area: list;
-  list-style: none;
-  padding: 0;
-  font-size: 1.1rem;
-  line-height: 1.7;
-}
-.founder .btn-gold { 
-  grid-area: cta;
-  justify-self: start;
-  margin-top: 20px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .founder {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "head"
-      "sub"
-      "image"
-      "list"
-      "cta";
-    text-align: center;
-  }
-  .founder .btn-gold { justify-self: center; }
-}
-/* ==============================
-   🔧 Correction 6 – Reels Section Horizontal Layout
-   ============================== */
-.reel-section {
-  text-align: center;
-  padding: 80px 20px;
-  background: #fff;
-}
-
-.reel-section h2 {
-  margin-bottom: 30px;
-}
-
-.reel-grid {
-  display: flex;
-  flex-wrap: nowrap;   /* ❌ prevent wrapping */
-  gap: 24px;
-  overflow-x: auto;    /* ✅ enable horizontal scroll */
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 10px;
-}
-
-.reel-grid blockquote {
-  flex: 0 0 320px;     /* fixed width like Instagram embed */
-  max-width: 90%;
-  margin: 0 auto;
-  scroll-snap-align: start;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  background: #fff;
-  transition: transform .3s ease, box-shadow .3s ease;
-}
-
-.reel-grid blockquote:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 24px rgba(212,175,55,0.4);
-}
-
-/* Hide scrollbar for clean look */
-.reel-grid::-webkit-scrollbar { display: none; }
-.reel-grid { -ms-overflow-style: none; scrollbar-width: none; }
-/* ==============================
-   🔧 Correction 6b – Reels Section Center Align
-   ============================== */
-.reel-grid {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;   /* ✅ Center alignment */
-  gap: 24px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding: 10px 0;
-}
-
-.reel-grid blockquote {
-  flex: 0 0 320px;
-  margin: 0 auto;
-  scroll-snap-align: center; /* ✅ snaps center when scrolling */
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  background: #fff;
-  transition: transform .3s ease, box-shadow .3s ease;
-}
-
-.reel-grid blockquote:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 24px rgba(212,175,55,0.4);
-}
-
-/* Hide scrollbar */
-.reel-grid::-webkit-scrollbar { display: none; }
-.reel-grid { -ms-overflow-style: none; scrollbar-width: none; }
-/* ==============================
-   🔧 Correction 5b – Founder Image Rounded Square
-   ============================== */
-.founder img {
-  width: 300px;              /* ✅ reduce width */
-  height: 300px;             /* ✅ force square shape */
-  object-fit: cover;         /* ✅ keeps face centered without distortion */
-  border-radius: 24px;       /* ✅ rounded square */
-  margin: 20px auto;
-  box-shadow: var(--shadow);
-  transition: all .3s ease;
-}
-
-.founder img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 28px rgba(212,175,55,0.6);
-}
-/* ==============================
-   🔧 Correction 7b – About Founder Grid Fix
-   ============================== */
-.founder {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* text left, image right */
-  align-items: center;
-  gap: 40px;
-  text-align: left;              /* text aligned left */
-  padding: 80px 10%;
-}
-
-.founder h2 {
-  font-size: 2rem;
-  font-weight: 900;
-  color: var(--sf-purple);
-  margin-bottom: 18px;
-}
-
-.founder p,
-.founder ul {
-  font-size: 1.1rem;
-  color: var(--sf-dark);
-  margin-bottom: 16px;
-}
-
-.founder ul {
-  list-style: none;
-  padding: 0;
-}
-
-.founder ul li::before {
-  content: "✔";
-  margin-right: 8px;
-  color: var(--sf-gold);
-  font-weight: bold;
-}
-
-.founder img {
-  width: 320px;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 22px;    /* rounded square */
-  box-shadow: var(--shadow);
-  justify-self: center;   /* keeps image aligned to right column */
-  transition: all .3s ease;
-}
-
-.founder img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 28px rgba(212,175,55,0.6);
-}
-/* Founder Section – Desktop Polishing */
-.founder {
-  background: var(--sf-purple);
-  color: var(--sf-white);
-  text-align: left;
-  padding: 70px 10%;
-  border-radius: 24px;
-  max-width: 1100px;    /* narrower width */
-  margin: 0 auto 80px;  /* center horizontally + spacing below */
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 40px;
-}
-
-.founder h2 {
-  font-size: 2rem;
-  font-weight: 900;
-  color: var(--sf-white);  /* headline white */
-  margin-bottom: 20px;
-}
-
-.founder h2 span {
-  color: var(--sf-gold);   /* highlight gold for JAWHAR RAJ RAJKUMAR */
-}
-
-.founder p,
-.founder ul li {
-  color: var(--sf-white);
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-
-.founder ul {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-}
-
-.founder ul li::before {
-  content: "✔";
-  margin-right: 8px;
-  color: var(--sf-gold);
-}
-
-.founder img {
-  border-radius: 20px;
-  max-width: 360px;
-  margin: 0 auto;
-  box-shadow: var(--shadow);
-}
-/* Founder Section – About Page (Desktop only, no mobile override) */
-@media (min-width: 769px) {
-  .about-founder {
-    max-width: 1100px;
-    margin: 0 auto 80px;
-    padding: 70px 10%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-  }
-
-  .about-founder h2 {
-    font-size: 2rem;
-    font-weight: 900;
-    margin-bottom: 20px;
-    color: var(--sf-purple);
-  }
-
-  .about-founder p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-    color: var(--sf-dark);
-  }
-
-  .about-founder img {
-    max-width: 360px;
-    border-radius: 20px;
-    margin: 0 auto;
-    box-shadow: var(--shadow);
-  }
-}
-/* ==============================
-   REAL RESULTS (Desktop Polish)
-   ============================== */
-@media (min-width: 769px) {
-  .results-section {
-    max-width: 1200px;
-    margin: 0 auto 90px;
-    padding: 80px 40px;
-    text-align: center;
-  }
-
-  .results-section h2 {
-    font-size: 2.2rem;
-    font-weight: 900;
-    color: var(--sf-purple);
-    margin-bottom: 18px;
-  }
-
-  .results-section p {
-    font-size: 1.05rem;
-    color: var(--sf-dark);
-    margin-bottom: 40px;
-  }
-
-  .results-section .card-grid {
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-  }
-
-  .results-section .result-card {
-    background: #fff;
-    border-radius: 20px;
-    padding: 28px 24px;
-    flex: 1 1 300px;
-    max-width: 340px;
-    box-shadow: var(--shadow);
-    transition: all 0.3s ease;
-    text-align: center;
-  }
-
-  .results-section .result-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 28px rgba(212,175,55,0.45);
-  }
-
-  .results-section .result-card h3 {
-    font-size: 1.2rem;
-    font-weight: 800;
-    margin-bottom: 10px;
-    color: var(--sf-purple);
-  }
-
-  .results-section .result-card p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: var(--sf-dark);
-  }
-}
-/* ==============================
-   WHY SALONFIX EXISTS (Desktop Layout)
-   ============================== */
-@media (min-width: 769px) {
-  .why-exists-section {
-    max-width: 1200px;
-    margin: 0 auto 90px;
-    padding: 80px 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-  }
-
-  .why-exists-section h2 {
-    font-size: 2.2rem;
-    font-weight: 900;
-    color: var(--sf-purple);
-    margin-bottom: 20px;
-    text-align: left;
-  }
-
-  .why-exists-section p {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: var(--sf-dark);
-    text-align: left;
-  }
-
-  .why-exists-section img {
-    border-radius: 20px;
-    box-shadow: var(--shadow);
-    max-width: 100%;
-    transition: all 0.3s ease;
-  }
-
-  .why-exists-section img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 12px 30px rgba(212,175,55,0.5);
-  }
-}
-/* ==============================
-   NOT ADVICE SECTION (Desktop Layout)
-   ============================== */
-@media (min-width: 769px) {
-  .advice-section {
-    max-width: 1200px;
-    margin: 0 auto 90px;
-    padding: 80px 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-  }
-
-  .advice-section h2 {
-    font-size: 2.2rem;
-    font-weight: 900;
-    color: var(--sf-purple);
-    margin-bottom: 20px;
-    text-align: left;
-  }
-
-  .advice-section p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: var(--sf-dark);
-    text-align: left;
-    margin-bottom: 18px;
-  }
-
-  .advice-section img {
-    border-radius: 20px;
-    box-shadow: var(--shadow);
-    max-width: 100%;
-    transition: all 0.3s ease;
-  }
-
-  .advice-section img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 12px 30px rgba(212,175,55,0.5);
-  }
-}
-/* ==============================
-   5-STEP PROFIT FIX (Desktop Layout)
-   ============================== */
-.profit-steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
-  max-width: 1100px;
-  margin: 40px auto;
-}
-
-.profit-steps .sf-box {
-  background: var(--sf-purple);
-  border-radius: 18px;
-  padding: 28px;
-  text-align: center;
-  box-shadow: var(--shadow);
-  transition: all .3s ease;
-  color: var(--sf-white);
-}
-
-.profit-steps .sf-box h3 {
-  color: var(--sf-gold);
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.profit-steps .sf-box p {
-  color: #fff;
-  font-size: 1rem;
-}
-
-.profit-steps .sf-box:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(212,175,55,0.6);
-}
-
-/* Make last 2 cards go into row 2 */
-.profit-steps .sf-box:nth-child(4),
-.profit-steps .sf-box:nth-child(5) {
-  grid-column: span 1;
-}
-
-@media (max-width: 768px) {
-  /* Respect mobile-lock.css */
-  .profit-steps {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-}
-/* ==============================
-   OUR PROMISE (Desktop Grid Layout)
-   ============================== */
-.promise-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 20px;
-}
-
-.promise-section img {
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.promise-section img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 12px 28px rgba(212,175,55,0.5);
-}
-
-.promise-section .promise-text {
-  color: var(--sf-dark);
-  font-size: 1.1rem;
-  line-height: 1.7;
-}
-.promise-section .promise-text h3 {
-  color: var(--sf-gold);
-  font-size: 1.4rem;
-  margin-bottom: 16px;
-}
-
-/* Mobile — keep stacked */
-@media (max-width: 768px) {
-  .promise-section {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .promise-section img {
-    margin: 0 auto;
-  }
-}
-/* ==============================
-   SALONFIX – Style Enhanced (Premium Polished for Desktop)
-   ============================== */
-:root {
-  --sf-purple: #4B0082;
-  --sf-purple-dark: #2d004c;
-  --sf-gold: #D4AF37;
-  --sf-white: #ffffff;
-  --sf-dark: #1b1230;
-
-  --radius: 20px;
-  --shadow: 0 8px 22px rgba(0,0,0,.15);
-  --shadow-hover: 0 12px 28px rgba(0,0,0,.2);
-}
-
-/* Reset + Global */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html, body {
-  font-family: 'Montserrat', sans-serif;
-  background: var(--sf-white);
-  color: var(--sf-dark);
-  line-height: 1.6;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-a { text-decoration: none; color: inherit; cursor: pointer; }
-img { max-width: 100%; height: auto; display: block; }
-section { padding: 70px 20px; margin-bottom: 70px; }
-section h2 {
-  font-weight: 900;
-  margin-bottom: 24px;
-  font-size: 1.8rem;
-  text-align: center;
-  position: relative;
-}
-section h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: var(--sf-gold);
-  margin: 12px auto 0;
-  border-radius: 2px;
-}
-
-/* ==============================
-   NAVBAR
-   ============================== */
-nav.sf-navbar {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  padding: 14px 28px;
-  background: var(--sf-purple);
-  color: var(--sf-white);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 999;
-}
-nav.sf-navbar .logo a {
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: var(--sf-white);
-}
-nav.sf-navbar ul {
-  display: flex;
-  list-style: none;
-  gap: 28px;
-}
-nav.sf-navbar ul li a {
-  color: var(--sf-white);
-  font-weight: 600;
-  transition: color .3s, border-bottom .3s;
-  position: relative;
-}
-nav.sf-navbar ul li a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background: var(--sf-gold);
-  transition: width 0.3s ease;
-}
-nav.sf-navbar ul li a:hover::after,
-nav.sf-navbar ul li a.active::after {
-  width: 100%;
-}
-.cta-btn {
-  background: linear-gradient(135deg, #FFD700, var(--sf-gold));
-  color: var(--sf-purple-dark);
-  font-weight: 800;
-  padding: 12px 24px;
-  border-radius: 30px;
-  box-shadow: var(--shadow);
-  transition: all .3s ease;
-}
-.cta-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
-
-/* Burger */
-.burger { display: none; flex-direction: column; gap: 5px; background: transparent; border: none; }
-.burger span {
-  width: 24px; height: 3px; background: var(--sf-white); border-radius: 2px; transition: all .3s;
-}
-.burger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-.burger.open span:nth-child(2) { opacity: 0; }
-.burger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-
-/* ==============================
-   HERO
-   ============================== */
-.hero {
-  background: linear-gradient(135deg, var(--sf-purple), var(--sf-purple-dark));
-  color: var(--sf-white);
-  text-align: center;
-  padding: 140px 20px 100px;
-}
-.hero h1 {
-  font-size: clamp(32px, 6vw, 52px);
-  font-weight: 900;
-  margin-bottom: 18px;
-}
-.hero h1::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 3px;
-  background: var(--sf-gold);
-  margin: 12px auto 0;
-  border-radius: 2px;
-}
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  color: rgba(255,255,255,.9);
-}
-.btn-gold {
-  position: relative;
-  display: inline-block;
-  padding: 14px 32px;
-  border-radius: 50px;
-  font-weight: 800;
-  text-align: center;
-  background: linear-gradient(45deg, #FFD700, #D4AF37, #FFD700);
-  background-size: 300% 300%;
-  animation: shimmer 3s infinite linear;
-  color: #111 !important;
-  box-shadow: 0 0 15px rgba(212,175,55,0.7);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 0 20px rgba(212,175,55,0.9); }
-.btn-gold:active { transform: scale(0.97); box-shadow: inset 0 4px 12px rgba(212,175,55,0.4); }
-@keyframes shimmer {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* ==============================
-   GENERIC ALTERNATING GRID (Desktop Only)
-   ============================== */
-.alt-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 20px;
-}
-.alt-section img {
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.alt-section img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 12px 28px rgba(212,175,55,0.5);
-}
-.alt-section .text-block {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: var(--sf-dark);
-}
-.alt-section .text-block h3 {
-  font-size: 1.6rem;
-  font-weight: 800;
-  margin-bottom: 16px;
-  color: var(--sf-gold);
-}
-.alt-section.reverse { grid-template-columns: 1fr 1fr; }
-.alt-section.reverse img { order: 2; }
-.alt-section.reverse .text-block { order: 1; }
-
-/* Mobile stays stacked */
-@media (max-width: 768px) {
-  .alt-section,
-  .alt-section.reverse {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .alt-section img,
-  .alt-section.reverse img {
-    order: unset;
-    margin: 0 auto;
-  }
-}
-/* ==============================
-   FOUNDER SECTION – DESKTOP ONLY (Final Merged)
-   ============================== */
-@media (min-width: 769px) {
-  .founder-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 60px;
-    width: 100%;              /* full width background */
-    margin: 0 auto;
-    padding: 80px 8%;         /* balanced inside spacing */
-    background: var(--sf-purple);
-  }
-
-  .founder-section h2 {
-    color: var(--sf-gold);
-    font-size: 2.3rem;        /* balanced between 2.2 and 2.4 */
-    font-weight: 900;
-    margin-bottom: 24px;
-    text-align: left;
-  }
-
-  .founder-section p {
-    color: var(--sf-white);
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    text-align: left;
-    max-width: 550px;
-  }
-
-  .founder-section ul {
-    color: var(--sf-white);
-    margin: 0 0 24px 0;
-    padding: 0;
-    list-style: none;
-    text-align: left;
-  }
-  .founder-section ul li {
-    margin-bottom: 12px;
-    padding-left: 26px;
-    position: relative;
-    font-size: 1rem;
-  }
-  .founder-section ul li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: var(--sf-gold);
-    font-weight: bold;
-  }
-
-  .founder-section .founder-cta {
-    margin-top: 12px;
-    text-align: left;
-    display: inline-block;
-  }
-
-  .founder-section img {
-    max-width: 400px;         /* slightly larger image */
-    margin-left: auto;
-    display: block;
-    border-radius: 12px;      /* subtle rounding */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25); /* premium shadow */
-  }
-}
-/* ==============================
-   FOUNDER SECTION – DESKTOP ONLY (Text Left, Image Right)
-   ============================== */
-@media (min-width: 769px) {
-  .founder-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* text left, image right */
-    align-items: center;
-    gap: 60px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 80px 8%;
-    background: var(--sf-purple);
-  }
-
-  /* Force all text items into the left column */
-  .founder-section > h2,
-  .founder-section > p,
-  .founder-section > ul,
-  .founder-section > .founder-cta {
-    grid-column: 1;
-    max-width: 550px;  /* keeps text column tidy */
-    text-align: left;
-  }
-
-  .founder-section h2 {
-    color: var(--sf-gold);
-    font-size: 2.4rem;
-    font-weight: 900;
-    margin-bottom: 24px;
-  }
-
-  .founder-section p {
-    color: var(--sf-white);
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-  }
-
-  .founder-section ul {
-    color: var(--sf-white);
-    margin: 0 0 24px 0;
-    padding: 0;
-    list-style: none;
-  }
-  .founder-section ul li {
-    margin-bottom: 12px;
-    padding-left: 26px;
-    position: relative;
-    font-size: 1rem;
-  }
-  .founder-section ul li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: var(--sf-gold);
-    font-weight: bold;
-  }
-
-  .founder-section .founder-cta {
-    margin-top: 12px;
-    display: inline-block;
-  }
-
-  /* Image stays alone on right */
-  .founder-section img {
-    grid-column: 2;
-    max-width: 400px;
-    margin-left: auto;
-    display: block;
-    border-radius: 12px; 
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  }
-}
-/* ==============================
-   FOUNDER SECTION – DESKTOP ONLY (CSS-only, no HTML change)
-   ============================== */
-@media (min-width: 769px) {
-  .founder-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;  /* text left, image right */
-    align-items: start;
-    gap: 60px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 80px 8%;
-    background: var(--sf-purple);
-  }
-
-  /* All elements except the image go to left column */
-  .founder-section > *:not(img) {
-    grid-column: 1;
-    text-align: left;
-  }
-
-  /* Image always in right column */
-  .founder-section img {
-    grid-column: 2;
-    max-width: 400px;
-    margin-left: auto;
-    display: block;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  }
-
-  .founder-section h2 {
-    color: var(--sf-gold);
-    font-size: 2.4rem;
-    font-weight: 900;
-    margin-bottom: 24px;
-  }
-
-  .founder-section p {
-    color: var(--sf-white);
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    max-width: 550px;
-  }
-
-  .founder-section ul {
-    color: var(--sf-white);
-    margin: 0 0 24px 0;
-    padding: 0;
-    list-style: none;
-  }
-  .founder-section ul li {
-    margin-bottom: 12px;
-    padding-left: 26px;
-    position: relative;
-    font-size: 1rem;
-  }
-  .founder-section ul li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: var(--sf-gold);
-    font-weight: bold;
-  }
-
-  .founder-section .founder-cta {
-    margin-top: 12px;
-    display: inline-block;
-  }
-}
