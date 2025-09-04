@@ -722,3 +722,26 @@
     margin-bottom: 28px !important; /* reduced from 40px */
   }
 }
+/* ==============================
+   PARTNERSHIP PLANS – MOBILE FIX
+   ============================== */
+@media (max-width: 768px) {
+  body.pricing-page .plan-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 22px !important; /* more space between boxes */
+    padding: 0 5%;        /* framed look */
+  }
+  body.pricing-page .plan-card {
+    width: 90% !important;   /* reduced width */
+    margin: 0 auto !important;
+    border-radius: 16px !important;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    padding: 24px !important;
+  }
+  body.pricing-page .plan-card h3 {
+    font-size: 1.2rem !important;
+    margin-bottom: 10px;
+    color: var(--sf-gold);
+  }
+}
