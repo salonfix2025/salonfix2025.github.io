@@ -418,3 +418,103 @@
     text-align: center;
   }
 }
+/* ==============================
+   CONTACT PAGE – MOBILE OVERRIDES
+   ============================== */
+@media (max-width: 768px) {
+  body.contact-page {
+    overflow-x: hidden;
+  }
+
+  /* ✅ Hero */
+  body.contact-page .hero {
+    padding: 60px 18px !important;
+    text-align: center;
+  }
+  body.contact-page .hero h1 {
+    font-size: 1.8rem !important;
+    color: #fff;
+  }
+  body.contact-page .hero-sub {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 10px;
+    color: #eee;
+  }
+
+  /* ✅ Section spacing */
+  body.contact-page section.section {
+    padding: 40px 16px !important;
+  }
+
+  /* ✅ Grid tweaks */
+  body.contact-page .grid-2 {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  body.contact-page .icon-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  body.contact-page .icon-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  }
+  body.contact-page .icon-row i {
+    background: linear-gradient(45deg, #D4AF37, #FFD700);
+    padding: 10px;
+    border-radius: 50%;
+    color: #000;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  /* ✅ Connect Card */
+  body.contact-page .connect-card {
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    background: #fff;
+  }
+  body.contact-page .connect-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  body.contact-page .connect-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-decoration: none;
+    color: var(--sf-purple);
+    font-weight: 600;
+  }
+  body.contact-page .connect-item .ci-icon {
+    font-size: 1.2rem;
+    color: var(--sf-gold);
+  }
+
+  /* ✅ Form Frame */
+  body.contact-page .form-frame {
+    border-radius: 16px;
+    max-width: 95% !important;
+    margin: 0 auto;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  }
+
+  /* ✅ Footer CTA fix */
+  body.contact-page .footer-cta a {
+    position: relative;
+    z-index: 10;
+  }
+}
