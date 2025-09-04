@@ -1412,3 +1412,68 @@ nav.sf-navbar ul li a.active::after {
     margin: 0 auto;
   }
 }
+/* ==============================
+   FOUNDER SECTION – DESKTOP ONLY
+   ============================== */
+@media (min-width: 769px) {
+  .founder-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 40px;
+    background: var(--sf-purple);
+    border-radius: 20px;
+  }
+
+  .founder-section h2 {
+    color: var(--sf-gold);
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .founder-section p {
+    color: var(--sf-white);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    text-align: left;
+  }
+
+  .founder-section ul {
+    color: var(--sf-white);
+    margin: 0 0 20px 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+  }
+  .founder-section ul li {
+    margin-bottom: 10px;
+    padding-left: 22px;
+    position: relative;
+  }
+  .founder-section ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--sf-gold);
+    font-weight: bold;
+  }
+
+  .founder-section .founder-cta {
+    margin-top: 10px;
+    text-align: left;
+  }
+
+  .founder-section img {
+    border-radius: 20px;
+    max-width: 380px;
+    margin-left: auto;
+    display: block;
+    box-shadow: var(--shadow);
+  }
+}
