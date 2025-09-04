@@ -1157,3 +1157,48 @@ nav.sf-navbar ul li a.active::after {
     gap: 20px;
   }
 }
+/* ==============================
+   OUR PROMISE (Desktop Grid Layout)
+   ============================== */
+.promise-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.promise-section img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.promise-section img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 28px rgba(212,175,55,0.5);
+}
+
+.promise-section .promise-text {
+  color: var(--sf-dark);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+.promise-section .promise-text h3 {
+  color: var(--sf-gold);
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+/* Mobile — keep stacked */
+@media (max-width: 768px) {
+  .promise-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .promise-section img {
+    margin: 0 auto;
+  }
+}
