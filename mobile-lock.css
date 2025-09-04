@@ -775,3 +775,43 @@
     transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
 }
+/* ==============================
+   GLOBAL CLICK/TAP POLISH
+   ============================== */
+@media (max-width: 768px) {
+
+  /* Remove ugly tap highlight on ALL links & buttons */
+  a, button {
+    -webkit-tap-highlight-color: transparent;
+    outline: none !important;
+  }
+
+  /* Premium press effect for CTAs + WhatsApp */
+  .btn-gold,
+  .btn-outline,
+  .cta-btn,
+  .whatsapp-float {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn-gold:focus,
+  .btn-outline:focus,
+  .cta-btn:focus,
+  .whatsapp-float:focus {
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.8) !important;
+  }
+  .btn-gold:active,
+  .btn-outline:active,
+  .cta-btn:active,
+  .whatsapp-float:active {
+    transform: scale(0.97);
+    box-shadow: 0 0 18px rgba(212, 175, 55, 1) !important;
+  }
+
+  /* Subtle feedback for ALL other links (navbar, footer) */
+  nav.sf-navbar a:active,
+  footer a:active {
+    opacity: 0.7;
+    transform: scale(0.98);
+    transition: all 0.15s ease;
+  }
+}
