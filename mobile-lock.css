@@ -1,5 +1,5 @@
 /* ==============================
-   MOBILE LOCK – SALONFIX (GLOBAL)
+   MOBILE LOCK – SALONFIX (MASTER FINAL)
    ============================== */
 @media (max-width: 768px) {
 
@@ -93,19 +93,16 @@
   .card { text-align: center; padding: 20px; border-radius: 16px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
 
   /* Why Salons Lose Profit */
-  .problems { margin-bottom: 40px; } /* Correction 2 spacing */
   .problems h2 { color: var(--sf-purple); font-size: 1.2rem !important; }
   .problems-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   .problem-card { padding: 18px; border-radius: 14px; background: #fff; box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
 
   /* Chaos to Control */
-  .case { margin-bottom: 40px; } /* Correction 2 spacing */
   .case h2 { color: var(--sf-purple); }
   .case-card { display: flex; flex-direction: column; gap: 12px; }
   .case-card .card { flex: 1; padding: 18px; border-radius: 16px; background: #fff; box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
 
   /* Takeover */
-  .solution { margin-bottom: 40px; } /* Correction 2 spacing */
   .solution h2 { color: var(--sf-purple); }
   .solution-image img { border-radius: 16px; }
 
@@ -139,53 +136,20 @@
   .founder-section { background: var(--sf-purple); color: #fff; text-align: center; padding: 50px 20px; }
   .founder-section img { max-width: 320px; border-radius: 18px; margin: 0 auto 20px; display: block; }
   .founder-section ul { list-style: none; padding: 0; margin: 20px 0; }
-  .founder-section ul li::before { display: none; } /* Correction 3 */
-  .founder-section ul li { margin: 8px 0; }
+  .founder-section ul li::before { display: none; }
 
   /* Real Results */
-  .results-section {
-    background: var(--sf-purple); /* Correction 1 */
-    color: #fff;
-    padding: 40px 20px;
-    border-radius: 12px;
-    margin-bottom: 40px; /* Correction 2 */
-  }
-  .results-section h2 { color: #fff; }
-  .result-card {
-    background: rgba(255,255,255,0.1);
-    border-radius: 16px;
-    padding: 18px;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-    margin-bottom: 14px;
-  }
+  .results-section h2 { color: var(--sf-purple); }
+  .result-card { background: #fff; border-radius: 16px; padding: 18px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); margin-bottom: 14px; }
 
   /* Why SALONFIX Exists */
-  .why-section { background: var(--sf-purple); color: #fff; padding: 40px 20px; margin-bottom: 40px; }
+  .why-section { background: var(--sf-purple); color: #fff; padding: 40px 20px; }
   .why-section img { border-radius: 16px; margin: 20px 0; }
-  .why-highlight { font-size: 1.2rem; font-weight: 700; color: var(--sf-gold); margin: 20px 0; text-align: center; }
 
   /* 5 Step Profit Fix */
-  .profit-fix .sf-box {
-    background: var(--sf-purple);
-    color: #fff;
-    border-radius: 12px;
-    padding: 18px;
-    margin-bottom: 14px;
-  }
+  .profit-fix .sf-box { background: var(--sf-purple); color: #fff; border-radius: 12px; padding: 18px; margin-bottom: 14px; }
 
-  /* Promise Section */
-  .promise-section {
-    background: #fff; /* Correction 6 */
-    color: var(--sf-purple);
-    padding: 40px 20px;
-    border-radius: 12px;
-    margin-bottom: 40px;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-    max-width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .promise-section h2 { color: var(--sf-purple); text-align: center; margin-bottom: 18px; }
+  /* Promise */
   .promise-section img { border-radius: 16px; margin-bottom: 18px; }
 }
 
@@ -194,15 +158,44 @@
    ============================== */
 @media (max-width: 768px) {
 
-  /* Steps Grid */
-  .steps-grid { display: flex; flex-direction: column; gap: 18px; margin-bottom: 40px; }
-  .step-card { background: #fff; border-radius: 16px; padding: 20px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); text-align: left; }
-  .step-card h3 { color: var(--sf-purple); }
-  .step-card.gold { border: 2px solid var(--sf-gold); }
+  /* Step Cards */
+  .steps-grid { display: flex; flex-direction: column; gap: 20px; }
+  .step-card {
+    background: linear-gradient(160deg, var(--sf-purple), var(--sf-purple-dark));
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    color: #fff;
+    position: relative;
+    text-align: left;
+  }
+  .step-card h3 { color: var(--sf-gold); font-size: 1.2rem; margin-bottom: 10px; }
+  .step-card p { font-size: 0.95rem; line-height: 1.6; }
+
+  /* Step Number + Icon Box */
+  .step-number-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #D4AF37, #FFD700, #D4AF37);
+    animation: shimmer 3s infinite linear, pulseBtn 2s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: #000;
+    margin-bottom: 12px;
+  }
+  .step-icon {
+    font-size: 1.5rem;
+    color: var(--sf-gold);
+    margin-left: 8px;
+  }
 
   /* FAQ Accordion */
-  .faq-grid { display: flex; flex-direction: column; gap: 12px; }
-  .faq-item { background: #fff; border-radius: 12px; padding: 14px; box-shadow: 0 6px 16px rgba(0,0,0,0.06); }
+  .faq-grid { display: flex; flex-direction: column; gap: 14px; }
+  .faq-item { background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 6px 16px rgba(0,0,0,0.06); }
   .faq-question { font-weight: 700; color: var(--sf-purple); background: none; border: none; width: 100%; text-align: left; }
   .faq-answer { display: none; margin-top: 10px; }
   .faq-item.active .faq-answer { display: block; }
