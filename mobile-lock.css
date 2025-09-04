@@ -518,3 +518,124 @@
     z-index: 10;
   }
 }
+/* ==============================
+   FINAL POLISH – STEP CARDS + FAQ
+   ============================== */
+@media (max-width: 768px) {
+
+  /* ✅ Section Headlines */
+  .case h2,
+  .faq h2 {
+    text-align: center !important;
+    font-weight: 800 !important;
+    margin-top: 20px !important;
+    margin-bottom: 15px !important;
+    font-size: 1.4rem !important;
+    position: relative;
+  }
+  .case h2::after,
+  .faq h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--sf-gold);
+    margin: 8px auto 0;
+    border-radius: 2px;
+  }
+
+  /* ✅ Step Cards – Premium Layout */
+  .steps-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px !important;
+    padding: 0 5% !important; /* reduce width, framed look */
+  }
+  .step-card {
+    background: linear-gradient(160deg, var(--sf-purple), var(--sf-purple-dark));
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    color: #fff;
+    text-align: left;
+    margin-bottom: 20px !important;
+  }
+  .step-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .step-number-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #D4AF37, #FFD700, #D4AF37);
+    animation: shimmer 3s infinite linear, pulseBtn 2s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: #000;
+  }
+  .step-icon {
+    font-size: 1.6rem;
+    color: var(--sf-gold);
+    margin-left: 12px;
+  }
+  .step-card h3 {
+    color: var(--sf-gold);
+    margin: 8px 0;
+    font-size: 1.2rem;
+  }
+
+  /* ✅ FAQ Section – Animated & Premium */
+  .faq-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 0 5%; /* framed look */
+  }
+  .faq-item {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    padding: 14px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .faq-question {
+    font-weight: 700;
+    color: var(--sf-purple);
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  .faq-question::after {
+    content: "▼";
+    font-size: 0.9rem;
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+  }
+  .faq-item.active .faq-question::after {
+    transform: rotate(180deg);
+  }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.35s ease;
+    opacity: 0;
+  }
+  .faq-item.active .faq-answer {
+    max-height: 500px; /* plenty for content */
+    opacity: 1;
+    margin-top: 10px;
+  }
+}
