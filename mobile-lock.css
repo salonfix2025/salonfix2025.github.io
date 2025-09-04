@@ -1258,3 +1258,22 @@ body {
   font-size: 1.1rem;
   line-height: 1.4;
 }
+/* ==============================
+   NAVBAR – FIXED AT VERY TOP
+   ============================== */
+.sf-navbar {
+  position: fixed;       /* lock it */
+  top: 0;                /* stick to very top */
+  left: 0;
+  width: 100%;
+  z-index: 2000;         /* above everything */
+  background: var(--sf-purple); /* solid brand purple */
+  padding: 12px 18px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* ✅ Prevent white gap: push body down by navbar height */
+body {
+  margin: 0;
+  padding-top: 70px; /* match navbar height */
+}
