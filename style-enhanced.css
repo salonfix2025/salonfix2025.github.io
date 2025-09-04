@@ -933,3 +933,35 @@ nav.sf-navbar ul li a.active::after {
   margin: 0 auto;
   box-shadow: var(--shadow);
 }
+/* Founder Section – About Page (Desktop only, no mobile override) */
+@media (min-width: 769px) {
+  .about-founder {
+    max-width: 1100px;
+    margin: 0 auto 80px;
+    padding: 70px 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .about-founder h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: var(--sf-purple);
+  }
+
+  .about-founder p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: var(--sf-dark);
+  }
+
+  .about-founder img {
+    max-width: 360px;
+    border-radius: 20px;
+    margin: 0 auto;
+    box-shadow: var(--shadow);
+  }
+}
