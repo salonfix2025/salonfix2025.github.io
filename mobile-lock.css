@@ -906,3 +906,29 @@
 body {
   padding-top: 70px; /* adjust if your navbar height is different */
 }
+/* ==============================
+   FIXED NAVBAR WHITE GAP FIX
+   ============================== */
+.sf-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1200;
+  background: var(--sf-purple); /* stays purple */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Remove the white gap */
+body {
+  margin: 0;
+  padding-top: 0 !important;
+}
+
+/* Push hero down instead */
+.hero,
+.founder-section,
+.case,
+.about-hero {
+  margin-top: 70px !important; /* equal to navbar height */
+}
