@@ -1119,3 +1119,21 @@ body {
     -webkit-text-fill-color: transparent;
   }
 }
+/* ==============================
+   NAVBAR – FULLY STATIC LOCK
+   ============================== */
+.sf-navbar {
+  position: relative !important;  /* normal flow */
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  z-index: 1000;
+  background: var(--sf-purple); /* solid purple */
+  box-shadow: none !important;   /* remove fixed shadow */
+}
+
+/* Ensure body has no push/padding */
+body {
+  padding-top: 0 !important;
+  margin: 0 !important;
+}
