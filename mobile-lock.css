@@ -1120,24 +1120,6 @@ body {
   }
 }
 /* ==============================
-   NAVBAR – FULLY STATIC LOCK
-   ============================== */
-.sf-navbar {
-  position: relative !important;  /* normal flow */
-  top: auto !important;
-  left: auto !important;
-  width: 100% !important;
-  z-index: 1000;
-  background: var(--sf-purple); /* solid purple */
-  box-shadow: none !important;   /* remove fixed shadow */
-}
-
-/* Ensure body has no push/padding */
-body {
-  padding-top: 0 !important;
-  margin: 0 !important;
-}
-/* ==============================
    FREE TRIAL SECTION – PREMIUM LOCK
    ============================== */
 @media (max-width: 768px) {
@@ -1214,66 +1196,4 @@ body {
     line-height: 1.4;
   }
 }
-/* ==============================
-   NAVBAR – FIXED STATIC TOP
-   ============================== */
-.sf-navbar {
-  position: fixed !important;   /* lock navbar */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1200;                /* stays above everything */
-  background: var(--sf-purple); /* solid purple bg */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
 
-/* Push content down so navbar doesn’t overlap */
-body {
-  padding-top: 70px !important; /* equal to navbar height */
-}
-/* Founder Bullets – Gold Checkmarks */
-.founder-bullets {
-  list-style: none !important;
-  padding: 0;
-  margin: 18px 0 0 0;
-}
-
-.founder-bullets li {
-  position: relative;
-  padding-left: 28px;
-  margin-bottom: 10px;
-  font-size: 1rem;
-  color: #fff;
-  line-height: 1.6;
-  font-weight: 500;
-}
-
-.founder-bullets li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-weight: 900;
-  color: var(--sf-gold);
-  font-size: 1.1rem;
-  line-height: 1.4;
-}
-/* ==============================
-   NAVBAR – FIXED AT VERY TOP
-   ============================== */
-.sf-navbar {
-  position: fixed;       /* lock it */
-  top: 0;                /* stick to very top */
-  left: 0;
-  width: 100%;
-  z-index: 2000;         /* above everything */
-  background: var(--sf-purple); /* solid brand purple */
-  padding: 12px 18px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-/* ✅ Prevent white gap: push body down by navbar height */
-body {
-  margin: 0;
-  padding-top: 70px; /* match navbar height */
-}
