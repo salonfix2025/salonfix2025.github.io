@@ -815,3 +815,29 @@
     transition: all 0.15s ease;
   }
 }
+/* ==============================
+   GLOBAL SECTION SPACING FIX
+   ============================== */
+@media (max-width: 768px) {
+  section {
+    margin-bottom: 28px !important;  /* was ~40–50px */
+    padding-top: 28px !important;
+    padding-bottom: 28px !important;
+  }
+
+  /* Reduce extra spacing on hero & footer (they had oversized padding) */
+  .hero {
+    padding-top: 60px !important;
+    padding-bottom: 40px !important;
+  }
+  .footer-premium {
+    padding-top: 36px !important;
+    padding-bottom: 36px !important;
+  }
+
+  /* Special cases: headings inside sections */
+  section h2 {
+    margin-top: 0 !important;
+    margin-bottom: 16px !important;
+  }
+}
