@@ -1196,4 +1196,14 @@ body {
     line-height: 1.4;
   }
 }
+@media (max-width: 768px) {
+  section { padding: 40px 16px !important; margin-bottom: 28px !important; }
+  .hero { padding: 80px 20px !important; }
+  .metric-card { min-width: auto !important; padding: 18px !important; }
+  .profit-grid, .chaos-grid { grid-template-columns: 1fr 1fr !important; gap: 14px !important; }
+  .takeover, .founder, .why-salonfix, .our-promise { padding: 50px 20px !important; }
+  .step-card, .plan-card, .trial-card { width: 100% !important; max-width: 320px !important; padding: 20px !important; }
+  .reel-grid blockquote { flex: 0 0 90% !important; max-width: 90% !important; }
+  .footer-premium { padding: 36px 16px !important; }
+}
 
