@@ -1065,3 +1065,45 @@ nav.sf-navbar ul li a.active::after {
     box-shadow: 0 12px 30px rgba(212,175,55,0.5);
   }
 }
+/* ==============================
+   NOT ADVICE SECTION (Desktop Layout)
+   ============================== */
+@media (min-width: 769px) {
+  .advice-section {
+    max-width: 1200px;
+    margin: 0 auto 90px;
+    padding: 80px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .advice-section h2 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--sf-purple);
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .advice-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--sf-dark);
+    text-align: left;
+    margin-bottom: 18px;
+  }
+
+  .advice-section img {
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    max-width: 100%;
+    transition: all 0.3s ease;
+  }
+
+  .advice-section img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(212,175,55,0.5);
+  }
+}
