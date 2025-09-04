@@ -1489,3 +1489,45 @@ nav.sf-navbar ul li a.active::after {
     margin-top: 20px;
   }
 }
+/* Founder Section Layout */
+.founder-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 20px;
+  background: var(--sf-purple);
+  border-radius: 20px;
+  text-align: left;
+}
+
+.founder-section h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--sf-gold);
+  margin-bottom: 20px;
+}
+
+.founder-section p {
+  color: var(--sf-white);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.founder-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  color: var(--sf-white);
+  font-size: 1.05rem;
+}
+.founder-section ul li {
+  margin-bottom: 10px;
+  padding-left: 24px;
+  position: relative;
+}
+.founder-section ul li::before {
+  content: "✔";
