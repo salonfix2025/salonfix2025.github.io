@@ -907,3 +907,80 @@ body {
   padding-top: 0 !important;
   margin: 0;
 }
+/* ==============================
+   NAVBAR – STATIC (No White Gap)
+   ============================== */
+.sf-navbar {
+  position: relative !important; /* stays in normal flow */
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  z-index: 1000 !important;
+  background: var(--sf-purple) !important;
+  box-shadow: none !important;
+}
+
+body {
+  padding-top: 0 !important; /* prevent white gap */
+  margin: 0 !important;
+}
+
+/* ==============================
+   PRICING PAGE – PREMIUM MOBILE BOXES
+   ============================== */
+@media (max-width: 768px) {
+  .pricing-page .plan-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 26px !important;   /* extra space between */
+    padding: 0 5%;          /* framed look */
+  }
+
+  .pricing-page .plan-card {
+    width: 88% !important;        /* narrower */
+    max-width: 340px !important;  /* rounded square look */
+    margin: 0 auto !important;    /* center */
+    border-radius: 20px !important;
+    padding: 24px !important;
+    box-shadow: 0 6px 18px rgba(0,0,0,.12);
+  }
+
+  .pricing-page .plan-card h3 {
+    font-size: 1.2rem !important;
+    margin-bottom: 10px !important;
+    color: var(--sf-gold) !important;
+  }
+
+  .pricing-page .plan-card .btn-gold {
+    width: 100% !important;
+    margin-top: 14px !important;
+  }
+}
+
+/* ==============================
+   SERVICES PAGE – REMOVE BULLETS
+   ============================== */
+@media (max-width: 768px) {
+  .services-page .step-card ul {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 10px 0 0 0 !important;
+  }
+
+  .services-page .step-card ul li {
+    margin-bottom: 6px;
+    padding-left: 20px;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #fff !important;
+  }
+
+  .services-page .step-card ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--sf-gold);
+    font-size: 0.85rem;
+  }
+}
