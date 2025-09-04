@@ -1214,3 +1214,20 @@ body {
     line-height: 1.4;
   }
 }
+/* ==============================
+   NAVBAR – FIXED STATIC TOP
+   ============================== */
+.sf-navbar {
+  position: fixed !important;   /* lock navbar */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1200;                /* stays above everything */
+  background: var(--sf-purple); /* solid purple bg */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Push content down so navbar doesn’t overlap */
+body {
+  padding-top: 70px !important; /* equal to navbar height */
+}
