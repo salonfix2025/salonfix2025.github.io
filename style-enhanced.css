@@ -268,3 +268,95 @@ nav.sf-navbar ul li a:hover::after, nav.sf-navbar ul li a.active::after { width:
   }
   .founder .btn-gold { margin-top: 25px; }
 }
+/* ==========================================================
+   FOUNDER SECTION — PREMIUM BALANCED LAYOUT
+   ========================================================== */
+@media (min-width: 769px) {
+  .founder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--sf-purple);
+    color: #fff;
+    padding: 80px 10%;
+    gap: 60px;
+    position: relative;
+  }
+
+  /* Subtle gold top and bottom trims */
+  .founder::before,
+  .founder::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #FFD700, #D4AF37, #FFD700);
+    opacity: 0.9;
+  }
+  .founder::before { top: 0; }
+  .founder::after { bottom: 0; }
+
+  /* Left text column */
+  .founder-content {
+    flex: 1 1 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .founder-content h2 {
+    color: var(--sf-gold);
+    font-size: 2.6rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+  }
+
+  .founder-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 22px;
+  }
+
+  .founder-content ul {
+    list-style: none;
+    margin: 0 0 28px 0;
+    padding: 0;
+  }
+
+  .founder-content ul li {
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  .founder-content ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--sf-gold);
+    font-weight: 900;
+  }
+
+  .founder-content .btn-gold {
+    align-self: flex-start;
+    margin-top: 10px;
+  }
+
+  /* Right image column */
+  .founder-image {
+    flex: 1 1 38%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .founder-image img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+    border: 4px solid var(--sf-gold);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+}
