@@ -360,3 +360,36 @@ nav.sf-navbar ul li a:hover::after,nav.sf-navbar ul li a.active::after{width:100
     box-shadow: 0 10px 30px rgba(212,175,55,0.5);
   }
 }
+/* ==========================================================
+   FOUNDER SECTION — IMAGE RIGHT + SMALLER SIZE (Desktop only)
+   ========================================================== */
+@media (min-width: 769px) {
+
+  .founder {
+    grid-template-columns: 52% 40%; /* text left, smaller image right */
+    justify-content: space-between;
+  }
+
+  /* move image to right column */
+  .founder img {
+    order: 2;
+    justify-self: end;
+    max-width: 380px;     /* reduce size */
+    height: auto;
+    border-radius: 20px;
+    border: 3px solid var(--sf-gold);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+  }
+
+  /* move all text to left column */
+  .founder h2,
+  .founder p,
+  .founder ul,
+  .founder a {
+    order: 1;
+    justify-self: start;
+    text-align: left;
+    margin-right: auto;
+    max-width: 520px;
+  }
+}
