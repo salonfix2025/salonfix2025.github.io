@@ -1,6 +1,5 @@
 /* ==============================
-   SALONFIX – Style Enhanced (Desktop-only polish)
-   (Mobile visuals are locked by mobile-lock.css)
+   SALONFIX – Style Enhanced (Desktop polish only)
    ============================== */
 :root{
   --sf-purple:#4B0082;
@@ -8,13 +7,12 @@
   --sf-gold:#D4AF37;
   --sf-white:#fff;
   --sf-dark:#1b1230;
-
   --radius:20px;
   --shadow:0 8px 22px rgba(0,0,0,.15);
   --shadow-hover:0 12px 28px rgba(0,0,0,.2);
 }
 
-/* ---------- Base (safe for all viewports) ---------- */
+/* ---------- BASE ---------- */
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{
   font-family:'Montserrat',sans-serif;
@@ -35,7 +33,7 @@ section h2::after{
   margin:12px auto 0;border-radius:2px
 }
 
-/* ---------- Navbar (works for all, mobile menu handled in mobile-lock.css) ---------- */
+/* ---------- NAVBAR ---------- */
 nav.sf-navbar{
   position:sticky;top:0;width:100%;padding:14px 28px;background:var(--sf-purple);
   color:#fff;display:flex;align-items:center;justify-content:space-between;z-index:999
@@ -55,7 +53,7 @@ nav.sf-navbar ul li a:hover::after,nav.sf-navbar ul li a.active::after{width:100
 }
 .cta-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-hover)}
 
-/* ---------- Hero (shared) ---------- */
+/* ---------- HERO ---------- */
 .hero{
   background:linear-gradient(135deg,var(--sf-purple),var(--sf-purple-dark));
   color:#fff;text-align:center;padding:140px 20px 100px
@@ -73,91 +71,9 @@ nav.sf-navbar ul li a:hover::after,nav.sf-navbar ul li a.active::after{width:100
   box-shadow:0 0 15px rgba(212,175,55,.7);transition:transform .2s,box-shadow .2s
 }
 .btn-gold:hover{transform:translateY(-2px);box-shadow:0 0 20px rgba(212,175,55,.9)}
-.btn-gold:active{transform:scale(.97);box-shadow:inset 0 4px 12px rgba(212,175,55,.4)}
 @keyframes shimmer{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
 
-/* ====================================================
-   DESKTOP POLISH ONLY
-   ==================================================== */
-@media (min-width:769px){
-
-/* ---------- ABOUT: Founder block (TEXT LEFT • IMAGE RIGHT) ---------- */
-  .founder-section{
-    display:grid;grid-template-columns:1fr 1fr;gap:60px;
-    align-items:start;width:100%;padding:80px 8%;margin:0 auto 80px;
-    background:var(--sf-purple);
-  }
-  /* force all non-image items to left column */
-  .founder-section>*:not(img){grid-column:1;text-align:left;max-width:560px}
-  .founder-section h2{color:var(--sf-gold);font-size:2.4rem;font-weight:900;margin-bottom:24px}
-  .founder-section p{color:#fff;font-size:1.1rem;line-height:1.8;margin-bottom:20px}
-  .founder-section ul{list-style:none;margin:0 0 24px 0;padding:0;color:#fff}
-  .founder-section ul li{position:relative;padding-left:26px;margin-bottom:12px;font-size:1rem}
-  .founder-section ul li::before{
-    content:"✔";position:absolute;left:0;color:var(--sf-gold);font-weight:700
-  }
-  .founder-section .founder-cta{display:inline-block;margin-top:16px}
-
-  /* image always on right */
-  .founder-section img{
-    grid-column:2;max-width:400px;margin-left:auto;display:block;border-radius:12px;
-    box-shadow:0 8px 20px rgba(0,0,0,.25)
-  }
-
-/* ---------- REAL RESULTS (cards) ---------- */
-  .results-section{
-    max-width:1200px;margin:0 auto 90px;padding:80px 40px;text-align:center
-  }
-  .results-section h2{font-size:2.2rem;font-weight:900;color:var(--sf-purple);margin-bottom:18px}
-  .results-section p{font-size:1.05rem;color:var(--sf-dark);margin-bottom:40px}
-  .results-section .card-grid{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
-  .results-section .result-card{
-    background:#fff;border-radius:20px;box-shadow:var(--shadow);padding:28px 24px;
-    flex:1 1 300px;max-width:340px;transition:transform .3s,box-shadow .3s;text-align:center
-  }
-  .results-section .result-card:hover{transform:translateY(-6px);box-shadow:0 10px 28px rgba(212,175,55,.45)}
-  .results-section .result-card h3{font-size:1.2rem;font-weight:800;margin-bottom:10px;color:var(--sf-purple)}
-  .results-section .result-card p{font-size:.95rem;line-height:1.5;color:var(--sf-dark)}
-
-/* ---------- WHY / DIFFERENCE (image + text) ---------- */
-  .why-section{
-    max-width:1200px;margin:0 auto 90px;padding:80px 40px;
-    display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center
-  }
-  .why-section h2{font-size:2.2rem;font-weight:900;color:var(--sf-purple);text-align:left;margin-bottom:20px}
-  .why-section p{font-size:1.05rem;line-height:1.6;color:var(--sf-dark);text-align:left}
-  .why-section img{border-radius:20px;box-shadow:var(--shadow);transition:transform .3s,box-shadow .3s}
-  .why-section img:hover{transform:scale(1.03);box-shadow:0 12px 30px rgba(212,175,55,.5)}
-
-/* ---------- OUR PROMISE ---------- */
-  .promise-section{
-    display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;
-    max-width:1200px;margin:0 auto;padding:60px 20px
-  }
-  .promise-section img{
-    width:100%;border-radius:20px;box-shadow:var(--shadow);
-    transition:transform .3s,box-shadow .3s
-  }
-  .promise-section img:hover{transform:scale(1.03);box-shadow:0 12px 28px rgba(212,175,55,.5)}
-  .promise-section p{font-size:1.1rem;line-height:1.7;color:var(--sf-dark)}
-
-/* ---------- 5-STEP PROFIT FIX (3 up, then centered 2) ---------- */
-  .profit-steps{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:26px;
-    max-width:1100px;margin:40px auto
-  }
-  .profit-steps .sf-box{
-    background:var(--sf-purple);color:#fff;border-radius:18px;padding:28px;text-align:center;
-    box-shadow:var(--shadow);transition:transform .3s,box-shadow .3s
-  }
-  .profit-steps .sf-box h3{color:var(--sf-gold);font-size:1.2rem;margin-bottom:10px}
-  .profit-steps .sf-box:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(212,175,55,.6)}
-
-  /* Center the last two by adding an invisible 6th cell */
-  .profit-steps::after{content:"";}
-}
-
-/* ---------- Footer (shared) ---------- */
+/* ---------- FOOTER ---------- */
 .footer-premium{
   background:linear-gradient(160deg,var(--sf-purple-dark),var(--sf-purple));
   color:#fff;text-align:center;padding:70px 20px
@@ -173,268 +89,16 @@ nav.sf-navbar ul li a:hover::after,nav.sf-navbar ul li a.active::after{width:100
   border-top:1px solid rgba(255,255,255,.2);padding-top:16px
 }
 
-/* ---------- Floating WhatsApp (shared) ---------- */
+/* ---------- WHATSAPP FLOAT ---------- */
 .whatsapp-float{
   position:fixed;bottom:22px;right:22px;width:64px;height:64px;border-radius:50%;
   background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:30px;
   box-shadow:0 6px 18px rgba(37,211,102,.4);transition:transform .3s,box-shadow .3s;z-index:3000
 }
 .whatsapp-float:hover{transform:scale(1.08);box-shadow:0 10px 26px rgba(37,211,102,.6)}
-.whatsapp-float:active{transform:scale(.96);box-shadow:inset 0 4px 10px rgba(37,211,102,.4)}
-/* === BURGER MENU FIX (Mobile) === */
-.burger {
-  display: none;
-  background: none;
-  border: 0;
-  cursor: pointer;
-  flex-direction: column;
-  gap: 6px;
-  z-index: 2001;              /* ensure always visible */
-}
 
-.burger span {
-  display: block;
-  width: 26px;
-  height: 3px;
-  background: var(--sf-gold); /* gold bars for visibility */
-  border-radius: 2px;
-  transition: all 0.25s ease;
-}
 /* ==========================================================
-   SALONFIX DESKTOP ENHANCEMENTS (Mixed Style Layout)
-   ----------------------------------------------------------
-   Safe for desktop only. Mobile visuals remain locked.
-   ========================================================== */
-@media (min-width: 769px) {
-
-/* ===== DESKTOP POLISH: METRICS SECTION ===== */
-.metrics {
-  max-width: 1200px;
-  margin: 0 auto 100px;
-  text-align: center;
-}
-.metric-cards {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-.metric-card {
-  background: var(--sf-purple);
-  color: #fff;
-  border-radius: 18px;
-  padding: 30px 26px;
-  font-size: 1.1rem;
-  font-weight: 800;
-  box-shadow: 0 6px 20px rgba(75,0,130,0.25);
-  transition: all 0.3s ease;
-  min-width: 240px;
-}
-.metric-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 28px rgba(212,175,55,0.6);
-}
-
-/* ===== DESKTOP POLISH: WHY SALONS LOSE PROFIT ===== */
-.problems {
-  max-width: 1100px;
-  margin: 0 auto 100px;
-  text-align: center;
-}
-.profit-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  margin-top: 30px;
-}
-.problem-card {
-  background: #fff;
-  border: 2px solid var(--sf-purple);
-  border-radius: 16px;
-  padding: 28px;
-  font-size: 1.05rem;
-  color: var(--sf-purple);
-  font-weight: 600;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-}
-.problem-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--sf-gold);
-  box-shadow: 0 8px 22px rgba(212,175,55,0.35);
-}
-
-/* ===== DESKTOP POLISH: FROM CHAOS TO CONTROL ===== */
-.chaos {
-  max-width: 1200px;
-  margin: 0 auto 100px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 50px;
-}
-.chaos img {
-  width: 100%;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-}
-.chaos-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.chaos-box {
-  background: var(--sf-purple);
-  color: #fff;
-  border-radius: 14px;
-  padding: 20px 24px;
-  box-shadow: 0 6px 18px rgba(75,0,130,0.25);
-  position: relative;
-}
-.chaos-box::before {
-  content: attr(data-label);
-  position: absolute;
-  top: -12px;
-  left: 20px;
-  background: var(--sf-gold);
-  color: #000;
-  font-weight: 800;
-  font-size: 0.8rem;
-  padding: 2px 10px;
-  border-radius: 6px;
-}
-
-/* ===== DESKTOP POLISH: WE TAKE OVER SECTION ===== */
-.takeover {
-  max-width: 1200px;
-  margin: 0 auto 100px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: center;
-}
-.takeover img {
-  width: 100%;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-}
-.takeover-text {
-  background: linear-gradient(160deg, #fff6d9, #ffe);
-  border-radius: 20px;
-  padding: 40px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-.takeover-text h2 {
-  color: var(--sf-purple);
-  font-size: 2rem;
-  font-weight: 900;
-  margin-bottom: 18px;
-}
-.takeover-text p {
-  color: var(--sf-dark);
-  line-height: 1.6;
-  font-weight: 600;
-}
-
-/* ===== DESKTOP POLISH: FOUNDER SECTION ===== */
-.founder {
-  max-width: 1200px;
-  margin: 0 auto 100px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: center;
-}
-.founder img {
-  width: 100%;
-  max-width: 420px;
-  border-radius: 20px;
-  border: 4px solid var(--sf-gold);
-  box-shadow: 0 8px 26px rgba(0,0,0,0.15);
-}
-.founder-content {
-  background: #fff;
-  border-left: 5px solid var(--sf-purple);
-  border-radius: 14px;
-  padding: 40px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-.founder-content h2 {
-  color: var(--sf-purple);
-  font-size: 2rem;
-  font-weight: 900;
-  margin-bottom: 10px;
-}
-.founder-content ul {
-  list-style: none;
-  margin: 20px 0;
-  padding: 0;
-}
-.founder-content ul li {
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 22px;
-}
-.founder-content ul li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: var(--sf-gold);
-  font-weight: 700;
-}
-.founder-content a.btn-gold {
-  margin-top: 10px;
-}
-
-/* ===== DESKTOP POLISH: INSTAGRAM REELS ===== */
-.reel-section {
-  max-width: 1200px;
-  margin: 0 auto 120px;
-  text-align: center;
-}
-.reel-grid {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
-.reel-grid blockquote {
-  flex: 0 0 30%;
-  max-width: 30%;
-  border: 2px solid var(--sf-purple);
-  border-radius: 16px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-  overflow: hidden;
-  background: #fff;
-  transition: all 0.3s ease;
-}
-.reel-grid blockquote:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(212,175,55,0.4);
-}
-.reel-section h2 {
-  position: relative;
-  display: inline-block;
-}
-.reel-section h2::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 3px;
-  background: linear-gradient(45deg, #D4AF37, #FFD700);
-  margin: 10px auto 0;
-  border-radius: 2px;
-}
-}
-
-/* Burger visible on mobile */
-@media (max-width: 900px) {
-  .burger { display: flex; }
-}
-/* ==========================================================
-   SALONFIX INDEX DESKTOP POLISH (FINAL – PURE CSS VERSION)
-   Works with your existing HTML only (no structure change)
+   DESKTOP POLISH — safe only above 769px
    ========================================================== */
 @media (min-width: 769px) {
 
@@ -445,235 +109,47 @@ nav.sf-navbar ul li a:hover::after,nav.sf-navbar ul li a.active::after{width:100
     padding-bottom: 40px;
   }
 
-  /* ===== TAKEOVER SECTION (Image Left / Text Right) ===== */
-  .takeover {
+  /* ===== WHY SALONS LOSE PROFIT ===== */
+  .problems {
+    max-width: 1100px;
+    margin: 0 auto 100px;
+    text-align: center;
+  }
+  .profit-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto 60px;
-    padding: 60px 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
   }
-
-  /* move image to left, text elements to right */
-  .takeover .solution-image {
-    order: 1;
-  }
-  .takeover .solution-image img {
-    width: 100%;
-    border-radius: 18px;
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
-  }
-
-  /* the text blocks (h2, p, .takeover-points) stay on right */
-  .takeover h2,
-  .takeover p.sub-purple,
-  .takeover .takeover-points {
-    order: 2;
-    text-align: left;
-  }
-
-  .takeover h2 {
-    color: var(--sf-purple);
-    font-size: 2.2rem;
-    font-weight: 900;
-    margin-bottom: 10px;
-  }
-
-  .takeover p.sub-purple {
-    font-size: 1.1rem;
-    color: var(--sf-dark);
-    margin-bottom: 20px;
-    line-height: 1.6;
-  }
-
-  .takeover .takeover-points {
+  .problem-card {
     background: #fff;
-    border-left: 5px solid var(--sf-purple);
+    border: 2px solid var(--sf-purple);
     border-radius: 16px;
-    padding: 40px 50px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  }
-
-  .takeover .takeover-points p {
+    padding: 28px;
     font-size: 1.05rem;
-    margin-bottom: 14px;
+    color: var(--sf-purple);
     font-weight: 600;
-    color: var(--sf-dark);
-  }
-
-  /* ===== FOUNDER SECTION (Purple Background / Image Left / Text Right) ===== */
-  .founder {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-    background: var(--sf-purple);
-    color: #fff;
-    padding: 80px 8%;
-    text-align: left;
-  }
-
-  /* founder image always on left */
-  .founder img {
-    order: 1;
-    max-width: 420px;
-    width: 100%;
-    border-radius: 20px;
-    border: 3px solid var(--sf-gold);
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
-  }
-
-  /* text blocks stay on right */
-  .founder h2,
-  .founder p,
-  .founder ul,
-  .founder a {
-    order: 2;
-    max-width: 520px;
-  }
-
-  .founder h2 {
-    color: var(--sf-gold);
-    font-size: 2.2rem;
-    font-weight: 900;
-    margin-bottom: 16px;
-  }
-
-  .founder p {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    margin-bottom: 18px;
-  }
-
-  .founder ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0 30px 0;
-  }
-
-  .founder ul li {
-    position: relative;
-    padding-left: 24px;
-    margin-bottom: 10px;
-    font-weight: 600;
-    color: #fff;
-  }
-
-  .founder ul li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: var(--sf-gold);
-    font-weight: 900;
-  }
-
-  .founder .btn-gold {
-    background: linear-gradient(45deg, #D4AF37, #FFD700);
-    color: #000 !important;
-    font-weight: 800;
-    padding: 14px 26px;
-    border-radius: 50px;
-    box-shadow: 0 0 15px rgba(212,175,55,0.7);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
   }
-
-  .founder .btn-gold:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 25px rgba(212,175,55,0.9);
+  .problem-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--sf-gold);
+    box-shadow: 0 8px 22px rgba(212,175,55,0.35);
   }
 
-}
-/* ==========================================================
-   REFINEMENT – RECTANGULAR LAYOUT FOR TAKEOVER + FOUNDER
-   ========================================================== */
-@media (min-width: 769px) {
-
-  /* ===== TAKEOVER SECTION: RECTANGULAR BALANCE ===== */
-  .takeover {
-    display: grid;
-    grid-template-columns: 48% 48%;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 95%;
-    margin: 0 auto 80px;
-    padding: 80px 0;
-  }
-
-  .takeover .solution-image img {
-    height: 420px;
-    object-fit: cover;
-    border-radius: 20px;
-  }
-
-  .takeover .takeover-points {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: #fff;
-    border-left: 5px solid var(--sf-purple);
-    padding: 40px 60px;
-    border-radius: 20px;
-    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
-  }
-
-  /* ===== FOUNDER SECTION: RECTANGULAR LAYOUT ===== */
-  .founder {
-    display: grid;
-    grid-template-columns: 48% 48%;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--sf-purple);
-    color: #fff;
-    max-width: 95%;
-    margin: 0 auto 80px;
-    padding: 80px 0;
-  }
-
-  .founder img {
-    height: 440px;
-    object-fit: cover;
-    border-radius: 20px;
-    border: 3px solid var(--sf-gold);
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
-  }
-
-  .founder h2,
-  .founder p,
-  .founder ul,
-  .founder a {
-    max-width: 520px;
-    margin-left: auto;
-    margin-right: 0;
-  }
-
-  .founder h2 {
-    color: var(--sf-gold);
-    font-size: 2.4rem;
-    font-weight: 900;
-    margin-bottom: 20px;
-  }
-/* ==========================================================
-   CHAOS TO CONTROL – PREMIUM GRADIENT BOX DESIGN
-   ========================================================== */
-@media (min-width: 769px) {
-
+  /* ===== CHAOS TO CONTROL (with gold gradient boxes) ===== */
   .chaos {
     background: linear-gradient(180deg, #f7f3ff 0%, #efe7ff 100%);
     padding: 100px 8%;
     text-align: center;
-    border-radius: 0;
   }
-
   .chaos h2 {
     color: var(--sf-purple);
     font-size: 2.2rem;
     font-weight: 900;
     margin-bottom: 50px;
   }
-
   .chaos-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -681,256 +157,85 @@ nav.sf-navbar ul li a:hover::after,nav.sf-navbar ul li a.active::after{width:100
     max-width: 1200px;
     margin: 0 auto;
   }
-
   .chaos-card {
     background: linear-gradient(135deg, #FFD700, #D4AF37, #FFF5CC);
     color: #2A014F;
     border-radius: 18px;
     padding: 40px 30px;
-    box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
-    position: relative;
+    box-shadow: 0 0 25px rgba(212,175,55,0.3);
     transition: all 0.3s ease;
   }
-
   .chaos-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+    box-shadow: 0 0 40px rgba(212,175,55,0.6);
   }
-
   .chaos-card strong {
     display: block;
     font-size: 1.3rem;
     font-weight: 900;
     margin-bottom: 12px;
-    color: #2A014F;
   }
-
   .chaos-card p {
     font-size: 1.05rem;
     font-weight: 600;
-    color: #2A014F;
-    line-height: 1.6;
   }
 
-  /* Add subtle glitter shimmer overlay */
-  .chaos-card::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -50%;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(
-      120deg,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 0.5) 50%,
-      rgba(255, 255, 255, 0.2) 100%
-    );
-    transform: skewX(-20deg);
-    animation: shimmer 4s infinite;
-  }
-
-  @keyframes shimmer {
-    0% { transform: translateX(-100%) skewX(-20deg); }
-    100% { transform: translateX(100%) skewX(-20deg); }
-  }
-}
-
-  .founder ul li::before {
-    color: var(--sf-gold);
-  }
-}
-/* ==========================================================
-   FOUNDER SECTION — FULL RECTANGULAR LAYOUT + GOLD DIVIDERS
-   ========================================================== */
-@media (min-width: 769px) {
-
-  /* Extend founder section full width */
-  .founder {
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    padding: 100px 6%;
+  /* ===== TAKEOVER SECTION ===== */
+  .takeover {
     display: grid;
     grid-template-columns: 48% 48%;
     justify-content: space-between;
-    align-items: center;
-    background: var(--sf-purple);
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* Add gold gradient top & bottom dividers */
-  .founder::before,
-  .founder::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #FFD700, #D4AF37, #FFD700);
-    opacity: 0.9;
-  }
-  .founder::before { top: 0; }
-  .founder::after { bottom: 0; }
-
-  /* Image styling */
-  .founder img {
-    height: 460px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-    border: 3px solid var(--sf-gold);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.25);
-  }
-
-  /* Text column */
-  .founder h2,
-  .founder p,
-  .founder ul,
-  .founder a {
-    max-width: 520px;
-    margin-left: auto;
-    margin-right: 0;
-    text-align: left;
-  }
-
-  .founder h2 {
-    color: var(--sf-gold);
-    font-size: 2.6rem;
-    font-weight: 900;
-    margin-bottom: 24px;
-  }
-
-  .founder p {
-    font-size: 1.15rem;
-    line-height: 1.7;
-    margin-bottom: 22px;
-  }
-
-  .founder ul {
-    list-style: none;
-    margin: 24px 0 36px 0;
-    padding: 0;
-  }
-
-  .founder ul li {
-    padding-left: 26px;
-    margin-bottom: 12px;
-    font-weight: 600;
-    color: #fff;
-    position: relative;
-  }
-
-  .founder ul li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: var(--sf-gold);
-    font-weight: 900;
-  }
-
-  .founder .btn-gold {
-    background: linear-gradient(45deg, #D4AF37, #FFD700);
-    color: #000 !important;
-    font-weight: 800;
-    padding: 15px 30px;
-    border-radius: 50px;
-    box-shadow: 0 0 20px rgba(212,175,55,0.7);
-    transition: all 0.3s ease;
-  }
-
-  .founder .btn-gold:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 30px rgba(212,175,55,0.9);
-  }
-}
-/* ==========================================================
-   RECTANGULAR ALIGNMENT FIX — TAKEOVER + FOUNDER SECTIONS
-   ========================================================== */
-@media (min-width: 769px) {
-
-  /* ===== UNIFY LAYOUT GRID ===== */
-  .takeover,
-  .founder {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    align-items: stretch;              /* equal height */
-    justify-content: space-between;
-    gap: 60px;
-    width: 100%;
+    align-items: stretch;
+    max-width: 1200px;
     margin: 0 auto 80px;
     padding: 80px 6%;
     box-sizing: border-box;
+    gap: 60px;
   }
-
-  /* ===== IMAGE COLUMN ===== */
-  .takeover .solution-image,
-  .founder img {
-    height: 100%;
-  }
-
-  .takeover .solution-image img,
-  .founder img {
+  .takeover .solution-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
-    border: 3px solid var(--sf-gold);
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
   }
-
-  /* ===== TEXT COLUMN ===== */
-  .takeover h2,
-  .takeover p.sub-purple,
-  .takeover .takeover-points,
-  .founder h2,
-  .founder p,
-  .founder ul,
-  .founder a {
-    align-self: center;                /* center vertically */
-    justify-self: start;
-    max-width: 520px;
-  }
-
-  /* ===== TAKEOVER TEXT ===== */
   .takeover h2 {
     color: var(--sf-purple);
     font-size: 2.4rem;
     font-weight: 900;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
-
   .takeover p.sub-purple {
     font-size: 1.1rem;
     color: var(--sf-dark);
-    margin-bottom: 25px;
-    line-height: 1.6;
+    margin-bottom: 24px;
   }
-
   .takeover .takeover-points {
     background: #fff;
     border-left: 5px solid var(--sf-purple);
     border-radius: 16px;
     padding: 40px 50px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   }
-
   .takeover .takeover-points p {
     font-size: 1.05rem;
     margin-bottom: 14px;
     font-weight: 600;
-    color: var(--sf-dark);
   }
 
-  /* ===== FOUNDER TEXT COLUMN ===== */
+  /* ===== FOUNDER SECTION ===== */
   .founder {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    justify-content: space-between;
+    align-items: stretch;
     background: var(--sf-purple);
     color: #fff;
     position: relative;
+    padding: 100px 6%;
+    margin: 0 auto 80px;
+    overflow: hidden;
   }
-
   .founder::before,
   .founder::after {
     content: "";
@@ -943,34 +248,45 @@ nav.sf-navbar ul li a:hover::after,nav.sf-navbar ul li a.active::after{width:100
   }
   .founder::before { top: 0; }
   .founder::after { bottom: 0; }
-
+  .founder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid var(--sf-gold);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+  }
+  .founder h2,
+  .founder p,
+  .founder ul,
+  .founder a {
+    align-self: center;
+    justify-self: start;
+    max-width: 520px;
+    text-align: left;
+  }
   .founder h2 {
     color: var(--sf-gold);
     font-size: 2.6rem;
     font-weight: 900;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
-
   .founder p {
     font-size: 1.15rem;
     line-height: 1.7;
     margin-bottom: 22px;
   }
-
   .founder ul {
     list-style: none;
     margin: 24px 0 36px 0;
     padding: 0;
   }
-
   .founder ul li {
     padding-left: 26px;
     margin-bottom: 12px;
     font-weight: 600;
-    color: #fff;
     position: relative;
   }
-
   .founder ul li::before {
     content: "✔";
     position: absolute;
@@ -978,7 +294,6 @@ nav.sf-navbar ul li a:hover::after,nav.sf-navbar ul li a.active::after{width:100
     color: var(--sf-gold);
     font-weight: 900;
   }
-
   .founder .btn-gold {
     background: linear-gradient(45deg, #D4AF37, #FFD700);
     color: #000 !important;
@@ -988,10 +303,8 @@ nav.sf-navbar ul li a:hover::after,nav.sf-navbar ul li a.active::after{width:100
     box-shadow: 0 0 20px rgba(212,175,55,0.7);
     transition: all 0.3s ease;
   }
-
   .founder .btn-gold:hover {
     transform: translateY(-3px);
     box-shadow: 0 0 30px rgba(212,175,55,0.9);
   }
-
 }
