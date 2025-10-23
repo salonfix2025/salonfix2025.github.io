@@ -200,6 +200,233 @@ nav.sf-navbar ul li a:hover::after,nav.sf-navbar ul li a.active::after{width:100
   border-radius: 2px;
   transition: all 0.25s ease;
 }
+/* ==========================================================
+   SALONFIX DESKTOP ENHANCEMENTS (Mixed Style Layout)
+   ----------------------------------------------------------
+   Safe for desktop only. Mobile visuals remain locked.
+   ========================================================== */
+@media (min-width: 769px) {
+
+/* ===== DESKTOP POLISH: METRICS SECTION ===== */
+.metrics {
+  max-width: 1200px;
+  margin: 0 auto 100px;
+  text-align: center;
+}
+.metric-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.metric-card {
+  background: var(--sf-purple);
+  color: #fff;
+  border-radius: 18px;
+  padding: 30px 26px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  box-shadow: 0 6px 20px rgba(75,0,130,0.25);
+  transition: all 0.3s ease;
+  min-width: 240px;
+}
+.metric-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 28px rgba(212,175,55,0.6);
+}
+
+/* ===== DESKTOP POLISH: WHY SALONS LOSE PROFIT ===== */
+.problems {
+  max-width: 1100px;
+  margin: 0 auto 100px;
+  text-align: center;
+}
+.profit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+.problem-card {
+  background: #fff;
+  border: 2px solid var(--sf-purple);
+  border-radius: 16px;
+  padding: 28px;
+  font-size: 1.05rem;
+  color: var(--sf-purple);
+  font-weight: 600;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+.problem-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--sf-gold);
+  box-shadow: 0 8px 22px rgba(212,175,55,0.35);
+}
+
+/* ===== DESKTOP POLISH: FROM CHAOS TO CONTROL ===== */
+.chaos {
+  max-width: 1200px;
+  margin: 0 auto 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+.chaos img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+.chaos-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.chaos-box {
+  background: var(--sf-purple);
+  color: #fff;
+  border-radius: 14px;
+  padding: 20px 24px;
+  box-shadow: 0 6px 18px rgba(75,0,130,0.25);
+  position: relative;
+}
+.chaos-box::before {
+  content: attr(data-label);
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background: var(--sf-gold);
+  color: #000;
+  font-weight: 800;
+  font-size: 0.8rem;
+  padding: 2px 10px;
+  border-radius: 6px;
+}
+
+/* ===== DESKTOP POLISH: WE TAKE OVER SECTION ===== */
+.takeover {
+  max-width: 1200px;
+  margin: 0 auto 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+.takeover img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+.takeover-text {
+  background: linear-gradient(160deg, #fff6d9, #ffe);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.takeover-text h2 {
+  color: var(--sf-purple);
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+.takeover-text p {
+  color: var(--sf-dark);
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+/* ===== DESKTOP POLISH: FOUNDER SECTION ===== */
+.founder {
+  max-width: 1200px;
+  margin: 0 auto 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+.founder img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  border: 4px solid var(--sf-gold);
+  box-shadow: 0 8px 26px rgba(0,0,0,0.15);
+}
+.founder-content {
+  background: #fff;
+  border-left: 5px solid var(--sf-purple);
+  border-radius: 14px;
+  padding: 40px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.founder-content h2 {
+  color: var(--sf-purple);
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+.founder-content ul {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+.founder-content ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 22px;
+}
+.founder-content ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--sf-gold);
+  font-weight: 700;
+}
+.founder-content a.btn-gold {
+  margin-top: 10px;
+}
+
+/* ===== DESKTOP POLISH: INSTAGRAM REELS ===== */
+.reel-section {
+  max-width: 1200px;
+  margin: 0 auto 120px;
+  text-align: center;
+}
+.reel-grid {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.reel-grid blockquote {
+  flex: 0 0 30%;
+  max-width: 30%;
+  border: 2px solid var(--sf-purple);
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.reel-grid blockquote:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(212,175,55,0.4);
+}
+.reel-section h2 {
+  position: relative;
+  display: inline-block;
+}
+.reel-section h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(45deg, #D4AF37, #FFD700);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+}
 
 /* Burger visible on mobile */
 @media (max-width: 900px) {
