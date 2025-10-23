@@ -26,76 +26,164 @@ a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; height: auto; }
 section { padding: 70px 20px; margin-bottom: 70px; }
 section h2 {
-  font-weight: 900; font-size: 1.8rem; margin-bottom: 24px; text-align: center; position: relative;
+  font-weight: 900;
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+  text-align: center;
+  position: relative;
 }
 section h2::after {
-  content: ""; display: block; width: 60px; height: 3px; background: var(--sf-gold);
-  margin: 12px auto 0; border-radius: 2px;
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--sf-gold);
+  margin: 12px auto 0;
+  border-radius: 2px;
 }
 
 /* ---------- NAVBAR ---------- */
 nav.sf-navbar {
-  position: sticky; top: 0; width: 100%; padding: 14px 28px; background: var(--sf-purple);
-  color: #fff; display: flex; align-items: center; justify-content: space-between; z-index: 999;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 14px 28px;
+  background: var(--sf-purple);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
 }
 nav.sf-navbar .logo a { font-size: 1.6rem; font-weight: 900; color: #fff; }
 nav.sf-navbar ul { list-style: none; display: flex; gap: 28px; }
-nav.sf-navbar ul li a { color: #fff; font-weight: 600; position: relative; transition: color .3s; }
+nav.sf-navbar ul li a {
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+  transition: color .3s;
+}
 nav.sf-navbar ul li a::after {
-  content: ""; position: absolute; left: 0; bottom: -4px; height: 2px; width: 0; background: var(--sf-gold);
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0;
+  background: var(--sf-gold);
   transition: width .3s;
 }
-nav.sf-navbar ul li a:hover::after, nav.sf-navbar ul li a.active::after { width: 100%; }
+nav.sf-navbar ul li a:hover::after,
+nav.sf-navbar ul li a.active::after { width: 100%; }
 .cta-btn {
   background: linear-gradient(135deg,#FFD700,var(--sf-gold));
-  color: var(--sf-purple-dark); font-weight: 800; padding: 12px 24px; border-radius: 30px;
-  box-shadow: var(--shadow); transition: transform .3s, box-shadow .3s;
+  color: var(--sf-purple-dark);
+  font-weight: 800;
+  padding: 12px 24px;
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+  transition: transform .3s, box-shadow .3s;
 }
 .cta-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
 
 /* ---------- HERO ---------- */
 .hero {
   background: linear-gradient(135deg, var(--sf-purple), var(--sf-purple-dark));
-  color: #fff; text-align: center; padding: 140px 20px 100px;
+  color: #fff;
+  text-align: center;
+  padding: 140px 20px 100px;
 }
-.hero h1 { font-size: clamp(32px,6vw,52px); font-weight: 900; margin-bottom: 18px; }
+.hero h1 {
+  font-size: clamp(32px,6vw,52px);
+  font-weight: 900;
+  margin-bottom: 18px;
+}
 .hero h1::after {
-  content: ""; display: block; width: 80px; height: 3px; background: var(--sf-gold);
-  margin: 12px auto 0; border-radius: 2px;
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: var(--sf-gold);
+  margin: 12px auto 0;
+  border-radius: 2px;
 }
-.hero p { font-size: 1.2rem; color: rgba(255,255,255,.9); margin-bottom: 30px; }
+.hero p {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,.9);
+  margin-bottom: 30px;
+}
 .btn-gold {
-  display: inline-block; padding: 14px 32px; border-radius: 50px; font-weight: 800;
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 800;
   background: linear-gradient(45deg,#FFD700,#D4AF37,#FFD700);
-  background-size: 300% 300%; animation: shimmer 3s linear infinite; color: #111!important;
-  box-shadow: 0 0 15px rgba(212,175,55,.7); transition: transform .2s, box-shadow .2s;
+  background-size: 300% 300%;
+  animation: shimmer 3s linear infinite;
+  color: #111!important;
+  box-shadow: 0 0 15px rgba(212,175,55,.7);
+  transition: transform .2s, box-shadow .2s;
 }
 .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 0 20px rgba(212,175,55,.9); }
-@keyframes shimmer { 0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%} }
+@keyframes shimmer {
+  0% { background-position: 0 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
 
 /* ---------- FOOTER ---------- */
 .footer-premium {
   background: linear-gradient(160deg,var(--sf-purple-dark),var(--sf-purple));
-  color: #fff; text-align: center; padding: 70px 20px;
+  color: #fff;
+  text-align: center;
+  padding: 70px 20px;
 }
-.footer-cta { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-top: 20px; }
+.footer-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 20px;
+}
 .btn-outline {
-  border: 2px solid var(--sf-gold); color: var(--sf-gold); padding: 12px 22px; border-radius: 30px; font-weight: 700;
+  border: 2px solid var(--sf-gold);
+  color: var(--sf-gold);
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-weight: 700;
   transition: background .3s, color .3s;
 }
 .btn-outline:hover { background: var(--sf-gold); color: #000; }
 .copyright {
-  margin-top: 28px; font-size: .85rem; color: rgba(255,255,255,.7);
-  border-top: 1px solid rgba(255,255,255,.2); padding-top: 16px;
+  margin-top: 28px;
+  font-size: .85rem;
+  color: rgba(255,255,255,.7);
+  border-top: 1px solid rgba(255,255,255,.2);
+  padding-top: 16px;
 }
 
 /* ---------- WHATSAPP FLOAT ---------- */
 .whatsapp-float {
-  position: fixed; bottom: 22px; right: 22px; width: 64px; height: 64px; border-radius: 50%;
-  background: #25D366; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 30px;
-  box-shadow: 0 6px 18px rgba(37,211,102,.4); transition: transform .3s, box-shadow .3s; z-index: 3000;
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 6px 18px rgba(37,211,102,.4);
+  transition: transform .3s, box-shadow .3s;
+  z-index: 3000;
 }
-.whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 10px 26px rgba(37,211,102,.6); }
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 26px rgba(37,211,102,.6);
+}
 
 /* ==========================================================
    DESKTOP POLISH — only above 769px
@@ -108,7 +196,7 @@ nav.sf-navbar ul li a:hover::after, nav.sf-navbar ul li a.active::after { width:
     padding-bottom: 40px;
   }
 
-  /* WHY SALONS LOSE PROFIT */
+  /* ===== WHY SALONS LOSE PROFIT ===== */
   .problems {
     max-width: 1100px;
     margin: 0 auto 100px;
@@ -137,7 +225,7 @@ nav.sf-navbar ul li a:hover::after, nav.sf-navbar ul li a.active::after { width:
     box-shadow: 0 8px 22px rgba(212,175,55,0.35);
   }
 
-  /* CHAOS TO CONTROL */
+  /* ===== CHAOS TO CONTROL ===== */
   .chaos {
     background: linear-gradient(180deg,#f7f3ff 0%,#efe7ff 100%);
     padding: 100px 8%;
@@ -169,7 +257,7 @@ nav.sf-navbar ul li a:hover::after, nav.sf-navbar ul li a.active::after { width:
     box-shadow: 0 0 40px rgba(212,175,55,0.6);
   }
 
-  /* TAKEOVER */
+  /* ===== TAKEOVER SECTION ===== */
   .takeover {
     display: grid;
     grid-template-columns: 48% 48%;
@@ -189,15 +277,15 @@ nav.sf-navbar ul li a:hover::after, nav.sf-navbar ul li a.active::after { width:
     box-shadow: 0 8px 22px rgba(0,0,0,0.15);
   }
 
-  /* ===== FOUNDER SECTION (FINAL POLISHED & BALANCED) ===== */
+  /* ===== FOUNDER SECTION ===== */
   .founder {
     display: grid;
     grid-template-columns: 55% 40%;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     background: var(--sf-purple);
     color: #fff;
-    padding: 80px 8%;
+    padding: 100px 8%;
     position: relative;
     gap: 60px;
   }
@@ -213,34 +301,11 @@ nav.sf-navbar ul li a:hover::after, nav.sf-navbar ul li a.active::after { width:
   }
   .founder::before { top: 0; }
   .founder::after { bottom: 0; }
-
-  /* Image aligned parallel to headline */
-  .founder img {
-    grid-column: 2;
-    justify-self: end;
-    align-self: start;
-    margin-top: -10px;
-    margin-right: 25px;
-    max-width: 420px;
-    border: 4px solid var(--sf-gold);
-    border-radius: 20px;
-    box-shadow: 0 10px 26px rgba(0,0,0,0.25);
-  }
-
-  /* Text column */
-  .founder h2,
-  .founder p,
-  .founder ul,
-  .founder a {
-    grid-column: 1;
-    text-align: left;
-    max-width: 520px;
-  }
   .founder h2 {
     color: var(--sf-gold);
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     font-weight: 900;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
   .founder p {
     font-size: 1.1rem;
@@ -256,7 +321,6 @@ nav.sf-navbar ul li a:hover::after, nav.sf-navbar ul li a.active::after { width:
     padding-left: 26px;
     margin-bottom: 12px;
     font-weight: 600;
-    color: #fff;
     position: relative;
   }
   .founder ul li::before {
@@ -266,244 +330,19 @@ nav.sf-navbar ul li a:hover::after, nav.sf-navbar ul li a.active::after { width:
     color: var(--sf-gold);
     font-weight: 900;
   }
-  .founder .btn-gold { margin-top: 25px; }
-}
-/* ==========================================================
-   FOUNDER SECTION — PREMIUM BALANCED LAYOUT
-   ========================================================== */
-@media (min-width: 769px) {
-  .founder {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--sf-purple);
-    color: #fff;
-    padding: 80px 10%;
-    gap: 60px;
-    position: relative;
-  }
-
-  /* Subtle gold top and bottom trims */
-  .founder::before,
-  .founder::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #FFD700, #D4AF37, #FFD700);
-    opacity: 0.9;
-  }
-  .founder::before { top: 0; }
-  .founder::after { bottom: 0; }
-
-  /* Left text column */
-  .founder-content {
-    flex: 1 1 55%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .founder-content h2 {
-    color: var(--sf-gold);
-    font-size: 2.6rem;
-    font-weight: 900;
-    margin-bottom: 20px;
-  }
-
-  .founder-content p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 22px;
-  }
-
-  .founder-content ul {
-    list-style: none;
-    margin: 0 0 28px 0;
-    padding: 0;
-  }
-
-  .founder-content ul li {
-    position: relative;
-    padding-left: 26px;
-    margin-bottom: 12px;
-    font-weight: 600;
-  }
-
-  .founder-content ul li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: var(--sf-gold);
-    font-weight: 900;
-  }
-
-  .founder-content .btn-gold {
-    align-self: flex-start;
-    margin-top: 10px;
-  }
-
-  /* Right image column */
-  .founder-image {
-    flex: 1 1 38%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-  }
-
-  .founder-image img {
-    max-width: 400px;
-    height: auto;
-    border-radius: 20px;
-    border: 4px solid var(--sf-gold);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  }
-}
-/* ==========================================================
-   FOUNDER SECTION — SPACING + VISUAL RHYTHM POLISH
-   ========================================================== */
-@media (min-width: 769px) {
-  .founder {
-    padding: 100px 10%;              /* slightly taller section */
-    gap: 100px;                      /* more breathing room */
-  }
-
-  .founder h2 {
-    margin-bottom: 28px;
-  }
-
-  .founder p {
-    max-width: 460px;
-    margin-bottom: 28px;
-  }
-
-  .founder img {
-    max-width: 400px;
-    margin-top: 10px;
-  }
-
   .founder .btn-gold {
-    display: inline-block;
-    margin-top: 40px;
+    margin-top: 25px;
   }
-}
-/* ==========================================================
-   INSTAGRAM REELS ROW LAYOUT — SIDE-BY-SIDE DISPLAY
-   ========================================================== */
-@media (min-width: 769px) {
-  .reel-section {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;                  /* space between reels */
-    flex-wrap: wrap;            /* just in case screen narrows */
-    margin: 60px auto;
-    max-width: 1200px;
-  }
-
-  .reel-embed {
-    flex: 1 1 380px;            /* equal width reels */
-    max-width: 400px;
-    box-shadow: 0 8px 26px rgba(0,0,0,0.15);
-    border-radius: 18px;
-    overflow: hidden;
-    background: #fff;
-  }
-
-  .reel-embed iframe {
-    width: 100%;
-    height: 500px;
-    border: none;
-  }
-}
-/* ==========================================================
-   ABOUT PAGE – FOUNDER SECTION (POLISHED DESKTOP LAYOUT)
-   ========================================================== */
-@media (min-width: 769px) {
-  .founder-section {
-    display: grid;
-    grid-template-columns: 55% 40%;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
-    background: var(--sf-purple);
-    color: #fff;
-    padding: 100px 8%;
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* Gold gradient borders */
-  .founder-section::before,
-  .founder-section::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #FFD700, #D4AF37, #FFD700);
-    opacity: 0.9;
-  }
-  .founder-section::before { top: 0; }
-  .founder-section::after { bottom: 0; }
-
-  /* ===== LEFT TEXT COLUMN ===== */
-  .founder-section h2 {
-    color: var(--sf-gold);
-    font-size: 2.4rem;
-    font-weight: 900;
-    margin-bottom: 20px;
-    text-align: left;
-  }
-
-  .founder-section p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 24px;
-    color: #fff;
-    max-width: 520px;
-    text-align: left;
-  }
-
-  .founder-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0 0;
-  }
-
-  .founder-section ul li {
-    position: relative;
-    padding-left: 26px;
-    margin-bottom: 12px;
-    font-weight: 600;
-    text-align: left;
-  }
-
-  .founder-section ul li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: var(--sf-gold);
-    font-weight: 900;
-  }
-
-  /* ===== RIGHT IMAGE COLUMN ===== */
-  .founder-section img {
+  .founder img {
     justify-self: end;
     align-self: center;
-    max-width: 400px;
-    width: 100%;
+    max-width: 420px;
     border-radius: 20px;
     border: 4px solid var(--sf-gold);
-    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
-  }
-
-  /* ===== SECTION HEIGHT AUTO ===== */
-  .founder-section {
-    min-height: auto;
+    box-shadow: 0 10px 26px rgba(0,0,0,0.25);
   }
 }
+
 /* ==========================================================
    RESULTS SECTION — PREMIUM SALONFIX ENHANCEMENT
    ========================================================== */
@@ -580,7 +419,6 @@ nav.sf-navbar ul li a:hover::after, nav.sf-navbar ul li a.active::after { width:
     color: var(--sf-dark);
   }
 
-  /* subtle shimmer animation on hover */
   .results-section .result-card::after {
     content: "";
     position: absolute;
