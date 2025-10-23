@@ -740,3 +740,109 @@ nav.sf-navbar ul li a:hover::after,nav.sf-navbar ul li a.active::after{width:100
     color: var(--sf-gold);
   }
 }
+/* ==========================================================
+   FOUNDER SECTION — FULL RECTANGULAR LAYOUT + GOLD DIVIDERS
+   ========================================================== */
+@media (min-width: 769px) {
+
+  /* Extend founder section full width */
+  .founder {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 100px 6%;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--sf-purple);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Add gold gradient top & bottom dividers */
+  .founder::before,
+  .founder::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #FFD700, #D4AF37, #FFD700);
+    opacity: 0.9;
+  }
+  .founder::before { top: 0; }
+  .founder::after { bottom: 0; }
+
+  /* Image styling */
+  .founder img {
+    height: 460px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid var(--sf-gold);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+  }
+
+  /* Text column */
+  .founder h2,
+  .founder p,
+  .founder ul,
+  .founder a {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .founder h2 {
+    color: var(--sf-gold);
+    font-size: 2.6rem;
+    font-weight: 900;
+    margin-bottom: 24px;
+  }
+
+  .founder p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 22px;
+  }
+
+  .founder ul {
+    list-style: none;
+    margin: 24px 0 36px 0;
+    padding: 0;
+  }
+
+  .founder ul li {
+    padding-left: 26px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #fff;
+    position: relative;
+  }
+
+  .founder ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--sf-gold);
+    font-weight: 900;
+  }
+
+  .founder .btn-gold {
+    background: linear-gradient(45deg, #D4AF37, #FFD700);
+    color: #000 !important;
+    font-weight: 800;
+    padding: 15px 30px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(212,175,55,0.7);
+    transition: all 0.3s ease;
+  }
+
+  .founder .btn-gold:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(212,175,55,0.9);
+  }
+}
