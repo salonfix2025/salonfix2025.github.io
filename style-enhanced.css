@@ -360,3 +360,32 @@ nav.sf-navbar ul li a:hover::after, nav.sf-navbar ul li a.active::after { width:
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
   }
 }
+/* ==========================================================
+   INSTAGRAM REELS ROW LAYOUT — SIDE-BY-SIDE DISPLAY
+   ========================================================== */
+@media (min-width: 769px) {
+  .reel-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;                  /* space between reels */
+    flex-wrap: wrap;            /* just in case screen narrows */
+    margin: 60px auto;
+    max-width: 1200px;
+  }
+
+  .reel-embed {
+    flex: 1 1 380px;            /* equal width reels */
+    max-width: 400px;
+    box-shadow: 0 8px 26px rgba(0,0,0,0.15);
+    border-radius: 18px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .reel-embed iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+  }
+}
