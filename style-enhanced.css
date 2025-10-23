@@ -361,6 +361,34 @@ nav.sf-navbar ul li a:hover::after, nav.sf-navbar ul li a.active::after { width:
   }
 }
 /* ==========================================================
+   FOUNDER SECTION — SPACING + VISUAL RHYTHM POLISH
+   ========================================================== */
+@media (min-width: 769px) {
+  .founder {
+    padding: 100px 10%;              /* slightly taller section */
+    gap: 100px;                      /* more breathing room */
+  }
+
+  .founder h2 {
+    margin-bottom: 28px;
+  }
+
+  .founder p {
+    max-width: 460px;
+    margin-bottom: 28px;
+  }
+
+  .founder img {
+    max-width: 400px;
+    margin-top: 10px;
+  }
+
+  .founder .btn-gold {
+    display: inline-block;
+    margin-top: 40px;
+  }
+}
+/* ==========================================================
    INSTAGRAM REELS ROW LAYOUT — SIDE-BY-SIDE DISPLAY
    ========================================================== */
 @media (min-width: 769px) {
