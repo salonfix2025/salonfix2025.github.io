@@ -308,3 +308,55 @@ nav.sf-navbar ul li a:hover::after,nav.sf-navbar ul li a.active::after{width:100
     box-shadow: 0 0 30px rgba(212,175,55,0.9);
   }
 }
+/* ==========================================================
+   FIX — METRICS SECTION (Purple Boxes with Equal Layout)
+   ========================================================== */
+@media (min-width: 769px) {
+  .metrics {
+    max-width: 1200px;
+    margin: 0 auto 100px;
+    text-align: center;
+  }
+
+  .metrics h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--sf-purple);
+    margin-bottom: 40px;
+  }
+
+  .metric-cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .metric-card {
+    background: var(--sf-purple);
+    color: #fff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    box-shadow: 0 8px 24px rgba(75, 0, 130, 0.25);
+    min-width: 260px;
+    flex: 1 1 280px;
+    transition: all 0.3s ease;
+  }
+
+  .metric-card small {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #fff;
+    opacity: 0.85;
+  }
+
+  .metric-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(212,175,55,0.5);
+  }
+}
