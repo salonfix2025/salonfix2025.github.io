@@ -534,3 +534,17 @@ nav.sf-navbar ul li a:hover::after,nav.sf-navbar ul li a.active::after{width:100
     margin-top: 25px;
   }
 }
+/* ==========================================================
+   FOUNDER IMAGE — FINAL RIGHT ALIGNMENT POLISH
+   ========================================================== */
+@media (min-width: 769px) {
+  .founder img {
+    justify-self: end;
+    margin-right: 25px;   /* adds breathing space from right edge */
+    margin-top: -10px;    /* keep aligned with headline */
+    max-width: 420px;
+    border: 4px solid var(--sf-gold);
+    border-radius: 20px;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
+  }
+}
